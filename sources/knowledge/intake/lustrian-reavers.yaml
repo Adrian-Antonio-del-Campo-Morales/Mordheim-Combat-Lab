@@ -1,0 +1,669 @@
+id: lustrian-reavers
+name: Lustrian Reavers
+grade: 1c
+source_url: https://mordheimer.net/docs/warbands/grade-1c-warbands/lustrian-reavers
+headings:
+- Special Rules ​
+- Rare Heroes ​
+- Promotions ​
+- Hired Swords ​
+- Choice Of Warriors ​
+- Starting Experience ​
+- Reaver Skill Table ​
+- REAVER EQUIPMENT LIST ​
+- Hero Equipment List ​
+- Hand-to-hand combat weapons ​
+- Missile Weapons ​
+- Armour ​
+- Miscellaneous Equipment ​
+- PROSPECT EQUIPMENT LIST ​
+- Hand-to-hand combat weapons ​
+- Missile Weapons ​
+- Armour ​
+- Special Equipment ​
+- Masterwork Heavy Armour ​
+- Bec de Corbin ​
+- Misericordia ​
+- Firepots Miragliano ​
+- Heroes ​
+- 0 – 1 Conqueror ​
+- Special Rules ​
+- 0 – 1 Saurus Slayer ​
+- SPECIAL RULES ​
+- 0 – 1 Reaver Beastmaster ​
+- SPECIAL RULES ​
+- 0 – 2 Estalian Warhound ​
+- 0 – 1 Barbary Monkey ​
+- 0 – 1 Tilean Hunting Hawk ​
+- 0 – 1 Jungle Shadow ​
+- SPECIAL RULES ​
+- 0 – 1 Trapmaster ​
+- SPECIAL RULES ​
+- Henchmen ​
+- 0 – 5 Prospects ​
+- SPECIAL RULES ​
+tables:
+- section: Reaver Skill Table
+  section_path:
+  - Reaver Skill Table
+  rows:
+  - - ''
+    - Combat
+    - Shooting
+    - Academic
+    - Strength
+    - Speed
+  - - Conqueror
+    - ✓
+    - ''
+    - ''
+    - ✓
+    - ''
+  - - Saurus Slayer
+    - ✓
+    - ''
+    - ''
+    - ✓
+    - ✓
+  - - Beastmaster
+    - ''
+    - ✓
+    - ''
+    - ✓
+    - ✓
+  - - Jungle Shadow
+    - ''
+    - ✓
+    - ✓
+    - ''
+    - ✓
+  - - Trapmaster
+    - ✓
+    - ✓
+    - ✓
+    - ''
+    - ''
+- section: Hand-to-hand combat weapons
+  section_path:
+  - REAVER EQUIPMENT LIST
+  - Hero Equipment List
+  - Hand-to-hand combat weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Sword
+    - 10 gc
+  - - Mace
+    - 3 gc
+  - - Misericordia
+    - 10 gc
+  - - Double-handed weapon
+    - 15 gc
+  - - Lance
+    - 40 gc
+- section: Missile Weapons
+  section_path:
+  - REAVER EQUIPMENT LIST
+  - Hero Equipment List
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Javelin
+    - 10 gc
+  - - Throwing Knives
+    - 15 gc
+  - - Blowpipe
+    - 15 gc
+  - - Pistol
+    - 15 gc
+- section: Armour
+  section_path:
+  - REAVER EQUIPMENT LIST
+  - Hero Equipment List
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Light armour
+    - 20 gc
+  - - Shield
+    - 10 gc
+  - - Helmet
+    - 10 gc
+  - - Buckler
+    - 10 gc
+- section: Miscellaneous Equipment
+  section_path:
+  - REAVER EQUIPMENT LIST
+  - Hero Equipment List
+  - Miscellaneous Equipment
+  rows:
+  - - Item
+    - Cost
+  - - Rope & Hook
+    - 5 gc
+  - - Crimson Shade
+    - 35 gc
+  - - Dark Venom
+    - 30 gc
+  - - Net
+    - 5 gc
+  - - Warhorse
+    - 80 gc
+  - - Warhound
+    - 20 gc
+- section: Hand-to-hand combat weapons
+  section_path:
+  - REAVER EQUIPMENT LIST
+  - PROSPECT EQUIPMENT LIST
+  - Hand-to-hand combat weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Sword
+    - 10 gc
+  - - Hammer
+    - 3 gc
+  - - Spear
+    - 10 gc
+- section: Missile Weapons
+  section_path:
+  - REAVER EQUIPMENT LIST
+  - PROSPECT EQUIPMENT LIST
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Short bow
+    - 5 gc
+- section: Armour
+  section_path:
+  - REAVER EQUIPMENT LIST
+  - PROSPECT EQUIPMENT LIST
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Light armour
+    - 20 gc
+  - - Shield
+    - 10 gc
+  - - Helmet
+    - 10 gc
+- section: 0 – 1 Conqueror
+  section_path:
+  - Heroes
+  - 0 – 1 Conqueror
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - Conqueror
+    - '4'
+    - '4'
+    - '3'
+    - '4'
+    - '4'
+    - '2'
+    - '3'
+    - '2'
+    - '7'
+- section: 0 – 1 Saurus Slayer
+  section_path:
+  - Heroes
+  - 0 – 1 Saurus Slayer
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - Saurus Slayer
+    - '4'
+    - '4'
+    - '3'
+    - '4'
+    - '3'
+    - '1'
+    - '4'
+    - '2'
+    - '8'
+- section: 0 – 1 Reaver Beastmaster
+  section_path:
+  - Heroes
+  - 0 – 1 Reaver Beastmaster
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - Beastmaster
+    - '4'
+    - '4'
+    - '4'
+    - '4'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '8'
+- section: 0 – 2 Estalian Warhound
+  section_path:
+  - Heroes
+  - 0 – 1 Reaver Beastmaster
+  - 0 – 2 Estalian Warhound
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - Estalian Warhound
+    - '6'
+    - '4'
+    - '0'
+    - '4'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '5'
+- section: 0 – 1 Barbary Monkey
+  section_path:
+  - Heroes
+  - 0 – 1 Reaver Beastmaster
+  - 0 – 1 Barbary Monkey
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - Barbary Monkey
+    - '6'
+    - '4'
+    - '0'
+    - '3'
+    - '3'
+    - '1'
+    - '5'
+    - '2'
+    - '6'
+- section: 0 – 1 Tilean Hunting Hawk
+  section_path:
+  - Heroes
+  - 0 – 1 Reaver Beastmaster
+  - 0 – 1 Tilean Hunting Hawk
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - Tilean Hunting Hawk
+    - '12'
+    - '4'
+    - '0'
+    - '4'
+    - '3'
+    - '-'
+    - '5'
+    - '1'
+    - '-'
+- section: 0 – 1 Jungle Shadow
+  section_path:
+  - Heroes
+  - 0 – 1 Jungle Shadow
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - Jungle Shadow
+    - '4'
+    - '4'
+    - '4'
+    - '4'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '8'
+- section: 0 – 1 Trapmaster
+  section_path:
+  - Heroes
+  - 0 – 1 Trapmaster
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - Trapmaster
+    - '4'
+    - '4'
+    - '4'
+    - '3'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '8'
+- section: 0 – 5 Prospects
+  section_path:
+  - Henchmen
+  - 0 – 5 Prospects
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - Prospects
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+section_text:
+- section: Rare Heroes
+  section_path:
+  - Special Rules
+  - Rare Heroes
+  text: You can only ever buy one of each type of Heroes during the existence of your
+    Warband, representing the extreme rarity of these the toughest of survivors of
+    Lustria.
+- section: Promotions
+  section_path:
+  - Special Rules
+  - Promotions
+  text: 'When you lose one of the Heroes for whatever reason, you cannot buy a new
+    one. However, you retain all the equipment of the fallen Hero ❓ , and you may
+    now promote one of the Prospects into the role of the lost hero, as if that Henchman
+    just successfully rolled Lad’s Got Talent on the Henchmen Advancement Table: You
+    may choose two skill lists available to Heroes in your warband. These are the
+    skill types your new Hero can choose from when the model gains new skills. The
+    new Hero can immediately make one roll on the Heroes Advance table.
+
+    The new Hero then gains the armour, weapons and equipment of the fallen Hero and
+    assumes their position the Warband. The Prospect’s own equipment may be added
+    to the Warband stash. If you have no Prospect currently in your Warband, you can
+    promote the next one you hire.'
+- section: Hired Swords
+  section_path:
+  - Special Rules
+  - Hired Swords
+  text: The Lustrian Reavers are proud and suspicious, and therefore rarely use Hired
+    Swords. They may hire an Ogre Bodyguard, Dwarf Trollslayer, Tilean Marksman or
+    a Big Game Hunter.
+- section: Hero Equipment List
+  section_path:
+  - REAVER EQUIPMENT LIST
+  - Hero Equipment List
+  text: Note that many of the Reavers already start with special equipment not listed
+    below. This equipment cannot be replaced if lost.
+- section: Special Equipment
+  section_path:
+  - Special Equipment
+  text: Lustrian Reavers have access to the following specialist weapons, armour and
+    equipment.
+- section: 0 – 1 Conqueror
+  section_path:
+  - Heroes
+  - 0 – 1 Conqueror
+  text: '150 gold crowns to hire
+
+    Conquerors are behemoths of men, unstoppable giants wearing the nigh-impenetrable
+    Estalian Masterwork armour and wielding the dreaded Bec de Corbin. They are incredibly
+    tough to take out in battle, but their dedication to the skills at arms means
+    they are often sullen and morose loners who do not work well with others, and
+    despise newcomers to their warbands.
+
+    Starting Equipment: Masterwork Heavy Armour , Bec de Corbin , Helmet . Further
+    weapons, armour and equipment can be bought from the Reavers Equipment list.'
+- section: Special Rules
+  section_path:
+  - Heroes
+  - 0 – 1 Conqueror
+  - Special Rules
+  text: 'Survivor : Cannot be taken out of Action unless the model is already Knocked
+    Down or Stunned. Treat Out of Action as Stunned if the Conqueror is standing when
+    receiving the Wound.
+
+    In addition, the first time a Conqueror suffers a Dead result on the Serious Injury
+    Chart, treat it as Multiple Injuries instead. This ability can save the Conqueror
+    only one time.'
+- section: 0 – 1 Saurus Slayer
+  section_path:
+  - Heroes
+  - 0 – 1 Saurus Slayer
+  text: '135 gold crowns to hire
+
+    Saurus-slayers act as the champions of the Reavers, warriors who have survived
+    where hundreds have fallen. They specialize in dueling Saurus warriors. All Lizardmen
+    are deadly and ferocious opponents and only the mightiest of human warriors can
+    best them in a single combat. Saurus-Slayers are men who have become accustomed
+    to taking on and defeating these mighty guardians of Lustria, and adorn themselves
+    with grisly trophies of their victories. These spoils of war often offer additional
+    benefits and mystical protection to these supreme champions of Reaver Warbands.
+
+    Starting Equipment: Heavy Armour , Misericordia , 2 Swords , Helmet . Further
+    weapons, armour and equipment can be bought from the Reavers Equipment list.'
+- section: SPECIAL RULES
+  section_path:
+  - Heroes
+  - 0 – 1 Saurus Slayer
+  - SPECIAL RULES
+  text: 'Duellist : If the Saurus Slayer is engaged with only a single opponent in
+    melee, they can re-roll missed hits on the first turn whether they charged the
+    enemy or were charged.
+
+    Saurus-Slayers may purchase the following special equipment:
+
+    Lizardmen Skin Cloak : Grants 6+ Ward save , separate from Armour Save that is
+    not reduced by enemy strength or other modifiers. (10 gc) Skull Mask : Causes
+    Fear . (15 gc) Upgrade any sword into a Lizardman Sword : +1 to wound rolls due
+    to Poison. (30 gc) Trophy Slann Holy Headdress : +2 bonus to armour saves. (35
+    gc)'
+- section: 0 – 1 Reaver Beastmaster
+  section_path:
+  - Heroes
+  - 0 – 1 Reaver Beastmaster
+  text: '90 gold crowns to hire
+
+    Beastmasters are warriors who train and command fierce attack dogs and other beasts
+    bred for war. Estalians are especially famous for their skills at raising beasts
+    of the forest to serve them on the battlefield. Great slavering Tilean bloodhounds
+    are the most common, but hunting hawks and even trained Barbary monkeys can be
+    made into ferocious beasts of war by these expert animal handlers.
+
+    Starting Equipment: Heavy Armour , Spear , Sword . Further weapons, armour and
+    equipment can be bought from the Reavers Equipment list.'
+- section: SPECIAL RULES
+  section_path:
+  - Heroes
+  - 0 – 1 Reaver Beastmaster
+  - SPECIAL RULES
+  text: 'War Beasts : If your Warband includes a Beastmaster, you may include up to
+    2 War Beasts from the list below. These count towards the maximum size of the
+    Warband. They must be bought when the Warband is created but can be replaced if
+    killed. The War Beasts can use the Ld of the Beastmaster if they are within 6”
+    of the Beastmaster.'
+- section: 0 – 2 Estalian Warhound
+  section_path:
+  - Heroes
+  - 0 – 1 Reaver Beastmaster
+  - 0 – 2 Estalian Warhound
+  text: '25 gold crowns to hire
+
+    5+ armour save: Beastmasters raise savage Estalian warhounds: giant beasts trained
+    to bring down any prey or enemy, and protected by padded armour to ward off arrows
+    and iron collars against blades.'
+- section: 0 – 1 Barbary Monkey
+  section_path:
+  - Heroes
+  - 0 – 1 Reaver Beastmaster
+  - 0 – 1 Barbary Monkey
+  text: '40 gold crowns to hire
+
+    Nimble: Can climb any sheer surfaces without taking Initiative tests. Can re-roll
+    all failed Diving Charge tests. The Monkey can enter buildings unlike other animals.
+    Due to its agility, the Monkey also has a 5+ Ward save which it can take against
+    any and all wounds it suffers in Melee combat or from shooting/magic or even falling
+    damage.'
+- section: 0 – 1 Tilean Hunting Hawk
+  section_path:
+  - Heroes
+  - 0 – 1 Reaver Beastmaster
+  - 0 – 1 Tilean Hunting Hawk
+  text: '30 gold crowns to hire
+
+    Part of the Equipment. Acts at the same time as the Beastmaster. Can attack any
+    enemy within 12” as a melee attack, even those out of line of sight (unless Hidden),
+    and return to the Beastmaster immediately. The hawk cannot be targeted separately
+    by any attack or spell. The Hawk does not attack if the Beastmaster is engaged
+    in hand-to-hand combat, being too busy to command the hawk!
+
+    All the War Beasts are subject to the rules of Animals and may not gain experience.
+    They suffer injuries exactly as Henchmen (if taken out of action they are dead
+    on a roll of 1-2 on D6).'
+- section: 0 – 1 Jungle Shadow
+  section_path:
+  - Heroes
+  - 0 – 1 Jungle Shadow
+  text: '90 gold crowns to hire
+
+    Jungle Shadows are survivors of desperate Jungle Warfare against skinks. Where
+    their comrades died, the Shadows survived through woodcraft, cunning, ruthlessness,
+    and stealth. They are the hunted who have become hunters. Many of them were mystics
+    that escaped the persecution of the religious authorities in the Old World.
+
+    Starting Equipment: Javelins , Light Armour , two Daggers . Further weapons, armour
+    and equipment can be bought from the Reavers Equipment list.
+
+    At the cost of +30 Gold Crowns, you can make Jungle Shadow a Wizard. Jungle Shadow
+    uses the Lesser Magic list. Generate a single Spell as standard for a wizard.
+    If you make the Jungle Shadow a Wizard, remove the Light Armour from the equipment
+    list when starting out, and generate 1 Lesser Magic spell they can use.'
+- section: SPECIAL RULES
+  section_path:
+  - Heroes
+  - 0 – 1 Jungle Shadow
+  - SPECIAL RULES
+  text: 'Silent Hunter : Jungle Shadow is always considered to be Hidden if the model
+    is touching any piece of terrain of 1” high. Shooting does not reveal Jungle Shadow’s
+    position, though spellcasting does.
+
+    Surprise attack : If the Shadow attacks an enemy that has its back turned to the
+    Jungle Shadow (i.e. the shot is coming from 180 degree angle from behind its facing),
+    the Shadow can re-roll missed to hit rolls.
+
+    Canopy Walker : Jungle Shadow automatically passes all climbing , jumping and
+    falling off ledges tests.'
+- section: 0 – 1 Trapmaster
+  section_path:
+  - Heroes
+  - 0 – 1 Trapmaster
+  text: '140 gold crowns to hire
+
+    Combining the hunting skills of the Old World trappers with the fiendish skills
+    of their skink enemies, the Trapmasters are essential for the Reaver warbands
+    in controlling the battlefield, sniping at enemies from distance, and laying snares
+    and traps to catch unwary foes.
+
+    Starting Equipment: Heavy Armour , Sword , Tilean Hunting Rifle (Treat as Hochland
+    Long Rifle ), Firepots , Leaf Coat (counts as an Elven Cloak ). Further weapons,
+    armour and equipment can be bought from the Reavers Equipment list.'
+- section: SPECIAL RULES
+  section_path:
+  - Heroes
+  - 0 – 1 Trapmaster
+  - SPECIAL RULES
+  text: 'Deadeye : Trapmaster suffers no penalties for shooting at long range.
+
+    Traps : The Trapmaster starts each game with 1 Trap and can buy up to 5 further
+    of the following Traps before the start of the game at the cost of 5 GC each.
+    Each trap is one use only. Traps are used in the Shooting Phase instead of shooting,
+    1 trap at a time, and cannot be used in Melee combat. When you use a trap, put
+    2 1” diameter Trap counters (one false, one real) anywhere within 3” of the Trapmaster,
+    but at least 3” away from any other models. Any model that moves within 2” of
+    the counter must flip it over. If it is a false one, nothing happens. If it is
+    a real one, the model suffers D3 S5 Hits immediately. Traps do not cause Criticals.
+    Remove the counters when the trap is sprung.'
+- section: 0 – 5 Prospects
+  section_path:
+  - Henchmen
+  - 0 – 5 Prospects
+  text: '35 gold crowns to hire
+
+    Your warband may include up to 5 Prospects - newly-arrived hopefuls who seek a
+    chance to join the Reavers by serving them as guards, porters and menial labourers,
+    as well as cannon fodder in their savage jungle fights.
+
+    Weapons/Armour: Purchased from the Prospects Equipment List.'
+- section: SPECIAL RULES
+  section_path:
+  - Henchmen
+  - 0 – 5 Prospects
+  - SPECIAL RULES
+  text: 'Promotion Only : Re-roll any Lad’s Got Talent results on Henchmen Advancement
+    table. When promoted, you can then hire a new Prospect as the model no longer
+    counts as one of them.'

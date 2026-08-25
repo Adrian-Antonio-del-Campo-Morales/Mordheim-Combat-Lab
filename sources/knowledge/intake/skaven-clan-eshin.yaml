@@ -1,0 +1,530 @@
+id: skaven-clan-eshin
+name: Skaven of Clan Eshin
+grade: core
+source_url: https://mordheimer.net/docs/warbands/grade-1a-warbands/skaven-eshin
+headings:
+- Choice of warriors ​
+- Starting experience ​
+- Skaven Skill Table ​
+- Skaven Special Skills ​
+- black hunger ​
+- tail fighting ​
+- wall runner ​
+- infiltration ​
+- art of silent death ​
+- Skaven equipment lists ​
+- Heroes equipment lists ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Henchmen ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Special Equipment ​
+- Fighting Claws ​
+- Weeping Blades ​
+- Blowpipe ​
+- Warplock pistol ​
+- heroes ​
+- 1 Assassin adept ​
+- Special Rules ​
+- 0 – 2 Black Skaven ​
+- 0 – 1 Eshin sorcerer ​
+- Special Rules ​
+- 0 – 2 Night runners ​
+- henchmen ​
+- Verminkin ​
+- Giant rats ​
+- 0 – 1 Rat ogre ​
+- Special Rules ​
+tables:
+- section: Skaven Skill Table
+  section_path:
+  - Skaven Skill Table
+  rows:
+  - - ''
+    - Combat
+    - Shooting
+    - Academic
+    - Strength
+    - Speed
+    - Special
+  - - Adept
+    - ✓
+    - ✓
+    - ✓
+    - ✓
+    - ✓
+    - ✓
+  - - Black Skaven
+    - ✓
+    - ✓
+    - ''
+    - ✓
+    - ✓
+    - ✓
+  - - Eshin Sorcerer ✏️
+    - ''
+    - ''
+    - ✓
+    - ''
+    - ✓
+    - ✓
+  - - Night Runners
+    - ✓
+    - ✓
+    - ''
+    - ''
+    - ''
+    - ✓
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Skaven equipment lists
+  - Heroes equipment lists
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Sword
+    - 10 gc
+  - - Flail
+    - 15 gc
+  - - Spear
+    - 10 gc
+  - - Halberd
+    - 10 gc
+  - - Weeping Blades
+    - 50 gc
+  - - Fighting Claws
+    - 35 gc
+- section: Missile Weapons
+  section_path:
+  - Skaven equipment lists
+  - Heroes equipment lists
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Sling
+    - 2 gc
+  - - Throwing stars
+    - 15 gc
+  - - Blowpipe
+    - 25 gc ✏️
+  - - Warplock pistol
+    - 35 gc (70 for a brace)
+- section: Armour
+  section_path:
+  - Skaven equipment lists
+  - Heroes equipment lists
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Light armour
+    - 20 gc
+  - - Buckler
+    - 5 gc
+  - - Helmet
+    - 10 gc
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Skaven equipment lists
+  - Henchmen
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Club
+    - 3 gc
+  - - Sword
+    - 10 gc
+  - - Spear
+    - 10 gc
+- section: Missile Weapons
+  section_path:
+  - Skaven equipment lists
+  - Henchmen
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Sling
+    - 2 gc
+- section: Armour
+  section_path:
+  - Skaven equipment lists
+  - Henchmen
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Light armour
+    - 20 gc
+  - - Shield
+    - 5 gc
+  - - Helmet
+    - 10 gc
+- section: 1 Assassin adept
+  section_path:
+  - heroes
+  - 1 Assassin adept
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '6'
+    - '4'
+    - '4'
+    - '4'
+    - '3'
+    - '1'
+    - '5'
+    - '1'
+    - '7'
+- section: 0 – 2 Black Skaven
+  section_path:
+  - heroes
+  - 0 – 2 Black Skaven
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '6'
+    - '4'
+    - '3'
+    - '4'
+    - '3'
+    - '1'
+    - '5'
+    - '1'
+    - '6'
+- section: 0 – 1 Eshin sorcerer
+  section_path:
+  - heroes
+  - 0 – 1 Eshin sorcerer
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '5'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '6'
+- section: 0 – 2 Night runners
+  section_path:
+  - heroes
+  - 0 – 2 Night runners
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '6'
+    - '2'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '4'
+- section: Verminkin
+  section_path:
+  - henchmen
+  - Verminkin
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '5'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '5'
+- section: Giant rats
+  section_path:
+  - henchmen
+  - Giant rats
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '6'
+    - '2'
+    - '0'
+    - '3'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '4'
+- section: 0 – 1 Rat ogre
+  section_path:
+  - henchmen
+  - 0 – 1 Rat ogre
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '6'
+    - '3'
+    - '3'
+    - '5'
+    - '5'
+    - '3'
+    - '4'
+    - '3'
+    - '4'
+section_text:
+- section: Choice of warriors
+  section_path:
+  - Choice of warriors
+  text: 'A Skaven warband must include a minimum of three models. You have 500 gold
+    crowns (representing your resources) which you can use to recruit and equip your
+    initial warband. The maximum number of warriors in the warband may never exceed
+    20.
+
+    Assassin Adept: Each Skaven warband must have one Assassin Adept: no more, no
+    less! Eshin Sorcerer: Your warband may include a single Eshin Sorcerer. Black
+    Skaven: Your warband may include up to two Black Skaven. Night Runners: Your warband
+    may include up to two Night Runners. Verminkin: Any number of models may be Verminkin.
+    Giant Rats: Your warband may include any number of Giant Rats. Rat Ogre: Your
+    warband may include a single Rat Ogre.'
+- section: Starting experience
+  section_path:
+  - Starting experience
+  text: An Assassin Adept starts with 20 experience. Eshin Sorcerers and Black Skaven
+    start with 8 experience. Night Runners start with 0 experience. Henchmen start
+    with 0 experience.
+- section: Skaven Special Skills
+  section_path:
+  - Skaven Special Skills
+  text: Skaven Heroes may choose to use the following Skill list instead of any of
+    the standard Skill tables available to them.
+- section: black hunger
+  section_path:
+  - Skaven Special Skills
+  - black hunger
+  text: The Skaven can draw upon the dreaded Black Hunger, the fighting frenzy which
+    gives him unnatural strength and speed but can ravage him from inside. The Skaven
+    Hero may declare at the beginning of his turn that he is using this skill. The
+    Hero may add +1 attack and +D3" to the total move to his profile for the duration
+    of his own turn but will suffer D3 S3 hits with no armour save possible at the
+    end of the turn.
+- section: tail fighting
+  section_path:
+  - Skaven Special Skills
+  - tail fighting
+  text: The Skaven may wield a shield ❓ , knife or a sword with its tail. The model
+    gains an extra attack with the appropriate weapon or a +1 bonus to its armour
+    save.
+- section: wall runner
+  section_path:
+  - Skaven Special Skills
+  - wall runner
+  text: The Skaven does not need to take an Initiative test when climbing up walls
+    and other sheer surfaces.
+- section: infiltration
+  section_path:
+  - Skaven Special Skills
+  - infiltration
+  text: A Skaven with this skill is always placed on the battlefield after the opposing
+    warband and can be placed anywhere on the table as long as it is out of sight
+    of the opposing warband and more than 12" away from any enemy model. If both players
+    have models which infiltrate, roll a D6 for each, and the lowest roll sets up
+    first.
+- section: art of silent death
+  section_path:
+  - Skaven Special Skills
+  - art of silent death
+  text: The Skaven has patiently mastered the deadly art of open-hand fighting, as
+    taught by the mystics of Cathay in the temples of the far East. In hand-to-hand
+    combat, the Skaven can fight with his bare paws without any penalties and counts
+    as having two weapons (ie, +1 attack). In addition, a Skaven Hero with this skill
+    will cause a critical hit on a To Wound roll of 5-6 instead of just 6. ❓ This
+    skill may be used in conjunction with the Eshin Fighting Claws (+2 Attacks instead
+    of +1).
+- section: Skaven equipment lists
+  section_path:
+  - Skaven equipment lists
+  text: The following lists are used by the Skaven to pick their equipment.
+- section: Special Equipment
+  section_path:
+  - Special Equipment
+  text: 'This warband has access to the following special equipment when purchasing
+    items from the Trading Post , outside their starting list:'
+- section: 1 Assassin adept
+  section_path:
+  - heroes
+  - 1 Assassin adept
+  text: '60 gold crowns to hire
+
+    The Nightmaster of Clan Eshin has sent the Assassin to collect precious wyrdstone.
+    Success means many breeders, wealth and a better position amongst the clan. Failure,
+    on the other hand, is best not contemplated…
+
+    Weapons/Armour: An Assassin Adept may be armed with weapons and armour chosen
+    from the Skaven Hero’s Equipment list.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 1 Assassin adept
+  - Special Rules
+  text: 'Leader: Any warrior within 6" of the Assassin Adept may use his Leadership
+    instead of his own.
+
+    Perfect Killer: An Assassin Adept always has an extra -1 modifier to any armour
+    save the enemy has to take against wounds they inflicted (both with shooting and
+    close combat weapons).'
+- section: 0 – 2 Black Skaven
+  section_path:
+  - heroes
+  - 0 – 2 Black Skaven
+  text: '40 gold crowns to hire
+
+    Black Skaven are the most powerful fighters of Clan Eshin: blackfurred killers
+    trained in the martial arts of their clan. In Mordheim they excel at ambushing
+    and assassinating man-things.
+
+    Weapons/Armour: A Black Skaven may be armed with weapons and armour chosen from
+    the Skaven Hero’s Equipment list.'
+- section: 0 – 1 Eshin sorcerer
+  section_path:
+  - heroes
+  - 0 – 1 Eshin sorcerer
+  text: '45 gold crowns to hire
+
+    The Sorcerers of Clan Eshin are black magicians who manufacture the enchanted
+    weapons of the Assassins. Though their power is slight compared to the Warlocks
+    of Clan Skryre or the mighty Grey Seer, their black sorcery is still potent.
+
+    Weapons/Armour: A Skaven Eshin Sorcerer may be armed with weapons and armour chosen
+    from the Skaven Hero’s Equipment list.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 0 – 1 Eshin sorcerer
+  - Special Rules
+  text: 'Magic User: The Eshin Sorcerer has the ability to use magic and casts spells
+    like any other magicians, and the Eshin Sorcerer starts with one spells generated
+    at random from the Magic of the Horned Rat . In addition the Eshin Sorcerer may
+    learn a new Spell instead of a new skill.'
+- section: 0 – 2 Night runners
+  section_path:
+  - heroes
+  - 0 – 2 Night runners
+  text: '20 gold crowns to hire
+
+    Night Runners are the young apprentices of Clan Eshin. Recently initiated into
+    the secrets of the clan, they make up for their lack of knowledge with their ambition
+    and energy.
+
+    Weapons/Armour: Night Runners may be armed with weapons and armour chosen from
+    the Skaven Henchmen Equipment list. ❓'
+- section: Verminkin
+  section_path:
+  - henchmen
+  - Verminkin
+  text: '20 gold crowns to hire
+
+    Verminkin are the Clanrats of Clan Eshin. The strongest amongst them are initiated
+    into the secrets of the clans and begin their training to become Assassins, the
+    most feared warriors of the Skaven warbands. All the Clanrats of Clan Eshin dream
+    of rising to the status of an Assassin one day.
+
+    Weapons/Armour: Verminkin may be armed with weapons and armour chosen from the
+    Skaven Henchmen Equipment list.'
+- section: Giant rats
+  section_path:
+  - henchmen
+  - Giant rats
+  text: '15 gold crowns to buy
+
+    Giant Rats are the creation of the Clan Moulder trainees. They are mutated monstrosities
+    the size of dogs. They fight alongside the Skaven, overpowering their opponents
+    by sheer weight of numbers.
+
+    Weapons/Armour: None. Giant Rats never use any armour or weapons.
+
+    Pack Size: You can recruit as many Giant Rats as you wish. ❓
+
+    Experience: Giant Rats are animals and do not gain experience.'
+- section: 0 – 1 Rat ogre
+  section_path:
+  - henchmen
+  - 0 – 1 Rat ogre
+  text: '210 gold crowns to buy
+
+    These horrible monsters are much in demand as bodyguards to important Skaven.
+
+    Weapons/Armour: Jaws, claws and brute force! Rat Ogres can never use weapons or
+    armour.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 1 Rat ogre
+  - Special Rules
+  text: 'Fear: Rat Ogres are so frightening they cause fear.
+
+    Stupidity: A Rat Ogre is subject to stupidity unless a Skaven Hero is within 6"
+    of it.
+
+    Experience: Rat Ogres do not gain experience.
+
+    Large Target: Rat Ogres are Large Targets as defined in the shooting rules . ✏️'

@@ -1,0 +1,673 @@
+schema_version: 1
+id: amazons-lustria
+name: Amazons (Lustria)
+name_i18n:
+  en: Amazons (Lustria)
+  es: null
+original_locale: en
+categories:
+- 1b
+collections:
+- mordheimer
+grade: 1b
+setting: Lustria
+publication: Town Cryer 15
+status: source-normalized
+sources:
+- manual: mordheimer.net
+  printed_page: 0
+  section: Amazons (Lustria)
+  url: https://mordheimer.net/docs/warbands/grade-1b-warbands/amazons-lustria
+roster:
+  minimum_models: 3
+  maximum_models: 15
+  starting_gold: 500
+  members:
+  - profile_id: serpent-priestess
+    minimum: 1
+    maximum: 1
+  - profile_id: eagle-warriors
+    minimum: 0
+    maximum: 2
+  - profile_id: piranha-warriors
+    minimum: 0
+    maximum: 2
+  - profile_id: amazon-warriors
+    minimum: 1
+    maximum: 1
+  - profile_id: jaguar-warriors
+    minimum: 0
+    maximum: 3
+equipment_lists:
+- id: heroines-equipment-list
+  name: Heroines Equipment List
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: 1st free/2 gc
+  - item_id: club
+    cost: 3
+  - item_id: sword
+    cost: 10
+  - item_id: spear
+    cost: 10
+  - item_id: great_weapon
+    cost: 15
+  - item_id: starblade
+    cost: 15
+  - item_id: starsword
+    cost: 30
+  - item_id: bow
+    cost: 10
+  - item_id: sunstaff_lustria
+    cost: 35
+  - item_id: buckler
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  - item_id: enchanted_skins
+    cost: 20
+  - item_id: amulet_of_the_moon
+    cost: 50
+  - item_id: healing_herbs
+    cost: 35
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Heroines Equipment List
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/amazons-lustria
+  name_i18n:
+    en: Heroines Equipment List
+    es: null
+- id: henchwomen-equipment-list
+  name: Henchwomen equipment list
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: 1st free/2 gc
+  - item_id: club
+    cost: 3
+  - item_id: sword
+    cost: 10
+  - item_id: spear
+    cost: 10
+  - item_id: sling
+    cost: 5
+  - item_id: bow
+    cost: 10
+  - item_id: sunstaff_lustria
+    cost: 35
+  - item_id: buckler
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  - item_id: enchanted_skins
+    cost: 20
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Henchwomen equipment list
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/amazons-lustria
+  name_i18n:
+    en: Henchwomen equipment list
+    es: null
+- id: jaguar-warrior-equipment-list
+  name: Jaguar Warrior Equipment List
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: 1st free/2 gc
+  - item_id: club
+    cost: 3
+  - item_id: sword
+    cost: 10
+  - item_id: spear
+    cost: 10
+  - item_id: sling
+    cost: 5
+  - item_id: bolas
+    cost: 5
+  - item_id: javelins
+    cost: 5
+  - item_id: bow
+    cost: 10
+  - item_id: sunstaff_lustria
+    cost: 35
+  - item_id: helmet
+    cost: 10
+  - item_id: enchanted_skins
+    cost: 20
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Jaguar Warrior Equipment List
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/amazons-lustria
+  name_i18n:
+    en: Jaguar Warrior Equipment List
+    es: null
+profiles:
+- id: serpent-priestess
+  name: Serpent Priestess
+  type: hero
+  cost: 70
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 4
+    BS: 4
+    S: 3
+    T: 3
+    W: 1
+    I: 4
+    A: 1
+    Ld: 8
+  equipment_lists:
+  - heroines-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - academic
+  - speed
+  - special
+  rules:
+  - id: leader
+    name: Leader
+    effect: 'Any models in the warband within 6"
+
+      of the Priestess may use her Leadership
+
+      instead of their own.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: heroines / 1 Serpent Priestess / Special Rules / Leader
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/amazons-lustria
+    name_i18n:
+      en: Leader
+      es: null
+    effect_i18n:
+      en: 'Any models in the warband within 6"
+
+        of the Priestess may use her Leadership
+
+        instead of their own.'
+      es: null
+  - id: wizard
+    name: Wizard
+    effect: 'The Priestess is a Wizard and may
+
+      use Amazon Rituals . She starts with one ritual
+
+      chosen at random from the list.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: heroines / 1 Serpent Priestess / Special Rules / Wizard
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/amazons-lustria
+    name_i18n:
+      en: Wizard
+      es: null
+    effect_i18n:
+      en: 'The Priestess is a Wizard and may
+
+        use Amazon Rituals . She starts with one ritual
+
+        chosen at random from the list.'
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 1 Serpent Priestess
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/amazons-lustria
+  source_path:
+  - heroines
+  - 1 Serpent Priestess
+  name_i18n:
+    en: Serpent Priestess
+    es: null
+- id: eagle-warriors
+  name: Eagle Warriors
+  type: hero
+  cost: 35
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 4
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - heroines-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: &id001
+  - combat
+  - strength
+  - speed
+  - special
+  rules: []
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 2 Eagle Warriors
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/amazons-lustria
+  source_path:
+  - heroines
+  - 0 – 2 Eagle Warriors
+  name_i18n:
+    en: Eagle Warriors
+    es: null
+- id: piranha-warriors
+  name: Piranha Warriors
+  type: hero
+  cost: 30
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 3
+    BS: 4
+    S: 3
+    T: 3
+    W: 1
+    I: 4
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - heroines-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - shooting
+  - speed
+  - special
+  rules: []
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 2 Piranha Warriors
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/amazons-lustria
+  source_path:
+  - heroines
+  - 0 – 2 Piranha Warriors
+  name_i18n:
+    en: Piranha Warriors
+    es: null
+- id: amazon-warriors
+  name: + Amazon warriors
+  type: henchman
+  cost: 25
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - heroines-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: *id001
+  rules: []
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 1+ Amazon warriors
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/amazons-lustria
+  source_path:
+  - henchwomen
+  - 1+ Amazon warriors
+  name_i18n:
+    en: + Amazon warriors
+    es: null
+- id: jaguar-warriors
+  name: Jaguar Warriors
+  type: henchman
+  cost: 30
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - jaguar-warrior-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: *id001
+  rules:
+  - id: one-with-the-jungle
+    name: One with the Jungle
+    effect: 'A Jaguar has lived her life in the deepest parts and can move
+
+      through jungle terrain without penalty.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchwomen / 0 – 3 Jaguar Warriors / Special Rules / One with the Jungle
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/amazons-lustria
+    name_i18n:
+      en: One with the Jungle
+      es: null
+    effect_i18n:
+      en: 'A Jaguar has lived her life in the deepest parts and can move
+
+        through jungle terrain without penalty.'
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 3 Jaguar Warriors
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/amazons-lustria
+  source_path:
+  - henchwomen
+  - 0 – 3 Jaguar Warriors
+  name_i18n:
+    en: Jaguar Warriors
+    es: null
+band_rules:
+- id: special-rules
+  name: Special Rules
+  effect: 'Isolationists: The Amazons are constantly battling against the predations of the Lizardmen and greedy treasure-seeking
+    Norse. Amazon culture reflects their dislike and distrust of outsiders and in battle they are particularly savage. Amazons
+    get to re-roll any attack rolls that miss in the first round of combat against Lizardmen and Norse.
+
+    Sacrifice: The Amazons are quick to sacrifice any captive to their gods. The Amazons follow the rules for Possessed in
+    the Rulebook when it comes to captives. lf an Amazon Warband captures a Lizardman, they may sacrifice him as normal, plus
+    get a free Skins and Charms.
+
+    Norse Enmity: When facing a Norse Warband an Amazon Warband will fight to the death. The Amazons can re-roll their first
+    failed Rout against the Norse. Remember you can''t re-roll a failed re-roll. In addition, Amazons can never choose to
+    voluntarily rout when facing a Norse warband unless their Warband Leader has been taken Out of Action.
+
+    Not one of us: Due to the Amazons'' isolationism and suspicions about other races they never side with anyone else. For
+    this reason, the Amazons may not have any Hired Swords or Dramatis Personae unless they are Amazons themselves.'
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Special Rules
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/amazons-lustria
+  name_i18n:
+    en: Special Rules
+    es: null
+  effect_i18n:
+    en: 'Isolationists: The Amazons are constantly battling against the predations of the Lizardmen and greedy treasure-seeking
+      Norse. Amazon culture reflects their dislike and distrust of outsiders and in battle they are particularly savage. Amazons
+      get to re-roll any attack rolls that miss in the first round of combat against Lizardmen and Norse.
+
+      Sacrifice: The Amazons are quick to sacrifice any captive to their gods. The Amazons follow the rules for Possessed
+      in the Rulebook when it comes to captives. lf an Amazon Warband captures a Lizardman, they may sacrifice him as normal,
+      plus get a free Skins and Charms.
+
+      Norse Enmity: When facing a Norse Warband an Amazon Warband will fight to the death. The Amazons can re-roll their first
+      failed Rout against the Norse. Remember you can''t re-roll a failed re-roll. In addition, Amazons can never choose to
+      voluntarily rout when facing a Norse warband unless their Warband Leader has been taken Out of Action.
+
+      Not one of us: Due to the Amazons'' isolationism and suspicions about other races they never side with anyone else.
+      For this reason, the Amazons may not have any Hired Swords or Dramatis Personae unless they are Amazons themselves.'
+    es: null
+- id: amazon-special-skills
+  name: Amazon special skills
+  effect: Amazon Heroines may use the following skill table instead of any of the standard skill tables available to them.
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Amazon special skills
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/amazons-lustria
+  name_i18n:
+    en: Amazon special skills
+    es: null
+  effect_i18n:
+    en: Amazon Heroines may use the following skill table instead of any of the standard skill tables available to them.
+    es: null
+- id: amazon-special-skills-skink-hunter
+  name: skink hunter
+  effect: Through her exploits the Amazon has proven herself a master when it comes to hunting Lizardmen, particularly Skinks.
+    An Amazon with this skill will always strike first in the first round of combat against Skink models no matter who charged.
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Amazon special skills / skink hunter
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/amazons-lustria
+  name_i18n:
+    en: skink hunter
+    es: null
+  effect_i18n:
+    en: Through her exploits the Amazon has proven herself a master when it comes to hunting Lizardmen, particularly Skinks.
+      An Amazon with this skill will always strike first in the first round of combat against Skink models no matter who charged.
+    es: null
+- id: amazon-special-skills-elixir-of-life
+  name: elixir of life
+  effect: After years of service among her tribe an Amazon is granted access to the waters that make the Elixir of Life. The
+    Elixir is said to heal wounds and make the Amazons immortal. Any Amazon with this Elixir can re­roll a Serious Injury
+    ✏️ roll once after the battle accepting the result of the second roll.
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Amazon special skills / elixir of life
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/amazons-lustria
+  name_i18n:
+    en: elixir of life
+    es: null
+  effect_i18n:
+    en: After years of service among her tribe an Amazon is granted access to the waters that make the Elixir of Life. The
+      Elixir is said to heal wounds and make the Amazons immortal. Any Amazon with this Elixir can re­roll a Serious Injury
+      ✏️ roll once after the battle accepting the result of the second roll.
+    es: null
+- id: amazon-special-skills-mesmerising-dance
+  name: mesmerising dance
+  effect: Some Amazon women develop their fighting motions into a graceful dance that can transfix their foes. Any model fighting
+    in base contact with the Amazon must take a Leadership test at the start of each turn. If they fail they cannot attack
+    that tum but may defend themselves. The dance however is useless against Lizardmen and undead who are immune to their
+    charms.
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Amazon special skills / mesmerising dance
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/amazons-lustria
+  name_i18n:
+    en: mesmerising dance
+    es: null
+  effect_i18n:
+    en: Some Amazon women develop their fighting motions into a graceful dance that can transfix their foes. Any model fighting
+      in base contact with the Amazon must take a Leadership test at the start of each turn. If they fail they cannot attack
+      that tum but may defend themselves. The dance however is useless against Lizardmen and undead who are immune to their
+      charms.
+    es: null
+- id: amazon-special-skills-savage-fury
+  name: savage fury
+  effect: The Amazon bas learned to channel her anger and aggression making her a veritable animal while attacking her foes.
+    Any Amazon model with this skill receives + 1 A when charging and is immune to charm effects and fear.
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Amazon special skills / savage fury
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/amazons-lustria
+  name_i18n:
+    en: savage fury
+    es: null
+  effect_i18n:
+    en: The Amazon bas learned to channel her anger and aggression making her a veritable animal while attacking her foes.
+      Any Amazon model with this skill receives + 1 A when charging and is immune to charm effects and fear.
+    es: null
+- id: amazon-special-skills-concealment
+  name: concealment
+  effect: The Amazon is adept at blending in with her surroundings. When hiding in jungle terrain all enemy models must halve
+    the range at which they can spot them.
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Amazon special skills / concealment
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/amazons-lustria
+  name_i18n:
+    en: concealment
+    es: null
+  effect_i18n:
+    en: The Amazon is adept at blending in with her surroundings. When hiding in jungle terrain all enemy models must halve
+      the range at which they can spot them.
+    es: null
+source_sections:
+- section: Special Rules
+  section_path:
+  - Special Rules
+  text: 'Isolationists: The Amazons are constantly battling against the predations of the Lizardmen and greedy treasure-seeking
+    Norse. Amazon culture reflects their dislike and distrust of outsiders and in battle they are particularly savage. Amazons
+    get to re-roll any attack rolls that miss in the first round of combat against Lizardmen and Norse.
+
+    Sacrifice: The Amazons are quick to sacrifice any captive to their gods. The Amazons follow the rules for Possessed in
+    the Rulebook when it comes to captives. lf an Amazon Warband captures a Lizardman, they may sacrifice him as normal, plus
+    get a free Skins and Charms.
+
+    Norse Enmity: When facing a Norse Warband an Amazon Warband will fight to the death. The Amazons can re-roll their first
+    failed Rout against the Norse. Remember you can''t re-roll a failed re-roll. In addition, Amazons can never choose to
+    voluntarily rout when facing a Norse warband unless their Warband Leader has been taken Out of Action.
+
+    Not one of us: Due to the Amazons'' isolationism and suspicions about other races they never side with anyone else. For
+    this reason, the Amazons may not have any Hired Swords or Dramatis Personae unless they are Amazons themselves.'
+- section: Amazon special skills
+  section_path:
+  - Amazon special skills
+  text: Amazon Heroines may use the following skill table instead of any of the standard skill tables available to them.
+- section: skink hunter
+  section_path:
+  - Amazon special skills
+  - skink hunter
+  text: Through her exploits the Amazon has proven herself a master when it comes to hunting Lizardmen, particularly Skinks.
+    An Amazon with this skill will always strike first in the first round of combat against Skink models no matter who charged.
+- section: elixir of life
+  section_path:
+  - Amazon special skills
+  - elixir of life
+  text: After years of service among her tribe an Amazon is granted access to the waters that make the Elixir of Life. The
+    Elixir is said to heal wounds and make the Amazons immortal. Any Amazon with this Elixir can re­roll a Serious Injury
+    ✏️ roll once after the battle accepting the result of the second roll.
+- section: mesmerising dance
+  section_path:
+  - Amazon special skills
+  - mesmerising dance
+  text: Some Amazon women develop their fighting motions into a graceful dance that can transfix their foes. Any model fighting
+    in base contact with the Amazon must take a Leadership test at the start of each turn. If they fail they cannot attack
+    that tum but may defend themselves. The dance however is useless against Lizardmen and undead who are immune to their
+    charms.
+- section: savage fury
+  section_path:
+  - Amazon special skills
+  - savage fury
+  text: The Amazon bas learned to channel her anger and aggression making her a veritable animal while attacking her foes.
+    Any Amazon model with this skill receives + 1 A when charging and is immune to charm effects and fear.
+- section: concealment
+  section_path:
+  - Amazon special skills
+  - concealment
+  text: The Amazon is adept at blending in with her surroundings. When hiding in jungle terrain all enemy models must halve
+    the range at which they can spot them.
+- section: Amazon equipment lists
+  section_path:
+  - Amazon equipment lists
+  text: 'The following lists are used by Amazon warbands to pick their weapons:'
+- section: Special Equipment
+  section_path:
+  - Special Equipment
+  text: 'Amazons have access to the following special equipment when purchasing items from the Trading Post , outside their
+    starting list:'
+- section: 1 Serpent Priestess
+  section_path:
+  - heroines
+  - 1 Serpent Priestess
+  text: '70 gold crowns to hire
+
+    The Serpent Priestesses are part of the religious sisterhood that rules Amazon society. They are powerful sorceresses
+    and their word is law. The younger, more junior members of the Serpent totem often gather war parties and search for Slann
+    artefacts and also conduct the ritual sacrifices of captured enemies.
+
+    Weapons/Armour: The Priestess may be equipped with weapons chosen from the Heroine''s equipment lists.'
+- section: SPECIAL RULES
+  section_path:
+  - heroines
+  - 1 Serpent Priestess
+  - SPECIAL RULES
+  text: 'Leader: Any models in the warband within 6"
+
+    of the Priestess may use her Leadership
+
+    instead of their own.
+
+    Wizard: The Priestess is a Wizard and may
+
+    use Amazon Rituals . She starts with one ritual
+
+    chosen at random from the list.'
+- section: 0 – 2 Eagle Warriors
+  section_path:
+  - heroines
+  - 0 – 2 Eagle Warriors
+  text: '35 gold crowns to hire
+
+    The Eagle Warriors are veterans that have participated in dozens of war parties over the years. They have adopted the
+    totem of the great eagle that reflects their great might in combat. Their exotic headdresses are made from these holy
+    birds of the Lizardmen.
+
+    Weapons/Armour: Eagle Warriors may be equipped with weapons chosen from the Heroine''s and special equipment lists.'
+- section: 0 – 2 Piranha Warriors
+  section_path:
+  - heroines
+  - 0 – 2 Piranha Warriors
+  text: '30 gold crowns to hire
+
+    The Piranha Warriors prefer ranged weapons and are often found ahead of an Amazon Warband. They are the only Amazons to
+    use a great seashell horn to warn the warband of approaching enemies.
+
+    Weapons/Armour: Piranha Warriors may be equipped with weapons chosen from the Heroine''s and special equipment lists.'
+- section: henchwomen
+  section_path:
+  - henchwomen
+  text: (Bought in groups of 1-5)
+- section: 1+ Amazon warriors
+  section_path:
+  - henchwomen
+  - 1+ Amazon warriors
+  text: '25 gold crowns to hire
+
+    Every Amazon Woman is trained in the ways of warfare and is hardened by a life in the unforgiving nature of their jungle
+    environment. They are skilled in fighting with a variety of different weapons including the legendary claws of the Old
+    Ones.
+
+    Weapons/Armour: Amazon Warriors may be equipped with weapons chosen from the
+
+    henchwomen''s equipment list.'
+- section: 0 – 3 Jaguar Warriors
+  section_path:
+  - henchwomen
+  - 0 – 3 Jaguar Warriors
+  text: '30 gold crowns to hire
+
+    The Jaguars are known for their exceptional speed and agility. They are the protectors of the Amazon tribes living far
+    away and keeping any invaders at bay. They are especially adept at hunting Skinks and Sauruses, their most common foe.
+    Jaguars'' favoured method of attack is to steal away in the foliage becoming part of the jungle itself and waiting for
+    the perfect moment to strike.
+
+    Weapons/Armour: Jaguars can be armed with weapons and armour chosen from the Jaguar Equipment list.'
+- section: Special Rules
+  section_path:
+  - henchwomen
+  - 0 – 3 Jaguar Warriors
+  - Special Rules
+  text: 'One with the Jungle: A Jaguar has lived her life in the deepest parts and can move
+
+    through jungle terrain without penalty.'
+canonical_family: amazons-lustria

@@ -1,0 +1,610 @@
+id: gunnery-school-of-nuln
+name: Gunnery School of Nuln
+grade: 1b
+source_url: https://mordheimer.net/docs/warbands/grade-1b-warbands/gunnery-school-of-nuln
+headings:
+- special rules ​
+- Choice of warriors ​
+- Starting experience ​
+- Gunnery School Skill Table ​
+- Gunnery School equipment lists ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Miscellaneous ​
+- Marksman equipment list ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Miscellaneous ​
+- Special Equipment ​
+- Double-barrelled Duelling Pistol ​
+- Double-barrelled Handgun ​
+- Double-barrelled Pistol ​
+- Hand-held Mortar ​
+- Hersten-Wenkler Pigeon Bombs ​
+- Repeater Handgun ​
+- Repeater Pistol ​
+- heroes ​
+- 1 Senior Gunnery Officer ​
+- SPECIAL RULES ​
+- 0 – 1 Instructor ​
+- Special Rules ​
+- 0 – 1 Senior Student ​
+- 0 – 2 Underclassmen ​
+- henchmen ​
+- Sons of the Guns ​
+- 0 – 7 Marksmen ​
+- Special Rules ​
+- 0 – 5 Pistoliers ​
+- Special Rules ​
+tables:
+- section: Gunnery School Skill Table
+  section_path:
+  - Gunnery School Skill Table
+  rows:
+  - - ''
+    - Combat
+    - Shooting
+    - Academic
+    - Strength
+    - Speed
+  - - Senior Gunnery Officer
+    - ✓
+    - ✓
+    - ✓
+    - ✓
+    - ✓
+  - - Instructor
+    - ''
+    - ✓
+    - ✓
+    - ''
+    - ✓
+  - - Senior Student
+    - ✓
+    - ✓
+    - ''
+    - ✓
+    - ✓
+  - - Underclassmen
+    - ✓
+    - ✓
+    - ''
+    - ''
+    - ✓
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Gunnery School equipment lists
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Mace / Hammer
+    - 3 gc
+  - - Axe
+    - 5 gc
+  - - Sword
+    - 10 gc
+  - - Spear
+    - 10 gc
+  - - Halberd
+    - 10 gc
+  - - Morning star
+    - 15 gc
+  - - Double-handed weapon
+    - 15 gc
+- section: Missile Weapons
+  section_path:
+  - Gunnery School equipment lists
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Pistol
+    - 10 gc (20 for a brace)
+  - - Double-Barrelled Pistol
+    - 20 gc (35 for a brace)
+  - - Duelling Pistol
+    - 20 gc (35 for a brace)
+  - - Double-Barrelled Duelling Pistol
+    - 35 gc (65 for a brace)
+  - - Handgun
+    - 25 gc
+  - - Double-Barrelled Handgun
+    - 45 gc
+- section: Armour
+  section_path:
+  - Gunnery School equipment lists
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Light armour
+    - 20 gc
+  - - Heavy armour
+    - 50 gc
+  - - Shield
+    - 5 gc
+  - - Buckler
+    - 5 gc
+  - - Helmet
+    - 10 gc
+- section: Miscellaneous
+  section_path:
+  - Gunnery School equipment lists
+  - Miscellaneous
+  rows:
+  - - Item
+    - Cost
+  - - Superior Black Powder
+    - 25 gc
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Gunnery School equipment lists
+  - Marksman equipment list
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Mace / Hammer
+    - 3 gc
+  - - Axe
+    - 5 gc
+  - - Sword
+    - 10 gc
+- section: Missile Weapons
+  section_path:
+  - Gunnery School equipment lists
+  - Marksman equipment list
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Pistol
+    - 10 gc (20 for a brace)
+  - - Double-Barrelled Pistol
+    - 20 gc (35 for a brace)
+  - - Repeater Pistol
+    - 25 gc
+  - - Blunderbuss
+    - 20 gc
+  - - Handgun
+    - 25 gc
+  - - Double-Barrelled Handgun
+    - 45 gc
+  - - Hochland Long Rifle
+    - 100 gc
+  - - Repeater Handgun
+    - 50 gc
+  - - Hand-held Mortar
+    - 70 gc
+  - - Pigeon Bombs
+    - 25 gc
+- section: Armour
+  section_path:
+  - Gunnery School equipment lists
+  - Marksman equipment list
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Light armour
+    - 20 gc
+  - - Shield
+    - 5 gc
+  - - Helmet
+    - 10 gc
+- section: Miscellaneous
+  section_path:
+  - Gunnery School equipment lists
+  - Marksman equipment list
+  - Miscellaneous
+  rows:
+  - - Item
+    - Cost
+  - - Superior Black Powder
+    - 25 gc
+- section: 1 Senior Gunnery Officer
+  section_path:
+  - heroes
+  - 1 Senior Gunnery Officer
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '4'
+    - '4'
+    - '3'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '8'
+- section: 0 – 1 Instructor
+  section_path:
+  - heroes
+  - 0 – 1 Instructor
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '4'
+    - '3'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '7'
+- section: 0 – 1 Senior Student
+  section_path:
+  - heroes
+  - 0 – 1 Senior Student
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 2 Underclassmen
+  section_path:
+  - heroes
+  - 0 – 2 Underclassmen
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '2'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '6'
+- section: Sons of the Guns
+  section_path:
+  - henchmen
+  - Sons of the Guns
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 7 Marksmen
+  section_path:
+  - henchmen
+  - 0 – 7 Marksmen
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '4'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 5 Pistoliers
+  section_path:
+  - henchmen
+  - 0 – 5 Pistoliers
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+section_text:
+- section: special rules
+  section_path:
+  - special rules
+  text: 'Impeccable Care Amongst one of the first things that the students are
+
+    taught is to take proper care of their equipment and
+
+    the right way to perform that maintenance. Once they
+
+    have mastered this function, they learn to repair the
+
+    same weapons should they become damaged and
+
+    because of this they can buy such black powder
+
+    weapons on the cheap and quickly return them to
+
+    good working order. As a result they can buy these
+
+    weapons at a fairly reduced price! They can ALWAYS
+
+    use the reduced cost for black powder weapons listed
+
+    in their starting Equipment List, and they gain an
+
+    additional +2 on rare rolls to find any black powder
+
+    weapons since people don’t mind selling broken
+
+    guns!
+
+    Properly Used The students know the proper way to use their
+
+    weapons, spending many hours on the school’s
+
+    shooting range. This is considered to be a good use
+
+    of time between lessons and recommended by all the
+
+    school’s instructors, after all if the students constantly
+
+    blow themselves up with their weapons, there
+
+    wouldn’t be many graduates. When using the
+
+    optional Misfire rules, if a one is rolled, roll a second
+
+    dice. On a 3+ the misfire is ignored (the shot still
+
+    misses, but the weapon does NOT explode).
+
+    Proud To A Fault! Anyone studying at the Gunnery School is very proud of this
+    fact, as it is a great honour to be accepted. After they start using black powder
+    weapons, students recognise the superiority of these weapons and refuse to bend
+    their knee to the ‘lesser’ ranged weapons. The members of this warband NEVER use
+    any non-black powder ranged weapons (this prohibition does NOT apply to hired
+    swords or dramatis personae, as they are hired help and have not received proper
+    Nuln training).'
+- section: Gunnery School equipment lists
+  section_path:
+  - Gunnery School equipment lists
+  text: 'The following lists are used by Gunnery School warbands to pick their weapons:'
+- section: Special Equipment
+  section_path:
+  - Special Equipment
+  text: 'This warband has access to the following special equipment when purchasing
+    items from the Trading Post , outside their starting list:'
+- section: 1 Senior Gunnery Officer
+  section_path:
+  - heroes
+  - 1 Senior Gunnery Officer
+  text: '60 gold crowns to hire
+
+    A veteran of many excursions, extremely skilled and a deadly foe, these Officers
+    have seen a lot of action, sometimes a little too much for some, and have partially
+    retired from the front line to teach. They enjoy these little ‘days out’.
+
+    Weapons/Armour: The Senior Gunnery Officer may be equipped with weapons and armour
+    chosen from the Gunnery School Equipment list.'
+- section: SPECIAL RULES
+  section_path:
+  - heroes
+  - 1 Senior Gunnery Officer
+  - SPECIAL RULES
+  text: 'Leader: Any models in the warband within 12” of the Senior Gunnery Officer
+    may use his Leadership value when using Leadership tests.
+
+    Hunter: See Shooting Skills .'
+- section: 0 – 1 Instructor
+  section_path:
+  - heroes
+  - 0 – 1 Instructor
+  text: '45 gold crowns to hire
+
+    The gunners of Nuln are the most respected in the Old World. They are in charge
+    of keeping up the mighty Empire war machines such as the great cannons. They are
+    well educated and extensively trained, but not yet too battle-hardened, so these
+    excursions give them field experience, even in the smallest things.
+
+    Weapons/Armour: The Instructor chooses weapons and armour from the School’s Armoury
+    List or the
+
+    Marksman Equipment List.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 0 – 1 Instructor
+  - Special Rules
+  text: 'Expert Weaponsmith: The Instructors know every trick in the book when it
+    comes to working with black
+
+    powder weapons. While there is an Instructor in the warband all Pistol weapons
+    receive a +3” range
+
+    bonus and all other black powder weapons receive a +6” range bonus.'
+- section: 0 – 1 Senior Student
+  section_path:
+  - heroes
+  - 0 – 1 Senior Student
+  text: '45 gold crowns to hire
+
+    The upperclassmen at the school are well acquainted with the forms of combat and
+    mechanics used by the Empire. The years of using pistols and firing cannons has
+    given them plenty of experience with weaponry and this is not their first excursion
+    into the wilds of the Empire. It is likely to be their last before they graduate.
+
+    Weapons/Armour: Senior Students are allowed to choose weapons and armour from
+    the Gunnery
+
+    School Equipment List.'
+- section: 0 – 2 Underclassmen
+  section_path:
+  - heroes
+  - 0 – 2 Underclassmen
+  text: '20 gold crowns to hire
+
+    This is the first excursion for these freshmen, who have had maybe only months
+    of training and shooting. Most will see this as a chance to escape the stuffy
+    halls of academia and go hunting for pleasure. The brighter ones will realise
+    that this is a true test of their dedication and knowledge.
+
+    Weapons/Armour: Underclassmen choose their weapons and armour from the School’s
+    Armoury List.'
+- section: henchmen
+  section_path:
+  - henchmen
+  text: (Bought in groups of 1-5)
+- section: Sons of the Guns
+  section_path:
+  - henchmen
+  - Sons of the Guns
+  text: '25 gold crowns to hire
+
+    Orphans left on the doorsteps of the school, well cared for and trained to take
+    care of the constructs as apprentices and assistants. Many go on to form gun crews
+    for the cannons taken into battle and some even rise as far as commanding such
+    crews. For the most part they remain a background element to the successful workings
+    of any cannon or black powder weapon and have become an essential part of the
+    school. On the excursions, Sons of the Guns provide a much-needed set of arms
+    to carry provisions and spare powder, as well as providing much needed additional
+    firepower in a fight.
+
+    Weapons/Armour: The sons of the guns choose weapons and armour from the Gunnery
+    School’s
+
+    Equipment List.'
+- section: 0 – 7 Marksmen
+  section_path:
+  - henchmen
+  - 0 – 7 Marksmen
+  text: '30 gold crowns to hire
+
+    It is said that some of the finest marksmen in the Empire have graduated from
+    the Gunnery School, though many backwoodsmen in Hochland disagree. Certainly compared
+    to their rural counterparts, Marksmen show more proficiency over a wider range
+    of black powder weapons, even the Long Rifle.
+
+    Weapons/Armour: The Marksmen choose their weapons and armour from the Marksmen
+    Equipment
+
+    List.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 7 Marksmen
+  - Special Rules
+  text: 'Quick Reload: Marksmen trained at the Gunnery School are forced to practice
+    many drills day after
+
+    day, including those that teach them to load their
+
+    weapons for speed under high-pressure conditions.
+
+    Marksmen have the Hunter skill from the Mordheim
+
+    rulebook. A Marksman who becomes a Hero gains no further effect from taking the
+    Hunter skill in addition to this.'
+- section: 0 – 5 Pistoliers
+  section_path:
+  - henchmen
+  - 0 – 5 Pistoliers
+  text: '35 gold crowns to hire
+
+    Part of any student’s tutoring involves learning pistols and pistol maintenance
+    and many become crack shots with repeated practice. Sadly they do not devote as
+    much time to learning from the other parts of the curriculum and often graduate
+    through money and luck, returning home to show off their skills, drifting into
+    the army as Pistoliers or Outriders.
+
+    Weapons/Armour: The Pistoliers choose their equipment from the Gunnery School’s
+    List.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 5 Pistoliers
+  - Special Rules
+  text: 'Crack Shot: Experts with pistols in close quarters; they have an uncanny
+    ability to turn what should have
+
+    missed its target into a success. When using pistols in close combat, they may
+    re-roll any missed to-hit rolls
+
+    with the pistol in the first round of combat.'

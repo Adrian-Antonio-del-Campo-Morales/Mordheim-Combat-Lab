@@ -1,0 +1,444 @@
+id: outlaws-of-stirwood-forest
+name: Outlaws of Stirwood Forest
+grade: 1b
+source_url: https://mordheimer.net/docs/warbands/grade-1b-warbands/outlaws-of-stirwood-forest
+headings:
+- Special Rules ​
+- Choice of warriors ​
+- Starting experience ​
+- Outlaws Skill Table ​
+- Outlaws equipment lists ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Miscellaneous Equipment ​
+- Special Equipment ​
+- Forest Cloak ​
+- heroes ​
+- 1 Bandit Leader ​
+- SPECIAL RULES ​
+- 0 – 2 Champions ​
+- 0 – 1 Cleric ​
+- Special Rules ​
+- 0 – 2 Petty Thieves ​
+- henchmen ​
+- 0 – 7 Marksmen ​
+- Outlaws ​
+tables:
+- section: Outlaws Skill Table
+  section_path:
+  - Outlaws Skill Table
+  rows:
+  - - ''
+    - Combat
+    - Shooting
+    - Academic
+    - Strength
+    - Speed
+  - - Bandit Leader
+    - ✓
+    - ✓
+    - ✓
+    - ✓
+    - ✓
+  - - Champion
+    - ✓
+    - ✓
+    - ''
+    - ✓
+    - ''
+  - - Cleric
+    - ''
+    - ''
+    - ✓
+    - ''
+    - ''
+  - - Petty Thieves
+    - ✓
+    - ✓
+    - ''
+    - ''
+    - ✓
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Outlaws equipment lists
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Staff/Club/Mace
+    - 3 gc
+  - - Axe
+    - 5 gc
+  - - Sword
+    - 10 gc
+  - - Spear
+    - 10 gc
+  - - Double-handed weapon
+    - 15 gc
+- section: Missile Weapons
+  section_path:
+  - Outlaws equipment lists
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Short Bow
+    - 5 gc
+  - - Bow
+    - 10 gc
+  - - Long bow *
+    - 15 gc
+- section: Armour
+  section_path:
+  - Outlaws equipment lists
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Shield
+    - 5 gc
+  - - Helmet
+    - 10 gc
+  - - Light armour *
+    - 20 gc
+- section: Miscellaneous Equipment
+  section_path:
+  - Outlaws equipment lists
+  - Miscellaneous Equipment
+  rows:
+  - - Item
+    - Cost
+  - - Hunting Arrows *
+    - 30 gc
+  - - Forest Cloak **
+    - 50 gc
+- section: 1 Bandit Leader
+  section_path:
+  - heroes
+  - 1 Bandit Leader
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '4'
+    - '4'
+    - '3'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '8'
+- section: 0 – 2 Champions
+  section_path:
+  - heroes
+  - 0 – 2 Champions
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '4'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 1 Cleric
+  section_path:
+  - heroes
+  - 0 – 1 Cleric
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 2 Petty Thieves
+  section_path:
+  - heroes
+  - 0 – 2 Petty Thieves
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '2'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '6'
+- section: 0 – 7 Marksmen
+  section_path:
+  - henchmen
+  - 0 – 7 Marksmen
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '4'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: Outlaws
+  section_path:
+  - henchmen
+  - Outlaws
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+section_text:
+- section: Special Rules
+  section_path:
+  - Special Rules
+  text: 'All warriors in an Outlaws warband may be
+
+    equipped with only one missile weapon at
+
+    any time. All warriors must carry a type of
+
+    bow, but not crossbows, as part of their
+
+    equipment. So, even if an Outlaw acquires
+
+    skills that allow him to use additional
+
+    ballistic weaponry, he cannot do so. The
+
+    only exception to this is the Cleric who may
+
+    choose to carry a bow, but is not compelled
+
+    to do so.
+
+    Hired Swords: The following Hired Swords are not available to the Outlaws: Bounty
+    Hunter, Wolf-Priest of Ulric, Norse Shaman, Dark Elf Assassin.'
+- section: Outlaws equipment lists
+  section_path:
+  - Outlaws equipment lists
+  text: 'The following lists are used by Outlaws warbands to pick their weapons:'
+- section: Miscellaneous Equipment
+  section_path:
+  - Outlaws equipment lists
+  - Miscellaneous Equipment
+  text: '* Available to Heroes and Marksmen only
+
+    ** Available to Heroes only
+
+    Hunting Arrows: These are available to Heroes at the time of their initial recruitment
+    without having to roll for Rarity. If you wish to subsequently purchase this item
+    during the Trading and Exploration stages of the game, then you would have to
+    roll for Rarity as normal.'
+- section: Special Equipment
+  section_path:
+  - Special Equipment
+  text: 'This warband has access to the following special equipment when purchasing
+    items from the Trading Post , outside their starting list:'
+- section: 1 Bandit Leader
+  section_path:
+  - heroes
+  - 1 Bandit Leader
+  text: '60 gold crowns to hire
+
+    A Bandit Leader is a professional cutthroat, a hardened criminal. His presence
+    along the shadowy forest tracks of Stirwood has often meant the untimely demise
+    of many a passing traveller. Other Outlaws will follow him, inspired as much by
+    his ruthlessness as by his prowess.
+
+    Weapons/Armour: The Bandit Leader may
+
+    be equipped with weapons chosen from the
+
+    Outlaws equipment list.'
+- section: SPECIAL RULES
+  section_path:
+  - heroes
+  - 1 Bandit Leader
+  - SPECIAL RULES
+  text: 'Leader: Any models in the warband within 6"
+
+    of the Bandit Leader may use her Leadership
+
+    instead of their own.'
+- section: 0 – 2 Champions
+  section_path:
+  - heroes
+  - 0 – 2 Champions
+  text: '35 gold crowns to hire
+
+    All groups of Outlaws will often have a few who are more experienced than others.
+    Loyal to their Leader they are usually rewarded with the choicest pickings of
+    any loot.
+
+    Weapons/Armour: Champions may be
+
+    equipped with weapons chosen from the
+
+    Outlaws equipment lists'
+- section: 0 – 1 Cleric
+  section_path:
+  - heroes
+  - 0 – 1 Cleric
+  text: '35 gold crowns to hire
+
+    A Cleric would usually spend most of his time alone in the forest in contemplation
+    of his devotion to Sigmar. However, some will see that Sigmar’s work can also
+    be achieved by the purging of all that is corrupt from the Empire. Many will,
+    therefore, willingly join in the activities of groups of outlaws. Their knowledge
+    of healing is often valued by other members.
+
+    Weapons/Armour: Can be chosen from the
+
+    Outlaws equipment list. As Prayers are not
+
+    considered to be Spells, a Cleric may wear
+
+    armour, if he wishes.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 0 – 1 Cleric
+  - Special Rules
+  text: 'Disciple of Sigmar: The Cleric has devoted
+
+    his life in the constant service to Sigmar and
+
+    as such he would start a campaign knowing
+
+    one of the Prayers of Sigmar . As with a Witch-Hunter’s
+
+    Warrior Priest, he is also subject to some of
+
+    the restrictions of being a follower of the Lord
+
+    Sigmar and may learn neither Sorcery nor
+
+    Arcane Lore.'
+- section: 0 – 2 Petty Thieves
+  section_path:
+  - heroes
+  - 0 – 2 Petty Thieves
+  text: '20 gold crowns to hire
+
+    Many youths who are caught by the City Guards in the act of thieving are compelled
+    to flee the city and take up a place among the trees of Stirwood Forest. Although
+    young, they are still keen enough to prove their worth to their fellow outlaws.
+
+    Weapons/Armour: Petty Thieves may be
+
+    equipped with weapons chosen from the
+
+    Outlaws equipment list.'
+- section: henchmen
+  section_path:
+  - henchmen
+  text: (Bought in groups of 1-5)
+- section: 0 – 7 Marksmen
+  section_path:
+  - henchmen
+  - 0 – 7 Marksmen
+  text: '25 gold crowns to hire
+
+    These are the best archers in the group and their skill with the bow is legendary.
+    They are more than capable of picking off any enemy before they get too close.
+
+    Weapons/Armour: Marksmen
+
+    can be armed with weapons
+
+    and armour chosen from the
+
+    Outlaws Equipment list.'
+- section: Outlaws
+  section_path:
+  - henchmen
+  - Outlaws
+  text: '25 gold crowns to hire
+
+    These warriors form the basis of any group of bandits. Ruthless to the core, any
+    of these would be more than happy to slip a sharp knife between somebody’s ribs
+    for the promise of just a few groats.
+
+    Weapons/Armour: Outlaws can be armed
+
+    with weapons and armour chosen from the
+
+    Outlaws Equipment list.'

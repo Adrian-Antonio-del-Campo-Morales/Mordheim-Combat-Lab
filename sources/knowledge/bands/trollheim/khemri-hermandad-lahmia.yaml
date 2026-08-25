@@ -1,0 +1,1047 @@
+schema_version: 1
+id: khemri-hermandad-lahmia
+name: Hermandad Lahmia
+name_i18n:
+  en: null
+  es: Hermandad Lahmia
+original_locale: es
+categories:
+- trollheim
+collections:
+- trollheim
+grade: null
+setting: Khemri
+publication: khemri
+status: source-normalized
+sources:
+- manual: khemri
+  printed_page: 82-90
+  section: Hermandad Lahmia
+roster:
+  minimum_models: 3
+  maximum_models: 15
+  starting_gold: 500
+  members:
+  - profile_id: lahmia-vampire
+    minimum: 1
+    maximum: 1
+  - profile_id: lahmia-necromancer
+    minimum: 0
+    maximum: 1
+  - profile_id: lahmia-beloved
+    minimum: 0
+    maximum: 1
+  - profile_id: lahmia-blood-sister
+    minimum: 0
+    maximum: 1
+  - profile_id: lahmia-lackey
+    minimum: 0
+    maximum: 2
+  - profile_id: lahmia-skeleton
+    minimum: 0
+    maximum: null
+  - profile_id: lahmia-blood-slave
+    minimum: 0
+    maximum: 5
+  - profile_id: lahmia-black-hound
+    minimum: 0
+    maximum: 5
+  - profile_id: lahmia-spirit
+    minimum: 0
+    maximum: 5
+  - profile_id: lahmia-jackal
+    minimum: 0
+    maximum: null
+equipment_lists:
+- id: lahmia-foreign-undead-equipment
+  name: Equipo para No Muertos de bandas extranjeras
+  source:
+    manual: khemri
+    printed_page: 84
+    section: Bandas Extranjeras - Lista de equipo para No Muertos
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: La primera es gratis
+  - item_id: mace
+    cost: 3
+  - item_id: hammer
+    cost: 3
+  - item_id: axe
+    cost: 5
+  - item_id: sword
+    cost: 10
+  - item_id: spear
+    cost: 10
+  - item_id: great_weapon
+    cost: 15
+  - item_id: snake_whip
+    cost: 25
+    notes: Solo Vampira y Hermana de Sangre
+  - item_id: short_bow
+    cost: 5
+  - item_id: bow
+    cost: 10
+  - item_id: shield
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  - item_id: light_armour
+    cost: 20
+  - item_id: heavy_armour
+    cost: 50
+  name_i18n:
+    en: null
+    es: Equipo para No Muertos de bandas extranjeras
+- id: lahmia-foreign-beloved-equipment
+  name: Equipo para Amados de bandas extranjeras
+  source:
+    manual: khemri
+    printed_page: 84
+    section: Bandas Extranjeras - Lista de equipo para Amados
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: La primera es gratis
+  - item_id: mace
+    cost: 3
+  - item_id: hammer
+    cost: 3
+  - item_id: axe
+    cost: 5
+  - item_id: sword
+    cost: 10
+  - item_id: spear
+    cost: 10
+  - item_id: halberd
+    cost: 10
+  - item_id: flail
+    cost: 15
+  - item_id: great_weapon
+    cost: 15
+  - item_id: bow
+    cost: 10
+  - item_id: crossbow
+    cost: 25
+  - item_id: pistol
+    cost: 15
+  - item_id: pistol_brace
+    cost: 30
+  - item_id: duelling_pistol
+    cost: 25
+  - item_id: duelling_pistol_brace
+    cost: 50
+  - item_id: shield
+    cost: 5
+  - item_id: buckler
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  - item_id: light_armour
+    cost: 20
+  - item_id: heavy_armour
+    cost: 50
+  name_i18n:
+    en: null
+    es: Equipo para Amados de bandas extranjeras
+- id: lahmia-native-undead-equipment
+  name: Equipo para No Muertos de bandas nativas
+  source:
+    manual: khemri
+    printed_page: 84
+    section: Bandas Nativas - Lista de equipo para No Muertos
+  items:
+  - item_id: yambiya
+    cost: 2
+    notes: La primera es gratis
+  - item_id: mace
+    cost: 3
+  - item_id: katar
+    cost: 5
+  - item_id: sword
+    cost: 10
+  - item_id: spear
+    cost: 10
+  - item_id: scimitar
+    cost: 15
+  - item_id: great_weapon
+    cost: 15
+  - item_id: snake_whip
+    cost: 25
+    notes: Solo Vampira y Hermana de Sangre
+  - item_id: short_bow
+    cost: 5
+  - item_id: bow
+    cost: 10
+  - item_id: shield
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  - item_id: light_armour
+    cost: 20
+  name_i18n:
+    en: null
+    es: Equipo para No Muertos de bandas nativas
+- id: lahmia-native-beloved-equipment
+  name: Equipo para Amados de bandas nativas
+  source:
+    manual: khemri
+    printed_page: 84
+    section: Bandas Nativas - Lista de equipo para Amados
+  items:
+  - item_id: yambiya
+    cost: 2
+    notes: La primera es gratis
+  - item_id: mace
+    cost: 3
+  - item_id: katar
+    cost: 5
+  - item_id: scimitar
+    cost: 10
+  - item_id: sword
+    cost: 10
+  - item_id: spear
+    cost: 10
+  - item_id: ankus
+    cost: 13
+  - item_id: cutlass
+    cost: 15
+  - item_id: great_weapon
+    cost: 15
+  - item_id: flail
+    cost: 15
+  - item_id: great_scimitar
+    cost: 20
+  - item_id: short_bow
+    cost: 5
+  - item_id: bow
+    cost: 10
+  - item_id: tufenk
+    cost: 15
+  - item_id: crossbow_pistol
+    cost: 35
+  - item_id: shield
+    cost: 5
+  - item_id: buckler
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  - item_id: nomad_robes
+    cost: 15
+  - item_id: light_armour
+    cost: 20
+  name_i18n:
+    en: null
+    es: Equipo para Amados de bandas nativas
+profiles:
+- id: lahmia-vampire
+  name: Vampira del Clan Lahmia
+  type: hero
+  cost: 110
+  experience: 20
+  characteristics:
+    M: 15
+    WS: 4
+    BS: 4
+    S: 4
+    T: 4
+    W: 2
+    I: 5
+    A: 2
+    Ld: 8
+  equipment_lists:
+  - lahmia-foreign-undead-equipment
+  - lahmia-native-undead-equipment
+  fixed_equipment: []
+  equipment_restrictions:
+  - Usa exclusivamente la lista extranjera o nativa elegida al crear la banda
+  skill_access:
+  - combat
+  - academic
+  - strength
+  - speed
+  - special
+  rules:
+  - id: lahmia-leader
+    name: Jefe
+    effect: Cualquier miembro de la banda a 15 cm o menos puede utilizar su Liderazgo.
+    source:
+      manual: khemri
+      printed_page: 86
+      section: Vampira del Clan Lahmia
+    name_i18n:
+      en: null
+      es: Jefe
+    effect_i18n:
+      en: null
+      es: Cualquier miembro de la banda a 15 cm o menos puede utilizar su Liderazgo.
+  - id: lahmia-vampire-undead
+    name: No Muerto
+    effect: Sigue todas las reglas de los No Muertos
+    salvo las excepciones expresas para Vampiras.: null
+    source:
+      manual: khemri
+      printed_page: 86
+      section: Vampira del Clan Lahmia
+    name_i18n:
+      en: null
+      es: No Muerto
+    effect_i18n:
+      en: null
+      es: Sigue todas las reglas de los No Muertos
+  - id: lahmia-local-knowledge
+    name: Conocimientos Locales
+    effect: Solo bandas nativas en campaña de Khemri. Si la Vampira no quedó fuera de combate
+    puede repetir uno de los dados de exploración y conservar el segundo resultado.: null
+    source:
+      manual: khemri
+      printed_page: 86
+      section: Vampira del Clan Lahmia
+    name_i18n:
+      en: null
+      es: Conocimientos Locales
+    effect_i18n:
+      en: null
+      es: Solo bandas nativas en campaña de Khemri. Si la Vampira no quedó fuera de combate
+  source:
+    manual: khemri
+    printed_page: 86
+    section: Vampira del Clan Lahmia
+  name_i18n:
+    en: null
+    es: Vampira del Clan Lahmia
+- id: lahmia-necromancer
+  name: Nigromante
+  type: hero
+  cost: 35
+  experience: 8
+  characteristics:
+    M: 10
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - lahmia-foreign-undead-equipment
+  - lahmia-native-undead-equipment
+  fixed_equipment: []
+  equipment_restrictions:
+  - Usa exclusivamente la lista extranjera o nativa elegida al crear la banda
+  skill_access:
+  - academic
+  - speed
+  rules:
+  - id: lahmia-necromancer-spellcaster
+    name: Hechicero
+    effect: Empieza con un hechizo de Nigromancia; la lista de hechizos queda fuera del alcance canónico actual.
+    source:
+      manual: khemri
+      printed_page: 86
+      section: Nigromante
+    name_i18n:
+      en: null
+      es: Hechicero
+    effect_i18n:
+      en: null
+      es: Empieza con un hechizo de Nigromancia; la lista de hechizos queda fuera del alcance canónico actual.
+  source:
+    manual: khemri
+    printed_page: 86
+    section: Nigromante
+  name_i18n:
+    en: null
+    es: Nigromante
+- id: lahmia-beloved
+  name: Amado
+  type: hero
+  cost: 60
+  experience: 20
+  characteristics:
+    M: 10
+    WS: 4
+    BS: 4
+    S: 3
+    T: 3
+    W: 1
+    I: 4
+    A: 1
+    Ld: 8
+  equipment_lists:
+  - lahmia-foreign-beloved-equipment
+  - lahmia-native-beloved-equipment
+  fixed_equipment: []
+  equipment_restrictions:
+  - Usa exclusivamente la lista extranjera o nativa elegida al crear la banda
+  skill_access:
+  - combat
+  - shooting
+  - strength
+  - speed
+  rules:
+  - id: lahmia-beloved-devout
+    name: Devoto de la Vampira
+    effect: Si la Vampira es derribada
+    entra en furia asesina y corre hacia ella; ataca a cualquiera a 5 cm. Si muere: null
+    entra en furia y odia al asesino hasta que este muera.: null
+    source:
+      manual: khemri
+      printed_page: 86
+      section: Amado
+    name_i18n:
+      en: null
+      es: Devoto de la Vampira
+    effect_i18n:
+      en: null
+      es: Si la Vampira es derribada
+  - id: lahmia-beloved-fear
+    name: Habituado al Miedo
+    effect: Es inmune al miedo causado por vampiros
+    esqueletos y espíritus.: null
+    source:
+      manual: khemri
+      printed_page: 86
+      section: Amado
+    name_i18n:
+      en: null
+      es: Habituado al Miedo
+    effect_i18n:
+      en: null
+      es: Es inmune al miedo causado por vampiros
+  source:
+    manual: khemri
+    printed_page: 86
+    section: Amado
+  name_i18n:
+    en: null
+    es: Amado
+- id: lahmia-blood-sister
+  name: Hermana de Sangre
+  type: hero
+  cost: 55
+  experience: 0
+  characteristics:
+    M: 10
+    WS: 3
+    BS: 3
+    S: 4
+    T: 4
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - lahmia-foreign-undead-equipment
+  - lahmia-native-undead-equipment
+  fixed_equipment: []
+  equipment_restrictions:
+  - Usa exclusivamente la lista extranjera o nativa elegida al crear la banda
+  skill_access:
+  - combat
+  - academic
+  - strength
+  - speed
+  rules:
+  - id: lahmia-sister-fear
+    name: Habituada al Miedo
+    effect: Es inmune al miedo causado por vampiros
+    esqueletos y espíritus.: null
+    source:
+      manual: khemri
+      printed_page: 87
+      section: Hermana de Sangre
+    name_i18n:
+      en: null
+      es: Habituada al Miedo
+    effect_i18n:
+      en: null
+      es: Es inmune al miedo causado por vampiros
+  - id: lahmia-semi-vampire
+    name: Semi-Vampira
+    effect: Si muere la Vampira
+    en su siguiente desarrollo tira 1D6; con 4+ se convierte en Vampira: null
+    conserva experiencia y habilidades: null
+    y sustituye esa tirada. Si evoluciona puede reclutarse otra Hermana.: null
+    source:
+      manual: khemri
+      printed_page: 87
+      section: Hermana de Sangre
+    name_i18n:
+      en: null
+      es: Semi-Vampira
+    effect_i18n:
+      en: null
+      es: Si muere la Vampira
+  source:
+    manual: khemri
+    printed_page: 87
+    section: Hermana de Sangre
+  name_i18n:
+    en: null
+    es: Hermana de Sangre
+- id: lahmia-lackey
+  name: Lacayo
+  type: hero
+  cost: 30
+  experience: 0
+  characteristics:
+    M: 10
+    WS: 2
+    BS: 2
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - lahmia-foreign-undead-equipment
+  - lahmia-native-undead-equipment
+  fixed_equipment: []
+  equipment_restrictions:
+  - Usa exclusivamente la lista extranjera o nativa elegida al crear la banda
+  skill_access:
+  - combat
+  - strength
+  - speed
+  rules:
+  - id: lahmia-lackey-fear
+    name: Habituado al Miedo
+    effect: Es inmune al miedo causado por vampiros
+    esqueletos y espíritus.: null
+    source:
+      manual: khemri
+      printed_page: 87
+      section: Lacayos
+    name_i18n:
+      en: null
+      es: Habituado al Miedo
+    effect_i18n:
+      en: null
+      es: Es inmune al miedo causado por vampiros
+  - id: lahmia-lackey-devout
+    name: Devoto de la Vampira
+    effect: Aplica la misma reacción protectora y odio que el Amado cuando la Vampira es derribada o muerta.
+    source:
+      manual: khemri
+      printed_page: 87
+      section: Lacayos
+    name_i18n:
+      en: null
+      es: Devoto de la Vampira
+    effect_i18n:
+      en: null
+      es: Aplica la misma reacción protectora y odio que el Amado cuando la Vampira es derribada o muerta.
+  - id: lahmia-lackey-favoured
+    name: Favorecido
+    effect: Si muere el Amado
+    la Vampira puede convertir un Lacayo en Amado; eleva su Liderazgo a 8 y el beso consume una tirada de desarrollo.: null
+    source:
+      manual: khemri
+      printed_page: 87
+      section: Lacayos
+    name_i18n:
+      en: null
+      es: Favorecido
+    effect_i18n:
+      en: null
+      es: Si muere el Amado
+  source:
+    manual: khemri
+    printed_page: 87
+    section: Lacayos
+  name_i18n:
+    en: null
+    es: Lacayo
+- id: lahmia-skeleton
+  name: Guerrero Esqueleto
+  type: henchman
+  cost: 20
+  experience: 0
+  characteristics:
+    M: 10
+    WS: 2
+    BS: 2
+    S: 3
+    T: 3
+    W: 1
+    I: 2
+    A: 1
+    Ld: 5
+  equipment_lists:
+  - lahmia-foreign-undead-equipment
+  - lahmia-native-undead-equipment
+  fixed_equipment: []
+  equipment_restrictions:
+  - Usa exclusivamente la lista extranjera o nativa elegida al crear la banda
+  skill_access: []
+  rules:
+  - id: lahmia-skeleton-undead
+    name: No Muerto
+    effect: Sigue todas las reglas de los No Muertos.
+    source:
+      manual: khemri
+      printed_page: 88
+      section: Guerreros Esqueleto
+    name_i18n:
+      en: null
+      es: No Muerto
+    effect_i18n:
+      en: null
+      es: Sigue todas las reglas de los No Muertos.
+  source:
+    manual: khemri
+    printed_page: 88
+    section: Guerreros Esqueleto
+  name_i18n:
+    en: null
+    es: Guerrero Esqueleto
+- id: lahmia-blood-slave
+  name: Esclavo de Sangre
+  type: henchman
+  cost: 25
+  experience: 0
+  characteristics:
+    M: 10
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - lahmia-foreign-undead-equipment
+  fixed_equipment: []
+  equipment_restrictions:
+  - Solo bandas extranjeras
+  skill_access: []
+  rules:
+  - id: lahmia-slave-fear
+    name: Habituado al Miedo
+    effect: Es inmune al miedo causado por vampiros
+    esqueletos y espíritus.: null
+    source:
+      manual: khemri
+      printed_page: 88
+      section: Esclavos de Sangre
+    name_i18n:
+      en: null
+      es: Habituado al Miedo
+    effect_i18n:
+      en: null
+      es: Es inmune al miedo causado por vampiros
+  source:
+    manual: khemri
+    printed_page: 88
+    section: Esclavos de Sangre
+  name_i18n:
+    en: null
+    es: Esclavo de Sangre
+- id: lahmia-black-hound
+  name: Sabueso Negro
+  type: henchman
+  cost: 20
+  experience: 0
+  characteristics:
+    M: 18
+    WS: 3
+    BS: 0
+    S: 3
+    T: 3
+    W: 1
+    I: 4
+    A: 1
+    Ld: 5
+  equipment_lists: []
+  fixed_equipment: []
+  equipment_restrictions:
+  - Solo bandas extranjeras
+  - no usa armas ni armaduras
+  skill_access: []
+  rules:
+  - id: lahmia-hound-fear
+    name: Causan Miedo
+    effect: Causa miedo.
+    source:
+      manual: khemri
+      printed_page: 88
+      section: Sabuesos Negros
+    name_i18n:
+      en: null
+      es: Causan Miedo
+    effect_i18n:
+      en: null
+      es: Causa miedo.
+  - id: lahmia-hound-animal
+    name: Animales
+    effect: No gana experiencia.
+    source:
+      manual: khemri
+      printed_page: 88
+      section: Sabuesos Negros
+    name_i18n:
+      en: null
+      es: Animales
+    effect_i18n:
+      en: null
+      es: No gana experiencia.
+  source:
+    manual: khemri
+    printed_page: 88
+    section: Sabuesos Negros
+  name_i18n:
+    en: null
+    es: Sabueso Negro
+- id: lahmia-spirit
+  name: Espíritu
+  type: henchman
+  cost: 45
+  experience: 0
+  characteristics:
+    M: 10
+    WS: 3
+    BS: 0
+    S: 3
+    T: 4
+    W: 1
+    I: 3
+    A: 1
+    Ld: 8
+  equipment_lists:
+  - lahmia-native-undead-equipment
+  fixed_equipment: []
+  equipment_restrictions:
+  - Solo bandas nativas
+  skill_access: []
+  rules:
+  - id: lahmia-spirit-undead
+    name: No Muerto
+    effect: Sigue todas las reglas de los No Muertos.
+    source:
+      manual: khemri
+      printed_page: 89
+      section: Espíritus
+    name_i18n:
+      en: null
+      es: No Muerto
+    effect_i18n:
+      en: null
+      es: Sigue todas las reglas de los No Muertos.
+  - id: lahmia-spiritual-weapons
+    name: Armas Espirituales
+    effect: Todas sus armas son espirituales y causan golpes críticos con 5+.
+    source:
+      manual: khemri
+      printed_page: 89
+      section: Espíritus
+    name_i18n:
+      en: null
+      es: Armas Espirituales
+    effect_i18n:
+      en: null
+      es: Todas sus armas son espirituales y causan golpes críticos con 5+.
+  source:
+    manual: khemri
+    printed_page: 89
+    section: Espíritus
+  name_i18n:
+    en: null
+    es: Espíritu
+- id: lahmia-jackal
+  name: Chacal
+  type: henchman
+  cost: 20
+  experience: 0
+  characteristics:
+    M: 15
+    WS: 3
+    BS: 0
+    S: 3
+    T: 3
+    W: 1
+    I: 2
+    A: 1
+    Ld: 4
+  equipment_lists: []
+  fixed_equipment: []
+  equipment_restrictions:
+  - Solo bandas nativas
+  - no usa armas ni armaduras
+  skill_access: []
+  rules:
+  - id: lahmia-jackal-pack
+    name: Jauría
+    effect: Si dos o más chacales luchan contra la misma miniatura
+    cada uno obtiene un ataque adicional ese turno.: null
+    source:
+      manual: khemri
+      printed_page: 89
+      section: Chacales
+    name_i18n:
+      en: null
+      es: Jauría
+    effect_i18n:
+      en: null
+      es: Si dos o más chacales luchan contra la misma miniatura
+  - id: lahmia-jackal-animal
+    name: Animales
+    effect: No gana experiencia.
+    source:
+      manual: khemri
+      printed_page: 89
+      section: Chacales
+    name_i18n:
+      en: null
+      es: Animales
+    effect_i18n:
+      en: null
+      es: No gana experiencia.
+  source:
+    manual: khemri
+    printed_page: 89
+    section: Chacales
+  name_i18n:
+    en: null
+    es: Chacal
+band_rules:
+- id: lahmia-backgrounds
+  name: Extranjeras o Nativas
+  effect: Al crear la banda elige un trasfondo. Determina listas de equipo y secuaces; no puede cambiarse. Tras la primera
+    batalla en Khemri una extranjera pasa a usar reclutamiento y comercio nativos; fuera de Khemri solo puede usar los extranjeros.
+  source:
+    manual: khemri
+    printed_page: 83
+    section: Elección de Guerreros
+  name_i18n:
+    en: null
+    es: Extranjeras o Nativas
+  effect_i18n:
+    en: null
+    es: Al crear la banda elige un trasfondo. Determina listas de equipo y secuaces; no puede cambiarse. Tras la primera batalla
+      en Khemri una extranjera pasa a usar reclutamiento y comercio nativos; fuera de Khemri solo puede usar los extranjeros.
+- id: lahmia-undead-fear
+  name: Causan Miedo
+  effect: Los No Muertos causan miedo.
+  source:
+    manual: khemri
+    printed_page: 85
+    section: Reglas especiales de los No Muertos
+  name_i18n:
+    en: null
+    es: Causan Miedo
+  effect_i18n:
+    en: null
+    es: Los No Muertos causan miedo.
+- id: lahmia-undead-psychology
+  name: Inmune a Psicología
+  effect: No se ven afectados por psicología y nunca abandonan un combate.
+  source:
+    manual: khemri
+    printed_page: 85
+    section: Reglas especiales de los No Muertos
+  name_i18n:
+    en: null
+    es: Inmune a Psicología
+  effect_i18n:
+    en: null
+    es: No se ven afectados por psicología y nunca abandonan un combate.
+- id: lahmia-undead-pain
+  name: Insensible al Dolor
+  effect: Consideran Aturdido como Derribado en la tabla de heridas.
+  source:
+    manual: khemri
+    printed_page: 85
+    section: Reglas especiales de los No Muertos
+  name_i18n:
+    en: null
+    es: Insensible al Dolor
+  effect_i18n:
+    en: null
+    es: Consideran Aturdido como Derribado en la tabla de heridas.
+- id: lahmia-undead-no-run
+  name: No Pueden Correr
+  effect: No pueden correr
+  aunque sí cargar normalmente; las Vampiras pueden correr.: null
+  source:
+    manual: khemri
+    printed_page: 85
+    section: Reglas especiales de los No Muertos
+  name_i18n:
+    en: null
+    es: No Pueden Correr
+  effect_i18n:
+    en: null
+    es: No pueden correr
+- id: lahmia-undead-poison
+  name: Inmune a Venenos
+  effect: Los venenos no les afectan.
+  source:
+    manual: khemri
+    printed_page: 85
+    section: Reglas especiales de los No Muertos
+  name_i18n:
+    en: null
+    es: Inmune a Venenos
+  effect_i18n:
+    en: null
+    es: Los venenos no les afectan.
+- id: lahmia-undead-brainless
+  name: Sin Cerebro
+  effect: No ganan experiencia; las Vampiras sí la ganan.
+  source:
+    manual: khemri
+    printed_page: 85
+    section: Reglas especiales de los No Muertos
+  name_i18n:
+    en: null
+    es: Sin Cerebro
+  effect_i18n:
+    en: null
+    es: No ganan experiencia; las Vampiras sí la ganan.
+- id: lahmia-undead-no-drink
+  name: No Beben
+  effect: No necesitan alimento ni agua; los animales vivos que acompañan a las Vampiras siguen las reglas normales de agua.
+  source:
+    manual: khemri
+    printed_page: 85
+    section: Reglas especiales de los No Muertos
+  name_i18n:
+    en: null
+    es: No Beben
+  effect_i18n:
+    en: null
+    es: No necesitan alimento ni agua; los animales vivos que acompañan a las Vampiras siguen las reglas normales de agua.
+- id: lahmia-vampire-death
+  name: Muerte de la Vampira
+  effect: Si muere tras la batalla no puede contratarse otra hasta que la Hermana de Sangre se transforme; mientras tanto
+    manda el Héroe con más Liderazgo. Si no hay Hermana puede contratarse otra Vampira. Si mueren Vampira y Nigromante y no
+    hay Hermana transformada
+  todos los secuaces No Muertos son destruidos.: null
+  source:
+    manual: khemri
+    printed_page: 85
+    section: Reglas especiales de los No Muertos
+  name_i18n:
+    en: null
+    es: Muerte de la Vampira
+  effect_i18n:
+    en: null
+    es: Si muere tras la batalla no puede contratarse otra hasta que la Hermana de Sangre se transforme; mientras tanto manda
+      el Héroe con más Liderazgo. Si no hay Hermana puede contratarse otra Vampira. Si mueren Vampira y Nigromante y no hay
+      Hermana transformada
+- id: snake-whip-rule
+  name: Látigo Ofidio
+  effect: Raro 8
+  coste 25: null
+  Fuerza del usuario: null
+  ? solo Vampiras y Hermanas de Sangre. No puede pararse. Al cargar concede +1A; si es cargada concede +1A que solo ataca
+    primero al enemigo que cargó. Con dos látigos cada uno concede +1A pero solo el primero conserva Restallido. Siempre está
+    cubierto de Loto Negro y no admite otros venenos.
+  : null
+  source:
+    manual: khemri
+    printed_page: 85
+    section: Látigo Ofidio
+  name_i18n:
+    en: null
+    es: Látigo Ofidio
+  effect_i18n:
+    en: null
+    es: Raro 8
+- id: lahmia-skill-celerity
+  name: Celeridad
+  effect: Puede correr su Movimiento máximo pero a efectos de juego cuenta como si solo hubiese movido; puede correr y disparar
+  ocultarse u otras acciones normalmente prohibidas tras correr.: null
+  source:
+    manual: khemri
+    printed_page: 90
+    section: Habilidades Especiales de las Vampiras Lahmia
+  name_i18n:
+    en: null
+    es: Celeridad
+  effect_i18n:
+    en: null
+    es: Puede correr su Movimiento máximo pero a efectos de juego cuenta como si solo hubiese movido; puede correr y disparar
+- id: lahmia-skill-hypnotize
+  name: Hipnotizar
+  effect: Al inicio del combate elige un enemigo en contacto; este supera Liderazgo o no ataca ese turno y todos los ataques
+    contra él obtienen +1 para impactar. No afecta a inmunes a psicología.
+  source:
+    manual: khemri
+    printed_page: 90
+    section: Habilidades Especiales de las Vampiras Lahmia
+  name_i18n:
+    en: null
+    es: Hipnotizar
+  effect_i18n:
+    en: null
+    es: Al inicio del combate elige un enemigo en contacto; este supera Liderazgo o no ataca ese turno y todos los ataques
+      contra él obtienen +1 para impactar. No afecta a inmunes a psicología.
+- id: lahmia-skill-vampire-reflexes
+  name: Reflejos de Vampiro
+  effect: Salvación inmodificable de 6+ contra cualquier herida
+  tirada antes de multiplicar heridas. Puede combinarse con dos espadas para mejorar a 4+.: null
+  source:
+    manual: khemri
+    printed_page: 90
+    section: Habilidades Especiales de las Vampiras Lahmia
+  name_i18n:
+    en: null
+    es: Reflejos de Vampiro
+  effect_i18n:
+    en: null
+    es: Salvación inmodificable de 6+ contra cualquier herida
+- id: lahmia-skill-lost-innocence
+  name: Inocencia Perdida
+  effect: Gana Atacar Primero en cuerpo a cuerpo; si otra miniatura tiene una habilidad similar se resuelve por Iniciativa
+    y los empates con 1D6.
+  source:
+    manual: khemri
+    printed_page: 90
+    section: Habilidades Especiales de las Vampiras Lahmia
+  name_i18n:
+    en: null
+    es: Inocencia Perdida
+  effect_i18n:
+    en: null
+    es: Gana Atacar Primero en cuerpo a cuerpo; si otra miniatura tiene una habilidad similar se resuelve por Iniciativa y
+      los empates con 1D6.
+- id: lahmia-skill-seduction
+  name: Seducción
+  effect: Al inicio del combate tira Liderazgo; si supera
+  ? un enemigo en contacto supera Liderazgo o queda controlado por la Vampira. Puede recuperarse en su fase de recuperación.
+    Solo controla uno; si ella ataca al seducido pierde el control
+  : null
+  y si termina la batalla controlado se considera fuera de combate. Inmunes a psicología no se ven afectados.: null
+  source:
+    manual: khemri
+    printed_page: 90
+    section: Habilidades Especiales de las Vampiras Lahmia
+  name_i18n:
+    en: null
+    es: Seducción
+  effect_i18n:
+    en: null
+    es: Al inicio del combate tira Liderazgo; si supera
+- id: lahmia-skill-night-creature
+  name: Criatura de la Noche
+  effect: Si no se movió en su fase de Movimiento
+  cualquier carga: null
+  disparo o hechizo contra ella necesita 4+ en 1D6 para poder realizarse.: null
+  source:
+    manual: khemri
+    printed_page: 90
+    section: Habilidades Especiales de las Vampiras Lahmia
+  name_i18n:
+    en: null
+    es: Criatura de la Noche
+  effect_i18n:
+    en: null
+    es: Si no se movió en su fase de Movimiento
+source_sections: []
+canonical_family: khemri-hermandad-lahmia

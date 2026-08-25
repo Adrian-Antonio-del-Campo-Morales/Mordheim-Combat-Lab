@@ -1,0 +1,510 @@
+id: tileans
+name: Tileans (Miragleans / Remasens / Trantios)
+grade: 1b
+source_url: https://mordheimer.net/docs/warbands/grade-1b-warbands/tileans
+headings:
+- Special Rules ​
+- Miragleans ​
+- Remasens ​
+- Trantios ​
+- Choice of Warriors ​
+- Starting Experience ​
+- Tilean Skill Table ​
+- Miragleans ​
+- Remasens ​
+- Trantios ​
+- Tilean equipment lists ​
+- Equipment List ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Marksman equipment list ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Special Equipment ​
+- Pike (Tileans) ​
+- Rapier ​
+- heroes ​
+- 1 Captain ​
+- SPECIAL RULES ​
+- 0 – 2 Champions ​
+- 0 – 2 Youngbloods ​
+- henchmen ​
+- Warriors ​
+- 0 – 7 Marksmen ​
+- 0 – 5 Duelists ​
+- Special Rules ​
+tables:
+- section: Miragleans
+  section_path:
+  - Tilean Skill Table
+  - Miragleans
+  rows:
+  - - ''
+    - Combat
+    - Shooting
+    - Academic
+    - Strength
+    - Speed
+  - - Captain
+    - ✓
+    - ✓
+    - ✓
+    - ✓
+    - ✓
+  - - Champion
+    - ✓
+    - ✓
+    - ''
+    - ''
+    - ✓
+  - - Youngblood
+    - ''
+    - ✓
+    - ''
+    - ✓
+    - ✓ ✏️
+- section: Remasens
+  section_path:
+  - Tilean Skill Table
+  - Remasens
+  rows:
+  - - ''
+    - Combat
+    - Shooting
+    - Academic
+    - Strength
+    - Speed
+  - - Captain
+    - ✓
+    - ✓
+    - ✓
+    - ✓
+    - ✓
+  - - Champion
+    - ✓
+    - ''
+    - ✓
+    - ✓
+    - ''
+  - - Youngblood
+    - ✓
+    - ''
+    - ✓
+    - ''
+    - ✓
+- section: Trantios
+  section_path:
+  - Tilean Skill Table
+  - Trantios
+  rows:
+  - - ''
+    - Combat
+    - Shooting
+    - Academic
+    - Strength
+    - Speed
+  - - Captain
+    - ✓
+    - ✓
+    - ✓
+    - ✓
+    - ✓
+  - - Champion
+    - ✓
+    - ✓
+    - ''
+    - ''
+    - ✓
+  - - Youngblood
+    - ✓
+    - ✓
+    - ''
+    - ✓
+    - ''
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Tilean equipment lists
+  - Equipment List
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Mace
+    - 3 gc
+  - - Hammer
+    - 3 gc
+  - - Axe
+    - 5 gc
+  - - Sword
+    - 10 gc
+  - - Spear
+    - 10 gc
+  - - Halberd
+    - 10 gc
+  - - Pike
+    - 12 gc
+  - - Morning star
+    - 15 gc
+  - - Double-handed weapon
+    - 15 gc
+  - - Rapier
+    - 15 gc
+- section: Missile Weapons
+  section_path:
+  - Tilean equipment lists
+  - Equipment List
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Crossbow
+    - 25 gc
+  - - Pistol
+    - 15 gc (30 for a brace)
+  - - Duelling Pistol
+    - 25 gc (50 for a brace)
+  - - Bow
+    - 10 gc
+- section: Armour
+  section_path:
+  - Tilean equipment lists
+  - Equipment List
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Light armour
+    - 20 gc
+  - - Shield
+    - 5 gc
+  - - Buckler
+    - 5 gc
+  - - Helmet
+    - 10 gc
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Tilean equipment lists
+  - Marksman equipment list
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Mace
+    - 3 gc
+  - - Hammer
+    - 3 gc
+  - - Axe
+    - 5 gc
+  - - Sword
+    - 10 gc
+- section: Missile Weapons
+  section_path:
+  - Tilean equipment lists
+  - Marksman equipment list
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Crossbow
+    - 25 gc
+  - - Pistol
+    - 15 gc (30 for a brace)
+  - - Duelling Pistol
+    - 25 gc (50 for a brace)
+  - - Long bow
+    - 15 gc
+  - - Handgun
+    - 35 gc
+  - - Hunting Rifle
+    - 200 gc
+- section: Armour
+  section_path:
+  - Tilean equipment lists
+  - Marksman equipment list
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Light armour
+    - 20 gc
+  - - Helmet
+    - 10 gc
+- section: 1 Captain
+  section_path:
+  - heroes
+  - 1 Captain
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '4'
+    - '4'
+    - '3'
+    - '3'
+    - '1'
+    - '4'
+    - '2'
+    - '8'
+- section: 0 – 2 Champions
+  section_path:
+  - heroes
+  - 0 – 2 Champions
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '7'
+- section: 0 – 2 Youngbloods
+  section_path:
+  - heroes
+  - 0 – 2 Youngbloods
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '2'
+    - '2'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '6'
+- section: Warriors
+  section_path:
+  - henchmen
+  - Warriors
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 7 Marksmen
+  section_path:
+  - henchmen
+  - 0 – 7 Marksmen
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - 3 ✏️
+    - '1'
+    - '7'
+- section: 0 – 5 Duelists
+  section_path:
+  - henchmen
+  - 0 – 5 Duelists
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '7'
+section_text:
+- section: Tilean equipment lists
+  section_path:
+  - Tilean equipment lists
+  text: 'The following lists are used by Tilean warbands to pick their weapons:'
+- section: Special Equipment
+  section_path:
+  - Special Equipment
+  text: 'This warband has access to the following special equipment when purchasing
+    items from the Trading Post , outside their starting list:'
+- section: 1 Captain
+  section_path:
+  - heroes
+  - 1 Captain
+  text: '60 gold crowns to hire
+
+    A Tilean Captain is a tough professional soldier and has more often than not fought
+    for years in the regular inter city-state conflicts of his homeland. These men
+    are used to the carnage and suffering of the battlefield and seek to claim riches
+    in the new world.
+
+    Weapons/Armour: The Captain can be armed with weapons
+
+    and armour chosen from the Tilean Equipment list.'
+- section: SPECIAL RULES
+  section_path:
+  - heroes
+  - 1 Captain
+  - SPECIAL RULES
+  text: 'Leader: Any warrior within 6" of the Captain may use his Leadership characteristic
+    when
+
+    taking Leadership tests.'
+- section: 0 – 2 Champions
+  section_path:
+  - heroes
+  - 0 – 2 Champions
+  text: '35 gold crowns to hire
+
+    Champions are often the trusted sergeants of the warband captain and are entrusted
+    with ensuring the iron-hard discipline necessary to keep a warband together in
+    a foreign land.
+
+    Weapons/Armour : Champions may be equipped
+
+    with weapons and armour chosen from the
+
+    Tilean Equipment list.'
+- section: 0 – 2 Youngbloods
+  section_path:
+  - heroes
+  - 0 – 2 Youngbloods
+  text: '15 gold crowns to hire
+
+    These are young fighters who are still inexperienced but eager for the untold
+    riches that Lustria has to offer.
+
+    Weapons/Armour: Youngbloods may be equipped
+
+    with weapons and armour chosen from the
+
+    Tilean Equipment list.'
+- section: henchmen
+  section_path:
+  - henchmen
+  text: (Bought in groups of 1-5)
+- section: Warriors
+  section_path:
+  - henchmen
+  - Warriors
+  text: '25 gold crowns to hire
+
+    These are the grim, veteran soldiers that usually make up the mercenary armies
+    of the warring Dukes of the Tilean City States.
+
+    Weapons/Armour: Warriors may be equipped with
+
+    weapons and armour chosen from the Tilean
+
+    Equipment list.'
+- section: 0 – 7 Marksmen
+  section_path:
+  - henchmen
+  - 0 – 7 Marksmen
+  text: '25 gold crowns to hire
+
+    Tileans are renowned as experts with the crossbow and these soldiers are the missile
+    backbone of the warband. In a savage and merciless world it pays well to be able
+    to despatch your foe from a distance.
+
+    Weapons/Armour: Marksmen may be equipped with
+
+    weapons and armour chosen from the Marksman
+
+    Equipment list.'
+- section: 0 – 5 Duelists
+  section_path:
+  - henchmen
+  - 0 – 5 Duelists
+  text: '35 gold crowns to hire
+
+    Tilea is famous for its many vendettas from the rich noble houses down to even
+    the poorest families. The notorious cloak and dagger duellists of the darkened
+    alleys of Tilea find their way to the remotest parts of the world selling their
+    unique killing abilities to the mercenary companies.
+
+    Weapons/Armour: Duelists may be equipped
+
+    with weapons and armour chosen from the
+
+    Tilean Equipment list.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 5 Duelists
+  - Special Rules
+  text: 'Cloak & Dagger: Duellists are adept at fighting using their
+
+    billowing cloaks to swirl at an enemy distracting him and
+
+    warding off blows. The Duellist counts as using a buckler ✏️ in
+
+    close combat.'

@@ -1,0 +1,410 @@
+schema_version: 1
+id: trollheim-mercenaries
+name: Mercenarios
+name_i18n:
+  en: null
+  es: Mercenarios
+original_locale: es
+categories:
+- trollheim
+collections:
+- trollheim
+grade: null
+setting: Mordheim
+publication: trollheim
+status: source-normalized
+sources:
+- manual: trollheim
+  printed_page: 68-71
+  section: Mercenarios
+roster:
+  minimum_models: 3
+  maximum_models: 15
+  starting_gold: 500
+  members:
+  - profile_id: mercenary-captain
+    minimum: 1
+    maximum: 1
+  - profile_id: champion
+    minimum: 0
+    maximum: 2
+  - profile_id: youngblood
+    minimum: 0
+    maximum: 2
+  - profile_id: warrior
+    minimum: 0
+    maximum: null
+  - profile_id: marksman
+    minimum: 0
+    maximum: 7
+  - profile_id: swordsman
+    minimum: 0
+    maximum: 5
+equipment_lists:
+- id: mercenary-equipment
+  name: Equipo para Mercenarios
+  source:
+    manual: trollheim
+    printed_page: 70
+    section: Listas de Equipo para Mercenarios
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: La primera es gratis
+  - item_id: mace
+    cost: 3
+  - item_id: hammer
+    cost: 3
+  - item_id: axe
+    cost: 5
+  - item_id: sword
+    cost: 10
+  - item_id: morning_star
+    cost: 15
+  - item_id: great_weapon
+    cost: 15
+  - item_id: spear
+    cost: 10
+  - item_id: halberd
+    cost: 10
+  - item_id: crossbow
+    cost: 25
+  - item_id: pistol
+    cost: 15
+    notes: 30 por ristra
+  - item_id: duelling_pistol
+    cost: 25
+    notes: 60 por ristra
+  - item_id: bow
+    cost: 10
+  - item_id: light_armour
+    cost: 20
+  - item_id: heavy_armour
+    cost: 50
+  - item_id: shield
+    cost: 5
+  - item_id: buckler
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  name_i18n:
+    en: null
+    es: Equipo para Mercenarios
+- id: marksman-equipment
+  name: Equipo para Tiradores
+  source:
+    manual: trollheim
+    printed_page: 70
+    section: Lista de Equipo para Tiradores
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: La primera es gratis
+  - item_id: mace
+    cost: 3
+  - item_id: hammer
+    cost: 3
+  - item_id: axe
+    cost: 5
+  - item_id: sword
+    cost: 10
+  - item_id: crossbow
+    cost: 25
+  - item_id: pistol
+    cost: 15
+    notes: 30 por ristra
+  - item_id: bow
+    cost: 10
+  - item_id: long_bow
+    cost: 15
+  - item_id: handgun
+    cost: 35
+  - item_id: blunderbuss
+    cost: 30
+  - item_id: hunting_rifle
+    cost: 200
+  - item_id: light_armour
+    cost: 20
+  - item_id: shield
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  name_i18n:
+    en: null
+    es: Equipo para Tiradores
+profiles:
+- id: mercenary-captain
+  name: Capitán Mercenario
+  type: hero
+  cost: 60
+  experience: 20
+  characteristics:
+    M: 10
+    WS: 4
+    BS: 4
+    S: 3
+    T: 3
+    W: 1
+    I: 4
+    A: 1
+    Ld: 8
+  equipment_lists:
+  - mercenary-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - shooting
+  - academic
+  - strength
+  - speed
+  rules:
+  - id: mercenary-leader
+    name: Jefe
+    effect: Los guerreros aliados a 15 cm o menos pueden usar su Liderazgo para sus chequeos.
+    source:
+      manual: trollheim
+      printed_page: 71
+      section: Capitán Mercenario
+    name_i18n:
+      en: null
+      es: Jefe
+    effect_i18n:
+      en: null
+      es: Los guerreros aliados a 15 cm o menos pueden usar su Liderazgo para sus chequeos.
+  source:
+    manual: trollheim
+    printed_page: 71
+    section: Capitán Mercenario
+  name_i18n:
+    en: null
+    es: Capitán Mercenario
+- id: champion
+  name: Campeón
+  type: hero
+  cost: 35
+  experience: 8
+  characteristics:
+    M: 10
+    WS: 4
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - mercenary-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - shooting
+  - strength
+  rules: []
+  source:
+    manual: trollheim
+    printed_page: 71
+    section: Campeones
+  name_i18n:
+    en: null
+    es: Campeón
+- id: youngblood
+  name: Recluta
+  type: hero
+  cost: 15
+  experience: 0
+  characteristics:
+    M: 10
+    WS: 2
+    BS: 2
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 6
+  equipment_lists:
+  - mercenary-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - shooting
+  - speed
+  rules: []
+  source:
+    manual: trollheim
+    printed_page: 71
+    section: Reclutas
+  name_i18n:
+    en: null
+    es: Recluta
+- id: warrior
+  name: Guerrero
+  type: henchman
+  cost: 25
+  experience: 0
+  characteristics:
+    M: 10
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - mercenary-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules: []
+  source:
+    manual: trollheim
+    printed_page: 71
+    section: Guerreros
+  name_i18n:
+    en: null
+    es: Guerrero
+- id: marksman
+  name: Tirador
+  type: henchman
+  cost: 25
+  experience: 0
+  characteristics:
+    M: 10
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - marksman-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules: []
+  source:
+    manual: trollheim
+    printed_page: 71
+    section: Tiradores
+  name_i18n:
+    en: null
+    es: Tirador
+- id: swordsman
+  name: Espadachín
+  type: henchman
+  cost: 35
+  experience: 0
+  characteristics:
+    M: 10
+    WS: 4
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - mercenary-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules:
+  - id: swordsman-expert
+    name: Expertos en Esgrima
+    effect: Al cargar puede repetir las tiradas fallidas para impactar con espadas normales; no se aplica a espadas a dos
+      manos ni a otras armas.
+    source:
+      manual: trollheim
+      printed_page: 71
+      section: Espadachines
+    name_i18n:
+      en: null
+      es: Expertos en Esgrima
+    effect_i18n:
+      en: null
+      es: Al cargar puede repetir las tiradas fallidas para impactar con espadas normales; no se aplica a espadas a dos manos
+        ni a otras armas.
+  source:
+    manual: trollheim
+    printed_page: 71
+    section: Espadachines
+  name_i18n:
+    en: null
+    es: Espadachín
+band_rules:
+- id: reikland-leadership
+  name: Mercenarios de Reikland - disciplina
+  effect: Los guerreros pueden usar el Liderazgo del Capitán hasta a 30 cm en vez de 15 cm.
+  source:
+    manual: trollheim
+    printed_page: 68
+    section: Reglas especiales de Reikland
+  name_i18n:
+    en: null
+    es: Mercenarios de Reikland - disciplina
+  effect_i18n:
+    en: null
+    es: Los guerreros pueden usar el Liderazgo del Capitán hasta a 30 cm en vez de 15 cm.
+- id: reikland-marksmen
+  name: Mercenarios de Reikland - tiradores
+  effect: Todos los Tiradores reciben +1 a Habilidad de Proyectiles, incluso si se reclutan durante la campaña.
+  source:
+    manual: trollheim
+    printed_page: 68
+    section: Reglas especiales de Reikland
+  name_i18n:
+    en: null
+    es: Mercenarios de Reikland - tiradores
+  effect_i18n:
+    en: null
+    es: Todos los Tiradores reciben +1 a Habilidad de Proyectiles, incluso si se reclutan durante la campaña.
+- id: middenheim-strength
+  name: Mercenarios de Middenheim
+  effect: Capitanes y Campeones comienzan con Fuerza 4 en vez de 3.
+  source:
+    manual: trollheim
+    printed_page: 69
+    section: Reglas especiales de Middenheim
+  name_i18n:
+    en: null
+    es: Mercenarios de Middenheim
+  effect_i18n:
+    en: null
+    es: Capitanes y Campeones comienzan con Fuerza 4 en vez de 3.
+- id: marienburg-rarity
+  name: Mercenarios de Marienburgo - contactos
+  effect: Obtienen +1 al intentar encontrar objetos raros.
+  source:
+    manual: trollheim
+    printed_page: 69
+    section: Reglas especiales de Marienburgo
+  name_i18n:
+    en: null
+    es: Mercenarios de Marienburgo - contactos
+  effect_i18n:
+    en: null
+    es: Obtienen +1 al intentar encontrar objetos raros.
+- id: marienburg-wealth
+  name: Mercenarios de Marienburgo - riqueza
+  effect: Empiezan con 600 coronas; al librar una batalla individual disponen de un 20% más de coronas.
+  source:
+    manual: trollheim
+    printed_page: 69
+    section: Reglas especiales de Marienburgo
+  name_i18n:
+    en: null
+    es: Mercenarios de Marienburgo - riqueza
+  effect_i18n:
+    en: null
+    es: Empiezan con 600 coronas; al librar una batalla individual disponen de un 20% más de coronas.
+source_sections: []
+canonical_family: mercenaries

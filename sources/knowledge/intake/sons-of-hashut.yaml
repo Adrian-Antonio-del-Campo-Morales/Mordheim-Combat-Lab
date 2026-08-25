@@ -1,0 +1,587 @@
+id: sons-of-hashut
+name: The Sons of Hashut
+grade: 1c
+source_url: https://mordheimer.net/docs/warbands/grade-1c-warbands/sons-of-hashut
+headings:
+- Special rules ​
+- Choice of warriors ​
+- Heroes ​
+- Henchmen ​
+- Starting experience ​
+- Chaos Dwarf Skill Table ​
+- Chaos Dwarfs Special Skills ​
+- True grit ​
+- Extra tough ​
+- Unlimited hatred ​
+- Thick skull ​
+- Chaos Dwarf equipment lists ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Blunderbusser equipment lists ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Hobgoblins equipment lists ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Special Equipment ​
+- Hobgoblin Poisoned Daggers ​
+- Sons of Hashut Obsidian Weapon ​
+- Chaos Dwarf Blunderbuss ​
+- Heroes ​
+- 1 Apprentice Sorcerer ​
+- SPECIAL RULES ​
+- 0 – 1 Bull Centaur ​
+- SPECIAL RULES ​
+- 0 – 2 Chaos Dwarf Champions ​
+- Henchmen ​
+- 0 – 6 Chaos Dwarf Warriors ​
+- 0 – 3 Blunderbuss Chaos Dwarfs ​
+- 4+ Hobgoblins ​
+- SPECIAL RULES ​
+- Editors' Notes ​
+tables:
+- section: Chaos Dwarf Skill Table
+  section_path:
+  - Chaos Dwarf Skill Table
+  rows:
+  - - ''
+    - Combat
+    - Shooting
+    - Academic
+    - Strength
+    - Speed
+    - Special
+  - - Apprentice Sorcerer
+    - ✓
+    - ''
+    - ✓
+    - ''
+    - ''
+    - ✓
+  - - Bull Centaur
+    - ✓
+    - ''
+    - ''
+    - ✓
+    - ''
+    - ✓
+  - - Chaos Dwarf Champion
+    - ✓
+    - ✓
+    - ''
+    - ✓
+    - ''
+    - ✓
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Chaos Dwarf equipment lists
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Mace
+    - 3 gc
+  - - Hammer
+    - 3 gc
+  - - Axe
+    - 5 gc
+  - - Sword
+    - 10 gc
+  - - Double-handed weapon
+    - 15 gc
+  - - Obsidian weapon
+    - 30 gc
+- section: Missile Weapons
+  section_path:
+  - Chaos Dwarf equipment lists
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Pistol
+    - 15 gc (30 gc for a brace)
+- section: Armour
+  section_path:
+  - Chaos Dwarf equipment lists
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Light armour
+    - 20 gc
+  - - Heavy armour
+    - 50 gc
+  - - Shield
+    - 5 gc
+  - - Helmet
+    - 10 gc
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Chaos Dwarf equipment lists
+  - Blunderbusser equipment lists
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Hammer
+    - 3 gc
+  - - Axe
+    - 5 gc
+  - - Sword
+    - 10 gc
+- section: Missile Weapons
+  section_path:
+  - Chaos Dwarf equipment lists
+  - Blunderbusser equipment lists
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Chaos Dwarf Blunderbuss
+    - 40 gc
+  - - Pistol
+    - 15 gc (30 gc for a brace)
+- section: Armour
+  section_path:
+  - Chaos Dwarf equipment lists
+  - Blunderbusser equipment lists
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Light armour
+    - 20 gc
+  - - Heavy armour
+    - 50 gc
+  - - Helmet
+    - 10 gc
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Chaos Dwarf equipment lists
+  - Hobgoblins equipment lists
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Axe
+    - 5 gc
+  - - Sword
+    - 10 gc
+  - - Hobgoblin Poisoned daggers
+    - 15gc
+- section: Missile Weapons
+  section_path:
+  - Chaos Dwarf equipment lists
+  - Hobgoblins equipment lists
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Shortbow
+    - 5 gc
+  - - Bow
+    - 10 gc
+- section: Armour
+  section_path:
+  - Chaos Dwarf equipment lists
+  - Hobgoblins equipment lists
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Light armour
+    - 20 gc
+  - - Shield
+    - 5 gc
+- section: 1 Apprentice Sorcerer
+  section_path:
+  - Heroes
+  - 1 Apprentice Sorcerer
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - Apprentice Sorcerer
+    - '3'
+    - '4'
+    - '3'
+    - '3'
+    - '4'
+    - '1'
+    - '3'
+    - '1'
+    - '9'
+- section: 0 – 1 Bull Centaur
+  section_path:
+  - Heroes
+  - 0 – 1 Bull Centaur
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - Bull Centaur
+    - '7'
+    - '4'
+    - '3'
+    - '4'
+    - '4'
+    - '1'
+    - '3'
+    - '2'
+    - '9'
+- section: 0 – 2 Chaos Dwarf Champions
+  section_path:
+  - Heroes
+  - 0 – 2 Chaos Dwarf Champions
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - Chaos Dwarf Champion
+    - '3'
+    - '5'
+    - '3'
+    - '3'
+    - '4'
+    - '1'
+    - '2'
+    - '1'
+    - '9'
+- section: 0 – 6 Chaos Dwarf Warriors
+  section_path:
+  - Henchmen
+  - 0 – 6 Chaos Dwarf Warriors
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - Chaos Dwarf Warrior
+    - '3'
+    - '4'
+    - '3'
+    - '3'
+    - '4'
+    - '1'
+    - '2'
+    - '1'
+    - '9'
+- section: 0 – 3 Blunderbuss Chaos Dwarfs
+  section_path:
+  - Henchmen
+  - 0 – 3 Blunderbuss Chaos Dwarfs
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - Blunderbuss Chaos Dwarf
+    - '3'
+    - '4'
+    - '3'
+    - '3'
+    - '4'
+    - '1'
+    - '2'
+    - '1'
+    - '9'
+- section: 4+ Hobgoblins
+  section_path:
+  - Henchmen
+  - 4+ Hobgoblins
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - Hobgoblins
+    - '4'
+    - '2'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '6'
+section_text:
+- section: Special rules
+  section_path:
+  - Special rules
+  text: 'Hard Head: Chaos Dwarfs and Bull Centaurs ignore the special rules for maces,
+    clubs, etc. They are not easy to knock out!
+
+    Armour: Chaos Dwarfs and Bull Centaurs never suffer movement penalties for wearing
+    armour.
+
+    Hard to Kill: Chaos Dwarfs and Bull Centaurs are tough, resilient individuals
+    who can only be taken out of action on a roll of 6 instead of 5-6 when rolling
+    on the Injury chart. Treat a roll of 1-2 as knocked down, 3-5 as stunned, and
+    6 as out of action.
+
+    Slavers: One of the main objectives of the Chaos Dwarfs of Mordheim is to get
+    more slaves for their sacrifices and for their tasks. Consequently, the Chaos
+    Dwarfs will never free any slave they capture.
+
+    Pick one: Sacrifice them or put them to work. If you sacrifice them, the apprentice
+    sorcerer will get +1 to Experience for each slave sacrificed. If put to work,
+    you force them to help them in their quest for the witchstone; at the end of the
+    game, gain an additional +1 wyrdstone for each working slave; then make a 1D6
+    roll: On a result of 2 to 6, the captive dies due to overwork, disease, the effects
+    of long exposure to the sorcerer’s stone, or for any other similar reason, and
+    the Chaos Dwarf band may keep the captive’s equipment. On a result of 1, the captive
+    manages to escape, returns to his band with his equipment intact and, in addition,
+    gains an experience bonus of 1D3 (if he is a henchman, simply add 1 to his total).
+
+    Uncommon: Chaos Dwarfs are quite rare in Old World settlements. For this reason,
+    when they make rolls for the acquisition of new recruits in their bands, they
+    have to spend 1.5 times (rounding up) the amount of experience they normally spend
+    for veterancy. Remember that this is not the case for Hobgoblins, a race far more
+    common than that of Chaos Dwarfs. For example, a group of Chaos Dwarf recruits
+    armed with blunderbusses with 4 experience points would require at least 6 experience
+    points to acquire one recruit, 12 to recruit two and so on.
+
+    Indentured Servants: A Chaos Dwarf warband must start with at least 4 Hobgoblins;
+    if it drops below 4 Hobgoblins, you cannot recruit other members until the number
+    of Hobgoblins is increased to four or more.
+
+    Hired Swords: A Chaos Dwarf warband may hire the following Hired Swords: Ogre
+    Bodyguard, Pit Fighter, Warlock, Imperial Assassin, and Hobgoblin Scout. They
+    may hire any Hired Sword described as “all may hire,” or allowed by Orc warbands
+    and Chaos warbands. They may never hire Elves of any sort!'
+- section: Choice of warriors
+  section_path:
+  - Choice of warriors
+  text: A Chaos Dwarf warband must include a minimum of three models. You have 500
+    gold crowns which you can use to recruit and equip your warband. The maximum number
+    of warriors in the warband is 14.
+- section: Heroes
+  section_path:
+  - Choice of warriors
+  - Heroes
+  text: 'Apprentice Sorcerer: Each Chaos Dwarf warband must have one Apprentice Sorcerer
+    – no more, no less! Bull Centaur: Your warband may include one Bull Centaur. Champions:
+    Your warband may include up to two Champions.'
+- section: Henchmen
+  section_path:
+  - Choice of warriors
+  - Henchmen
+  text: 'Chaos Dwarf Warriors: Your warband may include up to six Chaos Dwarf Warriors.
+    Blunderbussers Chaos Dwarfs: Your warband may include up to three Chaos Dwarf
+    Blunderbussers. Hobgoblins: Your warband must include four or more Hobgoblins.'
+- section: Starting experience
+  section_path:
+  - Starting experience
+  text: The Apprentice Sorcerer start with 20 experience points. Bull Centaurs start
+    with 12 experience points. Champions start with 8 experience points. Henchmen
+    start with 0 experience.
+- section: True grit
+  section_path:
+  - Chaos Dwarfs Special Skills
+  - True grit
+  text: A result of 1-3 indicates that the miniature is knocked down, a result of
+    4-5 indicates that it is stunned, and a result of 6 indicates that it is out of
+    action.
+- section: Extra tough
+  section_path:
+  - Chaos Dwarfs Special Skills
+  - Extra tough
+  text: Allows re-rolls for Serious Injuries after the game is over. The second result
+    is the prevailing result.
+- section: Unlimited hatred
+  section_path:
+  - Chaos Dwarfs Special Skills
+  - Unlimited hatred
+  text: The warrior suffers hatred against everyone.
+- section: Thick skull
+  section_path:
+  - Chaos Dwarfs Special Skills
+  - Thick skull
+  text: The Hero has a thick skull, even for a Dwarf. He has a 3+ save on a D6 to
+    avoid being stunned. If the save is made, treat a stunned result as knocked down
+    instead. If the Dwarf also wears a helmet, this save is 2+ instead of 3+ (this
+    takes the place of the normal Helmet special rule).
+- section: Special Equipment
+  section_path:
+  - Special Equipment
+  text: 'This warband has access to the following special equipment when purchasing
+    items from the Trading Post , outside their starting list:'
+- section: 1 Apprentice Sorcerer
+  section_path:
+  - Heroes
+  - 1 Apprentice Sorcerer
+  text: '85 gold crowns to hire
+
+    Having served one of the powerful sorcerer lords of Zharr-Naggrund, the apprentices
+    are eager to prove their worth and knowledge in the savage streets of Mordheim.
+    Their sole ambition is to reach the level of their masters.
+
+    Weapons/Armour: Apprentice sorcerers may be equipped with weapons and armour chosen
+    from the Chaos Dwarf equipment lists (if you equip a wizard with armour, he cannot
+    cast spells).'
+- section: SPECIAL RULES
+  section_path:
+  - Heroes
+  - 1 Apprentice Sorcerer
+  - SPECIAL RULES
+  text: 'Leader: Any warrior within 6“ of the Apprentice Sorcerer may use his Leadership
+    when taking Ld tests.
+
+    Rituals of Chaos: Chaos Dwarf spellcasters are wizards and can learn a random
+    spell from the Chaos Dwarf spell list .'
+- section: 0 – 1 Bull Centaur
+  section_path:
+  - Heroes
+  - 0 – 1 Bull Centaur
+  text: '75 gold crowns to hire
+
+    Bull Centaurs are Hashut’s chosen ones and are famous for being powerful and very
+    dangerous adversaries. It is considered a great honor to include these allies
+    in a band of Chaos Dwarfs.
+
+    Weapons/Armour: Bull Centaurs may be equipped with weapons and armour chosen from
+    the Chaos Dwarf equipment lists.'
+- section: SPECIAL RULES
+  section_path:
+  - Heroes
+  - 0 – 1 Bull Centaur
+  - SPECIAL RULES
+  text: 'Large Target: Bull Centaurs are large creatures and therefore make tempting
+    targets for archers. Anyone shooting at the Bull Centaur gains a +1 ‘to hit’ and
+    may shoot at it even if it is not the closest target. As large targets, a Bull
+    Centaur adds an extra +20 to the warband’s rating (instead of +5).'
+- section: 0 – 2 Chaos Dwarf Champions
+  section_path:
+  - Heroes
+  - 0 – 2 Chaos Dwarf Champions
+  text: '50 gold crowns to hire
+
+    They are the warriors favored by the sorcerer’s apprentices. They are excellent
+    fighters and trustworthy sergeants.
+
+    Weapons/Armour: Chaos Dwarf Champions may be equipped with weapons and armour
+    chosen from the Chaos Dwarf equipment lists.'
+- section: 0 – 6 Chaos Dwarf Warriors
+  section_path:
+  - Henchmen
+  - 0 – 6 Chaos Dwarf Warriors
+  text: '40 gold crowns to hire
+
+    Weapons/Armour: Chaos Dwarfs may be equipped with weapons and armour chosen from
+    the Chaos Dwarf equipment lists.'
+- section: 0 – 3 Blunderbuss Chaos Dwarfs
+  section_path:
+  - Henchmen
+  - 0 – 3 Blunderbuss Chaos Dwarfs
+  text: '40 gold crowns to hire
+
+    Weapons/Armour: Blunderbuss Chaos Dwarfs may be equipped with weapons and armour
+    chosen from the Blunderbuss Chaos Dwarf equipment lists.'
+- section: 4+ Hobgoblins
+  section_path:
+  - Henchmen
+  - 4+ Hobgoblins
+  text: '15 gold crowns to hire
+
+    Weapons/Armour: Hobgoblins may be equipped with weapons and armour chosen from
+    the Hobgoblins equipment lists.'
+- section: SPECIAL RULES
+  section_path:
+  - Henchmen
+  - 4+ Hobgoblins
+  - SPECIAL RULES
+  text: 'Skinny: Hobgoblins are naturally cowardly creatures that are forced to fight
+    by their Chaos Dwarf masters. As a result, they take damage easily and at the
+    slightest opportunity try to escape from their captors. When making serious injury
+    rolls, a result of 1-3 indicates that they abandon the band.
+
+    Nobody cares about them: Hobgoblins count as half the number of troops if the
+    band has to make a rout check. For example, in a band made of 12 miniatures, if
+    2 Hobgoblin miniatures and 1 Chaos Dwarf miniature are out of action, the total
+    would be two miniatures out of action (1/2 + 1/2 +1 =2). Also, Hobgoblins cannot
+    be heroes, just reroll the “Lad''s got talent” roll.'
+- section: Editors' Notes
+  section_path:
+  - Editors' Notes
+  text: 'Styrofoam King - A few changes were made from the original for balance or
+    clarification:
+
+    Hired Swords: Added Hired Swords rules, based on the rules from Border Town Burning
+    warband. Sorcerer: Cost Changed starting cost from 75gc to 85gc (to closer match
+    Treasure Hunters). Bull Centaur: Changed starting cost from 50gc (yikes!) to 75
+    gc / Added Large / As BC has max BS3, editor removed access to shooting skills.
+    Obsidian Weapon: Editor did not make any changes; however, we recommend your campaign
+    use EITHER the obsidian rules contained, or from Border Town Burning; do not use
+    both, unless you rename one of them for clarity (ex. Calling them Blackshard weapons.)
+    Changes to Superior Blunderbuss: Changed for Balance: Added “Prepare Shot” allowing
+    them to fire every OTHER turn (original versions says “fire once a turn,” implying
+    every turn.) / Balance: Removed reduced cost upon start up. (By my calculations,
+    the weapon is already VERY good at 40gc; discounting it further felt like a break.)
+    Changes to Poisoned Daggers: Missing info: Added rarity 9 / Balance: Added +1
+    Save like other daggers. / Balance: Removed reduced cost upon start up. (By my
+    calculations, the weapon is already VERY good at 15gc; discounting it further
+    felt like a break.)
+
+    Uncle Mel - Cleaned up translations and made some fixes together with Styrofoam
+    King
+
+    Out of action and injury rolls: Changed any reference from "out of combat" to
+    "out of action", changed post battle "wound" rolls to "serious injury" rolls.
+    Thick Skull: Brought in line with other dwarfs. Blunderbuss: Fixed the special
+    rules reference to the special rules assigned to the weapon and clarified the
+    Blunderbusser starting equipment to include a Chaos Dwarf Blunderbuss. Uncommon:
+    Clarified the uncommon rule. Bull Centaur: Changed all references from Chaos Centaur
+    to Bull Centaur. Hard Head: Having the lower torso of a bull doesn''t make the
+    skull less tough. Added the BC to hard head special rule. Dwarves: Standardised
+    all references to "Dwarfs" Armour: Changed all references from armor to armour
+    to follow UK English Equipment: Clarified armour can be chosen "with weapons and
+    armour chosen" Lore: Added slight lore blurb from the original to Apprentice Sorcerer
+    Warlock: Fixed reference to Warlock in Starting Experience'

@@ -1,0 +1,518 @@
+schema_version: 1
+id: lustria-norses
+name: Norses
+name_i18n:
+  en: null
+  es: Norses
+original_locale: es
+categories:
+- trollheim
+collections:
+- trollheim
+grade: null
+setting: Lustria
+publication: lustria
+status: source-normalized
+sources:
+- manual: lustria
+  printed_page: 106-111
+  section: Norses
+roster:
+  minimum_models: 3
+  maximum_models: 15
+  starting_gold: 500
+  members:
+  - profile_id: norse-jarl
+    minimum: 1
+    maximum: 1
+  - profile_id: norse-wulfen
+    minimum: 0
+    maximum: 1
+  - profile_id: norse-berserker
+    minimum: 0
+    maximum: 2
+  - profile_id: norse-youngblood
+    minimum: 0
+    maximum: 2
+  - profile_id: norse-raider
+    minimum: 0
+    maximum: null
+  - profile_id: norse-hunter
+    minimum: 0
+    maximum: 5
+  - profile_id: norse-wolf
+    minimum: 0
+    maximum: 5
+equipment_lists:
+- id: norse-equipment
+  name: Equipo para Norses
+  source:
+    manual: lustria
+    printed_page: 107
+    section: Lista de Equipo para Norses
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: La primera es gratis
+  - item_id: mace
+    cost: 3
+  - item_id: axe
+    cost: 5
+  - item_id: scourge
+    cost: 8
+    notes: Solo Héroes
+  - item_id: sword
+    cost: 10
+  - item_id: spear
+    cost: 10
+  - item_id: great_weapon
+    cost: 15
+  - item_id: throwing_axes
+    cost: 15
+    notes: Usa las reglas de cuchillos arrojadizos
+  - item_id: shield
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  - item_id: light_armour
+    cost: 20
+  name_i18n:
+    en: null
+    es: Equipo para Norses
+- id: norse-hunter-equipment
+  name: Equipo para Cazadores
+  source:
+    manual: lustria
+    printed_page: 107
+    section: Lista de Equipo para Cazadores
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: La primera es gratis
+  - item_id: mace
+    cost: 3
+  - item_id: axe
+    cost: 5
+  - item_id: sword
+    cost: 10
+  - item_id: spear
+    cost: 10
+  - item_id: great_weapon
+    cost: 15
+  - item_id: bow
+    cost: 10
+  - item_id: javelin
+    cost: 10
+  - item_id: shield
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  name_i18n:
+    en: null
+    es: Equipo para Cazadores
+profiles:
+- id: norse-jarl
+  name: Jarl
+  type: hero
+  cost: 70
+  experience: 20
+  characteristics:
+    M: 10
+    WS: 4
+    BS: 3
+    S: 4
+    T: 3
+    W: 1
+    I: 4
+    A: 2
+    Ld: 8
+  equipment_lists:
+  - norse-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - strength
+  - speed
+  - special
+  rules:
+  - id: norse-leader
+    name: Jefe
+    effect: Los guerreros a 15 cm o menos pueden utilizar su Liderazgo.
+    source:
+      manual: lustria
+      printed_page: 108
+      section: Jarl
+    name_i18n:
+      en: null
+      es: Jefe
+    effect_i18n:
+      en: null
+      es: Los guerreros a 15 cm o menos pueden utilizar su Liderazgo.
+  source:
+    manual: lustria
+    printed_page: 108
+    section: Jarl
+  name_i18n:
+    en: null
+    es: Jarl
+- id: norse-berserker
+  name: Berserker
+  type: hero
+  cost: 50
+  experience: 8
+  characteristics:
+    M: 10
+    WS: 4
+    BS: 3
+    S: 4
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - norse-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - strength
+  - special
+  rules:
+  - id: frenzy
+    name: Furia asesina
+    effect: Está sujeto a furia asesina.
+    source:
+      manual: lustria
+      printed_page: 108
+      section: Berserkers
+    name_i18n:
+      en: null
+      es: Furia asesina
+    effect_i18n:
+      en: null
+      es: Está sujeto a furia asesina.
+  source:
+    manual: lustria
+    printed_page: 108
+    section: Berserkers
+  name_i18n:
+    en: null
+    es: Berserker
+- id: norse-wulfen
+  name: Wulfen
+  type: hero
+  cost: 90
+  experience: 12
+  characteristics:
+    M: 15
+    WS: 4
+    BS: 0
+    S: 4
+    T: 4
+    W: 2
+    I: 4
+    A: 2
+    Ld: 7
+  equipment_lists: []
+  fixed_equipment:
+  - Garras
+  equipment_restrictions:
+  - No puede utilizar armas ni armaduras
+  - No sufre penalización por combatir desarmado
+  skill_access:
+  - combat
+  - strength
+  - speed
+  - special
+  rules:
+  - id: causes-fear
+    name: Miedo
+    effect: Causa miedo.
+    source:
+      manual: lustria
+      printed_page: 109
+      section: Wulfen
+    name_i18n:
+      en: null
+      es: Miedo
+    effect_i18n:
+      en: null
+      es: Causa miedo.
+  - id: immune-psychology
+    name: Inmune a psicología
+    effect: Es inmune a psicología.
+    source:
+      manual: lustria
+      printed_page: 109
+      section: Wulfen
+    name_i18n:
+      en: null
+      es: Inmune a psicología
+    effect_i18n:
+      en: null
+      es: Es inmune a psicología.
+  - id: norse-wulfen-hide
+    name: Cuero endurecido
+    effect: Tiene salvación por armadura de 6+
+    modificable normalmente por Fuerza.: null
+    source:
+      manual: lustria
+      printed_page: 109
+      section: Wulfen
+    name_i18n:
+      en: null
+      es: Cuero endurecido
+    effect_i18n:
+      en: null
+      es: Tiene salvación por armadura de 6+
+  source:
+    manual: lustria
+    printed_page: 109
+    section: Wulfen
+  name_i18n:
+    en: null
+    es: Wulfen
+- id: norse-youngblood
+  name: Mozuelo
+  type: hero
+  cost: 20
+  experience: 0
+  characteristics:
+    M: 10
+    WS: 3
+    BS: 2
+    S: 3
+    T: 3
+    W: 1
+    I: 2
+    A: 1
+    Ld: 6
+  equipment_lists:
+  - norse-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - strength
+  - speed
+  - special
+  rules: []
+  source:
+    manual: lustria
+    printed_page: 109
+    section: Mozuelos
+  name_i18n:
+    en: null
+    es: Mozuelo
+- id: norse-raider
+  name: Saqueador
+  type: henchman
+  cost: 30
+  experience: 0
+  characteristics:
+    M: 10
+    WS: 4
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - norse-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules: []
+  source:
+    manual: lustria
+    printed_page: 110
+    section: Saqueadores
+  name_i18n:
+    en: null
+    es: Saqueador
+- id: norse-hunter
+  name: Cazador
+  type: henchman
+  cost: 25
+  experience: 0
+  characteristics:
+    M: 10
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 6
+  equipment_lists:
+  - norse-hunter-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules: []
+  source:
+    manual: lustria
+    printed_page: 110
+    section: Cazadores
+  name_i18n:
+    en: null
+    es: Cazador
+- id: norse-wolf
+  name: Huargo
+  type: henchman
+  cost: 15
+  experience: 0
+  characteristics:
+    M: 22
+    WS: 3
+    BS: 0
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 5
+  equipment_lists: []
+  fixed_equipment: []
+  equipment_restrictions:
+  - No puede utilizar equipo
+  skill_access: []
+  rules:
+  - id: animal
+    name: Animal
+    effect: No gana experiencia.
+    source:
+      manual: lustria
+      printed_page: 110
+      section: Huargos
+    name_i18n:
+      en: null
+      es: Animal
+    effect_i18n:
+      en: null
+      es: No gana experiencia.
+  - id: norse-pack-leader
+    name: Líder de la Manada
+    effect: Solo participa si el Wulfen participa. Si muere el Wulfen
+    abandona la banda hasta que se reclute otro: null
+    momento en que vuelve.: null
+    source:
+      manual: lustria
+      printed_page: 110
+      section: Huargos
+    name_i18n:
+      en: null
+      es: Líder de la Manada
+    effect_i18n:
+      en: null
+      es: Solo participa si el Wulfen participa. Si muere el Wulfen
+  source:
+    manual: lustria
+    printed_page: 110
+    section: Huargos
+  name_i18n:
+    en: null
+    es: Huargo
+band_rules:
+- id: norse-seamen
+  name: Marineros
+  effect: Todo Norse obtiene +2 Fuerza para remar.
+  source:
+    manual: lustria
+    printed_page: 107
+    section: Reglas Especiales de los Norses
+  name_i18n:
+    en: null
+    es: Marineros
+  effect_i18n:
+    en: null
+    es: Todo Norse obtiene +2 Fuerza para remar.
+- id: norse-skill-shield-mastery
+  name: Maestría con el Escudo
+  effect: Puede parar con escudo como si fuera rodela y conserva el bonificador de salvación del escudo.
+  source:
+    manual: lustria
+    printed_page: 111
+    section: Habilidades Especiales de los Norses
+  name_i18n:
+    en: null
+    es: Maestría con el Escudo
+  effect_i18n:
+    en: null
+    es: Puede parar con escudo como si fuera rodela y conserva el bonificador de salvación del escudo.
+- id: norse-skill-northern-weapons
+  name: Armas del Norte
+  effect: Cuando ataca con hacha o arma a dos manos puede repetir una vez cada ataque fallido.
+  source:
+    manual: lustria
+    printed_page: 111
+    section: Habilidades Especiales de los Norses
+  name_i18n:
+    en: null
+    es: Armas del Norte
+  effect_i18n:
+    en: null
+    es: Cuando ataca con hacha o arma a dos manos puede repetir una vez cada ataque fallido.
+- id: norse-skill-battle-tongue
+  name: Lengua de Batalla
+  effect: Solo el Jefe actual. Aumenta el radio de Jefe a 30 cm.
+  source:
+    manual: lustria
+    printed_page: 111
+    section: Habilidades Especiales de los Norses
+  name_i18n:
+    en: null
+    es: Lengua de Batalla
+  effect_i18n:
+    en: null
+    es: Solo el Jefe actual. Aumenta el radio de Jefe a 30 cm.
+- id: norse-skill-barbarian-courage
+  name: Coraje Bárbaro
+  effect: Ignora los chequeos de Liderazgo por estar solo ante el peligro.
+  source:
+    manual: lustria
+    printed_page: 111
+    section: Habilidades Especiales de los Norses
+  name_i18n:
+    en: null
+    es: Coraje Bárbaro
+  effect_i18n:
+    en: null
+    es: Ignora los chequeos de Liderazgo por estar solo ante el peligro.
+- id: norse-skill-demolishing-blow
+  name: Golpe Demoledor
+  effect: Los ataques del guerrero no pueden pararse.
+  source:
+    manual: lustria
+    printed_page: 111
+    section: Habilidades Especiales de los Norses
+  name_i18n:
+    en: null
+    es: Golpe Demoledor
+  effect_i18n:
+    en: null
+    es: Los ataques del guerrero no pueden pararse.
+- id: pirate-scourge
+  name: Azote
+  effect: Cuesta 8 coronas. Usa Fuerza del usuario
+  ? concede +1 a la salvación enemiga y no puede pararse. Al cargar da +1 Ataque; al ser cargado da +1 Ataque solo contra
+    quien carga y ese ataque Ataca Primero. Dos azotes aportan +1 Ataque por arma adicional
+  : null
+  pero Latigazo solo se aplica una vez.: null
+  source:
+    manual: lustria
+    printed_page: 111
+    section: Equipo Especial de los Norses
+  name_i18n:
+    en: null
+    es: Azote
+  effect_i18n:
+    en: null
+    es: Cuesta 8 coronas. Usa Fuerza del usuario
+source_sections: []
+canonical_family: norse-explorers-lustria

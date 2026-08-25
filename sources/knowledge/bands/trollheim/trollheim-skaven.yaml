@@ -1,0 +1,567 @@
+schema_version: 1
+id: trollheim-skaven
+name: Skaven del Clan Eshin
+name_i18n:
+  en: null
+  es: Skaven del Clan Eshin
+original_locale: es
+categories:
+- trollheim
+collections:
+- trollheim
+grade: null
+setting: Mordheim
+publication: trollheim
+status: source-normalized
+sources:
+- manual: trollheim
+  printed_page: 90-95
+  section: Skavens
+roster:
+  minimum_models: 3
+  maximum_models: 20
+  starting_gold: 500
+  members:
+  - profile_id: eshin-assassin
+    minimum: 1
+    maximum: 1
+  - profile_id: eshin-sorcerer
+    minimum: 0
+    maximum: 1
+  - profile_id: black-skaven
+    minimum: 0
+    maximum: 2
+  - profile_id: night-runner
+    minimum: 0
+    maximum: 2
+  - profile_id: verminkin
+    minimum: 0
+    maximum: null
+  - profile_id: giant-rat
+    minimum: 0
+    maximum: null
+  - profile_id: rat-ogre
+    minimum: 0
+    maximum: 1
+equipment_lists:
+- id: skaven-hero-equipment
+  name: Equipo de Héroes Skaven
+  source:
+    manual: trollheim
+    printed_page: 91
+    section: Listas de Equipo de los Skavens
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: La primera es gratis
+  - item_id: sword
+    cost: 10
+  - item_id: flail
+    cost: 15
+  - item_id: spear
+    cost: 10
+  - item_id: halberd
+    cost: 10
+  - item_id: weeping_blades
+    cost: 50
+  - item_id: fighting_claws
+    cost: 35
+  - item_id: sling
+    cost: 2
+  - item_id: throwing_stars
+    cost: 15
+  - item_id: blowpipe
+    cost: 30
+  - item_id: warp_pistol
+    cost: 35
+    notes: 70 por ristra
+  - item_id: light_armour
+    cost: 20
+  - item_id: buckler
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  name_i18n:
+    en: null
+    es: Equipo de Héroes Skaven
+- id: skaven-henchman-equipment
+  name: Equipo de Secuaces Skaven
+  source:
+    manual: trollheim
+    printed_page: 91
+    section: Lista de Equipo de Secuaces
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: La primera es gratis
+  - item_id: club
+    cost: 3
+  - item_id: sword
+    cost: 10
+  - item_id: spear
+    cost: 10
+  - item_id: sling
+    cost: 2
+  - item_id: light_armour
+    cost: 20
+  - item_id: shield
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  name_i18n:
+    en: null
+    es: Equipo de Secuaces Skaven
+profiles:
+- id: eshin-assassin
+  name: Asesino
+  type: hero
+  cost: 60
+  experience: 20
+  characteristics:
+    M: 15
+    WS: 4
+    BS: 4
+    S: 4
+    T: 3
+    W: 1
+    I: 5
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - skaven-hero-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - shooting
+  - academic
+  - strength
+  - speed
+  - skaven_special
+  rules:
+  - id: eshin-leader
+    name: Jefe
+    effect: Los miembros de la banda a 15 cm o menos pueden usar su Liderazgo.
+    source:
+      manual: trollheim
+      printed_page: 94
+      section: Asesino
+    name_i18n:
+      en: null
+      es: Jefe
+    effect_i18n:
+      en: null
+      es: Los miembros de la banda a 15 cm o menos pueden usar su Liderazgo.
+  - id: consummate-fighter
+    name: Luchador Consumado
+    effect: Los ataques que causa aplican un modificador adicional de -1 a la salvación por armadura.
+    source:
+      manual: trollheim
+      printed_page: 94
+      section: Asesino
+    name_i18n:
+      en: null
+      es: Luchador Consumado
+    effect_i18n:
+      en: null
+      es: Los ataques que causa aplican un modificador adicional de -1 a la salvación por armadura.
+  source:
+    manual: trollheim
+    printed_page: 94
+    section: Asesino
+  name_i18n:
+    en: null
+    es: Asesino
+- id: black-skaven
+  name: Skaven Negro
+  type: hero
+  cost: 40
+  experience: 8
+  characteristics:
+    M: 15
+    WS: 4
+    BS: 3
+    S: 4
+    T: 3
+    W: 1
+    I: 5
+    A: 1
+    Ld: 6
+  equipment_lists:
+  - skaven-hero-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - shooting
+  - strength
+  - speed
+  - skaven_special
+  rules: []
+  source:
+    manual: trollheim
+    printed_page: 94
+    section: Skavens Negros
+  name_i18n:
+    en: null
+    es: Skaven Negro
+- id: eshin-sorcerer
+  name: Brujo del Clan Eshin
+  type: hero
+  cost: 45
+  experience: 8
+  characteristics:
+    M: 12
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 4
+    A: 1
+    Ld: 6
+  equipment_lists:
+  - skaven-hero-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - academic
+  - speed
+  - skaven_special
+  rules:
+  - id: eshin-wizard
+    name: Hechicero
+    effect: Puede utilizar la magia de la Rata Cornuda.
+    source:
+      manual: trollheim
+      printed_page: 94
+      section: Brujo del Clan Eshin
+    name_i18n:
+      en: null
+      es: Hechicero
+    effect_i18n:
+      en: null
+      es: Puede utilizar la magia de la Rata Cornuda.
+  source:
+    manual: trollheim
+    printed_page: 94
+    section: Brujo del Clan Eshin
+  name_i18n:
+    en: null
+    es: Brujo del Clan Eshin
+- id: night-runner
+  name: Acechante Nocturno
+  type: hero
+  cost: 20
+  experience: 0
+  characteristics:
+    M: 15
+    WS: 2
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 4
+    A: 1
+    Ld: 4
+  equipment_lists:
+  - skaven-henchman-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - shooting
+  - skaven_special
+  rules: []
+  source:
+    manual: trollheim
+    printed_page: 94
+    section: Acechantes Nocturnos
+  name_i18n:
+    en: null
+    es: Acechante Nocturno
+- id: verminkin
+  name: Alimaña
+  type: henchman
+  cost: 20
+  experience: 0
+  characteristics:
+    M: 12
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 4
+    A: 1
+    Ld: 5
+  equipment_lists:
+  - skaven-henchman-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules: []
+  source:
+    manual: trollheim
+    printed_page: 95
+    section: Alimañas
+  name_i18n:
+    en: null
+    es: Alimaña
+- id: giant-rat
+  name: Rata Gigante
+  type: henchman
+  cost: 20
+  experience: 0
+  characteristics:
+    M: 15
+    WS: 2
+    BS: 0
+    S: 3
+    T: 3
+    W: 1
+    I: 4
+    A: 1
+    Ld: 4
+  equipment_lists: []
+  fixed_equipment: []
+  equipment_restrictions:
+  - Nunca utiliza armas ni armaduras
+  skill_access: []
+  rules:
+  - id: giant-rat-animal
+    name: Animal
+    effect: No gana experiencia y no tiene límite de reclutamiento.
+    source:
+      manual: trollheim
+      printed_page: 95
+      section: Ratas Gigantes
+    name_i18n:
+      en: null
+      es: Animal
+    effect_i18n:
+      en: null
+      es: No gana experiencia y no tiene límite de reclutamiento.
+  source:
+    manual: trollheim
+    printed_page: 95
+    section: Ratas Gigantes
+  name_i18n:
+    en: null
+    es: Rata Gigante
+- id: rat-ogre
+  name: Rata Ogro
+  type: henchman
+  cost: 210
+  experience: 0
+  characteristics:
+    M: 15
+    WS: 3
+    BS: 3
+    S: 5
+    T: 5
+    W: 3
+    I: 4
+    A: 3
+    Ld: 4
+  equipment_lists: []
+  fixed_equipment:
+  - Colmillos
+  - garras y fuerza bruta
+  equipment_restrictions:
+  - Nunca utiliza armas ni armaduras
+  skill_access: []
+  rules:
+  - id: rat-ogre-fear
+    name: Miedo
+    effect: Causa miedo.
+    source:
+      manual: trollheim
+      printed_page: 95
+      section: Rata Ogro
+    name_i18n:
+      en: null
+      es: Miedo
+    effect_i18n:
+      en: null
+      es: Causa miedo.
+  - id: rat-ogre-stupidity
+    name: Estupidez
+    effect: Sufre estupidez salvo si hay un Héroe Skaven a 15 cm o menos.
+    source:
+      manual: trollheim
+      printed_page: 95
+      section: Rata Ogro
+    name_i18n:
+      en: null
+      es: Estupidez
+    effect_i18n:
+      en: null
+      es: Sufre estupidez salvo si hay un Héroe Skaven a 15 cm o menos.
+  - id: rat-ogre-large
+    name: Grande
+    effect: Puede ser elegido como objetivo de disparo aunque no sea el más cercano.
+    source:
+      manual: trollheim
+      printed_page: 95
+      section: Rata Ogro
+    name_i18n:
+      en: null
+      es: Grande
+    effect_i18n:
+      en: null
+      es: Puede ser elegido como objetivo de disparo aunque no sea el más cercano.
+  - id: rat-ogre-experience
+    name: Experiencia
+    effect: No gana experiencia.
+    source:
+      manual: trollheim
+      printed_page: 95
+      section: Rata Ogro
+    name_i18n:
+      en: null
+      es: Experiencia
+    effect_i18n:
+      en: null
+      es: No gana experiencia.
+  source:
+    manual: trollheim
+    printed_page: 95
+    section: Rata Ogro
+  name_i18n:
+    en: null
+    es: Rata Ogro
+band_rules:
+- id: black-hunger
+  name: Hambre Negra
+  effect: Al inicio del turno el Héroe puede ganar +1 Ataque y +1D6+2 cm de movimiento ese turno; después recibe 1D3 impactos
+    F3 sin salvación.
+  source:
+    manual: trollheim
+    printed_page: 93
+    section: Habilidades Especiales Skavens
+  name_i18n:
+    en: null
+    es: Hambre Negra
+  effect_i18n:
+    en: null
+    es: Al inicio del turno el Héroe puede ganar +1 Ataque y +1D6+2 cm de movimiento ese turno; después recibe 1D3 impactos
+      F3 sin salvación.
+- id: tail-fighting
+  name: Combate con la Cola
+  effect: Puede llevar cuchillo
+  escudo o espada con la cola; obtiene un ataque adicional con el arma o +1 a salvación con el escudo.: null
+  source:
+    manual: trollheim
+    printed_page: 93
+    section: Habilidades Especiales Skavens
+  name_i18n:
+    en: null
+    es: Combate con la Cola
+  effect_i18n:
+    en: null
+    es: Puede llevar cuchillo
+- id: master-climber
+  name: Trepador Nato
+  effect: No realiza chequeos de Iniciativa al trepar por superficies verticales.
+  source:
+    manual: trollheim
+    printed_page: 93
+    section: Habilidades Especiales Skavens
+  name_i18n:
+    en: null
+    es: Trepador Nato
+  effect_i18n:
+    en: null
+    es: No realiza chequeos de Iniciativa al trepar por superficies verticales.
+- id: infiltration
+  name: Infiltración
+  effect: Se despliega después del rival fuera de su línea de visión y a más de 30 cm; si ambos infiltran se decide el orden
+    con 1D6 por miniatura.
+  source:
+    manual: trollheim
+    printed_page: 93
+    section: Habilidades Especiales Skavens
+  name_i18n:
+    en: null
+    es: Infiltración
+  effect_i18n:
+    en: null
+    es: Se despliega después del rival fuera de su línea de visión y a más de 30 cm; si ambos infiltran se decide el orden
+      con 1D6 por miniatura.
+- id: unarmed-art
+  name: Arte del Combate sin Armas
+  effect: Se considera equipado con dos armas usando sus garras; obtiene +1 Ataque y causa crítico con 5-6. Con Garras de
+    Combate obtiene +2 Ataques.
+  source:
+    manual: trollheim
+    printed_page: 93
+    section: Habilidades Especiales Skavens
+  name_i18n:
+    en: null
+    es: Arte del Combate sin Armas
+  effect_i18n:
+    en: null
+    es: Se considera equipado con dos armas usando sus garras; obtiene +1 Ataque y causa crítico con 5-6. Con Garras de Combate
+      obtiene +2 Ataques.
+- id: blowpipe-rules
+  name: Cerbatana
+  effect: Alcance 20 cm
+  F1: null
+  salvación +1; Veneno similar al Loto Negro y Silenciosa.: null
+  source:
+    manual: trollheim
+    printed_page: 92
+    section: Equipo Especial Skaven
+  name_i18n:
+    en: null
+    es: Cerbatana
+  effect_i18n:
+    en: null
+    es: Alcance 20 cm
+- id: warp-pistol-rules
+  name: Pistola Bruja
+  effect: Alcance 20 cm
+  F5: null
+  salvación -3; dispara una vez cada dos turnos.: null
+  source:
+    manual: trollheim
+    printed_page: 92
+    section: Equipo Especial Skaven
+  name_i18n:
+    en: null
+    es: Pistola Bruja
+  effect_i18n:
+    en: null
+    es: Alcance 20 cm
+- id: fighting-claws-rules
+  name: Garras de Combate
+  effect: Par de armas; +1 Ataque
+  +1 I al trepar: null
+  permite repetir una parada fallida y no admite otras armas durante la batalla.: null
+  source:
+    manual: trollheim
+    printed_page: 92
+    section: Equipo Especial Skaven
+  name_i18n:
+    en: null
+    es: Garras de Combate
+  effect_i18n:
+    en: null
+    es: Par de armas; +1 Ataque
+- id: weeping-blades-rules
+  name: Espadas Supurantes
+  effect: Par de armas; +1 Ataque
+  Loto Negro permanente y Parada; no admite otro veneno.: null
+  source:
+    manual: trollheim
+    printed_page: 92
+    section: Equipo Especial Skaven
+  name_i18n:
+    en: null
+    es: Espadas Supurantes
+  effect_i18n:
+    en: null
+    es: Par de armas; +1 Ataque
+source_sections: []
+canonical_family: skaven-clan-eshin

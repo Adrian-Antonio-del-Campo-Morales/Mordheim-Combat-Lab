@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+.idea/
+.vscode/
+build/
+dist/
+*.spec
+*.pyd
+src/mordheim_combat_lab/_combat_fast.c
+MordheimCombatLab_startup_error.txt
+outputs/
+
+# Full and excerpted rulebooks are local reference material.
+# Do not publish these accidentally: they are very large and are not ours.
+sources/full/
+sources/short/

@@ -1,0 +1,5 @@
+-r requirements.txt
+pyinstaller>=6.0
+pytest>=8.0
+wheel>=0.43
+Cython>=3.0,<4

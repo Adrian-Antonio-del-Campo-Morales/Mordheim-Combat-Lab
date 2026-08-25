@@ -1,0 +1,835 @@
+id: dwarf-rangers
+name: Dwarf Rangers
+grade: 1b
+source_url: https://mordheimer.net/docs/warbands/grade-1b-warbands/dwarf-rangers
+headings:
+- Special Rules ​
+- Choice of warriors ​
+- Starting Experience ​
+- Dwarf Skill Table ​
+- Dwarf Special Skills ​
+- Combat Master ​
+- Extra Tough ​
+- Resource Hunter ​
+- True Grit ​
+- Thick Skull ​
+- Slayer Special Skills ​
+- Ferocious Charge ​
+- Monster Slayer ​
+- Berserker ​
+- Dwarf equipment lists ​
+- Dwarf Warrior Equipment List ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Crossbowmen Equipment List ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Special Equipment ​
+- Dwarf Axe ​
+- heroes ​
+- 1 Runesmith ​
+- Special Rules ​
+- 0 – 1 Apprentice Runesmith ​
+- Special Rules ​
+- 0 – 2 Dwarf Troll Slayers ​
+- SPECIAL RULES ​
+- henchmen ​
+- 0 – 5 Dwarf Longbeards ​
+- Special Rules ​
+- Dwarf Clansmen ​
+- 0 – 5 Dwarf Crossbowmen ​
+- Beardlings ​
+- Dwarf Runes ​
+tables:
+- section: Dwarf Skill Table
+  section_path:
+  - Dwarf Skill Table
+  rows:
+  - - ''
+    - Combat
+    - Shooting
+    - Academic*
+    - Strength
+    - Speed
+    - Special
+  - - Runesmith
+    - ✓
+    - ✓
+    - ✓
+    - ✓
+    - ''
+    - ✓
+  - - Apprentice
+    - ✓
+    - ''
+    - ✓
+    - ✓
+    - ''
+    - ✓
+  - - Troll Slayer
+    - ✓
+    - ''
+    - ''
+    - ✓
+    - ''
+    - ✓
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Dwarf equipment lists
+  - Dwarf Warrior Equipment List
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Mace
+    - 3 gc
+  - - Hammer
+    - 3 gc
+  - - Axe
+    - 5 gc
+  - - Sword
+    - 10 gc
+  - - Dwarf axe
+    - 15 gc
+  - - Double-handed weapon
+    - 15 gc
+  - - Spear
+    - 10 gc
+  - - Halberd
+    - 10 gc
+  - - Gromril weapon *
+    - 3 times the cost
+- section: Missile Weapons
+  section_path:
+  - Dwarf equipment lists
+  - Dwarf Warrior Equipment List
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Pistol
+    - 15 gc
+- section: Armour
+  section_path:
+  - Dwarf equipment lists
+  - Dwarf Warrior Equipment List
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Light armour
+    - 20 gc
+  - - Heavy armour
+    - 50 gc
+  - - Gromril armour **
+    - 75 gc
+  - - Shield
+    - 5 gc
+  - - Helmet
+    - 10 gc
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Dwarf equipment lists
+  - Crossbowmen Equipment List
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Mace
+    - 3 gc
+  - - Hammer
+    - 3 gc
+  - - Axe
+    - 5 gc
+  - - Sword
+    - 10 gc
+- section: Missile Weapons
+  section_path:
+  - Dwarf equipment lists
+  - Crossbowmen Equipment List
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Crossbow
+    - 25 gc
+- section: Armour
+  section_path:
+  - Dwarf equipment lists
+  - Crossbowmen Equipment List
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Light armour
+    - 20 gc
+  - - Heavy armour
+    - 50 gc
+  - - Shield
+    - 5 gc
+  - - Helmet
+    - 10 gc
+- section: 1 Runesmith
+  section_path:
+  - heroes
+  - 1 Runesmith
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '3'
+    - '5'
+    - '4'
+    - '3'
+    - '4'
+    - '1'
+    - '2'
+    - '1'
+    - '10'
+- section: 0 – 1 Apprentice Runesmith
+  section_path:
+  - heroes
+  - 0 – 1 Apprentice Runesmith
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '3'
+    - '3'
+    - '2'
+    - '3'
+    - '4'
+    - '1'
+    - '2'
+    - '1'
+    - '8'
+- section: 0 – 2 Dwarf Troll Slayers
+  section_path:
+  - heroes
+  - 0 – 2 Dwarf Troll Slayers
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '3'
+    - '4'
+    - '3'
+    - '3'
+    - '4'
+    - '1'
+    - '2'
+    - '1'
+    - '9'
+- section: 0 – 5 Dwarf Longbeards
+  section_path:
+  - henchmen
+  - 0 – 5 Dwarf Longbeards
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '3'
+    - '5'
+    - '3'
+    - '3'
+    - '4'
+    - '1'
+    - '3'
+    - '1'
+    - '9'
+- section: Dwarf Clansmen
+  section_path:
+  - henchmen
+  - Dwarf Clansmen
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '3'
+    - '4'
+    - '3'
+    - '3'
+    - '4'
+    - '1'
+    - '2'
+    - '1'
+    - '9'
+- section: 0 – 5 Dwarf Crossbowmen
+  section_path:
+  - henchmen
+  - 0 – 5 Dwarf Crossbowmen
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '3'
+    - '4'
+    - '3'
+    - '3'
+    - '4'
+    - '1'
+    - '2'
+    - '1'
+    - '9'
+- section: Beardlings
+  section_path:
+  - henchmen
+  - Beardlings
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '3'
+    - '3'
+    - '2'
+    - '3'
+    - '4'
+    - '1'
+    - '2'
+    - '1'
+    - '8'
+section_text:
+- section: Special Rules
+  section_path:
+  - Special Rules
+  text: 'A Dwarf Rangers Warband is subject to the following
+
+    special rules in addition to the ones for Dwarf
+
+    Warbands.
+
+    Don’t Trust ‘Em: While Ranger Warbands are free to
+
+    ally with other Dwarf warbands in multi-player games,
+
+    their point of view is so different that they do not trust
+
+    them fully. Members of a Dwarf Rangers warband are
+
+    never considered ‘friendly models’ to other dwarfs
+
+    and vice versa.
+
+    This means that members of one warband WILL stop
+
+    members of the other from Marching, they won’t keep
+
+    each other from taking all alone tests, etc. They don’t
+
+    count as enemy models and may split any treasure
+
+    found at the end of the game as normal, but the two
+
+    bands are not friends, make no mistake!
+
+    All Dwarfs are subject to the following special rules:
+
+    Hard to Kill. Dwarfs are tough, resilient individuals who can only be taken out
+    of action on a roll of 6 instead of 5-6 when rolling on the Injury chart. Treat
+    a roll of 1-2 as knocked down, 3-5 as stunned, and 6 as out of action.
+
+    Hard Head. Dwarfs ignore the special rules for maces, clubs, etc. They are not
+    easy to knock out!
+
+    Armour. Dwarfs never suffer movement penalties for wearing armour.
+
+    Hate Orcs and Goblins. All Dwarfs hate Orcs and Goblins. See the psychology section
+    of the Mordheim rules for details on the effects of hatred .
+
+    Grudgebearers. Dwarfs hold an ancient grudge against Elves from the days when
+    the two races fought for supremacy in the Old World. A Dwarf warband may never
+    include any kind of Elven Hired Sword or Dramatis Personae.
+
+    Incomparable Miners. Dwarfs spend much of their lives
+
+    underground searching for precious minerals, and they are
+
+    the best in the world at this kind of work. In the city of
+
+    Mordheim they apply similar skills to the search for
+
+    wyrdstone. When checking for wyrdstone at the end of a
+
+    game, add +1 to the number of pieces found for a
+
+    Dwarf warband.'
+- section: Dwarf Skill Table
+  section_path:
+  - Dwarf Skill Table
+  text: '*Note that Dwarfs may never take the Arcane Lore skill. It is not possible
+    for a dwarf to learn to cast spells.'
+- section: Dwarf Special Skills
+  section_path:
+  - Dwarf Special Skills
+  text: Dwarf Heroes may use the following Skill table instead of any of the standard
+    Skill tables available to them.
+- section: Combat Master
+  section_path:
+  - Dwarf Special Skills
+  - Combat Master
+  text: 'This Dwarf’s martial skills surpass those of a normal
+
+    warrior; he is used to fighting by himself against
+
+    hordes of opponents and coming through unscathed.
+
+    When using a weapon that has a Parry special rule,
+
+    this hero parries successfully if he beats OR MATCHES
+
+    his opponent’s highest ‘to hit’ roll, not just if he beats
+
+    the roll. In addition, if this warrior is using two
+
+    weapons that have the Parry special rule, he is
+
+    allowed to parry two attacks (if his two dice match or
+
+    beat the highest two attack dice against him) instead
+
+    of the normal maximum of one.'
+- section: Extra Tough
+  section_path:
+  - Dwarf Special Skills
+  - Extra Tough
+  text: 'This Dwarf is notorious for walking away from wounds that
+
+    would kill a lesser being. When rolling on the Heroes Serious
+
+    Injury chart for this Hero after a game in which he has been
+
+    taken out of action, the dice may be re-rolled once. The result
+
+    of this second dice roll must be accepted, even if it is a worse
+
+    result.'
+- section: Resource Hunter
+  section_path:
+  - Dwarf Special Skills
+  - Resource Hunter
+  text: 'This Dwarf is especially good at locating valuable resources.
+
+    When rolling on the Exploration chart at the end of a game,
+
+    the Hero may modify one dice roll by +1/-1.'
+- section: True Grit
+  section_path:
+  - Dwarf Special Skills
+  - True Grit
+  text: 'Dwarfs are hardy individuals and this Hero is hardy even for
+
+    a Dwarf! When rolling on the Injury table for this Hero, a roll
+
+    of 1-3 is treated as knocked down, 4-5 as stunned, and 6 as
+
+    out of action.'
+- section: Thick Skull
+  section_path:
+  - Dwarf Special Skills
+  - Thick Skull
+  text: 'The Hero has a thick skull, even for a Dwarf. He
+
+    has a 3+ save on a D6 to avoid being stunned. If
+
+    the save is made, treat a stunned result as knocked
+
+    down instead. If the Dwarf also wears a helmet,
+
+    this save is 2+ instead of 3+ (this takes the
+
+    place of the normal Helmet special rule).'
+- section: Slayer Special Skills
+  section_path:
+  - Slayer Special Skills
+  text: Troll Slayers only
+- section: Ferocious Charge
+  section_path:
+  - Slayer Special Skills
+  - Ferocious Charge
+  text: 'The Slayer may double his attacks on the turn in
+
+    which he charges. He will suffer a –1 to hit penalty on
+
+    that turn.'
+- section: Monster Slayer
+  section_path:
+  - Slayer Special Skills
+  - Monster Slayer
+  text: 'The Slayer always wounds any opponent on a roll of
+
+    4+, regardless of Toughness, unless his own strength
+
+    (with weapon modifiers) would mean that a lower roll
+
+    than this is needed.'
+- section: Berserker
+  section_path:
+  - Slayer Special Skills
+  - Berserker
+  text: 'The Slayer may add +1 to his to hit rolls during the
+
+    turn in which he charges.'
+- section: Dwarf equipment lists
+  section_path:
+  - Dwarf equipment lists
+  text: The following lists are used by Dwarf warbands to pick their equipment.
+- section: Crossbowmen Equipment List
+  section_path:
+  - Dwarf equipment lists
+  - Crossbowmen Equipment List
+  text: '*Any weapon a Dwarf may normally purchase may be
+
+    bought as a Gromril weapon instead. This multiplies
+
+    the cost of the weapon by 3. For rules on Gromril
+
+    weapons see the Mordheim rulebook. Note that this
+
+    price is only for a starting warband, as it represents the
+
+    Dwarfs outfitting themselves at their own stronghold.
+
+    Later purchases of Gromril weapons are done using the
+
+    price chart in the Mordheim rules.
+
+    **The price of a suit of Gromril armour is cheaper for
+
+    a starting warband to represent the relative ease with
+
+    which Dwarfs can find such items in their own
+
+    stronghold. Later purchases of Gromril armour must
+
+    be done using the normal price chart in the
+
+    Mordheim rules.'
+- section: Special Equipment
+  section_path:
+  - Special Equipment
+  text: 'This warband has access to the following special equipment when purchasing
+    items from the Trading Post , outside their starting list:'
+- section: 1 Runesmith
+  section_path:
+  - heroes
+  - 1 Runesmith
+  text: '85 gold crowns to hire
+
+    Dwarf Runesmiths are champions of the old ways. ‘If it was good enough for my
+    ancestors, it’s good enough for me!’ is a popular saying. Fresh out of their decades-long
+    apprenticeships, these Runesmith’s are normally on a quest to prove this saying
+    and so will gather together a party of like-minded individuals to seek out lost
+    treasures of their ancestors to confirm this adherence to the traditional ways.
+
+    Weapons/Armour: A Dwarf Runesmith may be equipped with
+
+    weapons and armour chosen from the Dwarf Warrior
+
+    equipment list.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 1 Runesmith
+  - Special Rules
+  text: 'Leader: Any models in the warband within 6" of the Dwarf
+
+    Runesmith may use his Leadership instead of their own.
+
+    Inscribe Runes: A Runesmith knows one minor rune
+
+    (see list at the end of this warband list ), determined
+
+    randomly when the warband is first created. He may
+
+    inscribe the rune on an item carried by one of the
+
+    warriors of his warband, and (if successful, see below)
+
+    the item will gain a bonus from the rune for that
+
+    game. When a Runesmith advances and rolls a skill on
+
+    the Hero Advance table, he may choose to learn a new
+
+    rune instead of learning a skill (exactly like a
+
+    spellcaster advancing and learning a new spell).'
+- section: 0 – 1 Apprentice Runesmith
+  section_path:
+  - heroes
+  - 0 – 1 Apprentice Runesmith
+  text: '40 gold crowns to hire
+
+    An Apprentice Runesmith follows his master wherever he goes and is normally just
+    as anxious to prove that the old ways are best. For if they aren’t, he is wasting
+    a good portion of his life…
+
+    Weapons/Armour: An Apprentice Runesmith may be armed with weapons chosen from
+    the Dwarf Warrior equipment list.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 0 – 1 Apprentice Runesmith
+  - Special Rules
+  text: 'Extra Set of Hands: An Apprentice Runesmith helps
+
+    his master fashion runic items, doing all the boring
+
+    grunge-work that makes his master more efficient in
+
+    his efforts. An Apprentice Runesmith in the warband
+
+    allows a Master Runesmith to inscribe on two items
+
+    before each game, instead of only one.'
+- section: 0 – 2 Dwarf Troll Slayers
+  section_path:
+  - heroes
+  - 0 – 2 Dwarf Troll Slayers
+  text: '50 gold crowns to hire
+
+    While it may seem that Troll Slayers shouldn’t fit in with the rest of a Runic
+    Ranger warband, make no mistake – they are strict adherents to tradition and the
+    old ways! Indeed they usually find it easier to get along with the more traditional
+    minded Dwarfs than other dwarfs, who Slayers feel lack determination and the insight
+    to see what the true problems are with their race.
+
+    Weapons/Armour: Troll Slayers may be equipped with
+
+    weapons chosen from the Dwarf Warrior equipment list.
+
+    Slayers may never carry or use missile weapons or any form
+
+    of armour.'
+- section: SPECIAL RULES
+  section_path:
+  - heroes
+  - 0 – 2 Dwarf Troll Slayers
+  - SPECIAL RULES
+  text: 'Deathwish: Troll Slayers seek an honourable death in
+
+    combat. They are completely immune to all psychology and
+
+    never need to test if fighting alone.'
+- section: henchmen
+  section_path:
+  - henchmen
+  text: (Bought in groups of 1-5)
+- section: 0 – 5 Dwarf Longbeards
+  section_path:
+  - henchmen
+  - 0 – 5 Dwarf Longbeards
+  text: '50 gold crowns to hire
+
+    Tested Dwarf veterans who’ve fought in hundreds of battle over their long lives,
+    Longbeards are typically more than willing to support an expedition to prove what
+    they’ve said all along – the old ways are best!
+
+    Weapons/Armour: Dwarf Longbeards may be equipped with
+
+    weapons and armour chosen from the Dwarf Warrior
+
+    equipment list.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 5 Dwarf Longbeards
+  - Special Rules
+  text: 'Stubborn: Dwarf Longbeards have seen just about
+
+    everything in their long careers and they know it.
+
+    They are used to fighting by themselves against
+
+    impossible odds and it hasn’t killed them yet. On top
+
+    of all this they are just generally more set in their
+
+    ways than other Dwarfs and they’re not about to let a
+
+    bunch of weedy goblins drive them off!
+
+    A Dwarf Longbeard may reroll any failed Leadership test he is
+
+    required to take. Remember that you can never reroll
+
+    a reroll, so the result of this second roll must always
+
+    be accepted.'
+- section: Dwarf Clansmen
+  section_path:
+  - henchmen
+  - Dwarf Clansmen
+  text: '40 gold crowns to hire
+
+    There are many Dwarfs who see the ‘wisdom’ in reliance on the old ways. Most of
+    these Dwarf warriors venerate Runesmiths and are honoured to be chosen as part
+    of an expedition including one.
+
+    Weapons/Armour: Dwarf Clansmen may be equipped with
+
+    weapons and armour chosen from the Dwarf Warrior
+
+    equipment list.'
+- section: 0 – 5 Dwarf Crossbowmen
+  section_path:
+  - henchmen
+  - 0 – 5 Dwarf Crossbowmen
+  text: '40 gold crowns to hire
+
+    More Dwarfs who see the old ways as best use the older crossbow instead of the
+    newer (and very unreliable to their eyes) handguns. If their ancestors had wanted
+    them to use black powder weapons, they would have developed them generations ago.
+
+    Weapons/Armour: Crossbowmen may be armed with
+
+    weapons and armour chosen from the Dwarf Crossbowmen
+
+    equipment list.'
+- section: Beardlings
+  section_path:
+  - henchmen
+  - Beardlings
+  text: '25 gold crowns to hire
+
+    Many of the proponents of the old ways are older members of Dwarf community. However
+    there are still youngsters who believe and they often accompany a Runic warband
+    to lend a hand as needed to the respected oldsters. More spry than their fellows,
+    they are often used as scouts, roaming ahead of the rest to spy the land and observe
+    enemy activity.
+
+    Weapons/Armour: Beardlings may be equipped with
+
+    weapons and armour chosen from the Dwarf Warrior
+
+    equipment list.'
+- section: Dwarf Runes
+  section_path:
+  - Dwarf Runes
+  text: 'Runesmiths harness the magic of the Warhammer world by inscribing magical
+    runes on items,
+
+    imbuing them with a variety of wondrous abilities. When a Runesmith graduates
+    from his long
+
+    apprenticeship he has knowledge of one or two minor runes taught to him by his
+    master.
+
+    These runes are less powerful than normal Dwarf runes, in that they can only utilise
+    magic for
+
+    a short time. As the Runesmith practices and studies on his own, he gains the
+    knowledge
+
+    required to inscribe the more powerful permanent runes on to items.
+
+    Before each game, the Runesmith may attempt to inscribe the rune on an item one
+    of the
+
+    warriors in his warband is carrying. To do so he must roll 2D6. If he rolls a
+    number equal to or
+
+    greater than the Difficulty Level of the rune, the item gains the appropriate
+    bonus FOR THAT
+
+    GAME. If he rolls a ‘2’ on the 2D6, he has fumbled the inscription, fractured
+    the blade of the
+
+    weapon or shattered the breastplate of the armour, etc. The item is destroyed
+    and must be
+
+    removed from the warrior’s list of items, though it may be replaced before the
+    game if the
+
+    warband has sufficient gold crowns. Any other failure simply means the Runesmith
+    failed to
+
+    inscribe the rune correctly and the warrior gains no bonus.
+
+    The leader of a Dwarf Rangers warband represents a younger Runesmith that has
+    recently left
+
+    the tutelage of his master. He knows one of the following minor runes:
+
+    Rune of Stone: +1 to Armour Save. Difficulty 8. Rune of Sharpness: -1 Armour Save
+    modifier to weapon. Difficulty 6. Rune of Speed: Initiative doubled on weapon.
+    Difficulty 7. Rune of Warding: Special 4+ save Vs. Spells affecting target (placed
+    on belt, armband, etc. Cost to replace: 1 GC). Difficulty 8. Rune of Accuracy:
+    +1 to hit on weapon. Difficulty 9. Rune of Striding: +1 Movement (placed on boots,
+    belt, etc. Cost to replace: 1 GC). Difficulty 8.
+
+    The Jealousy of Runes: Bonuses from Runes are not cumulative with magical bonuses
+    from The Jealousy of Runes
+
+    other items. In other words, a warrior may not combine a Rune of Stone on his
+    shield and a
+
+    Rune of Shield on his armour for a total bonus to his Armour Save of +2. Similarly
+    the warrior
+
+    could not combine the Rune of Stone on his shield with some suit of magic elven
+    armour (for
+
+    example) that added +1 to the warrior’s Armour Save.'

@@ -1,0 +1,597 @@
+schema_version: 1
+id: chaos-streets-sigmar-protectorate
+name: Protectorado de Sigmar
+name_i18n:
+  en: null
+  es: Protectorado de Sigmar
+original_locale: es
+categories:
+- trollheim
+collections:
+- trollheim
+grade: null
+setting: Mordheim
+publication: caos-en-las-calles
+status: source-normalized
+sources:
+- manual: caos-en-las-calles
+  printed_page: 150-155
+  section: Protectorado de Sigmar
+roster:
+  minimum_models: 3
+  maximum_models: 15
+  starting_gold: 500
+  members:
+  - profile_id: warrior-priest
+    minimum: 1
+    maximum: 1
+  - profile_id: ranger
+    minimum: 0
+    maximum: 1
+  - profile_id: templar
+    minimum: 0
+    maximum: 2
+  - profile_id: initiate
+    minimum: 0
+    maximum: 2
+  - profile_id: protectorate-marksman
+    minimum: 0
+    maximum: 5
+  - profile_id: crusader
+    minimum: 0
+    maximum: 5
+  - profile_id: protectorate-mastiff
+    minimum: 0
+    maximum: 5
+equipment_lists:
+- id: protectorate-devout-equipment
+  name: Equipo para los Devotos
+  source:
+    manual: caos-en-las-calles
+    printed_page: 152
+    section: Lista de Equipo para los Devotos
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: La primera es gratis
+  - item_id: hammer
+    cost: 3
+  - item_id: axe
+    cost: 5
+  - item_id: sword
+    cost: 10
+  - item_id: great_weapon
+    cost: 15
+  - item_id: sigmarite_hammer
+    cost: 15
+  - item_id: pistol
+    cost: 15
+  - item_id: pistol_brace
+    cost: 30
+  - item_id: crossbow
+    cost: 25
+  - item_id: crossbow_pistol
+    cost: 35
+  - item_id: shield
+    cost: 5
+  - item_id: buckler
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  - item_id: sigmar_shield
+    cost: 20
+  - item_id: light_armour
+    cost: 20
+  - item_id: heavy_armour
+    cost: 50
+  - item_id: holy_water
+    cost: 5
+  - item_id: holy_relic
+    cost: 15
+  - item_id: anointed_bolts
+    cost: 25
+  name_i18n:
+    en: null
+    es: Equipo para los Devotos
+- id: protectorate-warrior-equipment
+  name: Equipo para los Guerreros
+  source:
+    manual: caos-en-las-calles
+    printed_page: 152
+    section: Lista de Equipo para los Guerreros
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: La primera es gratis
+  - item_id: hammer
+    cost: 3
+  - item_id: axe
+    cost: 5
+  - item_id: sword
+    cost: 10
+  - item_id: spear
+    cost: 10
+  - item_id: great_weapon
+    cost: 15
+  - item_id: sigmarite_hammer
+    cost: 15
+  - item_id: bow
+    cost: 10
+  - item_id: shield
+    cost: 5
+  - item_id: buckler
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  - item_id: sigmar_shield
+    cost: 20
+  - item_id: light_armour
+    cost: 20
+  - item_id: heavy_armour
+    cost: 50
+  - item_id: holy_water
+    cost: 5
+  - item_id: holy_relic
+    cost: 15
+  name_i18n:
+    en: null
+    es: Equipo para los Guerreros
+- id: protectorate-shooter-equipment
+  name: Equipo para los Tiradores
+  source:
+    manual: caos-en-las-calles
+    printed_page: 152
+    section: Lista de Equipo para los Tiradores
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: La primera es gratis
+  - item_id: hammer
+    cost: 3
+  - item_id: axe
+    cost: 5
+  - item_id: sword
+    cost: 10
+  - item_id: great_weapon
+    cost: 15
+    notes: Solo el Montaraz
+  - item_id: bow
+    cost: 10
+  - item_id: long_bow
+    cost: 15
+    notes: Solo el Montaraz
+  - item_id: crossbow
+    cost: 25
+  - item_id: shield
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  - item_id: light_armour
+    cost: 20
+  name_i18n:
+    en: null
+    es: Equipo para los Tiradores
+profiles:
+- id: warrior-priest
+  name: Sacerdote Guerrero
+  type: hero
+  cost: 80
+  experience: 20
+  characteristics:
+    M: 10
+    WS: 4
+    BS: 3
+    S: 4
+    T: 3
+    W: 1
+    I: 4
+    A: 1
+    Ld: 8
+  equipment_lists:
+  - protectorate-devout-equipment
+  fixed_equipment: []
+  equipment_restrictions:
+  - Puede llevar armadura y continuar utilizando Plegarias de Sigmar
+  skill_access:
+  - combat
+  - academic
+  - strength
+  - speed
+  - protectorate_special
+  rules:
+  - id: warrior-priest-leader
+    name: Jefe
+    effect: Cualquier miembro de la banda situado a 15 cm o menos puede utilizar su Liderazgo para sus chequeos.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 153
+      section: Sacerdote Guerrero
+    name_i18n:
+      en: null
+      es: Jefe
+    effect_i18n:
+      en: null
+      es: Cualquier miembro de la banda situado a 15 cm o menos puede utilizar su Liderazgo para sus chequeos.
+  - id: sigmar-prayers-access
+    name: Plegarias
+    effect: Tiene acceso a las Plegarias de Sigmar; la lista y sus efectos mágicos quedan fuera del alcance actual de la base
+      canónica.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 153
+      section: Sacerdote Guerrero
+    name_i18n:
+      en: null
+      es: Plegarias
+    effect_i18n:
+      en: null
+      es: Tiene acceso a las Plegarias de Sigmar; la lista y sus efectos mágicos quedan fuera del alcance actual de la base
+        canónica.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 153
+    section: Sacerdote Guerrero
+  name_i18n:
+    en: null
+    es: Sacerdote Guerrero
+- id: templar
+  name: Templario
+  type: hero
+  cost: 45
+  experience: 12
+  characteristics:
+    M: 10
+    WS: 4
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - protectorate-warrior-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - strength
+  - speed
+  - protectorate_special
+  rules:
+  - id: devoted-templar
+    name: Devoto
+    effect: Odia a todos los miembros de bandas caóticas
+    incluidos Skaven: null
+    Poseídos: null
+    Carnaval del Caos: null
+    Hombres Bestia y cualquier banda con un Demonio.: null
+    source:
+      manual: caos-en-las-calles
+      printed_page: 154
+      section: Templarios
+    name_i18n:
+      en: null
+      es: Devoto
+    effect_i18n:
+      en: null
+      es: Odia a todos los miembros de bandas caóticas
+  source:
+    manual: caos-en-las-calles
+    printed_page: 154
+    section: Templarios
+  name_i18n:
+    en: null
+    es: Templario
+- id: ranger
+  name: Montaraz
+  type: hero
+  cost: 45
+  experience: 8
+  characteristics:
+    M: 10
+    WS: 4
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - protectorate-shooter-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - shooting
+  - speed
+  rules:
+  - id: animal-tamer
+    name: Domador
+    effect: Los animales de la banda a 15 cm o menos pueden usar su Liderazgo. Cualquier animal debe superar un chequeo de
+      Liderazgo para cargar contra él.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 154
+      section: Montaraz
+    name_i18n:
+      en: null
+      es: Domador
+    effect_i18n:
+      en: null
+      es: Los animales de la banda a 15 cm o menos pueden usar su Liderazgo. Cualquier animal debe superar un chequeo de Liderazgo
+        para cargar contra él.
+  - id: outsider-ranger
+    name: Foráneo
+    effect: Si la banda incluye un Montaraz solo puede incluir un Templario como máximo.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 154
+      section: Montaraz
+    name_i18n:
+      en: null
+      es: Foráneo
+    effect_i18n:
+      en: null
+      es: Si la banda incluye un Montaraz solo puede incluir un Templario como máximo.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 154
+    section: Montaraz
+  name_i18n:
+    en: null
+    es: Montaraz
+- id: initiate
+  name: Iniciado
+  type: hero
+  cost: 25
+  experience: 2
+  characteristics:
+    M: 10
+    WS: 3
+    BS: 2
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - protectorate-devout-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - academic
+  - strength
+  - speed
+  - protectorate_special
+  rules: []
+  source:
+    manual: caos-en-las-calles
+    printed_page: 154
+    section: Iniciados
+  name_i18n:
+    en: null
+    es: Iniciado
+- id: protectorate-marksman
+  name: Tirador
+  type: henchman
+  cost: 35
+  experience: 0
+  characteristics:
+    M: 10
+    WS: 4
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - protectorate-shooter-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules: []
+  source:
+    manual: caos-en-las-calles
+    printed_page: 155
+    section: Tiradores
+  name_i18n:
+    en: null
+    es: Tirador
+- id: crusader
+  name: Cruzado
+  type: henchman
+  cost: 15
+  experience: 0
+  characteristics:
+    M: 10
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - protectorate-warrior-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules: []
+  source:
+    manual: caos-en-las-calles
+    printed_page: 155
+    section: Cruzados
+  name_i18n:
+    en: null
+    es: Cruzado
+- id: protectorate-mastiff
+  name: Mastín
+  type: henchman
+  cost: 15
+  experience: 0
+  characteristics:
+    M: 15
+    WS: 4
+    BS: 0
+    S: 4
+    T: 3
+    W: 1
+    I: 4
+    A: 1
+    Ld: 6
+  equipment_lists: []
+  fixed_equipment:
+  - Mandíbulas
+  equipment_restrictions:
+  - Nunca utiliza ni necesita armas o armaduras
+  skill_access: []
+  rules:
+  - id: animal
+    name: Animales
+    effect: No gana experiencia.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 155
+      section: Mastines
+    name_i18n:
+      en: null
+      es: Animales
+    effect_i18n:
+      en: null
+      es: No gana experiencia.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 155
+    section: Mastines
+  name_i18n:
+    en: null
+    es: Mastín
+band_rules:
+- id: warrior-priest-death
+  name: Muerte del Sacerdote Guerrero
+  effect: Si muere, el Iniciado con más experiencia se convierte en el nuevo Sacerdote Guerrero, obtiene Jefe y acceso a Plegarias,
+    pero no aprende una inmediatamente. En su siguiente subida puede sustituir la tirada de desarrollo por una tirada directa
+    en la tabla de Plegarias de Sigmar. Desde entonces puede reclutarse otro Iniciado.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 150
+    section: Reglas Especiales
+  name_i18n:
+    en: null
+    es: Muerte del Sacerdote Guerrero
+  effect_i18n:
+    en: null
+    es: Si muere, el Iniciado con más experiencia se convierte en el nuevo Sacerdote Guerrero, obtiene Jefe y acceso a Plegarias,
+      pero no aprende una inmediatamente. En su siguiente subida puede sustituir la tirada de desarrollo por una tirada directa
+      en la tabla de Plegarias de Sigmar. Desde entonces puede reclutarse otro Iniciado.
+- id: sigmarite-hammer
+  name: Martillo Sigmarita
+  effect: Cuesta 15 coronas, es Común y exclusivo del Protectorado. Es un arma a dos manos de Fuerza del usuario más uno.
+    Con 2-4 en la Tabla de Heridas causa aturdido. Suma uno para herir contra Poseídos y No Muertos, aunque los críticos siguen
+    requiriendo un 6.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 151
+    section: Martillo Sigmarita
+  name_i18n:
+    en: null
+    es: Martillo Sigmarita
+  effect_i18n:
+    en: null
+    es: Cuesta 15 coronas, es Común y exclusivo del Protectorado. Es un arma a dos manos de Fuerza del usuario más uno. Con
+      2-4 en la Tabla de Heridas causa aturdido. Suma uno para herir contra Poseídos y No Muertos, aunque los críticos siguen
+      requiriendo un 6.
+- id: sigmar-shield
+  name: Escudo de Sigmar
+  effect: Cuesta 20 coronas, es Raro 9 y exclusivo del Protectorado. Suma uno a la salvación por armadura, concede una salvación
+    especial de 6+ contra disparos mágicos o mundanos y evita la reducción de movimiento cuando se combina con armadura pesada
+    o de placas.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 151
+    section: Escudo de Sigmar
+  name_i18n:
+    en: null
+    es: Escudo de Sigmar
+  effect_i18n:
+    en: null
+    es: Cuesta 20 coronas, es Raro 9 y exclusivo del Protectorado. Suma uno a la salvación por armadura, concede una salvación
+      especial de 6+ contra disparos mágicos o mundanos y evita la reducción de movimiento cuando se combina con armadura
+      pesada o de placas.
+- id: sigmar-protection
+  name: Protección de Sigmar
+  effect: Anula con 4+ cualquier hechizo lanzado contra el guerrero; si se anula, el hechizo tampoco afecta a ninguna otra
+    miniatura.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 153
+    section: Habilidades Especiales del Protectorado de Sigmar
+  name_i18n:
+    en: null
+    es: Protección de Sigmar
+  effect_i18n:
+    en: null
+    es: Anula con 4+ cualquier hechizo lanzado contra el guerrero; si se anula, el hechizo tampoco afecta a ninguna otra miniatura.
+- id: absolute-faith
+  name: Fe Absoluta
+  effect: Puede repetir chequeos de miedo fallidos y no chequea por enfrentarse a varios oponentes.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 153
+    section: Habilidades Especiales del Protectorado de Sigmar
+  name_i18n:
+    en: null
+    es: Fe Absoluta
+  effect_i18n:
+    en: null
+    es: Puede repetir chequeos de miedo fallidos y no chequea por enfrentarse a varios oponentes.
+- id: absolute-determination
+  name: Determinación Absoluta
+  effect: Solo el Sacerdote Guerrero puede escogerla; permite repetir chequeos de retirada fallidos.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 153
+    section: Habilidades Especiales del Protectorado de Sigmar
+  name_i18n:
+    en: null
+    es: Determinación Absoluta
+  effect_i18n:
+    en: null
+    es: Solo el Sacerdote Guerrero puede escogerla; permite repetir chequeos de retirada fallidos.
+- id: rousing-sermon
+  name: Sermón Estimulante
+  effect: Solo el Sacerdote Guerrero. Al inicio del turno puede renunciar a lanzar plegarias; él y todas las miniaturas amigas
+    a 15 cm obtienen más un Ataque durante ese turno. Es automático y no requiere tirada.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 153
+    section: Habilidades Especiales del Protectorado de Sigmar
+  name_i18n:
+    en: null
+    es: Sermón Estimulante
+  effect_i18n:
+    en: null
+    es: Solo el Sacerdote Guerrero. Al inicio del turno puede renunciar a lanzar plegarias; él y todas las miniaturas amigas
+      a 15 cm obtienen más un Ataque durante ese turno. Es automático y no requiere tirada.
+- id: sigmar-guidance
+  name: Orientación de Sigmar
+  effect: Al disparar puede elegir libremente el blanco e ignorar la obligación de atacar al enemigo más próximo.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 153
+    section: Habilidades Especiales del Protectorado de Sigmar
+  name_i18n:
+    en: null
+    es: Orientación de Sigmar
+  effect_i18n:
+    en: null
+    es: Al disparar puede elegir libremente el blanco e ignorar la obligación de atacar al enemigo más próximo.
+source_sections: []
+canonical_family: chaos-streets-sigmar-protectorate

@@ -1,0 +1,606 @@
+schema_version: 1
+id: lustria-clan-pestilens
+name: Clan Pestilens
+name_i18n:
+  en: null
+  es: Clan Pestilens
+original_locale: es
+categories:
+- trollheim
+collections:
+- trollheim
+grade: null
+setting: Lustria
+publication: lustria
+status: source-normalized
+sources:
+- manual: lustria
+  printed_page: 74-80
+  section: Clan Pestilens
+roster:
+  minimum_models: 3
+  maximum_models: 15
+  starting_gold: 500
+  members:
+  - profile_id: pestilens-plague-priest
+    minimum: 1
+    maximum: 1
+  - profile_id: pestilens-plague-sorcerer
+    minimum: 0
+    maximum: 1
+  - profile_id: pestilens-plague-monk
+    minimum: 0
+    maximum: 2
+  - profile_id: pestilens-initiated-monk
+    minimum: 0
+    maximum: 2
+  - profile_id: pestilens-novice
+    minimum: 0
+    maximum: null
+  - profile_id: pestilens-giant-rat
+    minimum: 0
+    maximum: null
+  - profile_id: pestilens-rat-ogre
+    minimum: 0
+    maximum: 1
+equipment_lists:
+- id: pestilens-hero-equipment
+  name: Equipo para Héroes
+  source:
+    manual: lustria
+    printed_page: 75
+    section: Lista de Equipo para Héroes
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: La primera es gratis
+  - item_id: club
+    cost: 3
+  - item_id: sword
+    cost: 10
+  - item_id: spear
+    cost: 10
+  - item_id: halberd
+    cost: 10
+  - item_id: flail
+    cost: 15
+  - item_id: weeping_dagger
+    cost: 15
+  - item_id: censer
+    cost: 40
+  - item_id: sling
+    cost: 2
+  - item_id: shield
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  - item_id: light_armour
+    cost: 20
+  - item_id: pestilens_banner
+    cost: 10
+    notes: La lista de equipo de la página 75 indica 5 co; la descripción y la lista de precios de las páginas 77 y 169 indican
+      10 co
+  - item_id: horned_rat_amulet
+    cost: 10
+  - item_id: rat_familiar_scroll
+    cost: 25+1D6
+  - item_id: liturgicus_infecticus
+    cost: 30+2D6
+  - item_id: fog_warpstone_fragments
+    cost: 100+10D6
+  name_i18n:
+    en: null
+    es: Equipo para Héroes
+- id: pestilens-henchman-equipment
+  name: Equipo para Secuaces
+  source:
+    manual: lustria
+    printed_page: 75
+    section: Lista de Equipo para Secuaces
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: La primera es gratis
+  - item_id: club
+    cost: 3
+  - item_id: sword
+    cost: 10
+  - item_id: spear
+    cost: 10
+  - item_id: sling
+    cost: 2
+  - item_id: shield
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  - item_id: light_armour
+    cost: 20
+  name_i18n:
+    en: null
+    es: Equipo para Secuaces
+profiles:
+- id: pestilens-plague-priest
+  name: Sacerdote de Plaga
+  type: hero
+  cost: 85
+  experience: 20
+  characteristics:
+    M: 12
+    WS: 4
+    BS: 4
+    S: 4
+    T: 4
+    W: 1
+    I: 5
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - pestilens-hero-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - shooting
+  - academic
+  - strength
+  - speed
+  - special
+  rules:
+  - id: pestilens-leader
+    name: Jefe
+    effect: Los miembros de la banda a 15 cm o menos pueden utilizar su Liderazgo.
+    source:
+      manual: lustria
+      printed_page: 78
+      section: Sacerdote de Plaga
+    name_i18n:
+      en: null
+      es: Jefe
+    effect_i18n:
+      en: null
+      es: Los miembros de la banda a 15 cm o menos pueden utilizar su Liderazgo.
+  source:
+    manual: lustria
+    printed_page: 78
+    section: Sacerdote de Plaga
+  name_i18n:
+    en: null
+    es: Sacerdote de Plaga
+- id: pestilens-plague-sorcerer
+  name: Brujo de Plaga
+  type: hero
+  cost: 45
+  experience: 8
+  characteristics:
+    M: 12
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 4
+    A: 1
+    Ld: 6
+  equipment_lists:
+  - pestilens-hero-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - academic
+  - speed
+  - special
+  rules:
+  - id: pestilens-spellcaster
+    name: Hechicero
+    effect: Usa la magia de la Rata Cornuda y comienza con un hechizo al azar; sus reglas individuales quedan fuera del alcance
+      canónico actual.
+    source:
+      manual: lustria
+      printed_page: 78
+      section: Brujo de Plaga
+    name_i18n:
+      en: null
+      es: Hechicero
+    effect_i18n:
+      en: null
+      es: Usa la magia de la Rata Cornuda y comienza con un hechizo al azar; sus reglas individuales quedan fuera del alcance
+        canónico actual.
+  source:
+    manual: lustria
+    printed_page: 78
+    section: Brujo de Plaga
+  name_i18n:
+    en: null
+    es: Brujo de Plaga
+- id: pestilens-plague-monk
+  name: Monje de Plaga
+  type: hero
+  cost: 45
+  experience: 8
+  characteristics:
+    M: 12
+    WS: 4
+    BS: 3
+    S: 3
+    T: 4
+    W: 1
+    I: 5
+    A: 1
+    Ld: 6
+  equipment_lists:
+  - pestilens-hero-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - shooting
+  - strength
+  - speed
+  - special
+  rules: []
+  source:
+    manual: lustria
+    printed_page: 78
+    section: Monjes de Plaga
+  name_i18n:
+    en: null
+    es: Monje de Plaga
+- id: pestilens-initiated-monk
+  name: Monje Iniciado
+  type: hero
+  cost: 20
+  experience: 0
+  characteristics:
+    M: 12
+    WS: 2
+    BS: 3
+    S: 2
+    T: 2
+    W: 1
+    I: 4
+    A: 1
+    Ld: 4
+  equipment_lists:
+  - pestilens-hero-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - shooting
+  - speed
+  - special
+  rules: []
+  source:
+    manual: lustria
+    printed_page: 78
+    section: Monjes Iniciados
+  name_i18n:
+    en: null
+    es: Monje Iniciado
+- id: pestilens-novice
+  name: Novicio de Plaga
+  type: henchman
+  cost: 20
+  experience: 0
+  characteristics:
+    M: 12
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 4
+    A: 1
+    Ld: 5
+  equipment_lists:
+  - pestilens-henchman-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules: []
+  source:
+    manual: lustria
+    printed_page: 79
+    section: Novicios de Plaga
+  name_i18n:
+    en: null
+    es: Novicio de Plaga
+- id: pestilens-giant-rat
+  name: Rata Gigante
+  type: henchman
+  cost: 15
+  experience: 0
+  characteristics:
+    M: 15
+    WS: 2
+    BS: 0
+    S: 3
+    T: 3
+    W: 1
+    I: 4
+    A: 1
+    Ld: 4
+  equipment_lists: []
+  fixed_equipment: []
+  equipment_restrictions:
+  - No puede utilizar equipo
+  skill_access: []
+  rules:
+  - id: animal
+    name: Animal
+    effect: No gana experiencia.
+    source:
+      manual: lustria
+      printed_page: 79
+      section: Ratas Gigantes
+    name_i18n:
+      en: null
+      es: Animal
+    effect_i18n:
+      en: null
+      es: No gana experiencia.
+  source:
+    manual: lustria
+    printed_page: 79
+    section: Ratas Gigantes
+  name_i18n:
+    en: null
+    es: Rata Gigante
+- id: pestilens-rat-ogre
+  name: Rata Ogro
+  type: henchman
+  cost: 210
+  experience: 0
+  characteristics:
+    M: 15
+    WS: 3
+    BS: 3
+    S: 5
+    T: 5
+    W: 3
+    I: 4
+    A: 3
+    Ld: 4
+  equipment_lists: []
+  fixed_equipment:
+  - Colmillos
+  - Garras
+  equipment_restrictions:
+  - No puede utilizar equipo
+  skill_access: []
+  rules:
+  - id: causes-fear
+    name: Miedo
+    effect: Causa miedo.
+    source:
+      manual: lustria
+      printed_page: 79
+      section: Rata Ogro
+    name_i18n:
+      en: null
+      es: Miedo
+    effect_i18n:
+      en: null
+      es: Causa miedo.
+  - id: stupidity
+    name: Estupidez
+    effect: Está sujeta a estupidez salvo que haya un Héroe Skaven a 15 cm o menos.
+    source:
+      manual: lustria
+      printed_page: 79
+      section: Rata Ogro
+    name_i18n:
+      en: null
+      es: Estupidez
+    effect_i18n:
+      en: null
+      es: Está sujeta a estupidez salvo que haya un Héroe Skaven a 15 cm o menos.
+  - id: animal
+    name: Experiencia
+    effect: No gana experiencia.
+    source:
+      manual: lustria
+      printed_page: 79
+      section: Rata Ogro
+    name_i18n:
+      en: null
+      es: Experiencia
+    effect_i18n:
+      en: null
+      es: No gana experiencia.
+  - id: large-target
+    name: Objetivo grande
+    effect: Puede recibir disparos aunque no sea el objetivo más cercano y se obtiene +1 para impactarle con proyectiles.
+    source:
+      manual: lustria
+      printed_page: 79
+      section: Rata Ogro
+    name_i18n:
+      en: null
+      es: Objetivo grande
+    effect_i18n:
+      en: null
+      es: Puede recibir disparos aunque no sea el objetivo más cercano y se obtiene +1 para impactarle con proyectiles.
+  source:
+    manual: lustria
+    printed_page: 79
+    section: Rata Ogro
+  name_i18n:
+    en: null
+    es: Rata Ogro
+band_rules:
+- id: weeping-dagger
+  name: Daga de Ponzoña
+  effect: Cuesta 15 coronas y tiene rareza 8. Usa Fuerza del usuario y concede +1 a la salvación enemiga. Un 6 natural para
+    impactar infecta; la víctima tira Resistencia en 1D6 y
+  si el dado supera su Resistencia: null
+  sufre una herida automática adicional. Dos dagas aportan el +1 Ataque normal. No afecta a No Muertos: null
+  Poseídos ni demonios.: null
+  source:
+    manual: lustria
+    printed_page: 76
+    section: Daga de Ponzoña
+  name_i18n:
+    en: null
+    es: Daga de Ponzoña
+  effect_i18n:
+    en: null
+    es: Cuesta 15 coronas y tiene rareza 8. Usa Fuerza del usuario y concede +1 a la salvación enemiga. Un 6 natural para
+      impactar infecta; la víctima tira Resistencia en 1D6 y
+- id: pestilens-censer
+  name: Incensario
+  effect: Cuesta 40 coronas y tiene rareza 9. Arma a dos manos de Fuerza del usuario +2 solo en la primera ronda; después
+    usa la Fuerza normal. Cada impactado tira Resistencia y sufre una herida automática adicional si el dado supera su Resistencia;
+    con 6 siempre hiere. No afecta a No Muertos ni Poseídos. Si lleva Fragmentos
+  el portador es objetivo difícil y los disparos sufren -1 para impactarle.: null
+  source:
+    manual: lustria
+    printed_page: 76
+    section: Incensario
+  name_i18n:
+    en: null
+    es: Incensario
+  effect_i18n:
+    en: null
+    es: Cuesta 40 coronas y tiene rareza 9. Arma a dos manos de Fuerza del usuario +2 solo en la primera ronda; después usa
+      la Fuerza normal. Cada impactado tira Resistencia y sufre una herida automática adicional si el dado supera su Resistencia;
+      con 6 siempre hiere. No afecta a No Muertos ni Poseídos. Si lleva Fragmentos
+- id: pestilens-liturgicus-infecticus
+  name: Liturgicus Infecticus
+  effect: Cuesta 30+2D6 coronas y tiene rareza 8. Al comienzo del turno o antes de un chequeo de retirada puede cantarse para
+    obtener +1 Liderazgo hasta el final del turno.
+  source:
+    manual: lustria
+    printed_page: 77
+    section: Liturgicus Infecticus
+  name_i18n:
+    en: null
+    es: Liturgicus Infecticus
+  effect_i18n:
+    en: null
+    es: Cuesta 30+2D6 coronas y tiene rareza 8. Al comienzo del turno o antes de un chequeo de retirada puede cantarse para
+      obtener +1 Liderazgo hasta el final del turno.
+- id: pestilens-banner
+  name: Estandarte del Clan Pestilens
+  effect: Cuesta 10 coronas y tiene rareza 5. Un Monje de Plaga o Iniciado a 30 cm del portador puede repetir una tirada fallida
+    de Completamente solo. La vara cuenta como arma a dos manos y solo puede haber uno en la banda.
+  source:
+    manual: lustria
+    printed_page: 77
+    section: Estandarte del Clan Pestilens
+  conditions:
+  - La lista de equipo de la página 75 da un coste contradictorio de 5 coronas; se adopta el coste de la descripción y la
+    lista general de precios
+  name_i18n:
+    en: null
+    es: Estandarte del Clan Pestilens
+  effect_i18n:
+    en: null
+    es: Cuesta 10 coronas y tiene rareza 5. Un Monje de Plaga o Iniciado a 30 cm del portador puede repetir una tirada fallida
+      de Completamente solo. La vara cuenta como arma a dos manos y solo puede haber uno en la banda.
+- id: pestilens-fog-warpstone
+  name: Fragmentos de Piedra Bruja aumentadores de Niebla
+  effect: Cuestan 100+10D6 coronas y tienen rareza 9. Colocados en un Incensario convierten al portador en objetivo difícil
+    y los disparos contra él sufren -1 para impactar.
+  source:
+    manual: lustria
+    printed_page: 77
+    section: Fragmentos de Piedra Bruja aumentadores de Niebla
+  name_i18n:
+    en: null
+    es: Fragmentos de Piedra Bruja aumentadores de Niebla
+  effect_i18n:
+    en: null
+    es: Cuestan 100+10D6 coronas y tienen rareza 9. Colocados en un Incensario convierten al portador en objetivo difícil
+      y los disparos contra él sufren -1 para impactar.
+- id: pestilens-skill-black-hunger
+  name: Hambre Negra
+  effect: Al comienzo de su turno obtiene +1 Ataque y +1D6+2 cm de Movimiento durante ese turno; al final sufre 1D3 impactos
+    de Fuerza 3 sin salvación por armadura.
+  source:
+    manual: lustria
+    printed_page: 80
+    section: Habilidades Especiales del Clan Pestilens
+  name_i18n:
+    en: null
+    es: Hambre Negra
+  effect_i18n:
+    en: null
+    es: Al comienzo de su turno obtiene +1 Ataque y +1D6+2 cm de Movimiento durante ese turno; al final sufre 1D3 impactos
+      de Fuerza 3 sin salvación por armadura.
+- id: pestilens-skill-censer-bearer
+  name: Portador de Incensario
+  effect: Solo un miembro con Hambre Negra puede elegirla. Gana la habilidad Furia Asesina y el Incensario pasa a ser su única
+    arma de cuerpo a cuerpo.
+  source:
+    manual: lustria
+    printed_page: 80
+    section: Habilidades Especiales del Clan Pestilens
+  name_i18n:
+    en: null
+    es: Portador de Incensario
+  effect_i18n:
+    en: null
+    es: Solo un miembro con Hambre Negra puede elegirla. Gana la habilidad Furia Asesina y el Incensario pasa a ser su única
+      arma de cuerpo a cuerpo.
+- id: pestilens-skill-rotten-body
+  name: Cuerpo Podrido
+  effect: Es inmune a venenos y enfermedades. Si queda fuera de combate al fallar el chequeo del Incensario no tira en Heridas
+    Graves y se recupera automáticamente al terminar la batalla.
+  source:
+    manual: lustria
+    printed_page: 80
+    section: Habilidades Especiales del Clan Pestilens
+  name_i18n:
+    en: null
+    es: Cuerpo Podrido
+  effect_i18n:
+    en: null
+    es: Es inmune a venenos y enfermedades. Si queda fuera de combate al fallar el chequeo del Incensario no tira en Heridas
+      Graves y se recupera automáticamente al terminar la batalla.
+- id: pestilens-skill-contagious
+  name: Contagioso
+  effect: Solo un miembro con Cuerpo Podrido puede elegirla. Quien lo deje fuera de combate en cuerpo a cuerpo tira Resistencia
+    en 1D6; si el dado supera su Resistencia sufre una herida automática
+  y con 6 siempre. No afecta a No Muertos ni Poseídos.: null
+  source:
+    manual: lustria
+    printed_page: 80
+    section: Habilidades Especiales del Clan Pestilens
+  name_i18n:
+    en: null
+    es: Contagioso
+  effect_i18n:
+    en: null
+    es: Solo un miembro con Cuerpo Podrido puede elegirla. Quien lo deje fuera de combate en cuerpo a cuerpo tira Resistencia
+      en 1D6; si el dado supera su Resistencia sufre una herida automática
+- id: pestilens-skill-ignore-pain
+  name: Ignorar el dolor
+  effect: Solo un miembro con Curtido puede elegirla. Considera cualquier resultado de Aturdido en la Tabla de Heridas como
+    Derribado.
+  source:
+    manual: lustria
+    printed_page: 80
+    section: Habilidades Especiales del Clan Pestilens
+  name_i18n:
+    en: null
+    es: Ignorar el dolor
+  effect_i18n:
+    en: null
+    es: Solo un miembro con Curtido puede elegirla. Considera cualquier resultado de Aturdido en la Tabla de Heridas como
+      Derribado.
+- id: pestilens-skill-natural-climber
+  name: Trepador Nato
+  effect: No necesita chequeos de Iniciativa para trepar por muros u otras superficies verticales.
+  source:
+    manual: lustria
+    printed_page: 80
+    section: Habilidades Especiales del Clan Pestilens
+  name_i18n:
+    en: null
+    es: Trepador Nato
+  effect_i18n:
+    en: null
+    es: No necesita chequeos de Iniciativa para trepar por muros u otras superficies verticales.
+source_sections: []
+canonical_family: skaven-clan-pestilens

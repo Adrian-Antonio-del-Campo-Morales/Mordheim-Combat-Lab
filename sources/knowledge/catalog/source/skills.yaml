@@ -1,0 +1,784 @@
+source_url: https://mordheimer.net/docs/campaigns/skills
+records:
+- id: combat-skill-s
+  name: Combat Skill s
+  text: 'Combat Skill
+
+    s
+
+    ​'
+- id: strike-to-injure
+  name: Strike to Injure
+  text: 'Strike to Injure
+
+    ​
+
+    Source:
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    The warrior can land his blows with uncanny accuracy. Add +1 to all injury rolls
+    caused by the model in hand-to-hand combat.'
+- id: combat-master
+  name: Combat Master
+  text: 'Combat Master
+
+    ​
+
+    Source:
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    The warrior is able to take on several opponents at once. If he fights against
+    more than one enemy at a time, he gains an extra Attack in each hand-to-hand combat
+    phase as long as he is fighting two or more enemy models. In addition, the warrior
+    is immune to ''All Alone'' tests.'
+- id: weapons-training
+  name: Weapons Training
+  text: 'Weapons Training
+
+    ​
+
+    Source:
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    A warrior with this skill is adept at using many different weapons. He may use
+    any hand-to-hand combat weapon he comes across, not just those in his equipment
+    options.'
+- id: web-of-steel
+  name: Web of Steel
+  text: 'Web of Steel
+
+    ​
+
+    Source:
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    Few can match the ability of this warrior. He fights with great skill, weaving
+    a web of steel around him. The model gains +1 to all his rolls on Critical Hit
+    tables in hand-to-hand combat.'
+- id: expert-swordsman
+  name: Expert Swordsman
+  text: 'Expert Swordsman
+
+    ​
+
+    Source:
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    This warrior has been expertly taught in the art of swordsmanship. He may re-roll
+    all missed attacks if he is using a sword in the hand-to-hand phase of the turn
+    that he charges. Note that this only applies when they are armed with normal swords
+    or weeping blades, and not with doublehanded swords or any other weapons.
+
+    ✏️'
+- id: step-aside
+  name: Step Aside
+  text: 'Step Aside
+
+    ​
+
+    Source:
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    The warrior has a natural ability to avoid injury in combat. Each time he suffers
+    a wound in close combat he may make an additional saving throw of 5+. This save
+    is never modified and is taken after all other armour saves.'
+- id: shooting-skill-s
+  name: Shooting Skill s
+  text: 'Shooting Skill
+
+    s
+
+    ​'
+- id: quick-shot
+  name: Quick Shot
+  text: 'Quick Shot
+
+    ​
+
+    Source:
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    Only with bow or crossbow (not crossbow pistol)
+
+    The warrior may shoot twice
+
+    ❓
+
+    per turn with a bow or crossbow (but not a crossbow pistol).
+
+    ✏️'
+- id: pistolier
+  name: Pistolier
+  text: 'Pistolier
+
+    ​
+
+    Source:
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    The warrior is an expert at using all kinds of pistols. If he is equipped with
+    a brace of pistols of any type (including crossbow pistols), he may fire twice
+    in the Shooting phase
+
+    ❓
+
+    (though note that normal reloading rules apply). If he has a single pistol then
+    he may fire it in the same turn it was reloaded.
+
+    ✏️'
+- id: eagle-eyes
+  name: Eagle Eyes
+  text: 'Eagle Eyes
+
+    ​
+
+    Source:
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    The warrior''s sight is exceptionally keen. He adds +6" to the range of any missile
+    weapon he is using.'
+- id: weapons-expert
+  name: Weapons Expert
+  text: 'Weapons Expert
+
+    ​
+
+    Source:
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    The warrior has been trained to use some of the more unusual weapons of the known
+    world. He may use any missile weapon he comes across, not just the weapons available
+    from his warband''s list.'
+- id: nimble
+  name: Nimble
+  text: 'Nimble
+
+    ​
+
+    Source:
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    Cannot be combined with Quick Shot
+
+    The warrior may move and fire with weapons that are normally only used if the
+    firer has not moved. Note that this skill cannot be combined with the Quick Shot
+    skill.'
+- id: trick-shooter
+  name: Trick Shooter
+  text: 'Trick Shooter
+
+    ​
+
+    Source:
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    The warrior can shoot through the tiniest gap without it affecting his aim. He
+    ignores all modifiers for cover when using missile weapons.'
+- id: hunter
+  name: Hunter
+  text: 'Hunter
+
+    ​
+
+    Source:
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    The warrior is an expert at getting his weapon loaded and ready. He may fire each
+    turn with a handgun or Hochland long rifle.
+
+    ✏️'
+- id: knife-fighter
+  name: Knife-Fighter
+  text: 'Knife-Fighter
+
+    ​
+
+    Source:
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    Cannot be combined with Quick Shot
+
+    The warrior is an unrivalled expert at using throwing knives and throwing stars.
+    He can throw a maximum of three of these missiles in his shooting phase and may
+    divide his shots between any targets within range as he wishes. Note that this
+    skill cannot be combined with the Quick Shot skill.'
+- id: academic-skill-s
+  name: Academic Skill s
+  text: 'Academic Skill
+
+    s
+
+    ​'
+- id: battle-tongue
+  name: Battle Tongue
+  text: 'Battle Tongue
+
+    ​
+
+    Source:
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    Only for leaders, Undead leaders cannot use
+
+    This skill may only be chosen by a leader. The warrior has drilled his warband
+    to follow short barked commands. This increases the range of his Leader ability
+    by 6". Note that Undead leaders may not use this skill.'
+- id: sorcery
+  name: Sorcery
+  text: 'Sorcery
+
+    ​
+
+    Source:
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    Only for spellcasting Heroes, Sisters of Sigmar and Warrior-Priests cannot use
+
+    This skill may only be taken by Heroes capable of casting spells. A warrior with
+    this skill gains +1 to his rolls to see whether he can cast spells successfully
+    or not. Note that Sisters of Sigmar and Warrior-Priests may not use this skill.'
+- id: streetwise
+  name: Streetwise
+  text: 'Streetwise
+
+    ​
+
+    Source:
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    A warrior with this skill has good contacts and knows where to purchase rare items.
+    He may add +2 to the roll that determines his chances of finding such items (see
+    the
+
+    Trading section
+
+    ).'
+- id: haggle
+  name: Haggle
+  text: 'Haggle
+
+    ​
+
+    Source:
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    Once per post-battle sequence, minimum cost 1gc
+
+    The warrior knows all the tricks of bargaining and haggling. He may deduct 2D6
+    gold crowns from the price of any single item (to a minimum cost of 1gc) once
+    per post battle sequence.
+
+    ✏️'
+- id: arcane-lore
+  name: Arcane Lore
+  text: 'Arcane Lore
+
+    ​
+
+    Source:
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    Cannot be taken by Witch Hunters, Sisters of Sigmar or Warrior-Priests
+
+    Witch Hunters, Sisters of Sigmar and Warrior-Priests may not have this skill.
+    Any warrior with this skill may learn
+
+    Lesser Magic
+
+    if he owns a Tome of Magic.'
+- id: wyrdstone-hunter
+  name: Wyrdstone Hunter
+  text: 'Wyrdstone Hunter
+
+    ​
+
+    Source:
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    The warrior has an uncanny ability to find hidden shards of wyrdstone. If a Hero
+    with this skill is searching the ruins in the exploration phase you may re-roll
+    one dice when rolling on the Exploration chart. The second result stands.'
+- id: warrior-wizard
+  name: Warrior Wizard
+  text: 'Warrior Wizard
+
+    ​
+
+    Source:
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    Only for spellcasters
+
+    This skill may only be taken by spellcasters. The mental powers of the wizard
+    allow him to wear armour and cast spells.'
+- id: strength-skill-s
+  name: Strength Skill s
+  text: 'Strength Skill
+
+    s
+
+    ​'
+- id: mighty-blow
+  name: Mighty Blow
+  text: 'Mighty Blow
+
+    ​
+
+    Source:
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    The warrior knows how to use his strength to maximum effect and has a +1 Strength
+    bonus in close combat (excluding pistols). As his Strength is used for close combat
+    weapons, the bonus applies to all such weapons.'
+- id: pit-fighter
+  name: Pit Fighter
+  text: 'Pit Fighter
+
+    ​
+
+    Source:
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    The warrior has learned how to fight in enclosed spaces from his time in the dangerous
+    fighting pits of the Empire. He is an expert at fighting in confined areas and
+    adds +1 to his WS and +1 to his Attacks if he is fighting inside buildings or
+    ruins. It''s a good idea to define which bits of your terrain collection count
+    as ''buildings or ruins'' at the start of a battle to avoid confusion later.
+
+    ✏️'
+- id: resilient
+  name: Resilient
+  text: 'Resilient
+
+    ​
+
+    Source:
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    The warrior is covered in battle scars. Deduct -1 Strength from all hits against
+    him in close combat. This does not affect armour save modifiers.'
+- id: fearsome
+  name: Fearsome
+  text: 'Fearsome
+
+    ​
+
+    Source:
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    Such is the reputation and physique of the model that he causes fear in opposing
+    models.'
+- id: strongman
+  name: Strongman
+  text: 'Strongman
+
+    ​
+
+    Source:
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    The warrior is capable of great feats of strength. He may use a double-handed
+    weapon without the usual penalty of always striking last. Work out order of battle
+    as you would with other weapons.'
+- id: unstoppable-charge
+  name: Unstoppable Charge
+  text: 'Unstoppable Charge
+
+    ​
+
+    Source:
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    When he charges, the warrior is almost impossible to halt. He adds +1 to his Weapon
+    Skill when charging.'
+- id: speed-skill-s
+  name: Speed Skill s
+  text: 'Speed Skill
+
+    s
+
+    ​'
+- id: leap
+  name: Leap
+  text: 'Leap
+
+    ​
+
+    Source:
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    The warrior may leap D6" in the movement phase in addition to his normal movement.
+
+    ❓
+
+    He may move and leap, run and leap, or charge and leap, but he can only leap once
+    per turn. A leaping warrior may jump over opposing man-sized models, including
+    enemies, and obstacles 1" high, without penalty. The leap may also be used to
+    leap over gaps, but in this case you must commit the warrior to making the leap
+    before rolling the dice to see how far he jumps. If he fails to make it all the
+    way across, he falls through the gap (see Falling).'
+- id: sprint
+  name: Sprint
+  text: 'Sprint
+
+    ​
+
+    Source:
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    The warrior may triple his Movement rate when he runs or charges, rather than
+    doubling it as normal.
+
+    ❓'
+- id: acrobat
+  name: Acrobat
+  text: 'Acrobat
+
+    ​
+
+    Source:
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    The warrior is incredibly supple and agile. He may fall or jump from a height
+    of up to 12" without taking any damage if he passes a single Initiative test,
+    and can re-roll failed Diving Charge rolls. He can still only make a diving charge
+    from a height of up to 6".'
+- id: lightning-reflexes
+  name: Lightning Reflexes
+  text: 'Lightning Reflexes
+
+    ​
+
+    Source:
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    If the warrior is charged he will ''strike first'' against those that charged
+    that turn. As the charger(s) will also normally ''strike first'' (for charging),
+    the order of attack between the charger(s) and the warrior with this skill will
+    be determined by comparing Initiative values.
+
+    ✏️'
+- id: jump-up
+  name: Jump Up
+  text: 'Jump Up
+
+    ​
+
+    Source:
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    The warrior can regain his footing in an instant, springing to his feet immediately
+    if he is knocked down. The warrior may ignore knocked down results when rolling
+    for injuries, unless he is knocked down because of a successful save from wearing
+    a helmet or because he has the No Pain special rule.
+
+    ✏️'
+- id: dodge
+  name: Dodge
+  text: 'Dodge
+
+    ​
+
+    Source:
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    A warrior with this skill is nimble and as fast as quicksilver. He can avoid any
+    hits from a missile weapon on a D6 roll of 5+. Note that this roll is taken against
+    missiles as soon as a hit is scored to see whether the warrior dodges it or not,
+    before rolling to wound, and before any effects from other skills or equipment
+    (such as lucky charms).
+
+    ✏️'
+- id: scale-sheer-surfaces
+  name: Scale Sheer Surfaces
+  text: 'Scale Sheer Surfaces
+
+    ​
+
+    Source:
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    A warrior with this skill can scale even the highest wall or fence with ease.
+    He can climb up or down a height equal to twice his normal Movement, and does
+    not need to make Initiative tests when doing so.
+
+    Last updated
+
+    on
+
+    Aug 16, 2026
+
+    Previous
+
+    Experience
+
+    Next
+
+    Income
+
+    Contact
+
+    [email protected]
+
+    Buy me a coffee
+
+    Feedback discord
+
+    Community
+
+    Broheim.net
+
+    r/mordheim
+
+    Mordheim discord
+
+    servo_scribe projects
+
+    The New Mordheimer
+
+    Warcrier
+
+    Friendly resources
+
+    Wahapedia
+
+    This site is a free community project not associated with Games Workshop. All
+    original content is Copyright © 2026 Games Workshop.'

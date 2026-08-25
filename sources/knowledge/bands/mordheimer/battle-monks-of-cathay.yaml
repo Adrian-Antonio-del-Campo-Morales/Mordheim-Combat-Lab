@@ -1,0 +1,720 @@
+schema_version: 1
+id: battle-monks-of-cathay
+name: Battle Monks of Cathay
+name_i18n:
+  en: Battle Monks of Cathay
+  es: null
+original_locale: en
+categories:
+- 1c
+collections:
+- mordheimer
+grade: 1c
+setting: Cathay Borderlands
+publication: Border Town Burning Supplement
+status: source-normalized
+sources:
+- manual: mordheimer.net
+  printed_page: 0
+  section: Battle Monks of Cathay
+  url: https://mordheimer.net/docs/warbands/grade-1c-warbands/battle-monks-of-cathay
+roster:
+  minimum_models: 3
+  maximum_models: 15
+  starting_gold: 500
+  members:
+  - profile_id: emissary
+    minimum: 1
+    maximum: 1
+  - profile_id: officer
+    minimum: 0
+    maximum: 1
+  - profile_id: dragon-monks
+    minimum: 0
+    maximum: 3
+  - profile_id: soldiers
+    minimum: 0
+    maximum: null
+  - profile_id: warrior-monks
+    minimum: 0
+    maximum: 5
+  - profile_id: raging-peasants
+    minimum: 0
+    maximum: 5
+equipment_lists:
+- id: soldier-equipment-list
+  name: Soldier Equipment List
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: 1st free/2 gc
+  - item_id: spear
+    cost: 10
+  - item_id: sword
+    cost: 10
+  - item_id: dragon_sword
+    cost: 20
+  - item_id: cathayan_longsword
+    cost: 75
+  - item_id: duelling_pistol
+    cost: 30
+    notes: 30 gc (60 gc for a brace)
+  - item_id: handgun
+    cost: 35
+  - item_id: bow
+    cost: 10
+  - item_id: crossbow
+    cost: 25
+  - item_id: light_armour
+    cost: 20
+  - item_id: heavy_armour
+    cost: 50
+  - item_id: shield
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  - item_id: cathayan_silk_cloak
+    cost: 40
+  - item_id: horse
+    cost: 30
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Soldier Equipment List
+    url: https://mordheimer.net/docs/warbands/grade-1c-warbands/battle-monks-of-cathay
+  name_i18n:
+    en: Soldier Equipment List
+    es: null
+- id: monk-equipment-list
+  name: Monk Equipment List
+  items:
+  - item_id: axe
+    cost: 5
+  - item_id: spear
+    cost: 10
+  - item_id: sword
+    cost: 10
+  - item_id: quarter_staff
+    cost: 15
+  - item_id: dragon_sword
+    cost: 20
+  - item_id: chain_sticks
+    cost: 20
+  - item_id: fish_hook_shot
+    cost: 10
+  - item_id: throwing_stars
+    cost: 15
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Monk Equipment List
+    url: https://mordheimer.net/docs/warbands/grade-1c-warbands/battle-monks-of-cathay
+  name_i18n:
+    en: Monk Equipment List
+    es: null
+profiles:
+- id: emissary
+  name: Emissary
+  type: hero
+  cost: 60
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 3
+    BS: 4
+    S: 3
+    T: 3
+    W: 1
+    I: 4
+    A: 1
+    Ld: 8
+  equipment_lists:
+  - soldier-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - shooting
+  - academic
+  - speed
+  - special
+  rules:
+  - id: leader
+    name: Leader
+    effect: Any warrior within 6“ of the Emissary may use his Leadership when taking Ld tests.
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: Heroes / 1 Emissary / Special Rules / Leader
+      url: https://mordheimer.net/docs/warbands/grade-1c-warbands/battle-monks-of-cathay
+    name_i18n:
+      en: Leader
+      es: null
+    effect_i18n:
+      en: Any warrior within 6“ of the Emissary may use his Leadership when taking Ld tests.
+      es: null
+  - id: ride-horse
+    name: Ride Horse
+    effect: The Emissary is trained in riding Horses.
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: Heroes / 1 Emissary / Special Rules / Ride Horse
+      url: https://mordheimer.net/docs/warbands/grade-1c-warbands/battle-monks-of-cathay
+    name_i18n:
+      en: Ride Horse
+      es: null
+    effect_i18n:
+      en: The Emissary is trained in riding Horses.
+      es: null
+  - id: decree
+    name: Decree
+    effect: When the Emissary dies, a new one must be hired as soon as possible. Until you have done so, no other warriors
+      and/or equipment may be bought. ❓ The new Emissary will then reclaim Leadership of the warband.
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: Heroes / 1 Emissary / Special Rules / Decree
+      url: https://mordheimer.net/docs/warbands/grade-1c-warbands/battle-monks-of-cathay
+    name_i18n:
+      en: Decree
+      es: null
+    effect_i18n:
+      en: When the Emissary dies, a new one must be hired as soon as possible. Until you have done so, no other warriors and/or
+        equipment may be bought. ❓ The new Emissary will then reclaim Leadership of the warband.
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 1 Emissary
+    url: https://mordheimer.net/docs/warbands/grade-1c-warbands/battle-monks-of-cathay
+  source_path:
+  - Heroes
+  - 1 Emissary
+  name_i18n:
+    en: Emissary
+    es: null
+- id: officer
+  name: Officer
+  type: hero
+  cost: 40
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 4
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 4
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - soldier-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - shooting
+  - strength
+  - speed
+  rules: []
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 1 Officer
+    url: https://mordheimer.net/docs/warbands/grade-1c-warbands/battle-monks-of-cathay
+  source_path:
+  - Heroes
+  - 0 – 1 Officer
+  name_i18n:
+    en: Officer
+    es: null
+- id: dragon-monks
+  name: Dragon Monks
+  type: hero
+  cost: 55
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 4
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 4
+    A: 1
+    Ld: 8
+  equipment_lists:
+  - monk-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: &id001
+  - combat
+  - academic
+  - strength
+  - speed
+  - special
+  rules:
+  - id: art-of-silent-death
+    name: Art of Silent Death
+    effect: Dragon Monks have become masters of the Cathayan art of open-hand fighting. In hand-to-hand combat, if fighting
+      unarmed, they will cause a critical hit on a roll 'to wound' of 5-6 instead of a 6. If the Dragon Monk wields a quarter
+      staff, only the unarmed attacks will cause a critical hit on 5+.
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: Heroes / 0 – 3 Dragon Monks / Special Rules / Art of Silent Death
+      url: https://mordheimer.net/docs/warbands/grade-1c-warbands/battle-monks-of-cathay
+    name_i18n:
+      en: Art of Silent Death
+      es: null
+    effect_i18n:
+      en: Dragon Monks have become masters of the Cathayan art of open-hand fighting. In hand-to-hand combat, if fighting
+        unarmed, they will cause a critical hit on a roll 'to wound' of 5-6 instead of a 6. If the Dragon Monk wields a quarter
+        staff, only the unarmed attacks will cause a critical hit on 5+.
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 3 Dragon Monks
+    url: https://mordheimer.net/docs/warbands/grade-1c-warbands/battle-monks-of-cathay
+  source_path:
+  - Heroes
+  - 0 – 3 Dragon Monks
+  name_i18n:
+    en: Dragon Monks
+    es: null
+- id: soldiers
+  name: Soldiers
+  type: henchman
+  cost: 25
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - soldier-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules: []
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Soldiers
+    url: https://mordheimer.net/docs/warbands/grade-1c-warbands/battle-monks-of-cathay
+  source_path:
+  - henchmen
+  - Soldiers
+  name_i18n:
+    en: Soldiers
+    es: null
+- id: warrior-monks
+  name: Warrior Monks
+  type: henchman
+  cost: 35
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 4
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - monk-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: *id001
+  rules: []
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 5 Warrior Monks
+    url: https://mordheimer.net/docs/warbands/grade-1c-warbands/battle-monks-of-cathay
+  source_path:
+  - henchmen
+  - 0 – 5 Warrior Monks
+  name_i18n:
+    en: Warrior Monks
+    es: null
+- id: raging-peasants
+  name: Raging Peasants
+  type: henchman
+  cost: 10
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 2
+    BS: 2
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 6
+  equipment_lists:
+  - soldier-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules:
+  - id: simple-folk
+    name: Simple folk
+    effect: Peasants never gain Experience.
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 5 Raging Peasants / Special Rules / Simple folk
+      url: https://mordheimer.net/docs/warbands/grade-1c-warbands/battle-monks-of-cathay
+    name_i18n:
+      en: Simple folk
+      es: null
+    effect_i18n:
+      en: Peasants never gain Experience.
+      es: null
+  - id: mob
+    name: Mob
+    effect: Peasants become threatening in large numbers. A Peasant gets +1 Ld for each other allied Peasant model within
+      3". Due to their rage, they do not benefit from the leader rule.
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 5 Raging Peasants / Special Rules / Mob
+      url: https://mordheimer.net/docs/warbands/grade-1c-warbands/battle-monks-of-cathay
+    name_i18n:
+      en: Mob
+      es: null
+    effect_i18n:
+      en: Peasants become threatening in large numbers. A Peasant gets +1 Ld for each other allied Peasant model within 3".
+        Due to their rage, they do not benefit from the leader rule.
+      es: null
+  - id: ignored
+    name: Ignored
+    effect: Peasants that are out of action do not count toward the number of out-of-action models for the purpose of Rout
+      tests.
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 5 Raging Peasants / Special Rules / Ignored
+      url: https://mordheimer.net/docs/warbands/grade-1c-warbands/battle-monks-of-cathay
+    name_i18n:
+      en: Ignored
+      es: null
+    effect_i18n:
+      en: Peasants that are out of action do not count toward the number of out-of-action models for the purpose of Rout tests.
+      es: null
+  - id: downtrodden
+    name: Downtrodden
+    effect: When a Peasant is wounded, do not roll for injury. The model is immediately taken out of action.
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 5 Raging Peasants / Special Rules / Downtrodden
+      url: https://mordheimer.net/docs/warbands/grade-1c-warbands/battle-monks-of-cathay
+    name_i18n:
+      en: Downtrodden
+      es: null
+    effect_i18n:
+      en: When a Peasant is wounded, do not roll for injury. The model is immediately taken out of action.
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 5 Raging Peasants
+    url: https://mordheimer.net/docs/warbands/grade-1c-warbands/battle-monks-of-cathay
+  source_path:
+  - henchmen
+  - 0 – 5 Raging Peasants
+  name_i18n:
+    en: Raging Peasants
+    es: null
+band_rules:
+- id: battle-monks-special-skills
+  name: Battle Monks Special Skills
+  effect: 'Battle Monks of Cathay may choose to use the following skill list instead of the standard skill lists.
+
+    Note that the Emissary may only pick the Warmonger skill.'
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Battle Monks Special Skills
+    url: https://mordheimer.net/docs/warbands/grade-1c-warbands/battle-monks-of-cathay
+  name_i18n:
+    en: Battle Monks Special Skills
+    es: null
+  effect_i18n:
+    en: 'Battle Monks of Cathay may choose to use the following skill list instead of the standard skill lists.
+
+      Note that the Emissary may only pick the Warmonger skill.'
+    es: null
+- id: battle-monks-special-skills-energy-focus
+  name: Energy Focus
+  effect: If fighting unarmed, the Hero may choose to reduce his Attacks by –1 and thus gain +1 Strength in close combat.
+    The monk may sacrifice any number of attacks this way.
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Battle Monks Special Skills / Energy Focus
+    url: https://mordheimer.net/docs/warbands/grade-1c-warbands/battle-monks-of-cathay
+  name_i18n:
+    en: Energy Focus
+    es: null
+  effect_i18n:
+    en: If fighting unarmed, the Hero may choose to reduce his Attacks by –1 and thus gain +1 Strength in close combat. The
+      monk may sacrifice any number of attacks this way.
+    es: null
+- id: battle-monks-special-skills-lightning-speed
+  name: Lightning Speed
+  effect: The monk may triple his Movement whilst running or charging and may run even when there are enemy models within
+    8”.
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Battle Monks Special Skills / Lightning Speed
+    url: https://mordheimer.net/docs/warbands/grade-1c-warbands/battle-monks-of-cathay
+  name_i18n:
+    en: Lightning Speed
+    es: null
+  effect_i18n:
+    en: The monk may triple his Movement whilst running or charging and may run even when there are enemy models within 8”.
+    es: null
+- id: battle-monks-special-skills-leap-of-faith
+  name: Leap of Faith
+  effect: The Hero cannot be intercepted whilst charging. He may escape from combat (as described on p. 161 in the Mordheim
+    rulebook) by leaping away without having to pass an Ld test and may declare a leaping charge at the same time in the same
+    turn.
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Battle Monks Special Skills / Leap of Faith
+    url: https://mordheimer.net/docs/warbands/grade-1c-warbands/battle-monks-of-cathay
+  name_i18n:
+    en: Leap of Faith
+    es: null
+  effect_i18n:
+    en: The Hero cannot be intercepted whilst charging. He may escape from combat (as described on p. 161 in the Mordheim
+      rulebook) by leaping away without having to pass an Ld test and may declare a leaping charge at the same time in the
+      same turn.
+    es: null
+- id: battle-monks-special-skills-human-shield
+  name: Human Shield
+  effect: If two or more models are engaged in close combat with the monk, he may choose to grab one to use it as a shield
+    instead of his normal attacks. To do this, he must pass an Initiative test after the first model has attacked, but before
+    the second model attacks. On a successful roll, the monk grabs the first model – the second model directs its full attacks
+    on the friendly model. After the combat phase, the model breaks free and the battle goes on as usual. On a failed roll,
+    the monk and the second model use their normal attacks.
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Battle Monks Special Skills / Human Shield
+    url: https://mordheimer.net/docs/warbands/grade-1c-warbands/battle-monks-of-cathay
+  name_i18n:
+    en: Human Shield
+    es: null
+  effect_i18n:
+    en: If two or more models are engaged in close combat with the monk, he may choose to grab one to use it as a shield instead
+      of his normal attacks. To do this, he must pass an Initiative test after the first model has attacked, but before the
+      second model attacks. On a successful roll, the monk grabs the first model – the second model directs its full attacks
+      on the friendly model. After the combat phase, the model breaks free and the battle goes on as usual. On a failed roll,
+      the monk and the second model use their normal attacks.
+    es: null
+- id: battle-monks-special-skills-warmonger
+  name: Warmonger
+  effect: The Emissary may make an Ld test before the battle. If the test is successful, D3+1 Raging Peasants join the warband
+    for the next game (this may exceed the maximum number of warriors). Each Raging Peasant in the warband is subject to Hatred
+    for the duration of the battle.
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Battle Monks Special Skills / Warmonger
+    url: https://mordheimer.net/docs/warbands/grade-1c-warbands/battle-monks-of-cathay
+  name_i18n:
+    en: Warmonger
+    es: null
+  effect_i18n:
+    en: The Emissary may make an Ld test before the battle. If the test is successful, D3+1 Raging Peasants join the warband
+      for the next game (this may exceed the maximum number of warriors). Each Raging Peasant in the warband is subject to
+      Hatred for the duration of the battle.
+    es: null
+source_sections:
+- section: Heroes
+  section_path:
+  - Choice of Warriors
+  - Heroes
+  text: 'Emissary: Each Battle Monks warband must have one Emissary – no more, no less! Officer: Your warband may include
+    up to one Officer. Dragon Monks: Your warband may include up to three Dragon Monks.'
+- section: Henchmen
+  section_path:
+  - Choice of Warriors
+  - Henchmen
+  text: 'Soldiers: Your warband may include any number of Soldiers. Warrior Monks: Your warband may include up to five Warrior
+    Monks. Raging Peasants: Your warband may include up to five Raging Peasants.'
+- section: Characteristic Increase
+  section_path:
+  - Characteristic Increase
+  text: Cathayans are humans and therefore use the maximum profile for humans .
+- section: Battle Monks Special Skills
+  section_path:
+  - Battle Monks Special Skills
+  text: 'Battle Monks of Cathay may choose to use the following skill list instead of the standard skill lists.
+
+    Note that the Emissary may only pick the Warmonger skill.'
+- section: Energy Focus
+  section_path:
+  - Battle Monks Special Skills
+  - Energy Focus
+  text: If fighting unarmed, the Hero may choose to reduce his Attacks by –1 and thus gain +1 Strength in close combat. The
+    monk may sacrifice any number of attacks this way.
+- section: Lightning Speed
+  section_path:
+  - Battle Monks Special Skills
+  - Lightning Speed
+  text: The monk may triple his Movement whilst running or charging and may run even when there are enemy models within 8”.
+- section: Leap of Faith
+  section_path:
+  - Battle Monks Special Skills
+  - Leap of Faith
+  text: The Hero cannot be intercepted whilst charging. He may escape from combat (as described on p. 161 in the Mordheim
+    rulebook) by leaping away without having to pass an Ld test and may declare a leaping charge at the same time in the same
+    turn.
+- section: Human Shield
+  section_path:
+  - Battle Monks Special Skills
+  - Human Shield
+  text: If two or more models are engaged in close combat with the monk, he may choose to grab one to use it as a shield instead
+    of his normal attacks. To do this, he must pass an Initiative test after the first model has attacked, but before the
+    second model attacks. On a successful roll, the monk grabs the first model – the second model directs its full attacks
+    on the friendly model. After the combat phase, the model breaks free and the battle goes on as usual. On a failed roll,
+    the monk and the second model use their normal attacks.
+- section: Warmonger
+  section_path:
+  - Battle Monks Special Skills
+  - Warmonger
+  text: The Emissary may make an Ld test before the battle. If the test is successful, D3+1 Raging Peasants join the warband
+    for the next game (this may exceed the maximum number of warriors). Each Raging Peasant in the warband is subject to Hatred
+    for the duration of the battle.
+- section: Battle Monks Equipment Lists
+  section_path:
+  - Battle Monks Equipment Lists
+  text: 'The following lists are used by Battle Monks warbands to pick their equipment:'
+- section: Soldier Equipment List
+  section_path:
+  - Battle Monks Equipment Lists
+  - Soldier Equipment List
+  text: '*Emissary only'
+- section: Armour
+  section_path:
+  - Battle Monks Equipment Lists
+  - Monk Equipment List
+  - Armour
+  text: None.
+- section: Special Equipment
+  section_path:
+  - Special Equipment
+  text: 'This warband has access to the following special equipment when purchasing items from the Trading Post , outside
+    their starting list:'
+- section: 1 Emissary
+  section_path:
+  - Heroes
+  - 1 Emissary
+  text: '60 gold crowns to hire
+
+    An official delegate of the Dragon Throne is sent to each border town from Weijin. His orders are to ensure that the Emperor''s
+    decrees are being upheld.
+
+    Weapons/Armour: The Emissary may be equipped with weapons and armour chosen from the Soldier Equipment list.'
+- section: SPECIAL RULES
+  section_path:
+  - Heroes
+  - 1 Emissary
+  - SPECIAL RULES
+  text: 'Leader: Any warrior within 6“ of the Emissary may use his Leadership when taking Ld tests.
+
+    Ride Horse: The Emissary is trained in riding Horses.
+
+    Decree: When the Emissary dies, a new one must be hired as soon as possible. Until you have done so, no other warriors
+    and/or equipment may be bought. ❓ The new Emissary will then reclaim Leadership of the warband.'
+- section: 0 – 1 Officer
+  section_path:
+  - Heroes
+  - 0 – 1 Officer
+  text: '40 gold crowns to hire
+
+    The Officer is the highest ranking member of his division, a decorated soldier dispatched as custodian to administer Imperial
+    law throughout the district.
+
+    Weapons/Armour: The Officer may be equipped with weapons chosen from the Soldier Equipment list.'
+- section: 0 – 3 Dragon Monks
+  section_path:
+  - Heroes
+  - 0 – 3 Dragon Monks
+  text: '55 gold crowns to hire
+
+    Dragon Monks are close to reaching mental and physical perfection. The most skilled martial artists among each brotherhood
+    have mastered the Way of the Dragon, a fighting style which Cathayan monks are renowned for even far beyond their borders.
+
+    Weapons/Armour: Dragon Monks may be equipped with weapons chosen from the Monk Equipment list. Monks suffer no penalties
+    whatsoever for fighting unarmed and they receive +1 Attack when doing so.'
+- section: SPECIAL RULES
+  section_path:
+  - Heroes
+  - 0 – 3 Dragon Monks
+  - SPECIAL RULES
+  text: 'Art of Silent Death: Dragon Monks have become masters of the Cathayan art of open-hand fighting. In hand-to-hand
+    combat, if fighting unarmed, they will cause a critical hit on a roll ''to wound'' of 5-6 instead of a 6. If the Dragon
+    Monk wields a quarter staff, only the unarmed attacks will cause a critical hit on 5+.'
+- section: Soldiers
+  section_path:
+  - henchmen
+  - Soldiers
+  text: '25 gold crowns to hire
+
+    Comprising trained fighters and local militia, the border guards form a solid patrol to defend the borderlands against
+    invading tribes and other dangers.
+
+    Weapons/Armour: Soldiers may be equipped with weapons and armour chosen from the Soldier Equipment list.'
+- section: 0 – 5 Warrior Monks
+  section_path:
+  - henchmen
+  - 0 – 5 Warrior Monks
+  text: '35 gold crowns to hire
+
+    The Battle Monks from Cathay are experts in fighting unarmed. Brothers combine open-hand tactics with specialist weapons
+    training to create a shrouded force of lethal warriors.
+
+    Weapons/Armour: Warrior Monks may be equipped with weapons chosen from the Monk Equipment list. Monks suffer no penalties
+    whatsoever for fighting unarmed, and they receive +1 Attack when doing so.'
+- section: 0 – 5 Raging Peasants
+  section_path:
+  - henchmen
+  - 0 – 5 Raging Peasants
+  text: '10 gold crowns to hire
+
+    Weapons/Armour: A peasant is usually equipped with a pitchfork, torch, or other simple tool. Treat them as fighting unarmed
+    but without any penalties.'
+- section: SPECIAL RULES
+  section_path:
+  - henchmen
+  - 0 – 5 Raging Peasants
+  - SPECIAL RULES
+  text: 'Simple folk: Peasants never gain Experience.
+
+    Mob: Peasants become threatening in large numbers. A Peasant gets +1 Ld for each other allied Peasant model within 3".
+    Due to their rage, they do not benefit from the leader rule.
+
+    Ignored: Peasants that are out of action do not count toward the number of out-of-action models for the purpose of Rout
+    tests.
+
+    Downtrodden: When a Peasant is wounded, do not roll for injury. The model is immediately taken out of action.'
+canonical_family: battle-monks-of-cathay

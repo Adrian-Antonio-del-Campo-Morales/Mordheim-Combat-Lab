@@ -1,0 +1,927 @@
+id: hochland-bandits
+name: Hochland Bandits
+grade: 1b
+source_url: https://mordheimer.net/docs/warbands/grade-1b-warbands/hochland-bandits
+headings:
+- special rules ​
+- Choice of warriors ​
+- Starting experience ​
+- Bandit Skill Table ​
+- Bandit Special Skills ​
+- banditry ​
+- hide in shadows ​
+- jump back ​
+- sniper ​
+- throw voice ​
+- Bandit equipment lists ​
+- Bandit equipment list ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Duelist equipment list ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Coward equipment list ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Poacher equipment list ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Special Equipment ​
+- Main Gauche ​
+- Rapier ​
+- heroes ​
+- 1 Bandit Prince ​
+- SPECIAL RULES ​
+- 0 – 2 Footpads ​
+- Special Rules ​
+- 0 – 1 Duelist ​
+- Special Rules ​
+- 0 – 1 Huckster ​
+- Special Rules ​
+- henchmen ​
+- Thugs ​
+- 0 – 4 Looters ​
+- Special Rules ​
+- 0 – 2 Blackhearts ​
+- Special Rules ​
+- 0 – 2 Poachers ​
+- Special Rules ​
+- Gutterscum ​
+- Special Rules ​
+tables:
+- section: Bandit Skill Table
+  section_path:
+  - Bandit Skill Table
+  rows:
+  - - ''
+    - Combat
+    - Shooting
+    - Academic
+    - Strength
+    - Speed
+    - Special
+  - - Bandit Prince
+    - ✓
+    - ✓
+    - ''
+    - ✓
+    - ✓
+    - ✓
+  - - Footpad
+    - ✓
+    - ✓
+    - ''
+    - ''
+    - ✓
+    - ✓
+  - - Huckster
+    - ✓
+    - ''
+    - ✓
+    - ''
+    - ''
+    - ✓
+  - - Duelist
+    - ✓
+    - ✓
+    - ''
+    - ''
+    - ✓
+    - ✓
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Bandit equipment lists
+  - Bandit equipment list
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Hammer
+    - 3 gc
+  - - Axe
+    - 5 gc
+  - - Sword
+    - 10 gc
+  - - Spear
+    - 10 gc
+  - - Double-handed weapon
+    - 15 gc
+- section: Missile Weapons
+  section_path:
+  - Bandit equipment lists
+  - Bandit equipment list
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Throwing Axe
+    - 15 gc
+- section: Armour
+  section_path:
+  - Bandit equipment lists
+  - Bandit equipment list
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Light armour
+    - 20 gc
+  - - Shield
+    - 5 gc
+  - - Helmet
+    - 10 gc
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Bandit equipment lists
+  - Duelist equipment list
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Rapier ✏️
+    - 15 gc
+  - - Main Gauche
+    - 7 gc
+  - - Sword
+    - 10 gc
+  - - Spear
+    - 10 gc
+- section: Missile Weapons
+  section_path:
+  - Bandit equipment lists
+  - Duelist equipment list
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Pistol
+    - 20 gc (40 for a brace)
+  - - Duelling Pistol
+    - 30 gc (60 for a brace)
+- section: Armour
+  section_path:
+  - Bandit equipment lists
+  - Duelist equipment list
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Shield
+    - 5 gc
+  - - Buckler
+    - 10 gc
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Bandit equipment lists
+  - Coward equipment list
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Spear
+    - 10 gc
+- section: Missile Weapons
+  section_path:
+  - Bandit equipment lists
+  - Coward equipment list
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Sling
+    - 2 gc
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Bandit equipment lists
+  - Poacher equipment list
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Spear
+    - 10 gc
+- section: Missile Weapons
+  section_path:
+  - Bandit equipment lists
+  - Poacher equipment list
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Short Bow
+    - 5 gc
+  - - Bow
+    - 10 gc
+  - - Long bow
+    - 15 gc
+  - - Crossbow
+    - 25 gc
+- section: Armour
+  section_path:
+  - Bandit equipment lists
+  - Poacher equipment list
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Helmet
+    - 10 gc
+- section: 1 Bandit Prince
+  section_path:
+  - heroes
+  - 1 Bandit Prince
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '8'
+- section: 0 – 2 Footpads
+  section_path:
+  - heroes
+  - 0 – 2 Footpads
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 1 Duelist
+  section_path:
+  - heroes
+  - 0 – 1 Duelist
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '4'
+    - '4'
+    - '3'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '7'
+- section: 0 – 1 Huckster
+  section_path:
+  - heroes
+  - 0 – 1 Huckster
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '2'
+    - '3'
+    - '2'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '6'
+- section: Thugs
+  section_path:
+  - henchmen
+  - Thugs
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '3'
+    - '4'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 4 Looters
+  section_path:
+  - henchmen
+  - 0 – 4 Looters
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '2'
+    - '4'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '6'
+- section: 0 – 2 Blackhearts
+  section_path:
+  - henchmen
+  - 0 – 2 Blackhearts
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 2 Poachers
+  section_path:
+  - henchmen
+  - 0 – 2 Poachers
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '4'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: Gutterscum
+  section_path:
+  - henchmen
+  - Gutterscum
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '2'
+    - '2'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '6'
+section_text:
+- section: special rules
+  section_path:
+  - special rules
+  text: 'Hired Swords: Bandits have no compunction about hiring mercenaries, and may
+    hire any Hired Swords allowed to a Human Mercenary warband.
+
+    Powder''s Expensive! Bandits are often too poor to purchase or upkeep expensive
+    equipment like
+
+    gunpowder weapons. The exception to this is Bandit
+
+    heroes, who often see such extravagances as pistols as
+
+    symbols of their status and higher wealth. The higher
+
+    costs for black powder weapons in the equipment
+
+    chart, and the fact that henchmen can''t purchase them
+
+    at all, reflect the extreme rarity of these types of
+
+    weapons for Bandit warbands.
+
+    Foragers. Bandits are used to lean times, and know how to make their gold stretch.
+    Because of this, they
+
+    usually have fewer expenses between adventures.
+
+    When determining Income for a Bandit warband,
+
+    always use the next lower warband size category (a
+
+    warband with 1-3 members still uses the first column
+
+    however!). For example, a warband with 15 members
+
+    finds 4 Treasures in the Exploration Phase. When they
+
+    sell these Treasures, they use the 10-12 members
+
+    column instead of the 13-15 members column,
+
+    resulting in a gain of 5 gold pieces for the warband.
+
+    Know Who To Sell To. Bandits are used to getting rid of stolen goods, and have
+    built up contacts for doing
+
+    so. When a Bandit warband sells equipment, they get
+
+    half of any random element of the equipment cost, in
+
+    addition to the normal half of the item''s basic cost.'
+- section: Choice of warriors
+  section_path:
+  - Choice of warriors
+  text: 'A Bandit warband must include a minimum of 3
+
+    models. You have 500 Gold Crowns which you can use
+
+    to recruit your initial warband. The maximum number
+
+    of warriors in the warband is 12.
+
+    Bandit Prince: Each Bandit warband must have one Bandit Prince: no more, no less!
+    Footpads: Your warband may include up to 2 Footpads. Huckster: Your warband may
+    include a single Huckster. Duelist: Your warband may include a single Duelist.
+    Thugs: Any number of models may be Thugs. Blackhearts: Your warband may include
+    up to 2 Blackhearts. Looters: Your warband may include up to 4 Looters. Gutterscum:
+    Your warband may include any number of Gutterscum. Poachers: You warband may include
+    up to 2 Poachers.'
+- section: Starting experience
+  section_path:
+  - Starting experience
+  text: A Bandit Prince starts with 20 experience. Footpads start with 8 experience.
+    Duelists start with 12 experience. Hucksters start with 8 experience. All Henchmen
+    start with 0 experience.
+- section: banditry
+  section_path:
+  - Bandit Special Skills
+  - banditry
+  text: 'Between missions, the bandit goes off and robs
+
+    travelers or other innocent victims. Instead of searching
+
+    for Rare equipment, the hero may engage in banditry -
+
+    roll a D6, on a result of 2-6, the banditry is successful
+
+    and the hero adds D6+1 gold to the warband''s stash.
+
+    However, on a result of 1, the attempted robbery has
+
+    somehow gone wrong - roll on the Serious Injury table
+
+    for the bandit, as if he had been taken Out of Action in
+
+    the last game. If several heroes have this skill, it is quite
+
+    possible that some are successful and some not in their
+
+    Banditry attempt between games...that is the nature of
+
+    theives'' honor - if a man falls behind, he is usually on
+
+    his own! This skill may not be combined with the
+
+    Huckster''s Slick Operator special ability.'
+- section: hide in shadows
+  section_path:
+  - Bandit Special Skills
+  - hide in shadows
+  text: 'The Bandit has become an expert at concealing himself
+
+    from his enemies (and potential victims!). An enemy
+
+    warrior attempting to detect this warrior when he is
+
+    Hidden must halve his Initiative (round up) before
+
+    measuring the distance.'
+- section: jump back
+  section_path:
+  - Bandit Special Skills
+  - jump back
+  text: 'This warrior is an expert at getting himself out of sticky
+
+    situations. If the warrior is in close combat with an enemy warrior (and not Knocked
+    Down or Stunned) at
+
+    the start of his Movement Phase, he may attempt to
+
+    jump out of combat. To attempt to do so, the warrior
+
+    must make an Initiative test. If he fails the test, the
+
+    warrior will automatically strike last in that round of
+
+    combat. However, if he passes, immediately move him
+
+    1" away from the enemy warrior (this does not count
+
+    against his movement for that Movement Phase); he
+
+    may then move and otherwise act normally for the test
+
+    of that that turn (even charging back into combat if he
+
+    chooses!).'
+- section: sniper
+  section_path:
+  - Bandit Special Skills
+  - sniper
+  text: 'The bandit is an expert at shooting his victims from the
+
+    comfort of cover. When Hiding, the warrior may cast
+
+    spells or shoot and still remain Hidden. Note that the
+
+    bandit may not use this skill if he is shooting a
+
+    Blackpowder weapon!'
+- section: throw voice
+  section_path:
+  - Bandit Special Skills
+  - throw voice
+  text: 'This rogue has mastered the art of misdirecting
+
+    enemies who get too close by making them hear noises
+
+    or voices some distance from his location. If an
+
+    enemy warrior is attempting to detect the bandit
+
+    while he is Hidden, roll a D6 - on a result of
+
+    4 or better, the bandit is undetected and
+
+    remains Hidden.'
+- section: Bandit equipment lists
+  section_path:
+  - Bandit equipment lists
+  text: 'The following lists are used by Bandit warbands to pick their weapons:'
+- section: Armour
+  section_path:
+  - Bandit equipment lists
+  - Coward equipment list
+  - Armour
+  text: None.
+- section: Special Equipment
+  section_path:
+  - Special Equipment
+  text: 'This warband has access to the following special equipment when purchasing
+    items from the Trading Post , outside their starting list:'
+- section: 1 Bandit Prince
+  section_path:
+  - heroes
+  - 1 Bandit Prince
+  text: '60 gold crowns to hire
+
+    Many young men of meager means and wild imaginations dream of forging their own
+    empire out of the wilderness. Some actually take steps to make their dreams reality,
+    and gather a group of men together to seek their fortunes. Unfortunately reality
+    often overtakes these small adventuring bands, and instead of forging ahead through
+    hard times, many settle for claiming a small stretch of highway or forest as their
+    ''domain'', imposing ''taxes'' or ''tolls'' on any travelers unlucky enough to
+    be traveling by. The leaders of such bands are sometimes bitter, hardened men
+    who have seen their dreams trampled in the dust, but just as often they are carefree
+    spirits who have found they actually prefer a more open forum for their ''court''.
+    Many a romantic tale is spun about this latter sort, and often young ladies of
+    noble birth find themselves falling in love with the ideal of the ''daring scoundrel''.
+    Most are often disappointed (and slightly poorer) when they meet the real item
+    in the flesh however.
+
+    Weapons/Armour: A Bandit Prince may be equipped with weapons and armour chosen
+    from the Bandit Heroes Equipment list.'
+- section: SPECIAL RULES
+  section_path:
+  - heroes
+  - 1 Bandit Prince
+  - SPECIAL RULES
+  text: 'Leader: Any warrior within 6" of the Bandit Prince may use his Leadership
+    characteristic when taking any Leadership tests.'
+- section: 0 – 2 Footpads
+  section_path:
+  - heroes
+  - 0 – 2 Footpads
+  text: '45 gold crowns to hire
+
+    Footpads specialize in sneaking behind their target (or ‘mark’) and taking him
+    while he is unaware of their presence (preferably from behind…in the dark). While
+    out in the open a Footpad fights no better than any other warrior, if given the
+    opportunity to surprise his enemy, a Footpad can often be a dangerous opponent
+    indeed.
+
+    Weapons/Armour: Footpads may be equipped with weapons and armour chosen from the
+    Bandit Equipment list.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 0 – 2 Footpads
+  - Special Rules
+  text: 'Concealment: Enemy warriors often find it difficult to detect a Footpad until
+    he strikes. If an enemy warrior wishes to charge a Footpad that he cannot see
+    (but was not declared as Hidden), he must subtract 1 from his Initiative before
+    making his Initiative test. Note that a roll of ‘6’ always fails when rolling
+    to charge a Footpad that the warrior cannot see. Also, models halve their Initiative
+    when checking the range to see if they can detect a Footpad who has been declared
+    as Hiding.'
+- section: 0 – 1 Duelist
+  section_path:
+  - heroes
+  - 0 – 1 Duelist
+  text: '45 gold crowns to hire
+
+    It is inevitable that sometimes heated arguments just cannot be settled peacefully.
+    On such occasions an injured party may decide that his honor cannot be restored
+    with anything less than his enemy’s blood, and challenges his opponent to a duel.
+    Among the rich and powerful in the cities of the Empire, life is often considered
+    more important than personal honour, and a third party is hired to stand in for
+    the challenged. A professional warrior who specializes in standing in on these
+    occasions is known as a Duelist. Being a Duelist can prove quite a lucrative,
+    if somewhat short, career. Many families take offense to a trained fighter cutting
+    their kin down in the street, and will hire killers of their own to exact revenge.
+    A situation such as this will often result in a Duelist joining a party of wandering
+    brigands for a time, taking a short ‘vacation’ from life in the city until things
+    cool down a bit…
+
+    Weapons/Armour: A Duelist may be equipped with weapons and armour chosen from
+    the Duelist equipment list.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 0 – 1 Duelist
+  - Special Rules
+  text: 'Swordmaster: In order to remain alive, a Duelist picks up swordfighting techniques
+    that few others master. The Duelist successfully parries an enemy blow on a roll
+    equal to or over the roll to hit, not just over the roll as with normal parries.
+    Obviously a Duelist must first be armed with a weapon or armour that allows him
+    to Parry in order to use this rule.
+
+    Weapon Knowledge: A Duelist must be prepared to fight an opponent with any weapon
+    at any time, so a working knowledge of even exotic weapons is critical for his
+    survival. The weapons in the Bandit equipment chart merely represent the weapons
+    a Duelist may start with. A Duelist may use any close combat or missile weapon
+    that the warband members can get hold of.'
+- section: 0 – 1 Huckster
+  section_path:
+  - heroes
+  - 0 – 1 Huckster
+  text: '40 gold crowns to hire
+
+    Among the cities of the humans there are those who find that they have a natural
+    gift for convincing others to help them in their endeavors. Typically very intelligent
+    and possessing a silver tongue, a huckster can convince a man that the stones
+    in his hand are really magical beans, or that ownership of a nearby bridge is
+    the answer to his dreams. Often quite well-todo until their victims track them
+    down, hucksters often find a Bandit warband offers them considerably more security
+    than life alone.
+
+    Weapons/Armour: A Huckster may be equipped with weapons and armour chosen from
+    the Coward Equipment list.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 0 – 1 Huckster
+  - Special Rules
+  text: 'Convincing Manner: Hucksters specialize in convincing strangers of their
+    benevolent intentions. When an enemy warrior attempts to charge a member of the
+
+    huckster’s warband within 12” of the huckster, the
+
+    enemy must first pass a successful Leadership test. If
+
+    the warrior fails the test he may not charge and remains
+
+    stationary for the turn (treat as a failed charge), exactly
+
+    as if he had failed a test to charge a Fear-causing
+
+    enemy. Note that individuals subject to stupidity and
+
+    animals are immune to this effect (they are too stupid
+
+    to understand what the huckster is saying).
+
+    Slick Operator: In between games the player may choose to have the huckster run
+    a con on the local
+
+    inhabitants of the region. Roll a D6: On a result of 2-6,
+
+    the con is successful and the warband gains 2D6 gold
+
+    (the huckster keeps the rest). However, on a result of 1
+
+    the huckster’s con has backfired and he is on the run
+
+    (he misses the next game and no gold is received by
+
+    the warband).'
+- section: henchmen
+  section_path:
+  - henchmen
+  text: (Bought in groups of 1-5)
+- section: Thugs
+  section_path:
+  - henchmen
+  - Thugs
+  text: '30 gold crowns to hire
+
+    Brawn without brains. Those stronger than their fellows are often drawn to a life
+    of banditry, as it is an easy way for them to earn a living. Many a town bully
+    has found that he has been, quite by accident, training himself for a life of
+    crime.
+
+    Weapons/Armour: Thugs may be equipped with weapons and armour chosen from the
+    Bandit Equipment list.'
+- section: 0 – 4 Looters
+  section_path:
+  - henchmen
+  - 0 – 4 Looters
+  text: '25 gold crowns to hire
+
+    Not all members of a Bandit warband find close-up fighting enjoyable. Many are
+    cowards who make their living off of shooting a victim from afar and then stripping
+    the body for anything that can be sold.
+
+    Weapons/Armour: Looters may be equipped with weapons and armour chosen from the
+    Coward Equipment list.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 4 Looters
+  - Special Rules
+  text: 'Looting the Dead: Normally when a warrior is killed or his wounds cause him
+    to leave the warband and he is taken off the warband’s roster, all of his equipment
+    is lost. However, some unscrupulous individuals will stoop to robbing a dead or
+    incapacitated warrior, thereby gaining his equipment for themselves. When rolling
+    for warriors who were taken Out of Action at the end of a battle, the Bandit player
+    may roll a D6 for any warriors who are to be removed from their warband’s roster.
+    On a roll of 4+ the looter has taken all of the warrior’s equipment — it is the
+    Bandit player’s to keep. Failure indicates that the Looter either didn’t notice
+    the warrior going down, or he didn’t get the opportunity to rob the body. Obviously
+    any warrior can only be
+
+    looted once, but multiple Looters allow the Bandit player multiple chances that
+    his warband members got the equipment off of each downed warrior. Note also
+
+    that warriors to be looted can be from any warband participating in the game,
+    including the Bandit warband — Bandits are certainly not above looting their own
+    dead!'
+- section: 0 – 2 Blackhearts
+  section_path:
+  - henchmen
+  - 0 – 2 Blackhearts
+  text: '35 gold crowns to hire
+
+    Rapists and killers, Blackhearts are truly soulless individuals who represent
+    the worst elements of any society. Such cruel and evil beings have usually seen
+    the worst life has to offer and revel in it. Most Blackhearts have severely anti-social
+    tendencies, so a Bandit warband will never be found with more than one or two
+    of these depraved creatures.
+
+    Weapons/Armour: Blackhearts may be equipped with weapons and armour chosen from
+    the Bandit Equipment list.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 2 Blackhearts
+  - Special Rules
+  text: 'Hardened: Blackhearts are not as put off by the evils of the world when they
+    come across them… in fact persons of this nature are often more uncomfortable
+    around situations where warmth and love are in abundance! Blackhearts are immune
+    to Fear, and never have to take All-Alone tests (they prefer to work alone anyway…).'
+- section: 0 – 2 Poachers
+  section_path:
+  - henchmen
+  - 0 – 2 Poachers
+  text: '35 gold crowns to hire
+
+    While most members of a Bandit warband are hardened criminals, some are just individuals
+    who were down on their luck for one reason or another, and were forced to resort
+    to poaching the local lord’s game. While these individuals may not have the same
+    temperment or lack of morals as the rest of the warband, they are usually hunted
+    just as relentlessly. While they often find most of their fellows distasteful
+    (to say the least!) poachers are so useful to the warband that they are usually
+    given more slack than anyone else. After all, a band of outlaws needs places to
+    hide and food to eat, and Poachers know where the best of both are to be found…
+
+    Weapons/Armour: Poachers may be equipped with weapons and armour chosen from the
+    Poacher Equipment list.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 2 Poachers
+  - Special Rules
+  text: 'Trailblazers: Poachers are experts at finding new game or safe campsites
+    for the warband. In the game this is represented by allowing the warband to reroll
+    one D6 for each Poacher in the Exploration phase. Poachers are not as good as
+    Elf Rangers for scouting, but they are often darned close!'
+- section: Gutterscum
+  section_path:
+  - henchmen
+  - Gutterscum
+  text: '10 gold crowns to hire
+
+    Gutterscum are the lowest of the low — those whose laziness or other vices have
+    driven them to a life they are utterly unsuited for. They often make up the bulk
+    of a Bandit Warband, as the slums of most cities are filled with those desperate
+    enough to view a life of preying on their fellow man and fleeing from the authorities
+    as an opportunity to improve their lot.
+
+    Weapons/Armour: Gutterscum may be equipped with weapons and armour chosen from
+    the Coward Equipment list.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - Gutterscum
+  - Special Rules
+  text: 'Utterly Inept: Gutterscum have turned to a life of crime because they lack
+    the ability to fit into normal society. They lack both the ambition and the capacity
+    for self-improvement. Gutterscum do not gain experience.'

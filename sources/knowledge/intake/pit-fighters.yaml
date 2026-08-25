@@ -1,0 +1,818 @@
+id: pit-fighters
+name: Pit Fighters
+grade: 1b
+source_url: https://mordheimer.net/docs/warbands/grade-1b-warbands/pit-fighters
+headings:
+- Special Rules ​
+- Hired Swords ​
+- Weapons & Armour ​
+- Free the Slaves! ​
+- In the Pit! ​
+- Choice of Warriors ​
+- Starting Experience ​
+- Pit Fighter Skill Table ​
+- Pit Fighter Skills ​
+- Bulging Biceps ​
+- Force of Will ​
+- Arms Master ​
+- Body Slam ​
+- Grizzled Veteran ​
+- Troll Slayer Special Skills ​
+- Ferocious Charge ​
+- Monster Slayer ​
+- Berserker ​
+- Pit fighter equipment lists ​
+- Pit fighter equipment List ​
+- Orc Style ​
+- Undead Style ​
+- Empire Style ​
+- Chaos Style ​
+- Pursuer equipment list ​
+- Skink Style ​
+- Witch Elf Style ​
+- Ogre & Slayer equipment list ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Special Equipment ​
+- Trident ​
+- Javelins ​
+- heroes ​
+- 1 Pit King ​
+- SPECIAL RULES ​
+- 0 – 1 Dwarf Troll Slayer ​
+- Special Rules ​
+- 0 – 2 Pit Veterans ​
+- Special Rules ​
+- henchmen ​
+- Pit Fighters ​
+- Special Rules ​
+- 0 – 7 Pursuers ​
+- Special Rules ​
+- 0 – 1 Ogre Pit Fighter ​
+- Special Rules ​
+tables:
+- section: Pit Fighter Skill Table
+  section_path:
+  - Pit Fighter Skill Table
+  rows:
+  - - ''
+    - Combat
+    - Shooting
+    - Academic
+    - Strength
+    - Speed
+    - Special
+  - - Pit King
+    - ✓
+    - ''
+    - ''
+    - ✓
+    - ✓
+    - ✓
+  - - Veteran
+    - ✓
+    - ''
+    - ''
+    - ✓
+    - ✓
+    - ✓
+  - - Troll Slayer
+    - ✓
+    - ''
+    - ''
+    - ✓
+    - ''
+    - ✓
+- section: Orc Style
+  section_path:
+  - Pit fighter equipment lists
+  - Pit fighter equipment List
+  - Orc Style
+  rows:
+  - - Loadout
+    - Cost
+  - - Helmet ; Dagger ; Axe ; Shield
+    - 20 gc
+- section: Undead Style
+  section_path:
+  - Pit fighter equipment lists
+  - Pit fighter equipment List
+  - Undead Style
+  rows:
+  - - Loadout
+    - Cost
+  - - Helmet ; Dagger ; Spiked Gauntlet ; Sword
+    - 35 gc
+- section: Empire Style
+  section_path:
+  - Pit fighter equipment lists
+  - Pit fighter equipment List
+  - Empire Style
+  rows:
+  - - Loadout
+    - Cost
+  - - Helmet ; Dagger ; Double-handed Weapon ; Light armour
+    - 45 gc
+- section: Chaos Style
+  section_path:
+  - Pit fighter equipment lists
+  - Pit fighter equipment List
+  - Chaos Style
+  rows:
+  - - Loadout
+    - Cost
+  - - Helmet ; Dagger ; Flail ; Shield ; Light armour
+    - 50 gc
+- section: Skink Style
+  section_path:
+  - Pit fighter equipment lists
+  - Pursuer equipment list
+  - Skink Style
+  rows:
+  - - Loadout
+    - Cost
+  - - Helmet ; Dagger ; Trident or Javelins ; Net or Buckler
+    - 25gc
+- section: Witch Elf Style
+  section_path:
+  - Pit fighter equipment lists
+  - Pursuer equipment list
+  - Witch Elf Style
+  rows:
+  - - Loadout
+    - Cost
+  - - Helmet ; Dagger ; 2 x Sword or Spear & Net
+    - 30gc
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Pit fighter equipment lists
+  - Ogre & Slayer equipment list
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Mace
+    - 3 gc
+  - - Hammer
+    - 3 gc
+  - - Axe
+    - 5 gc
+  - - Dwarf Axe *
+    - 15 gc
+  - - Sword
+    - 10 gc
+  - - Flail
+    - 15 gc
+  - - Spiked Gauntlet
+    - 15 gc
+  - - Gromril Weapon *
+    - 3 times the cost
+- section: Armour
+  section_path:
+  - Pit fighter equipment lists
+  - Ogre & Slayer equipment list
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Light armour **
+    - 20 gc
+  - - Helmet **
+    - 10 gc
+- section: 1 Pit King
+  section_path:
+  - heroes
+  - 1 Pit King
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '4'
+    - '3'
+    - '4'
+    - '4'
+    - '1'
+    - '4'
+    - '2'
+    - '8'
+- section: 0 – 1 Dwarf Troll Slayer
+  section_path:
+  - heroes
+  - 0 – 1 Dwarf Troll Slayer
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '3'
+    - '4'
+    - '3'
+    - '3'
+    - '4'
+    - '1'
+    - '2'
+    - '1'
+    - '9'
+- section: 0 – 2 Pit Veterans
+  section_path:
+  - heroes
+  - 0 – 2 Pit Veterans
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '4'
+    - '3'
+    - '4'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '7'
+- section: Pit Fighters
+  section_path:
+  - henchmen
+  - Pit Fighters
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 7 Pursuers
+  section_path:
+  - henchmen
+  - 0 – 7 Pursuers
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 1 Ogre Pit Fighter
+  section_path:
+  - henchmen
+  - 0 – 1 Ogre Pit Fighter
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '6'
+    - '3'
+    - '2'
+    - '4'
+    - '4'
+    - '3'
+    - '3'
+    - '2'
+    - '7'
+section_text:
+- section: Special Rules
+  section_path:
+  - Special Rules
+  text: All Pit Fighters have the Pit Fighter skill as described in the Strength Skill
+    List (+1 WS, +1 A when fighting in ruins, buildings and The Pit).
+- section: Hired Swords
+  section_path:
+  - Special Rules
+  - Hired Swords
+  text: Pit Fighters may hire all Hired Swords available except for the Elf Ranger,
+    who feels working with such dirty and brutish individuals would just not do!
+- section: Weapons & Armour
+  section_path:
+  - Special Rules
+  - Weapons & Armour
+  text: 'Unlike other warbands that may chose which
+
+    weapons and armour to equip their warriors
+
+    with, Pit Fighters have to chose a specific
+
+    fighting style which dictates their weapons and
+
+    armour configuration. This is with the
+
+    exception of Trollslayers and Ogres that may
+
+    chose from a limited selection of equipment.
+
+    The fighting style does not restrict Heroes from
+
+    using items not on their list if they learn the
+
+    appropriate skills.
+
+    Pit Fighters may chose to change their fighting
+
+    style at any stage by either swapping with
+
+    another warrior in the warband or by simply
+
+    buying a new style (or the separate
+
+    components). Pit Fighter warbands also differ
+
+    from other warbands in that a Henchman
+
+    group may contain a mix of several different
+
+    fighting styles and does not have to equip all of
+
+    its warriors in the same manner.'
+- section: Free the Slaves!
+  section_path:
+  - Special Rules
+  - Free the Slaves!
+  text: Pit Fighters hate all slavers. The Pit Fighters will never sell their captured
+    opponents to the slavers.
+- section: In the Pit!
+  section_path:
+  - Special Rules
+  - In the Pit!
+  text: 'Pit Fighters who capture an opponent may decide to let him fight in the infamous
+    fighting pits of Cutthroat’s Haven (use the rules that appeared earlier in this
+    magazine). The Pit Fighter warband may decide to send in one or more of their
+    own fighters to fight the captive. If the Pit Fighter wins, he gains +2 Experience,
+    the warband gets all the captive’s armour and weapons +50gc. If the Pit Fighter
+    loses, then roll to see whether he is dead or injured as normal (ignore all following
+    results: Robbed, Captured, Hardened, Sold to the Pits, and Survives against the
+    Odds). He will not lose his armour or weapons. The captive will get the 50gc and
+    the +2 Experience when he wins. If the captive wins, the audience decides whether
+    he gains his freedom. Roll a D6; on a 4+ the audience raises their thumbs and
+    he is free. A 1-3 means he remains the Pit Fighters’ captive and may be fielded
+    in the pits after future games.'
+- section: Bulging Biceps
+  section_path:
+  - Pit Fighter Skills
+  - Bulging Biceps
+  text: The Pit Fighter may ignore the entire ‘heavy’ weapons special rule penalty.
+    The Strength bonus will now apply to all rounds in Close-Combat. So a Morning
+    Star will give +1 Strength in all turns not only the first one.
+- section: Force of Will
+  section_path:
+  - Pit Fighter Skills
+  - Force of Will
+  text: When the Pit Fighter loses his last wound and is taken Out-of-Action, he must
+    roll a D6 equal to or under his Toughness. Each following round he has to roll
+    again on his toughness but then with a -1 modifier for each subsequent round.
+    If he succeeds he gets up and may continue to fight. When he gets taken Out-of-Action
+    a second time he’ll be removed as normal.
+- section: Arms Master
+  section_path:
+  - Pit Fighter Skills
+  - Arms Master
+  text: The Pit Fighter may now ignore all ‘difficult to use’ rules for all weapons.
+    This enables him to combine certain types of weapons. He can combine a Morning
+    Star with a buckler, or even a Morning Star with a Morning Star.
+- section: Body Slam
+  section_path:
+  - Pit Fighter Skills
+  - Body Slam
+  text: 'Instead of making a normal charge, the Pit Fighter may attempt to slam his
+    opponent to the ground, he burrows his shoulder deep into his opponent’s stomach.
+    Instead of making his normal attacks the Pit Fighter may make a single attack
+    resolved as following: +1 Str, +1 to Hit, no weapon bonuses or abilities. Critical
+    hit on a 5+.'
+- section: Grizzled Veteran
+  section_path:
+  - Pit Fighter Skills
+  - Grizzled Veteran
+  text: The Pit Fighter is used to fighting fearsome monsters and being cornered in
+    the pit when there’s no escape. He has been close to death so many times that
+    he has made his peace and the thought of death no longer bothers him. The Pit
+    Fighter is immune to all psychology.
+- section: Troll Slayer Special Skills
+  section_path:
+  - Troll Slayer Special Skills
+  text: Dwarf Slayers may use the following Skill table as well as any of the standard
+    Skill tables available to Dwarfs.
+- section: Ferocious Charge
+  section_path:
+  - Troll Slayer Special Skills
+  - Ferocious Charge
+  text: The Slayer may double his attacks on the turn that he charges. He will suffer
+    a -1 to hit penalty on that turn.
+- section: Monster Slayer
+  section_path:
+  - Troll Slayer Special Skills
+  - Monster Slayer
+  text: The Slayer always wounds any opponent on a roll of 4+, regardless of Toughness,
+    unless his own Strength (after all modifiers due to weapon bonuses, etc.) would
+    mean that a lower roll than this is needed.
+- section: Berserker
+  section_path:
+  - Troll Slayer Special Skills
+  - Berserker
+  text: The Slayer may add +1 to his close combat to hit rolls during the turn which
+    he charges (may not be used with Ferocious Charge).
+- section: Pit fighter equipment lists
+  section_path:
+  - Pit fighter equipment lists
+  text: 'The following lists are used by Pit Fighter warbands to pick their weapons
+    & armour:'
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Pit fighter equipment lists
+  - Ogre & Slayer equipment list
+  - Hand-to-hand Combat Weapons
+  text: '*Only available to the Dwarf Trollslayer.'
+- section: Missile Weapons
+  section_path:
+  - Pit fighter equipment lists
+  - Ogre & Slayer equipment list
+  - Missile Weapons
+  text: None.
+- section: Armour
+  section_path:
+  - Pit fighter equipment lists
+  - Ogre & Slayer equipment list
+  - Armour
+  text: '**Only available to the Ogre.'
+- section: Special Equipment
+  section_path:
+  - Special Equipment
+  text: 'This warband has access to the following special equipment when purchasing
+    items from the Trading Post , outside their starting list:'
+- section: 1 Pit King
+  section_path:
+  - heroes
+  - 1 Pit King
+  text: '80 gold crowns to hire
+
+    The Pit King is the leader of the warband. He
+
+    is a very renowned warrior; a spectacular
+
+    fighter used to pleasing the baying crowd with
+
+    his martial display and bloody triumphs. He
+
+    has managed to buy or free enough fellow pit
+
+    fighters to start a warband of his own. He’s
+
+    the smartest and toughest pit fighter around
+
+    and will fight anybody who puts his position
+
+    in danger. He is held in a mixture of awe and
+
+    fear by his fellows and his loyalty to his men is
+
+    undisputed.
+
+    Weapons/Armour: A Pit King may be
+
+    equipped with weapons and armour chosen
+
+    from the Pit Fighter Equipment list.'
+- section: SPECIAL RULES
+  section_path:
+  - heroes
+  - 1 Pit King
+  - SPECIAL RULES
+  text: 'Leader: Any models in the Warband within 6"
+
+    of the King may use his Leadership instead of
+
+    their own.
+
+    Pit Fighter: A Pit King has the Pit Fighter skill.'
+- section: 0 – 1 Dwarf Troll Slayer
+  section_path:
+  - heroes
+  - 0 – 1 Dwarf Troll Slayer
+  text: '50 gold crowns to hire
+
+    Troll Slayers are members of the morbid
+
+    Dwarf cult obsessed with seeking an
+
+    honourable death in combat. Having
+
+    committed some unforgivable crime or been
+
+    dishonoured in some way, a Dwarf will
+
+    forsake his home and wander off to die
+
+    fighting the enemies of Dwarf kind. Troll
+
+    Slayers are insanely dangerous individuals,
+
+    psychopathic and violent. There are, however,
+
+    few better fighters in the known world, so
+
+    which place would be more fitting for them
+
+    than the dangerous fighting pits then! Battling
+
+    against the most hardened veterans and
+
+    monsters in the Old World, it appears that
+
+    they have truly found their vocation.
+
+    Weapons/Armour: A Troll Slayer may be
+
+    equipped with weapons and armour chosen
+
+    from the Ogre & Slayer Equipment list. Slayers
+
+    may never carry or use missile weapons or any
+
+    form of armour.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 0 – 1 Dwarf Troll Slayer
+  - Special Rules
+  text: 'Pit Fighter: A Dwarf Troll Slayer has the Pit Fighter skill.
+
+    Hard to Kill: Dwarfs are tough, resilient
+
+    individuals who can only be taken out of
+
+    action on a roll of a 6 instead of 5-6 when
+
+    rolling on the Injury chart. Treat a roll of 1-2
+
+    as knocked down, 3-5 as stunned, and 6 as
+
+    out of action.
+
+    Hard Head: Dwarfs ignores the special rules
+
+    for maces, clubs, etc. They are not easy to
+
+    knock out!
+
+    Hate Orcs and Goblins: All Dwarfs hate Orcs
+
+    and Goblins. See the psychology section of
+
+    the Mordheim rules for details on the effects
+
+    of hatred .
+
+    Grudgebearers: Dwarfs hold an ancient
+
+    grudge against Elves from the days when the
+
+    two races fought for the supremacy of the Old
+
+    World. If the Pit Fighters ever hire any kind of
+
+    Elven Hired Sword, he will leave the Warband
+
+    immediately, he refuses to fight alongside
+
+    these pansy Elves!
+
+    Death Wish: Troll Slayers seek an honourable
+
+    death in combat. They are completely immune
+
+    to all psychology'
+- section: 0 – 2 Pit Veterans
+  section_path:
+  - heroes
+  - 0 – 2 Pit Veterans
+  text: '35 gold crowns to hire
+
+    Pit fighter veterans are experienced fighters who carry out the orders of the
+    Pit King with ruthless efficiency. These men ensure that the warband is held together
+    with iron-hard discipline and always keep a watchful eye on the Pit King’s back
+    lest an over ambitious fellow pit fighter gets any ideas.
+
+    Weapons/Armour: A Pit Fighter Veteran may
+
+    be equipped with weapons
+
+    and armour chosen from the
+
+    Pit Fighter Equipment list.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 0 – 2 Pit Veterans
+  - Special Rules
+  text: 'Pit Fighter: Pit Veterans have the Pit Fighter skill.'
+- section: henchmen
+  section_path:
+  - henchmen
+  text: (Bought in groups of 1-5)
+- section: Pit Fighters
+  section_path:
+  - henchmen
+  - Pit Fighters
+  text: '35 gold crowns to hire
+
+    Pit fighters are close combat specialists armed
+
+    with a variety of weapons and armour.
+
+    Usually they are fairly heavily armoured and
+
+    equipped with sword and shield, although
+
+    sometimes they will be skilled in the use of
+
+    two-handed weapons.
+
+    Weapons/Armour: A Pit Fighter may be
+
+    equipped with weapons and armour chosen
+
+    from the Pit Fighter Equipment list.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - Pit Fighters
+  - Special Rules
+  text: 'Pit Fighter: Pit Fighters have the Pit Fighter skill.'
+- section: 0 – 7 Pursuers
+  section_path:
+  - henchmen
+  - 0 – 7 Pursuers
+  text: '25 gold crowns to hire
+
+    Pursuers are a special martial type of pit
+
+    fighter often used for ‘warm-up fights’
+
+    before the main show. These men are usually
+
+    lightly armed with spears, nets and javelins
+
+    with which they harry their enemies in a hit
+
+    and run style of warfare. This style of
+
+    fighting dates back to ancient times in Tilea
+
+    when gladiators, as they were known in the
+
+    Tilean tongue, would fight in massive stone
+
+    arenas to huge crowds of citizens baying for
+
+    blood.
+
+    Weapons/Armour: A Pit Fighter Pursuer may
+
+    be equipped with weapons and armour
+
+    chosen from the Pit Fighter Pursuer
+
+    Equipment list.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 7 Pursuers
+  - Special Rules
+  text: 'Pit Fighter: Pursuers have the Pit Fighter skill.
+
+    Evade: Pursuers are agile and athletic, well
+
+    adept at avoiding the heavier Pit Fighters’
+
+    charges. When an enemy charges a Pursuer he
+
+    may choose to try and evade. On a successful
+
+    Initiative test it is considered a failed charge
+
+    and the normal rules apply'
+- section: 0 – 1 Ogre Pit Fighter
+  section_path:
+  - henchmen
+  - 0 – 1 Ogre Pit Fighter
+  text: '165 gold crowns to hire
+
+    Ogres are large brutish creatures standing
+
+    some ten feet tall, and all of it is bone and
+
+    muscle. It is unsurprising then that they are
+
+    one of the most brutal and feared of all pit
+
+    fighters. These massive, savage fighters are
+
+    often called upon to fight such fearsome
+
+    beasts as captured Trolls in some of the most
+
+    incredible bouts held at the pits.
+
+    Weapons/Armour: An Ogre Pit Fighter may be
+
+    equipped with weapons and armour chosen
+
+    from the Ogre & Slayer Equipment list.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 1 Ogre Pit Fighter
+  - Special Rules
+  text: 'Pit Fighter: An Ogre Pit Fighter has the Pit Fighter skill.
+
+    Fear: Ogre Pit Fighters are large, threatening
+
+    creatures that cause fear .
+
+    Large: Ogre Pit Fighters are huge, lumbering
+
+    creatures and therefore make tempting targets
+
+    for archers. Any model may shoot at the Ogre
+
+    Pit Fighter, even if he is not the closest target.
+
+    Skills: An Ogre Pit Fighter who becomes a
+
+    Hero as a result of The Lad’s Got Talent may
+
+    choose from the Combat, Strength and Pit
+
+    Fighter Special Skills.
+
+    Slow Witted: Although Ogres are capable of
+
+    earning experience and bettering themselves,
+
+    they are not the smartest creatures. Ogres
+
+    only gain advances at half the rate of everyone
+
+    else (ie, they must accrue twice as much
+
+    experience as normal to get an advance).'

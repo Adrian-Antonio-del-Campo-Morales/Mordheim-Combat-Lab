@@ -1,0 +1,384 @@
+schema_version: 1
+id: trollheim-sisters-of-sigmar
+name: Hermanas de Sigmar
+name_i18n:
+  en: null
+  es: Hermanas de Sigmar
+original_locale: es
+categories:
+- trollheim
+collections:
+- trollheim
+grade: null
+setting: Mordheim
+publication: trollheim
+status: source-normalized
+sources:
+- manual: trollheim
+  printed_page: 82-85
+  section: Las Hermanas de Sigmar
+roster:
+  minimum_models: 3
+  maximum_models: 15
+  starting_gold: 500
+  members:
+  - profile_id: sigmarite-matriarch
+    minimum: 1
+    maximum: 1
+  - profile_id: sister-superior
+    minimum: 0
+    maximum: 3
+  - profile_id: augur
+    minimum: 0
+    maximum: 1
+  - profile_id: sigmarite-sister
+    minimum: 0
+    maximum: null
+  - profile_id: novice
+    minimum: 0
+    maximum: 10
+equipment_lists:
+- id: sisters-equipment
+  name: Equipo de las Hermanas de Sigmar
+  source:
+    manual: trollheim
+    printed_page: 83
+    section: Lista de Equipo de las Hermanas de Sigmar
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: La primera es gratis
+  - item_id: mace
+    cost: 3
+  - item_id: hammer
+    cost: 3
+  - item_id: sigmarite_hammer
+    cost: 15
+  - item_id: flail
+    cost: 15
+  - item_id: steel_whip
+    cost: 10
+  - item_id: great_weapon
+    cost: 15
+  - item_id: sling
+    cost: 2
+  - item_id: light_armour
+    cost: 20
+  - item_id: heavy_armour
+    cost: 50
+  - item_id: shield
+    cost: 5
+  - item_id: buckler
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  - item_id: holy_tome
+    cost: 120
+    notes: Solo Heroínas
+  - item_id: blessed_water
+    cost: 10
+    notes: Solo Heroínas
+  - item_id: holy_relic
+    cost: 15
+    notes: Solo Heroínas
+  name_i18n:
+    en: null
+    es: Equipo de las Hermanas de Sigmar
+profiles:
+- id: sigmarite-matriarch
+  name: Matriarca Sigmarita
+  type: hero
+  cost: 70
+  experience: 20
+  characteristics:
+    M: 10
+    WS: 4
+    BS: 4
+    S: 3
+    T: 3
+    W: 1
+    I: 4
+    A: 1
+    Ld: 8
+  equipment_lists:
+  - sisters-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - academic
+  - strength
+  - speed
+  - sisters_special
+  rules:
+  - id: matriarch-leader
+    name: Jefe
+    effect: Los miembros de la banda a 15 cm o menos pueden usar su Liderazgo.
+    source:
+      manual: trollheim
+      printed_page: 84
+      section: Matriarca Sigmarita
+    name_i18n:
+      en: null
+      es: Jefe
+    effect_i18n:
+      en: null
+      es: Los miembros de la banda a 15 cm o menos pueden usar su Liderazgo.
+  - id: matriarch-prayers
+    name: Plegarias de Sigmar
+    effect: Puede utilizar las Plegarias de Sigmar.
+    source:
+      manual: trollheim
+      printed_page: 84
+      section: Matriarca Sigmarita
+    name_i18n:
+      en: null
+      es: Plegarias de Sigmar
+    effect_i18n:
+      en: null
+      es: Puede utilizar las Plegarias de Sigmar.
+  source:
+    manual: trollheim
+    printed_page: 84
+    section: Matriarca Sigmarita
+  name_i18n:
+    en: null
+    es: Matriarca Sigmarita
+- id: sister-superior
+  name: Hermana Superior
+  type: hero
+  cost: 35
+  experience: 8
+  characteristics:
+    M: 10
+    WS: 4
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - sisters-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - academic
+  - strength
+  - speed
+  - sisters_special
+  rules: []
+  source:
+    manual: trollheim
+    printed_page: 84
+    section: Hermanas Superiores
+  name_i18n:
+    en: null
+    es: Hermana Superior
+- id: augur
+  name: Augur
+  type: hero
+  cost: 25
+  experience: 0
+  characteristics:
+    M: 10
+    WS: 2
+    BS: 2
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - sisters-equipment
+  fixed_equipment: []
+  equipment_restrictions:
+  - Nunca lleva armadura
+  skill_access:
+  - academic
+  - speed
+  - sisters_special
+  rules:
+  - id: blessed-sight
+    name: Visión Bendita
+    effect: Puede repetir cualquier chequeo de atributo y cualquier tirada para impactar en cuerpo a cuerpo o disparo; debe
+      aceptar el segundo resultado. Si no quedó fuera de combate, puede tirar dos dados en exploración y escoger uno.
+    source:
+      manual: trollheim
+      printed_page: 84
+      section: Augur
+    name_i18n:
+      en: null
+      es: Visión Bendita
+    effect_i18n:
+      en: null
+      es: Puede repetir cualquier chequeo de atributo y cualquier tirada para impactar en cuerpo a cuerpo o disparo; debe
+        aceptar el segundo resultado. Si no quedó fuera de combate, puede tirar dos dados en exploración y escoger uno.
+  source:
+    manual: trollheim
+    printed_page: 84
+    section: Augur
+  name_i18n:
+    en: null
+    es: Augur
+- id: sigmarite-sister
+  name: Hermana Sigmarita
+  type: henchman
+  cost: 25
+  experience: 0
+  characteristics:
+    M: 10
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - sisters-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules: []
+  source:
+    manual: trollheim
+    printed_page: 85
+    section: Hermana Sigmarita
+  name_i18n:
+    en: null
+    es: Hermana Sigmarita
+- id: novice
+  name: Novicia
+  type: henchman
+  cost: 15
+  experience: 0
+  characteristics:
+    M: 10
+    WS: 2
+    BS: 2
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 6
+  equipment_lists:
+  - sisters-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules: []
+  source:
+    manual: trollheim
+    printed_page: 85
+    section: Novicias
+  name_i18n:
+    en: null
+    es: Novicia
+band_rules:
+- id: sign-of-sigmar
+  name: Señal de Sigmar
+  effect: Los Poseídos y No Muertos pierden su primer ataque contra la sacerdotisa en la primera ronda de cuerpo a cuerpo,
+    hasta un mínimo de uno.
+  source:
+    manual: trollheim
+    printed_page: 83
+    section: Habilidades Especiales
+  name_i18n:
+    en: null
+    es: Señal de Sigmar
+  effect_i18n:
+    en: null
+    es: Los Poseídos y No Muertos pierden su primer ataque contra la sacerdotisa en la primera ronda de cuerpo a cuerpo, hasta
+      un mínimo de uno.
+- id: sigmars-protection
+  name: Protección de Sigmar
+  effect: Anula con 4+ cualquier hechizo lanzado contra la Hermana; si se anula no afecta a ninguna otra miniatura.
+  source:
+    manual: trollheim
+    printed_page: 83
+    section: Habilidades Especiales
+  name_i18n:
+    en: null
+    es: Protección de Sigmar
+  effect_i18n:
+    en: null
+    es: Anula con 4+ cualquier hechizo lanzado contra la Hermana; si se anula no afecta a ninguna otra miniatura.
+- id: absolute-determination
+  name: Determinación Absoluta
+  effect: Solo la Matriarca; puede repetir cualquier chequeo de retirada fallido.
+  source:
+    manual: trollheim
+    printed_page: 83
+    section: Habilidades Especiales
+  name_i18n:
+    en: null
+    es: Determinación Absoluta
+  effect_i18n:
+    en: null
+    es: Solo la Matriarca; puede repetir cualquier chequeo de retirada fallido.
+- id: righteous-fury
+  name: Furia Justiciera
+  effect: Odia a todas las miniaturas Skaven, No Muertas o Poseídas.
+  source:
+    manual: trollheim
+    printed_page: 83
+    section: Habilidades Especiales
+  name_i18n:
+    en: null
+    es: Furia Justiciera
+  effect_i18n:
+    en: null
+    es: Odia a todas las miniaturas Skaven, No Muertas o Poseídas.
+- id: absolute-faith
+  name: Fe Absoluta
+  effect: Puede repetir cualquier chequeo de miedo fallido y no realiza chequeos adicionales por enfrentarse a varios oponentes.
+  source:
+    manual: trollheim
+    printed_page: 83
+    section: Habilidades Especiales
+  name_i18n:
+    en: null
+    es: Fe Absoluta
+  effect_i18n:
+    en: null
+    es: Puede repetir cualquier chequeo de miedo fallido y no realiza chequeos adicionales por enfrentarse a varios oponentes.
+- id: sigmarite-hammer-rules
+  name: Martillo Sigmarita
+  effect: F del usuario +1; Conmoción; contra Poseídos o No Muertos suma +1 para herir. Solo Matriarcas y Hermanas Superiores
+    pueden llevar dos.
+  source:
+    manual: trollheim
+    printed_page: 85
+    section: Armas Especiales
+  name_i18n:
+    en: null
+    es: Martillo Sigmarita
+  effect_i18n:
+    en: null
+    es: F del usuario +1; Conmoción; contra Poseídos o No Muertos suma +1 para herir. Solo Matriarcas y Hermanas Superiores
+      pueden llevar dos.
+- id: steel-whip-rules
+  name: Látigo de Acero
+  effect: F del usuario y no puede pararse. Las modificaciones finales sustituyen Alcance por Latigazo. Al cargar concede
+    +1 Ataque; al ser cargada concede +1 Ataque contra quien carga y solo ese ataque Ataca Primero. Dos látigos dan el ataque
+    normal por arma adicional, pero Latigazo solo se aplica una vez.
+  source:
+    manual: trollheim
+    printed_page: 85
+    section: Armas Especiales y Modificaciones del Reglamento de Mordheim
+  name_i18n:
+    en: null
+    es: Látigo de Acero
+  effect_i18n:
+    en: null
+    es: F del usuario y no puede pararse. Las modificaciones finales sustituyen Alcance por Latigazo. Al cargar concede +1
+      Ataque; al ser cargada concede +1 Ataque contra quien carga y solo ese ataque Ataca Primero. Dos látigos dan el ataque
+      normal por arma adicional, pero Latigazo solo se aplica una vez.
+source_sections: []
+canonical_family: sisters-of-sigmar

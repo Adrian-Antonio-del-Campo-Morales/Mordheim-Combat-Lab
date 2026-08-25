@@ -1,0 +1,309 @@
+format_version: 1
+source:
+  name: The New Mordheimer
+  url: https://mordheimer.net/docs/warbands
+  accessed: 2026-08-24
+in_scope_grades:
+- core
+- 1a
+- 1b
+- 1c
+excluded_grades:
+- 2a
+- 2b
+- 3
+warbands:
+- id: cult-of-the-possessed
+  name: Cult of the Possessed
+  grade: core
+  setting: Mordheim
+  publication: Mordheim Rulebook
+  status: source-normalized
+- id: mercenaries
+  name: Mercenaries
+  grade: core
+  setting: Mordheim
+  publication: Mordheim Rulebook
+  status: source-normalized
+- id: sisters-of-sigmar
+  name: Sisters of Sigmar
+  grade: core
+  setting: Mordheim
+  publication: Mordheim Rulebook
+  status: source-normalized
+- id: skaven-clan-eshin
+  name: Skaven of Clan Eshin
+  grade: core
+  setting: Mordheim
+  publication: Mordheim Rulebook
+  status: source-normalized
+- id: undead
+  name: The Undead
+  grade: core
+  setting: Mordheim
+  publication: Mordheim Rulebook
+  status: source-normalized
+- id: witch-hunters
+  name: Witch Hunters
+  grade: core
+  setting: Mordheim
+  publication: Mordheim Rulebook
+  status: source-normalized
+- id: averlanders
+  name: Averlanders
+  grade: 1a
+  setting: Mordheim
+  publication: Town Cryer 10
+  status: source-normalized
+- id: beastmen-raiders
+  name: Beastmen Raiders
+  grade: 1a
+  setting: The Empire
+  publication: Empire in Flames
+  status: source-normalized
+- id: carnival-of-chaos
+  name: Carnival of Chaos
+  grade: 1a
+  setting: The Empire
+  publication: Empire in Flames
+  status: source-normalized
+- id: dwarf-treasure-hunters
+  name: Dwarf Treasure Hunters
+  grade: 1a
+  setting: Mordheim
+  publication: Town Cryer 4
+  status: source-normalized
+- id: kislevites
+  name: Kislevites
+  grade: 1a
+  setting: Mordheim
+  publication: Town Cryer 16
+  status: source-normalized
+- id: orc-mob
+  name: Orc Mob
+  grade: 1a
+  setting: Mordheim
+  publication: Town Cryer 6
+  status: source-normalized
+- id: ostlanders
+  name: Ostlanders
+  grade: 1a
+  setting: Mordheim
+  publication: Town Cryer 11
+  status: source-normalized
+- id: amazons-lustria
+  name: Amazons (Lustria)
+  grade: 1b
+  setting: Lustria
+  publication: Town Cryer 15
+  status: source-normalized
+- id: amazons-mordheim
+  name: Amazons (Mordheim)
+  grade: 1b
+  setting: Mordheim
+  publication: Town Cryer 23
+  status: source-normalized
+- id: arabian-tomb-raiders
+  name: Arabian Tomb Raiders
+  grade: 1b
+  setting: Khemri
+  publication: Town Cryer 20
+  status: source-normalized
+- id: black-orcs
+  name: Black Orcs
+  grade: 1b
+  setting: The Great Forest
+  publication: Nemesis Crown Supplement
+  status: source-normalized
+- id: bretonnian-knights
+  name: Bretonnian Knights
+  grade: 1b
+  setting: Mordheim
+  publication: Town Cryer 8
+  status: source-normalized
+- id: dark-elves
+  name: Dark Elves
+  grade: 1b
+  setting: Lustria
+  publication: Town Cryer 12
+  status: source-normalized
+- id: dwarf-rangers
+  name: Dwarf Rangers
+  grade: 1b
+  setting: The Great Forest
+  publication: Nemesis Crown Supplement
+  status: source-normalized
+- id: forest-goblins
+  name: Forest Goblins
+  grade: 1b
+  setting: The Great Forest
+  publication: Nemesis Crown Supplement
+  status: source-normalized
+- id: gunnery-school-of-nuln
+  name: Gunnery School of Nuln
+  grade: 1b
+  setting: The Great Forest
+  publication: Nemesis Crown Supplement
+  status: source-normalized
+- id: hochland-bandits
+  name: Hochland Bandits
+  grade: 1b
+  setting: The Great Forest
+  publication: Nemesis Crown Supplement
+  status: source-normalized
+- id: horned-hunters
+  name: Horned Hunters
+  grade: 1b
+  setting: The Great Forest
+  publication: Nemesis Crown Supplement
+  status: source-normalized
+- id: imperial-outriders
+  name: Imperial Outriders
+  grade: 1b
+  setting: The Great Forest
+  publication: Nemesis Crown Supplement
+  status: source-normalized
+- id: lizardmen
+  name: Lizardmen
+  grade: 1b
+  setting: Lustria
+  publication: Town Cryer 11
+  status: source-normalized
+- id: mootlanders
+  name: Mootlanders
+  grade: 1b
+  setting: Mordheim
+  publication: Citadel Journal 36
+  status: source-normalized
+- id: norse-explorers-lustria
+  name: Norse Explorers
+  grade: 1b
+  setting: Lustria
+  publication: Town Cryer 13
+  status: source-normalized
+- id: ostermarkers
+  name: Ostermarkers
+  grade: 1b
+  setting: Mordheim / Ostermark
+  publication: Fanatic Online 19
+  status: source-normalized
+- id: outlaws-of-stirwood-forest
+  name: Outlaws of Stirwood Forest
+  grade: 1b
+  setting: Mordheim
+  publication: Town Cryer 29
+  status: source-normalized
+- id: pirates
+  name: Pirates
+  grade: 1b
+  setting: Mordheim
+  publication: Town Cryer 9
+  status: source-normalized
+- id: pit-fighters
+  name: Pit Fighters
+  grade: 1b
+  setting: Mordheim
+  publication: Town Cryer 21
+  status: source-normalized
+- id: shadow-warriors
+  name: Shadow Warriors
+  grade: 1b
+  setting: Mordheim
+  publication: Town Cryer 10
+  status: source-normalized
+- id: skaven-clan-pestilens
+  name: Skaven of Clan Pestilens
+  grade: 1b
+  setting: Mordheim
+  publication: Town Cryer 29
+  status: source-normalized
+- id: tileans
+  name: Tileans (Miragleans / Remasens / Trantios)
+  grade: 1b
+  setting: Lustria
+  publication: Town Cryer 14
+  status: source-normalized
+- id: tomb-guardians
+  name: Tomb Guardians
+  grade: 1b
+  setting: Khemri
+  publication: Town Cryer 18
+  status: source-normalized
+- id: battle-monks-of-cathay
+  name: Battle Monks of Cathay
+  grade: 1c
+  setting: Cathay Borderlands
+  publication: Border Town Burning Supplement
+  status: source-normalized
+- id: black-dwarfs
+  name: Black Dwarfs
+  grade: 1c
+  setting: Cathay Borderlands
+  publication: Border Town Burning Supplement
+  status: source-normalized
+- id: bretonnian-chapel-guard
+  name: Bretonnian Chapel Guard
+  grade: 1c
+  setting: Mordheim
+  publication: Fan Made From The Web
+  status: source-normalized
+- id: lustrian-reavers
+  name: Lustrian Reavers
+  grade: 1c
+  setting: Lustria
+  publication: Tuomas Pirinen
+  status: source-normalized
+- id: maneaters
+  name: Maneaters
+  grade: 1c
+  setting: Cathay Borderlands
+  publication: Border Town Burning Supplement
+  status: source-normalized
+- id: marauders-of-chaos
+  name: Marauders of Chaos
+  grade: 1c
+  setting: Cathay Borderlands
+  publication: Border Town Burning Supplement
+  status: source-normalized
+- id: merchant-caravans
+  name: Merchant Caravans
+  grade: 1c
+  setting: Cathay Borderlands
+  publication: Border Town Burning Supplement
+  status: source-normalized
+- id: night-goblins-mic
+  name: Night Goblins
+  grade: 1c
+  setting: Mordheim
+  publication: Mordheimer's Information Centre
+  status: source-normalized
+- id: night-goblins-web
+  name: Night Goblins web
+  grade: 1c
+  setting: Mordheim
+  publication: Fan Made From The Web
+  status: source-normalized
+- id: norse-explorers-btb
+  name: Norse Explorers
+  grade: 1c
+  setting: Cathay Borderlands
+  publication: Border Town Burning Supplement
+  status: source-normalized
+- id: cursed-cavalcade
+  name: The Cursed Cavalcade
+  grade: 1c
+  setting: Mordheim
+  publication: Tuomas Pirinen
+  status: source-normalized
+- id: restless-dead
+  name: The Restless Dead
+  grade: 1c
+  setting: Cathay Borderlands
+  publication: Border Town Burning Supplement
+  status: source-normalized
+- id: sons-of-hashut
+  name: The Sons of Hashut
+  grade: 1c
+  setting: Mordheim
+  publication: GW Troll Magazine (Spain)
+  status: source-normalized

@@ -1,0 +1,562 @@
+id: imperial-outriders
+name: Imperial Outriders
+grade: 1b
+source_url: https://mordheimer.net/docs/warbands/grade-1b-warbands/imperial-outriders
+headings:
+- special rules ​
+- Choice of warriors ​
+- Starting experience ​
+- Imperial Outrider Skill Table ​
+- Imperial Outriders equipment lists ​
+- Hand-to-hand Combat Weapons ​
+- Armour ​
+- Outrider Missile Weapons ​
+- Scout Missile Weapons ​
+- heroes ​
+- 1 Knight ​
+- SPECIAL RULES ​
+- 0 – 2 Outriders ​
+- Special Rules ​
+- 0 – 2 Scouts ​
+- Special Rules ​
+- henchmen ​
+- 0 – 5 Chasseurs ​
+- Special Rules ​
+- 0 – 5 Hussars ​
+- Special Rules ​
+- 0 – 2 Grooms ​
+- Special Rules ​
+- Further Mounted Rules ​
+- Two Weapon Fighting ​
+- Targeting Mounted Warriors ​
+- Injuries ​
+- Stunned Riders ​
+- Out-Of-Action Models ​
+- Dead Horses ​
+- Dense Terrain ​
+- Scenarios ​
+tables:
+- section: Imperial Outrider Skill Table
+  section_path:
+  - Imperial Outrider Skill Table
+  rows:
+  - - ''
+    - Combat
+    - Shooting
+    - Academic
+    - Strength
+    - Speed
+    - Cavalry
+  - - Knight
+    - ✓
+    - ✓
+    - ✓
+    - ✓
+    - ✓
+    - ✓
+  - - Outrider
+    - ✓
+    - ✓
+    - ''
+    - ✓
+    - ''
+    - ✓
+  - - Scout
+    - ✓
+    - ✓
+    - ''
+    - ''
+    - ✓
+    - ✓
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Imperial Outriders equipment lists
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Hammer
+    - 3 gc
+  - - Axe
+    - 5 gc
+  - - Sword
+    - 10 gc
+  - - Spear
+    - 10 gc
+  - - Morning Star
+    - 15 gc
+  - - Lance
+    - 40 gc
+- section: Armour
+  section_path:
+  - Imperial Outriders equipment lists
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Buckler
+    - 5 gc
+  - - Shield
+    - 5 gc
+  - - Helmet
+    - 10 gc
+  - - Light armour
+    - 20 gc
+  - - Heavy armour
+    - 50 gc
+  - - Barding
+    - 80 gc
+  - - Ithilmar armour
+    - 90 gc
+  - - Gromril Armour
+    - 150 gc
+- section: Outrider Missile Weapons
+  section_path:
+  - Imperial Outriders equipment lists
+  - Outrider Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Pistol
+    - 15 gc
+  - - Handgun
+    - 35 gc
+  - - Blunderbuss
+    - 30 gc
+  - - Hochland Long Rifle
+    - 200 gc
+- section: Scout Missile Weapons
+  section_path:
+  - Imperial Outriders equipment lists
+  - Scout Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Throwing Knives
+    - 15 gc
+- section: 1 Knight
+  section_path:
+  - heroes
+  - 1 Knight
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '8'
+- section: 0 – 2 Outriders
+  section_path:
+  - heroes
+  - 0 – 2 Outriders
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 2 Scouts
+  section_path:
+  - heroes
+  - 0 – 2 Scouts
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '2'
+    - '2'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '6'
+- section: 0 – 5 Chasseurs
+  section_path:
+  - henchmen
+  - 0 – 5 Chasseurs
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '4'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 5 Hussars
+  section_path:
+  - henchmen
+  - 0 – 5 Hussars
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 2 Grooms
+  section_path:
+  - henchmen
+  - 0 – 2 Grooms
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '2'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '6'
+section_text:
+- section: special rules
+  section_path:
+  - special rules
+  text: 'Hired Swords: The Imperial Outriders may only be accompanied by mounted Hired
+    Swords. This includes the Freelance Knight from the Mordheim Rulebook and the
+    Roadwarden from the Empire In Flames supplement. The Highwayman keeps himself
+    a safe distance from any official representatives of the Empire and so may not
+    be hired.'
+- section: Imperial Outriders equipment lists
+  section_path:
+  - Imperial Outriders equipment lists
+  text: 'The following lists are used by Imperial Outrider warbands to pick their
+    weapons:'
+- section: 1 Knight
+  section_path:
+  - heroes
+  - 1 Knight
+  text: '85 gold crowns to hire
+
+    Knights who show the greatest potential are often chosen to lead small bands on
+    quests into dangerous territory in order to prove their worth.
+
+    Weapons/Armour: The Knight may be equipped with hand-to-hand weapons and armour
+    chosen from the Imperial Outriders’ equipment list. The Knight comes
+
+    with a Riding Horse. This may be upgraded to a Warhorse for an additional +40
+    gc.'
+- section: SPECIAL RULES
+  section_path:
+  - heroes
+  - 1 Knight
+  - SPECIAL RULES
+  text: 'Leader: Any warrior within 6” of the Knight may use his Leadership characteristic
+    when taking a Leadership test.
+
+    Ride: The Knight has the Ride skill as detailed in the Blazing Saddles article.'
+- section: 0 – 2 Outriders
+  section_path:
+  - heroes
+  - 0 – 2 Outriders
+  text: '65 gold crowns to hire
+
+    Usually the offspring of nobility, Outriders are often cocksure young guns and
+    confident in the saddle. Eager to earn their spurs they readily sign up for dangerous
+    missions requiring speed, stealth and bravery.
+
+    Weapons/Armour: Outriders may be equipped with hand-to-hand weapons and armour
+    chosen from the
+
+    Imperial Outriders’ Equipment List. They may be
+
+    equipped with missile weapons from the Outriders’ Missile Weapon List. Outriders
+    come with a Riding Horse which may be upgraded to a Warhorse for an
+
+    additional +40 gc.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 0 – 2 Outriders
+  - Special Rules
+  text: 'Ride: Outriders have the Ride skill as detailed in the Blazing Saddles article.'
+- section: 0 – 2 Scouts
+  section_path:
+  - heroes
+  - 0 – 2 Scouts
+  text: '45 gold crowns to hire
+
+    Accustomed to riding fast over long distances, Empire couriers are an obvious
+    choice to include in raids into the wilder lands. Less experienced at fighting,
+    they need to learn quickly or risk falling at the wayside.
+
+    Weapons/Armour: Scouts may be equipped with hand-to-hand weapons and armour chosen
+    from the
+
+    Imperial Outriders’ Equipment List. They may be equipped with missile weapons
+    from the Scouts’ Missile Weapon List. Scouts come with a Riding Horse.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 0 – 2 Scouts
+  - Special Rules
+  text: 'Ride: Scouts have the Ride skill as detailed in the Blazing Saddles article.'
+- section: henchmen
+  section_path:
+  - henchmen
+  text: (Bought in groups of 1-5)
+- section: 0 – 5 Chasseurs
+  section_path:
+  - henchmen
+  - 0 – 5 Chasseurs
+  text: '55 gold crowns to hire
+
+    Skilled at firing a range of Blackpowder weapons from the saddle, these men are
+    regarded as the finest young prospects of the Empire’s armies. Chasseurs provide
+    vital missile cover for the band.
+
+    Weapons/Armour: Chasseurs may be equipped with hand-to-hand weapons and armour
+    chosen from the
+
+    Imperial Outriders’ Equipment List. They may be equipped with missile weapons
+    from the Outriders’
+
+    Missile Weapon List. Chasseurs come with a Riding Horse.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 5 Chasseurs
+  - Special Rules
+  text: 'Ride: Chasseurs have the Ride skill as detailed in the Blazing Saddles article.'
+- section: 0 – 5 Hussars
+  section_path:
+  - henchmen
+  - 0 – 5 Hussars
+  text: '60 gold crowns to hire
+
+    Selected for their combat skills, these grizzled warriors pack a hard punch as
+    the Outriders charge.
+
+    Weapons/Armour: Hussars may be equipped with hand-to-hand
+
+    weapons and armour chosen from the Imperial
+
+    Outriders’ Equipment List. Hussars come with a
+
+    Riding Horse. This may be upgraded to a Warhorse
+
+    for an additional +40 gc.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 5 Hussars
+  - Special Rules
+  text: 'Ride: Horsemen have the Ride skill as detailed in the Blazing Saddles article.
+
+    Combat Riding: Horsemen have the Combat Riding skill as detailed in the Blazing
+    Saddles article.'
+- section: 0 – 2 Grooms
+  section_path:
+  - henchmen
+  - 0 – 2 Grooms
+  text: '50 gold crowns to hire
+
+    Unskilled in the ways of war, nevertheless these young men have an empathy with
+    the steeds. Grooms have a vital part to play in their party.
+
+    Weapons/Armour: Grooms may be equipped with hand-to-hand weapons, missile weapons
+    and armour
+
+    chosen from the Imperial Outriders’ Equipment List.
+
+    They may be equipped with missile weapons from the
+
+    Scouts’ Missile Weapon List. Grooms come with a
+
+    Riding Horse.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 2 Grooms
+  - Special Rules
+  text: 'Ride: Grooms have the Ride skill as detailed in the Blazing Saddles article.
+
+    Horse Handling: Grooms have the Animal Handling skill as detailed in the Blazing
+    Saddles article.'
+- section: Further Mounted Rules
+  section_path:
+  - Further Mounted Rules
+  text: 'Rules for mounted warriors can be found in the Mordheim Rulebook and in the
+    Blazing Saddles articles in the 2002 Mordheim Annual.
+
+    The clarifications below generally work in tandem with these.'
+- section: Two Weapon Fighting
+  section_path:
+  - Further Mounted Rules
+  - Two Weapon Fighting
+  text: 'Mounted warriors may not fight with two weapons,
+
+    although a shield or buckler may be used as normal.
+
+    Two-handed weapons are not permitted. The use of a
+
+    pistol in the first round of hand-to-hand combat
+
+    replaces the model’s usual weapon.'
+- section: Targeting Mounted Warriors
+  section_path:
+  - Further Mounted Rules
+  - Targeting Mounted Warriors
+  text: 'Enemies may not target a ridden horse, whether by
+
+    missiles or in hand-to-hand combat. The rider will
+
+    always be seen as the greater threat.
+
+    Due to their prominence, any mounted warrior may
+
+    always be chosen as a target by a shooter even if there
+
+    are enemies closer.
+
+    However the shooters do not gain +1 to hit - the
+
+    rider is still the same size as before.'
+- section: Injuries
+  section_path:
+  - Further Mounted Rules
+  - Injuries
+  text: 'To determine the effects of wounds on mounted
+
+    models, use the Whoa Boy! table from the Blazing
+
+    Saddles article.'
+- section: Stunned Riders
+  section_path:
+  - Further Mounted Rules
+  - Stunned Riders
+  text: 'Stunned riders will fall from their mounts as indicated
+
+    on the Whoa Boy! table . Mounts which subsequently
+
+    bolt may be remounted should the warrior make base
+
+    contact with the horse before it leaves the table.
+
+    Note that whether the mount leaves the table or not,
+
+    it will be recovered unscathed after the battle.'
+- section: Out-Of-Action Models
+  section_path:
+  - Further Mounted Rules
+  - Out-Of-Action Models
+  text: 'It is possible for a rider to be killed while his mount
+
+    survives. In this case the mount may be ridden by the
+
+    dead model''s replacement, reducing his cost by 40gc.'
+- section: Dead Horses
+  section_path:
+  - Further Mounted Rules
+  - Dead Horses
+  text: 'Dead horses must be replaced before any other
+
+    income is spent. All Treasures must be sold to fund
+
+    this.
+
+    Any model without a mount may not take part in the
+
+    battle.'
+- section: Dense Terrain
+  section_path:
+  - Further Mounted Rules
+  - Dense Terrain
+  text: 'Imperial Outriders may ignore the normal warband
+
+    limitation of two mounts in areas of dense terrain.'
+- section: Scenarios
+  section_path:
+  - Further Mounted Rules
+  - Scenarios
+  text: 'Several scenarios involve the moving of models across
+
+    the board to achieve the objective, either chasing
+
+    treasure or exiting the board. In these scenarios the
+
+    players should place sizeable areas of dense terrain
+
+    such that it is impossible to traverse the board
+
+    without entering them. This will force the Outriders
+
+    to dismount and so improve the game.'

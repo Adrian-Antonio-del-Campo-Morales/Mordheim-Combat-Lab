@@ -1,0 +1,614 @@
+schema_version: 1
+id: khemri-gremio-de-ladrones
+name: El Gremio
+name_i18n:
+  en: null
+  es: El Gremio
+original_locale: es
+categories:
+- trollheim
+collections:
+- trollheim
+grade: null
+setting: Khemri
+publication: khemri
+status: source-normalized
+sources:
+- manual: khemri
+  printed_page: 70-75
+  section: El Gremio
+roster:
+  minimum_models: 3
+  maximum_models: 15
+  starting_gold: 500
+  members:
+  - profile_id: guild-chief
+    minimum: 1
+    maximum: 1
+  - profile_id: guild-master-thief
+    minimum: 0
+    maximum: 1
+  - profile_id: guild-ruffian
+    minimum: 0
+    maximum: 2
+  - profile_id: guild-hashashiyyin
+    minimum: 0
+    maximum: 1
+  - profile_id: guild-thief
+    minimum: 0
+    maximum: 5
+  - profile_id: guild-enforcer
+    minimum: 0
+    maximum: 3
+  - profile_id: guild-beggar
+    minimum: 0
+    maximum: null
+equipment_lists:
+- id: guild-thief-equipment
+  name: Equipo para Ladrones
+  source:
+    manual: khemri
+    printed_page: 71
+    section: Lista de equipo para Ladrones
+  items:
+  - item_id: yambiya
+    cost: 2
+    notes: La primera es gratis
+  - item_id: mace
+    cost: 3
+  - item_id: katar
+    cost: 5
+  - item_id: sword
+    cost: 10
+  - item_id: spear
+    cost: 10
+    notes: Solo Rufianes y Matones
+  - item_id: ankus
+    cost: 13
+  - item_id: scimitar
+    cost: 15
+  - item_id: cutlass
+    cost: 15
+  - item_id: bagh_nakh
+    cost: 30
+    notes: Solo Asesino Hashashiyyin a este precio
+  - item_id: sling
+    cost: 2
+  - item_id: short_bow
+    cost: 5
+  - item_id: bow
+    cost: 10
+  - item_id: throwing_knives
+    cost: 15
+  - item_id: tufenk
+    cost: 15
+  - item_id: crossbow_pistol
+    cost: 35
+  - item_id: buckler
+    cost: 5
+  - item_id: shield
+    cost: 5
+    notes: Solo Rufianes y Matones
+  - item_id: helmet
+    cost: 10
+  - item_id: light_armour
+    cost: 20
+  - item_id: heavy_armour
+    cost: 50
+    notes: Solo Rufianes y Matones
+  name_i18n:
+    en: null
+    es: Equipo para Ladrones
+- id: guild-beggar-equipment
+  name: Equipo para Mendigos
+  source:
+    manual: khemri
+    printed_page: 71
+    section: Lista de equipo para Mendigos
+  items:
+  - item_id: yambiya
+    cost: 2
+    notes: La primera es gratis
+  - item_id: club
+    cost: 3
+  - item_id: katar
+    cost: 5
+  - item_id: scythe
+    cost: 5
+  - item_id: sword
+    cost: 10
+  - item_id: spear
+    cost: 10
+  - item_id: ankus
+    cost: 13
+  - item_id: sling
+    cost: 2
+  - item_id: short_bow
+    cost: 5
+  - item_id: buckler
+    cost: 5
+  - item_id: shield
+    cost: 5
+  name_i18n:
+    en: null
+    es: Equipo para Mendigos
+profiles:
+- id: guild-chief
+  name: Jefe Cofrade
+  type: hero
+  cost: 60
+  experience: 20
+  characteristics:
+    M: 10
+    WS: 4
+    BS: 4
+    S: 3
+    T: 3
+    W: 1
+    I: 4
+    A: 1
+    Ld: 8
+  equipment_lists:
+  - guild-thief-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - shooting
+  - academic
+  - speed
+  - special
+  rules:
+  - id: guild-leader
+    name: Jefe
+    effect: Cualquier miembro de la banda a 15 cm o menos puede utilizar su Liderazgo.
+    source:
+      manual: khemri
+      printed_page: 72
+      section: Jefe Cofrade
+    name_i18n:
+      en: null
+      es: Jefe
+    effect_i18n:
+      en: null
+      es: Cualquier miembro de la banda a 15 cm o menos puede utilizar su Liderazgo.
+  - id: guild-chief-wanted
+    name: Se Busca
+    effect: Si es capturado puede venderse por 1D6+ la experiencia acumulada en coronas; tira 1D6 para el cautivo
+    con 1-3 pierde una mano: null
+    4-5 recibe -1R y -3 a buscar objetos raros: null
+    y 6 es ajusticiado.: null
+    source:
+      manual: khemri
+      printed_page: 72
+      section: Jefe Cofrade
+    name_i18n:
+      en: null
+      es: Se Busca
+    effect_i18n:
+      en: null
+      es: Si es capturado puede venderse por 1D6+ la experiencia acumulada en coronas; tira 1D6 para el cautivo
+  - id: guild-chief-contacts
+    name: Contactos
+    effect: Suma +1 a la tirada para encontrar objetos raros en el mercado negro.
+    source:
+      manual: khemri
+      printed_page: 72
+      section: Jefe Cofrade
+    name_i18n:
+      en: null
+      es: Contactos
+    effect_i18n:
+      en: null
+      es: Suma +1 a la tirada para encontrar objetos raros en el mercado negro.
+  - id: guild-chief-traps
+    name: Desactivar Trampas
+    effect: Es experto en detectar y desactivar trampas conforme a las reglas de experiencia.
+    source:
+      manual: khemri
+      printed_page: 72
+      section: Jefe Cofrade
+    name_i18n:
+      en: null
+      es: Desactivar Trampas
+    effect_i18n:
+      en: null
+      es: Es experto en detectar y desactivar trampas conforme a las reglas de experiencia.
+  source:
+    manual: khemri
+    printed_page: 72
+    section: Jefe Cofrade
+  name_i18n:
+    en: null
+    es: Jefe Cofrade
+- id: guild-master-thief
+  name: Maestro Ladrón
+  type: hero
+  cost: 45
+  experience: 8
+  characteristics:
+    M: 10
+    WS: 4
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 4
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - guild-thief-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - shooting
+  - speed
+  - special
+  rules:
+  - id: guild-master-wanted
+    name: Se Busca
+    effect: Si es capturado puede venderse por 1D6+ la experiencia acumulada en coronas; con 1-3 pierde una mano
+    4-5 recibe -1R y -3 a buscar objetos raros: null
+    y 6 es ajusticiado.: null
+    source:
+      manual: khemri
+      printed_page: 72
+      section: Maestro Ladrón
+    name_i18n:
+      en: null
+      es: Se Busca
+    effect_i18n:
+      en: null
+      es: Si es capturado puede venderse por 1D6+ la experiencia acumulada en coronas; con 1-3 pierde una mano
+  - id: guild-master-contacts
+    name: Contactos
+    effect: Suma +1 a la tirada para encontrar objetos raros en el mercado negro.
+    source:
+      manual: khemri
+      printed_page: 72
+      section: Maestro Ladrón
+    name_i18n:
+      en: null
+      es: Contactos
+    effect_i18n:
+      en: null
+      es: Suma +1 a la tirada para encontrar objetos raros en el mercado negro.
+  - id: guild-master-traps
+    name: Desactivar Trampas
+    effect: Es experto en detectar y desactivar trampas conforme a las reglas de experiencia.
+    source:
+      manual: khemri
+      printed_page: 72
+      section: Maestro Ladrón
+    name_i18n:
+      en: null
+      es: Desactivar Trampas
+    effect_i18n:
+      en: null
+      es: Es experto en detectar y desactivar trampas conforme a las reglas de experiencia.
+  source:
+    manual: khemri
+    printed_page: 72
+    section: Maestro Ladrón
+  name_i18n:
+    en: null
+    es: Maestro Ladrón
+- id: guild-ruffian
+  name: Rufián
+  type: hero
+  cost: 35
+  experience: 6
+  characteristics:
+    M: 10
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 4
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - guild-thief-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - shooting
+  - strength
+  - special
+  rules:
+  - id: guild-ruffian-contacts
+    name: Contactos
+    effect: Suma +1 a la tirada para encontrar objetos raros en el mercado negro.
+    source:
+      manual: khemri
+      printed_page: 73
+      section: Rufianes
+    name_i18n:
+      en: null
+      es: Contactos
+    effect_i18n:
+      en: null
+      es: Suma +1 a la tirada para encontrar objetos raros en el mercado negro.
+  - id: guild-ruffian-traps
+    name: Desactivar Trampas
+    effect: Es experto en detectar y desactivar trampas conforme a las reglas de experiencia.
+    source:
+      manual: khemri
+      printed_page: 73
+      section: Rufianes
+    name_i18n:
+      en: null
+      es: Desactivar Trampas
+    effect_i18n:
+      en: null
+      es: Es experto en detectar y desactivar trampas conforme a las reglas de experiencia.
+  source:
+    manual: khemri
+    printed_page: 73
+    section: Rufianes
+  name_i18n:
+    en: null
+    es: Rufián
+- id: guild-hashashiyyin
+  name: Asesino Hashashiyyin
+  type: hero
+  cost: 75
+  experience: 12
+  characteristics:
+    M: 10
+    WS: 4
+    BS: 4
+    S: 4
+    T: 3
+    W: 1
+    I: 5
+    A: 2
+    Ld: 8
+  equipment_lists:
+  - guild-thief-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - shooting
+  - strength
+  - speed
+  - special
+  rules:
+  - id: guild-consummate-fighter
+    name: Luchador Consumado
+    effect: Aplica -1 adicional a cualquier salvación por armadura contra las heridas que inflige
+    tanto en cuerpo a cuerpo como a distancia.: null
+    source:
+      manual: khemri
+      printed_page: 73
+      section: Asesino Hashashiyyin
+    name_i18n:
+      en: null
+      es: Luchador Consumado
+    effect_i18n:
+      en: null
+      es: Aplica -1 adicional a cualquier salvación por armadura contra las heridas que inflige
+  - id: guild-assassin-contacts
+    name: Contactos
+    effect: Suma +1 a la tirada para encontrar objetos raros en el mercado negro.
+    source:
+      manual: khemri
+      printed_page: 73
+      section: Asesino Hashashiyyin
+    name_i18n:
+      en: null
+      es: Contactos
+    effect_i18n:
+      en: null
+      es: Suma +1 a la tirada para encontrar objetos raros en el mercado negro.
+  - id: guild-assassin-traps
+    name: Desactivar Trampas
+    effect: Es experto en detectar y desactivar trampas conforme a las reglas de experiencia.
+    source:
+      manual: khemri
+      printed_page: 73
+      section: Asesino Hashashiyyin
+    name_i18n:
+      en: null
+      es: Desactivar Trampas
+    effect_i18n:
+      en: null
+      es: Es experto en detectar y desactivar trampas conforme a las reglas de experiencia.
+  source:
+    manual: khemri
+    printed_page: 73
+    section: Asesino Hashashiyyin
+  name_i18n:
+    en: null
+    es: Asesino Hashashiyyin
+- id: guild-thief
+  name: Ladrón
+  type: henchman
+  cost: 25
+  experience: 0
+  characteristics:
+    M: 10
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - guild-thief-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules: []
+  source:
+    manual: khemri
+    printed_page: 74
+    section: Ladrones
+  name_i18n:
+    en: null
+    es: Ladrón
+- id: guild-enforcer
+  name: Matón
+  type: henchman
+  cost: 30
+  experience: 0
+  characteristics:
+    M: 10
+    WS: 4
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - guild-thief-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules: []
+  source:
+    manual: khemri
+    printed_page: 74
+    section: Matones
+  name_i18n:
+    en: null
+    es: Matón
+- id: guild-beggar
+  name: Mendigo
+  type: henchman
+  cost: 15
+  experience: 0
+  characteristics:
+    M: 10
+    WS: 2
+    BS: 2
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 6
+  equipment_lists:
+  - guild-beggar-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules:
+  - id: guild-alms
+    name: Limosna
+    effect: En un oasis o ciudad puede pedir; tira 1D6
+    con 1 pierde al mendigo y la próxima batalla: null
+    con 2-6 recibe 1D3 coronas.: null
+    source:
+      manual: khemri
+      printed_page: 74
+      section: Mendigos
+    name_i18n:
+      en: null
+      es: Limosna
+    effect_i18n:
+      en: null
+      es: En un oasis o ciudad puede pedir; tira 1D6
+  source:
+    manual: khemri
+    printed_page: 74
+    section: Mendigos
+  name_i18n:
+    en: null
+    es: Mendigo
+band_rules:
+- id: guild-skill-pickpocket
+  name: Carterista
+  effect: Si contacta con un enemigo fuera de combate puede intentar robarle un arma; con 5+ en 1D6 la roba y no hace otra
+    acción ese turno.
+  source:
+    manual: khemri
+    printed_page: 75
+    section: Habilidades Especiales de los Ladrones
+  name_i18n:
+    en: null
+    es: Carterista
+  effect_i18n:
+    en: null
+    es: Si contacta con un enemigo fuera de combate puede intentar robarle un arma; con 5+ en 1D6 la roba y no hace otra acción
+      ese turno.
+- id: guild-skill-knife-fighting
+  name: Lucha con Cuchillo
+  effect: Con yambiya o daga obtiene +1 HA y además +1 en la tabla de heridas; el enemigo conserva +1 a su salvación.
+  source:
+    manual: khemri
+    printed_page: 75
+    section: Habilidades Especiales de los Ladrones
+  name_i18n:
+    en: null
+    es: Lucha con Cuchillo
+  effect_i18n:
+    en: null
+    es: Con yambiya o daga obtiene +1 HA y además +1 en la tabla de heridas; el enemigo conserva +1 a su salvación.
+- id: guild-skill-shadows
+  name: Ocultarse en las Sombras
+  effect: A 3 cm o menos de un muro u obstáculo lineal
+  los enemigos deben superar Iniciativa para cargar o dispararle.: null
+  source:
+    manual: khemri
+    printed_page: 75
+    section: Habilidades Especiales de los Ladrones
+  name_i18n:
+    en: null
+    es: Ocultarse en las Sombras
+  effect_i18n:
+    en: null
+    es: A 3 cm o menos de un muro u obstáculo lineal
+- id: guild-skill-poisoner
+  name: Envenenador
+  effect: No disponible para Rufianes. Empieza cada batalla con dos armas propias envenenadas con veneno negro o loto negro
+  elegidas antes de la partida y sin pagar el veneno.: null
+  source:
+    manual: khemri
+    printed_page: 75
+    section: Habilidades Especiales de los Ladrones
+  name_i18n:
+    en: null
+    es: Envenenador
+  effect_i18n:
+    en: null
+    es: No disponible para Rufianes. Empieza cada batalla con dos armas propias envenenadas con veneno negro o loto negro
+- id: guild-skill-fast-legs
+  name: Piernas Veloces
+  effect: No disponible para Rufianes. No puede usarse con armadura pesada
+  escudo o casco; aumenta el Movimiento básico en 3 cm.: null
+  source:
+    manual: khemri
+    printed_page: 75
+    section: Habilidades Especiales de los Ladrones
+  name_i18n:
+    en: null
+    es: Piernas Veloces
+  effect_i18n:
+    en: null
+    es: No disponible para Rufianes. No puede usarse con armadura pesada
+- id: guild-skill-infiltration
+  name: Infiltración
+  effect: No disponible para Rufianes. Se despliega después del rival en cualquier lugar fuera de su línea de visión y a más
+    de 30 cm de enemigos; si ambos infiltran se tira 1D6 por miniatura y despliega primero el resultado menor.
+  source:
+    manual: khemri
+    printed_page: 75
+    section: Habilidades Especiales de los Ladrones
+  name_i18n:
+    en: null
+    es: Infiltración
+  effect_i18n:
+    en: null
+    es: No disponible para Rufianes. Se despliega después del rival en cualquier lugar fuera de su línea de visión y a más
+      de 30 cm de enemigos; si ambos infiltran se tira 1D6 por miniatura y despliega primero el resultado menor.
+source_sections: []
+canonical_family: khemri-gremio-de-ladrones

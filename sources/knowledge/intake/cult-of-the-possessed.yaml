@@ -1,0 +1,539 @@
+id: cult-of-the-possessed
+name: Cult of the Possessed
+grade: core
+source_url: https://mordheimer.net/docs/warbands/grade-1a-warbands/cult-of-the-possessed
+headings:
+- Choice of warriors ​
+- Starting experience ​
+- Possessed Skill Table ​
+- Possessed equipment lists ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Darksouls equipment list ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- heroes ​
+- 1 Magister ​
+- Special Rules ​
+- 0 – 2 The Possessed ​
+- Special Rules ​
+- 0 – 2 Mutants ​
+- Special Rules ​
+- henchmen ​
+- 0 – 5 Darksouls ​
+- Special Rules ​
+- 0 – 3 Beastmen ​
+- Brethren ​
+- Mutations ​
+- daemon soul ​
+- great claw ​
+- cloven hoofs ​
+- tentacle ​
+- blackblood ​
+- spines ​
+- scorpion tail ​
+- extra arm ​
+- hideous ​
+tables:
+- section: Possessed Skill Table
+  section_path:
+  - Possessed Skill Table
+  rows:
+  - - ''
+    - Combat
+    - Shooting
+    - Academic
+    - Strength
+    - Speed
+  - - Magister
+    - ✓
+    - ''
+    - ✓
+    - ''
+    - ✓
+  - - Possessed
+    - ✓
+    - ''
+    - ''
+    - ✓
+    - ✓
+  - - Mutants
+    - ✓
+    - ''
+    - ''
+    - ''
+    - ✓
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Possessed equipment lists
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Mace
+    - 3 gc
+  - - Hammer
+    - 3 gc
+  - - Axe
+    - 5 gc
+  - - Sword
+    - 10 gc
+  - - Double-handed weapon
+    - 15 gc
+  - - Spear
+    - 10 gc
+- section: Missile Weapons
+  section_path:
+  - Possessed equipment lists
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Bow
+    - 15 gc
+  - - Short Bow
+    - 10 gc
+- section: Armour
+  section_path:
+  - Possessed equipment lists
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Light armour
+    - 20 gc
+  - - Heavy armour
+    - 50 gc
+  - - Shield
+    - 5 gc
+  - - Helmet
+    - 10 gc
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Possessed equipment lists
+  - Darksouls equipment list
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Mace
+    - 3 gc
+  - - Hammer
+    - 3 gc
+  - - Axe
+    - 5 gc
+  - - Sword
+    - 10 gc
+  - - Double-handed weapon
+    - 15 gc
+  - - Flail
+    - 15 gc
+- section: Armour
+  section_path:
+  - Possessed equipment lists
+  - Darksouls equipment list
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Light armour
+    - 20 gc
+  - - Heavy armour
+    - 50 gc
+  - - Shield
+    - 5 gc
+  - - Helmet
+    - 10 gc
+- section: 1 Magister
+  section_path:
+  - heroes
+  - 1 Magister
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '4'
+    - '4'
+    - '4'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '8'
+- section: 0 – 2 The Possessed
+  section_path:
+  - heroes
+  - 0 – 2 The Possessed
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '5'
+    - '4'
+    - '0'
+    - '4'
+    - '4'
+    - '2'
+    - '4'
+    - '2'
+    - '7'
+- section: 0 – 2 Mutants
+  section_path:
+  - heroes
+  - 0 – 2 Mutants
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 5 Darksouls
+  section_path:
+  - henchmen
+  - 0 – 5 Darksouls
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '4'
+    - '2'
+    - '2'
+    - '4'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '6'
+- section: 0 – 3 Beastmen
+  section_path:
+  - henchmen
+  - 0 – 3 Beastmen
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '4'
+    - '4'
+    - '3'
+    - '3'
+    - '4'
+    - '2'
+    - '3'
+    - '1'
+    - '7'
+- section: Brethren
+  section_path:
+  - henchmen
+  - Brethren
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+section_text:
+- section: Choice of warriors
+  section_path:
+  - Choice of warriors
+  text: 'A Possessed warband must include a minimum of three models. You have 500
+    gold crowns to recruit your initial warband. The maximum number of warriors in
+    the warband may never exceed 15.
+
+    Magister: Each Possessed warband must have one Magister: no more, no less! Possessed:
+    Your warband may include up to two Possessed. Mutants: Your warband may include
+    up to two Mutants. Darksouls: Your warband may include up to five Darksouls. Brethren:
+    Any number of models may be Brethren. Beastmen: Your warband may include up to
+    three Beastmen Gors.'
+- section: Starting experience
+  section_path:
+  - Starting experience
+  text: A Magister starts with 20 experience. Possessed start with 8 experience. Mutants
+    starts with 0 experience. Henchmen start with 0 experience.
+- section: Possessed equipment lists
+  section_path:
+  - Possessed equipment lists
+  text: The following lists are used by Possessed warbands to pick their equipment.
+- section: Darksouls equipment list
+  section_path:
+  - Possessed equipment lists
+  - Darksouls equipment list
+  text: This list is for Darksouls and Beastmen only.
+- section: Missile Weapons
+  section_path:
+  - Possessed equipment lists
+  - Darksouls equipment list
+  - Missile Weapons
+  text: None
+- section: 1 Magister
+  section_path:
+  - heroes
+  - 1 Magister
+  text: '70 gold crowns to hire
+
+    Magisters lead the covens of the Possessed. They have been granted magical powers
+    by their patron gods. They are fanatical followers of the Dark gods, utterly dedicated
+    to bringing Chaos to the world.
+
+    Weapons/Armour: The Magister may be equipped with weapons and armour chosen from
+    the Possessed Equipment list.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 1 Magister
+  - Special Rules
+  text: 'Leader: Any models in the warband within 6" of the Magister may use his Leadership
+    instead of their own.
+
+    Magic User: The Magister has the ability to use magic and casts spells like any
+    other magicians, and the Magister starts with one spells generated at random from
+    the Chaos Rituals In addition the Magister may learn a new Spell instead of a
+    new skill.'
+- section: 0 – 2 The Possessed
+  section_path:
+  - heroes
+  - 0 – 2 The Possessed
+  text: '90 gold crowns to hire (+ the cost of mutations)
+
+    The Possessed have committed the greatest of heresies: they have given their bodies
+    to Daemons. As a result, they are nightmarish creatures, a melding of flesh, metal
+    and black magic. Inside them lives a supernatural thing of evil, a Daemon from
+    the dark reaches of the Realm of Chaos.
+
+    The powerful spirit of a Daemon can meld several creatures together, be they men
+    or animals, into a multi-faceted horror. These monstrous Possessed are perhaps
+    the most dangerous of the creatures of Mordheim, and certainly the most loathsome
+    and dreadful.
+
+    Weapons/Armour: None. The Possessed never use weapons or armour.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 0 – 2 The Possessed
+  - Special Rules
+  text: 'Fear: The Possessed are terrifying, twisted creatures and therefore cause
+    fear . ❓
+
+    Mutations: Possessed may start the game with one or more mutations each. See the
+    Mutations list for costs.'
+- section: 0 – 2 Mutants
+  section_path:
+  - heroes
+  - 0 – 2 Mutants
+  text: '25 gold crowns to hire (+ the cost of mutations)
+
+    Mutants are revered as the favoured ones of the Dark gods, their physical disfigurements
+    marking out the vileness of their soul. They come in many shapes and sizes, each
+    more bizarre than the next.
+
+    Weapons/Armour: Mutants may be equipped with weapons and armour chosen from the
+    Possessed Equipment list.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 0 – 2 Mutants
+  - Special Rules
+  text: 'Mutations: Mutants must start the game with one or more mutations each. See
+    the Mutations list for the cost.'
+- section: henchmen
+  section_path:
+  - henchmen
+  text: (Bought in groups of 1-5)
+- section: 0 – 5 Darksouls
+  section_path:
+  - henchmen
+  - 0 – 5 Darksouls
+  text: '35 gold crowns to hire
+
+    Darksouls are men who have been driven insane by the daemonic possession which
+    became all too common after the destruction of Mordheim. The Daemons have left
+    the bodies of these men, but their minds have been scarred by the horror of the
+    experience.
+
+    Their insane strength makes Darksouls dangerous fighters. The Cultists regard
+    them as holy men, and let them work out their unreasoning rage in battle. In their
+    tortured minds the Darksouls believe themselves to be Daemons. They wear leering
+    daemonic masks and garb themselves in armour and clothing resembling the scaled
+    skin of Daemons.
+
+    Weapons/Armour: Darksouls may be equipped with weapons and armour chosen from
+    the Darksouls Equipment list.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 5 Darksouls
+  - Special Rules
+  text: 'Crazed: Darksouls have been driven insane by daemonic possession and know
+    no fear. They automatically pass any Leadership tests they are required to take.'
+- section: 0 – 3 Beastmen
+  section_path:
+  - henchmen
+  - 0 – 3 Beastmen
+  text: '45 gold crowns to hire
+
+    Beastmen are mutated monstrosities that infest the forests of the Empire: massive
+    horned creatures with an inhuman resistance to pain. The destruction of Mordheim
+    brought many Beastmen into the ruined city to prey upon the survivors. They readily
+    ally with the Magisters of the Possessed warbands.
+
+    Weapons/Armour: Beastmen may be equipped with weapons and armour chosen from the
+    Darksouls Equipment list.'
+- section: Brethren
+  section_path:
+  - henchmen
+  - Brethren
+  text: '25 gold crowns to hire
+
+    Brethren are the crazed human followers of the cults of the dark gods, eager to
+    descend into damnation. Their vile deeds and unspeakable acts have driven them
+    to the brink of insanity.
+
+    Weapons/Armour: The Brethren may be equipped with weapons and armour chosen from
+    the Possessed Equipment list.'
+- section: Mutations
+  section_path:
+  - Mutations
+  text: 'Those who dwell in Mordheim soon develop horrible mutations, and the Cult
+    of the Possessed seem to be especially susceptible. In addition, Mordheim attracts
+    mutants from all over the Empire, who are always quick to join the Chaos covens.
+    Most mutations are simply inconvenient or hideous, but some make their bearers
+    extremely dangerous in combat.
+
+    Mutations may be bought for a Mutant or a Possessed warrior only when they are
+    recruited; you may not buy new mutations for a model after recruitment. Any Mutant
+    or Possessed may have one or more mutations. The first mutation is bought at the
+    price indicated, but second ❓ and subsequent mutations bought for the same model
+    cost double.'
+- section: daemon soul
+  section_path:
+  - Mutations
+  - daemon soul
+  text: 'A Daemon lives within the mutant’s soul. This gives him a 4+ save against
+    the effects of spells or prayers. ❓
+
+    Cost: 20 gold crowns.'
+- section: great claw
+  section_path:
+  - Mutations
+  - great claw
+  text: 'One of the mutant’s arms ends in a great, crab-like claw. He may carry no
+    weapons in this arm, but gains an extra attack in hand-to-hand combat with a +1
+    Strength bonus. ❓
+
+    Cost: 50 gold crowns.'
+- section: cloven hoofs
+  section_path:
+  - Mutations
+  - cloven hoofs
+  text: 'The warrior gains +1 Movement. ❓
+
+    Cost: 40 gold crowns'
+- section: tentacle
+  section_path:
+  - Mutations
+  - tentacle
+  text: 'One of the mutant’s arms ends in a tentacle. ❓ He may grapple his opponent
+    in close combat to reduce his attacks by -1, down to a minimum of 1. The mutant
+    may decide which attack his opponent loses.
+
+    Cost: 35 gold crowns'
+- section: blackblood
+  section_path:
+  - Mutations
+  - blackblood
+  text: 'If the model loses a wound ❓ in close combat, anyone in base contact with
+    the model suffers a Strength 3 hit (no critical hits) from the spurting corrosive
+    blood.
+
+    Cost: 30 gold crowns'
+- section: spines
+  section_path:
+  - Mutations
+  - spines
+  text: 'Any model in base contact with the mutant suffers an automatic Strength 1
+    hit at the beginning of each close combat phase. Spines will never cause critical
+    hits.
+
+    Cost: 35 gold crowns'
+- section: scorpion tail
+  section_path:
+  - Mutations
+  - scorpion tail
+  text: 'The mutant has a long barbed tail with a venomed tip, allowing him to make
+    an extra Strength 5 attack in each hand-to-hand combat phase. If the model hit
+    by the tail is immune to poison, the Strength of the hit is reduced to 2.
+
+    Cost: 40 gold crowns'
+- section: extra arm
+  section_path:
+  - Mutations
+  - extra arm
+  text: 'The mutant may use any single-handed weapon in the extra arm, giving him
+    +1 attack when fighting in hand-to-hand combat. Alternatively, he may carry a
+    shield or a buckler in the extra arm. ❓ If a Possessed chooses to do this, he
+    gains an extra attack but still cannot carry a weapon.
+
+    Cost: 40 gold crowns'
+- section: hideous
+  section_path:
+  - Mutations
+  - hideous
+  text: 'The mutant causes fear .
+
+    Cost: 40 gold crowns'

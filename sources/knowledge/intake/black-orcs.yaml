@@ -1,0 +1,753 @@
+id: black-orcs
+name: Black Orcs
+grade: 1b
+source_url: https://mordheimer.net/docs/warbands/grade-1b-warbands/black-orcs
+headings:
+- Special Rules ​
+- Choice of warriors ​
+- Starting experience ​
+- Orc Skill Table ​
+- Black Orc Special Skills ​
+- proven warrior ​
+- ’ard ead ​
+- waaagh! ​
+- ’ere we go! ​
+- da cunnin’ plan ​
+- ’eadbasher ​
+- Orc equipment lists ​
+- Black Orc List ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Henchmen List ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- heroes ​
+- 1 Black Orc Boss ​
+- Special Rules ​
+- 0 – 2 Black Orcs ​
+- SPECIAL RULES ​
+- 0 – 2 Young’uns ​
+- Special Rules ​
+- henchmen ​
+- Orc Boyz ​
+- Special Rules ​
+- Orc Shootaz ​
+- Special Rules ​
+- 0 – 4 Orc Nuttaz ​
+- Special Rules ​
+- 0 – 1 Troll ​
+- SPECIAL RULES ​
+tables:
+- section: Special Rules
+  section_path:
+  - Special Rules
+  rows:
+  - - D6
+    - Result
+  - - '1'
+    - “I ’Erd Dat!” The warrior decides that the nearest friendly Orc or Goblin Henchman
+      has insulted his lineage or personal hygiene and must pay the price! If there
+      is a friendly Orc or Goblin Henchman or Hired Sword within charge reach (if
+      there are multiple targets within reach, choose the one nearest to the mad model),
+      the offended warrior will immediately charge and fight a round of hand-to-hand
+      combat against the source of his ire. At the end of this round of combat, the
+      models will immediately move 1" apart and no longer count as being in close
+      combat (unless one of them fails another Animosity test and rolls this result
+      again). If there are no friendly Orc or Goblin Henchmen or Hired Swords within
+      charge reach, and the warrior is armed with a missile weapon, he immediately
+      takes a shot at the nearest friendly Orc or Goblin Henchman or Hired Sword.
+      If none of the above applies, or if the nearest friendly model is an Orc Hero,
+      the warrior behaves as if a 2-5 had been rolled on this chart. In any case,
+      the warrior in question may take no other action this turn, though he may defend
+      himself if attacked in hand-to-hand combat.
+  - - 2-5
+    - “Wud Yoo Say?” The warrior is fairly certain he heard an offensive sound from
+      the nearest friendly Orc or Goblin, but he’s not quite sure. He spends the turn
+      hurling insults at his mate. He may do nothing else this turn, though he may
+      defend himself if attacked in hand-to-hand combat.
+  - - '6'
+    - “I’ll Show Yer!” The warrior imagines that his mates are laughing about him
+      behind his back and calling him silly names. To show them up he decides that
+      he’ll be the first one to the scrap! This model must move as quickly as possible
+      towards the nearest enemy model, charging into combat if possible. If there
+      are no enemy models within sight, the Orc or Goblin warrior may make a normal
+      move immediately. This move is in addition to his regular move in the Movement
+      phase, so he may therefore move twice in a single turn if you wish. If the extra
+      move takes the Orc or Goblin warrior within charge reach of an enemy model,
+      the warrior must charge into close combat during his regular movement.
+- section: Orc Skill Table
+  section_path:
+  - Orc Skill Table
+  rows:
+  - - ''
+    - Combat
+    - Shooting
+    - Academic
+    - Strength
+    - Speed
+    - Special
+  - - Black Orc Boss
+    - ✓
+    - ✓
+    - ''
+    - ✓
+    - ✓
+    - ✓
+  - - Black Orc
+    - ✓
+    - ✓
+    - ''
+    - ✓
+    - ✓
+    - ✓
+  - - Young’uns
+    - ✓
+    - ✓
+    - ''
+    - ''
+    - ''
+    - ✓
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Orc equipment lists
+  - Black Orc List
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Axe
+    - 5 gc
+  - - Sword
+    - 10 gc
+  - - Choppa (Counts as a Morning star )
+    - 10 gc
+  - - Spear
+    - 10 gc
+  - - Double-handed weapon
+    - 15 gc
+- section: Missile Weapons
+  section_path:
+  - Orc equipment lists
+  - Black Orc List
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Bow
+    - 10 gc
+  - - Crossbow
+    - 25 gc
+- section: Armour
+  section_path:
+  - Orc equipment lists
+  - Black Orc List
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Buckler
+    - 5 gc
+  - - Shield
+    - 5 gc
+  - - Helmet
+    - 10 gc
+  - - Light armour
+    - 20 gc
+  - - Heavy armour
+    - 50 gc
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Orc equipment lists
+  - Henchmen List
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Axe
+    - 5 gc
+  - - Sword
+    - 10 gc
+  - - Choppa (Counts as a Morning star )
+    - 10 gc
+  - - Spear
+    - 10 gc
+  - - Double-handed weapon *
+    - 15 gc
+- section: Missile Weapons
+  section_path:
+  - Orc equipment lists
+  - Henchmen List
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Bow
+    - 10 gc
+  - - Crossbow **
+    - 25 gc
+- section: Armour
+  section_path:
+  - Orc equipment lists
+  - Henchmen List
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Shield
+    - 5 gc
+  - - Helmet
+    - 10 gc
+  - - Light armour
+    - 20 gc
+- section: 1 Black Orc Boss
+  section_path:
+  - heroes
+  - 1 Black Orc Boss
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '4'
+    - '4'
+    - '4'
+    - '4'
+    - '1'
+    - '3'
+    - '1'
+    - '8'
+- section: 0 – 2 Black Orcs
+  section_path:
+  - heroes
+  - 0 – 2 Black Orcs
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '4'
+    - '3'
+    - '4'
+    - '4'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 2 Young’uns
+  section_path:
+  - heroes
+  - 0 – 2 Young’uns
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '2'
+    - '2'
+    - '3'
+    - '4'
+    - '1'
+    - '2'
+    - '1'
+    - '6'
+- section: Orc Boyz
+  section_path:
+  - henchmen
+  - Orc Boyz
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '4'
+    - '1'
+    - '2'
+    - '1'
+    - '6'
+- section: Orc Shootaz
+  section_path:
+  - henchmen
+  - Orc Shootaz
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '4'
+    - '1'
+    - '2'
+    - '1'
+    - '6'
+- section: 0 – 4 Orc Nuttaz
+  section_path:
+  - henchmen
+  - 0 – 4 Orc Nuttaz
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '2'
+    - '3'
+    - '4'
+    - '1'
+    - '2'
+    - '1'
+    - 5*
+- section: 0 – 1 Troll
+  section_path:
+  - henchmen
+  - 0 – 1 Troll
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '6'
+    - '3'
+    - '1'
+    - '5'
+    - '4'
+    - '3'
+    - '1'
+    - '3'
+    - '4'
+section_text:
+- section: Special Rules
+  section_path:
+  - Special Rules
+  text: 'Let the goons do the work: Black Orcs rely on
+
+    themselves to do the killing and do not ride mounts
+
+    of any kind. Only normal Orcs may ride a boar or
+
+    other such mount.
+
+    Da Boss is Dead!: If the Boss should be killed a Black
+
+    Orc will always assume leadership of the warband
+
+    before any other type, irrespective of relative
+
+    experience. The replacement will automatically
+
+    acquire the "Oi Behave!" skill.
+
+    Animosity. Orcs and Goblins enjoy nothing more than a good scrap, unfortunately
+    they’re not always very discerning about who they scrap with! To represent this,
+    at the start of the Orc player’s turn, roll a D6 for each Henchman who is either
+    an Orc or a Goblin. A roll of 1 means that the warrior has taken offense to something
+    one of his mates has done or said. Do not roll for models that are engaged in
+    hand-to-hand combat (they’re already scrappin’!). To find out just how offended
+    the model is, roll another D6 and consult the following chart to see what happens:'
+- section: Black Orc Special Skills
+  section_path:
+  - Black Orc Special Skills
+  text: Black Orc Heroes may use the following Skill list instead of the standard
+    skill lists available to them.
+- section: proven warrior
+  section_path:
+  - Black Orc Special Skills
+  - proven warrior
+  text: 'This young warrior has proven himself worthy of his
+
+    Black Orc heritage. This skill may only be taken by a
+
+    Young’un with the Black Orc blood ability and 25
+
+    experience. Once he gains this skill, the model is now
+
+    considered a full Black Orc Warrior (yet still retains
+
+    the title of Young’un). He follows all the rules for
+
+    Black Orcs and uses their equipment list and has
+
+    access to the same skill lists as a Black Orc.'
+- section: ’ard ead
+  section_path:
+  - Black Orc Special Skills
+  - ’ard ead
+  text: The warrior has a thick skull even for an Orc. He has a special 3+ save on
+    a D6 to avoid being stunned. If the save is made, treat a stunned result as knocked
+    down instead. If the Orc also wears a helmet, this save is 2+ instead of 3+ (this
+    takes the place of the normal helmet special rule).
+- section: waaagh!
+  section_path:
+  - Black Orc Special Skills
+  - waaagh!
+  text: Orcs are aggressive creatures and some are experts at bulldozing charges.
+    The warrior may add +D3" to his charge range.
+- section: ’ere we go!
+  section_path:
+  - Black Orc Special Skills
+  - ’ere we go!
+  text: 'Orcs often charge even the most fearsome opponents. The
+
+    model may ignore fear tests when charging.'
+- section: da cunnin’ plan
+  section_path:
+  - Black Orc Special Skills
+  - da cunnin’ plan
+  text: 'Only the Boss may have this skill. The warband may re-roll
+
+    any failed Rout tests as long as the Boss is not out of action .'
+- section: ’eadbasher
+  section_path:
+  - Black Orc Special Skills
+  - ’eadbasher
+  text: Orcs have massive physical strength and some of them even learn to aim their
+    blows at the heads of their opponents, with obvious results. Any knocked down
+    results which the Orc causes in hand-to-hand count as stunned results instead.
+- section: Orc equipment lists
+  section_path:
+  - Orc equipment lists
+  text: The following lists are used by Orc Mob warbands to pick their equipment.
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Orc equipment lists
+  - Henchmen List
+  - Hand-to-hand Combat Weapons
+  text: '*Boyz and Nuttaz only'
+- section: Missile Weapons
+  section_path:
+  - Orc equipment lists
+  - Henchmen List
+  - Missile Weapons
+  text: '**Shootaz only'
+- section: 1 Black Orc Boss
+  section_path:
+  - heroes
+  - 1 Black Orc Boss
+  text: '90 gold crowns to hire
+
+    Amongst some of the toughest of the tough, a Black Orc Boss has fought in numerous
+    battles and proven to the gods just how truly powerful they can become. Taking
+    a warband is the start of their ambitions as they will seek victories to meld
+    the Boyz into larger and larger warbands until they have a Horde at their beck
+    and call.
+
+    Weapons/Armour: A Black Orc Boss may be equipped with weapons and armour chosen
+    from the Black Orc list.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 1 Black Orc Boss
+  - Special Rules
+  text: 'Leader: Any warrior within 6" of the Boss may use his
+
+    Leadership characteristic when taking Leadership tests.
+
+    Black Orc: Model starts with a natural 6+ Armour Black Orc Save. This save may
+    be combined with other equipment to improve it.
+
+    Oi Behave!: If any Henchman fails his Animosity test
+
+    within 6” of the Boss, the player may opt to have the
+
+    boss stamp his authority (and clenched fist) on the
+
+    situation.
+
+    The misbehaving Henchman will receive an automatic
+
+    hit at the strength of the Orc player’s choosing. If the
+
+    Henchman is still on his feet after his slap, he may
+
+    add a number equal to the strength of the slap to his
+
+    subsequent roll to determine the effects of Animosity.
+
+    E.g. The player decides that the Boss will hit a
+
+    misbehaving Henchman with a S2 slap. If the slap fails
+
+    to Knock Down, Stun or Out of Action the
+
+    Henchman, then he adds +2 to the Animosity Effect
+
+    roll.'
+- section: 0 – 2 Black Orcs
+  section_path:
+  - heroes
+  - 0 – 2 Black Orcs
+  text: '60 gold crowns to hire
+
+    In it for the mayhem, maybe even some loyalty to the Boss of the warband, these
+    Black Orcs lead the charge at every turn, knowing that killing is only at arm’s
+    reach all the time and they don’t care what the target is, some Imperial peasant,
+    herd of Beastmen or even the Boyz in the warband. The Black Orcs just don’t care.
+
+    Weapons/Armour: Black Orcs may be equipped with weapons and armour chosen from
+    the Black Orc list.'
+- section: SPECIAL RULES
+  section_path:
+  - heroes
+  - 0 – 2 Black Orcs
+  - SPECIAL RULES
+  text: 'Black Orc: Model starts with a natural 6+ Armour Black Orc Save. This save
+    may be combined with other equipment to improve it.'
+- section: 0 – 2 Young’uns
+  section_path:
+  - heroes
+  - 0 – 2 Young’uns
+  text: '25 gold crowns to hire
+
+    Keen eager and, above all, green recruits to any warband, these lads haven’t seen
+    anywhere near as much action as the others in the warband and they’re plenty keen
+    to get in there and do some damage. Of course one day, they know it’ll be their
+    warband.
+
+    Weapons/Armour: Young’uns may be equipped with weapons and armour taken from the
+    Henchmen Equipment List.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 0 – 2 Young’uns
+  - Special Rules
+  text: 'Black Orc Blood: One Young’un may be upgraded to
+
+    a Black Orc Young’un for 10gc. This upgrade allows
+
+    him to take the ‘Proven Warrior’ skill upgrade, thus
+
+    making him a fully-fledged Black Orc Warrior.'
+- section: henchmen
+  section_path:
+  - henchmen
+  text: (Bought in groups of 1-5)
+- section: Orc Boyz
+  section_path:
+  - henchmen
+  - Orc Boyz
+  text: '25 gold crowns to hire
+
+    No warband would be complete without the warm bodies to makeup the number and
+    thus the Boyz are essential, purely because the Black Orcs need someone to kick
+    around when they can’t find anything else to do it too.
+
+    Weapons/Armour: Boyz may be equipped with weapons and
+
+    armour chosen from the Henchman equipment list.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - Orc Boyz
+  - Special Rules
+  text: 'Animosity: At the start of every turn, every Orc Boy must take a Ld Test
+    for Animosity'
+- section: Orc Shootaz
+  section_path:
+  - henchmen
+  - Orc Shootaz
+  text: '25 gold crowns to hire
+
+    Not all Orcs enjoy getting into a fight straight away. Some are hunters, tracking
+    prey and shooting it down from a distance, others recognise that sometimes you
+    need to soften up a really tough foe from a distance before moving in to finish
+    them off. This is the closest Orcs come to outright cowardice.
+
+    Weapons/Armour: Shootaz may be equipped with weapons and
+
+    armour chosen from the Henchman equipment list.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - Orc Shootaz
+  - Special Rules
+  text: 'Animosity: At the start of every turn, every Shoota must take a Ld Test for
+    Animosity.
+
+    Uncommon: A warband may not
+
+    hire more Shootaz than they
+
+    have Boyz. If a boy dies and
+
+    the Shootaz outnumber the
+
+    Boyz, the next hire must be
+
+    a boy so that the balance
+
+    is restored.'
+- section: 0 – 4 Orc Nuttaz
+  section_path:
+  - henchmen
+  - 0 – 4 Orc Nuttaz
+  text: '40 gold crowns to hire
+
+    These are Orcs who have been left a little bit… unstable by the Storm of Chaos.
+    They ain’t right in the head, I tell you, especially by Orc standards. Eventually
+    they’ll kill themselves, but only after they’ve killed everyone else.
+
+    Weapons/Armour: Nuttaz may be equipped with weapons and
+
+    armour chosen from the Henchman equipment list.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 4 Orc Nuttaz
+  - Special Rules
+  text: 'Unstable: These Orcs are not quite all there. They do
+
+    not suffer from Animosity, but instead have a host of
+
+    their own issues to deal with.
+
+    Crazy: Nuttaz always pass any Leadership-based Tests
+
+    they have to take. A side effect of this is that their
+
+    minds are too far-gone and they may never learn
+
+    Academic Skills should they become a Hero on an
+
+    Advance Roll.
+
+    Savage: Nuttaz must always run or charge their
+
+    maximum distance towards the nearest opponent
+
+    they can see. Friendly models do not block line of
+
+    sight. Additionally they fight with an extra attack
+
+    whilst in combat. This does not appear on their
+
+    profile nor does it count towards the racial maximum.
+
+    If no enemy is visible they are moved under the
+
+    player’s control. They can never use any form of
+
+    armour or ranged weapons. Nuttaz
+
+    are also too unstable for other Boyz and
+
+    can never have the Leader ability or
+
+    use their Ld stat for rout tests, excepting
+
+    them as being the only models left on
+
+    the board.'
+- section: 0 – 1 Troll
+  section_path:
+  - henchmen
+  - 0 – 1 Troll
+  text: '200 gold crowns to hire
+
+    Trolls are not intelligent enough to recognise the value of gold, but large amounts
+    of food can often instil a certain loyalty in them. Black Orc Boss like having
+    Trolls in their bands because it’s good to have someone who’ll follow any order,
+    no matter how stupid or suicidal.
+
+    Weapons/Armour: Trolls do not require weapons to fight but
+
+    often carry a big club. In any event, Trolls can never be given
+
+    weapons or armour.'
+- section: SPECIAL RULES
+  section_path:
+  - henchmen
+  - 0 – 1 Troll
+  - SPECIAL RULES
+  text: 'Fear: Trolls are frightening monsters which cause fear .
+
+    Stupidity: A Troll is subject to the rules for stupidity .
+
+    Regeneration: Trolls have a unique physiology that allows them to regenerate wounds.
+    Whenever an enemy successfully inflicts a wound on a Troll roll a D6, on a result
+    of 4 or more the wound is ignored and the Troll is unhurt. Trolls may not regenerate
+    wounds caused by fire or fire-based magic. Trolls never roll for Injury after
+    a battle, unless they were taken Out of Action by a Flaming weapon or spell. Then
+    they roll after the battle as a normal Henchman.
+
+    Dumb Monster: A Troll is far too stupid to ever learn any
+
+    new skills. Trolls do not gain experience.
+
+    Always Hungry: A Troll requires an upkeep cost. This upkeep represents the copious
+    amounts of food that must be fed to the Troll in order to keep him loyal to the
+    warband. The warband must pay 20 gold crowns after every game in order to keep
+    the Troll. If a warband lacks the gold to pay the upkeep, the Boss has the option
+    to let him count as 2 members, letting the Troll cost only 5 crowns. However this
+    does effectively drop your maximum warband size down to 11 models.
+
+    Vomit Attack: Instead of his normal attacks, a Troll can regurgitate its highly
+    corrosive digestive juices on an unfortunate hand-to-hand combat opponent. This
+    is a single attack that automatically hits with a Strength of 5 and ignores armour
+    saves.
+
+    Large Target: Trolls are Large Targets as defined in the shooting rules.'

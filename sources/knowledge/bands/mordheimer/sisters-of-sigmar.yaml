@@ -1,0 +1,558 @@
+schema_version: 1
+id: sisters-of-sigmar
+name: Sisters of Sigmar
+name_i18n:
+  en: Sisters of Sigmar
+  es: null
+original_locale: en
+categories:
+- core
+collections:
+- mordheimer
+grade: core
+setting: Mordheim
+publication: Mordheim Rulebook
+status: source-normalized
+sources:
+- manual: mordheimer.net
+  printed_page: 0
+  section: Sisters of Sigmar
+  url: https://mordheimer.net/docs/warbands/grade-1a-warbands/sisters-of-sigmar
+roster:
+  minimum_models: 3
+  maximum_models: 15
+  starting_gold: 500
+  members:
+  - profile_id: sigmarite-matriarch
+    minimum: 1
+    maximum: 1
+  - profile_id: augur
+    minimum: 0
+    maximum: 1
+  - profile_id: sister-superior
+    minimum: 0
+    maximum: 3
+  - profile_id: sigmarite-sister
+    minimum: 0
+    maximum: null
+  - profile_id: novices
+    minimum: 0
+    maximum: 10
+equipment_lists:
+- id: sisters-of-sigmar-equipment-lists
+  name: Sisters of Sigmar equipment lists
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: 1st free/2 gc
+  - item_id: mace
+    cost: 3
+  - item_id: hammer
+    cost: 3
+  - item_id: sigmarite_hammer
+    cost: 15
+  - item_id: flail
+    cost: 15
+  - item_id: steel_whip
+    cost: 10
+  - item_id: great_weapon
+    cost: 15
+  - item_id: sling
+    cost: 2
+  - item_id: light_armour
+    cost: 20
+  - item_id: heavy_armour
+    cost: 50
+  - item_id: shield
+    cost: 5
+  - item_id: buckler
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  - item_id: holy_tome
+    cost: 120
+  - item_id: blessed_water
+    cost: 10
+  - item_id: holy_relic
+    cost: 15
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Sisters of Sigmar equipment lists
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/sisters-of-sigmar
+  name_i18n:
+    en: Sisters of Sigmar equipment lists
+    es: null
+profiles:
+- id: sigmarite-matriarch
+  name: Sigmarite matriarch
+  type: hero
+  cost: 70
+  experience: 20
+  characteristics:
+    M: 4
+    WS: 4
+    BS: 4
+    S: 3
+    T: 3
+    W: 1
+    I: 4
+    A: 1
+    Ld: 8
+  equipment_lists:
+  - sisters-of-sigmar-equipment-lists
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - academic
+  - strength
+  - speed
+  - special
+  rules:
+  - id: leader
+    name: Leader
+    effect: Any warband member within 6" of the Sigmarite Matriarch may use her Leadership characteristic when taking any
+      Leadership tests.
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: heroines / 1 Sigmarite matriarch / Special Rules / Leader
+      url: https://mordheimer.net/docs/warbands/grade-1a-warbands/sisters-of-sigmar
+    name_i18n:
+      en: Leader
+      es: null
+    effect_i18n:
+      en: Any warband member within 6" of the Sigmarite Matriarch may use her Leadership characteristic when taking any Leadership
+        tests.
+      es: null
+  - id: prayers-of-sigmar
+    name: Prayers of Sigmar
+    effect: The Sigmarite Matriarch is a servant of Sigmar and may use the Prayers of Sigmar as detailed in the Magic section
+      and the Sigmarite Matriarchs start with one prayer generated at random. In addition the Sigmarite Matriarchs may learn
+      a new Prayer instead of a new skill.
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: heroines / 1 Sigmarite matriarch / Special Rules / Prayers of Sigmar
+      url: https://mordheimer.net/docs/warbands/grade-1a-warbands/sisters-of-sigmar
+    name_i18n:
+      en: Prayers of Sigmar
+      es: null
+    effect_i18n:
+      en: The Sigmarite Matriarch is a servant of Sigmar and may use the Prayers of Sigmar as detailed in the Magic section
+        and the Sigmarite Matriarchs start with one prayer generated at random. In addition the Sigmarite Matriarchs may learn
+        a new Prayer instead of a new skill.
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 1 Sigmarite matriarch
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/sisters-of-sigmar
+  source_path:
+  - heroines
+  - 1 Sigmarite matriarch
+  name_i18n:
+    en: Sigmarite matriarch
+    es: null
+- id: augur
+  name: Augur
+  type: hero
+  cost: 25
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 2
+    BS: 2
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - sisters-of-sigmar-equipment-lists
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - academic
+  - speed
+  - special
+  rules:
+  - id: blessed-sight
+    name: Blessed Sight
+    effect: An Augur can re-roll any failed characteristic tests (climbing, resisting spells or any other reason), and any
+      rolls to hit in close combat or shooting. You must accept the second result. In addition, an Augur can use her Blessed
+      Sight to help the Sisterhood when they are searching the city for wyrdstone. If the Augur is not put out of action in
+      the battle, you may roll two dice for her in the exploration phase and pick either dice as the result. ❓
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: heroines / 0 – 1 Augur / Special Rules / Blessed Sight
+      url: https://mordheimer.net/docs/warbands/grade-1a-warbands/sisters-of-sigmar
+    name_i18n:
+      en: Blessed Sight
+      es: null
+    effect_i18n:
+      en: An Augur can re-roll any failed characteristic tests (climbing, resisting spells or any other reason), and any rolls
+        to hit in close combat or shooting. You must accept the second result. In addition, an Augur can use her Blessed Sight
+        to help the Sisterhood when they are searching the city for wyrdstone. If the Augur is not put out of action in the
+        battle, you may roll two dice for her in the exploration phase and pick either dice as the result. ❓
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 1 Augur
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/sisters-of-sigmar
+  source_path:
+  - heroines
+  - 0 – 1 Augur
+  name_i18n:
+    en: Augur
+    es: null
+- id: sister-superior
+  name: Sister superior
+  type: hero
+  cost: 35
+  experience: 8
+  characteristics:
+    M: 4
+    WS: 4
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - sisters-of-sigmar-equipment-lists
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: &id001
+  - combat
+  - academic
+  - strength
+  - speed
+  - special
+  rules: []
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 3 Sister superior
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/sisters-of-sigmar
+  source_path:
+  - heroines
+  - 0 – 3 Sister superior
+  name_i18n:
+    en: Sister superior
+    es: null
+- id: sigmarite-sister
+  name: Sigmarite Sister
+  type: henchman
+  cost: 25
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - sisters-of-sigmar-equipment-lists
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: *id001
+  rules: []
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Sigmarite Sister
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/sisters-of-sigmar
+  source_path:
+  - henchwomen
+  - Sigmarite Sister
+  name_i18n:
+    en: Sigmarite Sister
+    es: null
+- id: novices
+  name: Novices
+  type: henchman
+  cost: 15
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 2
+    BS: 2
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 6
+  equipment_lists:
+  - sisters-of-sigmar-equipment-lists
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules: []
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 10 Novices
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/sisters-of-sigmar
+  source_path:
+  - henchwomen
+  - 0 – 10 Novices
+  name_i18n:
+    en: Novices
+    es: null
+band_rules:
+- id: special-skills
+  name: Special Skills
+  effect: The Sisters of Sigmar may use the following skill list instead of the standard skill lists.
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Special Skills
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/sisters-of-sigmar
+  name_i18n:
+    en: Special Skills
+    es: null
+  effect_i18n:
+    en: The Sisters of Sigmar may use the following skill list instead of the standard skill lists.
+    es: null
+- id: special-skills-sign-of-sigmar
+  name: Sign of Sigmar
+  effect: The Sister is favoured by the great god Sigmar. Possessed or Undead opponents lose their first attack against the
+    Priestess in the first round of hand-to-hand combat (down to a minimum of 1).
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Special Skills / Sign of Sigmar
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/sisters-of-sigmar
+  name_i18n:
+    en: Sign of Sigmar
+    es: null
+  effect_i18n:
+    en: The Sister is favoured by the great god Sigmar. Possessed or Undead opponents lose their first attack against the
+      Priestess in the first round of hand-to-hand combat (down to a minimum of 1).
+    es: null
+- id: special-skills-protection-of-sigmar
+  name: Protection of Sigmar
+  effect: The Sister has been blessed by the High Matriarch. Any spell which would affect her is nullified on a D6 roll of
+    4+. Note that if the spell is nullified it will not affect any other models either.
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Special Skills / Protection of Sigmar
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/sisters-of-sigmar
+  name_i18n:
+    en: Protection of Sigmar
+    es: null
+  effect_i18n:
+    en: The Sister has been blessed by the High Matriarch. Any spell which would affect her is nullified on a D6 roll of 4+.
+      Note that if the spell is nullified it will not affect any other models either.
+    es: null
+- id: special-skills-utter-determination
+  name: Utter Determination
+  effect: Only the Matriarch may have this skill, which allows her to re-roll any failed Rout tests.
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Special Skills / Utter Determination
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/sisters-of-sigmar
+  name_i18n:
+    en: Utter Determination
+    es: null
+  effect_i18n:
+    en: Only the Matriarch may have this skill, which allows her to re-roll any failed Rout tests.
+    es: null
+- id: special-skills-righteous-fury
+  name: Righteous Fury
+  effect: The Sister feels cold fury and utter contempt towards any evil that pollutes the soil of the holy Empire with its
+    presence. The model hates all Skaven, Undead, Possessed, Beastmen, Dark Elves and any other 'evil' warband ❓ and all models
+    in them. Non-Chaos humans who just like to kill, loot, etc, are not included.
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Special Skills / Righteous Fury
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/sisters-of-sigmar
+  name_i18n:
+    en: Righteous Fury
+    es: null
+  effect_i18n:
+    en: The Sister feels cold fury and utter contempt towards any evil that pollutes the soil of the holy Empire with its
+      presence. The model hates all Skaven, Undead, Possessed, Beastmen, Dark Elves and any other 'evil' warband ❓ and all
+      models in them. Non-Chaos humans who just like to kill, loot, etc, are not included.
+    es: null
+- id: special-skills-absolute-faith
+  name: Absolute Faith
+  effect: The Sister puts her faith in Sigmar, and faces dangers unflinchingly. She may re-roll any fear tests and does not
+    have to test if she is fighting alone against several opponents.
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Special Skills / Absolute Faith
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/sisters-of-sigmar
+  name_i18n:
+    en: Absolute Faith
+    es: null
+  effect_i18n:
+    en: The Sister puts her faith in Sigmar, and faces dangers unflinchingly. She may re-roll any fear tests and does not
+      have to test if she is fighting alone against several opponents.
+    es: null
+source_sections:
+- section: Choice of warriors
+  section_path:
+  - Choice of warriors
+  text: 'A Sisters of Sigmar warband must include a minimum of three models. You have 500 gold crowns to recruit your initial
+    warband. The maximum number of warriors in the warband may never exceed 15.
+
+    Sigmarite Matriarch: Each Sisters of Sigmar warband must have one Matriarch to lead it: no more, no less. Sister Superior:
+    Your warband may include up to 3 Sister Superiors. Augur: Your warband may include a single Augur. Novices: Your warband
+    may include up to 10 Novices. Sisters: Any number of models may be Sisters.'
+- section: Starting experience
+  section_path:
+  - Starting experience
+  text: A Matriarch starts with 20 experience. Sisters Superior start with 8 experience. An Augur starts with 0 experience.
+    Henchmen start with 0 experience.
+- section: Special Skills
+  section_path:
+  - Special Skills
+  text: The Sisters of Sigmar may use the following skill list instead of the standard skill lists.
+- section: Sign of Sigmar
+  section_path:
+  - Special Skills
+  - Sign of Sigmar
+  text: The Sister is favoured by the great god Sigmar. Possessed or Undead opponents lose their first attack against the
+    Priestess in the first round of hand-to-hand combat (down to a minimum of 1).
+- section: Protection of Sigmar
+  section_path:
+  - Special Skills
+  - Protection of Sigmar
+  text: The Sister has been blessed by the High Matriarch. Any spell which would affect her is nullified on a D6 roll of 4+.
+    Note that if the spell is nullified it will not affect any other models either.
+- section: Utter Determination
+  section_path:
+  - Special Skills
+  - Utter Determination
+  text: Only the Matriarch may have this skill, which allows her to re-roll any failed Rout tests.
+- section: Righteous Fury
+  section_path:
+  - Special Skills
+  - Righteous Fury
+  text: The Sister feels cold fury and utter contempt towards any evil that pollutes the soil of the holy Empire with its
+    presence. The model hates all Skaven, Undead, Possessed, Beastmen, Dark Elves and any other 'evil' warband ❓ and all models
+    in them. Non-Chaos humans who just like to kill, loot, etc, are not included.
+- section: Absolute Faith
+  section_path:
+  - Special Skills
+  - Absolute Faith
+  text: The Sister puts her faith in Sigmar, and faces dangers unflinchingly. She may re-roll any fear tests and does not
+    have to test if she is fighting alone against several opponents.
+- section: Sisters of Sigmar equipment lists
+  section_path:
+  - Sisters of Sigmar equipment lists
+  text: The following lists are used by Sisters of Sigmar warbands to pick their equipment.
+- section: Miscellaneous Equipment
+  section_path:
+  - Sisters of Sigmar equipment lists
+  - Miscellaneous Equipment
+  text: (Heroines only)
+- section: Special Equipment
+  section_path:
+  - Special Equipment
+  text: 'This warband has access to the following special equipment when purchasing items from the Trading Post , outside
+    their starting list:'
+- section: 1 Sigmarite matriarch
+  section_path:
+  - heroines
+  - 1 Sigmarite matriarch
+  text: '70 gold crowns (dowry to the temple)
+
+    The Sigmarite Matriarchs, of whom there is an inner circle of twelve, are answerable to the High Matriarch of the temple.
+    Each must lead a warband of Sisters in frequent searches of the city in order to purge the ruins. Matriarchs are driven
+    by a zealous devotion to the Cult of Sigmar and a relentless determination to redeem the Sisterhood in His eyes.
+
+    Weapons/Armour: The Sigmarite Matriarch may be equipped with weapons and armour chosen from the Sisters of Sigmar Equipment
+    list.'
+- section: Special Rules
+  section_path:
+  - heroines
+  - 1 Sigmarite matriarch
+  - Special Rules
+  text: 'Leader: Any warband member within 6" of the Sigmarite Matriarch may use her Leadership characteristic when taking
+    any Leadership tests.
+
+    Prayers of Sigmar: The Sigmarite Matriarch is a servant of Sigmar and may use the Prayers of Sigmar as detailed in the
+    Magic section and the Sigmarite Matriarchs start with one prayer generated at random. In addition the Sigmarite Matriarchs
+    may learn a new Prayer instead of a new skill.'
+- section: 0 – 1 Augur
+  section_path:
+  - heroines
+  - 0 – 1 Augur
+  text: '25 gold crowns (dowry to the temple)
+
+    The blind Augurs of the Sisterhood are blessed beyond their comrades. By giving up their sight they have gained something
+    far more, second sight – a gift from their patron god. Only a very few are marked this way, and they are greatly revered
+    by the Sisterhood. Unlike the rest of the priestesses, they shave their heads, save for a single long braid.
+
+    Weapons/Armour: The Augurs may be equipped with weapons chosen from the Sisters of Sigmar Equipment list. They never wear
+    armour.'
+- section: Special Rules
+  section_path:
+  - heroines
+  - 0 – 1 Augur
+  - Special Rules
+  text: 'Blessed Sight: An Augur can re-roll any failed characteristic tests (climbing, resisting spells or any other reason),
+    and any rolls to hit in close combat or shooting. You must accept the second result. In addition, an Augur can use her
+    Blessed Sight to help the Sisterhood when they are searching the city for wyrdstone. If the Augur is not put out of action
+    in the battle, you may roll two dice for her in the exploration phase and pick either dice as the result. ❓'
+- section: 0 – 3 Sister superior
+  section_path:
+  - heroines
+  - 0 – 3 Sister superior
+  text: '35 gold crowns (dowry to the temple)
+
+    Each of the Sisters Superior is a long-serving priestess of the Cult of Sigmar, well versed in the rituals of the temple
+    and an example to the younger Sisters and Novices. The Sisters Superior are entrusted with maintaining the faith and fervour
+    of the order. Any peril or foe that may lurk in the ruins of Mordheim is as nothing compared to the wrath of a Sister
+    Superior.
+
+    Weapons/Armour: A Sister Superior may be equipped with weapons and armour chosen from the Sisters of Sigmar Equipment
+    list.'
+- section: henchwomen
+  section_path:
+  - henchwomen
+  text: (Bought in groups of 1-5)
+- section: Sigmarite Sister
+  section_path:
+  - henchwomen
+  - Sigmarite Sister
+  text: '25 gold crowns (dowry to the temple)
+
+    Sigmarite Sisters know that their entire order is shamed in the eyes of their Lord Sigmar. Every one of them is sworn
+    upon His altar to pacify the city and thereby redeem themselves. Whatever the perils and horrors that stand in their way,
+    they will be overcome!
+
+    Weapons/Armour: The Sigmarite Sisters may be equipped with weapons and armour chosen from the Sisters of Sigmar Equipment
+    list.'
+- section: 0 – 10 Novices
+  section_path:
+  - henchwomen
+  - 0 – 10 Novices
+  text: '15 gold crowns (dowry to the temple)
+
+    By tradition, the Sisters draw their recruits only from the most noble houses of the Empire, and families consider it
+    a great honour to have their daughter accepted into the order. Only maidens of noble lineage can be relied upon to have
+    the devotion to duty and innate sense of honour. Few though the recruits may be, they must endure several years as Novices
+    during which time their devotion will be tested to the full. All are eager to prove themselves worthy to be the handmaidens
+    of Sigmar.
+
+    Weapons/Armour: The Novices may be equipped with weapons and armour chosen from the Sisters of Sigmar Equipment list.'
+canonical_family: sisters-of-sigmar

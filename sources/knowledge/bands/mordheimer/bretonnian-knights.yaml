@@ -1,0 +1,772 @@
+schema_version: 1
+id: bretonnian-knights
+name: Bretonnian Knights
+name_i18n:
+  en: Bretonnian Knights
+  es: null
+original_locale: en
+categories:
+- 1b
+collections:
+- mordheimer
+grade: 1b
+setting: Mordheim
+publication: Town Cryer 8
+status: source-normalized
+sources:
+- manual: mordheimer.net
+  printed_page: 0
+  section: Bretonnian Knights
+  url: https://mordheimer.net/docs/warbands/grade-1b-warbands/bretonnian
+roster:
+  minimum_models: 3
+  maximum_models: 15
+  starting_gold: 500
+  members:
+  - profile_id: questing-knight
+    minimum: 1
+    maximum: 1
+  - profile_id: knights-errant
+    minimum: 0
+    maximum: 2
+  - profile_id: squires
+    minimum: 0
+    maximum: 3
+  - profile_id: men-at-arms
+    minimum: 0
+    maximum: 8
+  - profile_id: bowmen
+    minimum: 0
+    maximum: null
+equipment_lists:
+- id: knights-equipment-list
+  name: Knights Equipment List
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: 1st free/2 gc
+  - item_id: mace
+    cost: 3
+  - item_id: axe
+    cost: 5
+    notes: 5 gc ✏️
+  - item_id: sword
+    cost: 10
+    notes: 10 gc ✏️
+  - item_id: great_weapon
+    cost: 15
+  - item_id: morning_star
+    cost: 15
+  - item_id: lance
+    cost: 20
+  - item_id: light_armour
+    cost: 20
+  - item_id: heavy_armour
+    cost: 50
+  - item_id: shield
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  - item_id: bretonnian_barding
+    cost: 30
+    notes: 30 gc ✏️
+  - item_id: warhorse
+    cost: 80
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Knights Equipment List
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/bretonnian
+  name_i18n:
+    en: Knights Equipment List
+    es: null
+- id: squires-equipment-list
+  name: Squires Equipment List
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: 1st free/2 gc
+  - item_id: hammer
+    cost: 3
+  - item_id: axe
+    cost: 5
+  - item_id: sword
+    cost: 10
+  - item_id: spear
+    cost: 10
+  - item_id: bow
+    cost: 10
+  - item_id: long_bow
+    cost: 15
+  - item_id: shield
+    cost: 5
+  - item_id: buckler
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  - item_id: light_armour
+    cost: 20
+  - item_id: horse
+    cost: 40
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Squires Equipment List
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/bretonnian
+  name_i18n:
+    en: Squires Equipment List
+    es: null
+- id: men-at-arms-equipment-list
+  name: Men-at-Arms Equipment List
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: 1st free/2 gc
+  - item_id: hammer
+    cost: 3
+  - item_id: axe
+    cost: 5
+  - item_id: sword
+    cost: 10
+  - item_id: spear
+    cost: 10
+  - item_id: halberd
+    cost: 10
+  - item_id: great_weapon
+    cost: 15
+  - item_id: shield
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  - item_id: light_armour
+    cost: 20
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Men-at-Arms Equipment List
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/bretonnian
+  name_i18n:
+    en: Men-at-Arms Equipment List
+    es: null
+- id: bowmen-equipment-list
+  name: Bowmen Equipment List
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: 1st free/2 gc
+  - item_id: axe
+    cost: 5
+  - item_id: sword
+    cost: 10
+  - item_id: bow
+    cost: 10
+  - item_id: long_bow
+    cost: 15
+  - item_id: helmet
+    cost: 10
+  - item_id: light_armour
+    cost: 20
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Bowmen Equipment List
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/bretonnian
+  name_i18n:
+    en: Bowmen Equipment List
+    es: null
+profiles:
+- id: questing-knight
+  name: Questing Knight
+  type: hero
+  cost: 80
+  experience: 20
+  characteristics:
+    M: 4
+    WS: 4
+    BS: 3
+    S: 4
+    T: 3
+    W: 1
+    I: 4
+    A: 1
+    Ld: 8
+  equipment_lists:
+  - knights-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - strength
+  - speed
+  - special
+  rules:
+  - id: leader
+    name: Leader
+    effect: 'Any warrior within 6" of the Questing Knight may
+
+      use his Leadership characteristic when taking Leadership
+
+      tests.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: heroes / 1 Questing Knight / Special Rules / Leader
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/bretonnian
+    name_i18n:
+      en: Leader
+      es: null
+    effect_i18n:
+      en: 'Any warrior within 6" of the Questing Knight may
+
+        use his Leadership characteristic when taking Leadership
+
+        tests.'
+      es: null
+  - id: knights-virtue
+    name: Knights Virtue
+    effect: 'A Questing Knight is a chivalrous warrior
+
+      who is superior to ordinary warriors. He will never panic and
+
+      break from combat and so does not have to pass a Leadership
+
+      test for being all alone .'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: heroes / 1 Questing Knight / Special Rules / Knights Virtue
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/bretonnian
+    name_i18n:
+      en: Knights Virtue
+      es: null
+    effect_i18n:
+      en: 'A Questing Knight is a chivalrous warrior
+
+        who is superior to ordinary warriors. He will never panic and
+
+        break from combat and so does not have to pass a Leadership
+
+        test for being all alone .'
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 1 Questing Knight
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/bretonnian
+  source_path:
+  - heroes
+  - 1 Questing Knight
+  name_i18n:
+    en: Questing Knight
+    es: null
+- id: knights-errant
+  name: Knights Errant
+  type: hero
+  cost: 50
+  experience: 8
+  characteristics:
+    M: 4
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - knights-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - speed
+  - special
+  rules:
+  - id: knights-virtue
+    name: Knights Virtue
+    effect: 'A Knight Errant is a chivalrous warrior who
+
+      is superior to ordinary warriors. He will never panic and
+
+      break from combat and so does not have to pass a Leadership
+
+      test for being all alone .'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: heroes / 0 – 2 Knights Errant / Special Rules / Knights Virtue
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/bretonnian
+    name_i18n:
+      en: Knights Virtue
+      es: null
+    effect_i18n:
+      en: 'A Knight Errant is a chivalrous warrior who
+
+        is superior to ordinary warriors. He will never panic and
+
+        break from combat and so does not have to pass a Leadership
+
+        test for being all alone .'
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 2 Knights Errant
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/bretonnian
+  source_path:
+  - heroes
+  - 0 – 2 Knights Errant
+  name_i18n:
+    en: Knights Errant
+    es: null
+- id: squires
+  name: Squires
+  type: hero
+  cost: 15
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 2
+    BS: 2
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 6
+  equipment_lists:
+  - squires-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - strength
+  - special
+  rules: []
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 3 Squires
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/bretonnian
+  source_path:
+  - heroes
+  - 0 – 3 Squires
+  name_i18n:
+    en: Squires
+    es: null
+- id: men-at-arms
+  name: Men-at-Arms
+  type: henchman
+  cost: 25
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - knights-equipment-list
+  - squires-equipment-list
+  - men-at-arms-equipment-list
+  - bowmen-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules: []
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 8 Men-at-Arms
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/bretonnian
+  source_path:
+  - henchmen
+  - 0 – 8 Men-at-Arms
+  name_i18n:
+    en: Men-at-Arms
+    es: null
+- id: bowmen
+  name: Bowmen
+  type: henchman
+  cost: 20
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 6
+  equipment_lists:
+  - bowmen-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules: []
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Bowmen
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/bretonnian
+  source_path:
+  - henchmen
+  - Bowmen
+  name_i18n:
+    en: Bowmen
+    es: null
+band_rules:
+- id: special-rules
+  name: Special rules
+  effect: 'Before heading into battle Bretonnian Knights kneel and pray
+
+    to the Lady of the Lake, avowing to fight to the death for
+
+    honour and justice.
+
+    Before playing a game of Mordheim
+
+    make a Leadership test against the Leadership characteristic
+
+    of the warbands leader. If the test is successful the Lady of
+
+    the Lake has bestowed her blessing on the warband. The
+
+    blessing takes the form of a powerful curse upon the enemies
+
+    of chivalry, and in particular upon those that make use of the
+
+    foul and dishonourable weapons of mass destruction. Any
+
+    model in the opposing warband who wishes to fire a black
+
+    powder weapon must roll a D6 and score 4+ to overcome the
+
+    curse, otherwise they may not fire the weapon. The opposing
+
+    player must test each time they wish to fire such a weapon.
+
+    Models armed with other shooting weapons, such as bows
+
+    and crossbows, do not have to test unless they dare raise their
+
+    weapons against the gallant Knights of Bretonnia. If any
+
+    enemy model wishes to shoot at a Bretonnian Knight
+
+    (Questing Knights and Errants only), then they must first roll
+
+    a 4+ on a D6 to overcome the curse.'
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Special rules
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/bretonnian
+  name_i18n:
+    en: Special rules
+    es: null
+  effect_i18n:
+    en: 'Before heading into battle Bretonnian Knights kneel and pray
+
+      to the Lady of the Lake, avowing to fight to the death for
+
+      honour and justice.
+
+      Before playing a game of Mordheim
+
+      make a Leadership test against the Leadership characteristic
+
+      of the warbands leader. If the test is successful the Lady of
+
+      the Lake has bestowed her blessing on the warband. The
+
+      blessing takes the form of a powerful curse upon the enemies
+
+      of chivalry, and in particular upon those that make use of the
+
+      foul and dishonourable weapons of mass destruction. Any
+
+      model in the opposing warband who wishes to fire a black
+
+      powder weapon must roll a D6 and score 4+ to overcome the
+
+      curse, otherwise they may not fire the weapon. The opposing
+
+      player must test each time they wish to fire such a weapon.
+
+      Models armed with other shooting weapons, such as bows
+
+      and crossbows, do not have to test unless they dare raise their
+
+      weapons against the gallant Knights of Bretonnia. If any
+
+      enemy model wishes to shoot at a Bretonnian Knight
+
+      (Questing Knights and Errants only), then they must first roll
+
+      a 4+ on a D6 to overcome the curse.'
+    es: null
+source_sections:
+- section: Special rules
+  section_path:
+  - Special rules
+  text: 'Before heading into battle Bretonnian Knights kneel and pray
+
+    to the Lady of the Lake, avowing to fight to the death for
+
+    honour and justice.
+
+    Before playing a game of Mordheim
+
+    make a Leadership test against the Leadership characteristic
+
+    of the warbands leader. If the test is successful the Lady of
+
+    the Lake has bestowed her blessing on the warband. The
+
+    blessing takes the form of a powerful curse upon the enemies
+
+    of chivalry, and in particular upon those that make use of the
+
+    foul and dishonourable weapons of mass destruction. Any
+
+    model in the opposing warband who wishes to fire a black
+
+    powder weapon must roll a D6 and score 4+ to overcome the
+
+    curse, otherwise they may not fire the weapon. The opposing
+
+    player must test each time they wish to fire such a weapon.
+
+    Models armed with other shooting weapons, such as bows
+
+    and crossbows, do not have to test unless they dare raise their
+
+    weapons against the gallant Knights of Bretonnia. If any
+
+    enemy model wishes to shoot at a Bretonnian Knight
+
+    (Questing Knights and Errants only), then they must first roll
+
+    a 4+ on a D6 to overcome the curse.'
+- section: Choice of warriors
+  section_path:
+  - Choice of warriors
+  text: 'A Questing Knight’s warband must include a minimum of
+
+    three models. You have 500 gold crowns to recruit your
+
+    initial warband. The maximum number of warriors in the
+
+    warband may never exceed 12.
+
+    Questing Knight: Each Questing Knight’s warband must have one Questing Knight: no more, no less! Knight Errant: Your warband
+    may include up to two Knight Errant. Squires: Your warband may include up to three squires. You may not have more squires
+    in the warband then you have Knights. Men-at-arms: Your warband may include any number of Men-at-Arms. Bowmen: Your warband
+    may include any number of Bowmen.'
+- section: Starting experience
+  section_path:
+  - Starting experience
+  text: The Questing Knight starts with 20 experience. Knights Errant starts with 8 experience. Squires & all Henchmen start
+    with 0 experience.
+- section: Bretonnian Knight Virtues
+  section_path:
+  - Bretonnian Knight Virtues
+  text: Bretonnian Questing Knights may use the following Skill table instead of any of the standard Skill tables available
+    to them.
+- section: Virtue of Purity
+  section_path:
+  - Bretonnian Knight Virtues
+  - Virtue of Purity
+  text: 'The Knight''s sole purpose is to serve the Lady of the Lake. His purity of heart and discipline endow him with the
+    strength of spirit to resist enemy magic.
+
+    Any spell cast against the knight will be dispelled on the D6 roll of a 4+. This is a natural dispel on account of the
+    knights extreme piety.'
+- section: Virtue of valour
+  section_path:
+  - Bretonnian Knight Virtues
+  - Virtue of valour
+  text: 'The Knight has vowed to confront the biggest
+
+    and strongest foes. The more awesome his
+
+    enemy, the more valourous are his efforts.
+
+    If fighting a model with a higher Strength characteristic than himself, the Knight may reroll any failed to hit rolls
+    in hand-to-hand combat.'
+- section: Virtue of Discipline
+  section_path:
+  - Bretonnian Knight Virtues
+  - Virtue of Discipline
+  text: 'The Knight has total faith in his chivalric code:
+
+    he maintains self-control in the face of adversity,
+
+    and displays complete confidence whatever the
+
+    odds.
+
+    Once per game, if the knight is not out of action, stunned or
+
+    knocked down, you may re-roll a failed rout
+
+    test.'
+- section: Virtue of Noble Disdain
+  section_path:
+  - Bretonnian Knight Virtues
+  - Virtue of Noble Disdain
+  text: 'The Knight has nothing but contempt for enemies who hide behind weapons of dishonour.
+
+    The Knight is subject to hatred of all enemies armed with shooting weapons.'
+- section: Virtue of Impetuous
+  section_path:
+  - Bretonnian Knight Virtues
+  - Virtue of Impetuous
+  text: 'The Knight is eager to get to grips with the enemy. He charges into combat with reckless enthusiasm.
+
+    The Knight may add +D3" to his move when charging. Roll the dice each time you wish to charge and before moving the model.'
+- section: Bretonnian equipment lists
+  section_path:
+  - Bretonnian equipment lists
+  text: 'The following lists are used by Bretonnian warbands to pick their weapons:'
+- section: Missile Weapons
+  section_path:
+  - Bretonnian equipment lists
+  - Knights Equipment List
+  - Missile Weapons
+  text: None.
+- section: Missile Weapons
+  section_path:
+  - Bretonnian equipment lists
+  - Men-at-Arms Equipment List
+  - Missile Weapons
+  text: None.
+- section: Special Equipment
+  section_path:
+  - Special Equipment
+  text: 'This warband has access to the following special equipment when purchasing items from the Trading Post , outside
+    their starting list:'
+- section: 1 Questing Knight
+  section_path:
+  - heroes
+  - 1 Questing Knight
+  text: '80 gold crowns to hire
+
+    A Questing Knight is an extremely tough and virtuous individual, who fights to uphold the traditions of honour and to
+    serve the Lady of the Lake. Injustice and the persecution of the weak are his enemies, whilst courage and valour are his
+    companions. It is no wonder then that many a Questing Knight will journey to Mordheim.
+
+    Weapons/Armour: A Questing Knight may be equipped
+
+    with weapons and armour chosen from the Knights section of
+
+    the Bretonnian Equipment list.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 1 Questing Knight
+  - Special Rules
+  text: 'Leader: Any warrior within 6" of the Questing Knight may
+
+    use his Leadership characteristic when taking Leadership
+
+    tests.
+
+    Knights Virtue: A Questing Knight is a chivalrous warrior
+
+    who is superior to ordinary warriors. He will never panic and
+
+    break from combat and so does not have to pass a Leadership
+
+    test for being all alone .'
+- section: 0 – 2 Knights Errant
+  section_path:
+  - heroes
+  - 0 – 2 Knights Errant
+  text: '50 gold crowns to hire
+
+    Knight Errant are the sons of nobles, eager to prove their mettle by feats of arms, and earn their place amongst the Knights
+    of the Realm of Bretonnia. To do this they must perform valorous deed, so they will often accompany a Questing Knight
+    on his spiritual journey in the hope of adventure and honour.
+
+    Weapons/Armour: A Knight Errant may be equipped with
+
+    weapons and armour chosen from the Knights section of the
+
+    Bretonnian Equipment list. A Knight Errant may not ride a
+
+    warhorse unless the Questing Knight also rides one.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 0 – 2 Knights Errant
+  - Special Rules
+  text: 'Knights Virtue: A Knight Errant is a chivalrous warrior who
+
+    is superior to ordinary warriors. He will never panic and
+
+    break from combat and so does not have to pass a Leadership
+
+    test for being all alone .'
+- section: 0 – 3 Squires
+  section_path:
+  - heroes
+  - 0 – 3 Squires
+  text: '15 gold crowns to hire
+
+    Knights are served by their Squires, commoners who ride to the hunt with their master, and who accompany him to war. They
+    are chosen from the fittest and youngest of a Knight’s retinue, and they are trained and schooled by the knight himself.
+    If a squire performs some great deed or service to his master he may even be raised to the ranks of knighthood!
+
+    Weapons/Armour: Squires may be equipped with weapons
+
+    and armour chosen from the Squires section of the
+
+    Bretonnian Equipment list. A Squire may not ride a horse
+
+    unless the Questing Knight and any Knight Errant in the
+
+    warband are riding warhorses.'
+- section: henchmen
+  section_path:
+  - henchmen
+  text: (Bought in groups of 1-5)
+- section: 0 – 8 Men-at-Arms
+  section_path:
+  - henchmen
+  - 0 – 8 Men-at-Arms
+  text: '25 gold crowns to hire
+
+    Men-at-arms are the soldiery of Bretonnia. Every Knight maintains a retinue when he is a lord of a domain, and upon embarking
+    on a quest, this retinue may join him on his journey. Men-at-arms are determined warriors, ready to fight for honour and
+    justice as much as the Questing Knight they follow.
+
+    Weapons/Armour: Men-at-arms may have weapons and
+
+    equipment chosen from the Men-at-arms section of the
+
+    Bretonnian Equipment list.'
+- section: Bowmen
+  section_path:
+  - henchmen
+  - Bowmen
+  text: '20 gold crowns to hire
+
+    Bowmen are common folk who regularly practice archery at the village butts so as to be ready to repel raiders from their
+    humble cottages, fields and vineyards. When a Knight sets off on a quest it is not uncommon for a handful of bowmen to
+    be inspired to bravery and join the Knight on his journey.
+
+    Weapons/Armour: Bowmen may be equipped with weapons
+
+    chosen from the Bowmen section of the Bretonnian
+
+    Equipment list.'
+canonical_family: bretonnian-knights

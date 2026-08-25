@@ -1,0 +1,746 @@
+schema_version: 1
+id: lustria-hombres-lagarto
+name: Hombres Lagarto
+name_i18n:
+  en: null
+  es: Hombres Lagarto
+original_locale: es
+categories:
+- trollheim
+collections:
+- trollheim
+grade: null
+setting: Lustria
+publication: lustria
+status: source-normalized
+sources:
+- manual: lustria
+  printed_page: 52-57
+  section: Hombres Lagarto
+roster:
+  minimum_models: 3
+  maximum_models: 20
+  starting_gold: 500
+  members:
+  - profile_id: lizardman-skink-priest
+    minimum: 1
+    maximum: 1
+  - profile_id: lizardman-saurus-totem-warrior
+    minimum: 0
+    maximum: 1
+  - profile_id: lizardman-great-crested-skink
+    minimum: 0
+    maximum: 2
+  - profile_id: lizardman-skink-brave
+    minimum: 0
+    maximum: null
+  - profile_id: lizardman-saurus-brave
+    minimum: 0
+    maximum: 4
+  - profile_id: lizardman-kroxigor
+    minimum: 0
+    maximum: 1
+equipment_lists:
+- id: lizardman-skink-equipment
+  name: Equipo para Eslizones
+  source:
+    manual: lustria
+    printed_page: 53
+    section: Lista de Equipo para Eslizones
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: La primera es gratis
+  - item_id: stone_axe
+    cost: 3
+  - item_id: axe
+    cost: 5
+  - item_id: sword
+    cost: 10
+    notes: Solo Héroes
+  - item_id: spear
+    cost: 10
+  - item_id: short_bow
+    cost: 5
+  - item_id: bolas
+    cost: 5
+  - item_id: javelin
+    cost: 10
+  - item_id: throwing_knives
+    cost: 15
+  - item_id: blowpipe
+    cost: 25
+  - item_id: buckler
+    cost: 5
+  - item_id: helmet
+    cost: 10
+    notes: Solo Sacerdote Eslizón
+  - item_id: light_armour
+    cost: 20
+  name_i18n:
+    en: null
+    es: Equipo para Eslizones
+- id: lizardman-saurus-equipment
+  name: Equipo para Saurios
+  source:
+    manual: lustria
+    printed_page: 53
+    section: Lista de Equipo para Saurios
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: La primera es gratis
+  - item_id: stone_axe
+    cost: 3
+  - item_id: axe
+    cost: 5
+  - item_id: sword
+    cost: 10
+  - item_id: spear
+    cost: 10
+  - item_id: halberd
+    cost: 10
+  - item_id: great_weapon
+    cost: 15
+  - item_id: shield
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  - item_id: light_armour
+    cost: 50
+  name_i18n:
+    en: null
+    es: Equipo para Saurios
+- id: lizardman-poisons
+  name: Venenos para Hombres Lagarto
+  source:
+    manual: lustria
+    printed_page: 53
+    section: Lista de Venenos para Hombres Lagarto
+  items:
+  - item_id: black_venom
+    cost: 20
+  - item_id: black_lotus
+    cost: 10
+  - item_id: reptile_venom
+    cost: 5
+  name_i18n:
+    en: null
+    es: Venenos para Hombres Lagarto
+profiles:
+- id: lizardman-skink-priest
+  name: Sacerdote Eslizón
+  type: hero
+  cost: 60
+  experience: 20
+  characteristics:
+    M: 15
+    WS: 3
+    BS: 4
+    S: 3
+    T: 3
+    W: 1
+    I: 5
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - lizardman-skink-equipment
+  - lizardman-poisons
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - academic
+  - speed
+  - special
+  rules:
+  - id: lizardman-leader
+    name: Jefe
+    effect: Los miembros de la banda a 15 cm o menos pueden utilizar su Liderazgo. Si muere puede reclutarse otro
+    pero debe jugarse una partida antes.: null
+    source:
+      manual: lustria
+      printed_page: 54
+      section: Sacerdote Eslizón
+    name_i18n:
+      en: null
+      es: Jefe
+    effect_i18n:
+      en: null
+      es: Los miembros de la banda a 15 cm o menos pueden utilizar su Liderazgo. Si muere puede reclutarse otro
+  - id: lizardman-spellcaster
+    name: Hechicero
+    effect: Puede utilizar los Antiguos Salmos; sus reglas individuales quedan fuera del alcance canónico actual.
+    source:
+      manual: lustria
+      printed_page: 54
+      section: Sacerdote Eslizón
+    name_i18n:
+      en: null
+      es: Hechicero
+    effect_i18n:
+      en: null
+      es: Puede utilizar los Antiguos Salmos; sus reglas individuales quedan fuera del alcance canónico actual.
+  - id: lizardman-scaly-skin-6
+    name: Piel escamosa 6+
+    effect: Posee una salvación natural de 6+.
+    source:
+      manual: lustria
+      printed_page: 54
+      section: Sacerdote Eslizón
+    name_i18n:
+      en: null
+      es: Piel escamosa 6+
+    effect_i18n:
+      en: null
+      es: Posee una salvación natural de 6+.
+  - id: lizardman-amphibious
+    name: Anfibio
+    effect: Se mueve por terreno acuático sin penalización y se considera bajo cobertura mientras está en el agua.
+    source:
+      manual: lustria
+      printed_page: 54
+      section: Sacerdote Eslizón
+    name_i18n:
+      en: null
+      es: Anfibio
+    effect_i18n:
+      en: null
+      es: Se mueve por terreno acuático sin penalización y se considera bajo cobertura mientras está en el agua.
+  - id: lizardman-jungle-native
+    name: Nativo de la jungla
+    effect: Se mueve por terreno de jungla sin penalización.
+    source:
+      manual: lustria
+      printed_page: 54
+      section: Sacerdote Eslizón
+    name_i18n:
+      en: null
+      es: Nativo de la jungla
+    effect_i18n:
+      en: null
+      es: Se mueve por terreno de jungla sin penalización.
+  source:
+    manual: lustria
+    printed_page: 54
+    section: Sacerdote Eslizón
+  name_i18n:
+    en: null
+    es: Sacerdote Eslizón
+- id: lizardman-saurus-totem-warrior
+  name: Guerrero Tótem Saurio
+  type: hero
+  cost: 60
+  experience: 11
+  characteristics:
+    M: 10
+    WS: 4
+    BS: 0
+    S: 4
+    T: 4
+    W: 1
+    I: 2
+    A: 1
+    Ld: 8
+  equipment_lists:
+  - lizardman-saurus-equipment
+  - lizardman-poisons
+  fixed_equipment: []
+  equipment_restrictions:
+  - No puede utilizar armas de proyectiles
+  skill_access:
+  - combat
+  - strength
+  - special
+  rules:
+  - id: lizardman-scaly-skin-5
+    name: Piel escamosa 5+
+    effect: Posee una salvación natural de 5+.
+    source:
+      manual: lustria
+      printed_page: 54
+      section: Guerrero Tótem
+    name_i18n:
+      en: null
+      es: Piel escamosa 5+
+    effect_i18n:
+      en: null
+      es: Posee una salvación natural de 5+.
+  - id: lizardman-bite
+    name: Ataque de mordisco
+    effect: Efectúa un ataque adicional con su Fuerza y sin penalización por combatir desarmado. Siempre se resuelve el último
+    incluso después de armas a dos manos.: null
+    source:
+      manual: lustria
+      printed_page: 54
+      section: Guerrero Tótem
+    name_i18n:
+      en: null
+      es: Ataque de mordisco
+    effect_i18n:
+      en: null
+      es: Efectúa un ataque adicional con su Fuerza y sin penalización por combatir desarmado. Siempre se resuelve el último
+  source:
+    manual: lustria
+    printed_page: 54
+    section: Guerrero Tótem
+  name_i18n:
+    en: null
+    es: Guerrero Tótem Saurio
+- id: lizardman-great-crested-skink
+  name: Eslizón de Gran Cresta
+  type: hero
+  cost: 30
+  experience: 8
+  characteristics:
+    M: 15
+    WS: 3
+    BS: 3
+    S: 3
+    T: 2
+    W: 1
+    I: 4
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - lizardman-skink-equipment
+  - lizardman-poisons
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - shooting
+  - speed
+  - special
+  rules:
+  - id: lizardman-scaly-skin-6
+    name: Piel escamosa 6+
+    effect: Posee una salvación natural de 6+.
+    source:
+      manual: lustria
+      printed_page: 55
+      section: Eslizón de Gran Cresta
+    name_i18n:
+      en: null
+      es: Piel escamosa 6+
+    effect_i18n:
+      en: null
+      es: Posee una salvación natural de 6+.
+  - id: lizardman-amphibious
+    name: Anfibio
+    effect: Se mueve por terreno acuático sin penalización y se considera bajo cobertura mientras está en el agua.
+    source:
+      manual: lustria
+      printed_page: 55
+      section: Eslizón de Gran Cresta
+    name_i18n:
+      en: null
+      es: Anfibio
+    effect_i18n:
+      en: null
+      es: Se mueve por terreno acuático sin penalización y se considera bajo cobertura mientras está en el agua.
+  - id: lizardman-jungle-native
+    name: Nativo de la jungla
+    effect: Se mueve por terreno de jungla sin penalización.
+    source:
+      manual: lustria
+      printed_page: 55
+      section: Eslizón de Gran Cresta
+    name_i18n:
+      en: null
+      es: Nativo de la jungla
+    effect_i18n:
+      en: null
+      es: Se mueve por terreno de jungla sin penalización.
+  source:
+    manual: lustria
+    printed_page: 55
+    section: Eslizón de Gran Cresta
+  name_i18n:
+    en: null
+    es: Eslizón de Gran Cresta
+- id: lizardman-skink-brave
+  name: Bravo Eslizón
+  type: henchman
+  cost: 20
+  experience: 0
+  characteristics:
+    M: 15
+    WS: 2
+    BS: 3
+    S: 3
+    T: 2
+    W: 1
+    I: 4
+    A: 1
+    Ld: 6
+  equipment_lists:
+  - lizardman-skink-equipment
+  - lizardman-poisons
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules:
+  - id: lizardman-scaly-skin-6
+    name: Piel escamosa 6+
+    effect: Posee una salvación natural de 6+.
+    source:
+      manual: lustria
+      printed_page: 55
+      section: Bravos Eslizones
+    name_i18n:
+      en: null
+      es: Piel escamosa 6+
+    effect_i18n:
+      en: null
+      es: Posee una salvación natural de 6+.
+  - id: lizardman-amphibious
+    name: Anfibio
+    effect: Se mueve por terreno acuático sin penalización y se considera bajo cobertura mientras está en el agua.
+    source:
+      manual: lustria
+      printed_page: 55
+      section: Bravos Eslizones
+    name_i18n:
+      en: null
+      es: Anfibio
+    effect_i18n:
+      en: null
+      es: Se mueve por terreno acuático sin penalización y se considera bajo cobertura mientras está en el agua.
+  - id: lizardman-jungle-native
+    name: Nativo de la jungla
+    effect: Se mueve por terreno de jungla sin penalización.
+    source:
+      manual: lustria
+      printed_page: 55
+      section: Bravos Eslizones
+    name_i18n:
+      en: null
+      es: Nativo de la jungla
+    effect_i18n:
+      en: null
+      es: Se mueve por terreno de jungla sin penalización.
+  source:
+    manual: lustria
+    printed_page: 55
+    section: Bravos Eslizones
+  name_i18n:
+    en: null
+    es: Bravo Eslizón
+- id: lizardman-saurus-brave
+  name: Bravo Saurio
+  type: henchman
+  cost: 40
+  experience: 0
+  characteristics:
+    M: 10
+    WS: 3
+    BS: 0
+    S: 4
+    T: 4
+    W: 1
+    I: 1
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - lizardman-saurus-equipment
+  - lizardman-poisons
+  fixed_equipment: []
+  equipment_restrictions:
+  - No puede utilizar armas de proyectiles
+  skill_access: []
+  rules:
+  - id: lizardman-scaly-skin-5
+    name: Piel escamosa 5+
+    effect: Posee una salvación natural de 5+.
+    source:
+      manual: lustria
+      printed_page: 56
+      section: Bravos Saurios
+    name_i18n:
+      en: null
+      es: Piel escamosa 5+
+    effect_i18n:
+      en: null
+      es: Posee una salvación natural de 5+.
+  - id: lizardman-bite
+    name: Ataque de mordisco
+    effect: Efectúa un ataque adicional con su Fuerza y sin penalización por combatir desarmado. Siempre se resuelve el último
+    incluso después de armas a dos manos.: null
+    source:
+      manual: lustria
+      printed_page: 56
+      section: Bravos Saurios
+    name_i18n:
+      en: null
+      es: Ataque de mordisco
+    effect_i18n:
+      en: null
+      es: Efectúa un ataque adicional con su Fuerza y sin penalización por combatir desarmado. Siempre se resuelve el último
+  source:
+    manual: lustria
+    printed_page: 56
+    section: Bravos Saurios
+  name_i18n:
+    en: null
+    es: Bravo Saurio
+- id: lizardman-kroxigor
+  name: Króxigor
+  type: henchman
+  cost: 200
+  experience: 0
+  characteristics:
+    M: 15
+    WS: 3
+    BS: 0
+    S: 5
+    T: 4
+    W: 3
+    I: 1
+    A: 3
+    Ld: 8
+  equipment_lists: []
+  fixed_equipment: []
+  equipment_restrictions:
+  - Solo puede equiparse con una alabarda o un arma a dos manos
+  skill_access: []
+  rules:
+  - id: lizardman-scaly-skin-4
+    name: Piel escamosa 4+
+    effect: Posee una salvación natural de 4+.
+    source:
+      manual: lustria
+      printed_page: 56
+      section: Króxigor
+    name_i18n:
+      en: null
+      es: Piel escamosa 4+
+    effect_i18n:
+      en: null
+      es: Posee una salvación natural de 4+.
+  - id: lizardman-aquatic
+    name: Acuático
+    effect: Se mueve por el agua sin penalización y se considera bajo cobertura mientras está en ella.
+    source:
+      manual: lustria
+      printed_page: 56
+      section: Króxigor
+    name_i18n:
+      en: null
+      es: Acuático
+    effect_i18n:
+      en: null
+      es: Se mueve por el agua sin penalización y se considera bajo cobertura mientras está en ella.
+  - id: causes-fear
+    name: Causa miedo
+    effect: Está sujeto a las reglas de miedo.
+    source:
+      manual: lustria
+      printed_page: 56
+      section: Króxigor
+    name_i18n:
+      en: null
+      es: Causa miedo
+    effect_i18n:
+      en: null
+      es: Está sujeto a las reglas de miedo.
+  - id: large-target
+    name: Objetivo grande
+    effect: Puede recibir disparos aunque no sea el objetivo más cercano y se obtiene +1 para impactarle con proyectiles.
+    source:
+      manual: lustria
+      printed_page: 56
+      section: Króxigor
+    name_i18n:
+      en: null
+      es: Objetivo grande
+    effect_i18n:
+      en: null
+      es: Puede recibir disparos aunque no sea el objetivo más cercano y se obtiene +1 para impactarle con proyectiles.
+  - id: animal
+    name: Animal
+    effect: No gana experiencia.
+    source:
+      manual: lustria
+      printed_page: 56
+      section: Króxigor
+    name_i18n:
+      en: null
+      es: Animal
+    effect_i18n:
+      en: null
+      es: No gana experiencia.
+  source:
+    manual: lustria
+    printed_page: 56
+    section: Króxigor
+  name_i18n:
+    en: null
+    es: Króxigor
+band_rules:
+- id: lizardman-scaly-skin
+  name: Piel escamosa
+  effect: La salvación natural se combina con armaduras salvo cuero endurecido. La Fuerza no puede empeorarla más allá de
+    6+
+  pero un resultado que niegue salvaciones en la Tabla de Heridas también niega esa salvación de 6+.: null
+  source:
+    manual: lustria
+    printed_page: 53
+    section: Reglas Especiales de los Hombres Lagarto
+  name_i18n:
+    en: null
+    es: Piel escamosa
+  effect_i18n:
+    en: null
+    es: La salvación natural se combina con armaduras salvo cuero endurecido. La Fuerza no puede empeorarla más allá de 6+
+- id: lizardman-poisoned-weapons
+  name: Armas envenenadas
+  effect: Veneno negro
+  loto negro y veneno de reptil son comunes para los Hombres Lagarto.: null
+  source:
+    manual: lustria
+    printed_page: 53
+    section: Reglas Especiales de los Hombres Lagarto
+  name_i18n:
+    en: null
+    es: Armas envenenadas
+  effect_i18n:
+    en: null
+    es: Veneno negro
+- id: lizardman-cold-blooded
+  name: Sangre fría
+  effect: En chequeos de retirada y psicología tira 3D6 y conserva los dos resultados más bajos. Para retirarse nunca puede
+    usar el Liderazgo de un Saurio ni de un Króxigor.
+  source:
+    manual: lustria
+    printed_page: 53
+    section: Reglas Especiales de los Hombres Lagarto
+  name_i18n:
+    en: null
+    es: Sangre fría
+  effect_i18n:
+    en: null
+    es: En chequeos de retirada y psicología tira 3D6 y conserva los dos resultados más bajos. Para retirarse nunca puede
+      usar el Liderazgo de un Saurio ni de un Króxigor.
+- id: lizardman-saurus-rarity
+  name: Rareza de saurio
+  effect: El número de Bravos Saurios siempre debe ser inferior al de Bravos Eslizones.
+  source:
+    manual: lustria
+    printed_page: 53
+    section: Reglas Especiales de los Hombres Lagarto
+  name_i18n:
+    en: null
+    es: Rareza de saurio
+  effect_i18n:
+    en: null
+    es: El número de Bravos Saurios siempre debe ser inferior al de Bravos Eslizones.
+- id: lizardman-special-skill-infiltration
+  name: Infiltración
+  effect: Solo Eslizones. Puede desplegarse en cualquier lugar a al menos 30 cm del enemigo y debe empezar oculto.
+  source:
+    manual: lustria
+    printed_page: 57
+    section: Habilidades Especiales de los Hombres Lagarto
+  name_i18n:
+    en: null
+    es: Infiltración
+  effect_i18n:
+    en: null
+    es: Solo Eslizones. Puede desplegarse en cualquier lugar a al menos 30 cm del enemigo y debe empezar oculto.
+- id: lizardman-special-skill-great-hunter
+  name: Gran Cazador
+  effect: Solo Eslizones. Cuando está bajo cobertura
+  los ataques contra él sufren un -1 adicional para impactar.: null
+  source:
+    manual: lustria
+    printed_page: 57
+    section: Habilidades Especiales de los Hombres Lagarto
+  name_i18n:
+    en: null
+    es: Gran Cazador
+  effect_i18n:
+    en: null
+    es: Solo Eslizones. Cuando está bajo cobertura
+- id: lizardman-special-skill-battle-roar
+  name: Rugido de batalla
+  effect: Solo Saurios. Los enemigos en contacto sufren -1 para impactar durante la primera ronda de combate.
+  source:
+    manual: lustria
+    printed_page: 57
+    section: Habilidades Especiales de los Hombres Lagarto
+  name_i18n:
+    en: null
+    es: Rugido de batalla
+  effect_i18n:
+    en: null
+    es: Solo Saurios. Los enemigos en contacto sufren -1 para impactar durante la primera ronda de combate.
+- id: lizardman-special-skill-hardened-skin
+  name: Piel endurecida
+  effect: Solo Saurios. Solo queda fuera de combate con un resultado de 6+.
+  source:
+    manual: lustria
+    printed_page: 57
+    section: Habilidades Especiales de los Hombres Lagarto
+  name_i18n:
+    en: null
+    es: Piel endurecida
+  effect_i18n:
+    en: null
+    es: Solo Saurios. Solo queda fuera de combate con un resultado de 6+.
+- id: lizardman-sacred-marks
+  name: Marcas Sagradas
+  effect: Un héroe solo puede tener una marca sagrada y únicamente puede adquirirla al ser reclutado.
+  source:
+    manual: lustria
+    printed_page: 57
+    section: Marcas Sagradas
+  name_i18n:
+    en: null
+    es: Marcas Sagradas
+  effect_i18n:
+    en: null
+    es: Un héroe solo puede tener una marca sagrada y únicamente puede adquirirla al ser reclutado.
+- id: lizardman-mark-huge-jaws
+  name: Fauces descomunales
+  effect: Cuesta 40 coronas y es solo para Saurios. Su ataque de mordisco obtiene +1 Fuerza.
+  source:
+    manual: lustria
+    printed_page: 57
+    section: Marcas Sagradas
+  name_i18n:
+    en: null
+    es: Fauces descomunales
+  effect_i18n:
+    en: null
+    es: Cuesta 40 coronas y es solo para Saurios. Su ataque de mordisco obtiene +1 Fuerza.
+- id: lizardman-mark-venom-glands
+  name: Glándulas venenosas
+  effect: Cuesta 40 coronas y es solo para Eslizones. Puede atacar con sus dientes en vez de armas; se resuelve como un mordisco
+    después de sus armas
+  aplica -1 a la salvación con independencia de su Fuerza y +1 en la Tabla de Heridas.: null
+  source:
+    manual: lustria
+    printed_page: 57
+    section: Marcas Sagradas
+  name_i18n:
+    en: null
+    es: Glándulas venenosas
+  effect_i18n:
+    en: null
+    es: Cuesta 40 coronas y es solo para Eslizones. Puede atacar con sus dientes en vez de armas; se resuelve como un mordisco
+      después de sus armas
+- id: lizardman-mark-ancestors
+  name: Marca de los Ancestrales
+  effect: Cuesta 50 coronas
+  solo puede llevarla un héroe y se usa una vez por partida para cambiar uno de sus dados por cualquier resultado válido.: null
+  source:
+    manual: lustria
+    printed_page: 57
+    section: Marcas Sagradas
+  name_i18n:
+    en: null
+    es: Marca de los Ancestrales
+  effect_i18n:
+    en: null
+    es: Cuesta 50 coronas
+source_sections: []
+canonical_family: lizardmen

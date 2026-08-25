@@ -1,0 +1,864 @@
+id: ostlanders
+name: Ostlanders
+grade: 1a
+source_url: https://mordheimer.net/docs/warbands/grade-1a-warbands/ostlander
+headings:
+- Special rules ​
+- Choice of warriors ​
+- Starting experience ​
+- Ostlander Skill Table ​
+- Ostlander Special Skills ​
+- Bull Rush ​
+- Foul Odour ​
+- Taunt ​
+- Animal friendship ​
+- Blood Oath ​
+- Ostlander Equipment Lists ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Ruffian equipment list ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Jaeger Equipment List ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Ogre Equipment List ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Special Equipment ​
+- Ostlander Double-barrelled Hunting Rifle ​
+- Ostlander Double-barrelled Pistol ​
+- heroes ​
+- 1 Elder ​
+- SPECIAL RULES ​
+- 0 – 2 Blood-brothers ​
+- 0 – 1 Priest of Taal ​
+- SPECIAL RULES ​
+- henchmen ​
+- Kin ​
+- 0 – 7 Jaeger ​
+- 0 – 5 Ruffians ​
+- Special Rules ​
+- 0 – 1 Ogre ​
+- SPECIAL RULES ​
+tables:
+- section: Ostlander Skill Table
+  section_path:
+  - Ostlander Skill Table
+  rows:
+  - - ''
+    - Combat
+    - Shooting
+    - Academic
+    - Strength
+    - Speed
+    - Special
+  - - Elder
+    - ✓
+    - ✓
+    - ''
+    - ✓
+    - ✓
+    - ✓
+  - - Blood Brother
+    - ✓
+    - ''
+    - ''
+    - ✓
+    - ''
+    - ✓
+  - - Priest of Taal
+    - ✓
+    - ''
+    - ✓
+    - ✓
+    - ✓
+    - ✓
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Ostlander Equipment Lists
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Mace
+    - 3 gc
+  - - Hammer
+    - 3 gc
+  - - Axe
+    - 5 gc
+  - - Sword
+    - 10 gc
+  - - Spear
+    - 10 gc
+  - - Double-handed weapon
+    - 15 gc
+- section: Missile Weapons
+  section_path:
+  - Ostlander Equipment Lists
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Bow
+    - 10 gc
+  - - Pistol
+    - 15 gc (30 for a brace)
+- section: Armour
+  section_path:
+  - Ostlander Equipment Lists
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Light armour
+    - 20 gc
+  - - Heavy armour
+    - 50 gc
+  - - Shield
+    - 5 gc
+  - - Helmet
+    - 10 gc
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Ostlander Equipment Lists
+  - Ruffian equipment list
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Mace
+    - 3 gc
+  - - Hammer
+    - 3 gc
+  - - Axe
+    - 5 gc
+  - - Sword
+    - 10 gc
+  - - Double-handed weapon
+    - 15 gc
+- section: Armour
+  section_path:
+  - Ostlander Equipment Lists
+  - Ruffian equipment list
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Light armour
+    - 20 gc
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Ostlander Equipment Lists
+  - Jaeger Equipment List
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Axe
+    - 5 gc
+  - - Sword
+    - 10 gc
+  - - Spear
+    - 10 gc
+- section: Missile Weapons
+  section_path:
+  - Ostlander Equipment Lists
+  - Jaeger Equipment List
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Pistol
+    - 15 gc (30 for a brace)
+  - - Double-barrelled pistol
+    - 30 gc (60 for a brace)
+  - - Bow
+    - 10 gc
+  - - Blunderbuss
+    - 30 gc
+  - - Handgun
+    - 35 gc
+  - - Hunting Rifle
+    - 200 gc
+  - - Double-barrelled hunting rifle
+    - 300 gc
+- section: Armour
+  section_path:
+  - Ostlander Equipment Lists
+  - Jaeger Equipment List
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Light armour
+    - 20 gc
+  - - Shield
+    - 5 gc
+  - - Helmet
+    - 10 gc
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Ostlander Equipment Lists
+  - Ogre Equipment List
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Club
+    - 3 gc
+  - - Axe
+    - 5 gc
+  - - Sword
+    - 10 gc
+  - - Double-handed weapon
+    - 10 gc
+- section: Armour
+  section_path:
+  - Ostlander Equipment Lists
+  - Ogre Equipment List
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Light armour
+    - 20 gc
+- section: 1 Elder
+  section_path:
+  - heroes
+  - 1 Elder
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '4'
+    - '4'
+    - '4'
+    - '3'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '8'
+- section: 0 – 2 Blood-brothers
+  section_path:
+  - heroes
+  - 0 – 2 Blood-brothers
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '4'
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 1 Priest of Taal
+  section_path:
+  - heroes
+  - 0 – 1 Priest of Taal
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '4'
+    - '2'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: Kin
+  section_path:
+  - henchmen
+  - Kin
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 7 Jaeger
+  section_path:
+  - henchmen
+  - 0 – 7 Jaeger
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 5 Ruffians
+  section_path:
+  - henchmen
+  - 0 – 5 Ruffians
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '4'
+    - '2'
+    - '2'
+    - '3'
+    - '3'
+    - '1'
+    - '2'
+    - '1'
+    - '7'
+- section: 0 – 1 Ogre
+  section_path:
+  - henchmen
+  - 0 – 1 Ogre
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '6'
+    - '3'
+    - '2'
+    - '4'
+    - '4'
+    - '3'
+    - '3'
+    - '2'
+    - '10'
+section_text:
+- section: Special rules
+  section_path:
+  - Special rules
+  text: 'Self-Sufficient: The men of Ostland have no desire to give their hard-earned
+    gold to outsiders. As a result they can never hire any Mercenaries except for
+    Ogres (who are not an uncommon sight in Ostland).'
+- section: Choice of warriors
+  section_path:
+  - Choice of warriors
+  text: 'An Ostlander warband is often made up of an extended family of Ostlanders.
+    Fathers, uncles, brothers, cousins and even the occasional tough- as-nails aunt
+    all join together to form the warband. The ''family'' must include a minimum of
+    3 models and a maximum of 15.
+
+    You have 500 Gold Crowns that you can use to recruit your initial warband.
+
+    Elder: Each Ostlander warband must have one
+
+    Elder, no more, no less! Blood-Brothers: Your warband may include
+
+    up to 2 Blood-Brothers. Priest of Taal: Your warband may include up
+
+    to 1 Priest of Taal. Kin: You may have any number of Kin. Ruffians: Your warband
+    may include up to 5 Ruffians. Jaeger: Your warband may include up to 7 Jaeger.
+    Ogre: Your warband may include one Ogre. There isn''t enough food for more than
+    one!'
+- section: Starting experience
+  section_path:
+  - Starting experience
+  text: The Elder starts with 20 experience. Blood-Brothers start with 12 experience.
+    Priests of Taal start with 12 experience. All Henchmen start with 0 experience.
+- section: Ostlander Special Skills
+  section_path:
+  - Ostlander Special Skills
+  text: 'Ostlander Heroes may use the following Skill table instead of any of the
+    standard skill tables available to them:'
+- section: Bull Rush
+  section_path:
+  - Ostlander Special Skills
+  - Bull Rush
+  text: 'This warrior is huge, even by Ostlander
+
+    standards, and can use his massive girth to
+
+    overpower his opponents. When he charges,
+
+    this Hero may attempt to knock down his
+
+    opponent rather than making his normal
+
+    attacks. Roll to hit once with a +1 to hit
+
+    modifier, though no ‘to wound’ roll is
+
+    necessary. Instead, if the warrior hits
+
+    with this attack, the opposing
+
+    model is Knocked Down (Models
+
+    with the Bull Rush skill should
+
+    have a suitably large beer-belly
+
+    modelled out of putty whenever possible!)'
+- section: Foul Odour
+  section_path:
+  - Ostlander Special Skills
+  - Foul Odour
+  text: 'Ostlanders are prodigious drinkers and none
+
+    too hygienic! This warrior rises head and
+
+    shoulders above the rest. After a lifetime of
+
+    drinking, liquor has little effect on him any
+
+    more... not that this stops him from
+
+    consuming massive quantities! His unwashed
+
+    clothes and sweat reek of
+
+    alcohol and all living
+
+    enemies (not Undead or
+
+    Possessed) are at -1
+
+    to hit him in
+
+    hand-to-hand combat. In addition, the warrior cannot carry
+
+    any open flames (torch, lantern, etc) and fire
+
+    attacks made against him are resolved at +1
+
+    Strength as his booze soaked clothing burns
+
+    readily.'
+- section: Taunt
+  section_path:
+  - Ostlander Special Skills
+  - Taunt
+  text: 'After years of baiting opponents into drunken
+
+    brawls, this Ostlander has learned some of
+
+    most vile insults in the Empire. During the
+
+    Shooting phase, the warrior may choose to
+
+    taunt one enemy instead of shooting with a
+
+    missile weapon or casting a spell. The warrior
+
+    must be able to see the enemy and taunting
+
+    follows all the LOS rules for shooting (you
+
+    must taunt the nearest opponent, etc). The
+
+    player should insult the enemy model in some
+
+    manner whenever possible (perhaps his hat
+
+    looks like a strangled parrot or his mother was
+
+    a Bretonnian!). The enemy then takes a
+
+    Leadership test. If he passes, nothing happens,
+
+    but if he fails he must spend his next
+
+    Movement phase trying to get into close
+
+    combat with the warrior who taunted
+
+    him.'
+- section: Animal friendship
+  section_path:
+  - Ostlander Special Skills
+  - Animal friendship
+  text: 'Having grown up amidst the animals of the forest, this
+
+    warrior exudes a certain charm
+
+    to all ‘normal’ animals (ie,
+
+    warhorses, warhounds, etc)
+
+    Animals will never attack him
+
+    and up to two wardogs (see Mordheim book, page 54) that
+
+    the warrior owns do not count
+
+    against the maximum number
+
+    of models in the warband.'
+- section: Blood Oath
+  section_path:
+  - Ostlander Special Skills
+  - Blood Oath
+  text: 'The leader of an Ostlander
+
+    warband sometimes takes a
+
+    blood oath never to leave any of
+
+    his fallen ‘family’ members
+
+    behind. Such is his
+
+    determination to protect his
+
+    fallen blood-kin that it is
+
+    extremely difficult to cause him
+
+    to rout from the field. Only a
+
+    warband’s leader may have this
+
+    skill, which allows him to reroll a single Rout test once per game.'
+- section: Ostlander Equipment Lists
+  section_path:
+  - Ostlander Equipment Lists
+  text: 'The following lists are used by Ostlander warbands to pick their weapons:'
+- section: Missile Weapons
+  section_path:
+  - Ostlander Equipment Lists
+  - Ruffian equipment list
+  - Missile Weapons
+  text: None.
+- section: Missile Weapons
+  section_path:
+  - Ostlander Equipment Lists
+  - Ogre Equipment List
+  - Missile Weapons
+  text: None.
+- section: Special Equipment
+  section_path:
+  - Special Equipment
+  text: 'This warband has access to the following special equipment when purchasing
+    items from the Trading Post , outside their starting list:'
+- section: 1 Elder
+  section_path:
+  - heroes
+  - 1 Elder
+  text: '60 gold crowns to hire
+
+    In Ostland, the oldest (or more often biggest)
+
+    man in the village is given the title ‘Elder’. His
+
+    word is greatly respected and only at his
+
+    urging would the manhood of an entre village
+
+    pack up and travel to Mordheim to seek their
+
+    fortune.
+
+    Weapons/Armour: An Elder may be
+
+    equipped with weapons and armour chosen
+
+    from the Ostlander Equipment list.'
+- section: SPECIAL RULES
+  section_path:
+  - heroes
+  - 1 Elder
+  - SPECIAL RULES
+  text: 'Leader: Any warrior within 6" of the Elder may use his Leadership characteristic
+    when
+
+    taking Leadership tests.'
+- section: 0 – 2 Blood-brothers
+  section_path:
+  - heroes
+  - 0 – 2 Blood-brothers
+  text: '35 gold crowns to hire
+
+    Ostland villages are usually composed of a
+
+    single extended family. Everyone is everyone
+
+    else''s uncle, cousin or brother (and
+
+    sometimes their own!). Rather than trying to
+
+    keep all of these relations straight, the most
+
+    respected men in the village (aside from the
+
+    Elder) are referred to simply as Blood-brothers.
+
+    Weapons/Armour: Blood-brothers may be
+
+    equipped with weapons and armour chosen
+
+    from the Ostlander Equipment list.'
+- section: 0 – 1 Priest of Taal
+  section_path:
+  - heroes
+  - 0 – 1 Priest of Taal
+  text: '45 gold crowns to hire
+
+    It is said that every priest of Taal is born during
+
+    the darkest phase of the moon. Those who are
+
+    accepted into the service of Taal are loners by
+
+    nature and spend their time wandering the
+
+    untamed forests of the Northern Empire. It is
+
+    unclear why the priests of the forest have
+
+    begun to join bands of Ostlanders in their
+
+    delvings into the ruined city of Mordheim — for
+
+    the servants of Taal keep their own counsel.
+
+    Suffice to say that the Forest-God is clearly
+
+    building a strong presence both in and around
+
+    the darkened ruins as more animals begin to
+
+    fill the surrounding forests...
+
+    Weapons/Armour: A Priest of Taal may be
+
+    equipped with weapons and armour chosen
+
+    from the Ostlander Equipment list.'
+- section: SPECIAL RULES
+  section_path:
+  - heroes
+  - 0 – 1 Priest of Taal
+  - SPECIAL RULES
+  text: 'Prayers: A Priest of Taal may use the Prayers of Taal .
+
+    Strictures: Priests of Taal may never wear heavy armour.'
+- section: henchmen
+  section_path:
+  - henchmen
+  text: (Bought in groups of 1-5)
+- section: Kin
+  section_path:
+  - henchmen
+  - Kin
+  text: '25 gold crowns to hire
+
+    Most of the warriors in an Ostlander warband
+
+    are brothers and cousins of the Elder. Many are
+
+    marred men with children to support and the
+
+    ruins of Mordheim are a lure that few poor
+
+    villagers can resist.
+
+    Weapons/Armour: Kin may be
+
+    equipped with weapons and armour chosen
+
+    from the Ostlander Equipment list.'
+- section: 0 – 7 Jaeger
+  section_path:
+  - henchmen
+  - 0 – 7 Jaeger
+  text: '25 gold crowns to hire
+
+    Some Ostlander men choose not to marry but
+
+    instead spend their time alone in the forests of
+
+    the Old World. While these rangers do not
+
+    share the close family bonds of a typical
+
+    Ostlander blood-kin they are well respected
+
+    for their knowledge of the woods and their
+
+    rugged determination. Poor Jaeger usually
+
+    wield a simple home-made bow but it is every
+
+    jaeger’s dream to one day own a blackpowder
+
+    weapon and hunting rifle, especially double-barrelled versions, as these are a
+    sign of great
+
+    prestige amongst the hunters of the deep
+
+    woods.
+
+    Weapons/Armour: Jaeger may be equipped with
+
+    weapons and armour chosen from the Jaeger
+
+    Equipment list.'
+- section: 0 – 5 Ruffians
+  section_path:
+  - henchmen
+  - 0 – 5 Ruffians
+  text: '25 gold crowns to hire
+
+    Although every Ostlander loves his ale, a few
+
+    men in every village take this love to extremes.
+
+    Never sober and rarely conscious, these
+
+    buffoons stagger their way through the streets
+
+    of Mordheim yelling slurred insults at
+
+    whomever they meet, committing petty acts of
+
+    vandalism and generally making a mess of
+
+    things. This comic behaviour is often
+
+    misconstrued into a false belief that they are
+
+    harmless, a belief that many live to regret.
+
+    Fuelled by vast quantities of booze these are
+
+    very dangerous, unpredictable men indeed
+
+    who will shove a broken bottle into your face
+
+    as soon as laugh heartily and burst into song!
+
+    Weapons/Armour: Ruffians may be
+
+    equipped with weapons and armour chosen
+
+    from the Ruffians Equipment list. Ruffians
+
+    never use missile weapons, as their depth
+
+    perception leaves a bit to be desired, even if
+
+    they gain an Advance roll which would
+
+    otherwise allow them to do so.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 5 Ruffians
+  - Special Rules
+  text: 'Drunk: Ruffians are blasted out of their any
+
+    minds on rotgut spirits and cheap ale. As such,
+
+    they automatically pass all Leadership based
+
+    tests they are required to take.
+
+    No Respect: Ruffians are objects of a strange
+
+    mix of pity and abject fear for their fellows and
+
+    may never become a warband leader.'
+- section: 0 – 1 Ogre
+  section_path:
+  - henchmen
+  - 0 – 1 Ogre
+  text: '160 gold crowns to hire
+
+    More than anywhere in the Empire, Ogres are most commonplace within the hilly,
+    pine forested landscape of Ostland. These brutish creatures are very much sought
+    after by the rough mountain men of Ostland as muscle in the warband. An Ogre’s
+    strength is near legendary and their ability to sustain an awful lot of punishment
+    during a fight makes these the perfect shock troops of any warband. Of course,
+    an Ogre''s appetite is nearly as well-renowned as their fighting abilities and
+    so they are rather expensive to keep.
+
+    Weapons and Armour: Ogre may be equipped with weapons and armour chosen from the
+    Ogre Equipment list.'
+- section: SPECIAL RULES
+  section_path:
+  - henchmen
+  - 0 – 1 Ogre
+  - SPECIAL RULES
+  text: 'Fear: Ogres are large, threatening creatures that cause fear .
+
+    Large: Ogres are huge, lumbering creatures and therefore make tempting targets
+    for archers. Any model may shoot at an Ogre, even if it is not the closest target.
+
+    Skills: An Ogre who becomes a Hero as a result of The Lad’s Got Talent may choose
+    from the Combat and Strength skills.
+
+    Slow witted: Although Ogres are capable of earning experience and bettering themselves
+    they are not the smartest of creatures. Ogres only gain advances at half the rate
+    of everyone else (ie, they must accrue twice as much experience as normal to get
+    an advance).'

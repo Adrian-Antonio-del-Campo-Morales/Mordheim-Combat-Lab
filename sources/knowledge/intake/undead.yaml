@@ -1,0 +1,443 @@
+id: undead
+name: The Undead
+grade: core
+source_url: https://mordheimer.net/docs/warbands/grade-1a-warbands/undead
+headings:
+- Choice of warriors ​
+- Starting experience ​
+- Undead Skill Table ​
+- Undead equipment lists ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Special Equipment ​
+- Book of the Dead ​
+- heroes ​
+- 1 Vampire ​
+- Special Rules ​
+- 0 – 1 Necromancer ​
+- SPECIAL RULES ​
+- 0 – 3 Dregs ​
+- henchmen ​
+- Ghouls ​
+- SPECIAL RULES ​
+- 0 – 5 Dire wolves ​
+- SPECIAL RULES ​
+- Zombies ​
+- SPECIAL RULES ​
+tables:
+- section: Undead Skill Table
+  section_path:
+  - Undead Skill Table
+  rows:
+  - - ''
+    - Combat
+    - Shooting
+    - Academic
+    - Strength
+    - Speed
+  - - Vampire
+    - ✓
+    - ''
+    - ✓
+    - ✓
+    - ✓
+  - - Necromancer
+    - ''
+    - ''
+    - ✓
+    - ''
+    - ✓
+  - - Dreg
+    - ✓
+    - ''
+    - ''
+    - ✓
+    - ''
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Undead equipment lists
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Mace
+    - 3 gc
+  - - Hammer
+    - 3 gc
+  - - Axe
+    - 5 gc
+  - - Sword
+    - 10 gc
+  - - Double-handed weapon
+    - 15 gc
+  - - Spear
+    - 10 gc
+  - - Halberd
+    - 10 gc
+- section: Missile Weapons
+  section_path:
+  - Undead equipment lists
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Bow
+    - 10 gc
+  - - Short Bow
+    - 5 gc
+- section: Armour
+  section_path:
+  - Undead equipment lists
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Light armour
+    - 20 gc
+  - - Heavy armour
+    - 50 gc
+  - - Shield
+    - 5 gc
+  - - Helmet
+    - 10 gc
+- section: 1 Vampire
+  section_path:
+  - heroes
+  - 1 Vampire
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '6'
+    - '4'
+    - '4'
+    - '4'
+    - '4'
+    - '2'
+    - '5'
+    - '2'
+    - '8'
+- section: 0 – 1 Necromancer
+  section_path:
+  - heroes
+  - 0 – 1 Necromancer
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 3 Dregs
+  section_path:
+  - heroes
+  - 0 – 3 Dregs
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '4'
+    - '2'
+    - '2'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: Ghouls
+  section_path:
+  - henchmen
+  - Ghouls
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '4'
+    - '2'
+    - '2'
+    - '3'
+    - '4'
+    - '1'
+    - '3'
+    - '2'
+    - '5'
+- section: 0 – 5 Dire wolves
+  section_path:
+  - henchmen
+  - 0 – 5 Dire wolves
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '9'
+    - '3'
+    - '0'
+    - '4'
+    - '3'
+    - '1'
+    - '2'
+    - '1'
+    - '4'
+- section: Zombies
+  section_path:
+  - henchmen
+  - Zombies
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '4'
+    - '2'
+    - '0'
+    - '3'
+    - '3'
+    - '1'
+    - '1'
+    - '1'
+    - '5'
+section_text:
+- section: Choice of warriors
+  section_path:
+  - Choice of warriors
+  text: 'An Undead warband must include a minimum of three models. You have 500 gold
+    crowns to recruit your warband. The maximum number of warriors in the warband
+    may never exceed 15.
+
+    Vampire: Each Undead warband must have one Vampire: no more, no less! Necromancer:
+    Your warband may include a single Necromancer if you wish. Dregs: Your warband
+    may include up to three Dregs. Zombies: Your warband may include any number of
+    Zombies. Ghouls: Your warband may include any number of Ghouls. Dire Wolves: Your
+    warband may include up to five Dire Wolves.'
+- section: Starting experience
+  section_path:
+  - Starting experience
+  text: A Vampire starts with 20 experience. A Necromancer starts with 8 experience.
+    Dregs start with 0 experience. Henchmen start with 0 experience.
+- section: Undead equipment lists
+  section_path:
+  - Undead equipment lists
+  text: The following lists are used by Undead warbands to pick their equipment.
+- section: Special Equipment
+  section_path:
+  - Special Equipment
+  text: 'This warband has access to the following special equipment when purchasing
+    items from the Trading Post , outside their starting list:'
+- section: 1 Vampire
+  section_path:
+  - heroes
+  - 1 Vampire
+  text: '110 gold crowns to hire
+
+    Vampires lead the Undead in their search for the magical stones that will give
+    their master the power to conquer the Empire.
+
+    Although but pale shadows when compared to the dread Vampire Lords, the immortal
+    servants of Vlad are still some of the most powerful creatures who fight in Mordheim.
+    Most of them serve the undying count of Sylvania, but some have found the city
+    to their liking, and have become independent.
+
+    Weapons/Armour: Vampires may be armed with weapons and armour chosen from the
+    Undead Equipment list.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 1 Vampire
+  - Special Rules
+  text: 'Leader: Any models in the warband within 6" of the Vampire may use his Leadership
+    instead of their own.
+
+    Cause Fear: Vampires are terrifying Undead creatures and therefore cause fear
+    .
+
+    Immune to Psychology: Vampires are not affected by psychology (such as fear) and
+    never leave combat.
+
+    Immune to Poison: Vampires are not affected by any poison.
+
+    No Pain: Vampires treat a ‘stunned’ result on the Injury chart as ‘knocked down’.'
+- section: 0 – 1 Necromancer
+  section_path:
+  - heroes
+  - 0 – 1 Necromancer
+  text: '35 gold crowns to hire
+
+    Necromancers are evil wizards, studying the corrupt art of Necromancy. Many of
+    them are acolytes and servants of Vlad von Carstein, and follow the agents of
+    their master to the city of the Damned. Others are recruited from amongst wizards
+    and warlocks who have come under the suspicion of the various agents of Sigmar
+    and have fled to Mordheim to avoid persecution.
+
+    Weapons/Armour: Necromancers may be armed with weapons and armour chosen from
+    the Undead Equipment list.'
+- section: SPECIAL RULES
+  section_path:
+  - heroes
+  - 0 – 1 Necromancer
+  - SPECIAL RULES
+  text: 'Wizard: Necromancers are wizards and so are able to use Necromantic magic.'
+- section: 0 – 3 Dregs
+  section_path:
+  - heroes
+  - 0 – 3 Dregs
+  text: '20 gold crowns to hire
+
+    Dregs are the most miserable human survivors of the demise of Mordheim. They are
+    deformed and rejected individuals, shunned even by the other men and women who
+    still live in the ruins and catacombs of the city.
+
+    Vampires often recruit Dregs as their servants and treat them with surprising
+    kindness. As a result, Dregs are often fanatically loyal to their Undead overlords
+    and will do anything to protect and serve them.
+
+    Dregs are very useful to their masters as they can be sent to buy equipment, weapons
+    and supplies from the settlements around Mordheim which would often not welcome
+    Necromancers or where Vampires would fall under the suspicion of the Witch Hunters.
+    They can also do the bidding of their vampiric master during daylight, when the
+    Vampires must rest in their coffins.
+
+    Weapons/Armour: Dregs may be armed with weapons and armour chosen from the Undead
+    Equipment list.'
+- section: henchmen
+  section_path:
+  - henchmen
+  text: (Bought in groups of 1-5)
+- section: Ghouls
+  section_path:
+  - henchmen
+  - Ghouls
+  text: '40 gold crowns to hire
+
+    Ghouls are the descendants of evil and insane men who ate the flesh of the dead.
+    When the lean and hungry times of famine come upon the Old World, the most depraved
+    and destitute took to feasting on corpses to survive.
+
+    Driven by their unspeakable craving for the meat of their fellow men, these creatures
+    have given up their human life and dwell near graveyards, crypts and tombs, digging
+    up the rotting corpses of the recently buried and consuming the cold flesh with
+    their bare teeth and claws.
+
+    The destruction of Mordheim attracted many Ghoul clans from the north, and now
+    they have taken up permanent residence in the crypts and cemeteries of the ruined
+    city.
+
+    Weapons/Armour: Ghouls never carry any equipment, apart from a few bones which
+    they use as primitive weapons. ❓'
+- section: SPECIAL RULES
+  section_path:
+  - henchmen
+  - Ghouls
+  - SPECIAL RULES
+  text: 'Cause Fear: Ghouls are twisted and repulsive creatures and therefore cause
+    fear .'
+- section: 0 – 5 Dire wolves
+  section_path:
+  - henchmen
+  - 0 – 5 Dire wolves
+  text: '50 gold crowns to hire
+
+    Dire Wolves are slavering Undead hounds, the animated remains of the giant wolves
+    of the Worlds Edge Mountains. Their chilling howls can strike fear into the hearts
+    of even the bravest warriors or most ruthless Dwarf mercenaries. They prowl the
+    streets of Mordheim like shadows, and many men have died with the cold jaws of
+    a Dire Wolf around their neck.
+
+    Weapons/Armour: None.'
+- section: SPECIAL RULES
+  section_path:
+  - henchmen
+  - 0 – 5 Dire wolves
+  - SPECIAL RULES
+  text: 'Charge: Dire Wolves are slavering creatures that overpower their opponents
+    when they charge. Dire Wolves fight with 2 attacks instead of 1 during the turn
+    they charge.
+
+    May not Run: Dire Wolves are slow to react and may not run (but may charge normally).
+
+    Cause Fear: Dire Wolves are terrifying Undead creatures and therefore cause fear
+    .
+
+    Immune to Psychology: Dire Wolves are not affected by psychology and never leave
+    combat.
+
+    Immune to Poison: Dire Wolves are not affected by any poison.
+
+    Unliving: Dire Wolves do not gain experience. You can’t teach an old dog new tricks!
+
+    No Pain: Dire Wolves treat a ‘stunned’ result on the Injury chart as ‘knocked
+    down’.'
+- section: Zombies
+  section_path:
+  - henchmen
+  - Zombies
+  text: '15 gold crowns to hire
+
+    Zombies are the most common of the Undead: creatures animated by the will of their
+    Necromantic masters.
+
+    Weapons/Armour: Zombies may not have any weapons or armour and suffer no penalties
+    for this.'
+- section: SPECIAL RULES
+  section_path:
+  - henchmen
+  - Zombies
+  - SPECIAL RULES
+  text: 'Cause Fear: Zombies are terrifying Undead creatures and therefore cause fear
+    .
+
+    May not run: Zombies are slow Undead creatures and may not run (but may charge
+    normally).
+
+    Immune to Psychology: Zombies are not affected by psychology and never leave combat.
+
+    Immune to Poison: Zombies are not affected by any poison.
+
+    No Pain: Zombies treat a stunned result on the Injury chart as knocked down.
+
+    No Brain: Zombies never gain experience. They do not learn from their mistakes.
+    What did you expect?'

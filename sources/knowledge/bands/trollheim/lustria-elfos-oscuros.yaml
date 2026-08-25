@@ -1,0 +1,653 @@
+schema_version: 1
+id: lustria-elfos-oscuros
+name: Elfos Oscuros
+name_i18n:
+  en: null
+  es: Elfos Oscuros
+original_locale: es
+categories:
+- trollheim
+collections:
+- trollheim
+grade: null
+setting: Lustria
+publication: lustria
+status: source-normalized
+sources:
+- manual: lustria
+  printed_page: 58-65
+  section: Elfos Oscuros
+roster:
+  minimum_models: 3
+  maximum_models: 12
+  starting_gold: 500
+  members:
+  - profile_id: dark-elf-prince
+    minimum: 1
+    maximum: 1
+  - profile_id: dark-elf-darkblade
+    minimum: 0
+    maximum: 2
+  - profile_id: dark-elf-beastmaster
+    minimum: 0
+    maximum: 1
+  - profile_id: dark-elf-sorceress
+    minimum: 0
+    maximum: 1
+  - profile_id: dark-elf-corsair
+    minimum: 0
+    maximum: null
+  - profile_id: dark-elf-shadow
+    minimum: 0
+    maximum: 5
+  - profile_id: dark-elf-cold-one
+    minimum: 0
+    maximum: 2
+equipment_lists:
+- id: dark-elf-equipment
+  name: Equipo para Elfos Oscuros
+  source:
+    manual: lustria
+    printed_page: 59
+    section: Lista de Equipo para Elfos Oscuros
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: La primera es gratis
+  - item_id: axe
+    cost: 5
+  - item_id: sword
+    cost: 10
+  - item_id: spear
+    cost: 10
+  - item_id: halberd
+    cost: 10
+  - item_id: beastmaster_whip
+    cost: 10
+  - item_id: great_weapon
+    cost: 15
+  - item_id: dark_steel_weapon
+    cost: 3x_base_cost
+    notes: Conserva las reglas del arma base
+  - item_id: crossbow_pistol
+    cost: 35
+  - item_id: repeating_crossbow
+    cost: 35
+  - item_id: shield
+    cost: 5
+  - item_id: buckler
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  - item_id: light_armour
+    cost: 50
+  - item_id: black_venom
+    cost: 15
+    notes: Solo Héroes
+  - item_id: sea_dragon_cloak
+    cost: 50+2D6
+    notes: Solo Héroes y Corsarios
+  - item_id: draich
+    cost: 45
+    notes: Solo Héroes
+  name_i18n:
+    en: null
+    es: Equipo para Elfos Oscuros
+- id: dark-elf-shadow-equipment
+  name: Equipo para Sombras
+  source:
+    manual: lustria
+    printed_page: 59
+    section: Lista de Equipo para Sombras
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: La primera es gratis
+  - item_id: axe
+    cost: 5
+  - item_id: sword
+    cost: 10
+  - item_id: repeating_crossbow
+    cost: 35
+  - item_id: helmet
+    cost: 10
+  - item_id: light_armour
+    cost: 20
+  name_i18n:
+    en: null
+    es: Equipo para Sombras
+profiles:
+- id: dark-elf-prince
+  name: Príncipe Oscuro
+  type: hero
+  cost: 70
+  experience: 20
+  characteristics:
+    M: 12
+    WS: 5
+    BS: 4
+    S: 3
+    T: 3
+    W: 1
+    I: 6
+    A: 1
+    Ld: 9
+  equipment_lists:
+  - dark-elf-equipment
+  fixed_equipment: []
+  equipment_restrictions:
+  - No puede utilizar armas de pólvora
+  skill_access:
+  - combat
+  - shooting
+  - academic
+  - speed
+  - special
+  rules:
+  - id: dark-elf-leader
+    name: Jefe
+    effect: Los guerreros a 15 cm o menos pueden utilizar su Liderazgo.
+    source:
+      manual: lustria
+      printed_page: 61
+      section: Príncipe Oscuro
+    name_i18n:
+      en: null
+      es: Jefe
+    effect_i18n:
+      en: null
+      es: Los guerreros a 15 cm o menos pueden utilizar su Liderazgo.
+  source:
+    manual: lustria
+    printed_page: 61
+    section: Príncipe Oscuro
+  name_i18n:
+    en: null
+    es: Príncipe Oscuro
+- id: dark-elf-darkblade
+  name: Espada Oscura
+  type: hero
+  cost: 40
+  experience: 12
+  characteristics:
+    M: 12
+    WS: 5
+    BS: 4
+    S: 3
+    T: 3
+    W: 1
+    I: 6
+    A: 1
+    Ld: 8
+  equipment_lists:
+  - dark-elf-equipment
+  fixed_equipment: []
+  equipment_restrictions:
+  - No puede utilizar armas de proyectiles
+  skill_access:
+  - combat
+  - speed
+  - special
+  rules:
+  - id: dark-elf-melee-specialist
+    name: Especialista en combate
+    effect: No puede utilizar armas de proyectiles de ningún tipo.
+    source:
+      manual: lustria
+      printed_page: 61
+      section: Espada Oscura
+    name_i18n:
+      en: null
+      es: Especialista en combate
+    effect_i18n:
+      en: null
+      es: No puede utilizar armas de proyectiles de ningún tipo.
+  source:
+    manual: lustria
+    printed_page: 61
+    section: Espada Oscura
+  name_i18n:
+    en: null
+    es: Espada Oscura
+- id: dark-elf-beastmaster
+  name: Señor de las Bestias
+  type: hero
+  cost: 45
+  experience: 8
+  characteristics:
+    M: 12
+    WS: 4
+    BS: 4
+    S: 3
+    T: 3
+    W: 1
+    I: 6
+    A: 1
+    Ld: 8
+  equipment_lists:
+  - dark-elf-equipment
+  fixed_equipment: []
+  equipment_restrictions:
+  - No puede utilizar armas de pólvora
+  skill_access:
+  - combat
+  - speed
+  - special
+  rules:
+  - id: dark-elf-cold-one-handler
+    name: Bestias gélidas
+    effect: Permite reclutar hasta dos Bestias Gélidas con las limitaciones indicadas en su perfil.
+    source:
+      manual: lustria
+      printed_page: 62
+      section: Señor de las Bestias
+    name_i18n:
+      en: null
+      es: Bestias gélidas
+    effect_i18n:
+      en: null
+      es: Permite reclutar hasta dos Bestias Gélidas con las limitaciones indicadas en su perfil.
+  source:
+    manual: lustria
+    printed_page: 62
+    section: Señor de las Bestias
+  name_i18n:
+    en: null
+    es: Señor de las Bestias
+- id: dark-elf-sorceress
+  name: Hechicera Elfa Oscura
+  type: hero
+  cost: 55
+  experience: 12
+  characteristics:
+    M: 12
+    WS: 4
+    BS: 4
+    S: 3
+    T: 3
+    W: 1
+    I: 6
+    A: 1
+    Ld: 8
+  equipment_lists:
+  - dark-elf-equipment
+  fixed_equipment: []
+  equipment_restrictions:
+  - No puede utilizar armas de pólvora
+  - No puede lanzar hechizos si lleva armadura
+  skill_access:
+  - academic
+  - speed
+  - special
+  rules:
+  - id: dark-elf-spellcaster
+    name: Hechicero
+    effect: Conoce hechizos de magia oscura; sus reglas individuales quedan fuera del alcance canónico actual.
+    source:
+      manual: lustria
+      printed_page: 62
+      section: Hechicera Elfa Oscura
+    name_i18n:
+      en: null
+      es: Hechicero
+    effect_i18n:
+      en: null
+      es: Conoce hechizos de magia oscura; sus reglas individuales quedan fuera del alcance canónico actual.
+  source:
+    manual: lustria
+    printed_page: 62
+    section: Hechicera Elfa Oscura
+  name_i18n:
+    en: null
+    es: Hechicera Elfa Oscura
+- id: dark-elf-corsair
+  name: Corsario
+  type: henchman
+  cost: 35
+  experience: 0
+  characteristics:
+    M: 12
+    WS: 4
+    BS: 4
+    S: 3
+    T: 3
+    W: 1
+    I: 6
+    A: 1
+    Ld: 8
+  equipment_lists:
+  - dark-elf-equipment
+  fixed_equipment: []
+  equipment_restrictions:
+  - No puede utilizar armas de pólvora
+  - Puede usar capa de dragón marino aunque no sea Héroe
+  skill_access: []
+  rules: []
+  source:
+    manual: lustria
+    printed_page: 63
+    section: Corsarios
+  name_i18n:
+    en: null
+    es: Corsario
+- id: dark-elf-shadow
+  name: Sombra
+  type: henchman
+  cost: 30
+  experience: 0
+  characteristics:
+    M: 12
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 5
+    A: 1
+    Ld: 8
+  equipment_lists:
+  - dark-elf-shadow-equipment
+  fixed_equipment: []
+  equipment_restrictions:
+  - No puede utilizar armas de pólvora
+  skill_access: []
+  rules:
+  - id: dark-elf-natural-stealth
+    name: Sigilo natural
+    effect: Si está oculto
+    los enemigos sufren -1 Iniciativa al determinar si pueden detectarlo.: null
+    source:
+      manual: lustria
+      printed_page: 63
+      section: Sombras
+    name_i18n:
+      en: null
+      es: Sigilo natural
+    effect_i18n:
+      en: null
+      es: Si está oculto
+  source:
+    manual: lustria
+    printed_page: 63
+    section: Sombras
+  name_i18n:
+    en: null
+    es: Sombra
+- id: dark-elf-cold-one
+  name: Bestia Gélida
+  type: henchman
+  cost: 30
+  experience: 0
+  characteristics:
+    M: 15
+    WS: 3
+    BS: 0
+    S: 4
+    T: 4
+    W: 1
+    I: 1
+    A: 1
+    Ld: 4
+  equipment_lists: []
+  fixed_equipment:
+  - Garras
+  - Mandíbulas
+  equipment_restrictions:
+  - No puede utilizar equipo
+  - Requiere un Señor de las Bestias
+  - Máximo dos por Señor de las Bestias
+  skill_access: []
+  rules:
+  - id: animal
+    name: Animal
+    effect: No gana experiencia.
+    source:
+      manual: lustria
+      printed_page: 64
+      section: Bestias Gélidas
+    name_i18n:
+      en: null
+      es: Animal
+    effect_i18n:
+      en: null
+      es: No gana experiencia.
+  - id: dark-elf-beastmaster-dependency
+    name: Señor de las Bestias
+    effect: Si abandona la banda
+    las Bestias Gélidas escapan y se borran. Si no participa en una batalla: null
+    tampoco pueden hacerlo las Bestias.: null
+    source:
+      manual: lustria
+      printed_page: 64
+      section: Bestias Gélidas
+    name_i18n:
+      en: null
+      es: Señor de las Bestias
+    effect_i18n:
+      en: null
+      es: Si abandona la banda
+  - id: dark-elf-cold-one-stupidity
+    name: Estupidez
+    effect: Puede utilizar el Liderazgo de un Señor de las Bestias a 15 cm
+    incluso si no es el jefe; nunca el del jefe ni el de otro Señor situado más lejos.: null
+    source:
+      manual: lustria
+      printed_page: 64
+      section: Bestias Gélidas
+    name_i18n:
+      en: null
+      es: Estupidez
+    effect_i18n:
+      en: null
+      es: Puede utilizar el Liderazgo de un Señor de las Bestias a 15 cm
+  - id: dark-elf-scaly-skin-6
+    name: Piel escamosa 6+
+    effect: Posee una salvación por armadura de 6+.
+    source:
+      manual: lustria
+      printed_page: 64
+      section: Bestias Gélidas
+    name_i18n:
+      en: null
+      es: Piel escamosa 6+
+    effect_i18n:
+      en: null
+      es: Posee una salvación por armadura de 6+.
+  - id: causes-fear
+    name: Miedo
+    effect: Causa miedo.
+    source:
+      manual: lustria
+      printed_page: 64
+      section: Bestias Gélidas
+    name_i18n:
+      en: null
+      es: Miedo
+    effect_i18n:
+      en: null
+      es: Causa miedo.
+  source:
+    manual: lustria
+    printed_page: 64
+    section: Bestias Gélidas
+  name_i18n:
+    en: null
+    es: Bestia Gélida
+band_rules:
+- id: dark-elf-high-elf-hatred
+  name: Odio a los Altos Elfos
+  effect: Todos los Elfos Oscuros odian a los Altos Elfos
+  incluidos los que actúan como espadas de alquiler.: null
+  source:
+    manual: lustria
+    printed_page: 59
+    section: Reglas Especiales de los Elfos Oscuros
+  name_i18n:
+    en: null
+    es: Odio a los Altos Elfos
+  effect_i18n:
+    en: null
+    es: Todos los Elfos Oscuros odian a los Altos Elfos
+- id: dark-elf-excellent-sight
+  name: Visión excelente
+  effect: Detectan enemigos ocultos al doble de la distancia normal; dos veces su Iniciativa en centímetros.
+  source:
+    manual: lustria
+    printed_page: 59
+    section: Reglas Especiales de los Elfos Oscuros
+  name_i18n:
+    en: null
+    es: Visión excelente
+  effect_i18n:
+    en: null
+    es: Detectan enemigos ocultos al doble de la distancia normal; dos veces su Iniciativa en centímetros.
+- id: dark-elf-ancestral-customs
+  name: Costumbres ancestrales
+  effect: No pueden utilizar armas de pólvora.
+  source:
+    manual: lustria
+    printed_page: 59
+    section: Reglas Especiales de los Elfos Oscuros
+  name_i18n:
+    en: null
+    es: Costumbres ancestrales
+  effect_i18n:
+    en: null
+    es: No pueden utilizar armas de pólvora.
+- id: dark-steel-weapon
+  name: Arma de acero oscuro
+  effect: Cuesta tres veces el arma base y conserva sus reglas. Al causar un crítico el enemigo suma +1 en la tabla de críticos;
+    en la Tabla de Heridas queda aturdido con 2-4 en vez de 3-4.
+  source:
+    manual: lustria
+    printed_page: 24
+    section: Arma de Acero Oscuro
+  name_i18n:
+    en: null
+    es: Arma de acero oscuro
+  effect_i18n:
+    en: null
+    es: Cuesta tres veces el arma base y conserva sus reglas. Al causar un crítico el enemigo suma +1 en la tabla de críticos;
+      en la Tabla de Heridas queda aturdido con 2-4 en vez de 3-4.
+- id: beastmaster-whip
+  name: Látigo del Señor de las Bestias
+  effect: Fuerza del usuario. No puede pararse. El portador causa miedo a animales. Al cargar obtiene +1 Ataque; al ser cargado
+    obtiene +1 Ataque solo contra quien carga y este ataque Ataca Primero. Con dos látigos obtiene +1 Ataque por arma adicional
+  pero Latigazo solo se aplica una vez.: null
+  source:
+    manual: lustria
+    printed_page: 60
+    section: Látigo de Señor de las Bestias
+  name_i18n:
+    en: null
+    es: Látigo del Señor de las Bestias
+  effect_i18n:
+    en: null
+    es: Fuerza del usuario. No puede pararse. El portador causa miedo a animales. Al cargar obtiene +1 Ataque; al ser cargado
+      obtiene +1 Ataque solo contra quien carga y este ataque Ataca Primero. Con dos látigos obtiene +1 Ataque por arma adicional
+- id: sea-dragon-cloak
+  name: Capa de dragón marino
+  effect: Cuesta 50+2D6 coronas
+  rareza 10: null
+  y proporciona salvación por armadura de 5+ en cuerpo a cuerpo y 4+ contra proyectiles.: null
+  source:
+    manual: lustria
+    printed_page: 60
+    section: Capa de dragón marino
+  name_i18n:
+    en: null
+    es: Capa de dragón marino
+  effect_i18n:
+    en: null
+    es: Cuesta 50+2D6 coronas
+- id: draich
+  name: Draich
+  effect: Arma a dos manos de Fuerza del usuario +2
+  ? Ataca Último y permite Parada. En críticos suma +1 al resultado; en la Tabla de Heridas un 2-4 cuenta como aturdido. No
+    permite escudo
+  : null
+  rodela ni otra arma de cuerpo a cuerpo.: null
+  source:
+    manual: lustria
+    printed_page: 60
+    section: Draich
+  name_i18n:
+    en: null
+    es: Draich
+  effect_i18n:
+    en: null
+    es: Arma a dos manos de Fuerza del usuario +2
+- id: dark-elf-skill-infiltration
+  name: Infiltración
+  effect: Puede desplegarse en cualquier lugar a 30 cm o más del enemigo y debe comenzar oculto.
+  source:
+    manual: lustria
+    printed_page: 65
+    section: Habilidades Especiales de los Elfos Oscuros
+  name_i18n:
+    en: null
+    es: Infiltración
+  effect_i18n:
+    en: null
+    es: Puede desplegarse en cualquier lugar a 30 cm o más del enemigo y debe comenzar oculto.
+- id: dark-elf-skill-fury-of-khaine
+  name: La furia de Khaine
+  effect: Si deja fuera de combate a todos sus oponentes puede mover hasta 10 cm para entrar en contacto con otro enemigo;
+    el nuevo combate se resuelve el turno siguiente y cuenta como carga.
+  source:
+    manual: lustria
+    printed_page: 65
+    section: Habilidades Especiales de los Elfos Oscuros
+  name_i18n:
+    en: null
+    es: La furia de Khaine
+  effect_i18n:
+    en: null
+    es: Si deja fuera de combate a todos sus oponentes puede mover hasta 10 cm para entrar en contacto con otro enemigo; el
+      nuevo combate se resuelve el turno siguiente y cuenta como carga.
+- id: dark-elf-skill-strong-constitution
+  name: Constitución fuerte
+  effect: Permite escoger habilidades de Fuerza. La Hechicera nunca puede adquirirla y solo un miembro de la banda puede tenerla
+    a la vez.
+  source:
+    manual: lustria
+    printed_page: 65
+    section: Habilidades Especiales de los Elfos Oscuros
+  name_i18n:
+    en: null
+    es: Constitución fuerte
+  effect_i18n:
+    en: null
+    es: Permite escoger habilidades de Fuerza. La Hechicera nunca puede adquirirla y solo un miembro de la banda puede tenerla
+      a la vez.
+- id: dark-elf-skill-elven-agility
+  name: Agilidad élfica
+  effect: Evita ataques y proyectiles con 6+. Si también posee Esquivar o Echarse a un lado
+  esas salvaciones pasan a 4+ y Agilidad élfica deja de aplicarse a ese tipo de ataque.: null
+  source:
+    manual: lustria
+    printed_page: 65
+    section: Habilidades Especiales de los Elfos Oscuros
+  name_i18n:
+    en: null
+    es: Agilidad élfica
+  effect_i18n:
+    en: null
+    es: Evita ataques y proyectiles con 6+. Si también posee Esquivar o Echarse a un lado
+- id: dark-elf-skill-poison-expert
+  name: Experto en venenos
+  effect: Si no busca objetos raros puede preparar 1D3-1 dosis de veneno negro. Deben usarse en la siguiente batalla y no
+    pueden cambiarse ni venderse.
+  source:
+    manual: lustria
+    printed_page: 65
+    section: Habilidades Especiales de los Elfos Oscuros
+  name_i18n:
+    en: null
+    es: Experto en venenos
+  effect_i18n:
+    en: null
+    es: Si no busca objetos raros puede preparar 1D3-1 dosis de veneno negro. Deben usarse en la siguiente batalla y no pueden
+      cambiarse ni venderse.
+source_sections: []
+canonical_family: dark-elves

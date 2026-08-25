@@ -1,0 +1,362 @@
+id: mootlanders
+name: Mootlanders
+grade: 1b
+source_url: https://mordheimer.net/docs/warbands/grade-1b-warbands/mootlanders
+headings:
+- Halflings in Mordheim ​
+- Special Rules ​
+- Choice of warriors ​
+- Starting experience ​
+- Mootlander Skill Table ​
+- Mootlander Equipment List ​
+- Hand-to-hand combat weapons ​
+- Missile Weapons ​
+- Armour ​
+- Master Chef List ​
+- Hand-to-hand combat weapons ​
+- Special Equipment ​
+- Cleaver ​
+- Kitchen Knife ​
+- Ladle ​
+- Tenderiser ​
+- Cooking Pot Helmet ​
+- Heroes ​
+- 1 Moot Elder ​
+- Special Rules ​
+- 0 – 1 Master Chef ​
+- Special Rules ​
+- 0 – 3 Halfling Thieves ​
+- Special Rules ​
+- Henchmen ​
+- Warriors ​
+- Scouts ​
+- Special Rules ​
+tables:
+- section: Mootlander Skill Table
+  section_path:
+  - Mootlander Skill Table
+  rows:
+  - - ''
+    - Combat
+    - Shooting
+    - Academic
+    - Strength
+    - Speed
+  - - Moot Elder
+    - ✓
+    - ✓
+    - ✓
+    - ''
+    - ✓
+  - - Master Chef
+    - ✓
+    - ✓
+    - ''
+    - ✓
+    - ✓
+  - - Thief
+    - ''
+    - ✓
+    - ✓
+    - ''
+    - ✓
+- section: Hand-to-hand combat weapons
+  section_path:
+  - Mootlander Equipment List
+  - Hand-to-hand combat weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Spear
+    - 10 gc
+  - - Sword
+    - 10 gc
+  - - Mace
+    - 3 gc
+- section: Missile Weapons
+  section_path:
+  - Mootlander Equipment List
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Bow
+    - 10 gc
+  - - Short Bow
+    - 5 gc
+  - - Sling
+    - 2 gc
+- section: Armour
+  section_path:
+  - Mootlander Equipment List
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Light armour
+    - 20 gc
+  - - Shield
+    - 5 gc
+  - - Cooking Pot Helmet
+    - 8 gc
+- section: Hand-to-hand combat weapons
+  section_path:
+  - Mootlander Equipment List
+  - Master Chef List
+  - Hand-to-hand combat weapons
+  rows:
+  - - Item
+    - Cost
+  - - Kitchen Knife
+    - 2 gc
+  - - Cleaver
+    - 3 gc
+  - - Ladle
+    - 2 gc
+  - - Tenderiser
+    - 3 gc
+- section: 1 Moot Elder
+  section_path:
+  - Heroes
+  - 1 Moot Elder
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - Moot Elder
+    - '4'
+    - '3'
+    - '5'
+    - '2'
+    - '2'
+    - '1'
+    - '6'
+    - '1'
+    - '9'
+- section: 0 – 1 Master Chef
+  section_path:
+  - Heroes
+  - 0 – 1 Master Chef
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - Master Chef
+    - '4'
+    - '3'
+    - '4'
+    - '3'
+    - '2'
+    - '1'
+    - '5'
+    - '1'
+    - '9'
+- section: 0 – 3 Halfling Thieves
+  section_path:
+  - Heroes
+  - 0 – 3 Halfling Thieves
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - Halfling Thieves
+    - '4'
+    - '3'
+    - '4'
+    - '2'
+    - '2'
+    - '1'
+    - '5'
+    - '1'
+    - '9'
+- section: Warriors
+  section_path:
+  - Henchmen
+  - Warriors
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - Warriors
+    - '4'
+    - '2'
+    - '4'
+    - '2'
+    - '2'
+    - '1'
+    - '5'
+    - '1'
+    - '8'
+- section: Scouts
+  section_path:
+  - Henchmen
+  - Scouts
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - Scouts
+    - '4'
+    - '2'
+    - '4'
+    - '2'
+    - '2'
+    - '1'
+    - '5'
+    - '1'
+    - '8'
+section_text:
+- section: Halflings in Mordheim
+  section_path:
+  - Halflings in Mordheim
+  text: 'Although it is exceedingly rare, Halflings will form Warbands and go marching
+    off to Mordheim. With dreams of mountains of iced buns and rivers of fizzy drink,
+    they fearlessly enter the gates of Mordheim in search of gold, wyrdstone and abandoned
+    kitchens to plunder.
+
+    The Legend of the Knights of the Kitchen Table Lord Charlie Gutbuckett is famous
+    in the Moot for being extremely rich and spoilt but also for being exceptional
+    with the bow (which is well reputed considering his constant boasting). The only
+    time that he has ever been beaten in an archery contest was by his father, after
+    a dispute over a blueberry muffin. Totally shamed by this event, Charlie formed
+    up his Warband of similarly eccentric Halflings and headed off to Mordheim with
+    his parents last profound words echoing through his head ‘Bring us back some chocolate
+    hob-nobs son’. His warband was named ‘The Knights of the Kitchen Table’ and even
+    his brother Archie joined up for the adventure. This was a terrible shame for
+    the rest of the family as Archie’s recipe for strawberry flapjacks was second
+    to none.'
+- section: Special Rules
+  section_path:
+  - Special Rules
+  text: Halflings are very weak and puny and even the lightest of blows tends to knock
+    them senseless. When rolling for a Halfling’s injury, treat a roll of a 2 as ‘stunned’.
+- section: Mootlander Equipment List
+  section_path:
+  - Mootlander Equipment List
+  text: 'The following lists are used by Mootlander warbands to pick their weapons:'
+- section: Special Equipment
+  section_path:
+  - Special Equipment
+  text: 'This warband has access to the following special equipment when purchasing
+    items from the Trading Post , outside their starting list:'
+- section: 1 Moot Elder
+  section_path:
+  - Heroes
+  - 1 Moot Elder
+  text: '55 gold crowns to hire
+
+    A Halfling Moot Elder is the bravest, toughest, and obviously fattest Halfling
+    in the Warband. He is as greatly respected by the Halfling people as his skill
+    with the bow, their principle weapon.
+
+    Weapons/Armour: The Halfling Moot Elder may buy equipment from the Halfling equipment
+    list. In addition, he may be armed with a pistol for 15 GC, usually an old family
+    heirloom.'
+- section: Special Rules
+  section_path:
+  - Heroes
+  - 1 Moot Elder
+  - Special Rules
+  text: 'Leader: Any warrior within 6" of the Moot Elder may use his Leadership characteristic
+    when taking Leadership tests.'
+- section: 0 – 1 Master Chef
+  section_path:
+  - Heroes
+  - 0 – 1 Master Chef
+  text: '35 gold crowns to hire
+
+    Any wise Halfling Moot Elder will persuade a Halfling Master Chef into joining
+    his Warband. The better the Halflings fight, the more food the Chef cooks for
+    them!
+
+    Weapons/Armour: The Halfling Master Chef may be equipped from the Halfling Master
+    Chef utensils list.'
+- section: Special Rules
+  section_path:
+  - Heroes
+  - 0 – 1 Master Chef
+  - Special Rules
+  text: 'Inspired Cooking: Any Halfling models within 6" of a Halfling Master Chef
+    may re-roll any failed hits in combat (once per turn).'
+- section: 0 – 3 Halfling Thieves
+  section_path:
+  - Heroes
+  - 0 – 3 Halfling Thieves
+  text: '25 gold crowns to hire
+
+    Halfling Thieves are often employed by warbands to sneak into enemy camps and
+    steal any stash they can get their sticky little hands on.
+
+    Weapons/Armour: Halfling Thieves are equipped from the Halfling equipment list.'
+- section: Special Rules
+  section_path:
+  - Heroes
+  - 0 – 3 Halfling Thieves
+  - Special Rules
+  text: 'Sneaky: Halfling Thieves can hide in the slightest shadow or piece of cover.
+    Halfling thieves always have a -1 to hit modifier when being shot at, this adds
+    to any other modifiers.'
+- section: Warriors
+  section_path:
+  - Henchmen
+  - Warriors
+  text: '15 gold crowns to hire
+
+    Halflings may not be the best warriors around, but they are brave to the point
+    of insanity and masters of the Bow.
+
+    Weapons/Armour: Halflings are equipped from the Halfling equipment list.'
+- section: Scouts
+  section_path:
+  - Henchmen
+  - Scouts
+  text: '20 gold crowns to hire
+
+    Halflings produce some of the best Scouts in the Old World, almost rivalling the
+    expert Wood Elves in this field.
+
+    Weapons/Armour: Halflings are equipped from the Halfling equipment list.'
+- section: Special Rules
+  section_path:
+  - Henchmen
+  - Scouts
+  - Special Rules
+  text: 'Keen Eyesight: Halfling Scouts can spot hidden enemies at twice their Initiative
+    value in inches.'

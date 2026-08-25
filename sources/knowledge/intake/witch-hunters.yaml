@@ -1,0 +1,502 @@
+id: witch-hunters
+name: Witch Hunters
+grade: core
+source_url: https://mordheimer.net/docs/warbands/grade-1a-warbands/witch-hunters
+headings:
+- Choice of warriors ​
+- Starting experience ​
+- Witch Hunter Skill Table ​
+- Witch Hunter equipment lists ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Flagellant equipment list ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Zealot equipment lists ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Special Equipment ​
+- Brazier Iron ​
+- Hammer of Witches ​
+- Holy Tome ​
+- heroes ​
+- 1 Witch Hunter Captain ​
+- Special Rules ​
+- 0 – 3 Witch Hunters ​
+- Special Rules ​
+- 0 – 1 Warrior-priest ​
+- Special Rules ​
+- henchmen ​
+- 0 – 5 Flagellants ​
+- Special Rules ​
+- Zealots ​
+- 0 – 5 War hounds ​
+- Special Rules ​
+tables:
+- section: Witch Hunter Skill Table
+  section_path:
+  - Witch Hunter Skill Table
+  rows:
+  - - ''
+    - Combat
+    - Shooting
+    - Academic
+    - Strength
+    - Speed
+  - - Witch Hunter Captain
+    - ✓
+    - ✓
+    - ✓
+    - ✓
+    - ✓
+  - - Witch Hunter
+    - ✓
+    - ✓
+    - ✓
+    - ''
+    - ✓
+  - - Warrior-Priest
+    - ✓
+    - ''
+    - ✓
+    - ✓
+    - ''
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Witch Hunter equipment lists
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Mace
+    - 3 gc
+  - - Hammer
+    - 3 gc
+  - - Axe
+    - 5 gc
+  - - Sword
+    - 10 gc
+  - - Double-handed weapon
+    - 15 gc
+- section: Missile Weapons
+  section_path:
+  - Witch Hunter equipment lists
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Crossbow
+    - 25 gc
+  - - Pistol
+    - 15 gc (30 for a brace)
+  - - Crossbow pistol
+    - 35 gc
+- section: Armour
+  section_path:
+  - Witch Hunter equipment lists
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Light armour
+    - 20 gc
+  - - Heavy armour
+    - 50 gc
+  - - Shield
+    - 5 gc
+  - - Buckler
+    - 5 gc
+  - - Helmet
+    - 10 gc
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Witch Hunter equipment lists
+  - Flagellant equipment list
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Flail
+    - 15 gc
+  - - Morning star
+    - 15 gc
+  - - Double-handed weapon
+    - 15 gc
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Witch Hunter equipment lists
+  - Zealot equipment lists
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Mace
+    - 3 gc
+  - - Hammer
+    - 3 gc
+  - - Axe
+    - 5 gc
+  - - Sword
+    - 10 gc
+  - - Double-handed weapon
+    - 15 gc
+  - - Spear
+    - 10 gc
+- section: Missile Weapons
+  section_path:
+  - Witch Hunter equipment lists
+  - Zealot equipment lists
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Bow
+    - 10 gc
+  - - Short Bow
+    - 5 gc
+- section: Armour
+  section_path:
+  - Witch Hunter equipment lists
+  - Zealot equipment lists
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Light armour
+    - 20 gc
+  - - Shield
+    - 5 gc
+  - - Helmet
+    - 10 gc
+- section: 1 Witch Hunter Captain
+  section_path:
+  - heroes
+  - 1 Witch Hunter Captain
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '4'
+    - '4'
+    - '4'
+    - '3'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '8'
+- section: 0 – 3 Witch Hunters
+  section_path:
+  - heroes
+  - 0 – 3 Witch Hunters
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 1 Warrior-priest
+  section_path:
+  - heroes
+  - 0 – 1 Warrior-priest
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '8'
+- section: 0 – 5 Flagellants
+  section_path:
+  - henchmen
+  - 0 – 5 Flagellants
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '4'
+    - '3'
+    - '3'
+    - '4'
+    - '4'
+    - '1'
+    - '3'
+    - '1'
+    - '10'
+- section: Zealots
+  section_path:
+  - henchmen
+  - Zealots
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '4'
+    - '2'
+    - '2'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 5 War hounds
+  section_path:
+  - henchmen
+  - 0 – 5 War hounds
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '6'
+    - '4'
+    - '0'
+    - '4'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '5'
+section_text:
+- section: Choice of warriors
+  section_path:
+  - Choice of warriors
+  text: 'A Witch Hunter warband must include a minimum of three models. You have 500
+    gold crowns which you can use to recruit your initial warband. The maximum number
+    of warriors in the warband may never exceed 12.
+
+    Witch Hunter Captain: Each Witch Hunter warband must have one Witch Hunter Captain.
+    Warrior-Priest: Your warband may include a single Warrior-Priest. Witch Hunters:
+    Your warband may include up to three Witch Hunters. Zealots: Any number of models
+    may be Zealots. Flagellants: Your warband may include up to five Flagellants.
+    Warhounds: Your warband may include up to five Warhounds.'
+- section: Starting experience
+  section_path:
+  - Starting experience
+  text: A Witch Hunter Captain starts with 20 experience. Witch Hunters start with
+    8 experience. A Warrior-Priest starts with 12 experience. Henchmen start with
+    0 experience.
+- section: Witch Hunter equipment lists
+  section_path:
+  - Witch Hunter equipment lists
+  text: The following lists are used by Witch Hunter warbands to pick their equipment.
+- section: Flagellant equipment list
+  section_path:
+  - Witch Hunter equipment lists
+  - Flagellant equipment list
+  text: This list is for Flagellants only.
+- section: Missile Weapons
+  section_path:
+  - Witch Hunter equipment lists
+  - Flagellant equipment list
+  - Missile Weapons
+  text: None.
+- section: Armour
+  section_path:
+  - Witch Hunter equipment lists
+  - Flagellant equipment list
+  - Armour
+  text: None.
+- section: Zealot equipment lists
+  section_path:
+  - Witch Hunter equipment lists
+  - Zealot equipment lists
+  text: This list is for Zealots only.
+- section: Special Equipment
+  section_path:
+  - Special Equipment
+  text: 'This warband has access to the following special equipment when purchasing
+    items from the Trading Post , outside their starting list:'
+- section: 1 Witch Hunter Captain
+  section_path:
+  - heroes
+  - 1 Witch Hunter Captain
+  text: '60 gold crowns to hire
+
+    Driven by fanaticism, Witch Hunter Captains are obsessed with cleansing Mordheim
+    and bringing the justice of Sigmar to all. Carrying the edict of the Grand Theogonist
+    himself, they have the divine right to judge and execute warlocks, witches, Chaos
+    worshippers… in fact all who dare to oppose them.
+
+    Weapons/Armour: A Witch Hunter Captain may be equipped with weapons and armour
+    chosen from the Witch Hunter Equipment list.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 1 Witch Hunter Captain
+  - Special Rules
+  text: 'Leader: Any warrior within 6" of the Witch Hunter Captain may use his Leadership
+    value when taking Leadership tests.
+
+    Burn the Witch!: A Witch Hunter Captain hates all models who can cast spells.'
+- section: 0 – 3 Witch Hunters
+  section_path:
+  - heroes
+  - 0 – 3 Witch Hunters
+  text: '25 gold crowns to hire
+
+    Witch Hunters are members of the grim Order of Witch Hunters, dedicated to eradicating
+    Chaos and all its minions. Usually they prowl the Old World individually trying
+    and executing the enemies of Sigmar, but the situation in Mordheim requires them
+    to band together.
+
+    Weapons/Armour: Witch Hunters may be equipped with weapons and armour chosen from
+    the Witch Hunter Equipment list.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 0 – 3 Witch Hunters
+  - Special Rules
+  text: 'Burn the Witch!: Witch Hunters hate all models who can cast spells.'
+- section: 0 – 1 Warrior-priest
+  section_path:
+  - heroes
+  - 0 – 1 Warrior-priest
+  text: '40 gold crowns to hire
+
+    Many powerful fighting men have come from the ranks of the faithful. The Priests
+    of Sigmar are no exception, and the military wing of the cult is feared and respected
+    throughout the Empire.
+
+    The Grand Theogonist himself has granted the Warrior-Priests an edict to cleanse
+    Mordheim of Chaos filth. With fire burning in their eyes, the Warrior-Priests
+    stride into battle, chanting aloud the Deus Sigmar, the praise of the patron god
+    of the Empire.
+
+    Weapons/Armour: A Warrior-Priest may be equipped with weapons and armour chosen
+    from the Witch Hunter Equipment list.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 0 – 1 Warrior-priest
+  - Special Rules
+  text: 'Prayers: The Warrior-Priest is a servant of Sigmar and may use the Prayers
+    of Sigmar as detailed in the Magic section and the Warrior-Priest start with one
+    prayer generated at random. In addition the Warrior-Priest may learn a new Prayer
+    instead of a new skill.'
+- section: henchmen
+  section_path:
+  - henchmen
+  text: (Bought in groups of 1-5)
+- section: 0 – 5 Flagellants
+  section_path:
+  - henchmen
+  - 0 – 5 Flagellants
+  text: '40 gold crowns to hire
+
+    Flagellants are fanatics and madmen obsessed with the end of the world. They are
+    often men who have lost their families to war or the ravages of nature, and have
+    also lost their minds. With insane persistence, they travel the length and breadth
+    of the Empire, preaching their view of the end of the world. With their rousing
+    speeches, Witch Hunters can muster these dangerous lunatics to fight in the streets
+    of Mordheim, where no sane man dares tread.
+
+    Flagellants are extremely dangerous opponents in close combat, for they have the
+    strength of madmen, and their bodies have become inured to pain because of self-mutilation.
+
+    Weapons/Armour: Flagellants may be equipped with weapons and armour chosen from
+    the Flagellant Equipment list. ❓ Flagellants never use missile weapons, even if
+    they gain an Advance roll which would otherwise allow them to do so.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 5 Flagellants
+  - Special Rules
+  text: 'Fanatical: Flagellants are convinced that the end of the world is nigh, and
+    nothing in this world holds any terror for them. Flagellants automatically pass
+    all Leadership-based tests they are required to take. A Flagellant may never become
+    a warband leader.'
+- section: Zealots
+  section_path:
+  - henchmen
+  - Zealots
+  text: '20 gold crowns to hire
+
+    When a man loses his family, home and all he cared for, religion is often the
+    last refuge left to him. Such men become wandering pilgrims, bitter and dangerous
+    fanatics who are prepared to avenge their loss at any cost. These men are called
+    Zealots.
+
+    Zealots have forsaken their former lives and exist only to destroy evil and the
+    minions of Chaos. Whilst they might have been peasants and craftsmen before, and
+    thus may not be as dangerous in a fight as seasoned mercenaries, their determination
+    and fanaticism should not be underestimated. Witch Hunters find ready allies in
+    their ranks, and many a band of Zealots is led by Witch Hunters.
+
+    Weapons/Armour: Zealots may be equipped with weapons and armour chosen from the
+    Zealot Equipment list.'
+- section: 0 – 5 War hounds
+  section_path:
+  - henchmen
+  - 0 – 5 War hounds
+  text: '15 gold crowns to buy
+
+    Witch Hunters often keep packs of ferocious hunting dogs. With their huge jaws
+    and powerful bite, they are perfect for hunting down (and tearing apart) any heretics,
+    mutants, deviants and witches.
+
+    Weapons/Armour: Jaws and brutality! War hounds never use or need weapons and armour.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 5 War hounds
+  - Special Rules
+  text: 'Animals: War hounds are animals and thus do not gain experience.'

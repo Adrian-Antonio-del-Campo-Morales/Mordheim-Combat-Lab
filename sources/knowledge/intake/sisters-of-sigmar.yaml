@@ -1,0 +1,409 @@
+id: sisters-of-sigmar
+name: Sisters of Sigmar
+grade: core
+source_url: https://mordheimer.net/docs/warbands/grade-1a-warbands/sisters-of-sigmar
+headings:
+- Choice of warriors ​
+- Starting experience ​
+- Sisters of Sigmar Skill Table ​
+- Special Skills ​
+- Sign of Sigmar ​
+- Protection of Sigmar ​
+- Utter Determination ​
+- Righteous Fury ​
+- Absolute Faith ​
+- Sisters of Sigmar equipment lists ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Miscellaneous Equipment ​
+- Special Equipment ​
+- Sigmarite Warhammer ​
+- Steel Whip ​
+- Holy Tome ​
+- heroines ​
+- 1 Sigmarite matriarch ​
+- Special Rules ​
+- 0 – 1 Augur ​
+- Special Rules ​
+- 0 – 3 Sister superior ​
+- henchwomen ​
+- Sigmarite Sister ​
+- 0 – 10 Novices ​
+tables:
+- section: Sisters of Sigmar Skill Table
+  section_path:
+  - Sisters of Sigmar Skill Table
+  rows:
+  - - ''
+    - Combat
+    - Shooting
+    - Academic
+    - Strength
+    - Speed
+    - Special
+  - - Matriarch
+    - ✓
+    - ''
+    - ✓
+    - ✓
+    - ✓
+    - ✓
+  - - Sister Superior
+    - ✓
+    - ''
+    - ✓
+    - ✓
+    - ✓
+    - ✓
+  - - Augur
+    - ''
+    - ''
+    - ✓
+    - ''
+    - ✓
+    - ✓
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Sisters of Sigmar equipment lists
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Mace
+    - 3 gc
+  - - Hammer
+    - 3 gc
+  - - Sigmarite warhammer
+    - 15 gc
+  - - Flail
+    - 15 gc
+  - - Steel whip
+    - 10 gc
+  - - Double-handed weapon
+    - 15 gc
+- section: Missile Weapons
+  section_path:
+  - Sisters of Sigmar equipment lists
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Sling
+    - 2 gc
+- section: Armour
+  section_path:
+  - Sisters of Sigmar equipment lists
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Light armour
+    - 20 gc
+  - - Heavy armour
+    - 50 gc
+  - - Shield
+    - 5 gc
+  - - Buckler
+    - 5 gc
+  - - Helmet
+    - 10 gc
+- section: Miscellaneous Equipment
+  section_path:
+  - Sisters of Sigmar equipment lists
+  - Miscellaneous Equipment
+  rows:
+  - - Item
+    - Cost
+  - - Holy tome
+    - 120 gc
+  - - Blessed water
+    - 10 gc
+  - - Holy relic
+    - 15 gc
+- section: 1 Sigmarite matriarch
+  section_path:
+  - heroines
+  - 1 Sigmarite matriarch
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '4'
+    - '4'
+    - '4'
+    - '3'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '8'
+- section: 0 – 1 Augur
+  section_path:
+  - heroines
+  - 0 – 1 Augur
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '4'
+    - '2'
+    - '2'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 3 Sister superior
+  section_path:
+  - heroines
+  - 0 – 3 Sister superior
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '4'
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: Sigmarite Sister
+  section_path:
+  - henchwomen
+  - Sigmarite Sister
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 10 Novices
+  section_path:
+  - henchwomen
+  - 0 – 10 Novices
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '4'
+    - '2'
+    - '2'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '6'
+section_text:
+- section: Choice of warriors
+  section_path:
+  - Choice of warriors
+  text: 'A Sisters of Sigmar warband must include a minimum of three models. You have
+    500 gold crowns to recruit your initial warband. The maximum number of warriors
+    in the warband may never exceed 15.
+
+    Sigmarite Matriarch: Each Sisters of Sigmar warband must have one Matriarch to
+    lead it: no more, no less. Sister Superior: Your warband may include up to 3 Sister
+    Superiors. Augur: Your warband may include a single Augur. Novices: Your warband
+    may include up to 10 Novices. Sisters: Any number of models may be Sisters.'
+- section: Starting experience
+  section_path:
+  - Starting experience
+  text: A Matriarch starts with 20 experience. Sisters Superior start with 8 experience.
+    An Augur starts with 0 experience. Henchmen start with 0 experience.
+- section: Special Skills
+  section_path:
+  - Special Skills
+  text: The Sisters of Sigmar may use the following skill list instead of the standard
+    skill lists.
+- section: Sign of Sigmar
+  section_path:
+  - Special Skills
+  - Sign of Sigmar
+  text: The Sister is favoured by the great god Sigmar. Possessed or Undead opponents
+    lose their first attack against the Priestess in the first round of hand-to-hand
+    combat (down to a minimum of 1).
+- section: Protection of Sigmar
+  section_path:
+  - Special Skills
+  - Protection of Sigmar
+  text: The Sister has been blessed by the High Matriarch. Any spell which would affect
+    her is nullified on a D6 roll of 4+. Note that if the spell is nullified it will
+    not affect any other models either.
+- section: Utter Determination
+  section_path:
+  - Special Skills
+  - Utter Determination
+  text: Only the Matriarch may have this skill, which allows her to re-roll any failed
+    Rout tests.
+- section: Righteous Fury
+  section_path:
+  - Special Skills
+  - Righteous Fury
+  text: The Sister feels cold fury and utter contempt towards any evil that pollutes
+    the soil of the holy Empire with its presence. The model hates all Skaven, Undead,
+    Possessed, Beastmen, Dark Elves and any other 'evil' warband ❓ and all models
+    in them. Non-Chaos humans who just like to kill, loot, etc, are not included.
+- section: Absolute Faith
+  section_path:
+  - Special Skills
+  - Absolute Faith
+  text: The Sister puts her faith in Sigmar, and faces dangers unflinchingly. She
+    may re-roll any fear tests and does not have to test if she is fighting alone
+    against several opponents.
+- section: Sisters of Sigmar equipment lists
+  section_path:
+  - Sisters of Sigmar equipment lists
+  text: The following lists are used by Sisters of Sigmar warbands to pick their equipment.
+- section: Miscellaneous Equipment
+  section_path:
+  - Sisters of Sigmar equipment lists
+  - Miscellaneous Equipment
+  text: (Heroines only)
+- section: Special Equipment
+  section_path:
+  - Special Equipment
+  text: 'This warband has access to the following special equipment when purchasing
+    items from the Trading Post , outside their starting list:'
+- section: 1 Sigmarite matriarch
+  section_path:
+  - heroines
+  - 1 Sigmarite matriarch
+  text: '70 gold crowns (dowry to the temple)
+
+    The Sigmarite Matriarchs, of whom there is an inner circle of twelve, are answerable
+    to the High Matriarch of the temple. Each must lead a warband of Sisters in frequent
+    searches of the city in order to purge the ruins. Matriarchs are driven by a zealous
+    devotion to the Cult of Sigmar and a relentless determination to redeem the Sisterhood
+    in His eyes.
+
+    Weapons/Armour: The Sigmarite Matriarch may be equipped with weapons and armour
+    chosen from the Sisters of Sigmar Equipment list.'
+- section: Special Rules
+  section_path:
+  - heroines
+  - 1 Sigmarite matriarch
+  - Special Rules
+  text: 'Leader: Any warband member within 6" of the Sigmarite Matriarch may use her
+    Leadership characteristic when taking any Leadership tests.
+
+    Prayers of Sigmar: The Sigmarite Matriarch is a servant of Sigmar and may use
+    the Prayers of Sigmar as detailed in the Magic section and the Sigmarite Matriarchs
+    start with one prayer generated at random. In addition the Sigmarite Matriarchs
+    may learn a new Prayer instead of a new skill.'
+- section: 0 – 1 Augur
+  section_path:
+  - heroines
+  - 0 – 1 Augur
+  text: '25 gold crowns (dowry to the temple)
+
+    The blind Augurs of the Sisterhood are blessed beyond their comrades. By giving
+    up their sight they have gained something far more, second sight – a gift from
+    their patron god. Only a very few are marked this way, and they are greatly revered
+    by the Sisterhood. Unlike the rest of the priestesses, they shave their heads,
+    save for a single long braid.
+
+    Weapons/Armour: The Augurs may be equipped with weapons chosen from the Sisters
+    of Sigmar Equipment list. They never wear armour.'
+- section: Special Rules
+  section_path:
+  - heroines
+  - 0 – 1 Augur
+  - Special Rules
+  text: 'Blessed Sight: An Augur can re-roll any failed characteristic tests (climbing,
+    resisting spells or any other reason), and any rolls to hit in close combat or
+    shooting. You must accept the second result. In addition, an Augur can use her
+    Blessed Sight to help the Sisterhood when they are searching the city for wyrdstone.
+    If the Augur is not put out of action in the battle, you may roll two dice for
+    her in the exploration phase and pick either dice as the result. ❓'
+- section: 0 – 3 Sister superior
+  section_path:
+  - heroines
+  - 0 – 3 Sister superior
+  text: '35 gold crowns (dowry to the temple)
+
+    Each of the Sisters Superior is a long-serving priestess of the Cult of Sigmar,
+    well versed in the rituals of the temple and an example to the younger Sisters
+    and Novices. The Sisters Superior are entrusted with maintaining the faith and
+    fervour of the order. Any peril or foe that may lurk in the ruins of Mordheim
+    is as nothing compared to the wrath of a Sister Superior.
+
+    Weapons/Armour: A Sister Superior may be equipped with weapons and armour chosen
+    from the Sisters of Sigmar Equipment list.'
+- section: henchwomen
+  section_path:
+  - henchwomen
+  text: (Bought in groups of 1-5)
+- section: Sigmarite Sister
+  section_path:
+  - henchwomen
+  - Sigmarite Sister
+  text: '25 gold crowns (dowry to the temple)
+
+    Sigmarite Sisters know that their entire order is shamed in the eyes of their
+    Lord Sigmar. Every one of them is sworn upon His altar to pacify the city and
+    thereby redeem themselves. Whatever the perils and horrors that stand in their
+    way, they will be overcome!
+
+    Weapons/Armour: The Sigmarite Sisters may be equipped with weapons and armour
+    chosen from the Sisters of Sigmar Equipment list.'
+- section: 0 – 10 Novices
+  section_path:
+  - henchwomen
+  - 0 – 10 Novices
+  text: '15 gold crowns (dowry to the temple)
+
+    By tradition, the Sisters draw their recruits only from the most noble houses
+    of the Empire, and families consider it a great honour to have their daughter
+    accepted into the order. Only maidens of noble lineage can be relied upon to have
+    the devotion to duty and innate sense of honour. Few though the recruits may be,
+    they must endure several years as Novices during which time their devotion will
+    be tested to the full. All are eager to prove themselves worthy to be the handmaidens
+    of Sigmar.
+
+    Weapons/Armour: The Novices may be equipped with weapons and armour chosen from
+    the Sisters of Sigmar Equipment list.'

@@ -1,0 +1,1621 @@
+schema_version: 1
+id: carnival-of-chaos
+name: Carnival of Chaos
+name_i18n:
+  en: Carnival of Chaos
+  es: null
+original_locale: en
+categories:
+- 1a
+collections:
+- mordheimer
+grade: 1a
+setting: The Empire
+publication: Empire in Flames
+status: source-normalized
+sources:
+- manual: mordheimer.net
+  printed_page: 0
+  section: Carnival of Chaos
+  url: https://mordheimer.net/docs/warbands/grade-1a-warbands/carnival-of-chaos
+roster:
+  minimum_models: 3
+  maximum_models: 15
+  starting_gold: 500
+  members:
+  - profile_id: carnival-master
+    minimum: 1
+    maximum: 1
+  - profile_id: brutes
+    minimum: 0
+    maximum: 2
+  - profile_id: tainted-ones
+    minimum: 0
+    maximum: 2
+  - profile_id: plague-bearers
+    minimum: 0
+    maximum: 2
+  - profile_id: nurglings
+    minimum: 0
+    maximum: null
+  - profile_id: brethren
+    minimum: 0
+    maximum: null
+equipment_lists:
+- id: carnival-equipment-lists
+  name: Carnival equipment lists
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: 1st free/2 gc
+  - item_id: mace
+    cost: 3
+  - item_id: hammer
+    cost: 3
+  - item_id: axe
+    cost: 5
+  - item_id: sword
+    cost: 10
+  - item_id: morning_star
+    cost: 15
+  - item_id: great_weapon
+    cost: 15
+  - item_id: spear
+    cost: 10
+  - item_id: halberd
+    cost: 10
+  - item_id: short_bow
+    cost: 10
+  - item_id: bow
+    cost: 15
+  - item_id: pistol
+    cost: 15
+    notes: 15 gc (30 for a brace)
+  - item_id: light_armour
+    cost: 20
+  - item_id: heavy_armour
+    cost: 50
+  - item_id: shield
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Carnival equipment lists
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/carnival-of-chaos
+  name_i18n:
+    en: Carnival equipment lists
+    es: null
+- id: brute-equipment-list
+  name: Brute equipment list
+  items:
+  - item_id: great_weapon
+    cost: 15
+  - item_id: flail
+    cost: 10
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Brute equipment list
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/carnival-of-chaos
+  name_i18n:
+    en: Brute equipment list
+    es: null
+profiles:
+- id: carnival-master
+  name: Carnival Master
+  type: hero
+  cost: 70
+  experience: 20
+  characteristics:
+    M: 4
+    WS: 4
+    BS: 4
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 8
+  equipment_lists:
+  - carnival-equipment-lists
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - shooting
+  - academic
+  - strength
+  - speed
+  rules:
+  - id: leader
+    name: Leader
+    effect: 'Any models in the warband within 6" of
+
+      the Master may use his Leadership instead of their
+
+      own.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: heroes / 1 Carnival Master / Special Rules / Leader
+      url: https://mordheimer.net/docs/warbands/grade-1a-warbands/carnival-of-chaos
+    name_i18n:
+      en: Leader
+      es: null
+    effect_i18n:
+      en: 'Any models in the warband within 6" of
+
+        the Master may use his Leadership instead of their
+
+        own.'
+      es: null
+  - id: wizard
+    name: Wizard
+    effect: The Master is a wizard and uses Nurgle Rituals .
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: heroes / 1 Carnival Master / Special Rules / Wizard
+      url: https://mordheimer.net/docs/warbands/grade-1a-warbands/carnival-of-chaos
+    name_i18n:
+      en: Wizard
+      es: null
+    effect_i18n:
+      en: The Master is a wizard and uses Nurgle Rituals .
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 1 Carnival Master
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/carnival-of-chaos
+  source_path:
+  - heroes
+  - 1 Carnival Master
+  name_i18n:
+    en: Carnival Master
+    es: null
+- id: brutes
+  name: Brutes
+  type: hero
+  cost: 60
+  experience: 8
+  characteristics:
+    M: 4
+    WS: 4
+    BS: 0
+    S: 4
+    T: 4
+    W: 1
+    I: 2
+    A: 2
+    Ld: 7
+  equipment_lists:
+  - carnival-equipment-lists
+  - brute-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - strength
+  - speed
+  rules:
+  - id: unnatural-strength
+    name: Unnatural Strength
+    effect: 'Brutes start the game with
+
+      the Strongman skill from the Strength skill list in
+
+      the Mordheim rulebook.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: heroes / 0 – 2 Brutes / Special Rules / Unnatural Strength
+      url: https://mordheimer.net/docs/warbands/grade-1a-warbands/carnival-of-chaos
+    name_i18n:
+      en: Unnatural Strength
+      es: null
+    effect_i18n:
+      en: 'Brutes start the game with
+
+        the Strongman skill from the Strength skill list in
+
+        the Mordheim rulebook.'
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 2 Brutes
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/carnival-of-chaos
+  source_path:
+  - heroes
+  - 0 – 2 Brutes
+  name_i18n:
+    en: Brutes
+    es: null
+- id: tainted-ones
+  name: Tainted Ones
+  type: hero
+  cost: 25
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - carnival-equipment-lists
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - speed
+  rules:
+  - id: nurgles-blessings
+    name: Nurgle’s Blessings
+    effect: 'Tainted Ones must start the
+
+      game with one or more Blessings of Nurgle. See
+
+      the Blessings of Nurgle that follow.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: heroes / 0 – 2 Tainted Ones / Special Rules / Nurgle’s Blessings
+      url: https://mordheimer.net/docs/warbands/grade-1a-warbands/carnival-of-chaos
+    name_i18n:
+      en: Nurgle’s Blessings
+      es: null
+    effect_i18n:
+      en: 'Tainted Ones must start the
+
+        game with one or more Blessings of Nurgle. See
+
+        the Blessings of Nurgle that follow.'
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 2 Tainted Ones
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/carnival-of-chaos
+  source_path:
+  - heroes
+  - 0 – 2 Tainted Ones
+  name_i18n:
+    en: Tainted Ones
+    es: null
+- id: plague-bearers
+  name: Plague Bearers
+  type: henchman
+  cost: 50
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 4
+    BS: 3
+    S: 4
+    T: 4
+    W: 1
+    I: 4
+    A: 2
+    Ld: 10
+  equipment_lists: []
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules:
+  - id: cloud-of-flies
+    name: Cloud of Flies
+    effect: 'Plague Bearers are surrounded
+
+      by a cloud of flies, which buzz around them and
+
+      their combat opponent. They do not affect the Plague Bearer but distract foes by buzzing into
+
+      eyes, nostrils and mouths. A Plague Bearer’s close
+
+      combat opponent suffers a -1 to hit modifier on all
+
+      attacks. ❓'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 2 Plague Bearers / Special Rules / Cloud of Flies
+      url: https://mordheimer.net/docs/warbands/grade-1a-warbands/carnival-of-chaos
+    name_i18n:
+      en: Cloud of Flies
+      es: null
+    effect_i18n:
+      en: 'Plague Bearers are surrounded
+
+        by a cloud of flies, which buzz around them and
+
+        their combat opponent. They do not affect the Plague Bearer but distract foes by buzzing into
+
+        eyes, nostrils and mouths. A Plague Bearer’s close
+
+        combat opponent suffers a -1 to hit modifier on all
+
+        attacks. ❓'
+      es: null
+  - id: stream-of-corruption
+    name: Stream of Corruption
+    effect: 'Plague Bearers can
+
+      spew forth a grotesque stream of maggots, entrails
+
+      and filth. This is counted as a shooting attack with
+
+      a range of 6" and is resolved at Strength 3 with no
+
+      saves for armour.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 2 Plague Bearers / Special Rules / Stream of Corruption
+      url: https://mordheimer.net/docs/warbands/grade-1a-warbands/carnival-of-chaos
+    name_i18n:
+      en: Stream of Corruption
+      es: null
+    effect_i18n:
+      en: 'Plague Bearers can
+
+        spew forth a grotesque stream of maggots, entrails
+
+        and filth. This is counted as a shooting attack with
+
+        a range of 6" and is resolved at Strength 3 with no
+
+        saves for armour.'
+      es: null
+  - id: demonic
+    name: Demonic
+    effect: 'Plague Bearers are Daemons of the
+
+      lord of disease, Nurgle, and are not made of living
+
+      flesh but the eternal and unchanging forces of
+
+      Chaos. Therefore they never gain Experience.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 2 Plague Bearers / Special Rules / Demonic
+      url: https://mordheimer.net/docs/warbands/grade-1a-warbands/carnival-of-chaos
+    name_i18n:
+      en: Demonic
+      es: null
+    effect_i18n:
+      en: 'Plague Bearers are Daemons of the
+
+        lord of disease, Nurgle, and are not made of living
+
+        flesh but the eternal and unchanging forces of
+
+        Chaos. Therefore they never gain Experience.'
+      es: null
+  - id: immune-to-poison
+    name: Immune to Poison
+    effect: 'Plague Bearers are the
+
+      Daemonic embodiment of disease and pestilence.
+
+      They are totally immune to all poisons and
+
+      diseases.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 2 Plague Bearers / Special Rules / Immune to Poison
+      url: https://mordheimer.net/docs/warbands/grade-1a-warbands/carnival-of-chaos
+    name_i18n:
+      en: Immune to Poison
+      es: null
+    effect_i18n:
+      en: 'Plague Bearers are the
+
+        Daemonic embodiment of disease and pestilence.
+
+        They are totally immune to all poisons and
+
+        diseases.'
+      es: null
+  - id: immune-to-psychology
+    name: Immune to Psychology
+    effect: 'Plague Bearers are
+
+      Daemons and do not know the concept of fear.
+
+      They automatically pass any Leadership-based test
+
+      they are required to take.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 2 Plague Bearers / Special Rules / Immune to Psychology
+      url: https://mordheimer.net/docs/warbands/grade-1a-warbands/carnival-of-chaos
+    name_i18n:
+      en: Immune to Psychology
+      es: null
+    effect_i18n:
+      en: 'Plague Bearers are
+
+        Daemons and do not know the concept of fear.
+
+        They automatically pass any Leadership-based test
+
+        they are required to take.'
+      es: null
+  - id: cause-fear
+    name: Cause Fear
+    effect: 'Plague Bearers are horrifying
+
+      supernatural creatures and therefore cause fear.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 2 Plague Bearers / Special Rules / Cause Fear
+      url: https://mordheimer.net/docs/warbands/grade-1a-warbands/carnival-of-chaos
+    name_i18n:
+      en: Cause Fear
+      es: null
+    effect_i18n:
+      en: 'Plague Bearers are horrifying
+
+        supernatural creatures and therefore cause fear.'
+      es: null
+  - id: daemonic-aura
+    name: Daemonic Aura
+    effect: 'Due to the magical, intangible
+
+      nature of Daemons they have a special Armour
+
+      save of 5+. This is modified by the Strength of the
+
+      attack as normal and is completely negated by
+
+      magic weapons and spells. Plague Bearers’ attacks
+
+      are considered as magical also.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 2 Plague Bearers / Special Rules / Daemonic Aura
+      url: https://mordheimer.net/docs/warbands/grade-1a-warbands/carnival-of-chaos
+    name_i18n:
+      en: Daemonic Aura
+      es: null
+    effect_i18n:
+      en: 'Due to the magical, intangible
+
+        nature of Daemons they have a special Armour
+
+        save of 5+. This is modified by the Strength of the
+
+        attack as normal and is completely negated by
+
+        magic weapons and spells. Plague Bearers’ attacks
+
+        are considered as magical also.'
+      es: null
+  - id: daemonic-instability
+    name: Daemonic Instability
+    effect: 'Plague Bearers are
+
+      bound to the world by Dark Sorcery that is
+
+      highly volatile and unstable. If taken out of
+
+      action a Plague Bearer is banished and
+
+      effectively destroyed on a D6 roll of 1-3 (do not
+
+      roll for injury). In addition, if the warband routs
+
+      then every Plague Bearer in the warband must
+
+      take an immediate Leadership test. If this test is
+
+      failed, then the Plague Bearer counts as
+
+      destroyed.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 2 Plague Bearers / Special Rules / Daemonic Instability
+      url: https://mordheimer.net/docs/warbands/grade-1a-warbands/carnival-of-chaos
+    name_i18n:
+      en: Daemonic Instability
+      es: null
+    effect_i18n:
+      en: 'Plague Bearers are
+
+        bound to the world by Dark Sorcery that is
+
+        highly volatile and unstable. If taken out of
+
+        action a Plague Bearer is banished and
+
+        effectively destroyed on a D6 roll of 1-3 (do not
+
+        roll for injury). In addition, if the warband routs
+
+        then every Plague Bearer in the warband must
+
+        take an immediate Leadership test. If this test is
+
+        failed, then the Plague Bearer counts as
+
+        destroyed.'
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 2 Plague Bearers
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/carnival-of-chaos
+  source_path:
+  - henchmen
+  - 0 – 2 Plague Bearers
+  name_i18n:
+    en: Plague Bearers
+    es: null
+- id: nurglings
+  name: Nurglings
+  type: henchman
+  cost: 15
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 3
+    BS: 0
+    S: 3
+    T: 2
+    W: 1
+    I: 3
+    A: 1
+    Ld: 10
+  equipment_lists: []
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules:
+  - id: cloud-of-flies
+    name: Cloud of Flies
+    effect: 'Nurglings are surrounded by a
+
+      cloud of flies, which buzz around them and their
+
+      combat opponent. They do not affect the
+
+      Nurglings but distract foes by buzzing into eyes,
+
+      nostrils and mouths. A Nurgling’s close combat
+
+      opponent suffers a -1 to hit modifier on all
+
+      attacks. ❓'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / Nurglings / Special Rules / Cloud of Flies
+      url: https://mordheimer.net/docs/warbands/grade-1a-warbands/carnival-of-chaos
+    name_i18n:
+      en: Cloud of Flies
+      es: null
+    effect_i18n:
+      en: 'Nurglings are surrounded by a
+
+        cloud of flies, which buzz around them and their
+
+        combat opponent. They do not affect the
+
+        Nurglings but distract foes by buzzing into eyes,
+
+        nostrils and mouths. A Nurgling’s close combat
+
+        opponent suffers a -1 to hit modifier on all
+
+        attacks. ❓'
+      es: null
+  - id: swarm
+    name: Swarm
+    effect: 'You may summon as many Nurglings as
+
+      you wish (ie. you may have more than five
+
+      Nurglings in a Henchman group).'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / Nurglings / Special Rules / Swarm
+      url: https://mordheimer.net/docs/warbands/grade-1a-warbands/carnival-of-chaos
+    name_i18n:
+      en: Swarm
+      es: null
+    effect_i18n:
+      en: 'You may summon as many Nurglings as
+
+        you wish (ie. you may have more than five
+
+        Nurglings in a Henchman group).'
+      es: null
+  - id: daemonic
+    name: Daemonic
+    effect: 'Nurglings are Daemons of the
+
+      diseased Lord Nurgle and are not made of living
+
+      flesh but the eternal and unchanging forces of
+
+      Chaos. Therefore they never gain Experience.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / Nurglings / Special Rules / Daemonic
+      url: https://mordheimer.net/docs/warbands/grade-1a-warbands/carnival-of-chaos
+    name_i18n:
+      en: Daemonic
+      es: null
+    effect_i18n:
+      en: 'Nurglings are Daemons of the
+
+        diseased Lord Nurgle and are not made of living
+
+        flesh but the eternal and unchanging forces of
+
+        Chaos. Therefore they never gain Experience.'
+      es: null
+  - id: immune-to-poison
+    name: Immune to Poison
+    effect: 'Nurglings are the
+
+      Daemonic embodiment of disease and
+
+      pestilence. They are totally immune to all poisons
+
+      and diseases.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / Nurglings / Special Rules / Immune to Poison
+      url: https://mordheimer.net/docs/warbands/grade-1a-warbands/carnival-of-chaos
+    name_i18n:
+      en: Immune to Poison
+      es: null
+    effect_i18n:
+      en: 'Nurglings are the
+
+        Daemonic embodiment of disease and
+
+        pestilence. They are totally immune to all poisons
+
+        and diseases.'
+      es: null
+  - id: immune-to-psychology
+    name: Immune to Psychology
+    effect: 'Nurglings are
+
+      Daemons and do not know the concept of fear.
+
+      They automatically pass any Leadership-based
+
+      test they are required to take.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / Nurglings / Special Rules / Immune to Psychology
+      url: https://mordheimer.net/docs/warbands/grade-1a-warbands/carnival-of-chaos
+    name_i18n:
+      en: Immune to Psychology
+      es: null
+    effect_i18n:
+      en: 'Nurglings are
+
+        Daemons and do not know the concept of fear.
+
+        They automatically pass any Leadership-based
+
+        test they are required to take.'
+      es: null
+  - id: daemonic-aura
+    name: Daemonic Aura
+    effect: 'Due to the magical, intangible
+
+      nature of Daemons they have a special Armour
+
+      save of 5+. This is modified by the Strength of the
+
+      attack as normal and is completely negated by
+
+      magic weapons and spells. Nurglings’ attacks are
+
+      also considered as magical.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / Nurglings / Special Rules / Daemonic Aura
+      url: https://mordheimer.net/docs/warbands/grade-1a-warbands/carnival-of-chaos
+    name_i18n:
+      en: Daemonic Aura
+      es: null
+    effect_i18n:
+      en: 'Due to the magical, intangible
+
+        nature of Daemons they have a special Armour
+
+        save of 5+. This is modified by the Strength of the
+
+        attack as normal and is completely negated by
+
+        magic weapons and spells. Nurglings’ attacks are
+
+        also considered as magical.'
+      es: null
+  - id: daemonic-instability
+    name: Daemonic Instability
+    effect: 'Nurglings are bound to
+
+      the world by Dark Sorcery that is highly volatile
+
+      and unstable. If taken out of action a Nurgling is
+
+      banished and effectively destroyed on a D6 roll
+
+      of 1-3 (do not roll for injury). In addition, if the
+
+      warband routs then every Nurgling in the
+
+      warband must take an immediate Leadership
+
+      test. If this test is failed, then Nurgling counts as
+
+      destroyed.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / Nurglings / Special Rules / Daemonic Instability
+      url: https://mordheimer.net/docs/warbands/grade-1a-warbands/carnival-of-chaos
+    name_i18n:
+      en: Daemonic Instability
+      es: null
+    effect_i18n:
+      en: 'Nurglings are bound to
+
+        the world by Dark Sorcery that is highly volatile
+
+        and unstable. If taken out of action a Nurgling is
+
+        banished and effectively destroyed on a D6 roll
+
+        of 1-3 (do not roll for injury). In addition, if the
+
+        warband routs then every Nurgling in the
+
+        warband must take an immediate Leadership
+
+        test. If this test is failed, then Nurgling counts as
+
+        destroyed.'
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Nurglings
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/carnival-of-chaos
+  source_path:
+  - henchmen
+  - Nurglings
+  name_i18n:
+    en: Nurglings
+    es: null
+- id: brethren
+  name: Brethren
+  type: henchman
+  cost: 25
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - carnival-equipment-lists
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules: []
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Brethren
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/carnival-of-chaos
+  source_path:
+  - henchmen
+  - Brethren
+  name_i18n:
+    en: Brethren
+    es: null
+band_rules:
+- id: special-rules
+  name: Special Rules
+  effect: 'Dangerous to Know: Because of its rather diseased nature a Carnival of Chaos warband would find it very hard to
+    keep any Hired Swords alive! Therefore, a Carnival of Chaos may never hire any type of Hired Sword.
+
+    Tainted: The Carnival is a similarly unclean mass of mutation and Chaos to the Possessed and so counts as such for purposes
+    of exploration and serious injuries. ✏️'
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Special Rules
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/carnival-of-chaos
+  name_i18n:
+    en: Special Rules
+    es: null
+  effect_i18n:
+    en: 'Dangerous to Know: Because of its rather diseased nature a Carnival of Chaos warband would find it very hard to keep
+      any Hired Swords alive! Therefore, a Carnival of Chaos may never hire any type of Hired Sword.
+
+      Tainted: The Carnival is a similarly unclean mass of mutation and Chaos to the Possessed and so counts as such for purposes
+      of exploration and serious injuries. ✏️'
+    es: null
+- id: blessings-of-nurgle
+  name: Blessings of Nurgle
+  effect: 'Those that worship at the fetid altar of the Lord of Decay suffer from terrible diseases
+
+    and decay, which are known as Blessings of Nurgle.
+
+    Blessings of Nurgle may be bought for Tainted Ones only when they are recruited; you
+
+    may not buy new Blessings for a model after recruitment. Any Tainted may have one or
+
+    more Blessings. The first Blessing is bought at the price indicated, but second and
+
+    subsequent Blessings cost double.'
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Blessings of Nurgle
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/carnival-of-chaos
+  name_i18n:
+    en: Blessings of Nurgle
+    es: null
+  effect_i18n:
+    en: 'Those that worship at the fetid altar of the Lord of Decay suffer from terrible diseases
+
+      and decay, which are known as Blessings of Nurgle.
+
+      Blessings of Nurgle may be bought for Tainted Ones only when they are recruited; you
+
+      may not buy new Blessings for a model after recruitment. Any Tainted may have one or
+
+      more Blessings. The first Blessing is bought at the price indicated, but second and
+
+      subsequent Blessings cost double.'
+    es: null
+- id: blessings-of-nurgle-stream-of-corruption
+  name: Stream of Corruption
+  effect: 'Cost: 25 Gold Crowns
+
+    The Tainted One can spew forth a grotesque stream of maggots, entrails and filth. This
+
+    is counted as a shooting attack with a range of 6" and is resolved at Strength 3 with no
+
+    saves for armour.'
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Blessings of Nurgle / Stream of Corruption
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/carnival-of-chaos
+  name_i18n:
+    en: Stream of Corruption
+    es: null
+  effect_i18n:
+    en: 'Cost: 25 Gold Crowns
+
+      The Tainted One can spew forth a grotesque stream of maggots, entrails and filth. This
+
+      is counted as a shooting attack with a range of 6" and is resolved at Strength 3 with no
+
+      saves for armour.'
+    es: null
+- id: blessings-of-nurgle-nurgles-rot
+  name: Nurgle’s Rot
+  effect: 'Cost: 50 Gold Crowns
+
+    The Tainted One is infected with the deadly pestilence of its lord – Nurgle’s Rot. In
+
+    addition, the Tainted One is immune to all poisons. Nurgle’s Rot is a deadly contagion
+
+    for which there is no known cure. This virulent disease can be passed on in hand-to-hand combat. If the Tainted One makes
+    a successful to wound roll of 6 this will result in
+
+    the target model contracting the Rot (note: Nurgle’s Rot only affects the living, so
+
+    Undead, Daemons and the Possessed are immune). ✏️ Once a warrior has contracted
+
+    the Rot, mark this on the warband roster. Rather than killing the victim immediately,
+
+    the Rot can take some time to set in. From now on, before the start of each battle, the
+
+    warrior must pass a Toughness test. If successful, his constitution has managed to stave
+
+    off the Rot’s effects. If unsuccessful, the warrior loses one point of Toughness
+
+    permanently (if he reaches zero, he has succumbed to the Rot and died, remove him
+
+    from the roster). In addition, if a 6 is rolled for the Toughness test then he has
+
+    unwittingly passed the Rot on to another member of the warband (randomly allocate a
+
+    warband member and mark this on the roster).'
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Blessings of Nurgle / Nurgle’s Rot
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/carnival-of-chaos
+  name_i18n:
+    en: Nurgle’s Rot
+    es: null
+  effect_i18n:
+    en: 'Cost: 50 Gold Crowns
+
+      The Tainted One is infected with the deadly pestilence of its lord – Nurgle’s Rot. In
+
+      addition, the Tainted One is immune to all poisons. Nurgle’s Rot is a deadly contagion
+
+      for which there is no known cure. This virulent disease can be passed on in hand-to-hand combat. If the Tainted One
+      makes a successful to wound roll of 6 this will result in
+
+      the target model contracting the Rot (note: Nurgle’s Rot only affects the living, so
+
+      Undead, Daemons and the Possessed are immune). ✏️ Once a warrior has contracted
+
+      the Rot, mark this on the warband roster. Rather than killing the victim immediately,
+
+      the Rot can take some time to set in. From now on, before the start of each battle, the
+
+      warrior must pass a Toughness test. If successful, his constitution has managed to stave
+
+      off the Rot’s effects. If unsuccessful, the warrior loses one point of Toughness
+
+      permanently (if he reaches zero, he has succumbed to the Rot and died, remove him
+
+      from the roster). In addition, if a 6 is rolled for the Toughness test then he has
+
+      unwittingly passed the Rot on to another member of the warband (randomly allocate a
+
+      warband member and mark this on the roster).'
+    es: null
+- id: blessings-of-nurgle-cloud-of-flies
+  name: Cloud of Flies
+  effect: 'Cost: 25 Gold Crowns
+
+    The Tainted One is surrounded by a cloud of flies, which buzz around him and his
+
+    combat opponent. They do not affect the Tainted One but distract foes by buzzing into
+
+    eyes, nostrils and mouths. The Tainted One’s close combat opponent suffers a
+
+    -1 to hit modifier on all attacks. ❓'
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Blessings of Nurgle / Cloud of Flies
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/carnival-of-chaos
+  name_i18n:
+    en: Cloud of Flies
+    es: null
+  effect_i18n:
+    en: 'Cost: 25 Gold Crowns
+
+      The Tainted One is surrounded by a cloud of flies, which buzz around him and his
+
+      combat opponent. They do not affect the Tainted One but distract foes by buzzing into
+
+      eyes, nostrils and mouths. The Tainted One’s close combat opponent suffers a
+
+      -1 to hit modifier on all attacks. ❓'
+    es: null
+- id: blessings-of-nurgle-bloated-foulness
+  name: Bloated Foulness
+  effect: 'Cost: 40 Gold Crowns
+
+    The Tainted One is a huge, disgusting mass of diseased, flabby folds. It gains +1
+
+    Wound and +1 Toughness but has its Movement reduced by -1.'
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Blessings of Nurgle / Bloated Foulness
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/carnival-of-chaos
+  name_i18n:
+    en: Bloated Foulness
+    es: null
+  effect_i18n:
+    en: 'Cost: 40 Gold Crowns
+
+      The Tainted One is a huge, disgusting mass of diseased, flabby folds. It gains +1
+
+      Wound and +1 Toughness but has its Movement reduced by -1.'
+    es: null
+- id: blessings-of-nurgle-mark-of-nurgle
+  name: Mark of Nurgle
+  effect: 'Cost: 35 Gold Crowns
+
+    The Tainted One is burned with the great mark of Nurgle, the three spheres, that weep
+
+    foul pus constantly. It gains +1 Wound and is immune to all poisons.'
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Blessings of Nurgle / Mark of Nurgle
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/carnival-of-chaos
+  name_i18n:
+    en: Mark of Nurgle
+    es: null
+  effect_i18n:
+    en: 'Cost: 35 Gold Crowns
+
+      The Tainted One is burned with the great mark of Nurgle, the three spheres, that weep
+
+      foul pus constantly. It gains +1 Wound and is immune to all poisons.'
+    es: null
+- id: blessings-of-nurgle-hideous
+  name: Hideous
+  effect: 'Cost: 40 Gold Crowns
+
+    The Tainted One is so disgusting that its flesh hangs in tatters from its body and its
+
+    entrails are rotten and exposed. It causes Fear.'
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Blessings of Nurgle / Hideous
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/carnival-of-chaos
+  name_i18n:
+    en: Hideous
+    es: null
+  effect_i18n:
+    en: 'Cost: 40 Gold Crowns
+
+      The Tainted One is so disgusting that its flesh hangs in tatters from its body and its
+
+      entrails are rotten and exposed. It causes Fear.'
+    es: null
+source_sections:
+- section: Special Rules
+  section_path:
+  - Special Rules
+  text: 'Dangerous to Know: Because of its rather diseased nature a Carnival of Chaos warband would find it very hard to keep
+    any Hired Swords alive! Therefore, a Carnival of Chaos may never hire any type of Hired Sword.
+
+    Tainted: The Carnival is a similarly unclean mass of mutation and Chaos to the Possessed and so counts as such for purposes
+    of exploration and serious injuries. ✏️'
+- section: Choice of warriors
+  section_path:
+  - Choice of warriors
+  text: 'A Carnival of Chaos warband must include a minimum of three models. You have 500 Gold Crowns to recruit your initial
+    warband. The maximum number of warriors in the warband may never exceed 15.
+
+    Carnival Master: The Carnival of Chaos must have one Master to lead it – no more, no less. Brutes: Your warband may include
+    up to two Brutes. Tainted Ones: Your warband may include up to two Tainted Ones. Plague Bearers: Your warband may include
+    up to two Plague Bearers. Brethren: Your warband may include any number of Brethren. Nurglings: Your warband may include
+    any number of Nurglings.'
+- section: Starting experience
+  section_path:
+  - Starting experience
+  text: Carnival Master starts with 20 Experience. Brutes starts with 8 Experience. Tainted Ones starts with 0 experience.
+    All Henchmen starts with 0 experience.
+- section: Carnival equipment lists
+  section_path:
+  - Carnival equipment lists
+  text: 'The following lists are used by the Carnival of Chaos to pick their weapons:'
+- section: Missile Weapons
+  section_path:
+  - Carnival equipment lists
+  - Brute equipment list
+  - Missile Weapons
+  text: None.
+- section: Armour
+  section_path:
+  - Carnival equipment lists
+  - Brute equipment list
+  - Armour
+  text: None.
+- section: 1 Carnival Master
+  section_path:
+  - heroes
+  - 1 Carnival Master
+  text: '70 gold crowns to hire
+
+    These lead the diabolical Carnivals of Chaos. They are the chosen of Nurgle and wield sorcerous powers gifted to them
+    by their pestilential god. The Master is a power-crazed individual that leads his coven of Daemonic entertainers throughout
+    the backwaters of the Empire, tainting villages and settlements with disease. To the backward peasantry of the Empire’s
+    rural settlements, the Master comes across as an exotic and charismatic showman bringing outlandish entertainment into
+    their otherwise dreary lives. It is the Carnival Master’s cunning and clever enchantments that help to keep his minions
+    one step ahead of the patrols of the many Witch Hunter bands that rove the land.
+
+    Weapons/Armour: The Master may be equipped
+
+    with weapons and armour chosen from the
+
+    Carnival of Chaos Equipment list.'
+- section: SPECIAL RULES
+  section_path:
+  - heroes
+  - 1 Carnival Master
+  - SPECIAL RULES
+  text: 'Leader: Any models in the warband within 6" of
+
+    the Master may use his Leadership instead of their
+
+    own.
+
+    Wizard: The Master is a wizard and uses Nurgle Rituals .'
+- section: 0 – 2 Brutes
+  section_path:
+  - heroes
+  - 0 – 2 Brutes
+  text: '60 gold crowns to hire
+
+    These are a very specific type of mutant that have had their constitution bolstered by the unnatural vitality of the Lord
+    of Decay. Nurgle’s foul attention has transformed what were once men into massive, statuesque creatures rippling with
+    diseased muscles and a supernatural vigour. Brutes are immensely strong individuals and their part in the masquerade that
+    is the Carnival of Chaos is as strongmen performing feats of strength to entertain the crowds. They are nearly always
+    hooded in the nature of executioners for although their bodies appear outwardly strong and healthy, their faces are often
+    riddled with disease and are half-decayed. In battle, they wield huge hammers and flails with reckless abandon, whirling
+    them around their heads like children’s toys.
+
+    Weapons/Armour: : Brutes may be equipped with
+
+    weapons and armour chosen from the Brute
+
+    Equipment list.'
+- section: SPECIAL RULES
+  section_path:
+  - heroes
+  - 0 – 2 Brutes
+  - SPECIAL RULES
+  text: 'Unnatural Strength: Brutes start the game with
+
+    the Strongman skill from the Strength skill list in
+
+    the Mordheim rulebook.'
+- section: 0 – 2 Tainted Ones
+  section_path:
+  - heroes
+  - 0 – 2 Tainted Ones
+  text: '25 gold crowns to hire (+Cost of Blessings of Nurgle)
+
+    The Tainted Ones are those that are most blessed and favoured of Father Nurgle. They hold a position of great importance
+    within the hierarchy of the Carnival. They are often heavily robed and protected by powerful enchantments, for beneath
+    their robes are unspeakable horrors. The bodies of the Tainted Ones are so wracked with disease and mutation that it is
+    unsafe for even the other mortal members of the warband to touch their bare skin. Ironically, they take the most prestigious
+    role in the Carnival – the fool. The Tainted Ones leap and prance about the audience, dressed as jesters, when the Carnival
+    is performing, laughing and joking with the gathered throng infecting them with their multitude of horrendous maladies.
+    These twisted creatures are exceptionally dangerous opponents in combat too, for it is said that they carry the dreaded
+    and incurable Nurgle’s Rot.
+
+    Weapons/Armour : Tainted Ones may be
+
+    equipped with weapons and armour chosen from
+
+    the Carnival of Chaos Equipment list.'
+- section: SPECIAL RULES
+  section_path:
+  - heroes
+  - 0 – 2 Tainted Ones
+  - SPECIAL RULES
+  text: 'Nurgle’s Blessings: Tainted Ones must start the
+
+    game with one or more Blessings of Nurgle. See
+
+    the Blessings of Nurgle that follow.'
+- section: henchmen
+  section_path:
+  - henchmen
+  text: (Bought in groups of 1-5)
+- section: 0 – 2 Plague Bearers
+  section_path:
+  - henchmen
+  - 0 – 2 Plague Bearers
+  text: '50 gold crowns to hire
+
+    Plague Bearers are daemons of the Chaos god Nurgle, also known as the Lord of Decay. They can be identified by their cyclopean
+    faces and horrifically decayed bodies. Their entrails hang from tattered holes in their grey-green, poxridden flesh and
+    the aura of death and decay surrounds them. They are sometimes known as the Tallymen of Plagues or Maggotkin and are highly
+    revered by the mortal members of the warband. As with all Daemons they can never be killed or destroyed for good so long
+    as the power of their god prevails. However, their presence in the mortal world is tenuous and can only be maintained
+    for long periods by Dark Magic and sacrifice. In the Carnival, the Plague Bearers revel in their showy roles as stage
+    actors and players, dressing in filth encrusted but ostentatious doublet and hose.
+
+    Weapons/Armour: None. Plague Bearers have
+
+    huge filth encrusted claws, which they use to tear
+
+    and slash at their foes. They therefore neither
+
+    need nor use weapons and cannot wear armour.'
+- section: SPECIAL RULES
+  section_path:
+  - henchmen
+  - 0 – 2 Plague Bearers
+  - SPECIAL RULES
+  text: 'Cloud of Flies: Plague Bearers are surrounded
+
+    by a cloud of flies, which buzz around them and
+
+    their combat opponent. They do not affect the Plague Bearer but distract foes by buzzing into
+
+    eyes, nostrils and mouths. A Plague Bearer’s close
+
+    combat opponent suffers a -1 to hit modifier on all
+
+    attacks. ❓
+
+    Stream of Corruption: Plague Bearers can
+
+    spew forth a grotesque stream of maggots, entrails
+
+    and filth. This is counted as a shooting attack with
+
+    a range of 6" and is resolved at Strength 3 with no
+
+    saves for armour.
+
+    Demonic: Plague Bearers are Daemons of the
+
+    lord of disease, Nurgle, and are not made of living
+
+    flesh but the eternal and unchanging forces of
+
+    Chaos. Therefore they never gain Experience.
+
+    Immune to Poison: Plague Bearers are the
+
+    Daemonic embodiment of disease and pestilence.
+
+    They are totally immune to all poisons and
+
+    diseases.
+
+    Immune to Psychology: Plague Bearers are
+
+    Daemons and do not know the concept of fear.
+
+    They automatically pass any Leadership-based test
+
+    they are required to take.
+
+    Cause Fear: Plague Bearers are horrifying
+
+    supernatural creatures and therefore cause fear.
+
+    Daemonic Aura: Due to the magical, intangible
+
+    nature of Daemons they have a special Armour
+
+    save of 5+. This is modified by the Strength of the
+
+    attack as normal and is completely negated by
+
+    magic weapons and spells. Plague Bearers’ attacks
+
+    are considered as magical also.
+
+    Daemonic Instability: Plague Bearers are
+
+    bound to the world by Dark Sorcery that is
+
+    highly volatile and unstable. If taken out of
+
+    action a Plague Bearer is banished and
+
+    effectively destroyed on a D6 roll of 1-3 (do not
+
+    roll for injury). In addition, if the warband routs
+
+    then every Plague Bearer in the warband must
+
+    take an immediate Leadership test. If this test is
+
+    failed, then the Plague Bearer counts as
+
+    destroyed.'
+- section: Nurglings
+  section_path:
+  - henchmen
+  - Nurglings
+  text: '15 gold crowns to hire
+
+    Nurglings are tiny Daemons of Nurgle and are viewed by other followers of the pus god as akin to his beloved children.
+    They are like rotten boils with legs and razor sharp teeth, that pick and tear and infect their foes with filth-encrusted
+    claws. Nurglings are generally more of a nuisance in a fight than any real threat but in sufficient numbers can overwhelm
+    even the toughest of warriors. Nurglings are mischievous little bundles of filth and pus and take great delight in their
+    part in the Carnival of Chaos, not only as musicians but also as fools and slapstick comedians. Nurglings often befriend
+    the children of each village they visit, only revealing their foul identity to their terrified victims at the final stage
+    of ‘Nurgle’s Great Play’.
+
+    Weapons/Armour: None. Nurglings do not use
+
+    weapons or wear armour.'
+- section: SPECIAL RULES
+  section_path:
+  - henchmen
+  - Nurglings
+  - SPECIAL RULES
+  text: 'Cloud of Flies: Nurglings are surrounded by a
+
+    cloud of flies, which buzz around them and their
+
+    combat opponent. They do not affect the
+
+    Nurglings but distract foes by buzzing into eyes,
+
+    nostrils and mouths. A Nurgling’s close combat
+
+    opponent suffers a -1 to hit modifier on all
+
+    attacks. ❓
+
+    Swarm: You may summon as many Nurglings as
+
+    you wish (ie. you may have more than five
+
+    Nurglings in a Henchman group).
+
+    Daemonic: Nurglings are Daemons of the
+
+    diseased Lord Nurgle and are not made of living
+
+    flesh but the eternal and unchanging forces of
+
+    Chaos. Therefore they never gain Experience.
+
+    Immune to Poison: Nurglings are the
+
+    Daemonic embodiment of disease and
+
+    pestilence. They are totally immune to all poisons
+
+    and diseases.
+
+    Immune to Psychology: Nurglings are
+
+    Daemons and do not know the concept of fear.
+
+    They automatically pass any Leadership-based
+
+    test they are required to take.
+
+    Daemonic Aura: Due to the magical, intangible
+
+    nature of Daemons they have a special Armour
+
+    save of 5+. This is modified by the Strength of the
+
+    attack as normal and is completely negated by
+
+    magic weapons and spells. Nurglings’ attacks are
+
+    also considered as magical.
+
+    Daemonic Instability: Nurglings are bound to
+
+    the world by Dark Sorcery that is highly volatile
+
+    and unstable. If taken out of action a Nurgling is
+
+    banished and effectively destroyed on a D6 roll
+
+    of 1-3 (do not roll for injury). In addition, if the
+
+    warband routs then every Nurgling in the
+
+    warband must take an immediate Leadership
+
+    test. If this test is failed, then Nurgling counts as
+
+    destroyed.'
+- section: Brethren
+  section_path:
+  - henchmen
+  - Brethren
+  text: '25 gold crowns to hire
+
+    Brethren are the crazed and devoted followers of Nurgle the Lord of Decay. They have totally embraced the philosophy of
+    the great Lord of Decay and the path of damnation is the road that they have chosen. Most brethren are infected with foul
+    diseases and some have even started to decay. Their faces are covered in warts and boils and other lesser gifts of their
+    lord. In the Carnival, the Brethren take on all of the minor roles: stagehands, puppeteers, etc.
+
+    Weapons/Armour: Brethren may be equipped
+
+    with weapons and armour chosen from the
+
+    Carnival of Chaos Equipment list.'
+- section: 0 – 1 Plague Cart
+  section_path:
+  - henchmen
+  - 0 – 1 Plague Cart
+  text: '120 gold crowns to hire
+
+    The Plague Cart is the embodiment of Nurgle and the core of the Carnival of Chaos. Bedecked in the colourful, garish finery
+    of the coaches of travelling players and thespians, the Cart easily draws the eyes of the dull and bland peasantry of
+    the villages. However, the canvas is tattered and rotten, the frame splintered and bent, the metalwork pitted and rusted
+    and the steeds rotted and dank. Few mortals have ever seen the interior of one of these most sinister of vehicles for
+    it is only the Carnival Master and his Daemonic minions that are permitted entry. It is rumoured that these ramshackle
+    wagons contain a pentagram daubed with dark runes of incredible potency that actually creates a portal to the realms of
+    Chaos and the dwelling place of great Nurgle himself.
+
+    Weapons/Armour: None. The Plague Cart’s
+
+    Guardian does not use or need weapons but
+
+    suffers no penalties for fighting unarmed.
+
+    Therefore it cannot use weapons and cannot
+
+    wear armour.'
+- section: SPECIAL RULES
+  section_path:
+  - henchmen
+  - 0 – 1 Plague Cart
+  - SPECIAL RULES
+  text: 'Plague Cart: The Daemonic nature of the
+
+    Plague Cart fills both the Daemons and mortals of
+
+    the Carnival of Chaos with vigour. The maximum
+
+    number of warriors allowed in the warband is
+
+    increased by +2.
+
+    In addition, the Daemonic Instability of the
+
+    Daemons within the warband is slightly offset.
+
+    Plague Bearers and Nurglings may re-roll
+
+    Leadership tests for Instability and may +1 to
+
+    their Injury tests if taken out of action.
+
+    Guardian: The Guardian comes as part of the
+
+    Plague Cart. In fact, more often than not he is
+
+    physically bonded to the cart in some twisted
+
+    nightmare of flesh and wood. He may therefore
+
+    never dismount from the cart or leave under any
+
+    circumstances. In addition, as he is part of the
+
+    Cart he cannot be injured unless the Cart is
+
+    destroyed in which case so is he. The Guardian is considered a Daemonic creature and so never
+
+    gains any Experience. Attacks from the Guardian
+
+    cause Nurgle’s Rot (see below).
+
+    Immune to Psychology: The Plague Cart and
+
+    Guardian are considered Daemonic and don’t
+
+    know the concept of fear. The Plague Cart
+
+    automatically passes any Leadership-based test it is
+
+    required to take.'
+- section: Blessings of Nurgle
+  section_path:
+  - Blessings of Nurgle
+  text: 'Those that worship at the fetid altar of the Lord of Decay suffer from terrible diseases
+
+    and decay, which are known as Blessings of Nurgle.
+
+    Blessings of Nurgle may be bought for Tainted Ones only when they are recruited; you
+
+    may not buy new Blessings for a model after recruitment. Any Tainted may have one or
+
+    more Blessings. The first Blessing is bought at the price indicated, but second and
+
+    subsequent Blessings cost double.'
+- section: Stream of Corruption
+  section_path:
+  - Blessings of Nurgle
+  - Stream of Corruption
+  text: 'Cost: 25 Gold Crowns
+
+    The Tainted One can spew forth a grotesque stream of maggots, entrails and filth. This
+
+    is counted as a shooting attack with a range of 6" and is resolved at Strength 3 with no
+
+    saves for armour.'
+- section: Nurgle’s Rot
+  section_path:
+  - Blessings of Nurgle
+  - Nurgle’s Rot
+  text: 'Cost: 50 Gold Crowns
+
+    The Tainted One is infected with the deadly pestilence of its lord – Nurgle’s Rot. In
+
+    addition, the Tainted One is immune to all poisons. Nurgle’s Rot is a deadly contagion
+
+    for which there is no known cure. This virulent disease can be passed on in hand-to-hand combat. If the Tainted One makes
+    a successful to wound roll of 6 this will result in
+
+    the target model contracting the Rot (note: Nurgle’s Rot only affects the living, so
+
+    Undead, Daemons and the Possessed are immune). ✏️ Once a warrior has contracted
+
+    the Rot, mark this on the warband roster. Rather than killing the victim immediately,
+
+    the Rot can take some time to set in. From now on, before the start of each battle, the
+
+    warrior must pass a Toughness test. If successful, his constitution has managed to stave
+
+    off the Rot’s effects. If unsuccessful, the warrior loses one point of Toughness
+
+    permanently (if he reaches zero, he has succumbed to the Rot and died, remove him
+
+    from the roster). In addition, if a 6 is rolled for the Toughness test then he has
+
+    unwittingly passed the Rot on to another member of the warband (randomly allocate a
+
+    warband member and mark this on the roster).'
+- section: Cloud of Flies
+  section_path:
+  - Blessings of Nurgle
+  - Cloud of Flies
+  text: 'Cost: 25 Gold Crowns
+
+    The Tainted One is surrounded by a cloud of flies, which buzz around him and his
+
+    combat opponent. They do not affect the Tainted One but distract foes by buzzing into
+
+    eyes, nostrils and mouths. The Tainted One’s close combat opponent suffers a
+
+    -1 to hit modifier on all attacks. ❓'
+- section: Bloated Foulness
+  section_path:
+  - Blessings of Nurgle
+  - Bloated Foulness
+  text: 'Cost: 40 Gold Crowns
+
+    The Tainted One is a huge, disgusting mass of diseased, flabby folds. It gains +1
+
+    Wound and +1 Toughness but has its Movement reduced by -1.'
+- section: Mark of Nurgle
+  section_path:
+  - Blessings of Nurgle
+  - Mark of Nurgle
+  text: 'Cost: 35 Gold Crowns
+
+    The Tainted One is burned with the great mark of Nurgle, the three spheres, that weep
+
+    foul pus constantly. It gains +1 Wound and is immune to all poisons.'
+- section: Hideous
+  section_path:
+  - Blessings of Nurgle
+  - Hideous
+  text: 'Cost: 40 Gold Crowns
+
+    The Tainted One is so disgusting that its flesh hangs in tatters from its body and its
+
+    entrails are rotten and exposed. It causes Fear.'
+canonical_family: carnival-of-chaos

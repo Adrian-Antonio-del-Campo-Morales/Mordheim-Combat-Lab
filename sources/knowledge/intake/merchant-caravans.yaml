@@ -1,0 +1,794 @@
+id: merchant-caravans
+name: Merchant Caravans
+grade: 1c
+source_url: https://mordheimer.net/docs/warbands/grade-1c-warbands/merchant-caravans
+headings:
+- Special rules ​
+- Choice of Warriors ​
+- Heroes ​
+- Henchmen ​
+- Starting Experience ​
+- Characteristic Increase ​
+- Merchant Caravan Skill Table ​
+- Merchant Special Skills ​
+- Bribery ​
+- Dubious Income ​
+- Wholesale ​
+- Deal Breaker ​
+- Connected ​
+- Merchant Caravan Equipment List ​
+- Hero Equipment List ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Miscellaneous Equipment ​
+- Henchman Equipment List ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Cathayan Equipment List ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Special Equipment ​
+- Dragon Sword ​
+- Pike (Merchant Caravans) ​
+- Rapier ​
+- Trade Wagon ​
+- SPECIAL RULES ​
+- Heroes ​
+- 1 Merchant ​
+- SPECIAL RULES ​
+- 0 – 1 Apprentice ​
+- 0 – 2 Knights Vanguard ​
+- SPECIAL RULES ​
+- 0 – 1 Magician ​
+- SPECIAL RULES ​
+- Henchmen ​
+- Sell-swords ​
+- 0 – 5 Marksmen ​
+- 0 – 3 Blackguards ​
+- SPECIAL RULES ​
+tables:
+- section: Special rules
+  section_path:
+  - Special rules
+  rows:
+  - - D6
+    - Gold coins
+  - - 1-2
+    - Half the item's basic price
+  - - 3-4
+    - The item's full basic price
+  - - 5-6
+    - Full plus half the item's basic price
+- section: Merchant Caravan Skill Table
+  section_path:
+  - Merchant Caravan Skill Table
+  rows:
+  - - ''
+    - Combat
+    - Shooting
+    - Academic
+    - Strength
+    - Speed
+    - Special
+  - - Merchant
+    - ''
+    - ✓
+    - ✓
+    - ''
+    - ''
+    - ✓
+  - - Apprentice
+    - ✓
+    - ✓
+    - ✓
+    - ''
+    - ✓
+    - ''
+  - - Knights Vanguard
+    - ✓
+    - ''
+    - ''
+    - ✓
+    - ✓
+    - ''
+  - - Magician
+    - ''
+    - ''
+    - ✓
+    - ''
+    - ✓
+    - ''
+- section: Connected
+  section_path:
+  - Merchant Special Skills
+  - Connected
+  rows:
+  - - Item
+    - Cost
+    - Availability
+    - Source
+  - - Dispel Scroll
+    - 50 + 4D6 gc
+    - Rare 12
+    - see Mordheim Annual 2002, p. 31
+  - - Lesser Artefact
+    - 200 + D6x15 gc
+    - Rare 16
+    - roll on the Lesser Artefacts table
+  - - Magical Artefact
+    - 350 + D6x25 gc
+    - Rare 18
+    - roll on the Magical Artefact Table from the Mordheim rulebook, p. 141
+  - - Magical Scroll
+    - 100 gc
+    - Rare 14
+    - roll on the Magical Scroll Artefact table
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Merchant Caravan Equipment List
+  - Hero Equipment List
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Hammer
+    - 3 gc
+  - - Sword
+    - 10 gc
+  - - Rapier
+    - 15 gc
+- section: Missile Weapons
+  section_path:
+  - Merchant Caravan Equipment List
+  - Hero Equipment List
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Pistol
+    - 15 gc (30 gc for a brace)
+  - - Duelling pistol
+    - 30 gc (60 gc for a brace)
+- section: Armour
+  section_path:
+  - Merchant Caravan Equipment List
+  - Hero Equipment List
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Light armour
+    - 20 gc
+  - - Heavy armour
+    - 50 gc
+  - - Shield
+    - 5 gc
+  - - Helmet
+    - 10 gc
+- section: Miscellaneous Equipment
+  section_path:
+  - Merchant Caravan Equipment List
+  - Hero Equipment List
+  - Miscellaneous Equipment
+  rows:
+  - - Item
+    - Cost
+  - - Cathayan silk cloak
+    - 40 gc
+  - - Warhorse *
+    - 40 gc
+  - - Trade Wagon **
+    - 180 gc
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Merchant Caravan Equipment List
+  - Henchman Equipment List
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Hammer
+    - 3 gc
+  - - Axe
+    - 5 gc
+  - - Sword
+    - 10 gc
+  - - Pike *
+    - 10 gc
+  - - Halberd *
+    - 10 gc
+- section: Missile Weapons
+  section_path:
+  - Merchant Caravan Equipment List
+  - Henchman Equipment List
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Crossbow
+    - 25 gc
+- section: Armour
+  section_path:
+  - Merchant Caravan Equipment List
+  - Henchman Equipment List
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Light armour
+    - 20 gc
+  - - Heavy armour
+    - 50 gc
+  - - Shield
+    - 5 gc
+  - - Helmet
+    - 10 gc
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Merchant Caravan Equipment List
+  - Cathayan Equipment List
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Club
+    - 3 gc
+  - - Sword
+    - 10 gc
+  - - Double-handed weapon
+    - 15 gc
+  - - Dragon Sword
+    - 20 gc
+- section: Armour
+  section_path:
+  - Merchant Caravan Equipment List
+  - Cathayan Equipment List
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Light armour
+    - 20 gc
+  - - Heavy armour
+    - 50 gc
+  - - Shield
+    - 5 gc
+  - - Helmet
+    - 10 gc
+- section: Trade Wagon
+  section_path:
+  - Special Equipment
+  - Trade Wagon
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - Cart
+    - '-'
+    - '-'
+    - '-'
+    - '-'
+    - '8'
+    - '4'
+    - '-'
+    - '-'
+    - '-'
+  - - Wheel
+    - '-'
+    - '-'
+    - '-'
+    - '-'
+    - '6'
+    - '1'
+    - '-'
+    - '-'
+    - '-'
+  - - Draft Horse
+    - '8'
+    - '1'
+    - '0'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '0'
+    - '5'
+- section: 1 Merchant
+  section_path:
+  - Heroes
+  - 1 Merchant
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - Merchant
+    - '4'
+    - '2'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '8'
+- section: 0 – 1 Apprentice
+  section_path:
+  - Heroes
+  - 0 – 1 Apprentice
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - Apprentice
+    - '4'
+    - '2'
+    - '2'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '6'
+- section: 0 – 2 Knights Vanguard
+  section_path:
+  - Heroes
+  - 0 – 2 Knights Vanguard
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - Knights Vanguard
+    - '4'
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '7'
+- section: 0 – 1 Magician
+  section_path:
+  - Heroes
+  - 0 – 1 Magician
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - Magician
+    - '4'
+    - '2'
+    - '2'
+    - '3'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '8'
+- section: Sell-swords
+  section_path:
+  - Henchmen
+  - Sell-swords
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - Sell-swords
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 5 Marksmen
+  section_path:
+  - Henchmen
+  - 0 – 5 Marksmen
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - Marksmen
+    - '4'
+    - '3'
+    - '4'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 3 Blackguards
+  section_path:
+  - Henchmen
+  - 0 – 3 Blackguards
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - Blackguards
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+section_text:
+- section: Special rules
+  section_path:
+  - Special rules
+  text: 'Merchant: The Merchant is the warband''s leader (any Warrior within 6“ of
+    him may use his Leadership when taking Ld tests) and the one who is in charge
+    of the business. If the Merchant leaves the caravan (e.g. dies permanently through
+    Serious Injuries), a new leader is determined as normal.
+
+    The new leader gets the Merchant special rule, allowing him to choose new skills
+    from the Merchant''s special skills section. The model counts as a Merchant for
+    all purposes just as the previous Merchant used to. If no model in the warband
+    is allowed to become the leader, an Apprentice must be bought as soon as possible
+    to become the leader.
+
+    Trade: Instead of searching for rare items the Merchant may sell a rare item that
+    has been stored in the Trade Cart during the preceding battle. This must be done
+    before Heroes of either warband search for rare items.
+
+    Roll a D6 to determine how many gold coins the Merchant would get for the item.
+
+    Note that the Merchant may decide whether he wants to sell the item for that price
+    or if he wants to try again after the next battle. This can be combined with the
+    wholesale skill to sell up to D3+1 items each game.
+
+    Open for Business: All players may choose to send any of their Heroes to the Merchant
+    instead of having them search for rare items. A Hero doing so may buy one item
+    from the warband''s stored equipment if the players can agree on a price (including
+    exchange deals with items and Treasures). Instead of buying an item, a Hero may
+    also go to the Merchant to sell any one item (rare, common, magical, treasure
+    counters) to him. If players cannot agree on a price, no deal is closed and the
+    visit is wasted.
+
+    Rarity: Any rare item that is reduced to Rare 2 or Rarity: below by the Trade
+    Wagon''s Reputation rule, the Streetwise skill, etc., can be bought as Common
+    items.
+
+    Hired Swords: Merchant Caravans may hire every Hired Sword that is available to
+    Mercenary warbands.'
+- section: Heroes
+  section_path:
+  - Choice of Warriors
+  - Heroes
+  text: 'Merchant: Each caravan must have one Merchant – no more, no less! Apprentice:
+    Your warband may have one Apprentice. Knights Vanguard: Your warband may include
+    up to two Knights Vanguard. Magician: Your warband may have one Magician.'
+- section: Henchmen
+  section_path:
+  - Choice of Warriors
+  - Henchmen
+  text: 'Sell-swords: Your warband may include any number of Sell-swords. Marksmen:
+    Your warband may include up to five Marksmen. Blackguards: Your warband may include
+    up to three Blackguards. Trade Wagon: Your warband must include one Trade Wagon.'
+- section: Characteristic Increase
+  section_path:
+  - Characteristic Increase
+  text: Merchants and their retinue are humans and so use the Human maximum profile.
+- section: Merchant Special Skills
+  section_path:
+  - Merchant Special Skills
+  text: Merchants may choose to use the following skill list instead of the standard
+    skill lists.
+- section: Bribery
+  section_path:
+  - Merchant Special Skills
+  - Bribery
+  text: Whenever the warband has to take a Rout test, the Merchant may talk his hirelings
+    into staying a little longer and face the danger. He may immediately pay 5 gc
+    per non-Hero warband member (including Hired Swords!) still in the game. If he
+    does, one member taken out of action already does not count for Rout tests. If
+    after that, a Rout test is still required, test as normal. This skill may be used
+    as many times as required so long as the coffers aren’t empty!
+- section: Dubious Income
+  section_path:
+  - Merchant Special Skills
+  - Dubious Income
+  text: The Merchant has set up an underground business that proves to be quite profitable.
+    After every battle in which the Merchant was not taken out of action, he may choose
+    to use this skill before the trading phase (i.e. before any gold is spent). If
+    he does, he must pass a Ld test. If the test is successful, the warband receives
+    one gold coin per Experience point the Merchant has. If the test is failed, the
+    warband loses up to the same amount of gold coins.
+- section: Wholesale
+  section_path:
+  - Merchant Special Skills
+  - Wholesale
+  text: The Merchant is known for buying items in greater numbers and so is especially
+    welcome at the other merchants. He may search for D3+1 rare items after each battle
+    instead of one item only (if he was not taken out of action, of course!).
+- section: Deal Breaker
+  section_path:
+  - Merchant Special Skills
+  - Deal Breaker
+  text: When trying to sell items through the Trade special rule, the Merchant gets
+    a +1 bonus on the roll to see what the item would fetch.
+- section: Connected
+  section_path:
+  - Merchant Special Skills
+  - Connected
+  text: 'The Merchant knows many retailers and ways of getting hold of rare items.
+    Instead of searching for rare items as normal, he may visit the local black market
+    and its fencers. If he does, he may search for items from the following table,
+    applying the normal rules.
+
+    Note that though the Merchant may buy items using the table above he can never
+    sell them back again (and must hope for other players to be interested in them).'
+- section: Merchant Caravan Equipment List
+  section_path:
+  - Merchant Caravan Equipment List
+  text: The following lists are used by Merchant Caravan warbands to pick their equipment.
+- section: Miscellaneous Equipment
+  section_path:
+  - Merchant Caravan Equipment List
+  - Hero Equipment List
+  - Miscellaneous Equipment
+  text: '*Knights Vanguard only **Note that a starting warband must always include
+    one Trade Wagon!'
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Merchant Caravan Equipment List
+  - Henchman Equipment List
+  - Hand-to-hand Combat Weapons
+  text: '*Sell-swords only'
+- section: Missile Weapons
+  section_path:
+  - Merchant Caravan Equipment List
+  - Cathayan Equipment List
+  - Missile Weapons
+  text: None
+- section: Special Equipment
+  section_path:
+  - Special Equipment
+  text: 'This warband has access to the following special equipment when purchasing
+    items from the Trading Post , outside their starting list:'
+- section: Trade Wagon
+  section_path:
+  - Special Equipment
+  - Trade Wagon
+  text: '180 gold crowns to buy
+
+    Availability: Common, Merchant Caravans only
+
+    The many vulnerable items such as Cathayan jewels, spices and silk cloths are
+    stored in the Trade Cart.'
+- section: SPECIAL RULES
+  section_path:
+  - Special Equipment
+  - Trade Wagon
+  - SPECIAL RULES
+  text: 'Wagon: The Trade Wagon is a wagon and so follows all rules for Wagons (see
+    Empire in Flames Supplement, p. 30–33). The cost of the Trade Wagon includes two
+    draft horses. Remember that one model from the warband needs to act as the wagon
+    driver. ❓
+
+    Storage: All the warband''s stored equipment and treasures are stored inside the
+    Trade Wagon. Note that this does not include the warband''s gold crowns. If the
+    Trade Wagon is destroyed, all the warband''s stored equipment and treasures are
+    lost. Until a new Trade Wagon (or Stage Coach, if the player wishes) is bought,
+    equipment cannot be stored. Any treasures gained after a battle are lost if they
+    are not sold before the next game.
+
+    Reputation: For every five different rare items stored inside the Trade Wagon,
+    the Merchant gets +1 to his rolls for finding rare items.
+
+    Abandoned: If the warband fails its Rout test and no model is driving the Trade
+    Wagon, then it is abandoned. The wagon falls into the winning warband''s hands.
+    They may choose to steal the contents, to keep the wagon for themselves if allowed
+    to (treat as Wagon or Stage Coach), or agree to cut a deal (using the ransom rules
+    in Captured from the Serious Injuries chart on page 119 of the Mordheim rulebook)
+    with the Merchant. A warband capturing a Wagon from a Merchant Caravan may not
+    search for rare items following the battle unless every model from the Merchant''s
+    warband was taken out of action, as word of it spreads and they are avoided by
+    the fearful local traders.'
+- section: 1 Merchant
+  section_path:
+  - Heroes
+  - 1 Merchant
+  text: '50 gold crowns to hire
+
+    Only the bravest – or most greedy fools – among merchants travel north to trade
+    with the barbaric Norse tribes that dwell in the icy wastes. Others risk their
+    lives on the Silk Road before reaching the safe haven of the Sentinels. From this
+    trading post, the road forks. The Spice Route leads south to the Land of a Thousand
+    Gods. The Ivory Road leads on east through uncountable dangerous tribes of warring
+    Marauders and Hobgoblins, not to mention the many terrors encountered in the Ogre
+    kingdoms.
+
+    Weapons/Armour: The Merchant may be equipped with weapons and armour chosen from
+    the Hero Equipment list.'
+- section: SPECIAL RULES
+  section_path:
+  - Heroes
+  - 1 Merchant
+  - SPECIAL RULES
+  text: 'Merchant: A Merchant is always the warband''s leader. Refer to the special
+    rules for when using a Merchant.'
+- section: 0 – 1 Apprentice
+  section_path:
+  - Heroes
+  - 0 – 1 Apprentice
+  text: '15 gold crowns to hire
+
+    Less than desirable duties must be diligently fulfilled during an apprenticeship
+    with a merchant – packing mules, carrying crates, or driving the wagon.
+
+    Weapons/Armour: The Apprentice may be equipped with weapons and armour chosen
+    from the Hero Equipment list.'
+- section: 0 – 2 Knights Vanguard
+  section_path:
+  - Heroes
+  - 0 – 2 Knights Vanguard
+  text: '45 gold crowns to hire
+
+    Serving as the vanguard for a merchant''s escort are former knights. Imperials,
+    Bretonnians who used to own land and servants of their own, or ronins from the
+    east. Nipponese and Cathayans alike will fight for fair pay in the service of
+    merchants. All are well-traveled enough to be equipped with the finest arms forged
+    by the swordsmiths of Grand Cathay.
+
+    Weapons/Armour: Knights Vanguard may be equipped with weapons and armour chosen
+    from the Hero Equipment list and the Cathayan Equipment list.'
+- section: SPECIAL RULES
+  section_path:
+  - Heroes
+  - 0 – 2 Knights Vanguard
+  - SPECIAL RULES
+  text: 'Lightning Reflexes: If the Knights Vanguard is charged, he will ‘strike first’
+    against those that charged that turn. As the charger(s) will also normally ‘strike
+    first’ (for charging), the order of attack between the charger(s) and the Knights
+    Vanguard will be determined by comparing Initiative values.
+
+    Ride Warhorse: The Knights Vanguard is trained in riding Warhorses.
+
+    Hirelings: The Knights Vanguard is a hireling, paid by the Merchant and therefore
+    can never become the warband''s leader.'
+- section: 0 – 1 Magician
+  section_path:
+  - Heroes
+  - 0 – 1 Magician
+  text: '40 gold crowns to hire
+
+    Often warlocks, alchemists, and sorcerers seek the protection of an influential
+    merchant to escape the stakes of the fanatical Witch Hunters. As part of his escort,
+    they secretly continue their forbidden studies incognito. Opportunities arise
+    to test the results of their ability on the raiding creatures of the Wastes.
+
+    Weapons/Armour: The Magician may be equipped with weapons and armour chosen from
+    the Hero Equipment list.'
+- section: SPECIAL RULES
+  section_path:
+  - Heroes
+  - 0 – 1 Magician
+  - SPECIAL RULES
+  text: 'Wizard: A Magician is a wizard and uses Lesser Magic . See the Magic section
+    in the Mordheim rulebook for details.
+
+    Hireling: The Magician is a hireling, paid by the Merchant. He can never become
+    the warband''s leader.'
+- section: Sell-swords
+  section_path:
+  - Henchmen
+  - Sell-swords
+  text: '25 gold crowns to hire
+
+    Well aware of the attraction his caravan holds for highwaymen and raiding parties,
+    the merchant keeps bodyguards. These roguish adventurers ensure that both the
+    goods and their paymaster survive the journey undamaged. Sell-swords are the unfortunate
+    scoundrels that earn their living as caravan escorts.
+
+    Weapons/Armour: Sell-swords may be equipped with weapons and armour chosen from
+    the Henchman Equipment list.'
+- section: 0 – 5 Marksmen
+  section_path:
+  - Henchmen
+  - 0 – 5 Marksmen
+  text: '30 gold crowns to hire
+
+    The marksmen from Tilea are well renowned for their excellent skills in the use
+    of crossbows.
+
+    Weapons/Armour: Marksmen may be equipped with weapons and armour chosen from the
+    Henchman Equipment list.'
+- section: 0 – 3 Blackguards
+  section_path:
+  - Henchmen
+  - 0 – 3 Blackguards
+  text: '35 gold crowns to hire
+
+    In the outer Cathayan cities, a wealthy foreign trader is showered with offers
+    from fortune-seeking outcasts. These mercenaries who dream of leaving their homes
+    for wealth and fame bring strange weapons and fighting styles with them to join
+    the merchant caravan.
+
+    Weapons/Armour: Blackguards may be equipped with weapons and armour chosen from
+    the Cathayan Equipment list.'
+- section: SPECIAL RULES
+  section_path:
+  - Henchmen
+  - 0 – 3 Blackguards
+  - SPECIAL RULES
+  text: 'Strongman: Blackguards are capable of great feats of strength. They may use
+    a double-handed weapon without the usual penalty of always striking last. Work
+    out the order of battle as you would with other weapons.
+
+    Unreliable Hirelings: Blackguards are only hired by the Merchant to serve him
+    by protecting his cargo. They are not much trusted or granted with any responsibilities.
+    Therefore they may never become Heroes. Re-roll all results of ‘The lad’s got
+    talent’ for them.'

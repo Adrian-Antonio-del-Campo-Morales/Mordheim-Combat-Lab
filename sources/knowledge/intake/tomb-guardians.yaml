@@ -1,0 +1,631 @@
+id: tomb-guardians
+name: Tomb Guardians
+grade: 1b
+source_url: https://mordheimer.net/docs/warbands/grade-1b-warbands/tomb-guardians
+headings:
+- Special rules ​
+- Choice of warriors ​
+- Heroes ​
+- Henchmen ​
+- Starting experience ​
+- Tomb Guardian Skill Table ​
+- Tomb Guardian additional skills ​
+- drive chariot (academic) ​
+- Tomb Guardian equipment lists ​
+- Undead equipment lists ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Liche Priest Equipment List ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Special equipment ​
+- 0 – 1 Skeleton Chariot ​
+- special rules ​
+- Serpent Staff ​
+- Nehekharan Javelins ​
+- Asp Arrows ​
+- heroes ​
+- 1 Tomb Lord ​
+- Special Rules ​
+- 0 – 1 Liche Priest ​
+- Special Rules ​
+- 0 – 2 Acolytes ​
+- Special Rules ​
+- henchmen ​
+- Skeleton warriors ​
+- Special Rules ​
+- 0 – 2 Tomb Guardians ​
+- Special Rules ​
+- 0 – 3 Tomb Scorpions ​
+- Special Rules ​
+- Lore ​
+- The Mortuary Cult ​
+- Khemrian Names ​
+tables:
+- section: Tomb Guardian Skill Table
+  section_path:
+  - Tomb Guardian Skill Table
+  rows:
+  - - ''
+    - Combat
+    - Shooting
+    - Academic
+    - Strength
+    - Speed
+  - - Tomb Lord
+    - ✓
+    - ✓
+    - ''
+    - ✓
+    - ''
+  - - Liche Priest
+    - ''
+    - ''
+    - ✓
+    - ''
+    - ''
+  - - Acolyte
+    - ✓
+    - ''
+    - ✓
+    - ''
+    - ''
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Tomb Guardian equipment lists
+  - Undead equipment lists
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Mace
+    - 3 gc
+  - - Axe
+    - 5 gc
+  - - Sword
+    - 10 gc
+  - - Halberd
+    - 10 gc
+  - - Spear
+    - 10 gc
+  - - Morning star
+    - 15 gc
+  - - Double-handed weapon
+    - 15 gc
+  - - Flail
+    - 15 gc
+- section: Missile Weapons
+  section_path:
+  - Tomb Guardian equipment lists
+  - Undead equipment lists
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Bow
+    - 10 gc
+  - - Asp Arrows *
+    - 10 gc
+  - - Nehekharan Javelin *
+    - 10 gc
+- section: Armour
+  section_path:
+  - Tomb Guardian equipment lists
+  - Undead equipment lists
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Shield
+    - 5 gc
+  - - Light armour
+    - 20 gc
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Tomb Guardian equipment lists
+  - Liche Priest Equipment List
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Mace
+    - 3 gc
+  - - Staff
+    - 3 gc
+  - - Axe
+    - 5 gc
+  - - Sword
+    - 10 gc
+  - - Morning star
+    - 15 gc
+  - - Serpent Staff *
+    - 30 gc
+- section: 0 – 1 Skeleton Chariot
+  section_path:
+  - Special equipment
+  - 0 – 1 Skeleton Chariot
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - Chariot
+    - '-'
+    - '-'
+    - '-'
+    - '4'
+    - '4'
+    - '3'
+    - '-'
+    - '-'
+    - '-'
+  - - Steed
+    - '8'
+    - '2'
+    - '2'
+    - '3'
+    - '3'
+    - '1'
+    - '2'
+    - '1'
+    - '5'
+- section: 1 Tomb Lord
+  section_path:
+  - heroes
+  - 1 Tomb Lord
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '4'
+    - '3'
+    - '4'
+    - '5'
+    - '3'
+    - '3'
+    - '2'
+    - '8'
+- section: 0 – 1 Liche Priest
+  section_path:
+  - heroes
+  - 0 – 1 Liche Priest
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '2'
+    - '2'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 2 Acolytes
+  section_path:
+  - heroes
+  - 0 – 2 Acolytes
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '2'
+    - '2'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: Skeleton warriors
+  section_path:
+  - henchmen
+  - Skeleton warriors
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '2'
+    - '2'
+    - '3'
+    - '3'
+    - '1'
+    - '2'
+    - '1'
+    - '5'
+- section: 0 – 2 Tomb Guardians
+  section_path:
+  - henchmen
+  - 0 – 2 Tomb Guardians
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '2'
+    - '4'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '5'
+- section: 0 – 3 Tomb Scorpions
+  section_path:
+  - henchmen
+  - 0 – 3 Tomb Scorpions
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '5'
+    - '2'
+    - '-'
+    - 2*
+    - '2'
+    - '1'
+    - '4'
+    - '1'
+    - '4'
+section_text:
+- section: Special rules
+  section_path:
+  - Special rules
+  text: 'The warriors of the Tomb Kings are already dead and are unaffected by wounds
+    that could daze or cripple a living warrior. Their lack of emotion means that
+    they look upon Ogres and Youngbloods with equal ambivalence. These special rules
+    apply to all warriors in the warband that have the special rule Undead.
+
+    Cause Fear: All Undead warriors cause Fear.
+
+    Immune to Psychology: All Undead warriors are immune to psychology and never leave
+    combat.
+
+    No pain: All Undead warriors treat a Stunned result as Knocked Down .
+
+    May not run: No Undead warrior may run, but may charge as normal.
+
+    Immune to poison: No Undead warrior is affected by poison.
+
+    No Brain: Skeletons are not alive, thus they never gain experience.
+
+    Note: Tomb Lords don''t actually learn new skills, rather they remember the skills
+    they knew when they were alive. Liche Priests and Acolyes are also undead but
+    the have retained a form of living mind and are capable of learning from their
+    experiences.
+
+    Flammable: The Tomb Lord is as dry as tinder and wrapped in bandages soaked in
+    highly flammable resins and preservatives. A hit from a fire-based attack will
+    cause double the normal number of wounds on it.
+
+    Do not Drink: Undead models do not need food and water. However any living animals
+    that accompany the Mummies follow the water rules as normal.
+
+    Home Ground: The Tomb Guardians live in the Necropolises and have no trouble locating
+    the hidden tombs in search of weapons and armour to help them defend their homes.
+    A Tomb Guardian warband always roll one extra dice in the Exploration phase.'
+- section: Heroes
+  section_path:
+  - Choice of warriors
+  - Heroes
+  text: 'Tomb Lord: Your warband must include a Tomb Lord. Liche Priest: Your warband
+    may include a single Liche Priest. Acolytes: Your warband may include up to two
+    Acolytes.'
+- section: Henchmen
+  section_path:
+  - Choice of warriors
+  - Henchmen
+  text: 'Skeleton Warriors: Your warband may include any number of Skeleton Warriors.
+    Tomb Guards: Your warband may include up to two Tomb Guards. Giant Scorpions:
+    Your warband may include up to three Tomb Scorpions.'
+- section: drive chariot (academic)
+  section_path:
+  - Tomb Guardian additional skills
+  - drive chariot (academic)
+  text: Chariots are very difficult to control and a warrior must have this skill
+    to drive a chariot effectively in combat. A charioteer without this skill cannot
+    charge.
+- section: Tomb Guardian equipment lists
+  section_path:
+  - Tomb Guardian equipment lists
+  text: The following lists are used by Tomb Guardian warbands to pick their weapons.
+- section: Missile Weapons
+  section_path:
+  - Tomb Guardian equipment lists
+  - Undead equipment lists
+  - Missile Weapons
+  text: '* Tomb Lords only'
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Tomb Guardian equipment lists
+  - Liche Priest Equipment List
+  - Hand-to-hand Combat Weapons
+  text: '* Liche Priests only'
+- section: Missile Weapons
+  section_path:
+  - Tomb Guardian equipment lists
+  - Liche Priest Equipment List
+  - Missile Weapons
+  text: None.
+- section: Armour
+  section_path:
+  - Tomb Guardian equipment lists
+  - Liche Priest Equipment List
+  - Armour
+  text: None.
+- section: 0 – 1 Skeleton Chariot
+  section_path:
+  - Special equipment
+  - 0 – 1 Skeleton Chariot
+  text: '200 + 10D6 gold crowns to hire
+
+    A Skeleton Chariot is made from the bones of the dead, pulled by two Skeleton
+    Steeds and ridden by a member of the warband.'
+- section: special rules
+  section_path:
+  - Special equipment
+  - 0 – 1 Skeleton Chariot
+  - special rules
+  text: 'Mounting: A charioteer may mount and dismount a chariot in the same way as
+    a ridden steed.
+
+    Movement: A Skeleton Chariot normally moves at 8" and may not run. However, it
+    may double its normal move when charging.
+
+    Difficult Ground: If a chariot moves over difficult ground it suffers D3 Strength
+    4 hits. If the chariot is charging over difficult ground, it suffers 2D3 Strength
+    6 hits.
+
+    Steeds: If one steed dies, the chariot is reduced to half movement but may still
+    charge (also at half normal charge distance). However impact hits will no longer
+    be effective. If both steeds die, the chariot is immobile and the charioteer must
+    fight on foot.
+
+    Combat: Chariots are feared for their devastating charges that make use of their
+    horrible scythed wheels that will cut down
+
+    any warriors in their path. A charioteer is allowed to charge any enemy warrior
+    that he can see who is in the open, he is not forced to charge the closest warrior.
+    If the chariot moves more than half its normal move, it may make impact bits.
+    Anyone directly in the path of a charging chariot is permitted an Initiative test
+    to dodge out of the way and avoid being hit. The charioteer must roll to hit as
+    normal, a successful hit causing a single wound at Strength 4 with a -2 armour
+    save. At the end of the charge move, the charioteer may fight any enemy models
+    in base contact, as if he had charged normally.
+
+    In combat, enemy warriors in contact may elect to strike the chariot or its driver.
+    If hitting the chariot, the attacker must still make a to hit roll against the
+    charioteer. If in base contact with only a Skeletal Steed, then only the steed
+    can be hit.
+
+    Shooting: A chariot is a large target and a warrior gains +1 to hit when shooting
+    at a chariot. If the chariot is hit, roll a D6 to see where it is hit: 1-2 steed,
+    3-4 chariot, 5-6 charioteer.'
+- section: 1 Tomb Lord
+  section_path:
+  - heroes
+  - 1 Tomb Lord
+  text: '150 gold crowns to hire
+
+    The legions of the dead are led by Tomb Lords, trusted officers and captains in
+    the Nehekharan armies. But not all Tomb Lords were soldiers in life and some were
+    the great engineers and artisans who constructed the Necropolises and were granted
+    mummification for their accomplishments.
+
+    Weapons/Armour: The Tomb Lord may have equipment from the Undead Equipment list.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 1 Tomb Lord
+  - Special Rules
+  text: 'Leader: The Tomb Lord is the warband''s Leader and follows all the rules
+    for Leaders.
+
+    Undead: The Tomb Lord is undead and follows all rules for the Undead .'
+- section: 0 – 1 Liche Priest
+  section_path:
+  - heroes
+  - 0 – 1 Liche Priest
+  text: '55 gold crowns to hire
+
+    The Mortuary Cult perfected their magic over a thousand years until the Cult could
+    cheat death itself. The priests now hold a unique kind of power, standing by the
+    Tomb King''s side - they alone are able to invoke the power that allows the Tomb
+    King''s armies to march to war.
+
+    Weapons/Armour: The Liche Priest may have equipment from the Liche Priest Equipment
+    list. Note he may not wear armour as it interferes with his spell casting.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 0 – 1 Liche Priest
+  - Special Rules
+  text: 'Wizard: The Liche Priest is a Wizard and uses Mortuary Cult scrolls .
+
+    Undead: The Liche Priest is undead and follows all rules for the Undead .'
+- section: 0 – 2 Acolytes
+  section_path:
+  - heroes
+  - 0 – 2 Acolytes
+  text: '20 gold crowns to hire
+
+    The Mortuary Cult has been a very large influential priesthood in the Land of
+    the Dead for centuries. Acolytes to the Cult have to study long and hard (even
+    beyond death!) before they can assume the mantle of Liche Priest. During their
+    apprenticeship to the Liche Priests, Acolytes have to perorm all of the menial
+    tasks as well as protect their masters from harm.
+
+    Weapons/Armour: The Acolyte may have equipment from the Liche Priest Equipment
+    List.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 0 – 2 Acolytes
+  - Special Rules
+  text: 'Undead: Acolytes are undead and follow all rules for the Undead .'
+- section: Skeleton warriors
+  section_path:
+  - henchmen
+  - Skeleton warriors
+  text: '20 gold crowns to hire
+
+    With the coming of Nagash and his great ritual, the inhabitants of the Necropolises
+    were brought back to the land of the living. The kings and lords once more command
+    their legions, but this time the legions are made up of skeletons rather than
+    living soldiers.
+
+    Weapons/Armour: Skeletons may have equipment from the Undead Equipment list.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - Skeleton warriors
+  - Special Rules
+  text: 'Undead: Skeletons are undead and follow all rules for the Undead .'
+- section: 0 – 2 Tomb Guardians
+  section_path:
+  - henchmen
+  - 0 – 2 Tomb Guardians
+  text: '30 gold crowns to buy
+
+    As the kings and lords were awakened, so too were their bodyguards, the Tomb Guards;
+    faithful in death as they were in life. Often armed with the best armour and weapons,
+    they are always at their lord''s side.
+
+    Weapons/Armour: Tomb Guards may have equipment from the Undead Equipment list.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 2 Tomb Guardians
+  - Special Rules
+  text: 'Undead: The Tomb Guards are undead and follow all rules for the Undead .'
+- section: 0 – 3 Tomb Scorpions
+  section_path:
+  - henchmen
+  - 0 – 3 Tomb Scorpions
+  text: '15 gold crowns to buy
+
+    Vast nests of scorpions infest the ancient Necropolises of Khemri, dwelling in
+    the dark cracks and niches of the tombs, aggressively defending their home. Liche
+    Priests can summon these poisonous creatures and direct them to attack any invaders.
+
+    Weapons/Armour: Scorpions don''t use weapons or armour.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 3 Tomb Scorpions
+  - Special Rules
+  text: 'Living: Scorpions are living beings and are affected by Psychology as normal.
+    However as they are small desert creatures they do not need water.
+
+    Animals: Scorpions are animals and do not gain experience points.
+
+    Scorpions sting*: Scorpions attack using the poisonous sting in their tails. This
+    attack is worked out exactly as if the scorpion was attacking with Black Lotus
+    .'
+- section: The Mortuary Cult
+  section_path:
+  - Lore
+  - The Mortuary Cult
+  text: 'The Mortuary Cult was formed long ago to learn the mysterious arts of mummification
+    and perform the hidden rituals of awakening. After many centuries, the priests
+    discovered the secrets they were seeking and were able to mummify and preserve
+    bodies. The Mortuary Cult perfected their magic over a thousand years until the
+    cult could cheat death itself. When Nagash performed his Great Ritual, raising
+    the dead of Nebekhara, the priests rose as Liche Priests, undead beings with a
+    mind of their own. Their experiments had given them eternal unlife. The Liche
+    Priests now hold a position of great power, standing by the Tomb King''s side
+    - they alone are now able to invoke the power that allows the Tomb King''s armies
+    to march to war.
+
+    The Mortuary Cult Liche Priests do not use the evil Necromancy spells, instead
+    they use a system of ancient scrolls . In game terns, the scrolls work just like
+    normal spells and the Priest must test to see if he can read the incantation out
+    correctly, as normal, not an easy task in the middle of a fight.'
+- section: Khemrian Names
+  section_path:
+  - Lore
+  - Khemrian Names
+  text: 'The following is a list of names of Egyptian Pharaohs you can use and at
+    the end are a few other names that I have found. these were taken from a Swedish
+    book so the spelling might be different in English. Female names have been marked
+    with (f). In the Egyptian society, females were equal to males in many areas;
+    there were female temple-priests, artisans, merchants and Pharaohs.
+
+    Nebka, Djoser, Snefru, Khaba, Huni, Cheops, Khufu, Radjedef, Kefren, Menkaure,
+    Shepseskaf, Userkaf, Sahure,
+
+    Neferirkare, Shepseskare, Neferefe, Niuserre, Menkauhor, Djedkare, Unas, Teti,
+    Pepi, Merene, Nitocris (f), Qakare, Neferkaure, Neferkauhor, Mentuhotep, Inyotef,
+    Amenemhat, Senusret, Sebeknefru (f), Ahmose, Amenhotep, Tuthmosis, Hatshepsut
+    (f), Akhenaton, Smenkbare, Tutankhamen, Ay, Horemhab, Ramses, Seti, Merneptah,
+    Amenmesse, Siptah, Tawosret (f), Sethnakht, Lynaferet (f), Senedjem, Imhotep.
+
+    If you want to design your own names that will sound Egyptian or tweak the name
+    of a Pharaoh, I found these trends in the names above. Many names start with Men-,
+    Mer-, Mern-, Kef-, Nef- and Tut-. Many names end with -kaure, -kaf, -kare, -khare,
+    -kauhor and -hotep. Some names end with Ptah or start with Set- or Seth- and these
+    are names of Egyptian gods. You can use er, an, tu and e to bind the names together.'

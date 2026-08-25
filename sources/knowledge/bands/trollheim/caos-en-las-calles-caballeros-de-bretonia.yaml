@@ -1,0 +1,481 @@
+schema_version: 1
+id: chaos-streets-bretonnians
+name: Caballeros de Bretonia
+name_i18n:
+  en: null
+  es: Caballeros de Bretonia
+original_locale: es
+categories:
+- trollheim
+collections:
+- trollheim
+grade: null
+setting: Mordheim
+publication: caos-en-las-calles
+status: source-normalized
+sources:
+- manual: caos-en-las-calles
+  printed_page: 105-109
+  section: Caballeros de Bretonia
+roster:
+  minimum_models: 3
+  maximum_models: 12
+  starting_gold: 500
+  members:
+  - profile_id: questing-knight
+    minimum: 1
+    maximum: 1
+  - profile_id: knight-errant
+    minimum: 0
+    maximum: 2
+  - profile_id: squire
+    minimum: 0
+    maximum: 3
+  - profile_id: man-at-arms
+    minimum: 0
+    maximum: null
+  - profile_id: bretonnian-bowman
+    minimum: 0
+    maximum: null
+equipment_lists:
+- id: bretonnian-knight-equipment
+  name: Equipo para Caballeros
+  source:
+    manual: caos-en-las-calles
+    printed_page: 107
+    section: Lista de Equipo para los Caballeros de Bretonia
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: La primera es gratis
+  - item_id: mace
+    cost: 3
+  - item_id: sword
+    cost: 5
+  - item_id: great_weapon
+    cost: 15
+  - item_id: morning_star
+    cost: 15
+  - item_id: cavalry_lance
+    cost: 20
+  - item_id: shield
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  - item_id: light_armour
+    cost: 20
+  - item_id: heavy_armour
+    cost: 50
+  - item_id: warhorse
+    cost: 80
+  - item_id: barding
+    cost: 30
+  name_i18n:
+    en: null
+    es: Equipo para Caballeros
+- id: bretonnian-squire-equipment
+  name: Equipo para Escuderos
+  source:
+    manual: caos-en-las-calles
+    printed_page: 107
+    section: Lista de Equipo para Escuderos
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: La primera es gratis
+  - item_id: mace
+    cost: 3
+  - item_id: sword
+    cost: 5
+  - item_id: axe
+    cost: 5
+  - item_id: spear
+    cost: 10
+  - item_id: bow
+    cost: 10
+  - item_id: long_bow
+    cost: 15
+  - item_id: shield
+    cost: 5
+  - item_id: buckler
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  - item_id: light_armour
+    cost: 20
+  - item_id: horse
+    cost: 40
+  name_i18n:
+    en: null
+    es: Equipo para Escuderos
+- id: bretonnian-men-at-arms-equipment
+  name: Equipo para Hombres de Armas
+  source:
+    manual: caos-en-las-calles
+    printed_page: 107
+    section: Lista de Equipo para Hombres de Armas
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: La primera es gratis
+  - item_id: mace
+    cost: 3
+  - item_id: sword
+    cost: 5
+  - item_id: axe
+    cost: 5
+  - item_id: spear
+    cost: 10
+  - item_id: halberd
+    cost: 10
+  - item_id: great_weapon
+    cost: 15
+  - item_id: shield
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  - item_id: light_armour
+    cost: 20
+  name_i18n:
+    en: null
+    es: Equipo para Hombres de Armas
+- id: bretonnian-bowman-equipment
+  name: Equipo para Arqueros
+  source:
+    manual: caos-en-las-calles
+    printed_page: 107
+    section: Lista de Equipo para Arqueros
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: La primera es gratis
+  - item_id: sword
+    cost: 5
+  - item_id: axe
+    cost: 5
+  - item_id: bow
+    cost: 10
+  - item_id: long_bow
+    cost: 15
+  - item_id: helmet
+    cost: 10
+  - item_id: light_armour
+    cost: 20
+  name_i18n:
+    en: null
+    es: Equipo para Arqueros
+profiles:
+- id: questing-knight
+  name: Caballero Andante
+  type: hero
+  cost: 80
+  experience: 20
+  characteristics:
+    M: 10
+    WS: 4
+    BS: 3
+    S: 4
+    T: 3
+    W: 1
+    I: 4
+    A: 1
+    Ld: 8
+  equipment_lists:
+  - bretonnian-knight-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - strength
+  - speed
+  - bretonnian_special
+  rules:
+  - id: questing-leader
+    name: Jefe
+    effect: Los miembros de la banda a 15 cm o menos pueden usar su Liderazgo.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 108
+      section: Caballero Andante
+    name_i18n:
+      en: null
+      es: Jefe
+    effect_i18n:
+      en: null
+      es: Los miembros de la banda a 15 cm o menos pueden usar su Liderazgo.
+  - id: chivalrous-virtue
+    name: Virtud de la Caballería
+    effect: Nunca huye de un combate ni realiza chequeo de Liderazgo por encontrarse solo.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 108
+      section: Caballero Andante
+    name_i18n:
+      en: null
+      es: Virtud de la Caballería
+    effect_i18n:
+      en: null
+      es: Nunca huye de un combate ni realiza chequeo de Liderazgo por encontrarse solo.
+  - id: ride-warhorse
+    name: Montar Caballo de Guerra
+    effect: Posee la habilidad Montar Caballo de Guerra.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 108
+      section: Caballero Andante
+    name_i18n:
+      en: null
+      es: Montar Caballo de Guerra
+    effect_i18n:
+      en: null
+      es: Posee la habilidad Montar Caballo de Guerra.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 108
+    section: Caballero Andante
+  name_i18n:
+    en: null
+    es: Caballero Andante
+- id: knight-errant
+  name: Caballero Novel
+  type: hero
+  cost: 50
+  experience: 8
+  characteristics:
+    M: 10
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - bretonnian-knight-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - speed
+  - bretonnian_special
+  rules:
+  - id: chivalrous-virtue
+    name: Virtud de la Caballería
+    effect: Nunca huye de un combate ni realiza chequeo de Liderazgo por encontrarse solo.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 108
+      section: Caballeros Noveles
+    name_i18n:
+      en: null
+      es: Virtud de la Caballería
+    effect_i18n:
+      en: null
+      es: Nunca huye de un combate ni realiza chequeo de Liderazgo por encontrarse solo.
+  - id: ride-warhorse
+    name: Montar Caballo de Guerra
+    effect: Posee la habilidad Montar Caballo de Guerra.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 108
+      section: Caballeros Noveles
+    name_i18n:
+      en: null
+      es: Montar Caballo de Guerra
+    effect_i18n:
+      en: null
+      es: Posee la habilidad Montar Caballo de Guerra.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 108
+    section: Caballeros Noveles
+  name_i18n:
+    en: null
+    es: Caballero Novel
+- id: squire
+  name: Escudero
+  type: hero
+  cost: 15
+  experience: 0
+  characteristics:
+    M: 10
+    WS: 2
+    BS: 2
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 6
+  equipment_lists:
+  - bretonnian-squire-equipment
+  fixed_equipment: []
+  equipment_restrictions:
+  - Solo puede montar si el Caballero Andante y todos los Caballeros Noveles montan caballos de guerra
+  skill_access:
+  - combat
+  - strength
+  - bretonnian_special
+  rules:
+  - id: ride-horse
+    name: Montar Caballo
+    effect: Posee la habilidad Montar Caballo.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 109
+      section: Escuderos
+    name_i18n:
+      en: null
+      es: Montar Caballo
+    effect_i18n:
+      en: null
+      es: Posee la habilidad Montar Caballo.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 109
+    section: Escuderos
+  name_i18n:
+    en: null
+    es: Escudero
+- id: man-at-arms
+  name: Hombre de Armas
+  type: henchman
+  cost: 25
+  experience: 0
+  characteristics:
+    M: 10
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - bretonnian-men-at-arms-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules: []
+  source:
+    manual: caos-en-las-calles
+    printed_page: 109
+    section: Hombres de Armas
+  name_i18n:
+    en: null
+    es: Hombre de Armas
+- id: bretonnian-bowman
+  name: Arquero
+  type: henchman
+  cost: 20
+  experience: 0
+  characteristics:
+    M: 10
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 6
+  equipment_lists:
+  - bretonnian-bowman-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules: []
+  source:
+    manual: caos-en-las-calles
+    printed_page: 109
+    section: Arqueros
+  name_i18n:
+    en: null
+    es: Arquero
+band_rules:
+- id: lady-blessing
+  name: Bendición de la Dama del Lago
+  effect: Antes de la batalla se chequea Liderazgo del jefe. Si se supera
+  ? los enemigos con armas de pólvora deben obtener 4+ antes de dispararlas; contra Caballeros Andantes o Noveles cualquier
+    arma de proyectiles requiere 4+.
+  : null
+  source:
+    manual: caos-en-las-calles
+    printed_page: 105
+    section: Reglas Especiales
+  name_i18n:
+    en: null
+    es: Bendición de la Dama del Lago
+  effect_i18n:
+    en: null
+    es: Antes de la batalla se chequea Liderazgo del jefe. Si se supera
+- id: virtue-purity
+  name: Virtud de la Pureza
+  effect: Dispersa cualquier hechizo que le afecte con 4+.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 106
+    section: Habilidades Especiales
+  name_i18n:
+    en: null
+    es: Virtud de la Pureza
+  effect_i18n:
+    en: null
+    es: Dispersa cualquier hechizo que le afecte con 4+.
+- id: virtue-valour
+  name: Virtud del Valor
+  effect: Puede repetir tiradas fallidas para impactar cuerpo a cuerpo contra enemigos con Fuerza superior.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 106
+    section: Habilidades Especiales
+  name_i18n:
+    en: null
+    es: Virtud del Valor
+  effect_i18n:
+    en: null
+    es: Puede repetir tiradas fallidas para impactar cuerpo a cuerpo contra enemigos con Fuerza superior.
+- id: virtue-noble-disdain
+  name: Virtud del Noble Desdén
+  effect: Odia a todos los enemigos equipados con armas de proyectiles.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 106
+    section: Habilidades Especiales
+  name_i18n:
+    en: null
+    es: Virtud del Noble Desdén
+  effect_i18n:
+    en: null
+    es: Odia a todos los enemigos equipados con armas de proyectiles.
+- id: virtue-impetuous
+  name: Virtud del Caballero Impetuoso
+  effect: Al cargar suma +1D6 cm al movimiento; se tira antes de mover.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 106
+    section: Habilidades Especiales
+  name_i18n:
+    en: null
+    es: Virtud del Caballero Impetuoso
+  effect_i18n:
+    en: null
+    es: Al cargar suma +1D6 cm al movimiento; se tira antes de mover.
+- id: virtue-discipline
+  name: Virtud de la Disciplina
+  effect: Una vez por partida puede repetir el chequeo de retirada si el Caballero no está derribado
+  aturdido ni fuera de combate.: null
+  source:
+    manual: caos-en-las-calles
+    printed_page: 106
+    section: Habilidades Especiales
+  name_i18n:
+    en: null
+    es: Virtud de la Disciplina
+  effect_i18n:
+    en: null
+    es: Una vez por partida puede repetir el chequeo de retirada si el Caballero no está derribado
+source_sections: []
+canonical_family: bretonnian-knights

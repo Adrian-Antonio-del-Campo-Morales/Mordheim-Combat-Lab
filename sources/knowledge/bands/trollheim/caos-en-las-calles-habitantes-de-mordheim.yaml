@@ -1,0 +1,557 @@
+schema_version: 1
+id: chaos-streets-mordheim-inhabitants
+name: Habitantes de Mordheim
+name_i18n:
+  en: null
+  es: Habitantes de Mordheim
+original_locale: es
+categories:
+- trollheim
+collections:
+- trollheim
+grade: null
+setting: Mordheim
+publication: caos-en-las-calles
+status: source-normalized
+sources:
+- manual: caos-en-las-calles
+  printed_page: 144-149
+  section: Habitantes de Mordheim
+roster:
+  minimum_models: 3
+  maximum_models: 20
+  starting_gold: 500
+  members:
+  - profile_id: prophet
+    minimum: 1
+    maximum: 1
+  - profile_id: desolate-soul
+    minimum: 0
+    maximum: 1
+  - profile_id: lunatic
+    minimum: 0
+    maximum: 2
+  - profile_id: orphan
+    minimum: 0
+    maximum: 2
+  - profile_id: citizen
+    minimum: 0
+    maximum: null
+  - profile_id: cripple
+    minimum: 0
+    maximum: null
+  - profile_id: street-dog
+    minimum: 0
+    maximum: 5
+equipment_lists:
+- id: mordheim-inhabitant-equipment
+  name: Equipo para los Habitantes
+  source:
+    manual: caos-en-las-calles
+    printed_page: 146
+    section: Lista de Equipo para los Habitantes
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: La primera es gratis
+  - item_id: club
+    cost: 3
+  - item_id: axe
+    cost: 5
+  - item_id: sword
+    cost: 10
+  - item_id: spear
+    cost: 10
+  - item_id: halberd
+    cost: 10
+  - item_id: great_weapon
+    cost: 15
+  - item_id: sling
+    cost: 2
+  - item_id: bow
+    cost: 10
+  - item_id: shield
+    cost: 5
+  - item_id: buckler
+    cost: 5
+  - item_id: hardened_leather
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  name_i18n:
+    en: null
+    es: Equipo para los Habitantes
+- id: mordheim-outcast-equipment
+  name: Equipo para los Descarriados
+  source:
+    manual: caos-en-las-calles
+    printed_page: 146
+    section: Lista de Equipo para los Descarriados
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: La primera es gratis
+  - item_id: club
+    cost: 3
+  - item_id: axe
+    cost: 5
+  - item_id: great_weapon
+    cost: 15
+  - item_id: flail
+    cost: 15
+  - item_id: sling
+    cost: 2
+  - item_id: shield
+    cost: 5
+  - item_id: hardened_leather
+    cost: 5
+  name_i18n:
+    en: null
+    es: Equipo para los Descarriados
+profiles:
+- id: prophet
+  name: Profeta
+  type: hero
+  cost: 70
+  experience: 20
+  characteristics:
+    M: 10
+    WS: 3
+    BS: 3
+    S: 4
+    T: 4
+    W: 1
+    I: 3
+    A: 1
+    Ld: 9
+  equipment_lists:
+  - mordheim-inhabitant-equipment
+  fixed_equipment: []
+  equipment_restrictions:
+  - Puede llevar armadura y continuar pronunciando sermones
+  skill_access:
+  - combat
+  - shooting
+  - academic
+  - strength
+  - speed
+  rules:
+  - id: prophet-leader
+    name: Jefe
+    effect: Cualquier miembro de la banda situado a 15 cm o menos puede utilizar su Liderazgo para sus chequeos.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 147
+      section: Profeta
+    name_i18n:
+      en: null
+      es: Jefe
+    effect_i18n:
+      en: null
+      es: Cualquier miembro de la banda situado a 15 cm o menos puede utilizar su Liderazgo para sus chequeos.
+  - id: prophet-fanatic
+    name: Fanático
+    effect: Supera automáticamente cualquier chequeo basado en Liderazgo.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 147
+      section: Profeta
+    name_i18n:
+      en: null
+      es: Fanático
+    effect_i18n:
+      en: null
+      es: Supera automáticamente cualquier chequeo basado en Liderazgo.
+  - id: prophet-orator
+    name: Orador
+    effect: Empieza con un Sermón del Renacimiento determinado aleatoriamente.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 147
+      section: Profeta
+    name_i18n:
+      en: null
+      es: Orador
+    effect_i18n:
+      en: null
+      es: Empieza con un Sermón del Renacimiento determinado aleatoriamente.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 147
+    section: Profeta
+  name_i18n:
+    en: null
+    es: Profeta
+- id: desolate-soul
+  name: Alma Desolada
+  type: hero
+  cost: 55
+  experience: 8
+  characteristics:
+    M: 10
+    WS: 4
+    BS: 3
+    S: 4
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 9
+  equipment_lists:
+  - mordheim-inhabitant-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - strength
+  - speed
+  rules:
+  - id: desolate-fanatic
+    name: Fanático
+    effect: Supera automáticamente cualquier chequeo basado en Liderazgo.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 148
+      section: Alma Desolada
+    name_i18n:
+      en: null
+      es: Fanático
+    effect_i18n:
+      en: null
+      es: Supera automáticamente cualquier chequeo basado en Liderazgo.
+  - id: death-wish
+    name: Deseos de muerte
+    effect: Siempre se mueve hacia el enemigo visible más cercano
+    aunque no tiene que correr ni cargar; debe avanzar al menos 3 cm durante su fase de movimiento.: null
+    source:
+      manual: caos-en-las-calles
+      printed_page: 148
+      section: Alma Desolada
+    name_i18n:
+      en: null
+      es: Deseos de muerte
+    effect_i18n:
+      en: null
+      es: Siempre se mueve hacia el enemigo visible más cercano
+  - id: profound-hatred
+    name: Odio Profundo
+    effect: Odia a los miembros de cualquier banda enemiga salvo las Hermanas de Sigmar.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 148
+      section: Alma Desolada
+    name_i18n:
+      en: null
+      es: Odio Profundo
+    effect_i18n:
+      en: null
+      es: Odia a los miembros de cualquier banda enemiga salvo las Hermanas de Sigmar.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 148
+    section: Alma Desolada
+  name_i18n:
+    en: null
+    es: Alma Desolada
+- id: lunatic
+  name: Lunático
+  type: hero
+  cost: 35
+  experience: 8
+  characteristics:
+    M: 10
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - mordheim-outcast-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - strength
+  rules:
+  - id: frenzy
+    name: Furia Asesina
+    effect: Está sujeto a las reglas de Furia Asesina.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 147
+      section: Lunáticos
+    name_i18n:
+      en: null
+      es: Furia Asesina
+    effect_i18n:
+      en: null
+      es: Está sujeto a las reglas de Furia Asesina.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 147
+    section: Lunáticos
+  name_i18n:
+    en: null
+    es: Lunático
+- id: orphan
+  name: Huérfano
+  type: hero
+  cost: 15
+  experience: 0
+  characteristics:
+    M: 10
+    WS: 2
+    BS: 2
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 6
+  equipment_lists:
+  - mordheim-inhabitant-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - shooting
+  - speed
+  rules: []
+  source:
+    manual: caos-en-las-calles
+    printed_page: 148
+    section: Huérfanos
+  name_i18n:
+    en: null
+    es: Huérfano
+- id: citizen
+  name: Ciudadano
+  type: henchman
+  cost: 20
+  experience: 0
+  characteristics:
+    M: 10
+    WS: 2
+    BS: 2
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - mordheim-inhabitant-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules: []
+  source:
+    manual: caos-en-las-calles
+    printed_page: 149
+    section: Ciudadanos
+  name_i18n:
+    en: null
+    es: Ciudadano
+- id: cripple
+  name: Lisiado
+  type: henchman
+  cost: 10
+  experience: 0
+  characteristics:
+    M: 10
+    WS: 2
+    BS: 2
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - mordheim-outcast-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules:
+  - id: disability
+    name: Minusvalía
+    effect: Al crear el grupo tira 1D6 y aplica permanentemente el resultado a todas sus miniaturas según la tabla de Minusvalías.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 149
+      section: Lisiados
+    name_i18n:
+      en: null
+      es: Minusvalía
+    effect_i18n:
+      en: null
+      es: Al crear el grupo tira 1D6 y aplica permanentemente el resultado a todas sus miniaturas según la tabla de Minusvalías.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 149
+    section: Lisiados
+  name_i18n:
+    en: null
+    es: Lisiado
+- id: street-dog
+  name: Perro Callejero
+  type: henchman
+  cost: 15
+  experience: 0
+  characteristics:
+    M: 15
+    WS: 4
+    BS: 0
+    S: 4
+    T: 3
+    W: 1
+    I: 4
+    A: 1
+    Ld: 5
+  equipment_lists: []
+  fixed_equipment:
+  - Mandíbulas
+  equipment_restrictions:
+  - Nunca utiliza ni necesita armas o armaduras
+  skill_access: []
+  rules:
+  - id: animal
+    name: Animales
+    effect: No gana experiencia.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 149
+      section: Perros Callejeros
+    name_i18n:
+      en: null
+      es: Animales
+    effect_i18n:
+      en: null
+      es: No gana experiencia.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 149
+    section: Perros Callejeros
+  name_i18n:
+    en: null
+    es: Perro Callejero
+band_rules:
+- id: mordheim-natives
+  name: Nativos de Mordheim
+  effect: Durante una campaña ambientada en Mordheim pueden modificar en más uno o menos uno uno de los dados de cada tirada
+    de exploración.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 145
+    section: Reglas Especiales de los Habitantes de Mordheim
+  name_i18n:
+    en: null
+    es: Nativos de Mordheim
+  effect_i18n:
+    en: null
+    es: Durante una campaña ambientada en Mordheim pueden modificar en más uno o menos uno uno de los dados de cada tirada
+      de exploración.
+- id: wanderers
+  name: Vagabundos
+  effect: Mientras el Profeta siga vivo pueden repetir uno de los dados de exploración, siempre que la campaña se desarrolle
+    en Mordheim.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 145
+    section: Reglas Especiales de los Habitantes de Mordheim
+  name_i18n:
+    en: null
+    es: Vagabundos
+  effect_i18n:
+    en: null
+    es: Mientras el Profeta siga vivo pueden repetir uno de los dados de exploración, siempre que la campaña se desarrolle
+      en Mordheim.
+- id: mutual-solidarity
+  name: Solidarios entre ellos
+  effect: Al obtener un doble cuatro en exploración reciben gratuitamente un nuevo secuaz para cualquiera de sus grupos.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 145
+    section: Reglas Especiales de los Habitantes de Mordheim
+  name_i18n:
+    en: null
+    es: Solidarios entre ellos
+  effect_i18n:
+    en: null
+    es: Al obtener un doble cuatro en exploración reciben gratuitamente un nuevo secuaz para cualquiera de sus grupos.
+- id: inhabitants-hired-swords
+  name: Espadas de Alquiler
+  effect: Puede contratar las espadas disponibles para Mercenarios y cualquier otra cuya falta de moralidad le permita trabajar
+    para cualquier banda.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 145
+    section: Reglas Especiales de los Habitantes de Mordheim
+  name_i18n:
+    en: null
+    es: Espadas de Alquiler
+  effect_i18n:
+    en: null
+    es: Puede contratar las espadas disponibles para Mercenarios y cualquier otra cuya falta de moralidad le permita trabajar
+      para cualquier banda.
+- id: revival-sermons
+  name: Sermón del Renacimiento
+  effect: Solo afecta a miembros propios de la banda; nunca a enemigos, aliados ni espadas de alquiler. Al obtener una habilidad,
+    el Profeta puede aprender aleatoriamente un nuevo sermón o reducir en uno la dificultad de uno conocido. Los efectos psicológicos
+    de los sermones afectan incluso a miembros inmunes a psicología. Su alcance inicial es 15 cm y aumenta junto con el alcance
+    de la regla Jefe. Permanecen activos hasta que el Profeta sufre una herida o decide terminarlos. Solo puede estar activo
+    un sermón. Salvo indicación contraria, se pronuncian con las reglas de lanzamiento de hechizos y pueden usarse llevando
+    armadura.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 145
+    section: Sermón del Renacimiento
+  name_i18n:
+    en: null
+    es: Sermón del Renacimiento
+  effect_i18n:
+    en: null
+    es: Solo afecta a miembros propios de la banda; nunca a enemigos, aliados ni espadas de alquiler. Al obtener una habilidad,
+      el Profeta puede aprender aleatoriamente un nuevo sermón o reducir en uno la dificultad de uno conocido. Los efectos
+      psicológicos de los sermones afectan incluso a miembros inmunes a psicología. Su alcance inicial es 15 cm y aumenta
+      junto con el alcance de la regla Jefe. Permanecen activos hasta que el Profeta sufre una herida o decide terminarlos.
+      Solo puede estar activo un sermón. Salvo indicación contraria, se pronuncian con las reglas de lanzamiento de hechizos
+      y pueden usarse llevando armadura.
+- id: revival-sermon-list-out-of-scope
+  name: Lista de Sermones del Renacimiento fuera de alcance
+  effect: El Profeta tiene acceso a la lista de Sermones del Renacimiento, pero la transcripción de listas de plegarias, magia
+    y efectos equivalentes queda fuera del alcance actual de la base canónica.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 145
+    section: Sermón del Renacimiento
+  name_i18n:
+    en: null
+    es: Lista de Sermones del Renacimiento fuera de alcance
+  effect_i18n:
+    en: null
+    es: El Profeta tiene acceso a la lista de Sermones del Renacimiento, pero la transcripción de listas de plegarias, magia
+      y efectos equivalentes queda fuera del alcance actual de la base canónica.
+- id: disability-table
+  name: Tabla de Minusvalías
+  effect: Al reclutar un grupo de Lisiados tira 1D6. Con 1, Cojo y artrítico reduce Movimiento e Iniciativa en uno; con 2,
+    Parkinson reduce Habilidad de Armas en uno y prohíbe dos armas o arma y escudo; con 3, Mala visión reduce Habilidad de
+    Proyectiles en uno; con 4, Enfermo reduce Resistencia en uno; con 5, Debilidad reduce Fuerza en uno; con 6, Lesión en
+    la cabeza causa Estupidez salvo mientras estén a 15 cm o menos de un héroe.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 149
+    section: Minusvalía
+  name_i18n:
+    en: null
+    es: Tabla de Minusvalías
+  effect_i18n:
+    en: null
+    es: Al reclutar un grupo de Lisiados tira 1D6. Con 1, Cojo y artrítico reduce Movimiento e Iniciativa en uno; con 2, Parkinson
+      reduce Habilidad de Armas en uno y prohíbe dos armas o arma y escudo; con 3, Mala visión reduce Habilidad de Proyectiles
+      en uno; con 4, Enfermo reduce Resistencia en uno; con 5, Debilidad reduce Fuerza en uno; con 6, Lesión en la cabeza
+      causa Estupidez salvo mientras estén a 15 cm o menos de un héroe.
+source_sections: []
+canonical_family: chaos-streets-mordheim-inhabitants

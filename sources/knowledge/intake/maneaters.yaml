@@ -1,0 +1,792 @@
+id: maneaters
+name: Maneaters
+grade: 1c
+source_url: https://mordheimer.net/docs/warbands/grade-1c-warbands/maneaters
+headings:
+- Special Rules ​
+- Choice of warriors ​
+- Starting experience ​
+- Maximum characteristics ​
+- Maneaters Skill Table ​
+- Ogres special skills ​
+- master of arms ​
+- crude belch ​
+- maneater ​
+- bull charge ​
+- dog of war ​
+- bellowing roar ​
+- Ogres equipment lists ​
+- Ogre Equipment List ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Miscellaneous Equipment ​
+- Mountain Guide Equipment List ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Special Equipment ​
+- Iron Fist ​
+- Ogre Club ​
+- Harpoon Crossbow ​
+- Hand-held Mortar ​
+- Claimed Gnoblars ​
+- lookout-gnoblar ​
+- luck-gnoblar ​
+- sword-gnoblar ​
+- heroes ​
+- 1 Captain ​
+- Special Rules ​
+- 0 – 3 Youngbloods ​
+- 0 – 1 Mountain Guide ​
+- Special Rules ​
+- henchmen ​
+- 0 – 2 Bulls ​
+- Special Rules ​
+- Half-growns ​
+- 0 – 2 Sabretusks ​
+- Special Rules ​
+tables:
+- section: Maneaters Skill Table
+  section_path:
+  - Maneaters Skill Table
+  rows:
+  - - ''
+    - Combat
+    - Shooting
+    - Academic
+    - Strength
+    - Speed
+    - Special
+  - - Captain
+    - ✓
+    - ''
+    - ''
+    - ✓
+    - ''
+    - ✓
+  - - Mountain Guide
+    - ✓
+    - ''
+    - ''
+    - ✓
+    - ''
+    - ✓
+  - - Youngbloods
+    - ✓
+    - ''
+    - ''
+    - ✓
+    - ''
+    - ✓
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Ogres equipment lists
+  - Ogre Equipment List
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Cleaver (counts as axe )
+    - 5 gc
+  - - Ogre club
+    - 10 gc
+  - - Sword
+    - 10 gc
+  - - Spear
+    - 10 gc
+  - - Morning star
+    - 15 gc
+  - - Double-handed weapon
+    - 15 gc
+  - - Iron fist
+    - 15 gc
+  - - Cathayan longsword *
+    - 75 gc
+- section: Missile Weapons
+  section_path:
+  - Ogres equipment lists
+  - Ogre Equipment List
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Hand-held mortar
+    - 70 gc
+- section: Armour
+  section_path:
+  - Ogres equipment lists
+  - Ogre Equipment List
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Helmet
+    - 10 gc
+  - - Light armour
+    - 20 gc
+  - - Heavy armour
+    - 50 gc
+- section: Miscellaneous Equipment
+  section_path:
+  - Ogres equipment lists
+  - Ogre Equipment List
+  - Miscellaneous Equipment
+  rows:
+  - - Item
+    - Cost
+  - - Gnoblar Fighter
+    - 15 gc
+  - - Lookout-Gnoblar
+    - 20 gc
+  - - Luck-Gnoblar
+    - 25 gc
+  - - Sword-Gnoblar
+    - 30 gc
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Ogres equipment lists
+  - Mountain Guide Equipment List
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Cleaver (counts as axe )
+    - 5 gc
+  - - Ogre club
+    - 10 gc
+  - - Sword
+    - 10 gc
+  - - Spear
+    - 10 gc
+  - - Double-handed weapon
+    - 15 gc
+- section: Missile Weapons
+  section_path:
+  - Ogres equipment lists
+  - Mountain Guide Equipment List
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Harpoon crossbow
+    - 50 gc
+- section: Armour
+  section_path:
+  - Ogres equipment lists
+  - Mountain Guide Equipment List
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Helmet
+    - 10 gc
+  - - Light armour
+    - 20 gc
+- section: 1 Captain
+  section_path:
+  - heroes
+  - 1 Captain
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '6'
+    - '4'
+    - '3'
+    - '4'
+    - '4'
+    - '3'
+    - '3'
+    - '2'
+    - '8'
+- section: 0 – 3 Youngbloods
+  section_path:
+  - heroes
+  - 0 – 3 Youngbloods
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '6'
+    - '2'
+    - '2'
+    - '3'
+    - '4'
+    - '2'
+    - '2'
+    - '1'
+    - '6'
+- section: 0 – 1 Mountain Guide
+  section_path:
+  - heroes
+  - 0 – 1 Mountain Guide
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '6'
+    - '4'
+    - '3'
+    - '4'
+    - '4'
+    - '3'
+    - '3'
+    - '2'
+    - '8'
+- section: 0 – 2 Bulls
+  section_path:
+  - henchmen
+  - 0 – 2 Bulls
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '6'
+    - '3'
+    - '2'
+    - '4'
+    - '4'
+    - '3'
+    - '2'
+    - '3'
+    - '7'
+- section: Half-growns
+  section_path:
+  - henchmen
+  - Half-growns
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '6'
+    - '3'
+    - '2'
+    - '4'
+    - '4'
+    - '2'
+    - '2'
+    - '2'
+    - '7'
+- section: 0 – 2 Sabretusks
+  section_path:
+  - henchmen
+  - 0 – 2 Sabretusks
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '8'
+    - '4'
+    - '0'
+    - '4'
+    - '4'
+    - '2'
+    - '4'
+    - '3'
+    - '4'
+section_text:
+- section: Special Rules
+  section_path:
+  - Special Rules
+  text: 'Fear: Ogres are large, threatening creatures that with
+
+    the exception of Youngbloods, cause fear.
+
+    Large: Except for Youngbloods and Half-growns Ogres
+
+    are huge, lumbering creatures and therefore make
+
+    tempting targets for archers. Any model may shoot at
+
+    them, even if they are not the closest target and gets a
+
+    +1 bonus on the ‘to hit’ roll.
+
+    Gluttony: Because of a voracious appetite, each Ogre
+
+    model counts as two models when selling wyrdstone
+
+    or treasure. Any model which is captured due to
+
+    Serious Injuries or Exploration can be devoured and
+
+    his possessions retained, reducing the combined
+
+    model count of your warband by one (or two if the
+
+    captive ‘shared meal’ is a Large Target). Each Ogre
+
+    always counts as at least one model towards the total,
+
+    no matter how much he eats!
+
+    An Ogre Hero devouring captured models is granted
+
+    experience points equal to the number of models that
+
+    were consumed. Any member or animal (including
+
+    mounts) from your warband can be eaten in the same
+
+    way! ✏️ Remove any consumed comrades from the
+
+    warband roster immediately.
+
+    Slow Witted: Although Ogres are capable of earning
+
+    experience and bettering themselves they are not the
+
+    smartest of creatures. Ogres only improve at half the
+
+    rate of everyone else. They must earn twice the usual
+
+    number of experience points to gain an advance.
+
+    Difficult Customers: Unable to create anything of
+
+    lasting worth, Ogres tend to rely on more civilised folk
+
+    for the acquisition of quality goods. Widely regarded
+
+    by vendors as their least popular and most frightening
+
+    customers, Ogre Heroes suffer -1 when rolling to find
+
+    Rare items that are not exclusively available to Ogres.
+
+    Cannibals: Most Hired Swords refuse to work for
+
+    Ogres, as they know for sure they’ll end up being a
+
+    meal sooner or later. An Ogre warband may never hire
+
+    any Hired Swords, except for Halflings (Scout, Thief,
+
+    etc.) and the Ogre Bodyguard, or unless stated
+
+    otherwise, in which case Ogres can choose to devour
+
+    him ❓ when the contract ends (see Gluttony).'
+- section: Choice of warriors
+  section_path:
+  - Choice of warriors
+  text: 'An Ogre warband must include a minimum of three models. You have 500 gold
+    crowns which you can use to recruit and equip your warband. The maximum number
+    of warriors in the warband is 12.
+
+    Captain: Each Ogre warband must have one Captain – no more, no less! Mountain
+    Guide: Your warband may include one Mountain Guide. Youngbloods: Your warband
+    may include up to three Youngbloods. Half-growns: Your warband may include any
+    number of Half-growns. Bulls: Your warband may include up to two Bulls. Sabretusks:
+    Your warband may include up to two Sabretusks if it includes a Guide.'
+- section: Starting experience
+  section_path:
+  - Starting experience
+  text: A Captain starts with 20 Experience. A Mountain Guide starts with 8 Experience.
+    Youngbloods start with 0 Experience. Henchmen start with 0 Experience.
+- section: Maximum characteristics
+  section_path:
+  - Maximum characteristics
+  text: Characteristics for warriors may not be increased beyond the maximum limits
+    shown here under the "ogre" entry.
+- section: Ogres special skills
+  section_path:
+  - Ogres special skills
+  text: Ogres may choose to use the following skill list instead of the standard skill
+    lists.
+- section: master of arms
+  section_path:
+  - Ogres special skills
+  - master of arms
+  text: 'The Ogre learns how to use his size. He may now
+
+    wield a Difficult to Use weapon and a hand weapon at
+
+    the same time, but not two Difficult to Use weapons.'
+- section: crude belch
+  section_path:
+  - Ogres special skills
+  - crude belch
+  text: 'Ogres eat almost anything. Consequences are to be
+
+    expected from those inconsiderate enough to
+
+    consume a rich meal before battle. A Hero with this
+
+    ''condition'' may unleash his thunderous fumes on all
+
+    enemies engaged in close combat. Those that do not
+
+    pass a Ld test suffer a –1 ‘to hit’ modifier for the turn.
+
+    The Ogre must wait until a new enemy engages him in
+
+    combat before he relieves himself again.'
+- section: maneater
+  section_path:
+  - Ogres special skills
+  - maneater
+  text: 'Ogres are not civilized of their own accord but it is
+
+    proven they are prone to absorb foreign customs
+
+    when travelling the world. Some eventually learn
+
+    strange new skills before returning home to their
+
+    tribes. This Ogre may immediately learn one skill from
+
+    the Shooting or Academic skill lists. This skill may be
+
+    taken only once and may not be taken by the Guide.'
+- section: bull charge
+  section_path:
+  - Ogres special skills
+  - bull charge
+  text: 'Ogres learn to use their vast bulk in a charge,
+
+    trampling the enemy to the ground. When charging,
+
+    an Ogre with this skill may attempt a single attack with
+
+    a +1 ‘to hit’ modifier rather than making his normal
+
+    attacks. If successful the enemy model is automatically knocked down .'
+- section: dog of war
+  section_path:
+  - Ogres special skills
+  - dog of war
+  text: 'When an Ogre travels south he can find employment
+
+    as a tavern bouncer. Some are enlisted by Paymasters
+
+    to fight for Tilean City States. Drawing from
+
+    experience gained during a stint on foreign soil, the
+
+    band can now hire those Hired Swords available for
+
+    Mercenaries. This skill may only be taken by the leader
+
+    and if he dies all Hired Swords are removed from the
+
+    warband.'
+- section: bellowing roar
+  section_path:
+  - Ogres special skills
+  - bellowing roar
+  text: 'An Ogre leader expects challenges to his authority.
+
+    One of the best ways to suppress a mutineer in the
+
+    ranks is to give his ear drums a good pounding. This
+
+    skill may only be taken by the warband leader,
+
+    allowing him to re-roll the first failed Rout test.'
+- section: Ogres equipment lists
+  section_path:
+  - Ogres equipment lists
+  text: The following lists are used by Ogre warbands to pick their equipment:.
+- section: Special Equipment
+  section_path:
+  - Special Equipment
+  text: 'This warband has access to the following special equipment when purchasing
+    items from the Trading Post , outside their starting list:'
+- section: Claimed Gnoblars
+  section_path:
+  - Claimed Gnoblars
+  text: 'Ogres find simple pleasure in the bickering of Gnoblars and some claim one
+    as their pet for amusement. An astute Gnoblar puts his malice to good use and
+    places the right action at the perfect moment to gain itself a master.
+
+    Treat these Gnoblars in all aspects like miscellaneous equipment (they are not
+    models and do not occupy their own bases!). However, if the Ogre owning them was
+    taken out of action in a game, roll a D6 for each of his Gnoblars: on a 1-2 they
+    are dead and removed from their master’s equipment. Ogres may own up to two different
+    Claimed Gnoblars. These can be represented on the model they accompany.'
+- section: lookout-gnoblar
+  section_path:
+  - Claimed Gnoblars
+  - lookout-gnoblar
+  text: '20 gold crowns Availability: Rare 8 (Ogres only)
+
+    An Ogre with a Lookout-Gnoblar gains the skill Dodge from the Speed skill list.'
+- section: luck-gnoblar
+  section_path:
+  - Claimed Gnoblars
+  - luck-gnoblar
+  text: '25 gold crowns Availability: Rare 9 (Ogres only)
+
+    An Ogre with a Luck-Gnoblar may re-roll one dice during the battle. Remember you
+    may never re-roll a re-roll.'
+- section: sword-gnoblar
+  section_path:
+  - Claimed Gnoblars
+  - sword-gnoblar
+  text: '30 gold crowns Availability: Rare 10 (Ogres only)
+
+    An Ogre with a Sword-Gnoblar gains one extra Strength 2 attack in Close Combat,
+    at the weapon skill of the owning model. This attack is made at the same time
+    as the owning Hero’s attacks and must be directed at a model the Ogre has directed
+    attacks toward. The opponent’s attention is on the Ogre!'
+- section: 1 Captain
+  section_path:
+  - heroes
+  - 1 Captain
+  text: '145 gold crowns to hire
+
+    A retinue of Maneaters is captained by a brutish mercenary driven by his lust
+    to gather wealth, experience and exotic wargear. He maintains order in his company
+    by issuing threats and bribes or using violence.
+
+    Weapons/Armour: A Captain may be equipped with
+
+    weapons and armour chosen from the Ogres
+
+    equipment list. Unlike other models Ogres don''t have
+
+    free daggers, even though they might carry one
+
+    reserved for eating, the most sacred activity in their
+
+    life. Ogres never fight with daggers in close combat.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 1 Captain
+  - Special Rules
+  text: 'Leader: Any warrior within 6“ of the Captain may use
+
+    his Leadership when taking Ld tests.'
+- section: 0 – 3 Youngbloods
+  section_path:
+  - heroes
+  - 0 – 3 Youngbloods
+  text: '45 gold crowns to hire
+
+    When Ogre calves meet outsiders for the first time, they’re not quite so menacing.
+    Strange encounters in the wilderness pose a great many threats for them to overcome.
+
+    Weapons/Armour: A Youngblood may be equipped
+
+    with weapons and armour chosen from the Ogre equipment list. Unlike other models
+    Ogres don''t have
+
+    free daggers, even though they might carry one
+
+    reserved for eating, the most sacred activity in their
+
+    life. Ogres never fight with daggers in close combat.'
+- section: 0 – 1 Mountain Guide
+  section_path:
+  - heroes
+  - 0 – 1 Mountain Guide
+  text: '145 gold crowns to hire
+
+    Youthful hunters leave their tribe to sate wanderlust or a rumbling gut. Isolated
+    in mountainous territories they exist to track challenging prey through hostile
+    conditions. Eventually the tribal ties of scouts are severed. With no loyalty
+    they may choose to follow herds as they wish.
+
+    Weapons/Armour: A Mountain Guide may be
+
+    equipped with weapons and armour chosen from the
+
+    Guide equipment list. Unlike other models Ogres
+
+    don''t have free daggers, even though they might carry
+
+    one reserved for eating, the most sacred activity in
+
+    their life. Ogres never fight with daggers in close
+
+    combat.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 0 – 1 Mountain Guide
+  - Special Rules
+  text: 'Ranger: A Mountain Guide is a dedicated tracker. If he’s not put out of action
+    in the battle, you may roll two dice for Exploration and pick one as the result.
+    Note that this is not a re-roll.
+
+    Loner: Mountain Guides are Ogre Hunters. They
+
+    become used to the solitude of the highest peaks in
+
+    the Mountains of Mourn. A Mountain Guide hunts the
+
+    slopes alone and will never claim a Gnoblar or take
+
+    one as a pet. They are immune to all alone tests and
+
+    may never become the warband leader.'
+- section: henchmen
+  section_path:
+  - henchmen
+  text: (Bought in groups of 1-5)
+- section: 0 – 2 Bulls
+  section_path:
+  - henchmen
+  - 0 – 2 Bulls
+  text: '140 gold crowns to hire
+
+    Reckless young Bulls are nothing more than wanderers who recognize the strength
+    of the Captain. They care only to fill their stomachs and don’t realize that one
+    day they shall become learned and well travelled Maneaters.
+
+    Weapons/Armour: Bulls may be equipped with
+
+    weapons and armour chosen from the Ogre
+
+    equipment list. Unlike other models Ogres don''t have
+
+    free daggers, even though they might carry one
+
+    reserved for eating, the most sacred activity in their
+
+    life. Ogres never fight with daggers in close combat.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 2 Bulls
+  - Special Rules
+  text: 'Bull Charge: Ogres learn to use their vast bulk in a
+
+    charge, trampling the enemy to the ground. When
+
+    charging, Bulls may attempt a single attack with a +1
+
+    ‘to hit’ modifier rather than making their normal
+
+    attacks. If successful the enemy model is automatically
+
+    knocked down.'
+- section: Half-growns
+  section_path:
+  - henchmen
+  - Half-growns
+  text: '85 gold crowns to hire
+
+    Any underdeveloped Ogres risk meeting a sticky end. These half-grown brutes are
+    slain at the hands of traditionalist tyrants as runts represent weakness in the
+    tribe. Migrating renegades will seek refuge in a weaker herd or take up arms in
+    their exile for whoever keeps them.
+
+    Weapons/Armour: A Half-grown may be
+
+    equipped with weapons and armour
+
+    chosen from the Ogre equipment list.
+
+    Unlike other models Ogres don''t
+
+    have free daggers, even though
+
+    they might carry one reserved
+
+    for eating, the most sacred
+
+    activity in their life. Ogres
+
+    never fight with daggers
+
+    in close combat.'
+- section: 0 – 2 Sabretusks
+  section_path:
+  - henchmen
+  - 0 – 2 Sabretusks
+  text: '125 gold crowns to hire
+
+    Sabretusks are agile, giant felines with tusks jutting from their lower jaw. It
+    is common for a young hunter to keep a Sabretusk or two around to help sniff out
+    his next meal.
+
+    Weapons/Armour: Tusks and primal ferocity!'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 2 Sabretusks
+  - Special Rules
+  text: 'Trained: Sabretusks may use the Leadership of the
+
+    Mountain Guide if within 6” of him. In the event that
+
+    no Mountain Guide is included in the warband due to
+
+    a death or an injury, the Sabretusks cannot be used
+
+    until the Mountain Guide is replaced. They must be
+
+    caged and left at the camp until a new one is hired.
+
+    Feral Instinct: Even a Guide has difficulty controlling
+
+    such feral beasts. At the beginning of the Ogres turn
+
+    the Sabretusk must pass a Leadership test. If the test is
+
+    failed, the opponent may move the Sabretusk this
+
+    turn. An uncontrolled Sabretusk may charge models
+
+    from his own warband!
+
+    Ignored: Sabretusks that are out of action do not count to the number of out of
+    action models for the
+
+    purpose of Rout tests.
+
+    Fear: Sabretusks are huge feline predators and thus cause fear.
+
+    Animals: Sabretusks are animals and thus do not gain experience. ✏️'

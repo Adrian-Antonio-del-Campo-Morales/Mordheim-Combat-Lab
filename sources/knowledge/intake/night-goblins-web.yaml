@@ -1,0 +1,1312 @@
+id: night-goblins-web
+name: Night Goblins web
+grade: 1c
+source_url: https://mordheimer.net/docs/warbands/grade-1c-warbands/night-goblins-web
+headings:
+- Special Rules ​
+- Choice of Warriors ​
+- Starting Experience ​
+- Maximum characteristics ​
+- Night Goblin Skill Table ​
+- Night Goblin Special Skills ​
+- Fungus Farmer ​
+- Hide in Shadows ​
+- Infiltrate ​
+- Netter ​
+- Ride Squig ​
+- Sneaky Git ​
+- Night Goblin equipment lists ​
+- Hero Equipment List ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Miscellaneous ​
+- Henchmen Equipment List ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Miscellaneous ​
+- Fanatic Equipment List ​
+- Hand-to-hand Combat Weapons ​
+- Miscellaneous ​
+- Special Equipment ​
+- Ball and Chain ​
+- Boss Pole ​
+- Poison Daggers ​
+- Squig Prodder ​
+- Heroes ​
+- 1 Boss ​
+- SPECIAL RULES ​
+- 0 – 1 Squig Herder ​
+- SPECIAL RULES ​
+- SQUIG HERDER SKILLS ​
+- 0 – 3 Goonz ​
+- 0 – 1 Shaman ​
+- SPECIAL RULES ​
+- FUNGUS BREW TABLE ​
+- Henchmen ​
+- Night Goblin Warriors ​
+- SPECIAL RULES ​
+- 0 – 3 Night Goblin Fanatics ​
+- SPECIAL RULES ​
+- 0 – 5 Cave Squigs ​
+- SPECIAL RULES ​
+- 0 – 5 Snotlings ​
+- SPECIAL RULES ​
+- 0 – 1 Great Squig ​
+- SPECIAL RULES ​
+- 0 – 1 Troll ​
+- SPECIAL RULES ​
+tables:
+- section: Special Rules
+  section_path:
+  - Special Rules
+  rows:
+  - - D6
+    - Result
+  - - '1'
+    - “I ’Erd Dat!” The warrior decides that the nearest friendly Orc or Goblin Henchman
+      has insulted his lineage or personal hygiene and must pay the price! If there
+      is a friendly Orc or Goblin Henchman or Hired Sword within charge reach (if
+      there are multiple targets within reach, choose the one nearest to the mad model),
+      the offended warrior will immediately charge and fight a round of hand-to-hand
+      combat against the source of his ire. At the end of this round of combat, the
+      models will immediately move 1" apart and no longer count as being in close
+      combat (unless one of them fails another Animosity test and rolls this result
+      again). If there are no friendly Orc or Goblin Henchmen or Hired Swords within
+      charge reach, and the warrior is armed with a missile weapon, he immediately
+      takes a shot at the nearest friendly Orc or Goblin Henchman or Hired Sword.
+      If none of the above applies, or if the nearest friendly model is an Orc Hero,
+      the warrior behaves as if a 2-5 had been rolled on this chart. In any case,
+      the warrior in question may take no other action this turn, though he may defend
+      himself if attacked in hand-to-hand combat.
+  - - 2-5
+    - “Wud Yoo Say?” The warrior is fairly certain he heard an offensive sound from
+      the nearest friendly Orc or Goblin, but he’s not quite sure. He spends the turn
+      hurling insults at his mate. He may do nothing else this turn, though he may
+      defend himself if attacked in hand-to-hand combat.
+  - - '6'
+    - “I’ll Show Yer!” The warrior imagines that his mates are laughing about him
+      behind his back and calling him silly names. To show them up he decides that
+      he’ll be the first one to the scrap! This model must move as quickly as possible
+      towards the nearest enemy model, charging into combat if possible. If there
+      are no enemy models within sight, the Orc or Goblin warrior may make a normal
+      move immediately. This move is in addition to his regular move in the Movement
+      phase, so he may therefore move twice in a single turn if you wish. If the extra
+      move takes the Orc or Goblin warrior within charge reach of an enemy model,
+      the warrior must charge into close combat during his regular movement.
+- section: Maximum characteristics
+  section_path:
+  - Maximum characteristics
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - LD
+  - - Night Goblin
+    - '4'
+    - '5'
+    - '6'
+    - '4'
+    - '4'
+    - '3'
+    - '6'
+    - '4'
+    - '7'
+- section: Night Goblin Skill Table
+  section_path:
+  - Night Goblin Skill Table
+  rows:
+  - - ''
+    - Combat
+    - Shooting
+    - Academic
+    - Strength
+    - Speed
+    - Special
+  - - Boss
+    - ✓
+    - ✓
+    - ''
+    - ✓*
+    - ✓
+    - ✓
+  - - Squig Herder
+    - ✓
+    - ''
+    - ''
+    - ''
+    - ✓
+    - ✓
+  - - Goonz
+    - ✓
+    - ✓
+    - ''
+    - ''
+    - ✓
+    - ✓
+  - - Shaman
+    - ''
+    - ''
+    - ✓
+    - ''
+    - ✓
+    - ✓
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Night Goblin equipment lists
+  - Hero Equipment List
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Club
+    - 3 gc
+  - - Sword
+    - 10 gc
+  - - Spear
+    - 10 gc
+  - - Halberd
+    - 10 gc
+  - - Two-handed weapon
+    - 15 gc
+  - - Boss pole
+    - 20 gc
+  - - Poison Daggers
+    - 25 gc
+- section: Missile Weapons
+  section_path:
+  - Night Goblin equipment lists
+  - Hero Equipment List
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Short bow
+    - 5 gc
+  - - Sling
+    - 2 gc
+  - - Throwing Knives
+    - 15 gc
+- section: Armour
+  section_path:
+  - Night Goblin equipment lists
+  - Hero Equipment List
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Shield
+    - 5 gc
+  - - Helmet
+    - 10 gc
+  - - Light armour
+    - 20 gc
+- section: Miscellaneous
+  section_path:
+  - Night Goblin equipment lists
+  - Hero Equipment List
+  - Miscellaneous
+  rows:
+  - - Item
+    - Cost
+  - - Net
+    - 5gc
+  - - Mad Cap Mushrooms
+    - 15 gc
+  - - Squig Prodder
+    - 15 gc
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Night Goblin equipment lists
+  - Henchmen Equipment List
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Club
+    - 3 gc
+  - - Sword
+    - 10 gc
+  - - Spear
+    - 5 gc
+- section: Missile Weapons
+  section_path:
+  - Night Goblin equipment lists
+  - Henchmen Equipment List
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Short bow
+    - 5 gc
+- section: Armour
+  section_path:
+  - Night Goblin equipment lists
+  - Henchmen Equipment List
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Shield
+    - 5 gc
+  - - Light armour
+    - 20 gc
+- section: Miscellaneous
+  section_path:
+  - Night Goblin equipment lists
+  - Henchmen Equipment List
+  - Miscellaneous
+  rows:
+  - - Item
+    - Cost
+  - - Net
+    - 5gc
+  - - Mad Cap Mushrooms
+    - 15 gc
+  - - Squig Prodder
+    - 15 gc
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Night Goblin equipment lists
+  - Fanatic Equipment List
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Double-handed Weapon
+    - 15 gc
+  - - Ball & Chain
+    - 15 gc
+  - - Poison Daggers
+    - 25 gc
+- section: Miscellaneous
+  section_path:
+  - Night Goblin equipment lists
+  - Fanatic Equipment List
+  - Miscellaneous
+  rows:
+  - - Item
+    - Cost
+  - - Mad Cap Mushrooms
+    - 15 gc
+- section: Ball and Chain
+  section_path:
+  - Special Equipment
+  - Ball and Chain
+  rows:
+  - - D6
+    - Result
+  - - '1'
+    - The model trips and strangles himself with the chain. The model is taken out
+      of action. When rolling for Injury after the game, a roll of 1-3 means the model
+      is out permanently, instead of the normal 1-2.
+  - - 2-5
+    - The model moves 2D6" in a direction nominated by the controlling player.
+  - - '6'
+    - 'The model moves 2D6" in a random direction. If the player owns a Scatter dice
+      (available from Games Workshop stores), roll that to determine direction. If
+      not, then roll a D6: 1 – Straight Forward, 2-3 – Right, 4-5 – Left, 6 – Straight
+      Back.'
+- section: 1 Boss
+  section_path:
+  - Heroes
+  - 1 Boss
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '4'
+    - '3'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '7'
+- section: 0 – 1 Squig Herder
+  section_path:
+  - Heroes
+  - 0 – 1 Squig Herder
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '6'
+- section: 0 – 3 Goonz
+  section_path:
+  - Heroes
+  - 0 – 3 Goonz
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '6'
+- section: 0 – 1 Shaman
+  section_path:
+  - Heroes
+  - 0 – 1 Shaman
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '2'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '6'
+- section: FUNGUS BREW TABLE
+  section_path:
+  - Heroes
+  - 0 – 1 Shaman
+  - FUNGUS BREW TABLE
+  rows:
+  - - D6
+    - Result
+  - - '1'
+    - 'Rowdy: Affected by Animosity on a 1 or 2.'
+  - - '2'
+    - 'Dizzy: -1 Initiative.'
+  - - '3'
+    - 'Fearless: Immune to fear and all alone tests.'
+  - - '4'
+    - 'Numbed: +1 Save which may not be reduced below 6+.'
+  - - '5'
+    - 'Belligerent: hatred against the opposing warband(s).'
+  - - '6'
+    - 'Loony: frenzy , followed by stupidity if it wears off by a Goblin being knocked
+      down or stunned'
+- section: Night Goblin Warriors
+  section_path:
+  - Henchmen
+  - Night Goblin Warriors
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '2'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '5'
+- section: 0 – 3 Night Goblin Fanatics
+  section_path:
+  - Henchmen
+  - 0 – 3 Night Goblin Fanatics
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '5'
+- section: 0 – 5 Cave Squigs
+  section_path:
+  - Henchmen
+  - 0 – 5 Cave Squigs
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - 2d6
+    - '4'
+    - '0'
+    - '4'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '5'
+- section: 0 – 5 Snotlings
+  section_path:
+  - Henchmen
+  - 0 – 5 Snotlings
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '2'
+    - '2'
+    - '2'
+    - '2'
+    - '1'
+    - '3'
+    - '1'
+    - '4'
+- section: 0 – 1 Great Squig
+  section_path:
+  - Henchmen
+  - 0 – 1 Great Squig
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - 3D6
+    - '4'
+    - '0'
+    - '5'
+    - '5'
+    - '3'
+    - '4'
+    - '3'
+    - '5'
+- section: 0 – 1 Troll
+  section_path:
+  - Henchmen
+  - 0 – 1 Troll
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '6'
+    - '3'
+    - '1'
+    - '5'
+    - '4'
+    - '3'
+    - '1'
+    - '3'
+    - '4'
+section_text:
+- section: Special Rules
+  section_path:
+  - Special Rules
+  text: 'Animosity: Night Goblins spend much of their lives
+
+    squabbling and fighting among themselves. At the
+
+    start of the Night Goblin player’s turn, roll a D6 for
+
+    each Night Goblin Warrior Henchman. A roll of 1
+
+    means that the warrior has taken offense to
+
+    something one of their mates has done or said. Do
+
+    not roll for models that are engaged in hand-to-hand
+
+    combat (they’re already scrappin’!). To find out just
+
+    how offended the model is, roll another D6 and
+
+    consult the following chart to see what happens:
+
+    Hate Stunties: Night Goblins are subject to hatred towards Dwarfs. This only affects
+    Night Goblins, not any other models in the warband. Fanatics are so out of their
+    skull that they are not affected.
+
+    Fear Elves: Night Goblins are terrified of the Elven race. This only affects Night
+    Goblins, not any other models in the warband. Fanatics are so out of their skull
+    that they are not affected.
+
+    Distasteful Company: Many Hired Swords refuse to work for Night Goblins, they
+    know that the backstabbing ''lil gits are likely to turn on them. Night Goblins
+    may only hire Pit Fighters, Ogre Bodyguards, Warlocks, Witches, plus any Hired
+    Sword that specifically states they work with Orcs or Goblins.
+
+    Mad Cap Masters: Night Goblins consume so much dangerous fungi they can ignore
+    some of the permanent side effects of Mad Cap Mushrooms, provided they have a
+    constant supply. Night Goblins affected by Mad Cap overuse may ignore the resulting
+    stupidity , but only while under the effect of more Mad Caps. Once the model loses
+    frenzy , due to being knocked down or stunned, it will be effected by Stupidity
+    as normal.'
+- section: Choice of Warriors
+  section_path:
+  - Choice of Warriors
+  text: 'A Night Goblin warband must include a minimum of three models. You have 500
+    gold crowns with which you can use to recruit and equip your warband. The maximum
+    number of warriors may never exceed 20.
+
+    Boss: Each Night Goblin warband must have one Boss, no more, no less! Squig Herder:
+    Your warband may include up to 1 Squig Herder. Goonz: Your warband may include
+    up to 3 Goonz. Shaman: Your warband may include up to 1 Shaman. Night Goblin Warriors:
+    Your warband may include any number of Night Goblin Warriors. Fanatics: Your warband
+    may include up to 3 Fanatics. Cave Squigs: Your warband may include up to 5 Cave
+    Squigs. Snotlings: Your warband may include up to 5 Snotlings which all count
+    as 1 warrior in the warband. Great Squig/Troll: Your warband may include up to
+    one Great Squig or Troll, but not both.'
+- section: Starting Experience
+  section_path:
+  - Starting Experience
+  text: A Boss starts with 17 experience. A Squig Herder starts with 6 experience.
+    Goonz start with 4 experience. A Shaman starts with 6 experience. Henchmen start
+    with 0 experience. Cave Squigs , Snotlings , Trolls and Great Squigs do not gain
+    experience.
+- section: Maximum characteristics
+  section_path:
+  - Maximum characteristics
+  text: Night Goblin characteristics may not be advanced further than the maximum
+    profile limits shown below. If a characteristic is at its maximum, take the other
+    option or roll again if you can only increase one characteristic. If both are
+    already at their maximum, you may increase any other by +1 instead.
+- section: Night Goblin Skill Table
+  section_path:
+  - Night Goblin Skill Table
+  text: '* Promoted Henchmen may never choose Strength as one of their skill sets'
+- section: Fungus Farmer
+  section_path:
+  - Night Goblin Special Skills
+  - Fungus Farmer
+  text: 'The industrious little git has a mushroom crop back at
+
+    the cave. If the Hero doesn’t search for rare items, it
+
+    may pick D3-1 Mad Cap Mushrooms instead. There is
+
+    a chance of getting none, as there is no guarantee they
+
+    will be ready for harvest. Each Mad Cap Mushroom
+
+    must be used in the next battle, and they cannot be
+
+    sold or traded to other warbands These are a special
+
+    high yield/low shelf life crop.'
+- section: Hide in Shadows
+  section_path:
+  - Night Goblin Special Skills
+  - Hide in Shadows
+  text: 'The sneaky Goblin has become an expert at
+
+    concealing themselves from enemies (and potential
+
+    victims!). An enemy warrior attempting to detect this
+
+    warrior when it is Hidden must halve their Initiative
+
+    (round up) before measuring the distance.'
+- section: Infiltrate
+  section_path:
+  - Night Goblin Special Skills
+  - Infiltrate
+  text: 'A Night Goblin with this skill is always placed on the
+
+    battlefield after the opposing warband and can be
+
+    placed anywhere on the table as long as it is out of
+
+    sight of the opposing warband, and more than 12"
+
+    away from any enemy model. If both players have
+
+    models which infiltrate, roll a D6 for each, and the
+
+    lowest roll sets up first.'
+- section: Netter
+  section_path:
+  - Night Goblin Special Skills
+  - Netter
+  text: 'The Goblin applies techniques learned hunting wild
+
+    Cave Squigs in the depths of the mountains to disable
+
+    charging enemies. Instead of their normal use, the
+
+    Goblin may throw a Net they are equipped with at an
+
+    enemy who is charging them. This will reduce the
+
+    charge range of the attacker by D6 inches as the
+
+    charger either slows down to avoid the net, or gets
+
+    tangled up in it. If this means that the attacker cannot
+
+    reach the Goblin then it is a failed charge. Regardless
+
+    of the outcome the Net is lost when this skill is used.'
+- section: Ride Squig
+  section_path:
+  - Night Goblin Special Skills
+  - Ride Squig
+  text: 'This Goblin can ride one of the warband''s Cave
+
+    Squigs, or even a Great Squig! The pair deploy as a
+
+    single model. Standard mount rules are not used,
+
+    although the rider counts as being mounted for the
+
+    Cavelry Bonus rule (see spears and lances). While the
+
+    Squig is being ridden, it and the rider move as a single
+
+    model using the Squig''s movement rules, but attack
+
+    separately in Close Combat. In this skill''s text, the use
+
+    of “Squig” refers to both Cave Squigs and Great
+
+    Squigs.
+
+    Any shooting or close combat attacks will hit the rider
+
+    on a D6 roll of 1-2, and the Squig on a 3-6.
+
+    If the Squig is stunned or taken out of action, the
+
+    rider takes a Strength 2 hit with no Armour save as
+
+    they crash to the ground. If the Rider is stunned or
+
+    taken out of action, the Squig reverts to normal Squig
+
+    behavior. In either case the rider is now dismounted
+
+    for the rest of the battle.
+
+    Squigs don''t like being ridden. If the movement roll
+
+    results in a double or triple, the rider must roll a D6
+
+    before the Squig moves. If the result is over the rider''s
+
+    Strength, they are thrown off before the Squig moves
+
+    away, and take a Strength 2 hit with no Armour save as
+
+    they crash to the ground. The rider is now
+
+    dismounted for the rest of the battle. If the roll is
+
+    equal to or below their Strength, the rider keeps their
+
+    grip and remains atop the Squig.'
+- section: Sneaky Git
+  section_path:
+  - Night Goblin Special Skills
+  - Sneaky Git
+  text: 'The Goblin specializes in attacking their targets from
+
+    the shadows. They may charge an opponent from
+
+    hiding, even if they cannot see the target. There is no
+
+    need for an initiative test, and the target may be over
+
+    the normal 4” limit for charging unseen targets. If the
+
+    charge is successful, the Goblin surprises their
+
+    opponent who will attack at half Weapon Skill and
+
+    half Initiative, rounded up. This penalty lasts for the
+
+    first round of combat only, as the opponent will
+
+    swiftly recover their wits if the initial assault is
+
+    survived.'
+- section: Night Goblin equipment lists
+  section_path:
+  - Night Goblin equipment lists
+  text: The following lists are used by Night Goblin warbands to pick their equipment.
+- section: Special Equipment
+  section_path:
+  - Special Equipment
+  text: 'This warband has access to the following special equipment when purchasing
+    items from the Trading Post , outside their starting list:'
+- section: 1 Boss
+  section_path:
+  - Heroes
+  - 1 Boss
+  text: '45 gold crowns to hire
+
+    Like all greenskins, Night Goblin society is ruled by the biggest and meanest
+    of the tribe. To climb to the position of Boss a Night Goblin must be sneaky and
+    backstabbing as well.
+
+    Weapons/Armour: A Boss may be equipped with
+
+    equipment chosen from the Hero equipment list.'
+- section: SPECIAL RULES
+  section_path:
+  - Heroes
+  - 1 Boss
+  - SPECIAL RULES
+  text: 'Leader: Any warrior within 6" of the Boss may use their
+
+    Leadership value when taking Leadership tests.
+
+    Da Biggest Boss: The Boss is so big, compared to other
+
+    Night Goblins that is, that they may choose Strength skills.
+
+    If the Boss dies, the promoted leader will gain this rule. No
+
+    other member of the warband except the current leader
+
+    may ever use Strength skills.'
+- section: 0 – 1 Squig Herder
+  section_path:
+  - Heroes
+  - 0 – 1 Squig Herder
+  text: '35 Gold Crowns to hire
+
+    Night Goblins are known for their ability to catch and train wild Cave Squigs.
+    Those who devote their lives to such pursuits often bear the scars of their profession.
+    These Squig Herders often train the most intelligent and vicious Squig of the
+    pack to be their personal bodyguard.
+
+    Weapons/Armour: Squig Herders may be equipped with
+
+    equipment chosen from the Hero equipment list.'
+- section: SPECIAL RULES
+  section_path:
+  - Heroes
+  - 0 – 1 Squig Herder
+  - SPECIAL RULES
+  text: 'Handle Animal - Squig: Any Cave Squig within 6” (12” with a Squig Prodder)
+    of the herder can use their Leadership value when taking Leadership tests.
+
+    Master Herder: During the recovery phase, any out of control Cave Squigs or Great
+    Squigs in the herder''s control
+
+    range (6”, or 12” with a Squig Prodder) will stop running
+
+    amok, and may be controlled normally, if the Herder can
+
+    pass a Leadership test.'
+- section: SQUIG HERDER SKILLS
+  section_path:
+  - Heroes
+  - 0 – 1 Squig Herder
+  - SQUIG HERDER SKILLS
+  text: 'Squig Herders may choose from the following list when they gain a skill,
+    as well as any of the standard Skills available to them.
+
+    Gassy Squigs: The Squig Herder is feeding the warband''s
+
+    Squigs a blend of rotten fungus, flint, and sharp pebbles for
+
+    shrapnel. When any untrained Cave Squig goes out of action, instead of rolling
+    a D6 recovery roll after the battle,
+
+    roll immediately. On a 1-2 it explodes, hitting all models in
+
+    D6” with a strength 3 hit. That Squig is now DEAD!
+
+    Threaten: During the Movement Phase, all Cave Squigs
+
+    and Great Squigs in 6” (12” with a Squig Prodder) of the
+
+    Squig Herder may re-roll their movement dice.
+
+    Trainin'': The Squig Herder may train one particularly
+
+    intelligent and vicious Squig to be their personal guard. The
+
+    next single Cave Squig purchased will gain experience like
+
+    normal, rolling on the Henchmen Advance Table while rerolling “Lad''s Got Talent”.
+    If the Squig Herder dies the
+
+    Trained Squig is removed from the warband. If the Trained
+
+    Squig dies a new one can be purchased. There will only ever
+
+    be one Trained Cave Squig in a warband, and it still counts
+
+    towards the maximum number of Cave Squigs.
+
+    Because of the special attention (kicks, prods) the herder
+
+    gives the Trained Squig, it will only ever die on a roll of a 1
+
+    after going out of action. In return for this lavished
+
+    attention, the Trained Squig will defend its fallen master
+
+    fiercely. If the Squig Herder is taken out of action, and the
+
+    Trained Squig has not gone wild, it will guard the Herder;
+
+    remove the Trained Squig from the table but treat all “Sold
+
+    to the Pits”, “Captured”, and “Robbed” results on the
+
+    Serious Injuries Chart for the Squig Herder as a “Full
+
+    Recovery.”'
+- section: 0 – 3 Goonz
+  section_path:
+  - Heroes
+  - 0 – 3 Goonz
+  text: '20 Gold Crowns to hire
+
+    Night Goblin Goonz are just a tad more intelligent than their peers, and aid the
+    Boss in directing them in battle. What they lack in experience they make up for
+    in ambition and ferocity.
+
+    Weapons/Armour: Bosses may be equipped with
+
+    equipment chosen from the Hero equipment list.'
+- section: 0 – 1 Shaman
+  section_path:
+  - Heroes
+  - 0 – 1 Shaman
+  text: '25 Gold Crowns to hire
+
+    Shamans use the power of the Waaagh to direct the might of G’rrk and M’rrk against
+    their foes. Usually found scrounging up mysterious animal parts instead of wyrdstone,
+    most other Goblins agree that ‘dey is odd’. Shamans are responsible for brewing
+    the fungus brew Night Goblins are known for.
+
+    Weapons/Armour: A Shaman may be equipped with equipment chosen from the Hero equipment
+    list.'
+- section: SPECIAL RULES
+  section_path:
+  - Heroes
+  - 0 – 1 Shaman
+  - SPECIAL RULES
+  text: 'Wizard: A Shaman begins with one spell randomly chosen from the Goblin Magic
+    spell list .
+
+    Fungus Brew: Before a battle, the Shaman may brew a special batch of Fungus Brew
+    using 1 to 3 Mad Cap
+
+    Mushrooms, and various other fungi they have collected.
+
+    The brew must be consumed immediately, and affects a
+
+    single Night Goblin Warrior henchmen group until the end
+
+    of the battle. Roll on the Fungus Brew Table once for each
+
+    Mad Cap Mushroom used in the brewing process. If any of
+
+    the dice come up with the same result, the batch is ruined
+
+    and provides no effect other than a nasty headache!'
+- section: Night Goblin Warriors
+  section_path:
+  - Henchmen
+  - Night Goblin Warriors
+  text: '15 Gold Crowns to hire
+
+    Night Goblins make their homes in vast subterranean lairs. It is in these cavernous
+    locales that they can grow all manner of noxious fungi, which they use to brew
+    potent and intoxicating beverages.
+
+    Weapons/Armour: Night Goblins may be equipped
+
+    with weapons chosen from the Henchmen equipment
+
+    list.'
+- section: SPECIAL RULES
+  section_path:
+  - Henchmen
+  - Night Goblin Warriors
+  - SPECIAL RULES
+  text: 'Animosity: Night Goblins are subject to the rules for Animosity.'
+- section: 0 – 3 Night Goblin Fanatics
+  section_path:
+  - Henchmen
+  - 0 – 3 Night Goblin Fanatics
+  text: '20 Gold Crowns to hire
+
+    Some Night Goblins are deliberately fed large quantities of Mad Cap Mushrooms
+    to turn them into crazed killing machines. Often seen on open battlefields wielding
+    a huge ball and chain, they sometimes adopt slightly safer weapons in the narrow
+    streets of Mordheim.
+
+    Weapons/Armour: Fanatics may be equipped with
+
+    weapons chosen from the Fanatic equipment list.'
+- section: SPECIAL RULES
+  section_path:
+  - Henchmen
+  - 0 – 3 Night Goblin Fanatics
+  - SPECIAL RULES
+  text: 'Addict: Fanatics are dependent on a regular supply of Mad Cap Mushrooms which
+    must be bought each game. If a fanatic can''t get any before a battle they will
+    stay in their cave foaming at the mouth and not take part. If available they will
+    eat their mushrooms
+
+    before the battle.
+
+    Loony: Fanatics are so far gone from reality that they are not subject to the
+    rules for Animosity. Fanatics must re-roll results of “Lad''s Got Talent.”'
+- section: 0 – 5 Cave Squigs
+  section_path:
+  - Henchmen
+  - 0 – 5 Cave Squigs
+  text: '15 gold crowns to hire
+
+    Night Goblins raise the deadly Cave Squigs. These creatures are a curious blend
+    of animal and fungus, and are composed mostly of teeth, horns, and a nasty temperament.
+
+    Weapons/Armour: Big gob and brutality! Cave
+
+    Squigs never use or need weapons or armour.'
+- section: SPECIAL RULES
+  section_path:
+  - Henchmen
+  - 0 – 5 Cave Squigs
+  - SPECIAL RULES
+  text: 'Movement: Cave Squigs do not have a set Movement characteristic but move
+    with an ungainly
+
+    bouncing stride. When moving Squigs, declare a
+
+    direction of movement and roll 2D6 for the distance
+
+    they move. Squigs never run and never declare
+
+    charges. Instead, they are allowed to contact enemy
+
+    models with their normal 2D6" movement, stopping
+
+    short if they do. If this happens, they count as
+
+    charging for the following round of hand-to-hand
+
+    combat, just as if they had declared a charge.
+
+    Minderz: Each Cave Squig must always remain
+
+    within 6" of a Goblin, who keeps the creature in line.
+
+    If a Cave Squig finds itself without a Goblin within 6"
+
+    at the start of its Movement phase, it will go wild.
+
+    From that point on, move the Squig 2D6" in a random
+
+    direction during each of its Movement phases. If its
+
+    movement takes it into contact with another model
+
+    (friend or foe), it will engage the model in hand-tohand combat as normal. The
+    Cave Squig is out of the
+
+    Night Goblin player’s control until the end of the
+
+    game.
+
+    Just Squigs: Night Goblins don''t care much whether
+
+    Squigs die because there will always be more
+
+    mysteriously popping up where ever the Goblins go.
+
+    Squigs only count as a half a model for Rout test
+
+    purposes.
+
+    Animals: Cave Squigs are animals of a sort and so
+
+    do not gain experience, or climb ladders. They can
+
+    move to higher levels or over obstacles using the
+
+    normal climb rules, just imagine it as a particularly
+
+    high bounce.'
+- section: 0 – 5 Snotlings
+  section_path:
+  - Henchmen
+  - 0 – 5 Snotlings
+  text: '10 gold crowns to hire
+
+    Any Night Goblin warband will attract a number of Snotlings. They perform the
+    same function for Goblins as Goblins serve for Orcs, they provide someone smaller
+    to slap around.
+
+    Weapons/Armour: Snotlings may only ever use a
+
+    pointy stick or similar mundane object, which they
+
+    will find for themselves at no cost. This counts as a
+
+    dagger.'
+- section: SPECIAL RULES
+  section_path:
+  - Henchmen
+  - 0 – 5 Snotlings
+  - SPECIAL RULES
+  text: 'Mob: All Snotlings in a warband count as one model
+
+    for warband size.
+
+    Weedy: Snotlings are not the most robust of
+
+    creatures. If wounded they will be knocked down on a
+
+    1, stunned on a 2-3 and go out of action on a 4-6.
+
+    Dodgy: The little creatures are constantly ducking
+
+    and diving in the most infuriating way. All hits from
+
+    shooting or hand-to-hand suffer -1 to hit against
+
+    Snotlings.
+
+    Insignificant: Nobody cares about the Snotlings. All
+
+    Snotlings in the warband count as 1 model for rout
+
+    tests purposes and warband maintenance costs. Each
+
+    Snotling is worth half an experience point, rounded
+
+    down at the end of the battle. Snotlings may be
+
+    ignored for shooting priority purposes. Snotlings
+
+    never gain experience, they usually don''t last long
+
+    enough, and if they do they''re too stupid to learn
+
+    anything of value!'
+- section: 0 – 1 Great Squig
+  section_path:
+  - Henchmen
+  - 0 – 1 Great Squig
+  text: '210 gold crowns to hire
+
+    Night Goblins are expert Cave Squigs hunters and breeders, and occasionally a
+    Squig, fed the right mixture of wyrdstone and Snotlings, grows to such titanic
+    proportions that it can give a troll a run for its money in a fight!
+
+    Weapons/Armour: Massive snapping jaws! Great
+
+    Squigs never use or need weapons or armour.'
+- section: SPECIAL RULES
+  section_path:
+  - Henchmen
+  - 0 – 1 Great Squig
+  - SPECIAL RULES
+  text: 'Movement: A Great Squig will move just like Cave
+
+    Squigs, except it rolls 3D6 for the distance.
+
+    Wild: A Great Squig will need a Goblin to keep it in
+
+    line, just like a Cave Squig. In addition, due to the
+
+    ferocity of these beasts, if the scatter die results in a
+
+    “hit” for a wild Great Squig it moves towards the
+
+    closest model (friend or foe) it can see. If this
+
+    movement takes it into contact with another model it
+
+    will engage it in close combat and count as charging,
+
+    even with a member of the Night Goblin warband.
+
+    Cause Fear: Great Squigs are massive balls of flesh
+
+    and teeth, they cause fear.
+
+    Large Target: Great Squigs are large targets as
+
+    defined in the shooting rules.
+
+    Animal: Great Squigs are animals of a sort and so do
+
+    not gain experience, or climb ladders. They can move
+
+    up to higher levels or over obstacles using the normal
+
+    climb rules, just imagine it as a particularly high
+
+    bounce.'
+- section: 0 – 1 Troll
+  section_path:
+  - Henchmen
+  - 0 – 1 Troll
+  text: '200 gold crowns to hire
+
+    Trolls are not intelligent enough to recognize the value of
+
+    gold, but large amounts of food can often instill a certain
+
+    loyalty in them.
+
+    Weapons/Armour: Trolls do not require weapons to fight but
+
+    often carry a big club. In any event, Trolls can never be given
+
+    weapons or armour.'
+- section: SPECIAL RULES
+  section_path:
+  - Henchmen
+  - 0 – 1 Troll
+  - SPECIAL RULES
+  text: 'Fear: Trolls are frightening monsters which cause fear .
+
+    Stupidity: A Troll is subject to the rules for stupidity .
+
+    Regeneration: Trolls have a unique physiology that allow
+
+    them to regenerate wounds. Whenever an enemy successfully
+
+    inflicts a wound on a Troll roll a D6, on a result of 4 or more
+
+    the wound is ignored and the Troll is unhurt. Trolls may not
+
+    regenerate wounds caused by fire or fire-based magic. Trolls
+
+    never roll for Injury after a battle.
+
+    Dumb Monster: A Troll is far too stupid to ever learn any
+
+    new skills. Trolls do not gain experience.
+
+    Always Hungry: A Troll requires an upkeep cost. This
+
+    upkeep represents the copious amounts of food that must be
+
+    fed to the Troll in order to keep him loyal to the warband.
+
+    The warband must pay 15 gold crowns after every game in
+
+    order to keep the Troll. If the warband lacks the gold to pay
+
+    the upkeep, the Boss has the option of sacrificing two Goblin
+
+    Warriors or Cave Squigs to the Troll in lieu of buying food
+
+    (Trolls eat nearly anything). If this fee is not paid (either in
+
+    gold or in warband members) the Troll gets hungry and
+
+    wanders off in search of food.
+
+    Vomit Attack: Instead of his normal attacks, a Troll can
+
+    regurgitate its highly corrosive digestive juices on an
+
+    unfortunate hand-to-hand combat opponent. This is a single
+
+    attack that automatically hits with a Strength of 5 and ignores
+
+    armour saves.
+
+    Large Target: Trolls are Large Targets as defined in the shooting rules.'

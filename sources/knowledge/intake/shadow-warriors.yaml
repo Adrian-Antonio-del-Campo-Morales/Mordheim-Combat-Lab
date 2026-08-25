@@ -1,0 +1,565 @@
+id: shadow-warriors
+name: Shadow Warriors
+grade: 1b
+source_url: https://mordheimer.net/docs/warbands/grade-1b-warbands/shadow-warriors
+headings:
+- Special Rules ​
+- Choice of warriors ​
+- Starting experience ​
+- Shadow Warrior Skill Table ​
+- Shadow Warrior Special Skills ​
+- Infiltration ​
+- See in Shadows ​
+- Hide in Shadows ​
+- Sniper ​
+- Powerful Build ​
+- Master of Runes ​
+- Shadow Warrior equipment lists ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Miscellaneous Equipment ​
+- Special Equipment ​
+- Elven Runestones ​
+- Elven Wine ​
+- Standard of Nagarythe ​
+- War Horn of Nagarythe ​
+- Familiar ​
+- heroes ​
+- 1 Shadow Master ​
+- SPECIAL RULES ​
+- "0 – 3 Shadow Walker \0​"
+- 0 – 1 Shadow Weaver ​
+- SPECIAL RULES ​
+- henchmen ​
+- Shadow Warrior ​
+- Shadow Warrior Novices ​
+tables:
+- section: Shadow Warrior Skill Table
+  section_path:
+  - Shadow Warrior Skill Table
+  rows:
+  - - ''
+    - Combat
+    - Shooting
+    - Academic
+    - Strength
+    - Speed
+    - Special
+  - - Shadow Master
+    - ✓
+    - ✓
+    - ✓
+    - ''
+    - ✓
+    - ✓
+  - - Shadow Walker
+    - ✓
+    - ✓
+    - ''
+    - ''
+    - ✓
+    - ✓
+  - - Shadow Weaver
+    - ✓
+    - ''
+    - ✓
+    - ''
+    - ✓
+    - ✓
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Shadow Warrior equipment lists
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Sword
+    - 10 gc
+  - - Spear
+    - 10 gc
+  - - Double-handed weapon
+    - 15 gc
+  - - Ithilmar weapon *
+    - 2 x price
+- section: Missile Weapons
+  section_path:
+  - Shadow Warrior equipment lists
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Bow
+    - 10 gc
+  - - Long bow
+    - 15 gc
+  - - Elf Bow
+    - 35 gc
+- section: Armour
+  section_path:
+  - Shadow Warrior equipment lists
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Light armour
+    - 20 gc
+  - - Shield
+    - 5 gc
+  - - Helmet
+    - 10 gc
+  - - Ithilmar armour *
+    - 60 gc
+- section: Miscellaneous Equipment
+  section_path:
+  - Shadow Warrior equipment lists
+  - Miscellaneous Equipment
+  rows:
+  - - Item
+    - Cost
+  - - Standard of Nagarythe *
+    - 75 gc
+  - - War Horn of Nagarythe *
+    - 25 gc
+  - - Elven Cloak
+    - 75 gc
+  - - Elven Wine *
+    - 50 gc
+  - - Elven Runestones *
+    - 50 gc
+- section: 1 Shadow Master
+  section_path:
+  - heroes
+  - 1 Shadow Master
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '5'
+    - '5'
+    - '5'
+    - '3'
+    - '3'
+    - '1'
+    - '6'
+    - '1'
+    - '9'
+- section: "0 – 3 Shadow Walker \0"
+  section_path:
+  - heroes
+  - "0 – 3 Shadow Walker \0"
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '5'
+    - '5'
+    - '4'
+    - '3'
+    - '3'
+    - '1'
+    - '6'
+    - '1'
+    - '8'
+- section: 0 – 1 Shadow Weaver
+  section_path:
+  - heroes
+  - 0 – 1 Shadow Weaver
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '5'
+    - '4'
+    - '4'
+    - '3'
+    - '3'
+    - '1'
+    - '6'
+    - '1'
+    - '8'
+- section: Shadow Warrior
+  section_path:
+  - henchmen
+  - Shadow Warrior
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '5'
+    - '4'
+    - '4'
+    - '3'
+    - '3'
+    - '1'
+    - '6'
+    - '1'
+    - '8'
+- section: Shadow Warrior Novices
+  section_path:
+  - henchmen
+  - Shadow Warrior Novices
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '5'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '5'
+    - '1'
+    - '7'
+section_text:
+- section: Special Rules
+  section_path:
+  - Special Rules
+  text: 'Hate Dark Elves: All warriors in a Shadow
+
+    Warrior Warband (excluding any Hired
+
+    Swords) have an unyielding hatred for Dark
+
+    Elves.
+
+    Excellent Sight: Elves have eyesight
+
+    unmatched by mere humans. All the Elves in a
+
+    Shadow Warrior Warband can spot Hidden
+
+    enemies from twice as far away as other
+
+    warriors (i.e. twice their Initiative in inches).
+
+    Distaste for Poison: The use of poisons and
+
+    various drugs is a Dark Elf specialty. As such, it
+
+    is frowned upon by Shadow Warriors, even
+
+    more so than by other High Elves. Warriors in
+
+    a Shadow Warrior Warband may not use
+
+    poisons of any type.
+
+    Unforgiving: In addition to their hatred of
+
+    their corrupt kin, the folk of Nagarythe have a
+
+    long history of struggle against the forces of
+
+    Chaos. In multiplayer games, a Shadow
+
+    Warrior warband may never forge an alliance
+
+    with any Warband of a Chaotic nature
+
+    (Possessed, Skaven, Beastmen, Dark Elves,
+
+    etc.).
+
+    Tolerant: Due to their outsider status with
+
+    their own people, the Elves of Nagarythe have
+
+    learned to stifle their distaste for ‘lesser races’,
+
+    and have even been known to work alongside
+
+    them from time to time. A Shadow Warrior
+
+    Warband may hire any Hired Sword that is not
+
+    of a Chaotic or evil bent (so no Skaven,
+
+    Possessed, Beastmen, Dark Elves, Undead,
+
+    etc.). They also shun the company of anyone
+
+    specialising in the use of poison (so no
+
+    Assassins).'
+- section: Shadow Warrior Special Skills
+  section_path:
+  - Shadow Warrior Special Skills
+  text: 'Shadow Warrior Heroes may use the following Skill table instead of any of
+    the standard Skill
+
+    tables available to them.'
+- section: Infiltration
+  section_path:
+  - Shadow Warrior Special Skills
+  - Infiltration
+  text: An Elf with this skill is always placed on the battlefield after the opposing
+    warband and can be placed anywhere on the table as long as it is out of sight
+    of the opposing warband and more than 12" away from any enemy model. If both players
+    have models which infiltrate, roll a D6 for each, and the lowest roll sets up
+    first.
+- section: See in Shadows
+  section_path:
+  - Shadow Warrior Special Skills
+  - See in Shadows
+  text: 'The warrior’s senses have become especially
+
+    keen from years spent walking the shadows.
+
+    As long as he has movement to reach them,
+
+    the warrior may always roll to charge
+
+    opponents he cannot see (instead of the
+
+    normal 4").'
+- section: Hide in Shadows
+  section_path:
+  - Shadow Warrior Special Skills
+  - Hide in Shadows
+  text: 'Over time Shadow Warriors have learned how
+
+    to freeze in place and remain undetected,
+
+    even from the heightened senses of their Dark
+
+    Elf cousins. An enemy warrior attempting to
+
+    detect this warrior when he is Hidden must
+
+    halve his Initiative before measuring the
+
+    distance.'
+- section: Sniper
+  section_path:
+  - Shadow Warrior Special Skills
+  - Sniper
+  text: Long years of guerrilla warfare against the Dark Elves have taught Shadow
+    Warriors how to strike from the shadows without being seen. If Hidden, a warrior
+    with this skill may shoot or cast spells and still remain Hidden. If his target
+    is not immediately taken out of action by the Sniper they get to test against
+    their Initiative in an attempt to spot him. A successful test means that the Sniper
+    has been spotted and is no longer hidden.
+- section: Powerful Build
+  section_path:
+  - Shadow Warrior Special Skills
+  - Powerful Build
+  text: 'The warrior is strongly built for an Elf, and is
+
+    capable of feats of strength not often seen
+
+    among the people of Ulthuan. A warrior with
+
+    this skill may choose skills from the Strength
+
+    skills table from now on. This skill may not be
+
+    taken by Shadow Weavers. There may never
+
+    be more than two Elves with this skill in the
+
+    warband at any one time.'
+- section: Master of Runes
+  section_path:
+  - Shadow Warrior Special Skills
+  - Master of Runes
+  text: 'The Shadow Weaver has learned to harness
+
+    the power of the High Elven runes of power
+
+    (see Elven Runestones, below) to a degree
+
+    few mages attain. When using Elven
+
+    Runestones, the mage is +1 to his dispel roll.
+
+    In addition, the mage can inscribe the
+
+    weapons and armour of one of his fellow
+
+    warriors with Elven runes. One member of the
+
+    Warband may reroll a single failed armour
+
+    save or Parry roll once per battle. After a
+
+    single battle, the runes lose their glamour and
+
+    must be redone. This skill may only be taken
+
+    by Shadow Weavers.'
+- section: Shadow Warrior equipment lists
+  section_path:
+  - Shadow Warrior equipment lists
+  text: 'The following lists are used by Shadow Warrior warbands to pick their weapons:
+
+    * Heroes only. These special prices represent the lower rarity of these items
+    in Ulthuan; when attempting to purchase these items in Mordheim (or Lustria),
+    Shadow Warriors pay the same prices as other Warbands, and must roll to find them
+    as normal. No roll is necessary to find these items when first starting a Shadow
+    Warrior Warband.'
+- section: Special Equipment
+  section_path:
+  - Special Equipment
+  text: 'Shadow Warriors have access to the following special equipment when purchasing
+    items from the Trading Post , outside their starting list:'
+- section: 1 Shadow Master
+  section_path:
+  - heroes
+  - 1 Shadow Master
+  text: '70 gold crowns to hire
+
+    Shadow Master is a very honourable title among the warriors of the Shadow Elves…
+    it is given to one who has fought in the shadow war for so long that he rules
+    the darkness that he fights from. Often a member of the former Nagarythe nobility,
+    the captain of a Shadow Warrior Warband is known by the honourable title ‘Shadow
+    Master’. These proud and strong-willed warriors often gather a small band of their
+    followers and seek a life away from the hesitant charity and distasteful stares
+    of Ulthuan.
+
+    Weapons/Armour: Shadow Master may
+
+    be equipped with weapons and armour
+
+    chosen from the Shadow Warrior Equipment
+
+    list.'
+- section: SPECIAL RULES
+  section_path:
+  - heroes
+  - 1 Shadow Master
+  - SPECIAL RULES
+  text: 'Leader: Any warrior within 6" of the Shadow
+
+    Master may use his Leadership characteristic
+
+    when taking any Leadership tests.'
+- section: "0 – 3 Shadow Walker \0"
+  section_path:
+  - heroes
+  - "0 – 3 Shadow Walker \0"
+  text: '45 gold crowns to hire
+
+    One step down from the title of Shadow Master is Shadow Walker. A walker in the
+    shadows is considered to have made friends with the darkness, and while he does
+    not command it, it gives him aid when asked. Shadow Walkers are seasoned veterans
+    in the war against the Dark Elves. They are skilled trackers and hunters, and
+    the most trusted lieutenants of the Warband’s captain, the Shadow Master.
+
+    Weapons/Armour: Shadow Walkers may
+
+    be equipped with weapons and armour
+
+    chosen from the Shadow Warrior Equipment
+
+    list.'
+- section: 0 – 1 Shadow Weaver
+  section_path:
+  - heroes
+  - 0 – 1 Shadow Weaver
+  text: '55 gold crowns to hire
+
+    All High Elves have some aptitude for magic, and those with the greatest aptitude
+    are taught how to bend the Winds of Magic to their will. Shadow Weavers are the
+    mages of Nagarythe. Due to the nature of their unending war against the Dark Elves,
+    the mages of Nagarythe tend to specialise in magics that use shadows to conceal
+    their presence and confound their enemies. In fact the title Shadow Weaver comes
+    from the nature of their magic… like a talented tailor, the Shadow Weaver takes
+    the threads of shadow and fashions them into shapes and forms of his choosing.
+
+    Weapons/Armour: Shadow Weavers may
+
+    be equipped with weapons and armour
+
+    chosen from the Shadow Warrior Equipment
+
+    list, but they may not cast spells if wearing
+
+    armour.'
+- section: SPECIAL RULES
+  section_path:
+  - heroes
+  - 0 – 1 Shadow Weaver
+  - SPECIAL RULES
+  text: 'Wizard: The Shadow Weaver is a wizard and may use the Shadow Magic .'
+- section: henchmen
+  section_path:
+  - henchmen
+  text: (Bought in groups of 1-5)
+- section: Shadow Warrior
+  section_path:
+  - henchmen
+  - Shadow Warrior
+  text: '35 gold crowns to hire
+
+    Most of the warriors in the Shadow Warrior Warband are veterans of at least one
+    battle, and all have lost loved ones to the depravity of the Dark Elves.
+
+    Weapons/Armour: Shadow Warriors may
+
+    be equipped with weapons and armour
+
+    chosen from the Shadow Warrior Equipment
+
+    list.'
+- section: Shadow Warrior Novices
+  section_path:
+  - henchmen
+  - Shadow Warrior Novices
+  text: '25 gold crowns to hire
+
+    These are untested Shadow Elves, newly inducted into the warband. Often these
+    warriors are younger cousins who are setting out from Ulthuan for the first time.
+    Due to their hard existence, it is often a quick progression from Novice to full
+    Warrior, however.
+
+    Weapons/Armour: Shadow Novices may
+
+    be equipped with weapons and armour
+
+    chosen from the Shadow Warrior Equipment
+
+    list.'

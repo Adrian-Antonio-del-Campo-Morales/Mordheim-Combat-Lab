@@ -1,0 +1,784 @@
+schema_version: 1
+id: forest-goblins
+name: Forest Goblins
+name_i18n:
+  en: Forest Goblins
+  es: null
+original_locale: en
+categories:
+- 1b
+collections:
+- mordheimer
+grade: 1b
+setting: The Great Forest
+publication: Nemesis Crown Supplement
+status: source-normalized
+sources:
+- manual: mordheimer.net
+  printed_page: 0
+  section: Forest Goblins
+  url: https://mordheimer.net/docs/warbands/grade-1b-warbands/forest-goblins
+roster:
+  minimum_models: 3
+  maximum_models: 15
+  starting_gold: 500
+  members:
+  - profile_id: chieftain
+    minimum: 1
+    maximum: 1
+  - profile_id: braves
+    minimum: 0
+    maximum: 4
+  - profile_id: shaman
+    minimum: 0
+    maximum: 1
+  - profile_id: forest-goblins
+    minimum: 0
+    maximum: null
+  - profile_id: red-toof-goblins
+    minimum: 0
+    maximum: 5
+  - profile_id: sluggas
+    minimum: 0
+    maximum: 5
+  - profile_id: gigantic-spider
+    minimum: 0
+    maximum: 1
+equipment_lists:
+- id: hero-equipment-list
+  name: Hero Equipment List
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: 1st free/2 gc
+  - item_id: axe
+    cost: 5
+  - item_id: sword
+    cost: 10
+  - item_id: two_handed_weapon
+    cost: 15
+  - item_id: spear
+    cost: 5
+  - item_id: halberd
+    cost: 10
+  - item_id: boss_pole
+    cost: 20
+  - item_id: blowpipe
+    cost: 25
+  - item_id: short_bow
+    cost: 5
+  - item_id: light_armour
+    cost: 20
+  - item_id: shield
+    cost: 5
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Hero Equipment List
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/forest-goblins
+  name_i18n:
+    en: Hero Equipment List
+    es: null
+- id: henchmen-equipment-list
+  name: Henchmen Equipment List
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: 1st free/2 gc
+  - item_id: sword
+    cost: 10
+  - item_id: spear
+    cost: 5
+  - item_id: blowpipe
+    cost: 25
+  - item_id: throwing_weapons
+    cost: 15
+  - item_id: bow
+    cost: 10
+  - item_id: shield
+    cost: 5
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Henchmen Equipment List
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/forest-goblins
+  name_i18n:
+    en: Henchmen Equipment List
+    es: null
+profiles:
+- id: chieftain
+  name: Chieftain
+  type: hero
+  cost: 50
+  experience: 17
+  characteristics:
+    M: 4
+    WS: 3
+    BS: 4
+    S: 3
+    T: 3
+    W: 1
+    I: 4
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - hero-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - shooting
+  - academic
+  - speed
+  rules:
+  - id: leader
+    name: Leader
+    effect: 'Any warrior within 6" of the Chieftain may use his
+
+      Leadership characteristic when taking Leadership tests.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: heroes / 1 Chieftain / Special Rules / Leader
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/forest-goblins
+    name_i18n:
+      en: Leader
+      es: null
+    effect_i18n:
+      en: 'Any warrior within 6" of the Chieftain may use his
+
+        Leadership characteristic when taking Leadership tests.'
+      es: null
+  - id: ride-spiders
+    name: Ride Spiders
+    effect: The Chieftain can ride Giant Spiders and the Gigantic Spider as detailed in the ‘Blazing Saddles’ article .
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: heroes / 1 Chieftain / Special Rules / Ride Spiders
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/forest-goblins
+    name_i18n:
+      en: Ride Spiders
+      es: null
+    effect_i18n:
+      en: The Chieftain can ride Giant Spiders and the Gigantic Spider as detailed in the ‘Blazing Saddles’ article .
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 1 Chieftain
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/forest-goblins
+  source_path:
+  - heroes
+  - 1 Chieftain
+  name_i18n:
+    en: Chieftain
+    es: null
+- id: braves
+  name: Braves
+  type: hero
+  cost: 20
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 2
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 6
+  equipment_lists:
+  - hero-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - shooting
+  - speed
+  - special
+  rules:
+  - id: animosity
+    name: Animosity
+    effect: Braves are subject to the rules for Animosity .
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: heroes / 0 – 4 Braves / Special Rules / Animosity
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/forest-goblins
+    name_i18n:
+      en: Animosity
+      es: null
+    effect_i18n:
+      en: Braves are subject to the rules for Animosity .
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 4 Braves
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/forest-goblins
+  source_path:
+  - heroes
+  - 0 – 4 Braves
+  name_i18n:
+    en: Braves
+    es: null
+- id: shaman
+  name: Shaman
+  type: hero
+  cost: 20
+  experience: 6
+  characteristics:
+    M: 4
+    WS: 2
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 4
+    A: 1
+    Ld: 6
+  equipment_lists:
+  - hero-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - academic
+  - speed
+  rules:
+  - id: wizard
+    name: Wizard
+    effect: A Shaman begins with one spell randomly chosen from the Forest Goblin Spell list .
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: heroes / 0 – 1 Shaman / Special Rules / Wizard
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/forest-goblins
+    name_i18n:
+      en: Wizard
+      es: null
+    effect_i18n:
+      en: A Shaman begins with one spell randomly chosen from the Forest Goblin Spell list .
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 1 Shaman
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/forest-goblins
+  source_path:
+  - heroes
+  - 0 – 1 Shaman
+  name_i18n:
+    en: Shaman
+    es: null
+- id: forest-goblins
+  name: Forest Goblins
+  type: henchman
+  cost: 15
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 2
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 6
+  equipment_lists:
+  - henchmen-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules:
+  - id: animosity
+    name: Animosity
+    effect: Forest Goblins are subject to the rules for Animosity .
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / Forest Goblins / Special Rules / Animosity
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/forest-goblins
+    name_i18n:
+      en: Animosity
+      es: null
+    effect_i18n:
+      en: Forest Goblins are subject to the rules for Animosity .
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Forest Goblins
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/forest-goblins
+  source_path:
+  - henchmen
+  - Forest Goblins
+  name_i18n:
+    en: Forest Goblins
+    es: null
+- id: red-toof-goblins
+  name: Red Toof Goblins
+  type: henchman
+  cost: 25
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 2
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 6
+  equipment_lists:
+  - henchmen-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules:
+  - id: animosity
+    name: Animosity
+    effect: Red Toof Boyz are subject to the rules for Animosity .
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 5 Red Toof Goblins / Special Rules / Animosity
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/forest-goblins
+    name_i18n:
+      en: Animosity
+      es: null
+    effect_i18n:
+      en: Red Toof Boyz are subject to the rules for Animosity .
+      es: null
+  - id: berserkers
+    name: Berserkers
+    effect: Forest Goblins of the Red Toof tribe allow themselves to be bitten by all sorts of poisonous wildlife before entering
+      battle. The mingling venom drives them into frothing convulsions, making them extremely ferocious. Red Toof Boyz are
+      affected by the rules for Frenzy as described in the Mordheim rulebook. In addition, if they begin their turn within
+      charge range of an enemy, they are immune to animosity for that turn.
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 5 Red Toof Goblins / Special Rules / Berserkers
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/forest-goblins
+    name_i18n:
+      en: Berserkers
+      es: null
+    effect_i18n:
+      en: Forest Goblins of the Red Toof tribe allow themselves to be bitten by all sorts of poisonous wildlife before entering
+        battle. The mingling venom drives them into frothing convulsions, making them extremely ferocious. Red Toof Boyz are
+        affected by the rules for Frenzy as described in the Mordheim rulebook. In addition, if they begin their turn within
+        charge range of an enemy, they are immune to animosity for that turn.
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 5 Red Toof Goblins
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/forest-goblins
+  source_path:
+  - henchmen
+  - 0 – 5 Red Toof Goblins
+  name_i18n:
+    en: Red Toof Goblins
+    es: null
+- id: sluggas
+  name: Sluggas
+  type: henchman
+  cost: 20
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 2
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 6
+  equipment_lists:
+  - henchmen-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules:
+  - id: animosity
+    name: Animosity
+    effect: Sluggas are subject to the rules for Animosity .
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 5 Sluggas / Special Rules / Animosity
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/forest-goblins
+    name_i18n:
+      en: Animosity
+      es: null
+    effect_i18n:
+      en: Sluggas are subject to the rules for Animosity .
+      es: null
+  - id: sluggas
+    name: Sluggas
+    effect: In the shooting phase, the Sluggas may throw thrown weapons up to three times. This may not be combined with Quick
+      Shot if they should be promoted to hero status.
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 5 Sluggas / Special Rules / Sluggas
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/forest-goblins
+    name_i18n:
+      en: Sluggas
+      es: null
+    effect_i18n:
+      en: In the shooting phase, the Sluggas may throw thrown weapons up to three times. This may not be combined with Quick
+        Shot if they should be promoted to hero status.
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 5 Sluggas
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/forest-goblins
+  source_path:
+  - henchmen
+  - 0 – 5 Sluggas
+  name_i18n:
+    en: Sluggas
+    es: null
+- id: gigantic-spider
+  name: Gigantic Spider
+  type: henchman
+  cost: 200
+  experience: 0
+  characteristics:
+    M: 6
+    WS: 3
+    BS: 0
+    S: 5
+    T: 5
+    W: 3
+    I: 4
+    A: 2
+    Ld: 4
+  equipment_lists:
+  - hero-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules:
+  - id: fear
+    name: Fear
+    effect: Gigantic Spiders cause fear as described in the Mordheim Rulebook.
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 1 Gigantic Spider / Special Rules / Fear
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/forest-goblins
+    name_i18n:
+      en: Fear
+      es: null
+    effect_i18n:
+      en: Gigantic Spiders cause fear as described in the Mordheim Rulebook.
+      es: null
+  - id: large-monster
+    name: Large Monster
+    effect: Gigantic Spiders are large targets, and may always be shot at.
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 1 Gigantic Spider / Special Rules / Large Monster
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/forest-goblins
+    name_i18n:
+      en: Large Monster
+      es: null
+    effect_i18n:
+      en: Gigantic Spiders are large targets, and may always be shot at.
+      es: null
+  - id: poisonous
+    name: Poisonous
+    effect: 'The Gigantic Spider’s maw drips with vile poisons. When it wounds an enemy and a roll is made on the injury table,
+      1: knocked down, 2-4: stunned, and 5-6: Out of Action.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 1 Gigantic Spider / Special Rules / Poisonous
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/forest-goblins
+    name_i18n:
+      en: Poisonous
+      es: null
+    effect_i18n:
+      en: 'The Gigantic Spider’s maw drips with vile poisons. When it wounds an enemy and a roll is made on the injury table,
+        1: knocked down, 2-4: stunned, and 5-6: Out of Action.'
+      es: null
+  - id: native
+    name: Native
+    effect: Negotiating woodlands is no trouble for spiders. They move through any wooded terrain without penalty.
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 1 Gigantic Spider / Special Rules / Native
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/forest-goblins
+    name_i18n:
+      en: Native
+      es: null
+    effect_i18n:
+      en: Negotiating woodlands is no trouble for spiders. They move through any wooded terrain without penalty.
+      es: null
+  - id: non-sentient
+    name: Non-sentient
+    effect: Spiders are affected by the stupidity rules in the Mordheim rulebook. In addition, they never gain experience,
+      as they are animals. Note however that they may climb as normal.
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 1 Gigantic Spider / Special Rules / Non-sentient
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/forest-goblins
+    name_i18n:
+      en: Non-sentient
+      es: null
+    effect_i18n:
+      en: Spiders are affected by the stupidity rules in the Mordheim rulebook. In addition, they never gain experience, as
+        they are animals. Note however that they may climb as normal.
+      es: null
+  - id: may-ride
+    name: May Ride
+    effect: 'The Forest Goblin Chieftain, may ride the Gigantic Spider. ✏️ He gains +1 armour save, and shall
+
+      move at the Gigantic Spider’s rate of 6. Shooting attacks hit the Chieftain on a die roll of 1-2, and the
+
+      Gigantic Spider on a 3-6. In close combat, the opponent may choose which to hit. The Gigantic Spider no longer has to
+      check for stupidity if it is being ridden, as the Chieftain is directing its actions.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 1 Gigantic Spider / Special Rules / May Ride
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/forest-goblins
+    name_i18n:
+      en: May Ride
+      es: null
+    effect_i18n:
+      en: 'The Forest Goblin Chieftain, may ride the Gigantic Spider. ✏️ He gains +1 armour save, and shall
+
+        move at the Gigantic Spider’s rate of 6. Shooting attacks hit the Chieftain on a die roll of 1-2, and the
+
+        Gigantic Spider on a 3-6. In close combat, the opponent may choose which to hit. The Gigantic Spider no longer has
+        to check for stupidity if it is being ridden, as the Chieftain is directing its actions.'
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 1 Gigantic Spider
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/forest-goblins
+  source_path:
+  - henchmen
+  - 0 – 1 Gigantic Spider
+  name_i18n:
+    en: Gigantic Spider
+    es: null
+band_rules:
+- id: special-rules
+  name: Special Rules
+  effect: 'Natives: Used to poking through the underbrush, Forest Goblins suffer no movement penalties from moving through
+    any wooded terrain.
+
+    Animosity. Orcs and Goblins enjoy nothing more than a good scrap, unfortunately they’re not always very discerning about
+    who they scrap with! To represent this, at the start of the Orc player’s turn, roll a D6 for each Henchman who is either
+    an Orc or a Goblin. A roll of 1 means that the warrior has taken offense to something one of his mates has done or said.
+    Do not roll for models that are engaged in hand-to-hand combat (they’re already scrappin’!). To find out just how offended
+    the model is, roll another D6 and consult the following chart to see what happens:'
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Special Rules
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/forest-goblins
+  name_i18n:
+    en: Special Rules
+    es: null
+  effect_i18n:
+    en: 'Natives: Used to poking through the underbrush, Forest Goblins suffer no movement penalties from moving through any
+      wooded terrain.
+
+      Animosity. Orcs and Goblins enjoy nothing more than a good scrap, unfortunately they’re not always very discerning about
+      who they scrap with! To represent this, at the start of the Orc player’s turn, roll a D6 for each Henchman who is either
+      an Orc or a Goblin. A roll of 1 means that the warrior has taken offense to something one of his mates has done or said.
+      Do not roll for models that are engaged in hand-to-hand combat (they’re already scrappin’!). To find out just how offended
+      the model is, roll another D6 and consult the following chart to see what happens:'
+    es: null
+source_sections:
+- section: Special Rules
+  section_path:
+  - Special Rules
+  text: 'Natives: Used to poking through the underbrush, Forest Goblins suffer no movement penalties from moving through any
+    wooded terrain.
+
+    Animosity. Orcs and Goblins enjoy nothing more than a good scrap, unfortunately they’re not always very discerning about
+    who they scrap with! To represent this, at the start of the Orc player’s turn, roll a D6 for each Henchman who is either
+    an Orc or a Goblin. A roll of 1 means that the warrior has taken offense to something one of his mates has done or said.
+    Do not roll for models that are engaged in hand-to-hand combat (they’re already scrappin’!). To find out just how offended
+    the model is, roll another D6 and consult the following chart to see what happens:'
+- section: Starting experience
+  section_path:
+  - Starting experience
+  text: A Chieftain starts with 17 experience. A Brave starts with 6 experience. A Shaman starts with 6 experience. Henchmen
+    start with 0 experience. A Gigantic Spider does not gain experience.
+- section: Forest Goblin Skill Table
+  section_path:
+  - Forest Goblin Skill Table
+  text: '*A Forest Goblin Brave may choose to remove his Animosity instead of choosing a skill, should they earn one.'
+- section: Forest Goblin Equipment Lists
+  section_path:
+  - Forest Goblin Equipment Lists
+  text: The following lists are used by Forest Goblin warbands to pick their equipment.
+- section: Special Equipment
+  section_path:
+  - Special Equipment
+  text: 'This warband has access to the following special equipment when purchasing items from the Trading Post , outside
+    their starting list:'
+- section: 1 Chieftain
+  section_path:
+  - heroes
+  - 1 Chieftain
+  text: '50 gold crowns to hire
+
+    Forest Goblins are usually led by the biggest, strongest, and most cunning Goblin in the band. This Chieftain routinely
+    comes up with ways to drive off the Old World invaders, and collect gold for Mork and Gork.
+
+    Weapons/Armour: A Chieftain may be equipped with weapons and armour chosen from the Hero equipment list.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 1 Chieftain
+  - Special Rules
+  text: 'Leader: Any warrior within 6" of the Chieftain may use his
+
+    Leadership characteristic when taking Leadership tests.
+
+    Ride Spiders: The Chieftain can ride Giant Spiders and the Gigantic Spider as detailed in the ‘Blazing Saddles’ article
+    .'
+- section: 0 – 4 Braves
+  section_path:
+  - heroes
+  - 0 – 4 Braves
+  text: '20 gold crowns to hire
+
+    Forest Goblin Braves are just a tad more intelligent than their peers, and aid the Chieftain in directing them in battle.
+    This does not improve their temperament, however, since they are as prone to infighting as their henchmen.
+
+    Weapons/Armour: Braves may be equipped with weapons and armour chosen from the Hero equipment list.'
+- section: SPECIAL RULES
+  section_path:
+  - heroes
+  - 0 – 4 Braves
+  - SPECIAL RULES
+  text: 'Animosity: Braves are subject to the rules for Animosity .'
+- section: 0 – 1 Shaman
+  section_path:
+  - heroes
+  - 0 – 1 Shaman
+  text: '20 gold crowns to hire
+
+    Shamans use the power of the Waaagh to direct the might of G’rrk and M’rrk against their foes. Usually found scrounging
+    up mysterious animal parts instead of gold, most other Goblins agree that ‘dey is odd’.
+
+    Weapons/Armour: A Shaman may be equipped with weapons and armour chosen from the Hero equipment list.'
+- section: SPECIAL RULES
+  section_path:
+  - heroes
+  - 0 – 1 Shaman
+  - SPECIAL RULES
+  text: 'Wizard: A Shaman begins with one spell randomly chosen from the Forest Goblin Spell list .'
+- section: henchmen
+  section_path:
+  - henchmen
+  text: (Bought in groups of 1-5)
+- section: Forest Goblins
+  section_path:
+  - henchmen
+  - Forest Goblins
+  text: '15 gold crowns to hire
+
+    Forest Goblin warriors form the rank and file of a Goblin warband. They use their natural talents to harass their enemies
+    while keeping out of sight in the dense foliage.
+
+    Weapons/Armour: Forest Goblins may be equipped with weapons chosen from the Henchmen equipment list.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - Forest Goblins
+  - Special Rules
+  text: 'Animosity: Forest Goblins are subject to the rules for Animosity .'
+- section: 0 – 5 Red Toof Goblins
+  section_path:
+  - henchmen
+  - 0 – 5 Red Toof Goblins
+  text: '25 gold crowns to hire
+
+    Of all the various factions that comprise the Forest Goblins, the infamous Red Toof tribe is the most feared. They are
+    elite shock troops, valued by Chieftains for their berserk rage in battle.
+
+    Weapons/Armour: Red Toof Boyz may be equipped with weapons chosen from the Henchmen equipment list.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 5 Red Toof Goblins
+  - Special Rules
+  text: 'Animosity: Red Toof Boyz are subject to the rules for Animosity .
+
+    Berserkers: Forest Goblins of the Red Toof tribe allow themselves to be bitten by all sorts of poisonous wildlife before
+    entering battle. The mingling venom drives them into frothing convulsions, making them extremely ferocious. Red Toof Boyz
+    are affected by the rules for Frenzy as described in the Mordheim rulebook. In addition, if they begin their turn within
+    charge range of an enemy, they are immune to animosity for that turn.'
+- section: 0 – 5 Sluggas
+  section_path:
+  - henchmen
+  - 0 – 5 Sluggas
+  text: '20 gold crowns to hire
+
+    Sluggas practice the art of throwing various objects until they can hurl several projectiles in a split second. This makes
+    them useful for distracting enemies with a hail of heavy stones.
+
+    Weapons/Armour: Sluggas may be equipped with weapons chosen from the Henchmen equipment list.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 5 Sluggas
+  - Special Rules
+  text: 'Animosity: Sluggas are subject to the rules for Animosity .
+
+    Sluggas: In the shooting phase, the Sluggas may throw thrown weapons up to three times. This may not be combined with
+    Quick Shot if they should be promoted to hero status.'
+- section: 0 – 1 Gigantic Spider
+  section_path:
+  - henchmen
+  - 0 – 1 Gigantic Spider
+  text: '200 gold crowns to hire
+
+    Gigantic Spiders are best avoided when encountered in the wild, due to their deadly poison and huge size. When urged into
+    fighting by Forest Goblin beastmasters, they become doubly dangerous and much harder to evade.
+
+    Weapons/Armour: A Gigantic Spider never needs or uses weapons or armour.'
+- section: SPECIAL RULES
+  section_path:
+  - henchmen
+  - 0 – 1 Gigantic Spider
+  - SPECIAL RULES
+  text: 'Fear: Gigantic Spiders cause fear as described in the Mordheim Rulebook.
+
+    Large Monster: Gigantic Spiders are large targets, and may always be shot at.
+
+    Poisonous: The Gigantic Spider’s maw drips with vile poisons. When it wounds an enemy and a roll is made on the injury
+    table, 1: knocked down, 2-4: stunned, and 5-6: Out of Action.
+
+    Native: Negotiating woodlands is no trouble for spiders. They move through any wooded terrain without penalty.
+
+    Non-sentient: Spiders are affected by the stupidity rules in the Mordheim rulebook. In addition, they never gain experience,
+    as they are animals. Note however that they may climb as normal.
+
+    May Ride: The Forest Goblin Chieftain, may ride the Gigantic Spider. ✏️ He gains +1 armour save, and shall
+
+    move at the Gigantic Spider’s rate of 6. Shooting attacks hit the Chieftain on a die roll of 1-2, and the
+
+    Gigantic Spider on a 3-6. In close combat, the opponent may choose which to hit. The Gigantic Spider no longer has to
+    check for stupidity if it is being ridden, as the Chieftain is directing its actions.'
+canonical_family: forest-goblins

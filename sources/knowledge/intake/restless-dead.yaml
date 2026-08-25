@@ -1,0 +1,724 @@
+id: restless-dead
+name: The Restless Dead
+grade: 1c
+source_url: https://mordheimer.net/docs/warbands/grade-1c-warbands/restless-dead
+headings:
+- Choice of warriors ​
+- Starting experience ​
+- Characteristic increase ​
+- Restless Dead Skill Table ​
+- Restless Dead special skills ​
+- corpse bomb ​
+- deathspeaker ​
+- wraith touch ​
+- forbidden rite ​
+- summoner ​
+- Restless Dead equipment lists ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- heroes ​
+- 1 Liche ​
+- SPECIAL RULES ​
+- 0 – 1 Necromancer ​
+- Special Rules ​
+- 0 – 3 Grave Guards ​
+- Special Rules ​
+- henchmen ​
+- Zombies ​
+- Special Rules ​
+- 0 – 8 Skeletons ​
+- Special Rules ​
+- 0 – 3 Wights ​
+- Special Rules ​
+- 0 – 2 Scarecrows ​
+- Special Rules ​
+tables:
+- section: Restless Dead Skill Table
+  section_path:
+  - Restless Dead Skill Table
+  rows:
+  - - ''
+    - Combat
+    - Shooting
+    - Academic
+    - Strength
+    - Speed
+    - Special
+  - - Liche
+    - ''
+    - ''
+    - ✓
+    - ''
+    - ''
+    - ✓
+  - - Necromancer
+    - ''
+    - ''
+    - ✓
+    - ''
+    - ✓
+    - ✓
+  - - Grave Guard
+    - ✓
+    - ''
+    - ''
+    - ✓
+    - ''
+    - ''
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Restless Dead equipment lists
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Mace
+    - 3 gc
+  - - Hammer
+    - 3 gc
+  - - Axe
+    - 5 gc
+  - - Sword
+    - 10 gc
+  - - Spear
+    - 10 gc
+  - - Halberd
+    - 10 gc
+  - - Double-handed weapon
+    - 15 gc
+- section: Missile Weapons
+  section_path:
+  - Restless Dead equipment lists
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Shortbow
+    - 5 gc
+  - - Bow
+    - 10 gc
+- section: Armour
+  section_path:
+  - Restless Dead equipment lists
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Shield
+    - 5 gc
+  - - Buckler
+    - 5 gc
+  - - Helmet
+    - 10 gc
+  - - Light armour
+    - 20 gc
+  - - Heavy armour
+    - 50 gc
+- section: 1 Liche
+  section_path:
+  - heroes
+  - 1 Liche
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '2'
+    - '2'
+    - '2'
+    - '2'
+    - '4'
+    - '4'
+    - '1'
+    - '8'
+- section: 0 – 1 Necromancer
+  section_path:
+  - heroes
+  - 0 – 1 Necromancer
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 3 Grave Guards
+  section_path:
+  - heroes
+  - 0 – 3 Grave Guards
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '2'
+    - '3'
+    - '3'
+    - '1'
+    - '2'
+    - '1'
+    - '6'
+- section: Zombies
+  section_path:
+  - henchmen
+  - Zombies
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '2'
+    - '0'
+    - '3'
+    - '3'
+    - '1'
+    - '1'
+    - '1'
+    - '5'
+- section: 0 – 8 Skeletons
+  section_path:
+  - henchmen
+  - 0 – 8 Skeletons
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '2'
+    - '2'
+    - '3'
+    - '3'
+    - '1'
+    - '2'
+    - '1'
+    - '5'
+- section: 0 – 3 Wights
+  section_path:
+  - henchmen
+  - 0 – 3 Wights
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '2'
+    - '2'
+    - '3'
+    - '3'
+    - '1'
+    - '2'
+    - '1'
+    - '6'
+- section: 0 – 2 Scarecrows
+  section_path:
+  - henchmen
+  - 0 – 2 Scarecrows
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '5'
+    - '3'
+    - '0'
+    - '3'
+    - 3(6)
+    - '1'
+    - '3'
+    - '2'
+    - '10'
+section_text:
+- section: Characteristic increase
+  section_path:
+  - Characteristic increase
+  text: The maximum characteristics for Liche and Grave Guard can be found here .
+    The Wights use the same profile as the grave guard and the Necromancer uses that
+    of a Human.
+- section: Restless Dead special skills
+  section_path:
+  - Restless Dead special skills
+  text: 'Liches and Necromancers may choose to use the following skill list instead
+    of any of the standard Skill
+
+    tables available to them.'
+- section: corpse bomb
+  section_path:
+  - Restless Dead special skills
+  - corpse bomb
+  text: 'Special magics and rituals can cause a Zombie to
+
+    explode when they are near the enemy. Secretly
+
+    nominate one Zombie at the beginning of the battle to
+
+    be a Corpse Bomb. If the enemy charges or is charged
+
+    by the Zombie, it immediately detonates. All models
+
+    within D6 inches take D3 Strength 4 hits. The
+
+    detonated Zombie may never be used again as it is
+
+    splattered in a million pieces! Corpse bombs killed by
+
+    shooting do not detonate. Only one Zombie at a time
+
+    can be a corpse bomb although the skill can be taken
+
+    by both the Necromancer and the Liche.'
+- section: deathspeaker
+  section_path:
+  - Restless Dead special skills
+  - deathspeaker
+  text: 'At the start of the battle, the undead player may
+
+    deploy D3 Zombies for free. These zombies do not
+
+    count towards the maximum number of models in the
+
+    warband, but increase the warband’s rating as normal.
+
+    Zombies created in this way may not be used as
+
+    Corpse Bombs. These Zombies only last for the
+
+    duration of the battle.'
+- section: wraith touch
+  section_path:
+  - Restless Dead special skills
+  - wraith touch
+  text: 'The hero may make a Wraith Touch attack instead of their normal attacks in
+    close combat. The hero making
+
+    a Wraith Touch makes a single unarmed attack, if it
+
+    hits, it wounds automatically, all rules that apply to
+
+    unarmed attacks apply to the Wraith Touch. If a Liche
+
+    uses this skill and wounds, then he may regain one
+
+    lost wound. This may not take the hero beyond his
+
+    starting total. Necromancers do not regain wounds
+
+    with this skill. This skill has no effect on the Possessed
+
+    or Undead.'
+- section: forbidden rite
+  section_path:
+  - Restless Dead special skills
+  - forbidden rite
+  text: 'If the hero with this skill did not search for rare items
+
+    during their last exploration phase, then they start the
+
+    next battle with a pool of D3+1 (+1) modifiers they
+
+    can use to increase their casting rolls. They may use as
+
+    many of these modifiers at a time as they desire.'
+- section: summoner
+  section_path:
+  - Restless Dead special skills
+  - summoner
+  text: The maximum warband size is increased by 1.
+- section: Restless Dead equipment lists
+  section_path:
+  - Restless Dead equipment lists
+  text: 'The following lists are used by Restless Dead warbands to pick their equipment:'
+- section: 1 Liche
+  section_path:
+  - heroes
+  - 1 Liche
+  text: '125 gold crowns to hire
+
+    A Liche is a powerful undead sorcerer. They journey north in a desperate bid to
+    regain their power in the Realm of Chaos after a crippling defeat. Liches are
+    fanatical in their struggle to hang on to their pitiful existence, especially
+    when this close to being forever banished from the realm of the living.
+
+    Weapons/Armour: Liches may not carry any non-magical weapons ❓ and do not suffer
+    any penalties for
+
+    this. They may wear any armour from the Restless Dead Equipment list.'
+- section: SPECIAL RULES
+  section_path:
+  - heroes
+  - 1 Liche
+  - SPECIAL RULES
+  text: 'Wizard: A Liche is a powerful wizard and so is able to use Necromantic magic
+    and starts with two spells
+
+    randomly generated from the Necromantic magic list .
+
+    Cause Fear: A Liche is a horrible abomination and causes fear.
+
+    Immune to Psychology: A Liche is not affected by psychology and never leaves combat.
+
+    No Pain: A Liche treats a stunned result on the injury chart as knocked down.
+
+    Immune to Poison: A Liche is not affected by poison.
+
+    Eternal: A Liche can choose to ignore any result on the hero''s Serious Injury
+    chart except Killed by taking a permanent -1 on their starting Wound profile.
+    Obviously, a Liche with 1 Wound remaining on their
+
+    starting profile does not have this option. A Liche that
+
+    gets a Killed result instead takes a permanent –D3 Wounds on their starting profile.
+    If this takes their
+
+    starting Wound total to 0 or less, the Liche is Killed as normal.
+
+    Feed Upon Magic: A Liche can perform spells that, with the consumption of D3 Treasures,
+    can give the
+
+    Liche a permanent +1 Wound on their starting profile.
+
+    This can only be used in between battles and cannot
+
+    be used if the Liche searches for rare items or was put out of action in the previous
+    battle. If the warband does not have enough Treasures to complete the spell, then
+    the Treasures are consumed anyway and the Liche does not gain the Wound.
+
+    Warrior Wizard: The Liche may wear armour and cast spells. Indeed, it is often
+    the clothing and armour
+
+    alone that gives the Liche substance and form!
+
+    Advancement: If a Liche gets an advance roll of +1 Wound, they may instead pick
+    a new skill from their
+
+    available lists.'
+- section: 0 – 1 Necromancer
+  section_path:
+  - heroes
+  - 0 – 1 Necromancer
+  text: '40 gold crowns to hire
+
+    Necromancers who travel with Liches are apprentices to the dark arts of Necromancy.
+    They are the only living thing that a Liche will tolerate in his proximity!
+
+    Weapons/Armour: Necromancers may be armed with weapons and armour chosen from
+    the Restless Dead
+
+    Equipment list.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 0 – 1 Necromancer
+  - Special Rules
+  text: 'Wizard: Necromancers are wizards being trained by their Liche masters in
+    the art of Necromancy and so
+
+    are able to use Necromantic magic. They start out knowing one of the two spells
+    known by their Liche
+
+    masters. ❓
+
+    Apprentices: Necromancers may only ever know spells known by their Liche masters.
+    Even if they did know
+
+    spells the Liche didn’t, they wouldn’t dare use them
+
+    for fear of their master’s response for their arrogance!
+
+    If the Liche is ever killed, the Necromancer can continue to learn magic spells
+    as a normal wizard,
+
+    ignoring the Apprentice rule.
+
+    Gofer: as an Apprentice, the Necromancer spends much of their time running errands
+    for their Liche
+
+    masters and over the years get exceptionally good at it.
+
+    When a Necromancer searches for rare items, they roll 3D6 and pick the two highest.'
+- section: 0 – 3 Grave Guards
+  section_path:
+  - heroes
+  - 0 – 3 Grave Guards
+  text: '35 gold crowns to hire
+
+    Grave Guards were once the finest warriors, hand selected by their masters for
+    their martial skill and bravery, who fell in battle many centuries ago. They are
+    now slaves to their necromantic masters in restless undeath.
+
+    Weapons/Armour: Grave Guards may be armed with weapons and armour chosen from
+    the Restless Dead
+
+    Equipment list.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 0 – 3 Grave Guards
+  - Special Rules
+  text: 'Wight Blades: Grave Guards carry weapons laden with evil magic. All close
+    combat ‘to hit’ rolls of a 6 will automatically wound. You may roll ‘to wound’
+    as normal to determine if it is a ‘critical hit’, but even a failed ‘to wound’
+    roll will still cause a wound if a 6 was rolled first ‘to hit’.
+
+    Cause Fear: Grave Guards are terrifying undead creatures and so cause fear.
+
+    Immune to Poison: Grave Guards are not affected by poison.
+
+    Immune to Psychology: Grave Guards are not affected by psychology and never leave
+    combat.
+
+    No Pain: Grave Guards treat a stunned result on the injury chart as knocked down.
+
+    May not Run: Grave Guards are slow undead creatures and may not run (but can charge
+    normally).
+
+    No deal: Grave Guards may not search for rare items.'
+- section: henchmen
+  section_path:
+  - henchmen
+  text: (Bought in groups of 1-5)
+- section: Zombies
+  section_path:
+  - henchmen
+  - Zombies
+  text: '15 gold crowns to hire
+
+    Zombies are the most common of the undead: creatures animated by the will of their
+    Necromantic masters to be slaves in their undeath.
+
+    Weapons/Armour: Zombies may not carry any weapons or wear armour and do not suffer
+    any
+
+    penalties for this.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - Zombies
+  - Special Rules
+  text: 'Cause Fear: Zombies are horrible abominations and so cause fear.
+
+    May not run: Zombies are slow undead creatures and may not run (but may charge
+    normally).
+
+    Immune to Psychology: A Zombie is not affected by psychology and never leaves
+    combat.
+
+    Immune to Poison: A Zombie is not affected by poison.
+
+    No Pain: Zombies treat stunned results on the injury chart as knocked down.
+
+    No Brain: Zombies never gain experience.'
+- section: 0 – 8 Skeletons
+  section_path:
+  - henchmen
+  - 0 – 8 Skeletons
+  text: '20 gold crowns to hire
+
+    The remains of ancient soldiers lie restless in their graves in the Northern Wastes.
+    It only takes a mere whisper from the Necromancer to command them from their slumber
+    and again into loyal service as mindless undead warriors.
+
+    Weapons/Armour: Skeletons may be armed with weapons and armour chosen from the
+    Restless Dead
+
+    equipment list.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 8 Skeletons
+  - Special Rules
+  text: 'Cause Fear: Skeletons are horrible abominations and so cause fear.
+
+    May not run: Skeletons are slow undead creatures and may not run (but may charge
+    normally).
+
+    Immune to Psychology: Skeletons are not affected by psychology and never leaves
+    combat.
+
+    Immune to Poison: Skeletons are not affected by poison.
+
+    No Pain: Skeletons treat stunned results on the injury chart as knocked down.
+
+    No Brain: Skeletons never gain experience.'
+- section: 0 – 3 Wights
+  section_path:
+  - henchmen
+  - 0 – 3 Wights
+  text: '30 gold crowns to hire
+
+    Wights were formerly great champions among men, now reduced to shambling bodyguards.
+    They resemble skeletons, but are far better armed and armoured and retain a substantial
+    amount of their old combat prowess.
+
+    Weapons/Armour: Wights may be armed with weapons and armour chosen from the Restless
+    Dead Equipment list.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 3 Wights
+  - Special Rules
+  text: 'Cause Fear: Wights are horrible abominations and so cause fear.
+
+    May not run: Wights are slow undead creatures and may not run (but may charge
+    normally).
+
+    Immune to Psychology: Wights are not affected by psychology and never leaves combat.
+
+    Immune to Poison: Wights are not affected by poison.
+
+    No Pain: Wights treat stunned results on the injury chart as knocked down.
+
+    Experience: Wights may gain experience, however Wights promoted to become Heroes
+    by rolling The
+
+    lad''s got talent will be unable to search for rare items in the same way as Grave
+    Guards. They must choose
+
+    the Combat and Strength skill lists if promoted.
+
+    Wights also gain Wight Blades if they become Heroes.'
+- section: 0 – 2 Scarecrows
+  section_path:
+  - henchmen
+  - 0 – 2 Scarecrows
+  text: '65 gold crowns to hire
+
+    Some sorcerors have been known to create horrible unliving forms that are impervious
+    to pain and notoriously difficult to stop. In order to maintain secrecy, a cunning
+    wizard disguises their twisted supernatural bodyguard as something more common.
+    With its ordinary appearance the golem is granted enough freedom to move around
+    undetected. These lanky constructs are fashioned from straw to resemble scarecrows
+    used by farmers to frighten birds away from crops. No one gives them so much as
+    a passing glance... that is, until they begin to move!
+
+    Weapons/Armour: The scarecrow carries no
+
+    equipment and suffers no penalties for this.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 2 Scarecrows
+  - Special Rules
+  text: 'Cause Fear: The sight of a tall, lanky and silent scarecrow moving is highly
+    unnatural and so causes
+
+    fear.
+
+    Immune to Psychology: The scarecrow is immune to all psychology and will never
+    leave combat.
+
+    Immune to Poison: The scarecrow is immune to all poisons.
+
+    No Pain: The scarecrow treats all stunned results on the injury chart as knocked
+    down.
+
+    No Brain: The scarecrow never gain experience.
+
+    No Substance: The scarecrow is incredibly difficult to take down with shooting
+    as there are few vital parts to hit. The scarecrow counts as having a T6 against
+    all shooting and magical missiles, likewise, a scarecrow is immune to critical
+    hits caused by shooting. The exception to this rule is missile weapons or spells
+    that are fire based which deal damage as normal.
+
+    Flammable: The scarecrow is primarily ratty cloth, straw and preserved body parts
+    so as a result they
+
+    burn very easily. Scarecrows count as being flammable. In addition, a scarecrow
+    will be ''caught fire'' on the roll of a 3+ as opposed to the normal 4+.
+
+    Construct: The scarecrow is an undead construct and may re-roll any rolls on the
+    injury table except for wounds caused by fire.
+
+    Animated Construct: Powerful constructs such as
+
+    scarecrows require much more concentration from
+
+    their summoners than normal skeletons or zombies to
+
+    remain animated. The scarecrow is controlled by
+
+    either the Liche or the Necromancer (note down on
+
+    the warband roster which), but each may only control
+
+    one at a time, so only a warband with both a Liche and
+
+    a Necromancer may ever take two Scarecrows. If the
+
+    Liche or the Necromancer is for some reason unable
+
+    to participate in a battle, their Scarecrow will also be
+
+    unable to participate.
+
+    Whenever the scarecrow''s controller loses a wound he
+
+    must pass an unmodified Leadership test or the
+
+    magical bond is broken and the scarecrow is
+
+    immediately taken out of action.'

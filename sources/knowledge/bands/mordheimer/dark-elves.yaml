@@ -1,0 +1,1181 @@
+schema_version: 1
+id: dark-elves
+name: Dark Elves
+name_i18n:
+  en: Dark Elves
+  es: null
+original_locale: en
+categories:
+- 1b
+collections:
+- mordheimer
+grade: 1b
+setting: Lustria
+publication: Town Cryer 12
+status: source-normalized
+sources:
+- manual: mordheimer.net
+  printed_page: 0
+  section: Dark Elves
+  url: https://mordheimer.net/docs/warbands/grade-1b-warbands/dark-elves
+roster:
+  minimum_models: 3
+  maximum_models: 15
+  starting_gold: 500
+  members:
+  - profile_id: high-born
+    minimum: 1
+    maximum: 1
+  - profile_id: beastmaster
+    minimum: 0
+    maximum: 1
+  - profile_id: fellblades
+    minimum: 0
+    maximum: 2
+  - profile_id: dark-elf-sorceress
+    minimum: 0
+    maximum: 1
+  - profile_id: corsairs
+    minimum: 0
+    maximum: null
+  - profile_id: shades
+    minimum: 0
+    maximum: 5
+  - profile_id: cold-one-beasthounds
+    minimum: 0
+    maximum: 2
+equipment_lists:
+- id: dark-elf-equipment-list
+  name: Dark Elf Equipment List
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: 1st free/2 gc
+  - item_id: axe
+    cost: 5
+  - item_id: sword
+    cost: 10
+  - item_id: spear
+    cost: 10
+  - item_id: halberd
+    cost: 10
+  - item_id: beastlash
+    cost: 10
+  - item_id: great_weapon
+    cost: 15
+  - item_id: dark_elf_blade_weapon_upgrade
+    cost: 15
+    notes: +15gc
+  - item_id: repeater_crossbow
+    cost: 35
+  - item_id: crossbow_pistol
+    cost: 35
+  - item_id: buckler
+    cost: 5
+  - item_id: shield
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  - item_id: light_armour
+    cost: 20
+    notes: 20 gc ✏️
+  - item_id: dark_venom
+    cost: 15
+  - item_id: sea_dragon_cloak
+    cost: 50
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Dark Elf Equipment List
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/dark-elves
+  name_i18n:
+    en: Dark Elf Equipment List
+    es: null
+- id: shades-equipment-list
+  name: Shades Equipment List
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: 1st free/2 gc
+  - item_id: axe
+    cost: 5
+  - item_id: sword
+    cost: 10
+  - item_id: repeater_crossbow
+    cost: 35
+  - item_id: helmet
+    cost: 10
+  - item_id: light_armour
+    cost: 20
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Shades Equipment List
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/dark-elves
+  name_i18n:
+    en: Shades Equipment List
+    es: null
+profiles:
+- id: high-born
+  name: High Born
+  type: hero
+  cost: 70
+  experience: 0
+  characteristics:
+    M: 5
+    WS: 5
+    BS: 4
+    S: 3
+    T: 3
+    W: 1
+    I: 6
+    A: 1
+    Ld: 9
+  equipment_lists:
+  - dark-elf-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - shooting
+  - academic
+  - speed
+  - special
+  rules:
+  - id: leader
+    name: Leader
+    effect: 'Any models in the warband within 6" of the High
+
+      Born may use his Leadership instead of their own.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: heroes / 1 High Born / Special Rules / Leader
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/dark-elves
+    name_i18n:
+      en: Leader
+      es: null
+    effect_i18n:
+      en: 'Any models in the warband within 6" of the High
+
+        Born may use his Leadership instead of their own.'
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 1 High Born
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/dark-elves
+  source_path:
+  - heroes
+  - 1 High Born
+  name_i18n:
+    en: High Born
+    es: null
+- id: beastmaster
+  name: Beastmaster
+  type: hero
+  cost: 45
+  experience: 0
+  characteristics:
+    M: 5
+    WS: 4
+    BS: 4
+    S: 3
+    T: 3
+    W: 1
+    I: 6
+    A: 1
+    Ld: 8
+  equipment_lists:
+  - dark-elf-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - speed
+  - special
+  rules:
+  - id: cold-one-beasthound
+    name: Cold One Beasthound
+    effect: 'The Beastmaster may be
+
+      accompanied by up to two Cold One Beasthounds, these are
+
+      bought as henchmen and follow all rules for listed for them.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: heroes / 0 – 1 Beastmaster / Special Rules / Cold One Beasthound
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/dark-elves
+    name_i18n:
+      en: Cold One Beasthound
+      es: null
+    effect_i18n:
+      en: 'The Beastmaster may be
+
+        accompanied by up to two Cold One Beasthounds, these are
+
+        bought as henchmen and follow all rules for listed for them.'
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 1 Beastmaster
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/dark-elves
+  source_path:
+  - heroes
+  - 0 – 1 Beastmaster
+  name_i18n:
+    en: Beastmaster
+    es: null
+- id: fellblades
+  name: Fellblades
+  type: hero
+  cost: 40
+  experience: 0
+  characteristics:
+    M: 5
+    WS: 5
+    BS: 4
+    S: 3
+    T: 3
+    W: 1
+    I: 6
+    A: 1
+    Ld: 8
+  equipment_lists:
+  - dark-elf-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - speed
+  - special
+  rules:
+  - id: melee-specialists
+    name: Melee Specialists
+    effect: 'Fellblades live by a strict code of close
+
+      quarter fighting. Fellblades may not use missile weapons of
+
+      any sort.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: heroes / 0 – 2 Fellblades / Special Rules / Melee Specialists
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/dark-elves
+    name_i18n:
+      en: Melee Specialists
+      es: null
+    effect_i18n:
+      en: 'Fellblades live by a strict code of close
+
+        quarter fighting. Fellblades may not use missile weapons of
+
+        any sort.'
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 2 Fellblades
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/dark-elves
+  source_path:
+  - heroes
+  - 0 – 2 Fellblades
+  name_i18n:
+    en: Fellblades
+    es: null
+- id: dark-elf-sorceress
+  name: Dark Elf Sorceress
+  type: hero
+  cost: 55
+  experience: 0
+  characteristics:
+    M: 5
+    WS: 4
+    BS: 4
+    S: 3
+    T: 3
+    W: 1
+    I: 6
+    A: 1
+    Ld: 8
+  equipment_lists:
+  - dark-elf-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - academic
+  - speed
+  - special
+  rules:
+  - id: wizard
+    name: Wizard
+    effect: The Dark Elf Sorceress is a wizard and uses Dark Elf Magic .
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: heroes / 0 – 1 Dark Elf Sorceress / Special Rules / Wizard
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/dark-elves
+    name_i18n:
+      en: Wizard
+      es: null
+    effect_i18n:
+      en: The Dark Elf Sorceress is a wizard and uses Dark Elf Magic .
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 1 Dark Elf Sorceress
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/dark-elves
+  source_path:
+  - heroes
+  - 0 – 1 Dark Elf Sorceress
+  name_i18n:
+    en: Dark Elf Sorceress
+    es: null
+- id: corsairs
+  name: Corsairs
+  type: henchman
+  cost: 35
+  experience: 0
+  characteristics:
+    M: 5
+    WS: 4
+    BS: 4
+    S: 3
+    T: 3
+    W: 1
+    I: 6
+    A: 1
+    Ld: 8
+  equipment_lists:
+  - dark-elf-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules: []
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Corsairs
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/dark-elves
+  source_path:
+  - henchmen
+  - Corsairs
+  name_i18n:
+    en: Corsairs
+    es: null
+- id: shades
+  name: Shades
+  type: henchman
+  cost: 30
+  experience: 0
+  characteristics:
+    M: 5
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 5
+    A: 1
+    Ld: 8
+  equipment_lists:
+  - shades-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules:
+  - id: natural-stealth
+    name: Natural Stealth
+    effect: 'The first thing that Dark Elf Scouts master
+
+      is the art of moving without being seen or heard. If a Dark Elf
+
+      is Hiding, enemy models suffer -1 to their Initiative value for
+
+      determining if they can detect him.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 5 Shades / Special Rules / Natural Stealth
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/dark-elves
+    name_i18n:
+      en: Natural Stealth
+      es: null
+    effect_i18n:
+      en: 'The first thing that Dark Elf Scouts master
+
+        is the art of moving without being seen or heard. If a Dark Elf
+
+        is Hiding, enemy models suffer -1 to their Initiative value for
+
+        determining if they can detect him.'
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 5 Shades
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/dark-elves
+  source_path:
+  - henchmen
+  - 0 – 5 Shades
+  name_i18n:
+    en: Shades
+    es: null
+- id: cold-one-beasthounds
+  name: Cold One Beasthounds
+  type: animal
+  cost: 30
+  experience: 0
+  characteristics:
+    M: 6
+    WS: 3
+    BS: 0
+    S: 4
+    T: 4
+    W: 1
+    I: 1
+    A: 1
+    Ld: 4
+  equipment_lists: []
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules:
+  - id: animals
+    name: Animals
+    effect: 'Cold One Beasthounds are animals and all animal
+
+      rules apply to them, they never gain experience.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 2 Cold One Beasthounds / Special Rules / Animals
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/dark-elves
+    name_i18n:
+      en: Animals
+      es: null
+    effect_i18n:
+      en: 'Cold One Beasthounds are animals and all animal
+
+        rules apply to them, they never gain experience.'
+      es: null
+  - id: beastmaster
+    name: Beastmaster
+    effect: 'Cold One Beasthounds are nasty viscous
+
+      brutes that are barely kept under control. If the Beastmaster
+
+      dies the beasts will immediately escape from the warband and
+
+      they are removed from the warband roster. If the Beastmaster
+
+      is unable to participate in a battle, then neither will the beasts.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 2 Cold One Beasthounds / Special Rules / Beastmaster
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/dark-elves
+    name_i18n:
+      en: Beastmaster
+      es: null
+    effect_i18n:
+      en: 'Cold One Beasthounds are nasty viscous
+
+        brutes that are barely kept under control. If the Beastmaster
+
+        dies the beasts will immediately escape from the warband and
+
+        they are removed from the warband roster. If the Beastmaster
+
+        is unable to participate in a battle, then neither will the beasts.'
+      es: null
+  - id: stupidity
+    name: Stupidity
+    effect: 'Cold One Beasthounds may use the basic
+
+      Leadership of the Beastmaster if they are within 6" of him.
+
+      They may never use the Leadership of the warband leader,
+
+      nor may they benefit from the Beastmaster’s increased
+
+      Leadership if he is within 6" of the leader.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 2 Cold One Beasthounds / Special Rules / Stupidity
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/dark-elves
+    name_i18n:
+      en: Stupidity
+      es: null
+    effect_i18n:
+      en: 'Cold One Beasthounds may use the basic
+
+        Leadership of the Beastmaster if they are within 6" of him.
+
+        They may never use the Leadership of the warband leader,
+
+        nor may they benefit from the Beastmaster’s increased
+
+        Leadership if he is within 6" of the leader.'
+      es: null
+  - id: scaly-skin
+    name: Scaly Skin
+    effect: Cold One Beasthounds have tough scaly skin, and are considered to have a 6+ armour save. This save cannot be modified
+      beyond 6 due to strength modifiers but any result of ‘no save’ on the Critical Hit chart will negate the unmodified
+      6+ save.
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 2 Cold One Beasthounds / Special Rules / Scaly Skin
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/dark-elves
+    name_i18n:
+      en: Scaly Skin
+      es: null
+    effect_i18n:
+      en: Cold One Beasthounds have tough scaly skin, and are considered to have a 6+ armour save. This save cannot be modified
+        beyond 6 due to strength modifiers but any result of ‘no save’ on the Critical Hit chart will negate the unmodified
+        6+ save.
+      es: null
+  - id: fear
+    name: Fear
+    effect: Cold One Beasthounds cause Fear.
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 2 Cold One Beasthounds / Special Rules / Fear
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/dark-elves
+    name_i18n:
+      en: Fear
+      es: null
+    effect_i18n:
+      en: Cold One Beasthounds cause Fear.
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 2 Cold One Beasthounds
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/dark-elves
+  source_path:
+  - henchmen
+  - 0 – 2 Cold One Beasthounds
+  name_i18n:
+    en: Cold One Beasthounds
+    es: null
+band_rules:
+- id: special-rules
+  name: Special Rules
+  effect: 'Kindred Hatred: The Dark Elves have been fighting the
+
+    High Elves for many centuries. The wars between these two
+
+    races have been very long and bloody affairs. Dark Elves
+
+    Hate any High Elf warriors including High Elf Hired Swords.
+
+    Excellent Sight: Elves have eyesight
+
+    unmatched by mere humans. All the Elves in a
+
+    Dark Elves Warband can spot Hidden
+
+    enemies from twice as far away as other
+
+    warriors (i.e. twice their Initiative in inches).
+
+    Black Powder Weapons: Dark Elves may never use black
+
+    powder weapons as they find them too crude, noisy and
+
+    unreliable.'
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Special Rules
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/dark-elves
+  name_i18n:
+    en: Special Rules
+    es: null
+  effect_i18n:
+    en: 'Kindred Hatred: The Dark Elves have been fighting the
+
+      High Elves for many centuries. The wars between these two
+
+      races have been very long and bloody affairs. Dark Elves
+
+      Hate any High Elf warriors including High Elf Hired Swords.
+
+      Excellent Sight: Elves have eyesight
+
+      unmatched by mere humans. All the Elves in a
+
+      Dark Elves Warband can spot Hidden
+
+      enemies from twice as far away as other
+
+      warriors (i.e. twice their Initiative in inches).
+
+      Black Powder Weapons: Dark Elves may never use black
+
+      powder weapons as they find them too crude, noisy and
+
+      unreliable.'
+    es: null
+- id: dark-elf-special-skills
+  name: Dark Elf Special Skills
+  effect: 'Dark Elf Heroes may use the following Skill table instead of any of the standard Skill
+
+    tables available to them.'
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Dark Elf Special Skills
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/dark-elves
+  name_i18n:
+    en: Dark Elf Special Skills
+    es: null
+  effect_i18n:
+    en: 'Dark Elf Heroes may use the following Skill table instead of any of the standard Skill
+
+      tables available to them.'
+    es: null
+- id: dark-elf-special-skills-fury-of-khaine
+  name: Fury of Khaine
+  effect: 'The Dark Elf is infused with an intense raging
+
+    thirst for blood and is a whirlwind in hand-to-hand combat, moving
+
+    from opponent to opponent. The Dark Elf may make a 4" follow up
+
+    move if he takes all of his opponents Out Of Action. If he comes
+
+    into contact with another enemy this starts a new combat. This new
+
+    combat takes place in the following turn and the model counts as
+
+    charging. May not follow up in the opponent’s turn.'
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Dark Elf Special Skills / Fury of Khaine
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/dark-elves
+  name_i18n:
+    en: Fury of Khaine
+    es: null
+  effect_i18n:
+    en: 'The Dark Elf is infused with an intense raging
+
+      thirst for blood and is a whirlwind in hand-to-hand combat, moving
+
+      from opponent to opponent. The Dark Elf may make a 4" follow up
+
+      move if he takes all of his opponents Out Of Action. If he comes
+
+      into contact with another enemy this starts a new combat. This new
+
+      combat takes place in the following turn and the model counts as
+
+      charging. May not follow up in the opponent’s turn.'
+    es: null
+- id: dark-elf-special-skills-powerful-build
+  name: Powerful Build
+  effect: 'The warrior is strongly built for an Elf and is
+
+    capable of feats of strength. A warrior with this skill may choose
+
+    skills from the Strength table. The Sorceress may never take this
+
+    skill and no more than two warriors in the warband may take this
+
+    skill at any one time.'
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Dark Elf Special Skills / Powerful Build
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/dark-elves
+  name_i18n:
+    en: Powerful Build
+    es: null
+  effect_i18n:
+    en: 'The warrior is strongly built for an Elf and is
+
+      capable of feats of strength. A warrior with this skill may choose
+
+      skills from the Strength table. The Sorceress may never take this
+
+      skill and no more than two warriors in the warband may take this
+
+      skill at any one time.'
+    es: null
+- id: dark-elf-special-skills-fey-quickness
+  name: Fey Quickness
+  effect: 'Few can ever hope to match an Elf’s inhuman
+
+    quickness and agility. An Elf with Fey Quickness can avoid melee
+
+    or missile attacks on a roll of 6. If the Elf also has Step Aside or
+
+    Dodge this will increase to a 4+ in the relevant area. For example,
+
+    an Elf with Fey Quickness and Step Aside avoids melee attacks on a
+
+    4+ and missile attacks on a 6.'
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Dark Elf Special Skills / Fey Quickness
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/dark-elves
+  name_i18n:
+    en: Fey Quickness
+    es: null
+  effect_i18n:
+    en: 'Few can ever hope to match an Elf’s inhuman
+
+      quickness and agility. An Elf with Fey Quickness can avoid melee
+
+      or missile attacks on a roll of 6. If the Elf also has Step Aside or
+
+      Dodge this will increase to a 4+ in the relevant area. For example,
+
+      an Elf with Fey Quickness and Step Aside avoids melee attacks on a
+
+      4+ and missile attacks on a 6.'
+    es: null
+- id: dark-elf-special-skills-infiltration
+  name: Infiltration
+  effect: 'The Dark Elf with this skill is always placed on the
+
+    battlefield after the opposing warband and can be placed anywhere
+
+    on the table as long as it is out of sight of the opposing warband and
+
+    more than 12" away from any enemy model. If both players have
+
+    models which infiltrate, roll a D6 for each, and the lowest roll sets
+
+    up first.'
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Dark Elf Special Skills / Infiltration
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/dark-elves
+  name_i18n:
+    en: Infiltration
+    es: null
+  effect_i18n:
+    en: 'The Dark Elf with this skill is always placed on the
+
+      battlefield after the opposing warband and can be placed anywhere
+
+      on the table as long as it is out of sight of the opposing warband and
+
+      more than 12" away from any enemy model. If both players have
+
+      models which infiltrate, roll a D6 for each, and the lowest roll sets
+
+      up first.'
+    es: null
+- id: dark-elf-special-skills-master-of-poisons
+  name: Master of Poisons
+  effect: 'The Dark Elf is proficient in concocting
+
+    different poisons. If the Hero doesn’t search for rare items, he may
+
+    make D3-1 doses of Dark Venom instead. There is a chance of
+
+    getting none, as the hero doesn’t have access to a stable workplace.
+
+    The poison must be used in the next battle and cannot be sold or
+
+    traded to other warbands as the Dark Elves guard their secrets very
+
+    carefully.'
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Dark Elf Special Skills / Master of Poisons
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/dark-elves
+  name_i18n:
+    en: Master of Poisons
+    es: null
+  effect_i18n:
+    en: 'The Dark Elf is proficient in concocting
+
+      different poisons. If the Hero doesn’t search for rare items, he may
+
+      make D3-1 doses of Dark Venom instead. There is a chance of
+
+      getting none, as the hero doesn’t have access to a stable workplace.
+
+      The poison must be used in the next battle and cannot be sold or
+
+      traded to other warbands as the Dark Elves guard their secrets very
+
+      carefully.'
+    es: null
+source_sections:
+- section: Dark Ones of Naggaroth
+  section_path:
+  - Dark Ones of Naggaroth
+  text: 'Many dare not speak of the High
+
+    Elves’ evil kin, the Druchii, or the Dark Elves as they are
+
+    better known. They are a race for whom pain and pleasure
+
+    have been pushed to the ultimate extreme. They leave
+
+    destruction and despair in their wake and are more greatly
+
+    feared than the barbaric Orcs and no less so than the tainted
+
+    forces of Chaos and Undeath. To the victims of the Dark
+
+    Elves it is the fortunate to whom a quick death is gifted for
+
+    this twisted folk roam the Known World in search of slaves.
+
+    The slaves of the Dark Elves are either worked to death in
+
+    their mines, ripped apart on the altars to Khaine, their dark
+
+    God, or tortured mercilessly by the Brides of Khaine, the
+
+    Witch Elves. Dark Elves take a perverse delight in inflicting
+
+    pain upon others just to see their victims suffer.
+
+    Despite their dire reputation for cruelty they are only rivalled
+
+    as explorers and adventurers by their High Elven cousins. It
+
+    is the lure of the precious, arcane artefacts of the Slann that
+
+    bring these foul creatures to Lustria, travelling stealthily in
+
+    their Black Arks and penetrating deep into the jungle. Dark
+
+    Elves are adept at stealth and ambush and are well suited to
+
+    the overgrown realm of the Lizardmen – most warbands
+
+    don’t even know they’re being attacked until it is too late.'
+- section: Special Rules
+  section_path:
+  - Special Rules
+  text: 'Kindred Hatred: The Dark Elves have been fighting the
+
+    High Elves for many centuries. The wars between these two
+
+    races have been very long and bloody affairs. Dark Elves
+
+    Hate any High Elf warriors including High Elf Hired Swords.
+
+    Excellent Sight: Elves have eyesight
+
+    unmatched by mere humans. All the Elves in a
+
+    Dark Elves Warband can spot Hidden
+
+    enemies from twice as far away as other
+
+    warriors (i.e. twice their Initiative in inches).
+
+    Black Powder Weapons: Dark Elves may never use black
+
+    powder weapons as they find them too crude, noisy and
+
+    unreliable.'
+- section: Dark Elf Special Skills
+  section_path:
+  - Dark Elf Special Skills
+  text: 'Dark Elf Heroes may use the following Skill table instead of any of the standard Skill
+
+    tables available to them.'
+- section: Fury of Khaine
+  section_path:
+  - Dark Elf Special Skills
+  - Fury of Khaine
+  text: 'The Dark Elf is infused with an intense raging
+
+    thirst for blood and is a whirlwind in hand-to-hand combat, moving
+
+    from opponent to opponent. The Dark Elf may make a 4" follow up
+
+    move if he takes all of his opponents Out Of Action. If he comes
+
+    into contact with another enemy this starts a new combat. This new
+
+    combat takes place in the following turn and the model counts as
+
+    charging. May not follow up in the opponent’s turn.'
+- section: Powerful Build
+  section_path:
+  - Dark Elf Special Skills
+  - Powerful Build
+  text: 'The warrior is strongly built for an Elf and is
+
+    capable of feats of strength. A warrior with this skill may choose
+
+    skills from the Strength table. The Sorceress may never take this
+
+    skill and no more than two warriors in the warband may take this
+
+    skill at any one time.'
+- section: Fey Quickness
+  section_path:
+  - Dark Elf Special Skills
+  - Fey Quickness
+  text: 'Few can ever hope to match an Elf’s inhuman
+
+    quickness and agility. An Elf with Fey Quickness can avoid melee
+
+    or missile attacks on a roll of 6. If the Elf also has Step Aside or
+
+    Dodge this will increase to a 4+ in the relevant area. For example,
+
+    an Elf with Fey Quickness and Step Aside avoids melee attacks on a
+
+    4+ and missile attacks on a 6.'
+- section: Infiltration
+  section_path:
+  - Dark Elf Special Skills
+  - Infiltration
+  text: 'The Dark Elf with this skill is always placed on the
+
+    battlefield after the opposing warband and can be placed anywhere
+
+    on the table as long as it is out of sight of the opposing warband and
+
+    more than 12" away from any enemy model. If both players have
+
+    models which infiltrate, roll a D6 for each, and the lowest roll sets
+
+    up first.'
+- section: Master of Poisons
+  section_path:
+  - Dark Elf Special Skills
+  - Master of Poisons
+  text: 'The Dark Elf is proficient in concocting
+
+    different poisons. If the Hero doesn’t search for rare items, he may
+
+    make D3-1 doses of Dark Venom instead. There is a chance of
+
+    getting none, as the hero doesn’t have access to a stable workplace.
+
+    The poison must be used in the next battle and cannot be sold or
+
+    traded to other warbands as the Dark Elves guard their secrets very
+
+    carefully.'
+- section: Dark Elf equipment lists
+  section_path:
+  - Dark Elf equipment lists
+  text: 'The following lists are used by Dark Elf warbands to pick their weapons:'
+- section: Miscellaneous Equipment
+  section_path:
+  - Dark Elf equipment lists
+  - Dark Elf Equipment List
+  - Miscellaneous Equipment
+  text: '* Heroes only. ** Heroes and Corsairs only. *** Beastmaster only'
+- section: Special Equipment
+  section_path:
+  - Special Equipment
+  text: 'This warband has access to the following special equipment when purchasing items from the Trading Post , outside
+    their starting list:'
+- section: 1 High Born
+  section_path:
+  - heroes
+  - 1 High Born
+  text: '70 gold crowns to hire
+
+    Dark Elf Leaders are typically drawn from the Dark Elf nobility and lead the warband in search of gold, slaves and arcane
+    artefacts to bring home to Naggaroth. They are cold and ruthless killers and they command the respect of their troops
+    through assassination and terror. They have attained their position of leadership by eliminating rival nobles who stand
+    in their way and through their remarkable cunning, they are dangerous foes who embody the merciless traits of the Druchii
+    race.
+
+    Weapons/Armour: A High Born may be armed with
+
+    weapons and armour chosen from the Dark Elf Equipment
+
+    list.'
+- section: SPECIAL RULES
+  section_path:
+  - heroes
+  - 1 High Born
+  - SPECIAL RULES
+  text: 'Leader: Any models in the warband within 6" of the High
+
+    Born may use his Leadership instead of their own.'
+- section: 0 – 1 Beastmaster
+  section_path:
+  - heroes
+  - 0 – 1 Beastmaster
+  text: '45 gold crowns to hire
+
+    Whereas the High Elves have a great affinity with Dragons and Griffons and other noble creatures their malevolent kin
+    have infamous Beastmasters, Dark Elves of particularly cruel renown who breed many vicious beasts and lead them into contact.
+    Unlike the High Elves who treat their beasts as companions, the Dark Elf Beastmasters are very spiteful masters.
+
+    Weapons/Armour: A Beastmaster may be armed with
+
+    weapons and armour chosen from the Dark Elf Equipment
+
+    list.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 0 – 1 Beastmaster
+  - Special Rules
+  text: 'Cold One Beasthound: The Beastmaster may be
+
+    accompanied by up to two Cold One Beasthounds, these are
+
+    bought as henchmen and follow all rules for listed for them.'
+- section: 0 – 2 Fellblades
+  section_path:
+  - heroes
+  - 0 – 2 Fellblades
+  text: '40 gold crowns to hire
+
+    The Fellblades are elite warriors of the Dark Elf armies and are often linked to the household of a particular Noble family.
+    Fellblades live a life of strict martial training, each specialises in a particular weapon and fighting style. Killing
+    is a way of life for these warriors. Enemies can expect no mercy from them. Fellblades accompany raiding parties to Lustria
+    as paid guards or to further hone their killing skills.
+
+    Weapons/Armour: Fellblades may be armed with weapons
+
+    and armour chosen from the Dark Elf Equipment list.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 0 – 2 Fellblades
+  - Special Rules
+  text: 'Melee Specialists: Fellblades live by a strict code of close
+
+    quarter fighting. Fellblades may not use missile weapons of
+
+    any sort.'
+- section: 0 – 1 Dark Elf Sorceress
+  section_path:
+  - heroes
+  - 0 – 1 Dark Elf Sorceress
+  text: '55 gold crowns to hire
+
+    Dark Elves are strange in that apart from the fell Witch King there are no other male sorcerers, all the other practitioners
+    of magic in the Dark Elf race are female. It is rumoured that any males who do develop an affinity for magic amongst the
+    Dark Elves are immediately put to death to fulfil some dark prophecy. Dark Elf Sorceresses are mysterious, raven haired
+    beauties who are grudgingly respected even from the powerful High Born and their services are high in demand.
+
+    Weapons/Armour: The Sorceress may be armed with
+
+    weapons and armour chosen from the Dark Elf Equipment
+
+    list but they may not cast spells if wearing armour.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 0 – 1 Dark Elf Sorceress
+  - Special Rules
+  text: 'Wizard: The Dark Elf Sorceress is a wizard and uses Dark Elf Magic .'
+- section: henchmen
+  section_path:
+  - henchmen
+  text: (Bought in groups of 1-5)
+- section: Corsairs
+  section_path:
+  - henchmen
+  - Corsairs
+  text: '35 gold crowns to hire
+
+    The Dark Elves are cruel and fierce fighters. This is especially true of the Corsairs – the Black Ark Raiders. They are
+    skilled with sword and axe, as well as the repeater crossbow, the distinct missile weapon of the Dark Elves. Whenever
+    a Black Ark explores the coast of Lustria the Corsairs are the first to launch raiding parties.
+
+    Weapons/Armour: Corsairs may be armed with weapons
+
+    and armour chosen from the Dark Elf Equipment list, in
+
+    addition they may wear Sea Dragon Cloaks even though they
+
+    are not heroes.'
+- section: 0 – 5 Shades
+  section_path:
+  - henchmen
+  - 0 – 5 Shades
+  text: '30 gold crowns to hire
+
+    The stealthy Dark Elf Scouts rely on their repeater crossbows to harass and snipe at the enemy, rather than engaging them
+    head on as ambush is the preferred style of fighting. Shades are young and inexperienced scouts that see the expeditions
+    to Lustria as a valuable training opportunity.
+
+    Weapons/Armour: Shades may be armed with weapons and
+
+    armour chosen from the Shades Equipment list.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 5 Shades
+  - Special Rules
+  text: 'Natural Stealth: The first thing that Dark Elf Scouts master
+
+    is the art of moving without being seen or heard. If a Dark Elf
+
+    is Hiding, enemy models suffer -1 to their Initiative value for
+
+    determining if they can detect him.'
+- section: 0 – 2 Cold One Beasthounds
+  section_path:
+  - henchmen
+  - 0 – 2 Cold One Beasthounds
+  text: '30 gold crowns to hire
+
+    The Dark Elves capture and breed many exotic creatures to fight for them and fights between pets are often staged as a
+    form of entertainment amongst the Dark Elves. One such animal was discovered in Lustria. Distantly related to Cold Ones,
+    the Cold One Beasthound lives in swamps and bogs. Cold One Beasthounds are larger than war dogs and of similar build but
+    are in all other respects reptilian. Rows of sharp teeth fill its maw, and when provoked, the Cold One Beasthound is a
+    very aggressive beast. The Dark Elves capture and train these creatures to fight in battles all over the Warhammer world.
+
+    Weapons/Armour: Cold One Beasthounds are animals and
+
+    do not need any weapons save their claws and massive jaws.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 2 Cold One Beasthounds
+  - Special Rules
+  text: 'Animals: Cold One Beasthounds are animals and all animal
+
+    rules apply to them, they never gain experience.
+
+    Beastmaster: Cold One Beasthounds are nasty viscous
+
+    brutes that are barely kept under control. If the Beastmaster
+
+    dies the beasts will immediately escape from the warband and
+
+    they are removed from the warband roster. If the Beastmaster
+
+    is unable to participate in a battle, then neither will the beasts.
+
+    Stupidity: Cold One Beasthounds may use the basic
+
+    Leadership of the Beastmaster if they are within 6" of him.
+
+    They may never use the Leadership of the warband leader,
+
+    nor may they benefit from the Beastmaster’s increased
+
+    Leadership if he is within 6" of the leader.
+
+    Scaly Skin: Cold One Beasthounds have tough scaly skin, and are considered to have a 6+ armour save. This save cannot
+    be modified beyond 6 due to strength modifiers but any result of ‘no save’ on the Critical Hit chart will negate the unmodified
+    6+ save.
+
+    Fear: Cold One Beasthounds cause Fear.'
+canonical_family: dark-elves

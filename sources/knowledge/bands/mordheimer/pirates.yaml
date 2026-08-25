@@ -1,0 +1,2137 @@
+schema_version: 1
+id: pirates
+name: Pirates
+name_i18n:
+  en: Pirates
+  es: null
+original_locale: en
+categories:
+- 1b
+collections:
+- mordheimer
+grade: 1b
+setting: Mordheim
+publication: Town Cryer 9
+status: source-normalized
+sources:
+- manual: mordheimer.net
+  printed_page: 0
+  section: Pirates
+  url: https://mordheimer.net/docs/warbands/grade-1b-warbands/pirates
+roster:
+  minimum_models: 3
+  maximum_models: 15
+  starting_gold: 500
+  members:
+  - profile_id: pirate-captain
+    minimum: 1
+    maximum: 1
+  - profile_id: ships-mates
+    minimum: 0
+    maximum: 2
+  - profile_id: cabin-boys
+    minimum: 0
+    maximum: 2
+  - profile_id: crew
+    minimum: 0
+    maximum: null
+  - profile_id: gunners
+    minimum: 0
+    maximum: 7
+  - profile_id: boatswains
+    minimum: 0
+    maximum: 5
+  - profile_id: swabbies
+    minimum: 0
+    maximum: 5
+equipment_lists:
+- id: pirate-equipment-list
+  name: Pirate Equipment List
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: 1st free/2 gc
+  - item_id: hammer
+    cost: 3
+  - item_id: mace
+    cost: 3
+  - item_id: axe
+    cost: 5
+  - item_id: boat_hook
+    cost: 8
+  - item_id: cat_o_nine_tails
+    cost: 8
+    notes: 8 gc (Heroes only) ✏️
+  - item_id: cutlass_sword
+    cost: 10
+  - item_id: great_weapon
+    cost: 15
+  - item_id: belaying_pin
+    cost: 3
+  - item_id: crossbow
+    cost: 25
+  - item_id: pistol
+    cost: 15
+    notes: 15 gc (30 for a brace) ✏️
+  - item_id: duelling_pistol
+    cost: 30
+    notes: 30 gc (60 for a brace)
+  - item_id: buckler
+    cost: 5
+  - item_id: toughened_leathers
+    cost: 5
+    notes: 5 gc ✏️
+  - item_id: helmet
+    cost: 10
+  - item_id: light_armour
+    cost: 20
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Pirate Equipment List
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/pirates
+  name_i18n:
+    en: Pirate Equipment List
+    es: null
+- id: swabbie-equipment-list
+  name: Swabbie Equipment List
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: 1st free/2 gc
+  - item_id: hammer
+    cost: 3
+  - item_id: mace
+    cost: 3
+  - item_id: axe
+    cost: 5
+  - item_id: boat_hook
+    cost: 8
+  - item_id: cutlass_sword
+    cost: 10
+  - item_id: great_weapon
+    cost: 15
+  - item_id: belaying_pin
+    cost: 3
+  - item_id: bow
+    cost: 10
+  - item_id: buckler
+    cost: 5
+  - item_id: toughened_leathers
+    cost: 5
+    notes: 5 gc ✏️
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Swabbie Equipment List
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/pirates
+  name_i18n:
+    en: Swabbie Equipment List
+    es: null
+- id: gunner-equipment-list
+  name: Gunner Equipment List
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: 1st free/2 gc
+  - item_id: hammer
+    cost: 3
+  - item_id: mace
+    cost: 3
+  - item_id: axe
+    cost: 5
+  - item_id: cutlass_sword
+    cost: 10
+  - item_id: pistol
+    cost: 15
+    notes: 15 gc (30 for a brace) ✏️
+  - item_id: blunderbuss
+    cost: 30
+  - item_id: duelling_pistol
+    cost: 30
+    notes: 30 gc (60 for a brace)
+  - item_id: handgun
+    cost: 35
+  - item_id: swivel_gun
+    cost: 65
+    notes: 65 gc (Rare 8; one per Warband)
+  - item_id: ball_shot
+    cost: 5
+  - item_id: chain_shot
+    cost: 2
+  - item_id: grape_shot
+    cost: 2
+  - item_id: toughened_leathers
+    cost: 5
+    notes: 5 gc ✏️
+  - item_id: helmet
+    cost: 10
+  - item_id: light_armour
+    cost: 20
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Gunner Equipment List
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/pirates
+  name_i18n:
+    en: Gunner Equipment List
+    es: null
+profiles:
+- id: pirate-captain
+  name: Pirate Captain
+  type: hero
+  cost: 60
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 4
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 4
+    A: 1
+    Ld: 8
+  equipment_lists:
+  - pirate-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - shooting
+  - academic
+  - strength
+  - speed
+  - special
+  rules:
+  - id: leader
+    name: Leader
+    effect: 'Any pirate within 6" of the Captain may
+
+      use his Leadership characteristic when taking
+
+      any Leadership tests.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: heroes / 1 Pirate Captain / Special Rules / Leader
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/pirates
+    name_i18n:
+      en: Leader
+      es: null
+    effect_i18n:
+      en: 'Any pirate within 6" of the Captain may
+
+        use his Leadership characteristic when taking
+
+        any Leadership tests.'
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 1 Pirate Captain
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/pirates
+  source_path:
+  - heroes
+  - 1 Pirate Captain
+  name_i18n:
+    en: Pirate Captain
+    es: null
+- id: ships-mates
+  name: Ship’s Mates
+  type: hero
+  cost: 35
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 4
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - pirate-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - shooting
+  - strength
+  - special
+  rules: []
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 2 Ship’s Mates
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/pirates
+  source_path:
+  - heroes
+  - 0 – 2 Ship’s Mates
+  name_i18n:
+    en: Ship’s Mates
+    es: null
+- id: cabin-boys
+  name: Cabin Boys
+  type: hero
+  cost: 15
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 2
+    BS: 2
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 6
+  equipment_lists:
+  - pirate-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - shooting
+  - speed
+  - special
+  rules: []
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 2 Cabin Boys
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/pirates
+  source_path:
+  - heroes
+  - 0 – 2 Cabin Boys
+  name_i18n:
+    en: Cabin Boys
+    es: null
+- id: crew
+  name: Crew
+  type: henchman
+  cost: 25
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - pirate-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules: []
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Crew
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/pirates
+  source_path:
+  - henchmen
+  - Crew
+  name_i18n:
+    en: Crew
+    es: null
+- id: gunners
+  name: Gunners
+  type: henchman
+  cost: 25
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - gunner-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules:
+  - id: special-rules
+    name: Special Rules
+    effect: 'Swivel Guns is Dangerous, Matey! Gunners
+
+      are known to be amongst the bravest of pirates,
+
+      given their close proximity to blackpowder
+
+      weapons, but even among themselves they
+
+      stand in awe of any Gunner who takes a Swivel
+
+      Gun into battle. Usually they stand in awe quite
+
+      far away from him – even they can’t be sure
+
+      when one might blow! If a Pirate Warband
+
+      includes a Swivel Gun, the Gunner wielding it
+
+      will always be considered an individual and can
+
+      never have anyone else with him. Since a Pirate
+
+      Warband may only have one Swivel Gun, if a
+
+      Gunner is equipped with one then he must
+
+      either be a new Gunner, or split from an
+
+      existing unit. If the latter, he retains all
+
+      Experience and Skills he had previously.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 7 Gunners / Special Rules
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/pirates
+    name_i18n:
+      en: Special Rules
+      es: null
+    effect_i18n:
+      en: 'Swivel Guns is Dangerous, Matey! Gunners
+
+        are known to be amongst the bravest of pirates,
+
+        given their close proximity to blackpowder
+
+        weapons, but even among themselves they
+
+        stand in awe of any Gunner who takes a Swivel
+
+        Gun into battle. Usually they stand in awe quite
+
+        far away from him – even they can’t be sure
+
+        when one might blow! If a Pirate Warband
+
+        includes a Swivel Gun, the Gunner wielding it
+
+        will always be considered an individual and can
+
+        never have anyone else with him. Since a Pirate
+
+        Warband may only have one Swivel Gun, if a
+
+        Gunner is equipped with one then he must
+
+        either be a new Gunner, or split from an
+
+        existing unit. If the latter, he retains all
+
+        Experience and Skills he had previously.'
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 7 Gunners
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/pirates
+  source_path:
+  - henchmen
+  - 0 – 7 Gunners
+  name_i18n:
+    en: Gunners
+    es: null
+- id: boatswains
+  name: Boatswains
+  type: henchman
+  cost: 32
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - pirate-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules:
+  - id: expert-riggers
+    name: Expert Riggers
+    effect: 'Boatswains are highly trained
+
+      in using their ropes, as they are the ones who
+
+      maintain the complex network of rigging
+
+      throughout the ship. They may re-roll failed
+
+      Initiative tests Leaping over Gaps, Jumping
+
+      Down, and performing a Diving Charge, as well
+
+      as the normal test for Climbing Up or Down that
+
+      a Rope allows.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 5 Boatswains / Special Rules / Expert Riggers
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/pirates
+    name_i18n:
+      en: Expert Riggers
+      es: null
+    effect_i18n:
+      en: 'Boatswains are highly trained
+
+        in using their ropes, as they are the ones who
+
+        maintain the complex network of rigging
+
+        throughout the ship. They may re-roll failed
+
+        Initiative tests Leaping over Gaps, Jumping
+
+        Down, and performing a Diving Charge, as well
+
+        as the normal test for Climbing Up or Down that
+
+        a Rope allows.'
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 5 Boatswains
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/pirates
+  source_path:
+  - henchmen
+  - 0 – 5 Boatswains
+  name_i18n:
+    en: Boatswains
+    es: null
+- id: swabbies
+  name: Swabbies
+  type: henchman
+  cost: 0
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 2
+    BS: 2
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 6
+  equipment_lists:
+  - swabbie-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules:
+  - id: not-hired
+    name: Not Hired
+    effect: 'Swabbies are not hired, they follow
+
+      the special ‘recruitment’ rules above.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 5 Swabbies / Special Rules / Not Hired
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/pirates
+    name_i18n:
+      en: Not Hired
+      es: null
+    effect_i18n:
+      en: 'Swabbies are not hired, they follow
+
+        the special ‘recruitment’ rules above.'
+      es: null
+  - id: never-gain-experience
+    name: Never Gain Experience
+    effect: 'Swabbies generally
+
+      aren’t interested in proving their worth to the
+
+      crew, they are interested in survival and
+
+      hopefully escape! Swabbies never gain
+
+      experience in games.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 5 Swabbies / Special Rules / Never Gain Experience
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/pirates
+    name_i18n:
+      en: Never Gain Experience
+      es: null
+    effect_i18n:
+      en: 'Swabbies generally
+
+        aren’t interested in proving their worth to the
+
+        crew, they are interested in survival and
+
+        hopefully escape! Swabbies never gain
+
+        experience in games.'
+      es: null
+  - id: rabble
+    name: Rabble
+    effect: 'Swabbies do not need to be armed all
+
+      the same. Each may be given different
+
+      equipment, but only items listed in the Swabbie
+
+      equipment list. Swabbies can never use magic,
+
+      or cast spells of any sort, no matter their
+
+      original background or abilities.
+
+      ‘Blimey, they got away!’ If the Pirate Warband
+
+      itself Routs, any Swabbies who have already left
+
+      the table in previous turns are presumed to
+
+      have made a successful escape, and are never
+
+      seen from again. Remove them from your
+
+      warband roster as if they had been killed.
+
+      ‘Don’t mind them mates, they ain’t true pirates!’ The rest of the crew barely notice if
+
+      any Swabbies run away or go Out of Action –
+
+      they know they’ll find them later on and give
+
+      them 30 lashes if they’re lucky! Any Swabbies
+
+      who are running away or have been taken out
+
+      of action do not count towards the need to take
+
+      a Rout test for the warband.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 5 Swabbies / Special Rules / Rabble
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/pirates
+    name_i18n:
+      en: Rabble
+      es: null
+    effect_i18n:
+      en: 'Swabbies do not need to be armed all
+
+        the same. Each may be given different
+
+        equipment, but only items listed in the Swabbie
+
+        equipment list. Swabbies can never use magic,
+
+        or cast spells of any sort, no matter their
+
+        original background or abilities.
+
+        ‘Blimey, they got away!’ If the Pirate Warband
+
+        itself Routs, any Swabbies who have already left
+
+        the table in previous turns are presumed to
+
+        have made a successful escape, and are never
+
+        seen from again. Remove them from your
+
+        warband roster as if they had been killed.
+
+        ‘Don’t mind them mates, they ain’t true pirates!’ The rest of the crew barely notice if
+
+        any Swabbies run away or go Out of Action –
+
+        they know they’ll find them later on and give
+
+        them 30 lashes if they’re lucky! Any Swabbies
+
+        who are running away or have been taken out
+
+        of action do not count towards the need to take
+
+        a Rout test for the warband.'
+      es: null
+  - id: special-recruitment
+    name: Special Recruitment
+    effect: 'Special Recruitment rules (see above)
+
+      Not all members of a Pirate Warband are there entirely voluntarily. Some have been captured from enemy vessels, or rounded
+      up on the docks or harbour fronts when the ship was in need of extra men. Kept under a watchful eye by the Mates, the
+      Swabbies know they had better carry out their duties as assigned, lest they face a keel-hauling or worse! Many have
+      grown accustomed to their lot, but given a chance many will run for it, even into the unknown dangers of the hellish
+      city ruins.
+
+      Weapons/Armour: Swabbies may be
+
+      equipped with weapons and armour chosen
+
+      from the Swabbie Equipment list.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: 0 – 5 Swabbies
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/pirates
+    name_i18n:
+      en: Special Recruitment
+      es: null
+    effect_i18n:
+      en: 'Special Recruitment rules (see above)
+
+        Not all members of a Pirate Warband are there entirely voluntarily. Some have been captured from enemy vessels, or
+        rounded up on the docks or harbour fronts when the ship was in need of extra men. Kept under a watchful eye by the
+        Mates, the Swabbies know they had better carry out their duties as assigned, lest they face a keel-hauling or worse!
+        Many have grown accustomed to their lot, but given a chance many will run for it, even into the unknown dangers of
+        the hellish city ruins.
+
+        Weapons/Armour: Swabbies may be
+
+        equipped with weapons and armour chosen
+
+        from the Swabbie Equipment list.'
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 5 Swabbies
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/pirates
+  source_path:
+  - henchmen
+  - 0 – 5 Swabbies
+  name_i18n:
+    en: Swabbies
+    es: null
+band_rules:
+- id: special-rules
+  name: Special rules
+  effect: 'Swabbies: Pirate warbands can ‘recruit’ new
+
+    members to join the adventuresome life of a
+
+    pirate, sometimes willingly but oftentimes more
+
+    as an alternative to walking the plank! Only
+
+    humans can be recruited in this manner though
+
+    – not even the most bloodthirsty pirate would
+
+    ever trust a Skaven or Beastman, and other
+
+    races even though friendly to mankind would
+
+    normally never follow a mere human into
+
+    battle! The following special rules apply to
+
+    certain situations in Mordheim game play:
+
+    Kidnapped! Enemy human Heroes who after
+
+    the game rolled up the Captured result (D66
+
+    roll of 61 ✏️ ) can be ‘offered’ one
+
+    opportunity to join the pirate crew (usually at
+
+    the point of a cutlass!). As an alternative to
+
+    exchanging/ransoming the captured Hero back
+
+    to their original Warband (or selling him to
+
+    slavers), the Pirate Captain can instead add the
+
+    captured enemy to the ship’s crew as follows.
+
+    Both players roll 2D6, with the Pirate player
+
+    adding the Captain’s Leadership and the enemy
+
+    player adding the Leadership of the captured
+
+    Hero. If either side won that game, it may add
+
+    +1 to it’s score.
+
+    If the Pirate player’s result is higher, the Hero
+
+    renounces his old ways for the life of the high
+
+    seas! She or he joins the Crew, either starting a
+
+    new Crew group or joining an existing one if it
+
+    has four models or less. There is no extra cost to
+
+    add him to a group which has accumulated
+
+    experience points, and any equipment or
+
+    weapons he had are immediately sold off to buy
+
+    him the proper weapons and armour to match
+
+    his new unit in an even swap. His skills and
+
+    characteristics are changed to those of a starting
+
+    Crewman, or to match those of his new crewmates if joining an existing group.
+
+    Otherwise, the Hero has resisted the siren’s
+
+    song of the sea, and is forced to become a
+
+    Swabbie (see Swabbies below). He is stripped of
+
+    his equipment and weapons; these are handed
+
+    out as the player desires. He does retain any
+
+    skills and keeps his original characteristics, but
+
+    can only be re-armed with the weapons listed in
+
+    the Swabbie equipment list.
+
+    Enemy human Henchmen taken Out of Action
+
+    during the game and then lost from their
+
+    original Warband for good (a 1-2 was rolled for
+
+    them post-game) also have a chance of joining
+
+    up too! Roll another D6 for each: on a roll of
+
+    4+, the Pirates manage to drag them away or
+
+    otherwise make off with their wounded bodies,
+
+    and patch them up on the ship. The Pirate
+
+    player can then test to see if they will join
+
+    exactly as above, by both players rolling 2D6
+
+    and adding it to the Captain’s and the
+
+    Henchman’s Leadership. This test can only be
+
+    done if the Pirates win the game, so the Pirate
+
+    player will always get a +1 to his roll.
+
+    Hired Swords and Special Characters are too
+
+    skilled to be taken off in this manner, and can
+
+    never be recruited – they have their own
+
+    agendas to pursue, and will ensure the pirate
+
+    life is not part of those plans.
+
+    Well now matey, have you ever considered
+
+    pirating as a career? If the Pirates encounter
+
+    Stragglers (result 44) or Prisoners (result 333)
+
+    when Searching, there is a chance they may sign
+
+    up to sail under the Jolly Roger. Either of these
+
+    options may be used instead of the regular
+
+    options listed for these situations.
+
+    If a Straggler is found, the Captain can try to
+
+    convince him to join the crew by making a
+
+    successful Leadership test. If passed, the
+
+    Straggler joins as a Swabbie (he’s too unhinged
+
+    even to become a member of the Crew!)
+
+    If Prisoners are found, roll a D3 to determine
+
+    how many are rescued. If the Captain passes a
+
+    Leadership test (he must make a separate test
+
+    for each one), the Prisoner eagerly joins his
+
+    rescuers as a member of the Crew, either
+
+    starting a new Crew group or joining an existing
+
+    one if it has four models or less. If he is starting
+
+    a new Crew group, he will start at the normal
+
+    characteristics levels for a normal Crew member
+
+    and at Zero Experience. There is no extra cost
+
+    to add him to an existing group which has
+
+    accumulated experience points, and his skills
+
+    and characteristics match those of his new crewmates. The player must pay though to equip and
+
+    arm the new Crewman as per his new unit. If
+
+    the player cannot pay, the prisoner must join as
+
+    a Swabbie. If the test is failed, the Prisoner isn’t
+
+    quite so convinced of the worthiness of the sea
+
+    dogs and is added as a Swabbie.
+
+    Hired Swords: Unless noted otherwise, Pirate Warbands have
+
+    the same access to Hired Swords & any other
+
+    items as for a regular human Mercenary
+
+    Warband, and follow all the normal rules for
+
+    them as well. They must however pay an
+
+    additional +20 gc in upkeep if they have both
+
+    Dwarfs and Elves together in the same warband
+
+    (the ship is only so big, and the confines make
+
+    them more irritable than usual!).
+
+    One-off games: In one-off games, a Pirate Warband starts with
+
+    two Swabbies for free.
+
+    Succession: If the Captain is killed, one of the
+
+    Mates will take over in the same manner as a
+
+    Champion taking over for a Mercenary
+
+    warband.'
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Special rules
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/pirates
+  name_i18n:
+    en: Special rules
+    es: null
+  effect_i18n:
+    en: 'Swabbies: Pirate warbands can ‘recruit’ new
+
+      members to join the adventuresome life of a
+
+      pirate, sometimes willingly but oftentimes more
+
+      as an alternative to walking the plank! Only
+
+      humans can be recruited in this manner though
+
+      – not even the most bloodthirsty pirate would
+
+      ever trust a Skaven or Beastman, and other
+
+      races even though friendly to mankind would
+
+      normally never follow a mere human into
+
+      battle! The following special rules apply to
+
+      certain situations in Mordheim game play:
+
+      Kidnapped! Enemy human Heroes who after
+
+      the game rolled up the Captured result (D66
+
+      roll of 61 ✏️ ) can be ‘offered’ one
+
+      opportunity to join the pirate crew (usually at
+
+      the point of a cutlass!). As an alternative to
+
+      exchanging/ransoming the captured Hero back
+
+      to their original Warband (or selling him to
+
+      slavers), the Pirate Captain can instead add the
+
+      captured enemy to the ship’s crew as follows.
+
+      Both players roll 2D6, with the Pirate player
+
+      adding the Captain’s Leadership and the enemy
+
+      player adding the Leadership of the captured
+
+      Hero. If either side won that game, it may add
+
+      +1 to it’s score.
+
+      If the Pirate player’s result is higher, the Hero
+
+      renounces his old ways for the life of the high
+
+      seas! She or he joins the Crew, either starting a
+
+      new Crew group or joining an existing one if it
+
+      has four models or less. There is no extra cost to
+
+      add him to a group which has accumulated
+
+      experience points, and any equipment or
+
+      weapons he had are immediately sold off to buy
+
+      him the proper weapons and armour to match
+
+      his new unit in an even swap. His skills and
+
+      characteristics are changed to those of a starting
+
+      Crewman, or to match those of his new crewmates if joining an existing group.
+
+      Otherwise, the Hero has resisted the siren’s
+
+      song of the sea, and is forced to become a
+
+      Swabbie (see Swabbies below). He is stripped of
+
+      his equipment and weapons; these are handed
+
+      out as the player desires. He does retain any
+
+      skills and keeps his original characteristics, but
+
+      can only be re-armed with the weapons listed in
+
+      the Swabbie equipment list.
+
+      Enemy human Henchmen taken Out of Action
+
+      during the game and then lost from their
+
+      original Warband for good (a 1-2 was rolled for
+
+      them post-game) also have a chance of joining
+
+      up too! Roll another D6 for each: on a roll of
+
+      4+, the Pirates manage to drag them away or
+
+      otherwise make off with their wounded bodies,
+
+      and patch them up on the ship. The Pirate
+
+      player can then test to see if they will join
+
+      exactly as above, by both players rolling 2D6
+
+      and adding it to the Captain’s and the
+
+      Henchman’s Leadership. This test can only be
+
+      done if the Pirates win the game, so the Pirate
+
+      player will always get a +1 to his roll.
+
+      Hired Swords and Special Characters are too
+
+      skilled to be taken off in this manner, and can
+
+      never be recruited – they have their own
+
+      agendas to pursue, and will ensure the pirate
+
+      life is not part of those plans.
+
+      Well now matey, have you ever considered
+
+      pirating as a career? If the Pirates encounter
+
+      Stragglers (result 44) or Prisoners (result 333)
+
+      when Searching, there is a chance they may sign
+
+      up to sail under the Jolly Roger. Either of these
+
+      options may be used instead of the regular
+
+      options listed for these situations.
+
+      If a Straggler is found, the Captain can try to
+
+      convince him to join the crew by making a
+
+      successful Leadership test. If passed, the
+
+      Straggler joins as a Swabbie (he’s too unhinged
+
+      even to become a member of the Crew!)
+
+      If Prisoners are found, roll a D3 to determine
+
+      how many are rescued. If the Captain passes a
+
+      Leadership test (he must make a separate test
+
+      for each one), the Prisoner eagerly joins his
+
+      rescuers as a member of the Crew, either
+
+      starting a new Crew group or joining an existing
+
+      one if it has four models or less. If he is starting
+
+      a new Crew group, he will start at the normal
+
+      characteristics levels for a normal Crew member
+
+      and at Zero Experience. There is no extra cost
+
+      to add him to an existing group which has
+
+      accumulated experience points, and his skills
+
+      and characteristics match those of his new crewmates. The player must pay though to equip and
+
+      arm the new Crewman as per his new unit. If
+
+      the player cannot pay, the prisoner must join as
+
+      a Swabbie. If the test is failed, the Prisoner isn’t
+
+      quite so convinced of the worthiness of the sea
+
+      dogs and is added as a Swabbie.
+
+      Hired Swords: Unless noted otherwise, Pirate Warbands have
+
+      the same access to Hired Swords & any other
+
+      items as for a regular human Mercenary
+
+      Warband, and follow all the normal rules for
+
+      them as well. They must however pay an
+
+      additional +20 gc in upkeep if they have both
+
+      Dwarfs and Elves together in the same warband
+
+      (the ship is only so big, and the confines make
+
+      them more irritable than usual!).
+
+      One-off games: In one-off games, a Pirate Warband starts with
+
+      two Swabbies for free.
+
+      Succession: If the Captain is killed, one of the
+
+      Mates will take over in the same manner as a
+
+      Champion taking over for a Mercenary
+
+      warband.'
+    es: null
+- id: pirate-special-skills
+  name: Pirate Special Skills
+  effect: 'Pirate Heroes may use the following Skill table instead of any of the standard Skill tables available
+
+    to them.'
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Pirate Special Skills
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/pirates
+  name_i18n:
+    en: Pirate Special Skills
+    es: null
+  effect_i18n:
+    en: 'Pirate Heroes may use the following Skill table instead of any of the standard Skill tables available
+
+      to them.'
+    es: null
+- id: pirate-special-skills-sea-shanty-singer
+  name: Sea Shanty Singer
+  effect: 'The pirate is renowned throughout the seas as
+
+    one of the greatest singers aboard a ship, able to
+
+    raise the spirits of any crew with his stirring
+
+    renditions of ‘The Sloop Johan Bee’, ‘What do
+
+    you do with a Drunken Halfling?’, and other
+
+    famous pirate ditties. At the start of his Close
+
+    Combat phase he can suddenly burst out in
+
+    song, distracting one opponent in base contact
+
+    of his choosing. That enemy must pass a
+
+    Leadership test, or loose 1 Attack that turn. This
+
+    does not effect Undead or other non-living creatures, such as Possessed.'
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Pirate Special Skills / Sea Shanty Singer
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/pirates
+  name_i18n:
+    en: Sea Shanty Singer
+    es: null
+  effect_i18n:
+    en: 'The pirate is renowned throughout the seas as
+
+      one of the greatest singers aboard a ship, able to
+
+      raise the spirits of any crew with his stirring
+
+      renditions of ‘The Sloop Johan Bee’, ‘What do
+
+      you do with a Drunken Halfling?’, and other
+
+      famous pirate ditties. At the start of his Close
+
+      Combat phase he can suddenly burst out in
+
+      song, distracting one opponent in base contact
+
+      of his choosing. That enemy must pass a
+
+      Leadership test, or loose 1 Attack that turn. This
+
+      does not effect Undead or other non-living creatures, such as Possessed.'
+    es: null
+- id: pirate-special-skills-sea-legs
+  name: Sea Legs
+  effect: 'Even in the strongest seas, the pirate has
+
+    learned to keep his footing and equilibrium. If
+
+    he Falls during a battle, he may ignore the
+
+    effects of the D3 hits on a roll of 4+ (make a
+
+    single roll to see if the any of the hits take effect
+
+    or not). In addition, if he is knocked down or
+
+    stunned within 1" of a precipice he may re-roll
+
+    his Initiative test to see if he falls down or not.'
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Pirate Special Skills / Sea Legs
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/pirates
+  name_i18n:
+    en: Sea Legs
+    es: null
+  effect_i18n:
+    en: 'Even in the strongest seas, the pirate has
+
+      learned to keep his footing and equilibrium. If
+
+      he Falls during a battle, he may ignore the
+
+      effects of the D3 hits on a roll of 4+ (make a
+
+      single roll to see if the any of the hits take effect
+
+      or not). In addition, if he is knocked down or
+
+      stunned within 1" of a precipice he may re-roll
+
+      his Initiative test to see if he falls down or not.'
+    es: null
+- id: pirate-special-skills-cutlass-master
+  name: Cutlass Master
+  effect: 'These short, single bladed swords are the
+
+    mainstay weapon of any pirate crew, and in the
+
+    hands of a trained seaman they are superb
+
+    weapons for close quarters fighting. If the pirate
+
+    is equipped with a Sword, this skill will give him
+
+    the additional benefit of also being able to parry
+
+    successfully if the player rolls equal to number
+
+    rolled to hit, not just higher as normal. This
+
+    extra ability only apply if the Pirate is not in the
+
+    open; ie., only when in cover or in a building,
+
+    within 2" of a terrain feature like a wall or tree,
+
+    etc.'
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Pirate Special Skills / Cutlass Master
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/pirates
+  name_i18n:
+    en: Cutlass Master
+    es: null
+  effect_i18n:
+    en: 'These short, single bladed swords are the
+
+      mainstay weapon of any pirate crew, and in the
+
+      hands of a trained seaman they are superb
+
+      weapons for close quarters fighting. If the pirate
+
+      is equipped with a Sword, this skill will give him
+
+      the additional benefit of also being able to parry
+
+      successfully if the player rolls equal to number
+
+      rolled to hit, not just higher as normal. This
+
+      extra ability only apply if the Pirate is not in the
+
+      open; ie., only when in cover or in a building,
+
+      within 2" of a terrain feature like a wall or tree,
+
+      etc.'
+    es: null
+- id: pirate-special-skills-booming-voice
+  name: Booming Voice
+  effect: '(Captain only) The Captain has spent many a
+
+    battle bellowing orders to his crew, yelling
+
+    above the roar of the cannons and the screams
+
+    of the enemy. Once per turn, the captain may
+
+    shout encouraging words (or threats) at any one
+
+    pirate within 8" who just failed his test to see if
+
+    he runs away from combat, or to stop running
+
+    away if he was already fleeing. That pirate may
+
+    then re-roll the test. This can only be done if the
+
+    Captain is on his feet, but not if the Captain is in
+
+    close combat himself.'
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Pirate Special Skills / Booming Voice
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/pirates
+  name_i18n:
+    en: Booming Voice
+    es: null
+  effect_i18n:
+    en: '(Captain only) The Captain has spent many a
+
+      battle bellowing orders to his crew, yelling
+
+      above the roar of the cannons and the screams
+
+      of the enemy. Once per turn, the captain may
+
+      shout encouraging words (or threats) at any one
+
+      pirate within 8" who just failed his test to see if
+
+      he runs away from combat, or to stop running
+
+      away if he was already fleeing. That pirate may
+
+      then re-roll the test. This can only be done if the
+
+      Captain is on his feet, but not if the Captain is in
+
+      close combat himself.'
+    es: null
+- id: pirate-special-skills-hardy-constitution
+  name: Hardy Constitution
+  effect: 'Many months at sea, and especially many
+
+    months eating hardtack, have hardened the
+
+    pirate’s body to effects that would cause a lesser
+
+    man to collapse. During the battle, the pirate
+
+    may ignore any Critical Hits on a roll of 5+ (the
+
+    wound is treated as normal if the roll is
+
+    successful). If the roll is failed, the Critical Hit is
+
+    worked out as normal.'
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Pirate Special Skills / Hardy Constitution
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/pirates
+  name_i18n:
+    en: Hardy Constitution
+    es: null
+  effect_i18n:
+    en: 'Many months at sea, and especially many
+
+      months eating hardtack, have hardened the
+
+      pirate’s body to effects that would cause a lesser
+
+      man to collapse. During the battle, the pirate
+
+      may ignore any Critical Hits on a roll of 5+ (the
+
+      wound is treated as normal if the roll is
+
+      successful). If the roll is failed, the Critical Hit is
+
+      worked out as normal.'
+    es: null
+- id: pirate-special-skills-swashbuckler
+  name: Swashbuckler
+  effect: 'The pirate cuts a dashing figure in combat,
+
+    mixing dazzling swordplay and acrobatic feats
+
+    with charm and witty comments. Even the
+
+    basest villains in Mordheim respect (and curse)
+
+    his ability to always seem to effortlessly slip
+
+    from their grasp. The pirate may make a
+
+    Leadership Test at the end of any Hand-to-Hand
+
+    phase (pirate’s or enemy’s turn) if he is still in
+
+    base contact with any enemy models. If he
+
+    passes he may make a normal movement away
+
+    from the enemy (he may not run or charge),
+
+    without the enemy striking any blows on him. If
+
+    he fails the test he remains in combat and must
+
+    fight as normal in the following turn.'
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Pirate Special Skills / Swashbuckler
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/pirates
+  name_i18n:
+    en: Swashbuckler
+    es: null
+  effect_i18n:
+    en: 'The pirate cuts a dashing figure in combat,
+
+      mixing dazzling swordplay and acrobatic feats
+
+      with charm and witty comments. Even the
+
+      basest villains in Mordheim respect (and curse)
+
+      his ability to always seem to effortlessly slip
+
+      from their grasp. The pirate may make a
+
+      Leadership Test at the end of any Hand-to-Hand
+
+      phase (pirate’s or enemy’s turn) if he is still in
+
+      base contact with any enemy models. If he
+
+      passes he may make a normal movement away
+
+      from the enemy (he may not run or charge),
+
+      without the enemy striking any blows on him. If
+
+      he fails the test he remains in combat and must
+
+      fight as normal in the following turn.'
+    es: null
+source_sections:
+- section: Special rules
+  section_path:
+  - Special rules
+  text: 'Swabbies: Pirate warbands can ‘recruit’ new
+
+    members to join the adventuresome life of a
+
+    pirate, sometimes willingly but oftentimes more
+
+    as an alternative to walking the plank! Only
+
+    humans can be recruited in this manner though
+
+    – not even the most bloodthirsty pirate would
+
+    ever trust a Skaven or Beastman, and other
+
+    races even though friendly to mankind would
+
+    normally never follow a mere human into
+
+    battle! The following special rules apply to
+
+    certain situations in Mordheim game play:
+
+    Kidnapped! Enemy human Heroes who after
+
+    the game rolled up the Captured result (D66
+
+    roll of 61 ✏️ ) can be ‘offered’ one
+
+    opportunity to join the pirate crew (usually at
+
+    the point of a cutlass!). As an alternative to
+
+    exchanging/ransoming the captured Hero back
+
+    to their original Warband (or selling him to
+
+    slavers), the Pirate Captain can instead add the
+
+    captured enemy to the ship’s crew as follows.
+
+    Both players roll 2D6, with the Pirate player
+
+    adding the Captain’s Leadership and the enemy
+
+    player adding the Leadership of the captured
+
+    Hero. If either side won that game, it may add
+
+    +1 to it’s score.
+
+    If the Pirate player’s result is higher, the Hero
+
+    renounces his old ways for the life of the high
+
+    seas! She or he joins the Crew, either starting a
+
+    new Crew group or joining an existing one if it
+
+    has four models or less. There is no extra cost to
+
+    add him to a group which has accumulated
+
+    experience points, and any equipment or
+
+    weapons he had are immediately sold off to buy
+
+    him the proper weapons and armour to match
+
+    his new unit in an even swap. His skills and
+
+    characteristics are changed to those of a starting
+
+    Crewman, or to match those of his new crewmates if joining an existing group.
+
+    Otherwise, the Hero has resisted the siren’s
+
+    song of the sea, and is forced to become a
+
+    Swabbie (see Swabbies below). He is stripped of
+
+    his equipment and weapons; these are handed
+
+    out as the player desires. He does retain any
+
+    skills and keeps his original characteristics, but
+
+    can only be re-armed with the weapons listed in
+
+    the Swabbie equipment list.
+
+    Enemy human Henchmen taken Out of Action
+
+    during the game and then lost from their
+
+    original Warband for good (a 1-2 was rolled for
+
+    them post-game) also have a chance of joining
+
+    up too! Roll another D6 for each: on a roll of
+
+    4+, the Pirates manage to drag them away or
+
+    otherwise make off with their wounded bodies,
+
+    and patch them up on the ship. The Pirate
+
+    player can then test to see if they will join
+
+    exactly as above, by both players rolling 2D6
+
+    and adding it to the Captain’s and the
+
+    Henchman’s Leadership. This test can only be
+
+    done if the Pirates win the game, so the Pirate
+
+    player will always get a +1 to his roll.
+
+    Hired Swords and Special Characters are too
+
+    skilled to be taken off in this manner, and can
+
+    never be recruited – they have their own
+
+    agendas to pursue, and will ensure the pirate
+
+    life is not part of those plans.
+
+    Well now matey, have you ever considered
+
+    pirating as a career? If the Pirates encounter
+
+    Stragglers (result 44) or Prisoners (result 333)
+
+    when Searching, there is a chance they may sign
+
+    up to sail under the Jolly Roger. Either of these
+
+    options may be used instead of the regular
+
+    options listed for these situations.
+
+    If a Straggler is found, the Captain can try to
+
+    convince him to join the crew by making a
+
+    successful Leadership test. If passed, the
+
+    Straggler joins as a Swabbie (he’s too unhinged
+
+    even to become a member of the Crew!)
+
+    If Prisoners are found, roll a D3 to determine
+
+    how many are rescued. If the Captain passes a
+
+    Leadership test (he must make a separate test
+
+    for each one), the Prisoner eagerly joins his
+
+    rescuers as a member of the Crew, either
+
+    starting a new Crew group or joining an existing
+
+    one if it has four models or less. If he is starting
+
+    a new Crew group, he will start at the normal
+
+    characteristics levels for a normal Crew member
+
+    and at Zero Experience. There is no extra cost
+
+    to add him to an existing group which has
+
+    accumulated experience points, and his skills
+
+    and characteristics match those of his new crewmates. The player must pay though to equip and
+
+    arm the new Crewman as per his new unit. If
+
+    the player cannot pay, the prisoner must join as
+
+    a Swabbie. If the test is failed, the Prisoner isn’t
+
+    quite so convinced of the worthiness of the sea
+
+    dogs and is added as a Swabbie.
+
+    Hired Swords: Unless noted otherwise, Pirate Warbands have
+
+    the same access to Hired Swords & any other
+
+    items as for a regular human Mercenary
+
+    Warband, and follow all the normal rules for
+
+    them as well. They must however pay an
+
+    additional +20 gc in upkeep if they have both
+
+    Dwarfs and Elves together in the same warband
+
+    (the ship is only so big, and the confines make
+
+    them more irritable than usual!).
+
+    One-off games: In one-off games, a Pirate Warband starts with
+
+    two Swabbies for free.
+
+    Succession: If the Captain is killed, one of the
+
+    Mates will take over in the same manner as a
+
+    Champion taking over for a Mercenary
+
+    warband.'
+- section: Pirate Special Skills
+  section_path:
+  - Pirate Special Skills
+  text: 'Pirate Heroes may use the following Skill table instead of any of the standard Skill tables available
+
+    to them.'
+- section: Sea Shanty Singer
+  section_path:
+  - Pirate Special Skills
+  - Sea Shanty Singer
+  text: 'The pirate is renowned throughout the seas as
+
+    one of the greatest singers aboard a ship, able to
+
+    raise the spirits of any crew with his stirring
+
+    renditions of ‘The Sloop Johan Bee’, ‘What do
+
+    you do with a Drunken Halfling?’, and other
+
+    famous pirate ditties. At the start of his Close
+
+    Combat phase he can suddenly burst out in
+
+    song, distracting one opponent in base contact
+
+    of his choosing. That enemy must pass a
+
+    Leadership test, or loose 1 Attack that turn. This
+
+    does not effect Undead or other non-living creatures, such as Possessed.'
+- section: Sea Legs
+  section_path:
+  - Pirate Special Skills
+  - Sea Legs
+  text: 'Even in the strongest seas, the pirate has
+
+    learned to keep his footing and equilibrium. If
+
+    he Falls during a battle, he may ignore the
+
+    effects of the D3 hits on a roll of 4+ (make a
+
+    single roll to see if the any of the hits take effect
+
+    or not). In addition, if he is knocked down or
+
+    stunned within 1" of a precipice he may re-roll
+
+    his Initiative test to see if he falls down or not.'
+- section: Cutlass Master
+  section_path:
+  - Pirate Special Skills
+  - Cutlass Master
+  text: 'These short, single bladed swords are the
+
+    mainstay weapon of any pirate crew, and in the
+
+    hands of a trained seaman they are superb
+
+    weapons for close quarters fighting. If the pirate
+
+    is equipped with a Sword, this skill will give him
+
+    the additional benefit of also being able to parry
+
+    successfully if the player rolls equal to number
+
+    rolled to hit, not just higher as normal. This
+
+    extra ability only apply if the Pirate is not in the
+
+    open; ie., only when in cover or in a building,
+
+    within 2" of a terrain feature like a wall or tree,
+
+    etc.'
+- section: Booming Voice
+  section_path:
+  - Pirate Special Skills
+  - Booming Voice
+  text: '(Captain only) The Captain has spent many a
+
+    battle bellowing orders to his crew, yelling
+
+    above the roar of the cannons and the screams
+
+    of the enemy. Once per turn, the captain may
+
+    shout encouraging words (or threats) at any one
+
+    pirate within 8" who just failed his test to see if
+
+    he runs away from combat, or to stop running
+
+    away if he was already fleeing. That pirate may
+
+    then re-roll the test. This can only be done if the
+
+    Captain is on his feet, but not if the Captain is in
+
+    close combat himself.'
+- section: Hardy Constitution
+  section_path:
+  - Pirate Special Skills
+  - Hardy Constitution
+  text: 'Many months at sea, and especially many
+
+    months eating hardtack, have hardened the
+
+    pirate’s body to effects that would cause a lesser
+
+    man to collapse. During the battle, the pirate
+
+    may ignore any Critical Hits on a roll of 5+ (the
+
+    wound is treated as normal if the roll is
+
+    successful). If the roll is failed, the Critical Hit is
+
+    worked out as normal.'
+- section: Swashbuckler
+  section_path:
+  - Pirate Special Skills
+  - Swashbuckler
+  text: 'The pirate cuts a dashing figure in combat,
+
+    mixing dazzling swordplay and acrobatic feats
+
+    with charm and witty comments. Even the
+
+    basest villains in Mordheim respect (and curse)
+
+    his ability to always seem to effortlessly slip
+
+    from their grasp. The pirate may make a
+
+    Leadership Test at the end of any Hand-to-Hand
+
+    phase (pirate’s or enemy’s turn) if he is still in
+
+    base contact with any enemy models. If he
+
+    passes he may make a normal movement away
+
+    from the enemy (he may not run or charge),
+
+    without the enemy striking any blows on him. If
+
+    he fails the test he remains in combat and must
+
+    fight as normal in the following turn.'
+- section: Pirate equipment lists
+  section_path:
+  - Pirate equipment lists
+  text: 'The following lists are used by Pirate warbands to pick their weapons:'
+- section: Special Equipment
+  section_path:
+  - Special Equipment
+  text: 'This warband has access to the following special equipment when purchasing items from the Trading Post , outside
+    their starting list:'
+- section: 1 Pirate Captain
+  section_path:
+  - heroes
+  - 1 Pirate Captain
+  text: '60 gold crowns to hire
+
+    Only the roughest toughest sea dog can rise to become captain of his own ship. A good Captain has to be bold and decisive
+    in combat, and a forceful personality to hold together his unruly followers. Though often elected by the Crew, he must
+    command their respect and fear, and more importantly ensure their continued loyalty with plenty of gold!
+
+    Weapons/Armour: : A Pirate Captain may
+
+    be equipped with items chosen from the Pirate
+
+    Equipment list.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 1 Pirate Captain
+  - Special Rules
+  text: 'Leader: Any pirate within 6" of the Captain may
+
+    use his Leadership characteristic when taking
+
+    any Leadership tests.'
+- section: 0 – 2 Ship’s Mates
+  section_path:
+  - heroes
+  - 0 – 2 Ship’s Mates
+  text: '35 gold crowns to hire
+
+    Each ship has several Mates to serve under the Captain and ensure his orders are carried out properly. They also keep
+    a careful eye on him as well for any signs of weakness or hoarding from the Crew, as each Mate would love nothing more
+    than to become Captain himself one day. Until that day though they readily obey his commands, oversee the Crew and the
+    ship, and stand with their Captain ready to plunder and ravage any ships they find.
+
+    Weapons/Armour: Mates may be
+
+    equipped with items chosen from the Pirate
+
+    Equipment list.'
+- section: 0 – 2 Cabin Boys
+  section_path:
+  - heroes
+  - 0 – 2 Cabin Boys
+  text: '15 gold crowns to hire
+
+    The lure of the sea often calls many young men to leave their boring lives behind and take up the exciting life of a pirate.
+    Some are the youngest sons of nobles who know they will never inherit, or whose families have fallen to disgrace or poverty.
+    Others are simple farmboys yearning for the open sea and adventure. All though, show some glimmer of talent which the
+    Captain decides is enough to allow them to serve as Cabin Boys, where they can learn not only the basics of seamanship
+    but also the more important lessons of how to run a pirate ship. Assuming the live through the years of training, they
+    will go on to become feared Captains of their own!
+
+    Weapons/Armour: Cabin Boys may be
+
+    equipped with items chosen from the Pirate
+
+    Equipment list.'
+- section: henchmen
+  section_path:
+  - henchmen
+  text: (Bought in groups of 1-5)
+- section: Crew
+  section_path:
+  - henchmen
+  - Crew
+  text: '25 gold crowns to hire
+
+    The backbone to the ship, the crew are drawn together by the lure of the sea as well as the lure of plunder! As sailors,
+    crewmen are experts in seamanship and ship operations. As pirates, they also quickly become proficient in swordplay and
+    in using a variety of weapons especially pistols. It is said a good pirate crewman needs to know how to read the skies,
+    weather, and winds, but most importantly the moods of his Captain!
+
+    Weapons/Armour: Crew members may
+
+    be equipped with weapons and armour chosen
+
+    from the Pirate Equipment list.'
+- section: 0 – 7 Gunners
+  section_path:
+  - henchmen
+  - 0 – 7 Gunners
+  text: '25 gold crowns to hire ✏️
+
+    Gunners tend the artillery and ammunition of the ship. Their keen knowledge of blackpowder weapons is essential to prevent
+    the potential disaster of a cannon bursting, overheating, or recoiling out of control. In battle, Gunners oversee the
+    banks of cannon, and on land they tend to be armed with the best pistols and other blackpowder weapons from the ship’s
+    stores.
+
+    Weapons/Armour: Gunners may be
+
+    equipped with weapons and armour chosen
+
+    from the Gunner Equipment list.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 7 Gunners
+  - Special Rules
+  text: 'Swivel Guns is Dangerous, Matey! Gunners
+
+    are known to be amongst the bravest of pirates,
+
+    given their close proximity to blackpowder
+
+    weapons, but even among themselves they
+
+    stand in awe of any Gunner who takes a Swivel
+
+    Gun into battle. Usually they stand in awe quite
+
+    far away from him – even they can’t be sure
+
+    when one might blow! If a Pirate Warband
+
+    includes a Swivel Gun, the Gunner wielding it
+
+    will always be considered an individual and can
+
+    never have anyone else with him. Since a Pirate
+
+    Warband may only have one Swivel Gun, if a
+
+    Gunner is equipped with one then he must
+
+    either be a new Gunner, or split from an
+
+    existing unit. If the latter, he retains all
+
+    Experience and Skills he had previously.'
+- section: 0 – 5 Boatswains
+  section_path:
+  - henchmen
+  - 0 – 5 Boatswains
+  text: '32 gold crowns to hire
+
+    Boatswains (or Bosons as they are often called) are responsible aboard the vessel for the upkeep of the rigging, the hundreds
+    of lines and cables throughout the ship which keep the sails operating properly. They are experts at moving throughout
+    the ship’s maze of ropes, swinging from one yardarm to another to ensure the overall soundness of the rigging. In the
+    ruins of Mordheim, these same skills serve them well in moving throughout the building wreckage and craters which litter
+    the former city.
+
+    Weapons/Armour: Boatswains start
+
+    with a Rope & Hook, and may be equipped with
+
+    weapons and armour chosen from the Pirate
+
+    Equipment list. Note that they can never sell off
+
+    or give away their Rope & Hook – a Boatswain
+
+    would never be without his ropes!'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 5 Boatswains
+  - Special Rules
+  text: 'Expert Riggers: Boatswains are highly trained
+
+    in using their ropes, as they are the ones who
+
+    maintain the complex network of rigging
+
+    throughout the ship. They may re-roll failed
+
+    Initiative tests Leaping over Gaps, Jumping
+
+    Down, and performing a Diving Charge, as well
+
+    as the normal test for Climbing Up or Down that
+
+    a Rope allows.'
+- section: 0 – 5 Swabbies
+  section_path:
+  - henchmen
+  - 0 – 5 Swabbies
+  text: 'Special Recruitment rules (see above)
+
+    Not all members of a Pirate Warband are there entirely voluntarily. Some have been captured from enemy vessels, or rounded
+    up on the docks or harbour fronts when the ship was in need of extra men. Kept under a watchful eye by the Mates, the
+    Swabbies know they had better carry out their duties as assigned, lest they face a keel-hauling or worse! Many have grown
+    accustomed to their lot, but given a chance many will run for it, even into the unknown dangers of the hellish city ruins.
+
+    Weapons/Armour: Swabbies may be
+
+    equipped with weapons and armour chosen
+
+    from the Swabbie Equipment list.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 5 Swabbies
+  - Special Rules
+  text: 'Not Hired: Swabbies are not hired, they follow
+
+    the special ‘recruitment’ rules above.
+
+    Never Gain Experience: Swabbies generally
+
+    aren’t interested in proving their worth to the
+
+    crew, they are interested in survival and
+
+    hopefully escape! Swabbies never gain
+
+    experience in games.
+
+    Rabble: Swabbies do not need to be armed all
+
+    the same. Each may be given different
+
+    equipment, but only items listed in the Swabbie
+
+    equipment list. Swabbies can never use magic,
+
+    or cast spells of any sort, no matter their
+
+    original background or abilities.
+
+    ‘Blimey, they got away!’ If the Pirate Warband
+
+    itself Routs, any Swabbies who have already left
+
+    the table in previous turns are presumed to
+
+    have made a successful escape, and are never
+
+    seen from again. Remove them from your
+
+    warband roster as if they had been killed.
+
+    ‘Don’t mind them mates, they ain’t true pirates!’ The rest of the crew barely notice if
+
+    any Swabbies run away or go Out of Action –
+
+    they know they’ll find them later on and give
+
+    them 30 lashes if they’re lucky! Any Swabbies
+
+    who are running away or have been taken out
+
+    of action do not count towards the need to take
+
+    a Rout test for the warband.'
+canonical_family: pirates

@@ -1,0 +1,173 @@
+source_url: https://mordheimer.net/docs/rules/wounds-and-injuries
+records:
+- id: injuries
+  name: injuries
+  text: 'injuries
+
+    ​
+
+    Most warriors have a Wounds characteristic of 1, but some have a value of 2 or
+    more. If the target has more than 1 wound then deduct 1 from his total each time
+    he suffers a wound. Make a note on the roster sheet. So long as the model has
+    at least 1 wound remaining he may continue to fight.
+
+    As soon as a fighter’s Wounds are reduced to zero, roll to determine the extent
+    of his injuries. The player who inflicted the wound rolls a D6 for the wound that
+    reduced the model to zero wounds and for every wound the model receives after
+    that. If a model suffers several wounds in one turn, roll once for each of them
+    and apply the highest result.
+
+    ❓'
+- id: 0-2-knocked-down
+  name: 0 – 2 knocked down
+  text: '0 – 2 knocked down
+
+    ​
+
+    A fighter who has been knocked down falls to the ground either because of a jarring
+    blow he has sustained, because he has slipped, or because he has thrown himself
+    to the ground to avoid injury.
+
+    Turn the model face up to show that he has been knocked down. Knocked down models
+    may crawl 2" during the movement phase, but may not fight in hand-to-hand combat,
+    shoot or cast spells. If he is in base-to-base contact with an enemy, a knocked
+    down model can crawl 2" away only if the enemy is engaged in hand-to-hand combat
+    with another opponent, otherwise he has to stay where he is. In combat he cannot
+    strike back and the enemy will have a good chance of putting him out of action
+    (see the
+
+    Warriors Knocked Down section
+
+    .
+
+    A warrior who has been knocked down may stand up at the start of his next turn.
+    In that turn he may move at half rate, shoot and cast spells, he cannot charge
+    or run. If he is engaged in hand-to-hand combat, he may not move away and will
+    automatically strike last, irrespective of weapons or Initiative. After this turn
+    the fighter moves and fights normally, even though he has zero wounds left. If
+    the model takes any further wounds, then roll for injury once more, exactly as
+    if the model had just sustained its last wound.'
+- id: 3-4-stunned
+  name: 3 – 4 stunned
+  text: '3 – 4 stunned
+
+    ​
+
+    When a warrior is stunned, he is either badly injured or temporarily knocked out.
+    Turn the model face down to show that he has been stunned. A fighter who is stunned
+    may do nothing at all.
+
+    A player may turn the model face up in the next recovery phase, and the warrior
+    is then treated as knocked down.'
+- id: 5-6-out-of-action
+  name: 5 – 6 out of action
+  text: '5 – 6 out of action
+
+    ​
+
+    A warrior who is out of action is also out of the game. Remove the model from
+    the tabletop. It’s impossible to tell at this point whether the warrior is alive
+    or dead, but for game purposes it makes no difference at this stage. After the
+    battle you can test to see whether he survives and if he sustains any serious
+    lasting injuries as a result of his wounds (see
+
+    Serious Injuries
+
+    for details).'
+- id: attacking-stunned-and-knocked-down-warriors-in-hand-to-hand-combat
+  name: attacking stunned and knocked down warriors in hand-to-hand combat
+  text: 'attacking stunned and knocked down warriors in hand-to-hand combat
+
+    ​'
+- id: warriors-knocked-down
+  name: warriors knocked down
+  text: 'warriors knocked down
+
+    ​
+
+    If an enemy is fighting a warrior who is knocked down in hand-to-hand combat,
+    he may attack him to put him out of his misery. All hand-to-hand combat attacks
+    against a warrior who is knocked down hit automatically. If any of the attacks
+    wound the knocked down model and he fails his armour save, he is automatically
+    taken out of action as explained previously. A knocked down model may not parry.'
+- id: warriors-stunned
+  name: warriors stunned
+  text: 'warriors stunned
+
+    ​
+
+    A stunned warrior is at the mercy of his enemies. A stunned model is automatically
+    taken out of action if an enemy can attack him in hand-to-hand combat.
+
+    Note that a model with multiple attacks may not stun/knock down and then automatically
+    take a warrior out of action during the same hand-to-hand combat phase. The only
+    way you can achieve this is to have more than one of your models attacking the
+    same enemy. So, if the enemy is stunned/knocked down by the first warrior, he
+    can be hit and put out of action by the next warrior to attack.
+
+    If your model is engaged in close combat with an enemy who is still standing,
+    he cannot attack any other models that are stunned or knocked down, since in reality
+    they will not pose an immediate threat to him and their companions will try to
+    protect them.'
+- id: what-is-allowed-when-recovered-injured-or-fleeing
+  name: What is allowed when recovered, injured or fleeing
+  text: 'What is allowed when recovered, injured or fleeing
+
+    ​
+
+    Last updated
+
+    on
+
+    Aug 16, 2026
+
+    Previous
+
+    Close Combat
+
+    Next
+
+    Leadership & Psychology
+
+    injuries
+
+    0 – 2 knocked down
+
+    3 – 4 stunned
+
+    5 – 6 out of action
+
+    attacking stunned and knocked down warriors in hand-to-hand combat
+
+    warriors knocked down
+
+    warriors stunned
+
+    Contact
+
+    [email protected]
+
+    Buy me a coffee
+
+    Feedback discord
+
+    Community
+
+    Broheim.net
+
+    r/mordheim
+
+    Mordheim discord
+
+    servo_scribe projects
+
+    The New Mordheimer
+
+    Warcrier
+
+    Friendly resources
+
+    Wahapedia
+
+    This site is a free community project not associated with Games Workshop. All
+    original content is Copyright © 2026 Games Workshop.'

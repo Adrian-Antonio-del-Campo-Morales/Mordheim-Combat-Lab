@@ -1,0 +1,808 @@
+schema_version: 1
+id: chaos-streets-pit-fighters
+name: Luchadores de Pozo
+name_i18n:
+  en: null
+  es: Luchadores de Pozo
+original_locale: es
+categories:
+- trollheim
+collections:
+- trollheim
+grade: null
+setting: Mordheim
+publication: caos-en-las-calles
+status: source-normalized
+sources:
+- manual: caos-en-las-calles
+  printed_page: 116-125
+  section: Luchadores de Pozo
+roster:
+  minimum_models: 3
+  maximum_models: 15
+  starting_gold: 500
+  members:
+  - profile_id: pit-king
+    minimum: 1
+    maximum: 1
+  - profile_id: pit-veteran
+    minimum: 0
+    maximum: 2
+  - profile_id: pit-troll-slayer
+    minimum: 0
+    maximum: 1
+  - profile_id: pit-fighter
+    minimum: 0
+    maximum: null
+  - profile_id: pit-pursuer
+    minimum: 0
+    maximum: 7
+  - profile_id: pit-ogre
+    minimum: 0
+    maximum: 1
+equipment_lists:
+- id: pit-fighter-equipment
+  name: Estilos de los Luchadores de Pozo
+  source:
+    manual: caos-en-las-calles
+    printed_page: 120
+    section: Lista de Equipo para los Luchadores de Pozo
+  items:
+  - item_id: pit_style_orc
+    cost: 20
+    notes: Casco
+    daga: null
+    hacha y escudo: null
+  - item_id: pit_style_undead
+    cost: 35
+    notes: Casco
+    daga: null
+    guantelete con pincho y espada: null
+  - item_id: pit_style_empire
+    cost: 45
+    notes: Casco
+    daga: null
+    arma a dos manos y armadura ligera: null
+  - item_id: pit_style_chaos
+    cost: 50
+    notes: Casco
+    daga: null
+    mangual y armadura ligera: null
+  name_i18n:
+    en: null
+    es: Estilos de los Luchadores de Pozo
+- id: pit-pursuer-equipment
+  name: Estilos de los Perseguidores
+  source:
+    manual: caos-en-las-calles
+    printed_page: 120
+    section: Lista de Equipo para los Perseguidores
+  items:
+  - item_id: pursuer_style_skink_trident
+    cost: 25
+    notes: Casco
+    daga: null
+    tridente y elección entre rodela o red: null
+  - item_id: pursuer_style_skink_javelin
+    cost: 25
+    notes: Casco
+    daga: null
+    jabalina y elección entre rodela o red: null
+  - item_id: pursuer_style_witch_elf_swords
+    cost: 30
+    notes: Casco
+    daga y dos espadas: null
+  - item_id: pursuer_style_witch_elf_spear
+    cost: 30
+    notes: Casco
+    daga: null
+    lanza y red: null
+  name_i18n:
+    en: null
+    es: Estilos de los Perseguidores
+- id: pit-troll-slayer-equipment
+  name: Equipo para el Matatrolls
+  source:
+    manual: caos-en-las-calles
+    printed_page: 120
+    section: Lista de Equipo para el Matatrolls
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: La primera es gratis
+  - item_id: mace
+    cost: 3
+  - item_id: hammer
+    cost: 3
+  - item_id: axe
+    cost: 5
+  - item_id: sword
+    cost: 10
+  - item_id: dwarf_axe
+    cost: 15
+  - item_id: flail
+    cost: 15
+  - item_id: spiked_gauntlet
+    cost: 15
+  - item_id: gromril_weapon
+    cost: 0
+    notes: Cuesta tres veces el precio del arma base
+  name_i18n:
+    en: null
+    es: Equipo para el Matatrolls
+- id: pit-ogre-equipment
+  name: Equipo para el Ogro
+  source:
+    manual: caos-en-las-calles
+    printed_page: 120
+    section: Lista de Equipo para el Ogro
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: La primera es gratis
+  - item_id: mace
+    cost: 3
+  - item_id: hammer
+    cost: 3
+  - item_id: axe
+    cost: 5
+  - item_id: sword
+    cost: 10
+  - item_id: flail
+    cost: 15
+  - item_id: spiked_gauntlet
+    cost: 15
+  - item_id: helmet
+    cost: 10
+  - item_id: light_armour
+    cost: 20
+  name_i18n:
+    en: null
+    es: Equipo para el Ogro
+profiles:
+- id: pit-king
+  name: Rey del Pozo
+  type: hero
+  cost: 80
+  experience: 20
+  characteristics:
+    M: 10
+    WS: 4
+    BS: 3
+    S: 4
+    T: 4
+    W: 1
+    I: 4
+    A: 2
+    Ld: 8
+  equipment_lists:
+  - pit-fighter-equipment
+  fixed_equipment: []
+  equipment_restrictions:
+  - Debe escoger uno de los estilos de Luchador de Pozo; puede cambiarlo según la regla Armas y armadura
+  skill_access:
+  - combat
+  - strength
+  - speed
+  - pit_fighter_special
+  rules:
+  - id: pit-king-leader
+    name: Jefe
+    effect: Cualquier miembro de la banda situado a 15 cm o menos puede utilizar su Liderazgo para sus chequeos.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 122
+      section: Rey del Pozo
+    name_i18n:
+      en: null
+      es: Jefe
+    effect_i18n:
+      en: null
+      es: Cualquier miembro de la banda situado a 15 cm o menos puede utilizar su Liderazgo para sus chequeos.
+  - id: pit-fighter-trait
+    name: Luchador de Pozo
+    effect: Suma uno a su Habilidad de Armas y uno a sus Ataques cuando combate dentro de edificios o ruinas.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 122
+      section: Rey del Pozo
+    name_i18n:
+      en: null
+      es: Luchador de Pozo
+    effect_i18n:
+      en: null
+      es: Suma uno a su Habilidad de Armas y uno a sus Ataques cuando combate dentro de edificios o ruinas.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 122
+    section: Rey del Pozo
+  name_i18n:
+    en: null
+    es: Rey del Pozo
+- id: pit-veteran
+  name: Veterano del Pozo
+  type: hero
+  cost: 35
+  experience: 8
+  characteristics:
+    M: 10
+    WS: 4
+    BS: 3
+    S: 4
+    T: 3
+    W: 1
+    I: 4
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - pit-fighter-equipment
+  fixed_equipment: []
+  equipment_restrictions:
+  - Debe escoger uno de los estilos de Luchador de Pozo; puede cambiarlo según la regla Armas y armadura
+  skill_access:
+  - combat
+  - strength
+  - speed
+  - pit_fighter_special
+  rules:
+  - id: pit-fighter-trait
+    name: Luchador de Pozo
+    effect: Suma uno a su Habilidad de Armas y uno a sus Ataques cuando combate dentro de edificios o ruinas.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 122
+      section: Veteranos del Pozo
+    name_i18n:
+      en: null
+      es: Luchador de Pozo
+    effect_i18n:
+      en: null
+      es: Suma uno a su Habilidad de Armas y uno a sus Ataques cuando combate dentro de edificios o ruinas.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 122
+    section: Veteranos del Pozo
+  name_i18n:
+    en: null
+    es: Veterano del Pozo
+- id: pit-troll-slayer
+  name: Matatrolls
+  type: hero
+  cost: 50
+  experience: 8
+  characteristics:
+    M: 8
+    WS: 4
+    BS: 3
+    S: 3
+    T: 4
+    W: 1
+    I: 2
+    A: 1
+    Ld: 9
+  equipment_lists:
+  - pit-troll-slayer-equipment
+  fixed_equipment: []
+  equipment_restrictions:
+  - No puede utilizar armas de proyectiles ni armaduras
+  skill_access:
+  - combat
+  - strength
+  - pit_fighter_special
+  - dwarf_special
+  - troll_slayer_special
+  rules:
+  - id: death-oath
+    name: Juramento de Muerte
+    effect: Es inmune a toda psicología y no necesita efectuar chequeos por combatir solo.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 123
+      section: Matatrolls
+    name_i18n:
+      en: null
+      es: Juramento de Muerte
+    effect_i18n:
+      en: null
+      es: Es inmune a toda psicología y no necesita efectuar chequeos por combatir solo.
+  - id: pit-fighter-trait
+    name: Luchador de Pozo
+    effect: Suma uno a su Habilidad de Armas y uno a sus Ataques cuando combate dentro de edificios o ruinas.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 123
+      section: Matatrolls
+    name_i18n:
+      en: null
+      es: Luchador de Pozo
+    effect_i18n:
+      en: null
+      es: Suma uno a su Habilidad de Armas y uno a sus Ataques cuando combate dentro de edificios o ruinas.
+  - id: dwarf-hard-head
+    name: Cabeza Dura
+    effect: Ignora las reglas especiales de mazas
+    garrotes y armas equivalentes.: null
+    source:
+      manual: caos-en-las-calles
+      printed_page: 123
+      section: Matatrolls
+    name_i18n:
+      en: null
+      es: Cabeza Dura
+    effect_i18n:
+      en: null
+      es: Ignora las reglas especiales de mazas
+  - id: dwarf-hard-to-kill
+    name: Difícil de Matar
+    effect: En la Tabla de Heridas obtiene derribado con 1-2
+    aturdido con 3-5 y fuera de combate únicamente con 6.: null
+    source:
+      manual: caos-en-las-calles
+      printed_page: 123
+      section: Matatrolls
+    name_i18n:
+      en: null
+      es: Difícil de Matar
+    effect_i18n:
+      en: null
+      es: En la Tabla de Heridas obtiene derribado con 1-2
+  - id: dwarf-hatred-orcs-goblins
+    name: Odio a Orcos y Goblins
+    effect: Odia a todos los Orcos y Goblins.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 123
+      section: Matatrolls
+    name_i18n:
+      en: null
+      es: Odio a Orcos y Goblins
+    effect_i18n:
+      en: null
+      es: Odia a todos los Orcos y Goblins.
+  - id: ancestral-grudge
+    name: Agravio Ancestral
+    effect: Si la banda contrata un espada de alquiler Elfo
+    el Matatrolls abandona inmediatamente la banda.: null
+    source:
+      manual: caos-en-las-calles
+      printed_page: 123
+      section: Matatrolls
+    name_i18n:
+      en: null
+      es: Agravio Ancestral
+    effect_i18n:
+      en: null
+      es: Si la banda contrata un espada de alquiler Elfo
+  source:
+    manual: caos-en-las-calles
+    printed_page: 123
+    section: Matatrolls
+  name_i18n:
+    en: null
+    es: Matatrolls
+- id: pit-fighter
+  name: Luchador del Pozo
+  type: henchman
+  cost: 35
+  experience: 0
+  characteristics:
+    M: 10
+    WS: 4
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - pit-fighter-equipment
+  fixed_equipment: []
+  equipment_restrictions:
+  - Debe escoger uno de los estilos de Luchador de Pozo; los miembros del mismo grupo de secuaces pueden llevar estilos diferentes
+  skill_access: []
+  rules:
+  - id: pit-fighter-trait
+    name: Luchador de Pozo
+    effect: Suma uno a su Habilidad de Armas y uno a sus Ataques cuando combate dentro de edificios o ruinas.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 124
+      section: Luchadores del Pozo
+    name_i18n:
+      en: null
+      es: Luchador de Pozo
+    effect_i18n:
+      en: null
+      es: Suma uno a su Habilidad de Armas y uno a sus Ataques cuando combate dentro de edificios o ruinas.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 124
+    section: Luchadores del Pozo
+  name_i18n:
+    en: null
+    es: Luchador del Pozo
+- id: pit-pursuer
+  name: Perseguidor
+  type: henchman
+  cost: 25
+  experience: 0
+  characteristics:
+    M: 10
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - pit-pursuer-equipment
+  fixed_equipment: []
+  equipment_restrictions:
+  - Debe escoger uno de los estilos de Perseguidor
+  skill_access: []
+  rules:
+  - id: pit-fighter-trait
+    name: Luchador de Pozo
+    effect: Suma uno a su Habilidad de Armas y uno a sus Ataques cuando combate dentro de edificios o ruinas.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 124
+      section: Perseguidores
+    name_i18n:
+      en: null
+      es: Luchador de Pozo
+    effect_i18n:
+      en: null
+      es: Suma uno a su Habilidad de Armas y uno a sus Ataques cuando combate dentro de edificios o ruinas.
+  - id: dodge-charge
+    name: Eludir
+    effect: Cuando recibe una carga puede efectuar un chequeo de Iniciativa; si lo supera
+    la carga falla y se aplican las reglas habituales de carga fallida.: null
+    source:
+      manual: caos-en-las-calles
+      printed_page: 124
+      section: Perseguidores
+    name_i18n:
+      en: null
+      es: Eludir
+    effect_i18n:
+      en: null
+      es: Cuando recibe una carga puede efectuar un chequeo de Iniciativa; si lo supera
+  source:
+    manual: caos-en-las-calles
+    printed_page: 124
+    section: Perseguidores
+  name_i18n:
+    en: null
+    es: Perseguidor
+- id: pit-ogre
+  name: Ogro Luchador de Pozo
+  type: henchman
+  cost: 165
+  experience: 0
+  characteristics:
+    M: 15
+    WS: 3
+    BS: 2
+    S: 4
+    T: 4
+    W: 3
+    I: 3
+    A: 2
+    Ld: 7
+  equipment_lists:
+  - pit-ogre-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules:
+  - id: pit-fighter-trait
+    name: Luchador de Pozo
+    effect: Suma uno a su Habilidad de Armas y uno a sus Ataques cuando combate dentro de edificios o ruinas.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 125
+      section: Ogro Luchador de Pozo
+    name_i18n:
+      en: null
+      es: Luchador de Pozo
+    effect_i18n:
+      en: null
+      es: Suma uno a su Habilidad de Armas y uno a sus Ataques cuando combate dentro de edificios o ruinas.
+  - id: fear
+    name: Miedo
+    effect: Causa miedo.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 125
+      section: Ogro Luchador de Pozo
+    name_i18n:
+      en: null
+      es: Miedo
+    effect_i18n:
+      en: null
+      es: Causa miedo.
+  - id: large-target
+    name: Objetivo Grande
+    effect: Puede ser escogido como blanco aunque no sea el objetivo más cercano y los disparos contra él reciben más uno
+      para impactar.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 125
+      section: Ogro Luchador de Pozo
+    name_i18n:
+      en: null
+      es: Objetivo Grande
+    effect_i18n:
+      en: null
+      es: Puede ser escogido como blanco aunque no sea el objetivo más cercano y los disparos contra él reciben más uno para
+        impactar.
+  - id: ogre-hero-skills
+    name: Habilidad
+    effect: Si obtiene El chico tiene talento puede escoger habilidades de Combate
+    Fuerza y Luchador de Pozo.: null
+    source:
+      manual: caos-en-las-calles
+      printed_page: 125
+      section: Ogro Luchador de Pozo
+    name_i18n:
+      en: null
+      es: Habilidad
+    effect_i18n:
+      en: null
+      es: Si obtiene El chico tiene talento puede escoger habilidades de Combate
+  - id: slow-witted
+    name: Lerdos
+    effect: Necesita acumular el doble de experiencia que el resto de la banda para obtener una mejora.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 125
+      section: Ogro Luchador de Pozo
+    name_i18n:
+      en: null
+      es: Lerdos
+    effect_i18n:
+      en: null
+      es: Necesita acumular el doble de experiencia que el resto de la banda para obtener una mejora.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 125
+    section: Ogro Luchador de Pozo
+  name_i18n:
+    en: null
+    es: Ogro Luchador de Pozo
+band_rules:
+- id: pit-arms-and-armour
+  name: Armas y armadura
+  effect: Cada Luchador de Pozo o Perseguidor debe llevar una de sus configuraciones de estilo. La limitación no afecta a
+    Matatrolls ni Ogros. Los héroes pueden usar equipo de otras bandas si poseen la habilidad necesaria. Un estilo puede cambiarse
+    intercambiándolo con otro miembro o comprando otro completo o sus componentes. Los grupos de secuaces pueden mezclar estilos
+    y no tienen que equiparse de forma idéntica.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 118
+    section: Reglas Especiales de los Luchadores de Pozo
+  name_i18n:
+    en: null
+    es: Armas y armadura
+  effect_i18n:
+    en: null
+    es: Cada Luchador de Pozo o Perseguidor debe llevar una de sus configuraciones de estilo. La limitación no afecta a Matatrolls
+      ni Ogros. Los héroes pueden usar equipo de otras bandas si poseen la habilidad necesaria. Un estilo puede cambiarse
+      intercambiándolo con otro miembro o comprando otro completo o sus componentes. Los grupos de secuaces pueden mezclar
+      estilos y no tienen que equiparse de forma idéntica.
+- id: pit-hired-swords
+  name: Espadas de alquiler
+  effect: Puede contratar cualquier espada de alquiler excepto Elfos.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 118
+    section: Reglas Especiales de los Luchadores de Pozo
+  name_i18n:
+    en: null
+    es: Espadas de alquiler
+  effect_i18n:
+    en: null
+    es: Puede contratar cualquier espada de alquiler excepto Elfos.
+- id: free-the-slaves
+  name: ¡Liberad a los esclavos!
+  effect: Odian a los esclavistas y nunca venden a esclavistas los oponentes que capturen.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 118
+    section: Reglas Especiales de los Luchadores de Pozo
+  name_i18n:
+    en: null
+    es: ¡Liberad a los esclavos!
+  effect_i18n:
+    en: null
+    es: Odian a los esclavistas y nunca venden a esclavistas los oponentes que capturen.
+- id: in-the-pit
+  name: ¡En el pozo!
+  effect: Un cautivo puede enfrentarse a un luchador propio. Si vence el luchador, recibe dos de experiencia y la banda conserva
+    las armas y armadura del cautivo y gana 50 coronas. Si vence el cautivo, el luchador pierde sus armas y armadura pero
+    no sufre heridas graves; el cautivo gana 50 coronas y dos de experiencia y obtiene la libertad con 4+ o permanece en la
+    banda con 1-3.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 118
+    section: Reglas Especiales de los Luchadores de Pozo
+  name_i18n:
+    en: null
+    es: ¡En el pozo!
+  effect_i18n:
+    en: null
+    es: Un cautivo puede enfrentarse a un luchador propio. Si vence el luchador, recibe dos de experiencia y la banda conserva
+      las armas y armadura del cautivo y gana 50 coronas. Si vence el cautivo, el luchador pierde sus armas y armadura pero
+      no sufre heridas graves; el cautivo gana 50 coronas y dos de experiencia y obtiene la libertad con 4+ o permanece en
+      la banda con 1-3.
+- id: javelin
+  name: Jabalina
+  effect: Cuesta 10 coronas y es Común. Alcance 20 cm, Fuerza del usuario y Arma arrojadiza; no sufre penalización por alcance
+    ni movimiento y no puede usarse cuerpo a cuerpo.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 118
+    section: Equipo Especial de los Luchadores de Pozo
+  name_i18n:
+    en: null
+    es: Jabalina
+  effect_i18n:
+    en: null
+    es: Cuesta 10 coronas y es Común. Alcance 20 cm, Fuerza del usuario y Arma arrojadiza; no sufre penalización por alcance
+      ni movimiento y no puede usarse cuerpo a cuerpo.
+- id: trident
+  name: Tridente
+  effect: Cuesta 15 coronas y tiene disponibilidad Rara 7, solo para Luchadores de Pozo. Usa la Fuerza del usuario, posee
+    Parada y Ataca Primero durante la primera ronda cuerpo a cuerpo. Si se lleva con otra arma, los ataques de esta se resuelven
+    en su fase normal.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 119
+    section: Tridente
+  name_i18n:
+    en: null
+    es: Tridente
+  effect_i18n:
+    en: null
+    es: Cuesta 15 coronas y tiene disponibilidad Rara 7, solo para Luchadores de Pozo. Usa la Fuerza del usuario, posee Parada
+      y Ataca Primero durante la primera ronda cuerpo a cuerpo. Si se lleva con otra arma, los ataques de esta se resuelven
+      en su fase normal.
+- id: spiked-gauntlet
+  name: Guantelete con Pincho
+  effect: Cuesta 15 coronas y tiene disponibilidad Rara 7, solo para Luchadores de Pozo. Usa la Fuerza del usuario y posee
+    Parada y Versátil. No puede parar ataques con el doble o más de su Fuerza; Versátil permite llevarlo en la mano izquierda
+    junto a armas con Difícil de Usar ignorando esa restricción.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 119
+    section: Guantelete con Pincho
+  name_i18n:
+    en: null
+    es: Guantelete con Pincho
+  effect_i18n:
+    en: null
+    es: Cuesta 15 coronas y tiene disponibilidad Rara 7, solo para Luchadores de Pozo. Usa la Fuerza del usuario y posee Parada
+      y Versátil. No puede parar ataques con el doble o más de su Fuerza; Versátil permite llevarlo en la mano izquierda junto
+      a armas con Difícil de Usar ignorando esa restricción.
+- id: developed-biceps
+  name: Bíceps Muy Desarrollados
+  effect: Ignora la limitación temporal de las armas Pesadas y aplica su bonificador de Fuerza en todas las rondas cuerpo
+    a cuerpo.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 121
+    section: Habilidades Especiales de los Luchadores de Pozo
+  name_i18n:
+    en: null
+    es: Bíceps Muy Desarrollados
+  effect_i18n:
+    en: null
+    es: Ignora la limitación temporal de las armas Pesadas y aplica su bonificador de Fuerza en todas las rondas cuerpo a
+      cuerpo.
+- id: willpower
+  name: Fuerza de Voluntad
+  effect: Al perder su última Herida y quedar fuera de combate, tira 1D6; si obtiene su Resistencia o menos vuelve al combate
+    en pie. Repite la prueba en rondas posteriores con un penalizador acumulativo de menos uno. La segunda vez que queda fuera
+    de combate se retira normalmente.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 121
+    section: Habilidades Especiales de los Luchadores de Pozo
+  name_i18n:
+    en: null
+    es: Fuerza de Voluntad
+  effect_i18n:
+    en: null
+    es: Al perder su última Herida y quedar fuera de combate, tira 1D6; si obtiene su Resistencia o menos vuelve al combate
+      en pie. Repite la prueba en rondas posteriores con un penalizador acumulativo de menos uno. La segunda vez que queda
+      fuera de combate se retira normalmente.
+- id: weapons-master
+  name: Maestro en Armas
+  effect: Ignora la regla Difícil de Usar de todas las armas y puede combinar armas que normalmente serían incompatibles,
+    incluso dos manguales.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 121
+    section: Habilidades Especiales de los Luchadores de Pozo
+  name_i18n:
+    en: null
+    es: Maestro en Armas
+  effect_i18n:
+    en: null
+    es: Ignora la regla Difícil de Usar de todas las armas y puede combinar armas que normalmente serían incompatibles, incluso
+      dos manguales.
+- id: body-charge
+  name: Carga Corporal
+  effect: Puede sustituir la carga y todos sus ataques normales por un único ataque con más uno a Fuerza y más uno para impactar,
+    sin modificadores de armas o habilidades, que causa crítico con 5+.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 121
+    section: Habilidades Especiales de los Luchadores de Pozo
+  name_i18n:
+    en: null
+    es: Carga Corporal
+  effect_i18n:
+    en: null
+    es: Puede sustituir la carga y todos sus ataques normales por un único ataque con más uno a Fuerza y más uno para impactar,
+      sin modificadores de armas o habilidades, que causa crítico con 5+.
+- id: seasoned-veteran
+  name: Veterano Curtido
+  effect: Es inmune a psicología.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 121
+    section: Habilidades Especiales de los Luchadores de Pozo
+  name_i18n:
+    en: null
+    es: Veterano Curtido
+  effect_i18n:
+    en: null
+    es: Es inmune a psicología.
+- id: monster-slayer
+  name: Matador de Monstruos
+  effect: El Matatrolls hiere siempre con 4+ sin importar la Resistencia, salvo si su Fuerza modificada permite herir con
+    un resultado inferior.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 121
+    section: Habilidades Especiales del Matatrolls
+  name_i18n:
+    en: null
+    es: Matador de Monstruos
+  effect_i18n:
+    en: null
+    es: El Matatrolls hiere siempre con 4+ sin importar la Resistencia, salvo si su Fuerza modificada permite herir con un
+      resultado inferior.
+- id: ferocious-charge
+  name: Carga Feroz
+  effect: El Matatrolls puede doblar sus ataques al cargar, pero sufre menos uno para impactar ese turno.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 121
+    section: Habilidades Especiales del Matatrolls
+  name_i18n:
+    en: null
+    es: Carga Feroz
+  effect_i18n:
+    en: null
+    es: El Matatrolls puede doblar sus ataques al cargar, pero sufre menos uno para impactar ese turno.
+- id: crazed-slayer
+  name: Enloquecido
+  effect: El Matatrolls suma uno para impactar durante el turno en que carga.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 121
+    section: Habilidades Especiales del Matatrolls
+  name_i18n:
+    en: null
+    es: Enloquecido
+  effect_i18n:
+    en: null
+    es: El Matatrolls suma uno para impactar durante el turno en que carga.
+source_sections: []
+canonical_family: pit-fighters

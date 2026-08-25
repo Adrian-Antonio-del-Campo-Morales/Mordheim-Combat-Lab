@@ -1,0 +1,523 @@
+id: amazons-lustria
+name: Amazons (Lustria)
+grade: 1b
+source_url: https://mordheimer.net/docs/warbands/grade-1b-warbands/amazons-lustria
+headings:
+- Special Rules ​
+- Choice of warriors ​
+- Starting Experience ​
+- Amazon Skill Table ​
+- Amazon special skills ​
+- skink hunter ​
+- elixir of life ​
+- mesmerising dance ​
+- savage fury ​
+- concealment ​
+- Amazon equipment lists ​
+- Heroines Equipment List ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Miscellaneous ​
+- Henchwomen equipment list ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Jaguar Warrior Equipment List ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Special Equipment ​
+- Starblade ​
+- Starsword ​
+- Bolas ​
+- Sunstaff (Lustria) ​
+- Enchanted Skins ​
+- Amulet of the Moon ​
+- Conch Shell Horn ​
+- heroines ​
+- 1 Serpent Priestess ​
+- SPECIAL RULES ​
+- 0 – 2 Eagle Warriors ​
+- 0 – 2 Piranha Warriors ​
+- henchwomen ​
+- 1+ Amazon warriors ​
+- 0 – 3 Jaguar Warriors ​
+- Special Rules ​
+tables:
+- section: Amazon Skill Table
+  section_path:
+  - Amazon Skill Table
+  rows:
+  - - ''
+    - Combat
+    - Shooting
+    - Academic
+    - Strength
+    - Speed
+    - Special
+  - - Serpent Priestess
+    - ✓
+    - ''
+    - ✓
+    - ''
+    - ✓
+    - ✓
+  - - Eagle Warrior
+    - ✓
+    - ''
+    - ''
+    - ✓
+    - ✓
+    - ✓
+  - - Piranha Warrior
+    - ✓
+    - ✓
+    - ''
+    - ''
+    - ✓
+    - ✓
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Amazon equipment lists
+  - Heroines Equipment List
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Club
+    - 3 gc
+  - - Sword
+    - 10 gc
+  - - Spear
+    - 10 gc
+  - - Double-handed weapon
+    - 15 gc
+  - - Starblade
+    - 15 gc
+  - - Starsword
+    - 30 gc
+- section: Missile Weapons
+  section_path:
+  - Amazon equipment lists
+  - Heroines Equipment List
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Bow
+    - 10 gc
+  - - Sunstaff (Lustria)
+    - 35 gc
+- section: Armour
+  section_path:
+  - Amazon equipment lists
+  - Heroines Equipment List
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Buckler
+    - 5 gc
+  - - Helmet
+    - 10 gc
+  - - Enchanted Skins
+    - 20 gc
+- section: Miscellaneous
+  section_path:
+  - Amazon equipment lists
+  - Heroines Equipment List
+  - Miscellaneous
+  rows:
+  - - Item
+    - Cost
+  - - Amulet of the Moon
+    - 50 gc
+  - - Healing Herbs
+    - 35 gc
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Amazon equipment lists
+  - Henchwomen equipment list
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Club
+    - 3 gc
+  - - Sword
+    - 10 gc
+  - - Spear
+    - 10 gc
+- section: Missile Weapons
+  section_path:
+  - Amazon equipment lists
+  - Henchwomen equipment list
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Sling
+    - 5 gc
+  - - Bow
+    - 10 gc
+  - - Sunstaff (Lustria)
+    - 35 gc
+- section: Armour
+  section_path:
+  - Amazon equipment lists
+  - Henchwomen equipment list
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Buckler
+    - 5 gc
+  - - Helmet
+    - 10 gc
+  - - Enchanted Skins
+    - 20 gc
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Amazon equipment lists
+  - Jaguar Warrior Equipment List
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Club
+    - 3 gc
+  - - Sword
+    - 10 gc
+  - - Spear
+    - 10 gc
+- section: Missile Weapons
+  section_path:
+  - Amazon equipment lists
+  - Jaguar Warrior Equipment List
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Sling
+    - 5 gc
+  - - Bolas
+    - 5 gc
+  - - Javelins
+    - 5 gc
+  - - Bow
+    - 10 gc
+  - - Sunstaff (Lustria)
+    - 35 gc
+- section: Armour
+  section_path:
+  - Amazon equipment lists
+  - Jaguar Warrior Equipment List
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Helmet
+    - 10 gc
+  - - Enchanted Skins
+    - 20 gc
+- section: 1 Serpent Priestess
+  section_path:
+  - heroines
+  - 1 Serpent Priestess
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '4'
+    - '4'
+    - '3'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '8'
+- section: 0 – 2 Eagle Warriors
+  section_path:
+  - heroines
+  - 0 – 2 Eagle Warriors
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 2 Piranha Warriors
+  section_path:
+  - heroines
+  - 0 – 2 Piranha Warriors
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '4'
+    - '3'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '7'
+- section: 1+ Amazon warriors
+  section_path:
+  - henchwomen
+  - 1+ Amazon warriors
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 3 Jaguar Warriors
+  section_path:
+  - henchwomen
+  - 0 – 3 Jaguar Warriors
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+section_text:
+- section: Special Rules
+  section_path:
+  - Special Rules
+  text: 'Isolationists: The Amazons are constantly battling against the predations
+    of the Lizardmen and greedy treasure-seeking Norse. Amazon culture reflects their
+    dislike and distrust of outsiders and in battle they are particularly savage.
+    Amazons get to re-roll any attack rolls that miss in the first round of combat
+    against Lizardmen and Norse.
+
+    Sacrifice: The Amazons are quick to sacrifice any captive to their gods. The Amazons
+    follow the rules for Possessed in the Rulebook when it comes to captives. lf an
+    Amazon Warband captures a Lizardman, they may sacrifice him as normal, plus get
+    a free Skins and Charms.
+
+    Norse Enmity: When facing a Norse Warband an Amazon Warband will fight to the
+    death. The Amazons can re-roll their first failed Rout against the Norse. Remember
+    you can''t re-roll a failed re-roll. In addition, Amazons can never choose to
+    voluntarily rout when facing a Norse warband unless their Warband Leader has been
+    taken Out of Action.
+
+    Not one of us: Due to the Amazons'' isolationism and suspicions about other races
+    they never side with anyone else. For this reason, the Amazons may not have any
+    Hired Swords or Dramatis Personae unless they are Amazons themselves.'
+- section: Amazon special skills
+  section_path:
+  - Amazon special skills
+  text: Amazon Heroines may use the following skill table instead of any of the standard
+    skill tables available to them.
+- section: skink hunter
+  section_path:
+  - Amazon special skills
+  - skink hunter
+  text: Through her exploits the Amazon has proven herself a master when it comes
+    to hunting Lizardmen, particularly Skinks. An Amazon with this skill will always
+    strike first in the first round of combat against Skink models no matter who charged.
+- section: elixir of life
+  section_path:
+  - Amazon special skills
+  - elixir of life
+  text: After years of service among her tribe an Amazon is granted access to the
+    waters that make the Elixir of Life. The Elixir is said to heal wounds and make
+    the Amazons immortal. Any Amazon with this Elixir can re­roll a Serious Injury
+    ✏️ roll once after the battle accepting the result of the second roll.
+- section: mesmerising dance
+  section_path:
+  - Amazon special skills
+  - mesmerising dance
+  text: Some Amazon women develop their fighting motions into a graceful dance that
+    can transfix their foes. Any model fighting in base contact with the Amazon must
+    take a Leadership test at the start of each turn. If they fail they cannot attack
+    that tum but may defend themselves. The dance however is useless against Lizardmen
+    and undead who are immune to their charms.
+- section: savage fury
+  section_path:
+  - Amazon special skills
+  - savage fury
+  text: The Amazon bas learned to channel her anger and aggression making her a veritable
+    animal while attacking her foes. Any Amazon model with this skill receives + 1
+    A when charging and is immune to charm effects and fear.
+- section: concealment
+  section_path:
+  - Amazon special skills
+  - concealment
+  text: The Amazon is adept at blending in with her surroundings. When hiding in jungle
+    terrain all enemy models must halve the range at which they can spot them.
+- section: Amazon equipment lists
+  section_path:
+  - Amazon equipment lists
+  text: 'The following lists are used by Amazon warbands to pick their weapons:'
+- section: Special Equipment
+  section_path:
+  - Special Equipment
+  text: 'Amazons have access to the following special equipment when purchasing items
+    from the Trading Post , outside their starting list:'
+- section: 1 Serpent Priestess
+  section_path:
+  - heroines
+  - 1 Serpent Priestess
+  text: '70 gold crowns to hire
+
+    The Serpent Priestesses are part of the religious sisterhood that rules Amazon
+    society. They are powerful sorceresses and their word is law. The younger, more
+    junior members of the Serpent totem often gather war parties and search for Slann
+    artefacts and also conduct the ritual sacrifices of captured enemies.
+
+    Weapons/Armour: The Priestess may be equipped with weapons chosen from the Heroine''s
+    equipment lists.'
+- section: SPECIAL RULES
+  section_path:
+  - heroines
+  - 1 Serpent Priestess
+  - SPECIAL RULES
+  text: 'Leader: Any models in the warband within 6"
+
+    of the Priestess may use her Leadership
+
+    instead of their own.
+
+    Wizard: The Priestess is a Wizard and may
+
+    use Amazon Rituals . She starts with one ritual
+
+    chosen at random from the list.'
+- section: 0 – 2 Eagle Warriors
+  section_path:
+  - heroines
+  - 0 – 2 Eagle Warriors
+  text: '35 gold crowns to hire
+
+    The Eagle Warriors are veterans that have participated in dozens of war parties
+    over the years. They have adopted the totem of the great eagle that reflects their
+    great might in combat. Their exotic headdresses are made from these holy birds
+    of the Lizardmen.
+
+    Weapons/Armour: Eagle Warriors may be equipped with weapons chosen from the Heroine''s
+    and special equipment lists.'
+- section: 0 – 2 Piranha Warriors
+  section_path:
+  - heroines
+  - 0 – 2 Piranha Warriors
+  text: '30 gold crowns to hire
+
+    The Piranha Warriors prefer ranged weapons and are often found ahead of an Amazon
+    Warband. They are the only Amazons to use a great seashell horn to warn the warband
+    of approaching enemies.
+
+    Weapons/Armour: Piranha Warriors may be equipped with weapons chosen from the
+    Heroine''s and special equipment lists.'
+- section: henchwomen
+  section_path:
+  - henchwomen
+  text: (Bought in groups of 1-5)
+- section: 1+ Amazon warriors
+  section_path:
+  - henchwomen
+  - 1+ Amazon warriors
+  text: '25 gold crowns to hire
+
+    Every Amazon Woman is trained in the ways of warfare and is hardened by a life
+    in the unforgiving nature of their jungle environment. They are skilled in fighting
+    with a variety of different weapons including the legendary claws of the Old Ones.
+
+    Weapons/Armour: Amazon Warriors may be equipped with weapons chosen from the
+
+    henchwomen''s equipment list.'
+- section: 0 – 3 Jaguar Warriors
+  section_path:
+  - henchwomen
+  - 0 – 3 Jaguar Warriors
+  text: '30 gold crowns to hire
+
+    The Jaguars are known for their exceptional speed and agility. They are the protectors
+    of the Amazon tribes living far away and keeping any invaders at bay. They are
+    especially adept at hunting Skinks and Sauruses, their most common foe. Jaguars''
+    favoured method of attack is to steal away in the foliage becoming part of the
+    jungle itself and waiting for the perfect moment to strike.
+
+    Weapons/Armour: Jaguars can be armed with weapons and armour chosen from the Jaguar
+    Equipment list.'
+- section: Special Rules
+  section_path:
+  - henchwomen
+  - 0 – 3 Jaguar Warriors
+  - Special Rules
+  text: 'One with the Jungle: A Jaguar has lived her life in the deepest parts and
+    can move
+
+    through jungle terrain without penalty.'

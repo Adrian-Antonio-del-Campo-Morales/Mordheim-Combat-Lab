@@ -1,0 +1,525 @@
+schema_version: 1
+id: trollheim-possessed
+name: El Culto de los Poseídos
+name_i18n:
+  en: null
+  es: El Culto de los Poseídos
+original_locale: es
+categories:
+- trollheim
+collections:
+- trollheim
+grade: null
+setting: Mordheim
+publication: trollheim
+status: source-normalized
+sources:
+- manual: trollheim
+  printed_page: 72-76
+  section: El Culto de los Poseídos
+roster:
+  minimum_models: 3
+  maximum_models: 15
+  starting_gold: 500
+  members:
+  - profile_id: magister
+    minimum: 1
+    maximum: 1
+  - profile_id: possessed
+    minimum: 0
+    maximum: 2
+  - profile_id: mutant
+    minimum: 0
+    maximum: 2
+  - profile_id: darksoul
+    minimum: 0
+    maximum: 5
+  - profile_id: brethren
+    minimum: 0
+    maximum: null
+  - profile_id: beastman
+    minimum: 0
+    maximum: 3
+equipment_lists:
+- id: possessed-equipment
+  name: Equipo de los Poseídos
+  source:
+    manual: trollheim
+    printed_page: 73
+    section: Lista de Equipo de los Poseídos
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: La primera es gratis
+  - item_id: mace
+    cost: 3
+  - item_id: hammer
+    cost: 3
+  - item_id: axe
+    cost: 5
+  - item_id: sword
+    cost: 10
+  - item_id: great_weapon
+    cost: 15
+  - item_id: spear
+    cost: 10
+  - item_id: bow
+    cost: 15
+  - item_id: short_bow
+    cost: 10
+  - item_id: light_armour
+    cost: 20
+  - item_id: heavy_armour
+    cost: 50
+  - item_id: shield
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  name_i18n:
+    en: null
+    es: Equipo de los Poseídos
+- id: darksoul-equipment
+  name: Equipo de Almas Oscuras y Hombres Bestia
+  source:
+    manual: trollheim
+    printed_page: 73
+    section: Lista de Equipo de los Almas Oscuras
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: La primera es gratis
+  - item_id: mace
+    cost: 3
+  - item_id: hammer
+    cost: 3
+  - item_id: axe
+    cost: 5
+  - item_id: sword
+    cost: 10
+  - item_id: great_weapon
+    cost: 15
+  - item_id: flail
+    cost: 10
+  - item_id: light_armour
+    cost: 20
+  - item_id: heavy_armour
+    cost: 50
+  - item_id: shield
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  name_i18n:
+    en: null
+    es: Equipo de Almas Oscuras y Hombres Bestia
+profiles:
+- id: magister
+  name: Magister
+  type: hero
+  cost: 70
+  experience: 20
+  characteristics:
+    M: 10
+    WS: 4
+    BS: 4
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 8
+  equipment_lists:
+  - possessed-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - academic
+  - speed
+  rules:
+  - id: magister-leader
+    name: Jefe
+    effect: Los miembros de la banda a 15 cm o menos pueden usar su Liderazgo.
+    source:
+      manual: trollheim
+      printed_page: 74
+      section: Magister
+    name_i18n:
+      en: null
+      es: Jefe
+    effect_i18n:
+      en: null
+      es: Los miembros de la banda a 15 cm o menos pueden usar su Liderazgo.
+  - id: magister-wizard
+    name: Brujo
+    effect: Puede utilizar los Rituales del Caos.
+    source:
+      manual: trollheim
+      printed_page: 74
+      section: Magister
+    name_i18n:
+      en: null
+      es: Brujo
+    effect_i18n:
+      en: null
+      es: Puede utilizar los Rituales del Caos.
+  source:
+    manual: trollheim
+    printed_page: 74
+    section: Magister
+  name_i18n:
+    en: null
+    es: Magister
+- id: possessed
+  name: Poseído
+  type: hero
+  cost: 90
+  experience: 8
+  characteristics:
+    M: 12
+    WS: 4
+    BS: 0
+    S: 4
+    T: 4
+    W: 2
+    I: 4
+    A: 2
+    Ld: 7
+  equipment_lists: []
+  fixed_equipment: []
+  equipment_restrictions:
+  - Nunca utiliza armas ni armaduras
+  skill_access:
+  - combat
+  - strength
+  - speed
+  rules:
+  - id: possessed-fear
+    name: Miedo
+    effect: Causa miedo.
+    source:
+      manual: trollheim
+      printed_page: 74
+      section: Poseídos
+    name_i18n:
+      en: null
+      es: Miedo
+    effect_i18n:
+      en: null
+      es: Causa miedo.
+  - id: possessed-mutations
+    name: Mutaciones
+    effect: Al ser reclutado puede comprar una o dos mutaciones; su coste se suma al reclutamiento.
+    source:
+      manual: trollheim
+      printed_page: 74
+      section: Poseídos
+    name_i18n:
+      en: null
+      es: Mutaciones
+    effect_i18n:
+      en: null
+      es: Al ser reclutado puede comprar una o dos mutaciones; su coste se suma al reclutamiento.
+  source:
+    manual: trollheim
+    printed_page: 74
+    section: Poseídos
+  name_i18n:
+    en: null
+    es: Poseído
+- id: mutant
+  name: Mutante
+  type: hero
+  cost: 25
+  experience: 0
+  characteristics:
+    M: 10
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - possessed-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - speed
+  rules:
+  - id: mutant-mutations
+    name: Mutaciones
+    effect: Debe comprar una o más mutaciones al ser reclutado; su coste se suma al reclutamiento.
+    source:
+      manual: trollheim
+      printed_page: 74
+      section: Mutantes
+    name_i18n:
+      en: null
+      es: Mutaciones
+    effect_i18n:
+      en: null
+      es: Debe comprar una o más mutaciones al ser reclutado; su coste se suma al reclutamiento.
+  source:
+    manual: trollheim
+    printed_page: 74
+    section: Mutantes
+  name_i18n:
+    en: null
+    es: Mutante
+- id: darksoul
+  name: Alma Oscura
+  type: henchman
+  cost: 35
+  experience: 0
+  characteristics:
+    M: 10
+    WS: 2
+    BS: 2
+    S: 4
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 6
+  equipment_lists:
+  - darksoul-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules:
+  - id: darksoul-mad
+    name: Enloquecidos
+    effect: Supera automáticamente cualquier chequeo de Liderazgo y desconoce el miedo.
+    source:
+      manual: trollheim
+      printed_page: 75
+      section: Almas Oscuras
+    name_i18n:
+      en: null
+      es: Enloquecidos
+    effect_i18n:
+      en: null
+      es: Supera automáticamente cualquier chequeo de Liderazgo y desconoce el miedo.
+  source:
+    manual: trollheim
+    printed_page: 75
+    section: Almas Oscuras
+  name_i18n:
+    en: null
+    es: Alma Oscura
+- id: brethren
+  name: Hermano
+  type: henchman
+  cost: 25
+  experience: 0
+  characteristics:
+    M: 10
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - possessed-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules: []
+  source:
+    manual: trollheim
+    printed_page: 75
+    section: Hermanos
+  name_i18n:
+    en: null
+    es: Hermano
+- id: beastman
+  name: Hombre Bestia
+  type: henchman
+  cost: 45
+  experience: 0
+  characteristics:
+    M: 10
+    WS: 4
+    BS: 3
+    S: 3
+    T: 4
+    W: 2
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - darksoul-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules: []
+  source:
+    manual: trollheim
+    printed_page: 75
+    section: Hombres Bestia
+  name_i18n:
+    en: null
+    es: Hombre Bestia
+band_rules:
+- id: mutation-purchase
+  name: Compra de mutaciones
+  effect: Solo se compran al reclutar un Mutante o Poseído. La primera cuesta lo indicado; la segunda y posteriores para la
+    misma miniatura cuestan el doble.
+  source:
+    manual: trollheim
+    printed_page: 76
+    section: Mutaciones
+  name_i18n:
+    en: null
+    es: Compra de mutaciones
+  effect_i18n:
+    en: null
+    es: Solo se compran al reclutar un Mutante o Poseído. La primera cuesta lo indicado; la segunda y posteriores para la
+      misma miniatura cuestan el doble.
+- id: daemon-soul
+  name: Alma Demoníaca
+  effect: Salvación especial de 4+ contra hechizos o plegarias.
+  conditions:
+  - Coste 20 coronas
+  source:
+    manual: trollheim
+    printed_page: 76
+    section: Mutaciones
+  name_i18n:
+    en: null
+    es: Alma Demoníaca
+  effect_i18n:
+    en: null
+    es: Salvación especial de 4+ contra hechizos o plegarias.
+- id: great_claw
+  name: Gran Garra
+  effect: El brazo no puede llevar armas; concede un ataque adicional cuerpo a cuerpo con +1 Fuerza.
+  conditions:
+  - Coste 50 coronas
+  source:
+    manual: trollheim
+    printed_page: 76
+    section: Mutaciones
+  name_i18n:
+    en: null
+    es: Gran Garra
+  effect_i18n:
+    en: null
+    es: El brazo no puede llevar armas; concede un ataque adicional cuerpo a cuerpo con +1 Fuerza.
+- id: cloven_hooves
+  name: Pezuñas
+  effect: Movimiento +3 cm.
+  conditions:
+  - Coste 40 coronas
+  source:
+    manual: trollheim
+    printed_page: 76
+    section: Mutaciones
+  name_i18n:
+    en: null
+    es: Pezuñas
+  effect_i18n:
+    en: null
+    es: Movimiento +3 cm.
+- id: tentacle
+  name: Tentáculo
+  effect: Puede reducir en uno los ataques de un oponente en contacto, hasta un mínimo de uno; decide qué ataque pierde.
+  conditions:
+  - Coste 35 coronas
+  source:
+    manual: trollheim
+    printed_page: 76
+    section: Mutaciones
+  name_i18n:
+    en: null
+    es: Tentáculo
+  effect_i18n:
+    en: null
+    es: Puede reducir en uno los ataques de un oponente en contacto, hasta un mínimo de uno; decide qué ataque pierde.
+- id: acidic_blood
+  name: Sangre Ácida
+  effect: Al perder una Herida en cuerpo a cuerpo, cada miniatura en contacto recibe un impacto de F3 sin crítico.
+  conditions:
+  - Coste 30 coronas
+  source:
+    manual: trollheim
+    printed_page: 76
+    section: Mutaciones
+  name_i18n:
+    en: null
+    es: Sangre Ácida
+  effect_i18n:
+    en: null
+    es: Al perder una Herida en cuerpo a cuerpo, cada miniatura en contacto recibe un impacto de F3 sin crítico.
+- id: spines
+  name: Espinas
+  effect: Cada miniatura en contacto recibe un impacto automático de F1 al inicio de cada fase cuerpo a cuerpo; nunca causa
+    crítico.
+  conditions:
+  - Coste 35 coronas
+  source:
+    manual: trollheim
+    printed_page: 76
+    section: Mutaciones
+  name_i18n:
+    en: null
+    es: Espinas
+  effect_i18n:
+    en: null
+    es: Cada miniatura en contacto recibe un impacto automático de F1 al inicio de cada fase cuerpo a cuerpo; nunca causa
+      crítico.
+- id: scorpion_tail
+  name: Cola de Escorpión
+  effect: Ataque adicional de F5 por fase cuerpo a cuerpo; contra inmunes a veneno se resuelve a F2.
+  conditions:
+  - Coste 40 coronas
+  source:
+    manual: trollheim
+    printed_page: 76
+    section: Mutaciones
+  name_i18n:
+    en: null
+    es: Cola de Escorpión
+  effect_i18n:
+    en: null
+    es: Ataque adicional de F5 por fase cuerpo a cuerpo; contra inmunes a veneno se resuelve a F2.
+- id: extra_arm
+  name: Brazo Adicional
+  effect: Puede portar un arma de mano y obtiene +1 Ataque, o sostener escudo o rodela. Un Poseído obtiene el ataque pero
+    no puede portar arma.
+  conditions:
+  - Coste 40 coronas
+  source:
+    manual: trollheim
+    printed_page: 76
+    section: Mutaciones
+  name_i18n:
+    en: null
+    es: Brazo Adicional
+  effect_i18n:
+    en: null
+    es: Puede portar un arma de mano y obtiene +1 Ataque, o sostener escudo o rodela. Un Poseído obtiene el ataque pero no
+      puede portar arma.
+- id: hideous
+  name: Horroroso
+  effect: Causa miedo.
+  conditions:
+  - Coste 40 coronas
+  source:
+    manual: trollheim
+    printed_page: 76
+    section: Mutaciones
+  name_i18n:
+    en: null
+    es: Horroroso
+  effect_i18n:
+    en: null
+    es: Causa miedo.
+source_sections: []
+canonical_family: cult-of-the-possessed

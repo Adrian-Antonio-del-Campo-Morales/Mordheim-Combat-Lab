@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mordheim-combat-lab"
+version = "0.9.0"
+description = "Unified bilingual Monte Carlo close-combat optimizer for Mordheim"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24,<3",
+    "openpyxl>=3.1,<4",
+    "PyYAML>=6,<7",
+]
+
+[project.gui-scripts]
+mordheim-combat-lab = "mordheim_combat_lab.app:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.data-files]
+"share/mordheim_combat_lab/knowledge/bands/mordheimer" = ["sources/knowledge/bands/mordheimer/*.yaml"]
+"share/mordheim_combat_lab/knowledge/bands/trollheim" = ["sources/knowledge/bands/trollheim/*.yaml"]
+"share/mordheim_combat_lab/knowledge/catalog" = ["sources/knowledge/catalog/*.yaml"]
+"share/mordheim_combat_lab/knowledge/schema" = ["sources/knowledge/schema/*.json"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

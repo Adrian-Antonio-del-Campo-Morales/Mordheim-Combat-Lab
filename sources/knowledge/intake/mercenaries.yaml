@@ -1,0 +1,634 @@
+id: mercenaries
+name: Mercenaries
+grade: core
+source_url: https://mordheimer.net/docs/warbands/grade-1a-warbands/mercenaries
+headings:
+- special rules ​
+- Reikland ​
+- Reiklander Special rules ​
+- Middenheim ​
+- Middenheimer Special rules ​
+- Marienburg ​
+- Marienburger Special rules ​
+- Ostermark ​
+- Ostermarker Special rules ​
+- Choice of warriors ​
+- Starting experience ​
+- Mercenary Skill Table ​
+- Reikland Mercenaries ​
+- Middenheim Mercenaries ​
+- Marienburg Mercenaries ​
+- Ostermark Mercenaries ​
+- Mercenary equipment lists ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Miscellaneous ​
+- Marksman equipment list ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Special Equipment ​
+- Cathayan Silk Clothes ​
+- Wolfcloak ​
+- heroes ​
+- 1 Mercenary captain ​
+- SPECIAL RULES ​
+- 0 – 2 Champions ​
+- 0 – 2 Youngbloods ​
+- henchmen ​
+- Warriors ​
+- 0 – 7 Marksmen ​
+- 0 – 5 Swordsmen ​
+- Special Rules ​
+tables:
+- section: Reikland Mercenaries
+  section_path:
+  - Mercenary Skill Table
+  - Reikland Mercenaries
+  rows:
+  - - ''
+    - Combat
+    - Shooting
+    - Academic
+    - Strength
+    - Speed
+  - - Mercenary Captain
+    - ✓
+    - ✓
+    - ✓
+    - ✓
+    - ✓
+  - - Champion
+    - ✓
+    - ✓
+    - ''
+    - ✓
+    - ''
+  - - Youngblood
+    - ✓
+    - ✓
+    - ''
+    - ''
+    - ✓
+- section: Middenheim Mercenaries
+  section_path:
+  - Mercenary Skill Table
+  - Middenheim Mercenaries
+  rows:
+  - - ''
+    - Combat
+    - Shooting
+    - Academic
+    - Strength
+    - Speed
+  - - Mercenary Captain
+    - ✓
+    - ✓
+    - ✓
+    - ✓
+    - ✓
+  - - Champion
+    - ✓
+    - ''
+    - ''
+    - ✓
+    - ✓
+  - - Youngblood
+    - ✓
+    - ''
+    - ''
+    - ✓
+    - ✓
+- section: Marienburg Mercenaries
+  section_path:
+  - Mercenary Skill Table
+  - Marienburg Mercenaries
+  rows:
+  - - ''
+    - Combat
+    - Shooting
+    - Academic
+    - Strength
+    - Speed
+  - - Mercenary Captain
+    - ✓
+    - ✓
+    - ✓
+    - ✓
+    - ✓
+  - - Champion
+    - ✓
+    - ✓
+    - ''
+    - ''
+    - ✓
+  - - Youngblood
+    - ✓
+    - ✓
+    - ''
+    - ''
+    - ✓
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Mercenary equipment lists
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Mace
+    - 3 gc
+  - - Hammer
+    - 3 gc
+  - - Axe
+    - 5 gc
+  - - Sword
+    - 10 gc
+  - - Morning star
+    - 15 gc
+  - - Double-handed weapon
+    - 15 gc
+  - - Spear
+    - 10 gc
+  - - Halberd
+    - 10 gc
+- section: Missile Weapons
+  section_path:
+  - Mercenary equipment lists
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Crossbow
+    - 25 gc
+  - - Pistol
+    - 15 gc (30 for a brace)
+  - - Duelling Pistol
+    - 25 gc (50 for a brace)
+  - - Bow
+    - 10 gc
+- section: Armour
+  section_path:
+  - Mercenary equipment lists
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Light armour
+    - 20 gc
+  - - Heavy armour
+    - 50 gc
+  - - Shield
+    - 5 gc
+  - - Buckler
+    - 5 gc
+  - - Helmet
+    - 10 gc
+- section: Miscellaneous
+  section_path:
+  - Mercenary equipment lists
+  - Miscellaneous
+  rows:
+  - - Item
+    - Cost
+  - - Wolfcloak *
+    - 10 gc
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Mercenary equipment lists
+  - Marksman equipment list
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Mace
+    - 3 gc
+  - - Hammer
+    - 3 gc
+  - - Axe
+    - 5 gc
+  - - Sword
+    - 10 gc
+- section: Missile Weapons
+  section_path:
+  - Mercenary equipment lists
+  - Marksman equipment list
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Crossbow
+    - 25 gc
+  - - Pistol
+    - 15 gc (30 for a brace)
+  - - Bow
+    - 10 gc
+  - - Long bow
+    - 15 gc
+  - - Blunderbuss
+    - 30 gc
+  - - Handgun
+    - 35 gc
+  - - Hunting Rifle
+    - 200 gc
+- section: Armour
+  section_path:
+  - Mercenary equipment lists
+  - Marksman equipment list
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Light armour
+    - 20 gc
+  - - Shield
+    - 5 gc
+  - - Helmet
+    - 10 gc
+- section: 1 Mercenary captain
+  section_path:
+  - heroes
+  - 1 Mercenary captain
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '4'
+    - '4'
+    - '4'
+    - '3'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '8'
+- section: 0 – 2 Champions
+  section_path:
+  - heroes
+  - 0 – 2 Champions
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '4'
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 2 Youngbloods
+  section_path:
+  - heroes
+  - 0 – 2 Youngbloods
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '4'
+    - '2'
+    - '2'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '6'
+- section: Warriors
+  section_path:
+  - henchmen
+  - Warriors
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 7 Marksmen
+  section_path:
+  - henchmen
+  - 0 – 7 Marksmen
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 5 Swordsmen
+  section_path:
+  - henchmen
+  - 0 – 5 Swordsmen
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '4'
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+section_text:
+- section: Reiklander Special rules
+  section_path:
+  - special rules
+  - Reikland
+  - Reiklander Special rules
+  text: 'Reikland Mercenaries are accustomed to the
+
+    demands of military discipline and have a strongly
+
+    developed loyalty between officers and men. To
+
+    represent this, fighters may use their Captain’s
+
+    Leadership if within 12" rather than the usual 6". ❓
+
+    A strong tradition of martial training is also
+
+    responsible for the high standards of archery
+
+    amongst the people of Reikland. All Marksmen
+
+    therefore add +1 to their Ballistic Skill,
+
+    whether they are recruited when the warband
+
+    is first formed or added later.'
+- section: Middenheimer Special rules
+  section_path:
+  - special rules
+  - Middenheim
+  - Middenheimer Special rules
+  text: 'The men of Middenheim are famous for their physical
+
+    prowess. To represent their advantage in size and
+
+    bulk, the Champions and Captains of a Middenheim
+
+    warband start with Strength 4 instead of Strength 3.'
+- section: Marienburger Special rules
+  section_path:
+  - special rules
+  - Marienburg
+  - Marienburger Special rules
+  text: 'As natural traders with contacts in the merchant
+
+    guilds Marienburg warbands receive a +1 bonus
+
+    when attempting to find rare items (see the Trading
+
+    section for rules).
+
+    To reflect their enormous wealth Marienburgers start
+
+    off with an extra 100 gold crowns (600 in total) when
+
+    fighting in a campaign. In a one-off game they are
+
+    permitted an extra 20% gold crowns when recruiting
+
+    a warband. For example, in a 1,000 gold crown game
+
+    a Marienburger warband will have 1,200gc.'
+- section: Ostermarker Special rules
+  section_path:
+  - special rules
+  - Ostermark
+  - Ostermarker Special rules
+  text: 'Ostermarkers follow the rules for Mercenary warbands. In addition
+
+    Ostermarkers (Heroes and Henchmen) may re-roll a failed
+
+    Leadership test for being all alone and routing. A warrior or warband must accept
+    the second roll, however,
+
+    regardless of the result. Furthermore, the men often use
+
+    hounds to guard their farms and raise the alarm against
+
+    trespassers. Any captain of an Ostermarker warband may
+
+    have a wardog as part of his starting equipment to
+
+    represent the beast who once protected his farm and
+
+    holdings from bandits and other, fouler creatures.'
+- section: Choice of warriors
+  section_path:
+  - Choice of warriors
+  text: 'A Mercenary warband must include a minimum of
+
+    three models. You have 500 gold crowns available to
+
+    spend. The maximum number of warriors in the
+
+    warband may never exceed 15.
+
+    Captain: Each Mercenary warband must have one Captain: no more, no less! Champions:
+    Your warband may include up to two Champions. Youngbloods: Your warband may include
+    up to two Youngbloods. Warriors: Your warband may include any number of Warriors.
+    Marksmen: Your warband may include no more than seven Marksmen. ✏️ Swordsmen:
+    Your warband may include no more than five Swordsmen.'
+- section: Starting experience
+  section_path:
+  - Starting experience
+  text: The Captain starts with 20 experience. Champions start with 8 experience.
+    Youngbloods start with 0 experience. Henchmen start with 0 experience.
+- section: Mercenary equipment lists
+  section_path:
+  - Mercenary equipment lists
+  text: 'The following lists are used by Mercenary warbands to pick their weapons:'
+- section: Miscellaneous
+  section_path:
+  - Mercenary equipment lists
+  - Miscellaneous
+  text: '* Middenheim Heroes only.'
+- section: Marksman equipment list
+  section_path:
+  - Mercenary equipment lists
+  - Marksman equipment list
+  text: This list is for Marksmen only.
+- section: Special Equipment
+  section_path:
+  - Special Equipment
+  text: 'Middenheimers have access to the following special equipment when purchasing
+    items from the Trading Post , outside their starting list:'
+- section: 1 Mercenary captain
+  section_path:
+  - heroes
+  - 1 Mercenary captain
+  text: '60 gold crowns to hire
+
+    A Mercenary Captain is a tough professional warrior, a man who will fight for
+    anyone or against anything so long as the price is right. Mordheim offers such
+    a man the chance to become rich beyond his dreams, though at great risk. But as
+    ruthlessness and lack of mercy and pity are the hallmarks of a successful Mercenary
+    Captain, it is no wonder that they flock to Mordheim.
+
+    Weapons/Armour: A Mercenary Captain may be
+
+    equipped with weapons and armour chosen from the
+
+    Mercenary Equipment list.'
+- section: SPECIAL RULES
+  section_path:
+  - heroes
+  - 1 Mercenary captain
+  - SPECIAL RULES
+  text: 'Leader: Any warrior within 6" of the Mercenary
+
+    Captain may use his Leadership characteristic when
+
+    taking Leadership tests.'
+- section: 0 – 2 Champions
+  section_path:
+  - heroes
+  - 0 – 2 Champions
+  text: '35 gold crowns to hire
+
+    In any Mercenary warband there is one warrior who is bigger, stronger (and often
+    uglier) than his comrades. These men are called Champions (or berserkers, first
+    swordsmen and various other names). Champions are amongst the toughest and the
+    best fighters in the warband. They often answer challenges issued to the warband
+    and, after the Captain, they get the pick of any equipment and loot.
+
+    Weapons/Armour : Champions may be equipped
+
+    with weapons and armour chosen from the
+
+    Mercenary Equipment list.'
+- section: 0 – 2 Youngbloods
+  section_path:
+  - heroes
+  - 0 – 2 Youngbloods
+  text: '15 gold crowns to hire
+
+    These are young fighters who are still inexperienced, but eager to win their spurs
+    in the savage fighting in and around the ruins of Mordheim.
+
+    Weapons/Armour: Youngbloods may be equipped
+
+    with weapons and armour chosen from the
+
+    Mercenary Equipment list.'
+- section: henchmen
+  section_path:
+  - henchmen
+  text: (Bought in groups of 1-5)
+- section: Warriors
+  section_path:
+  - henchmen
+  - Warriors
+  text: '25 gold crowns to hire
+
+    These dogs of war are grim, seasoned fighters, fearing no man as long as they
+    have their weapons and armour. They form the core of any Mercenary warband.
+
+    Weapons/Armour: Warriors may be equipped with
+
+    weapons and armour chosen from the Mercenary
+
+    Equipment list.'
+- section: 0 – 7 Marksmen
+  section_path:
+  - henchmen
+  - 0 – 7 Marksmen
+  text: '25 gold crowns to hire
+
+    The archers and hunters of the Old World are famed for their skill, and it is
+    said that they can hit a coin from 300 paces with a long bow. In the savage street
+    fights of Mordheim they snipe at the enemy from the windows of ruined buildings
+    and pick out enemy leaders with their arrows.
+
+    Weapons/Armour: Marksmen may be equipped with
+
+    weapons and armour chosen from the Marksman
+
+    Equipment list.'
+- section: 0 – 5 Swordsmen
+  section_path:
+  - henchmen
+  - 0 – 5 Swordsmen
+  text: '35 gold crowns to hire
+
+    Swordsmen are professional warriors, experts at taking on and beating several
+    opponents at once. They are much sought after by warband leaders, as their skills
+    are ideally suited for fighting in Mordheim.
+
+    Weapons/Armour: Swordsmen may be equipped
+
+    with weapons and armour chosen from the
+
+    Mercenary Equipment list.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 5 Swordsmen
+  - Special Rules
+  text: 'Expert Swordsmen: Swordsmen are so skilled with
+
+    their weapons that they may re-roll any failed hits
+
+    when charging. Note that this only applies when they
+
+    are armed with normal swords, and not with doublehanded swords or any other weapons.'

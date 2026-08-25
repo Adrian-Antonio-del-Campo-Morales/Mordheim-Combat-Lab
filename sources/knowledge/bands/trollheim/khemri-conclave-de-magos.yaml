@@ -1,0 +1,488 @@
+schema_version: 1
+id: khemri-conclave-de-magos
+name: Magos
+name_i18n:
+  en: null
+  es: Magos
+original_locale: es
+categories:
+- trollheim
+collections:
+- trollheim
+grade: null
+setting: Khemri
+publication: khemri
+status: source-normalized
+sources:
+- manual: khemri
+  printed_page: 58-63
+  section: Magos
+roster:
+  minimum_models: 3
+  maximum_models: 12
+  starting_gold: 500
+  members:
+  - profile_id: mage-archmage
+    minimum: 1
+    maximum: 1
+  - profile_id: mage-mage
+    minimum: 0
+    maximum: 2
+  - profile_id: mage-witch
+    minimum: 0
+    maximum: 1
+  - profile_id: mage-pupil
+    minimum: 0
+    maximum: 6
+    notes: Máximo 3 por Mago
+  - profile_id: mage-mechanical-beast
+    minimum: 0
+    maximum: 5
+equipment_lists:
+- id: mage-equipment
+  name: Equipo de los Magos
+  source:
+    manual: khemri
+    printed_page: 59
+    section: Lista de Equipo de los Magos
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: La primera es gratis
+  - item_id: staff
+    cost: 3
+  - item_id: sword
+    cost: 10
+  - item_id: sling
+    cost: 2
+    notes: Solo Pupilos
+  - item_id: pistol
+    cost: 15
+  - item_id: duelling_pistol
+    cost: 25
+  - item_id: mage_robes
+    cost: 10
+  - item_id: familiar
+    cost: 20
+    notes: Solo el Archimago al crear la banda; después requiere la habilidad Lanzar Magia
+  - item_id: dispelling_scroll
+    cost: 25
+  - item_id: flying_carpet
+    cost: 60
+  - item_id: icon_of_manann
+    cost: 30
+    notes: Solo se adquiere al crear la banda
+  name_i18n:
+    en: null
+    es: Equipo de los Magos
+profiles:
+- id: mage-archmage
+  name: Archimago
+  type: hero
+  cost: 70
+  experience: 20
+  characteristics:
+    M: 10
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 4
+    A: 1
+    Ld: 8
+  equipment_lists:
+  - mage-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - academic
+  - speed
+  - special
+  rules:
+  - id: mage-leader
+    name: Jefe
+    effect: Cualquier miembro de la banda a 15 cm o menos puede utilizar su Liderazgo.
+    source:
+      manual: khemri
+      printed_page: 62
+      section: Archimago
+    name_i18n:
+      en: null
+      es: Jefe
+    effect_i18n:
+      en: null
+      es: Cualquier miembro de la banda a 15 cm o menos puede utilizar su Liderazgo.
+  - id: mage-archmage-spellcaster
+    name: Hechicero
+    effect: Empieza con dos hechizos al azar
+    uno elemental y otro general; las reglas de hechizos quedan fuera del alcance canónico actual.: null
+    source:
+      manual: khemri
+      printed_page: 62
+      section: Archimago
+    name_i18n:
+      en: null
+      es: Hechicero
+    effect_i18n:
+      en: null
+      es: Empieza con dos hechizos al azar
+  source:
+    manual: khemri
+    printed_page: 62
+    section: Archimago
+  name_i18n:
+    en: null
+    es: Archimago
+- id: mage-mage
+  name: Mago
+  type: hero
+  cost: 30
+  experience: 8
+  characteristics:
+    M: 10
+    WS: 2
+    BS: 2
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - mage-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - academic
+  - speed
+  - special
+  rules:
+  - id: mage-spellcaster
+    name: Hechicero
+    effect: Al adquirirlo elige un saber elemental o especial y genera un hechizo al azar; todos sus hechizos posteriores
+      deben pertenecer al mismo saber. Los hechizos quedan fuera del alcance canónico actual.
+    source:
+      manual: khemri
+      printed_page: 62
+      section: Magos
+    name_i18n:
+      en: null
+      es: Hechicero
+    effect_i18n:
+      en: null
+      es: Al adquirirlo elige un saber elemental o especial y genera un hechizo al azar; todos sus hechizos posteriores deben
+        pertenecer al mismo saber. Los hechizos quedan fuera del alcance canónico actual.
+  source:
+    manual: khemri
+    printed_page: 62
+    section: Magos
+  name_i18n:
+    en: null
+    es: Mago
+- id: mage-witch
+  name: Brujo
+  type: hero
+  cost: 50
+  experience: 10
+  characteristics:
+    M: 10
+    WS: 2
+    BS: 2
+    S: 3
+    T: 3
+    W: 1
+    I: 4
+    A: 1
+    Ld: 8
+  equipment_lists:
+  - mage-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - academic
+  - speed
+  - special
+  rules:
+  - id: mage-witch-spellcaster
+    name: Hechicero
+    effect: Empieza con dos hechizos de magia menor al azar; las reglas de hechizos quedan fuera del alcance canónico actual.
+    source:
+      manual: khemri
+      printed_page: 62
+      section: Brujo
+    name_i18n:
+      en: null
+      es: Hechicero
+    effect_i18n:
+      en: null
+      es: Empieza con dos hechizos de magia menor al azar; las reglas de hechizos quedan fuera del alcance canónico actual.
+  source:
+    manual: khemri
+    printed_page: 62
+    section: Brujo
+  name_i18n:
+    en: null
+    es: Brujo
+- id: mage-pupil
+  name: Pupilo
+  type: henchman
+  cost: 15
+  experience: 0
+  characteristics:
+    M: 10
+    WS: 2
+    BS: 2
+    S: 2
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - mage-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules:
+  - id: mage-pupil-apprentice
+    name: Aprendices
+    effect: Se pueden adquirir hasta 3 por Mago y 6 en total. Si muere un Mago debe sustituirse cuanto antes; si un Pupilo
+      obtiene tres desarrollos de Héroe cuenta como Mago para este límite.
+    source:
+      manual: khemri
+      printed_page: 63
+      section: Pupilos
+    name_i18n:
+      en: null
+      es: Aprendices
+    effect_i18n:
+      en: null
+      es: Se pueden adquirir hasta 3 por Mago y 6 en total. Si muere un Mago debe sustituirse cuanto antes; si un Pupilo obtiene
+        tres desarrollos de Héroe cuenta como Mago para este límite.
+  - id: mage-pupil-minor-trick
+    name: Truco Menor
+    effect: Es la única magia que puede usar un Pupilo. Por cada hechizo que posea resta 1 a la dificultad. Alcance 30 cm
+    dificultad 10; el objetivo supera Liderazgo o con 1-5 queda paralizado sin mover: null
+    disparar ni atacar aunque se defiende normalmente: null
+    y con 6 queda derribado.: null
+    source:
+      manual: khemri
+      printed_page: 60
+      section: Truco Menor
+    name_i18n:
+      en: null
+      es: Truco Menor
+    effect_i18n:
+      en: null
+      es: Es la única magia que puede usar un Pupilo. Por cada hechizo que posea resta 1 a la dificultad. Alcance 30 cm
+  - id: mage-pupil-experience
+    name: Experiencia
+    effect: Si se convierte en Héroe elige una lista elemental o de magia menor y genera un hechizo al azar; los siguientes
+      deben ser de esa lista. Las listas de hechizos quedan fuera del alcance canónico actual.
+    source:
+      manual: khemri
+      printed_page: 63
+      section: Pupilos
+    name_i18n:
+      en: null
+      es: Experiencia
+    effect_i18n:
+      en: null
+      es: Si se convierte en Héroe elige una lista elemental o de magia menor y genera un hechizo al azar; los siguientes
+        deben ser de esa lista. Las listas de hechizos quedan fuera del alcance canónico actual.
+  source:
+    manual: khemri
+    printed_page: 63
+    section: Pupilos
+  name_i18n:
+    en: null
+    es: Pupilo
+- id: mage-mechanical-beast
+  name: Bestia Mecánica
+  type: henchman
+  cost: 50
+  experience: 0
+  characteristics:
+    M: 10
+    WS: 3
+    BS: 0
+    S: 4
+    T: 4
+    W: 2
+    I: 2
+    A: 1
+    Ld: null
+  equipment_lists: []
+  fixed_equipment:
+  - salvación de 5+
+  equipment_restrictions:
+  - No utiliza armas ni armaduras
+  skill_access: []
+  rules:
+  - id: mage-beast-psychology
+    name: Inmune a Psicología
+    effect: No se ve afectada por la psicología y nunca abandona un combate.
+    source:
+      manual: khemri
+      printed_page: 63
+      section: Bestias Mecánicas
+    name_i18n:
+      en: null
+      es: Inmune a Psicología
+    effect_i18n:
+      en: null
+      es: No se ve afectada por la psicología y nunca abandona un combate.
+  - id: mage-beast-poison
+    name: Inmune a Venenos
+    effect: Los venenos no le afectan.
+    source:
+      manual: khemri
+      printed_page: 63
+      section: Bestias Mecánicas
+    name_i18n:
+      en: null
+      es: Inmune a Venenos
+    effect_i18n:
+      en: null
+      es: Los venenos no le afectan.
+  - id: mage-beast-brainless
+    name: Sin Cerebro
+    effect: Nunca gana experiencia.
+    source:
+      manual: khemri
+      printed_page: 63
+      section: Bestias Mecánicas
+    name_i18n:
+      en: null
+      es: Sin Cerebro
+    effect_i18n:
+      en: null
+      es: Nunca gana experiencia.
+  - id: mage-beast-no-food
+    name: No Comen
+    effect: No necesita agua.
+    source:
+      manual: khemri
+      printed_page: 63
+      section: Bestias Mecánicas
+    name_i18n:
+      en: null
+      es: No Comen
+    effect_i18n:
+      en: null
+      es: No necesita agua.
+  - id: mage-beast-no-run
+    name: No Pueden Correr
+    effect: No puede correr
+    aunque sí cargar normalmente.: null
+    source:
+      manual: khemri
+      printed_page: 63
+      section: Bestias Mecánicas
+    name_i18n:
+      en: null
+      es: No Pueden Correr
+    effect_i18n:
+      en: null
+      es: No puede correr
+  source:
+    manual: khemri
+    printed_page: 63
+    section: Bestias Mecánicas
+  name_i18n:
+    en: null
+    es: Bestia Mecánica
+band_rules:
+- id: mage-skill-dispel
+  name: Disipar Magia
+  effect: Cuando un oponente lanza un hechizo con éxito el Mago puede intentar disiparlo superando en 2D6 el resultado del
+    oponente; si este obtuvo un 10 debe sacar 11 o 12.
+  source:
+    manual: khemri
+    printed_page: 60
+    section: Habilidades Especiales de los Magos
+  name_i18n:
+    en: null
+    es: Disipar Magia
+  effect_i18n:
+    en: null
+    es: Cuando un oponente lanza un hechizo con éxito el Mago puede intentar disiparlo superando en 2D6 el resultado del oponente;
+      si este obtuvo un 10 debe sacar 11 o 12.
+- id: mage-skill-store-spell
+  name: Almacenar Hechizo
+  effect: Requiere báculo. Antes de la batalla almacena un hechizo y decide cuándo usarlo; supera su dificultad +3 o pierde
+    el hechizo.
+  source:
+    manual: khemri
+    printed_page: 60
+    section: Habilidades Especiales de los Magos
+  name_i18n:
+    en: null
+    es: Almacenar Hechizo
+  effect_i18n:
+    en: null
+    es: Requiere báculo. Antes de la batalla almacena un hechizo y decide cuándo usarlo; supera su dificultad +3 o pierde
+      el hechizo.
+- id: mage-skill-mechanic
+  name: Mecánico
+  effect: Para potenciar las Bestias Mecánicas paga 5 coronas para aumentar 1 punto de HA o 2.5 cm de Movimiento
+  hasta un máximo de +2 HA o +5 cm; todo el grupo se mejora a la vez.: null
+  source:
+    manual: khemri
+    printed_page: 60
+    section: Habilidades Especiales de los Magos
+  name_i18n:
+    en: null
+    es: Mecánico
+  effect_i18n:
+    en: null
+    es: Para potenciar las Bestias Mecánicas paga 5 coronas para aumentar 1 punto de HA o 2.5 cm de Movimiento
+- id: mage-familiar
+  name: Familiar
+  effect: Disponibilidad Raro 8 y coste 20+1D6 coronas. Solo un lanzador de hechizos puede poseer uno y no un lanzador de
+    plegarias de Sigmar. Permite repetir una vez por turno el chequeo de lanzamiento fallado
+  aceptando el segundo resultado.: null
+  source:
+    manual: khemri
+    printed_page: 61
+    section: Familiar
+  name_i18n:
+    en: null
+    es: Familiar
+  effect_i18n:
+    en: null
+    es: Disponibilidad Raro 8 y coste 20+1D6 coronas. Solo un lanzador de hechizos puede poseer uno y no un lanzador de plegarias
+      de Sigmar. Permite repetir una vez por turno el chequeo de lanzamiento fallado
+- id: mage-icon-manann
+  name: Icono de Manann
+  effect: Disponibilidad Raro 8 y coste 20+3D6 coronas. Los miembros a 15 cm son inmunes a psicología; si lo lleva el jefe
+    supera automáticamente el primer chequeo de retirada.
+  source:
+    manual: khemri
+    printed_page: 61
+    section: Icono de Manann
+  name_i18n:
+    en: null
+    es: Icono de Manann
+  effect_i18n:
+    en: null
+    es: Disponibilidad Raro 8 y coste 20+3D6 coronas. Los miembros a 15 cm son inmunes a psicología; si lo lleva el jefe supera
+      automáticamente el primer chequeo de retirada.
+- id: mage-robes-rule
+  name: Túnica de Mago
+  effect: Disponibilidad Raro 6 y coste 10 coronas. Concede salvación por armadura de 6+ que no se combina con otras armaduras
+    y permite lanzar hechizos con normalidad.
+  source:
+    manual: khemri
+    printed_page: 61
+    section: Túnica de Mago
+  name_i18n:
+    en: null
+    es: Túnica de Mago
+  effect_i18n:
+    en: null
+    es: Disponibilidad Raro 6 y coste 10 coronas. Concede salvación por armadura de 6+ que no se combina con otras armaduras
+      y permite lanzar hechizos con normalidad.
+source_sections: []
+canonical_family: khemri-conclave-de-magos

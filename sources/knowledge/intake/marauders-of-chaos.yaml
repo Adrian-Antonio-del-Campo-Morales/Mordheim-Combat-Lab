@@ -1,0 +1,916 @@
+id: marauders-of-chaos
+name: Marauders of Chaos
+grade: 1c
+source_url: https://mordheimer.net/docs/warbands/grade-1c-warbands/marauders-of-chaos
+headings:
+- special rules ​
+- Follow the Darkest tribe ​
+- The Norse ​
+- Special Rules ​
+- The Kurgan ​
+- Special Rules ​
+- The Hung ​
+- Special Rules ​
+- Choice of warriors ​
+- Starting experience ​
+- Maximum characteristics ​
+- Marauder Skill Table ​
+- Marauder special skills ​
+- chosen of chaos ​
+- tattooed body ​
+- sweeping blow ​
+- mutant ​
+- heart of the warrior ​
+- Marauder equipment lists ​
+- Hero equipment list ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Henchmen equipment list ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Special Equipment ​
+- Barbed Whip ​
+- Great Axe ​
+- Obsidian Weapon ​
+- Chaos Armour ​
+- Wolfcloak ​
+- heroes ​
+- 1 Marauder Chieftain ​
+- SPECIAL RULES ​
+- 0 – 1 Seer ​
+- Special Rules ​
+- 0 – 2 Champions ​
+- 0 – 1 Condemned ​
+- Special Rules ​
+- henchmen ​
+- Chaos Marauders ​
+- 0 – 5 Warhounds of Chaos ​
+- Special Rules ​
+- 0 – 1 Spawn of Chaos ​
+- Special Rules ​
+- Mark of the Dark Gods ​
+- Mark of Chaos Undivided ​
+- Mark of Tchar the Eagle ​
+- Mark of Arkhar the Dog ​
+- Mark of Onogal the Crow ​
+- Mark of Shornaal the Serpent ​
+tables:
+- section: Marauder Skill Table
+  section_path:
+  - Marauder Skill Table
+  rows:
+  - - ''
+    - Combat
+    - Shooting
+    - Academic
+    - Strength
+    - Speed
+    - Special
+  - - Chieftain
+    - ✓
+    - ''
+    - ''
+    - ✓
+    - ✓
+    - ✓
+  - - Seer
+    - ✓
+    - ''
+    - ✓
+    - ''
+    - ''
+    - ✓
+  - - Condemned
+    - ''
+    - ''
+    - ''
+    - ✓
+    - ✓
+    - ✓
+  - - Champion
+    - ✓
+    - ''
+    - ''
+    - ✓
+    - ''
+    - ✓
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Marauder equipment lists
+  - Hero equipment list
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Hammer
+    - 3 gc
+  - - Axe
+    - 5 gc
+  - - Sword
+    - 10 gc
+  - - Halberd
+    - 10 gc
+  - - Morning Star
+    - 15 gc
+  - - Double-handed weapon
+    - 15 gc
+  - - Flail
+    - 15 gc
+  - - Barbed Whip ✏️
+    - 15 gc
+  - - Great Axe
+    - 25 gc
+- section: Armour
+  section_path:
+  - Marauder equipment lists
+  - Hero equipment list
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Shield
+    - 5 gc
+  - - Helmet
+    - 10 gc
+  - - Light armour
+    - 20 gc
+  - - Heavy armour
+    - 50 gc
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Marauder equipment lists
+  - Henchmen equipment list
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Hammer
+    - 3 gc
+  - - Axe
+    - 5 gc
+  - - Sword
+    - 10 gc
+  - - Spear
+    - 10 gc
+  - - Morning Star
+    - 15 gc
+  - - Flail
+    - 15 gc
+- section: Missile Weapons
+  section_path:
+  - Marauder equipment lists
+  - Henchmen equipment list
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Throwing Axes (same as Throwing Knives )
+    - 15 gc ❓
+- section: Armour
+  section_path:
+  - Marauder equipment lists
+  - Henchmen equipment list
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Shield
+    - 5 gc
+  - - Helmet
+    - 10 gc
+  - - Light armour
+    - 20 gc
+- section: 1 Marauder Chieftain
+  section_path:
+  - heroes
+  - 1 Marauder Chieftain
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '4'
+    - '5'
+    - '3'
+    - '4'
+    - '4'
+    - '1'
+    - '5'
+    - '1'
+    - '8'
+- section: 0 – 1 Seer
+  section_path:
+  - heroes
+  - 0 – 1 Seer
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '4'
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '8'
+- section: 0 – 2 Champions
+  section_path:
+  - heroes
+  - 0 – 2 Champions
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '4'
+    - '4'
+    - '3'
+    - '4'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '7'
+- section: 0 – 1 Condemned
+  section_path:
+  - heroes
+  - 0 – 1 Condemned
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '4'
+    - D6
+    - '3'
+    - D6
+    - D6
+    - '1'
+    - '4'
+    - D3
+    - '7'
+- section: Chaos Marauders
+  section_path:
+  - henchmen
+  - Chaos Marauders
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '4'
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '7'
+- section: 0 – 5 Warhounds of Chaos
+  section_path:
+  - henchmen
+  - 0 – 5 Warhounds of Chaos
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - '7'
+    - '4'
+    - '0'
+    - '4'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '5'
+- section: 0 – 1 Spawn of Chaos
+  section_path:
+  - henchmen
+  - 0 – 1 Spawn of Chaos
+  rows:
+  - - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - 2D6
+    - '3'
+    - '0'
+    - '4'
+    - '5'
+    - '3'
+    - '2'
+    - D6+1
+    - '10'
+section_text:
+- section: special rules
+  section_path:
+  - special rules
+  text: 'Eye of the Gods: An aspiring chaos follower is always Eye of the Gods: watched
+    by the vigilant eyes of the dark gods, who reward the successful generously but
+    punish failures harshly. Roll 2D6 after every battle.
+
+    Spawn of Chaos: If you lost the preceding battle, add +1 to the roll for each
+    of your Heroes that was taken out of action during the battle. On a total of 12
+    or more the warband’s leader turns into a Chaos spawn . His experience, skills,
+    injuries and equipment are lost. ✏️
+
+    Mark of Chaos: If you won the battle, add +1 for every enemy model the leader
+    took out of action. On a total of 12 or more you may choose a Mark of Chaos for
+    the winning leader (see Marks of the Dark Gods below).
+
+    As soon as the leader receives a Mark of Chaos through the Eye of the Gods special
+    rule this test is no longer taken – until the leader leaves the warband in which
+    case the new leader must prove himself to the Dark Gods the same way his predecessor
+    did.
+
+    If the warband already includes a Spawn of Chaos the doomed leader is simply erased
+    from the roster. There may never be more than one Spawn of Chaos in a single warband.
+    The Eye of the Dark Gods rule is not in effect if the warband leader did not take
+    part in the previous battle
+
+    Hired Swords: Marauders of Chaos may only hire the following Hired Swords: Pit
+    Fighters, Ogres, Norse Shamans and Imperial Assassins plus any other Hired Swords
+    which specify they may be hired by Marauders of Chaos. Witches and Warlocks may
+    be hired except by warbands that include warriors with the Mark of Arkhar. ✏️'
+- section: Follow the Darkest tribe
+  section_path:
+  - Follow the Darkest tribe
+  text: When starting a Marauders of Chaos warband you may decide which of the following
+    three major Chaos tribes your warriors belongs to. All warbands follow the same
+    rules for Choice of Warriors, Skills and Equipment. Any exceptions are described
+    below.
+- section: Special Rules
+  section_path:
+  - Follow the Darkest tribe
+  - The Norse
+  - Special Rules
+  text: 'Reavers: Due to their proximity to the Empire and the
+
+    frequency of their raiding, the Norse excel at finding
+
+    the best equipment and supplies quickly. As such, they
+
+    gain a +1 to their rarity rolls when searching during
+
+    the post-game sequence.
+
+    Pantheon: The Norse worship a myriad of gods, spirits
+
+    and ancestors. As a result of their wide pantheon the
+
+    Eye of the Gods special rule''s effect (of becoming a
+
+    Chaos Spawn or receiving a Mark) happens on a result
+
+    of 13+ instead of 12+.'
+- section: Special Rules
+  section_path:
+  - Follow the Darkest tribe
+  - The Kurgan
+  - Special Rules
+  text: 'Pedigree: Some Kurgan tribes delight in the spectacle
+
+    of trained pit hounds fighting against bears, trolls and
+
+    other creatures. A Kurgan warband may include any
+
+    number of Warhounds of Chaos – not only up to five.'
+- section: Special Rules
+  section_path:
+  - Follow the Darkest tribe
+  - The Hung
+  - Special Rules
+  text: 'Disloyalty: The treachery of the Hung is infamous. As
+
+    one horseman is no more trustworthy than the next,
+
+    these nomads tribal allegiance is flimsy at best. The
+
+    maximum number of warriors in the warband is 12
+
+    (instead of 15).
+
+    Affinity with Horses: Warhorses always cost 40 gold
+
+    crowns to the warband – not only to starting
+
+    warbands. In addition, all Heroes (including
+
+    Henchmen that advance to Heroes) automatically have
+
+    the Ride Warhorse skill. Note that the number of
+
+    mounts per warband is not restricted in the Border
+
+    Town Burning setting.'
+- section: Choice of warriors
+  section_path:
+  - Choice of warriors
+  text: 'A Marauders of Chaos warband must include a
+
+    minimum of three models. You have 500 gold crowns
+
+    which you can use to recruit and equip your warband.
+
+    The maximum number of warriors in the warband is
+
+    15 (except for Hung warbands).
+
+    Chieftain: Each Marauder warband must have one Chieftain: no more, no less! Seer:
+    Your warband may include one Seer. Condemned: Your warband may include one Condemned.
+    Champions: Your warband may include up to two Champions. Marauders: Your warband
+    may include any number of Marauders. Warhounds of Chaos: Your warband may include
+    up to five Warhounds. Spawn of Chaos: Your warband may include one Spawn of Chaos.'
+- section: Starting experience
+  section_path:
+  - Starting experience
+  text: A Chieftain starts with 20 Experience. A Seer starts with 8 Experience. Champions
+    start with 8 Experience. A Condemned starts with 8 Experience. All Henchmen start
+    with 0 Experience.
+- section: Maximum characteristics
+  section_path:
+  - Starting experience
+  - Maximum characteristics
+  text: Marauders of Chaos use the profile found here for "Marauder of Chaos". Marauders
+    with the Chosen of Chaos skill use the maximum profile for "Warriors of Chaos".
+- section: Marauder special skills
+  section_path:
+  - Marauder special skills
+  text: The Marauders of Chaos may use the following skill list instead of any of
+    the standard skill lists.
+- section: chosen of chaos
+  section_path:
+  - Marauder special skills
+  - chosen of chaos
+  text: 'The Hero has been found worthy of his god’s service
+
+    and entered the rank of a Chaos Warrior. He uses the
+
+    maximum profile for Warriors of Chaos and the Hero
+
+    equipment list (if he does not already).'
+- section: tattooed body
+  section_path:
+  - Marauder special skills
+  - tattooed body
+  text: 'Only the warband''s leader may have this skill. The
+
+    Hero''s body is covered with unholy Chaos signs to
+
+    attract his patron''s attention. The Eye of the Gods
+
+    special rule''s effect (of becoming a Chaos Spawn or
+
+    receiving a Mark) happens on a result of 10+ instead
+
+    of 12+ only. Note that for the less favoured Norse
+
+    leaders this is 11+.'
+- section: sweeping blow
+  section_path:
+  - Marauder special skills
+  - sweeping blow
+  text: 'Whenever the Hero takes an enemy model out of
+
+    action using a double-handed weapon he may
+
+    immediately make an additional attack against another
+
+    model in base contact. Requires the Strongman skill.'
+- section: mutant
+  section_path:
+  - Marauder special skills
+  - mutant
+  text: 'The Hero may buy one mutation. See the Mutations section of the Possessed
+    on special rules . Heroes with
+
+    the Mark of Onogal may choose a Blessing of Nurgle instead except the
+
+    Mark of Nurgle. Note that unlike other skills Marauder Heroes may take this skill
+    more than once.'
+- section: heart of the warrior
+  section_path:
+  - Marauder special skills
+  - heart of the warrior
+  text: Only the warband’s leader may have this skill. He may re-roll any failed Rout
+    test and is immune to fear and all alone tests.
+- section: Marauder equipment lists
+  section_path:
+  - Marauder equipment lists
+  text: 'The following list is used by Marauder warbands to pick their equipment:'
+- section: Missile Weapons
+  section_path:
+  - Marauder equipment lists
+  - Hero equipment list
+  - Missile Weapons
+  text: None.
+- section: Special Equipment
+  section_path:
+  - Special Equipment
+  text: 'This warband has access to the following special equipment when purchasing
+    items from the Trading Post , outside their starting list:'
+- section: 1 Marauder Chieftain
+  section_path:
+  - heroes
+  - 1 Marauder Chieftain
+  text: '95 gold crowns to hire
+
+    The Chieftain is the brutish head of the warband. He leads his tribe in their
+    constant warfare and bloodshed in an attempt to win the approval of their fickle
+    gods.
+
+    Weapons/Armour: The Marauder Chieftain may be equipped with weapons and armour
+    chosen from the Hero Equipment list.'
+- section: SPECIAL RULES
+  section_path:
+  - heroes
+  - 1 Marauder Chieftain
+  - SPECIAL RULES
+  text: 'Leader: Any Warrior within 6“ of the Marauder Chieftain may use his Leadership
+    instead of his own when taking Ld tests.'
+- section: 0 – 1 Seer
+  section_path:
+  - heroes
+  - 0 – 1 Seer
+  text: '45 gold crowns to hire
+
+    A Seer is the Chieftain’s advisor as their god tells them his will through the
+    Seer''s visions and dreams. The other tribesmen see the Seer''s attunement to
+    their gods as a great gift that is to be equally respected and feared.
+
+    Weapons/Armour: The Seer may be equipped with
+
+    weapons chosen from the Hero Equipment list.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 0 – 1 Seer
+  - Special Rules
+  text: 'Wizard: A Seer is a Wizard and may use Magic as detailed in the Magic section.
+
+    Mark of Chaos: The Seer gets a Mark of Chaos when hired to determine the kind
+    of magic he uses. He can have the Mark of the Serpent, the Mark of the Crow, the
+    Mark of the Eagle, the Mark of Arkhar or the Mark of Chaos Undivided.'
+- section: 0 – 2 Champions
+  section_path:
+  - heroes
+  - 0 – 2 Champions
+  text: '45 gold crowns to hire
+
+    Champions are the strongest and most battle hardened warriors in the tribe. They
+    fight constantly waiting for the day when they can finally be judged by their
+    god as being worthy of his service.
+
+    Weapons/Armour: Champions may be equipped with
+
+    weapons and armour chosen from the Hero
+
+    Equipment list.'
+- section: 0 – 1 Condemned
+  section_path:
+  - heroes
+  - 0 – 1 Condemned
+  text: '55 gold crowns to hire
+
+    A servant of a dark god who was foolish enough to turn away from his patron is
+    forever condemned. If the traitor turns to another god for aid then they are often
+    spared death, but suffer a fate many times worse. The servant suffers constant
+    mutations at the hands of their old god but maintains vestiges of his humanity
+    as his new god compensates for the mutations by restoring or altering the form
+    of the servant. It is all in vain, as the unwitting servant eventually becomes
+    a plaything of both gods who use the servant''s body and soul as a contest of
+    wills between themselves, completely uncaring of the condemned servant''s fate.
+
+    Weapons/Armour: The Condemned uses no
+
+    equipment (see Fate special rule below) but fights
+
+    without penalties.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 0 – 1 Condemned
+  - Special Rules
+  text: 'Inconsistency: The body of the Condemned is
+
+    mutating permanently. The variable attributes WS, S, T
+
+    and A are determined whenever needed, once every
+
+    turn.
+
+    Fear: The Condemned’s unnatural appearance makes him cause fear in his enemies.
+
+    Experience: Whenever the Condemned would
+
+    increase one of his variable attributes the player rolls
+
+    an appropriate die instead. If the player is satisfied
+
+    with the result, he may set the attribute on that
+
+    number (e.g. roll a D6 instead of increasing Strength,
+
+    on a roll of 4 the player may choose to give the model
+
+    S 4). Otherwise the attribute remains variable (and the
+
+    advance is lost). The maximum attributes of the
+
+    Marauders may be exceeded due to the special nature
+
+    of the Condemned, and this carries through to when
+
+    the player wishes to set an attribute instead of keeping
+
+    it random. ❓
+
+    Fate: Once all variable attributes are set, the
+
+    Condemned may use weapons, armour and
+
+    miscellaneous equipment as usual. But, if he has 90
+
+    Experience and still variable attributes, his patron
+
+    could not save him from his former god''s wrath and
+
+    his soul and body are lost. He turns into a terrifying
+
+    Spawn of Chaos. If the warband already consists of a
+
+    spawn, the doomed warrior wanders off into the
+
+    wastes, never to be seen again.'
+- section: henchmen
+  section_path:
+  - henchmen
+  text: (Bought in groups of 1-5)
+- section: Chaos Marauders
+  section_path:
+  - henchmen
+  - Chaos Marauders
+  text: '35 gold crowns to hire
+
+    Marauders are wild uncivilized barbarians who seek battles and bloodshed. They
+    form the majority of the chieftain’s retinue.
+
+    Weapons/Armour: Marauders may be equipped with
+
+    weapons and armour chosen from the Henchman
+
+    Equipment list.'
+- section: 0 – 5 Warhounds of Chaos
+  section_path:
+  - henchmen
+  - 0 – 5 Warhounds of Chaos
+  text: '15 gold crowns to hire
+
+    Warhounds of Chaos are titanic, mastiff-like creatures which are insanely dangerous
+    in combat.
+
+    Weapons/Armour: None! Apart from their fangs and
+
+    nasty tempers the Warhounds don’t have weapons
+
+    and can fight without any penalties.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 5 Warhounds of Chaos
+  - Special Rules
+  text: 'Animals: Warhounds are animals and thus do not gain
+
+    experience.'
+- section: 0 – 1 Spawn of Chaos
+  section_path:
+  - henchmen
+  - 0 – 1 Spawn of Chaos
+  text: '180 gold crowns to hire
+
+    Spawns of Chaos are former Chaos Champions who have been too heavily gifted by
+    their gods and become terrifying mutants.
+
+    Weapons/Armour: None! Spawns of Chaos fight with
+
+    claws, tentacles and other extremities.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 1 Spawn of Chaos
+  - Special Rules
+  text: 'Special Attacks: Roll at the beginning of each Close Combat phase to determine
+    the spawn’s number of Attacks for that phase.
+
+    Fear: Spawn are disgusting and revolting blasphemies against nature and cause
+    fear.
+
+    Special Movement: The Spawn moves 2D6" straight
+
+    ahead in each of its Movement phases. Before it does
+
+    so it’s player may turn it to give the direction. It does
+
+    not double its movement for charging, instead if its
+
+    movement takes it into contact with a model it counts
+
+    as charging and engages that model in close combat.
+
+    Psychology: Spawns are mindless creatures, knowing
+
+    no fear of pain or death. Spawns automatically pass
+
+    any Leadership based test they are required to make.
+
+    No Brain: Spawns of Chaos are crazed creatures and
+
+    therefore gain no experience.
+
+    Large: Spawns of Chaos are huge tempting creatures
+
+    and count as Large Targets as defined in the shooting
+
+    rules.'
+- section: Mark of the Dark Gods
+  section_path:
+  - Mark of the Dark Gods
+  text: 'The Eye of the Gods special rule may let the warband’s leader choose a Mark
+    of the Dark Gods. With exception to
+
+    the Mark of Chaos Undivided there may never be two models in the warband with
+    different Marks. Upon being
+
+    hired Seers choose their Mark when in correspondence with the tribe, granting
+    an audience with their god. A
+
+    Seer who becomes leader at the same time has to choose the Mark for his associated
+    patron when being
+
+    rewarded through the Eye of the Gods .'
+- section: Mark of Chaos Undivided
+  section_path:
+  - Mark of the Dark Gods
+  - Mark of Chaos Undivided
+  text: 'A Hero with this mark believes in Chaos in its purest form instead of the
+    division into four Chaos Gods.
+
+    Leader: All warband members within the leader rule''s
+
+    radius (6" normally and 12" with Battle Tongue) may
+
+    re-roll all failed Ld tests.
+
+    Seer: With the Seer of Chaos Undivided as the tribe''s
+
+    spiritual leader the warband may include 0-3 Gors ( see Beastmen Raiders ) that
+    count towards the maximum
+
+    of 15 members. Re-roll all results of ‘The lad’s got talent’ for them.
+
+    A Seer of Chaos Undivided uses Chaos Rituals .'
+- section: Mark of Tchar the Eagle
+  section_path:
+  - Mark of the Dark Gods
+  - Mark of Tchar the Eagle
+  text: 'Tchar the Great Eagle is the Changer of the Ways. He is the Master of the
+    ever-mutating energy known as magic and his followers are skilful practitioners
+    of the arcane arts.
+
+    Leader: The Hero is capable of casting spells and
+
+    immediately learns one random spell from the Tchar Rituals . However, he suffers
+    –1 on all rolls for
+
+    Difficulty unless he was a wizard before.
+
+    Seer: A Seer of Tchar has command of powerful sorcery. The sorcerer starts with
+    two spells from the Tchar Rituals . One can be chosen freely, the second is randomly
+    determined.'
+- section: Mark of Arkhar the Dog
+  section_path:
+  - Mark of the Dark Gods
+  - Mark of Arkhar the Dog
+  text: 'Arkhar the Dog is the God of War. He is worshipped on the battlefield by
+    his warriors who shed blood in his name, charging their enemies with the battle-cry
+    “Blood for the Blood God!”
+
+    Leader: The Hero is subject to frenzy from now on. In
+
+    addition, any spell that targets the Hero fails on a roll
+
+    of 4+.
+
+    Seer: A Seer with the mark of Arkhar counts as a
+
+    Bloodfather. A Bloodfather is a war-priest and cannot
+
+    cast spells. Instead he communes with daemons and
+
+    his almighty deity through visions.
+
+    Take a Leadership test each time a Bloodfather takes an enemy out of
+
+    action in hand-to-hand combat. If the test is passed
+
+    add +1 to the Weapons Skill, Strength, Toughness or
+
+    Initiative of the war-priest until the end of the battle.
+
+    Each characteristic can be increased only once in this
+
+    way.
+
+    A Bloodfather may take Strength skills in addition to those normally available
+    to a Seer.'
+- section: Mark of Onogal the Crow
+  section_path:
+  - Mark of the Dark Gods
+  - Mark of Onogal the Crow
+  text: 'Onogal the Crow is the Lord of Decay who unleashes pestilence upon the world.
+    Therefore his followers are almost completely immune to diseases and serious wounds.
+
+    Leader: The Hero gets +1 T and may re-roll on the Serious Injuries table once.
+    In addition, he is immune to poison.
+
+    Seer: The Seer uses Onogal Rituals .
+
+    A Seer of Onogal is immune to poison.'
+- section: Mark of Shornaal the Serpent
+  section_path:
+  - Mark of the Dark Gods
+  - Mark of Shornaal the Serpent
+  text: 'Shornaal the Serpent is the Dark Prince of Chaos. The Lord of Pleasure is
+    the patron of all things beautiful and seductive.
+
+    Leader: Enemy models that are not immune to
+
+    psychology cannot attack the Hero in close combat
+
+    unless they pass a Ld test with 3D6, discarding the
+
+    lowest D6 result. If the roll is failed, these models are
+
+    hit automatically in close combat. Once they pass, they
+
+    do not have to test again for the duration of the battle.
+
+    Note that the Lizardman’s Cold Blooded special rule
+
+    cannot be applied to this effect.
+
+    Seer: A Seer of Shornaal uses the Shornaal Rituals . If
+
+    the Seer wasn''t taken out of action during the battle,
+
+    instead of searching for rare items he may brew a
+
+    strong drink for the warband (treat as Bugman''s Ale).
+
+    Note that this item cannot be sold.'

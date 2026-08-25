@@ -1,0 +1,571 @@
+id: skaven-clan-pestilens
+name: Skaven of Clan Pestilens
+grade: 1b
+source_url: https://mordheimer.net/docs/warbands/grade-1b-warbands/skaven-pestilens
+headings:
+- Choice of warriors ​
+- Starting experience ​
+- Clan Pestilens Skill Table ​
+- Clan Pestilens Special Skills ​
+- black hunger ​
+- censer bearer ​
+- rotten body ​
+- contagious ​
+- ignore pain ​
+- Skaven equipment lists ​
+- Heroes equipment lists ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Henchmen ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Special Equipment ​
+- Censer ​
+- Disease Dagger ​
+- Clan Pestilens Banner ​
+- Fog-enhancing Warpstone Shards ​
+- Liber Bubonicus ​
+- Liturgicus Infecticus ​
+- Poisons and Drugs ​
+- Vial of Pestilens ​
+- Scroll of the Rat Familiar ​
+- Warpstone Amulet ​
+- heroes ​
+- 1 Plague Priest ​
+- Special Rules ​
+- 0 – 1 Pestilens Sorcerer ​
+- Special Rules ​
+- 0 – 2 Plague Monks ​
+- 0 – 2 Monk Initiates ​
+- henchmen ​
+- Plague Novices ​
+- Giant rats ​
+- 0 – 1 Rat ogre ​
+- Special Rules ​
+tables:
+- section: Clan Pestilens Skill Table
+  section_path:
+  - Clan Pestilens Skill Table
+  rows:
+  - - ''
+    - Combat
+    - Shooting
+    - Academic
+    - Strength
+    - Speed
+    - Special
+  - - Plague Priest
+    - ✓
+    - ✓
+    - ✓
+    - ✓
+    - ✓
+    - ✓
+  - - Pestilens Sorcerer
+    - ''
+    - ''
+    - ✓
+    - ''
+    - ✓
+    - ✓
+  - - Plague Monks
+    - ✓
+    - ✓
+    - ''
+    - ✓
+    - ✓
+    - ✓
+  - - Monk Initiates
+    - ✓
+    - ✓
+    - ''
+    - ''
+    - ✓
+    - ✓
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Skaven equipment lists
+  - Heroes equipment lists
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Club
+    - 3 gc
+  - - Sword
+    - 10 gc
+  - - Spear
+    - 10 gc
+  - - Halberd
+    - 10 gc
+  - - Flail
+    - 15 gc
+  - - Disease Dagger
+    - 15 gc
+  - - Censer
+    - 40 gc
+- section: Missile Weapons
+  section_path:
+  - Skaven equipment lists
+  - Heroes equipment lists
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Sling
+    - 2 gc
+- section: Armour
+  section_path:
+  - Skaven equipment lists
+  - Heroes equipment lists
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Shield
+    - 5 gc
+  - - Helmet
+    - 10 gc
+  - - Light armour
+    - 20 gc
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Skaven equipment lists
+  - Henchmen
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Club
+    - 3 gc
+  - - Sword
+    - 10 gc
+  - - Spear
+    - 10 gc
+- section: Missile Weapons
+  section_path:
+  - Skaven equipment lists
+  - Henchmen
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Sling
+    - 2 gc
+- section: Armour
+  section_path:
+  - Skaven equipment lists
+  - Henchmen
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Light armour
+    - 20 gc
+  - - Shield
+    - 5 gc
+  - - Helmet
+    - 10 gc
+- section: Scroll of the Rat Familiar
+  section_path:
+  - Special Equipment
+  - Scroll of the Rat Familiar
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '6'
+    - '2'
+    - '0'
+    - '3'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '4'
+- section: 1 Plague Priest
+  section_path:
+  - heroes
+  - 1 Plague Priest
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '5'
+    - '4'
+    - '4'
+    - '4'
+    - '4'
+    - '1'
+    - '5'
+    - '1'
+    - '7'
+- section: 0 – 1 Pestilens Sorcerer
+  section_path:
+  - heroes
+  - 0 – 1 Pestilens Sorcerer
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '5'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '6'
+- section: 0 – 2 Plague Monks
+  section_path:
+  - heroes
+  - 0 – 2 Plague Monks
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '5'
+    - '4'
+    - '3'
+    - '3'
+    - '4'
+    - '1'
+    - '5'
+    - '1'
+    - '6'
+- section: 0 – 2 Monk Initiates
+  section_path:
+  - heroes
+  - 0 – 2 Monk Initiates
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '5'
+    - '2'
+    - '3'
+    - '2'
+    - '2'
+    - '1'
+    - '4'
+    - '1'
+    - '4'
+- section: Plague Novices
+  section_path:
+  - henchmen
+  - Plague Novices
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '5'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '5'
+- section: Giant rats
+  section_path:
+  - henchmen
+  - Giant rats
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '6'
+    - '2'
+    - '0'
+    - '3'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '4'
+- section: 0 – 1 Rat ogre
+  section_path:
+  - henchmen
+  - 0 – 1 Rat ogre
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '6'
+    - '3'
+    - '3'
+    - '5'
+    - '5'
+    - '3'
+    - '4'
+    - '3'
+    - '4'
+section_text:
+- section: Choice of warriors
+  section_path:
+  - Choice of warriors
+  text: 'A Clan Pestilens band must include a minimum of 3 models. You start with
+    500 warp tokens to form your warband with. The warband can have a maximum of 15
+    models.
+
+    Plague Priest: The warband must include a single Plague Priest as the leader.
+    Pestilens Sorcerer: The warband may include a single Pestilens Sorcerer. Plague
+    Monks: The warband may include up to two Plague Monks. Monk Initiates: The warband
+    may include up to two Monk Initiates. Plague Novices: The warband may include
+    any number of Plague Novices. Giant Rats: Your warband may include any number
+    of Giant Rats. Rat Ogre: Your warband may include a single Rat Ogre.'
+- section: Starting experience
+  section_path:
+  - Starting experience
+  text: A Plague Priest starts with 20 experience. A Pestilens Sorcerer and Plague
+    Monks start with 8 experience. Monk Initiates and Plague Novices start with 0
+    experience. Henchmen start with 0 experience.
+- section: Clan Pestilens Special Skills
+  section_path:
+  - Clan Pestilens Special Skills
+  text: Members of Clan Pestilens may choose to use the following Skill list instead
+    of any of the standard Skill tables available to them.
+- section: black hunger
+  section_path:
+  - Clan Pestilens Special Skills
+  - black hunger
+  text: The Skaven can draw upon the dreaded Black Hunger, the fighting frenzy which
+    gives him unnatural strength and speed but can ravage him from inside. The Skaven
+    Hero may declare at the beginning of his turn that he is using this skill. The
+    Hero may add +1 attack and +D3" to the total move to his profile for the duration
+    of his own turn but will suffer D3 S3 hits with no armour save possible at the
+    end of the turn.
+- section: censer bearer
+  section_path:
+  - Clan Pestilens Special Skills
+  - censer bearer
+  text: Only a Clan Pestilens member with the Black Hunger special skill may choose
+    the Censer Bearer special skill. A Clan Pestilens member with this skill is called
+    Censer Bearer. He gains the special rule frenzy and the only weapon he may use
+    in close combat is a censer.
+- section: rotten body
+  section_path:
+  - Clan Pestilens Special Skills
+  - rotten body
+  text: A Clan Pestilens member with this skill has grown accustomed to poisons, diseases
+    and the fog of death emanated by censers. He is now immune to poison and diseases
+    and, if take out of action because of a failed test by wielding a censer, he will
+    not have to roll for injuries at the end of the battle, recovering automatically.
+- section: contagious
+  section_path:
+  - Clan Pestilens Special Skills
+  - contagious
+  text: 'Only a Clan Pestilens member with the Rotten Body
+
+    special skill may choose the Contagious special skill. A model who
+
+    inflicts an injury in close combat that send the contagious member
+
+    of the Clan Pestilens out of acion must take a Toughness test. Roll
+
+    a D6. If the result is higher than the Toughness of the model taking
+
+    the test, he will suffer an automatic wound. A result of 6 always
+
+    inflicts a wound. Models of undead and possessed never take this
+
+    test.'
+- section: ignore pain
+  section_path:
+  - Clan Pestilens Special Skills
+  - ignore pain
+  text: Only a Clan Pestilens member with the Resilient strength skill may choose
+    the Ignore Pain special skill. A Clan Pestilens member with this skill treats
+    "Stunned" injuries as "Knocked Down".
+- section: Skaven equipment lists
+  section_path:
+  - Skaven equipment lists
+  text: The following lists are used by the Skaven to pick their equipment.
+- section: Special Equipment
+  section_path:
+  - Special Equipment
+  text: 'This warband has access to the following special equipment when purchasing
+    items from the Trading Post , outside their starting list:'
+- section: 1 Plague Priest
+  section_path:
+  - heroes
+  - 1 Plague Priest
+  text: '85 gold crowns to hire
+
+    The Plague Priest is one of the most disgusting disciples of the corrupted Clan
+    Pestilens brotherhood. As leader of a small band of devoted to the Clan, the contagion
+    and the wide spreading of diseases are his main goals in the streets of Mordheim.
+
+    Weapons/Armour: The Plague Priest may be equipped as desired from the Clan Pestilens
+    equipment list.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 1 Plague Priest
+  - Special Rules
+  text: 'Leader: Any warrior within 6" of the Plague Priest may use his Leadership
+    instead of his own.'
+- section: 0 – 1 Pestilens Sorcerer
+  section_path:
+  - heroes
+  - 0 – 1 Pestilens Sorcerer
+  text: '45 gold crowns to hire
+
+    The Pestilens Sorcerer is a twisted alchemist, always looking for new and more
+    terrible forms of contagion, under the vigilant supervision of his dreadful master,
+    the Horned Rat.
+
+    Weapons/Armour: The Pestilens Sorcerer may be equipped as
+
+    desired from the Clan Pestilens equipment list.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 0 – 1 Pestilens Sorcerer
+  - Special Rules
+  text: 'Spellcaster: The Pestilens Sorcerer is a spellcaster and may cast spells
+    from the Horned Rat spell list.'
+- section: 0 – 2 Plague Monks
+  section_path:
+  - heroes
+  - 0 – 2 Plague Monks
+  text: '45 gold crowns to hire
+
+    The Plague Monks are among the most fanatic and dangerous members of Clan Pestilens,
+    to them is usually given the honour to chant the Liturgicus Infecticus in combat.
+
+    Weapons/Armour: Plague Monks may be equipped as
+
+    desired from the Clan Pestilens equipment list.'
+- section: 0 – 2 Monk Initiates
+  section_path:
+  - heroes
+  - 0 – 2 Monk Initiates
+  text: '20 gold crowns to hire
+
+    The Monk Initiates are young skavens devoted to the Clan Pestilens discipline,
+    waiting to be promoted as true Plague Monks.
+
+    Weapons/Armour: Monk Initiates may be equipped as
+
+    desired from the Clan Pestilens equipment list.'
+- section: Plague Novices
+  section_path:
+  - henchmen
+  - Plague Novices
+  text: '20 gold crowns to hire
+
+    They are the lower rank of Clan Pestilens. They infest the Mordheim streets, coming
+    just before the terrible Plague Monks and their clouds of pestilential fumes.
+    Dream of every Plague Novice is to be chosen someday to be a Monk, and to be given
+    the privilege of chanting the Liturgicus Infecticus.
+
+    Weapons/Armour: Plague Novices may be armed with weapons and armour chosen from
+    the Henchmen Equipment list.'
+- section: Giant rats
+  section_path:
+  - henchmen
+  - Giant rats
+  text: '15 gold crowns to buy
+
+    Giant contagious rats follow the Clan Pestilens during its battles.
+
+    Weapons/Armour: None. Giant Rats never use any armour or weapons.
+
+    Experience: Giant Rats are animals and do not gain experience.'
+- section: 0 – 1 Rat ogre
+  section_path:
+  - henchmen
+  - 0 – 1 Rat ogre
+  text: '210 gold crowns to buy
+
+    These terrible monsters are often chosen as personal bodyguards by Skaven of higher
+    ranks.
+
+    Weapons/Armour: Jaws, claws and brute force! Rat Ogres can never use weapons or
+    armour.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 1 Rat ogre
+  - Special Rules
+  text: 'Fear: Rat Ogres are so frightening they cause fear .
+
+    Stupidity: A Rat Ogre is subject to stupidity unless a Skaven Hero is within 6"
+    of it.
+
+    Experience: Rat Ogres do not gain experience.
+
+    Large Target: Rat Ogres are Large Targets as defined in the shooting rules.'

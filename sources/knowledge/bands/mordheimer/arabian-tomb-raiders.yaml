@@ -1,0 +1,601 @@
+schema_version: 1
+id: arabian-tomb-raiders
+name: Arabian Tomb Raiders
+name_i18n:
+  en: Arabian Tomb Raiders
+  es: null
+original_locale: en
+categories:
+- 1b
+collections:
+- mordheimer
+grade: 1b
+setting: Khemri
+publication: Town Cryer 20
+status: source-normalized
+sources:
+- manual: mordheimer.net
+  printed_page: 0
+  section: Arabian Tomb Raiders
+  url: https://mordheimer.net/docs/warbands/grade-1b-warbands/arabian-tomb-raiders
+roster:
+  minimum_models: 3
+  maximum_models: 15
+  starting_gold: 500
+  members:
+  - profile_id: sheikh
+    minimum: 1
+    maximum: 1
+  - profile_id: champions
+    minimum: 0
+    maximum: 2
+  - profile_id: mystic
+    minimum: 0
+    maximum: 1
+  - profile_id: bedouin
+    minimum: 0
+    maximum: 2
+  - profile_id: nomad-warriors
+    minimum: 0
+    maximum: null
+  - profile_id: slaves
+    minimum: 0
+    maximum: 5
+equipment_lists:
+- id: warrior-equipment-list
+  name: Warrior equipment list
+  items:
+  - item_id: dagger_jambiya
+    cost: 2
+    notes: 1st free/2 gc
+  - item_id: mace
+    cost: 3
+  - item_id: sword_scimitar
+    cost: 10
+  - item_id: spear
+    cost: 10
+  - item_id: flail
+    cost: 15
+  - item_id: great_weapon
+    cost: 15
+  - item_id: shortbow
+    cost: 5
+  - item_id: bow
+    cost: 10
+  - item_id: tufenk
+    cost: 15
+  - item_id: handgun
+    cost: 35
+  - item_id: shield
+    cost: 5
+  - item_id: buckler
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  - item_id: light_armour
+    cost: 50
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Warrior equipment list
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/arabian-tomb-raiders
+  name_i18n:
+    en: Warrior equipment list
+    es: null
+- id: slave-equipment-list
+  name: Slave equipment list
+  items:
+  - item_id: dagger_jambiya
+    cost: 2
+    notes: 1st free/2 gc
+  - item_id: club
+    cost: 3
+  - item_id: katar
+    cost: 5
+  - item_id: sword_scimitar
+    cost: 10
+  - item_id: spear
+    cost: 10
+  - item_id: shield
+    cost: 5
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Slave equipment list
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/arabian-tomb-raiders
+  name_i18n:
+    en: Slave equipment list
+    es: null
+profiles:
+- id: sheikh
+  name: Sheikh
+  type: hero
+  cost: 60
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 4
+    BS: 4
+    S: 3
+    T: 3
+    W: 1
+    I: 4
+    A: 1
+    Ld: 8
+  equipment_lists:
+  - warrior-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - shooting
+  - academic
+  - strength
+  - speed
+  - special
+  rules:
+  - id: leader
+    name: Leader
+    effect: The Sheikh is the leader of the Warband and any Tomb Raiders within 6" may use his Leadership characteristic for
+      any Leadership tests.
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: heroes / 1 Sheikh / Special Rules / Leader
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/arabian-tomb-raiders
+    name_i18n:
+      en: Leader
+      es: null
+    effect_i18n:
+      en: The Sheikh is the leader of the Warband and any Tomb Raiders within 6" may use his Leadership characteristic for
+        any Leadership tests.
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 1 Sheikh
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/arabian-tomb-raiders
+  source_path:
+  - heroes
+  - 1 Sheikh
+  name_i18n:
+    en: Sheikh
+    es: null
+- id: champions
+  name: Champions
+  type: hero
+  cost: 40
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 4
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - warrior-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - strength
+  - speed
+  - special
+  rules: []
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 2 Champions
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/arabian-tomb-raiders
+  source_path:
+  - heroes
+  - 0 – 2 Champions
+  name_i18n:
+    en: Champions
+    es: null
+- id: mystic
+  name: Mystic
+  type: hero
+  cost: 40
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 2
+    BS: 2
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - warrior-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - academic
+  - speed
+  - special
+  rules:
+  - id: wizard
+    name: Wizard
+    effect: A Mystic is a Wizard. He uses spells from the Elemental Magic list. He starts with a single spell chosen at random
+      from the list.
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: heroes / 0 – 1 Mystic / Special Rules / Wizard
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/arabian-tomb-raiders
+    name_i18n:
+      en: Wizard
+      es: null
+    effect_i18n:
+      en: A Mystic is a Wizard. He uses spells from the Elemental Magic list. He starts with a single spell chosen at random
+        from the list.
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 1 Mystic
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/arabian-tomb-raiders
+  source_path:
+  - heroes
+  - 0 – 1 Mystic
+  name_i18n:
+    en: Mystic
+    es: null
+- id: bedouin
+  name: Bedouin
+  type: henchman
+  cost: 35
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - warrior-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules:
+  - id: desert-trader
+    name: Desert Trader
+    effect: Add +1 to your search for Equipping/Trading result. Note that you only get +1 even if you have two Bedouins.
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 2 Bedouin / Special Rules / Desert Trader
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/arabian-tomb-raiders
+    name_i18n:
+      en: Desert Trader
+      es: null
+    effect_i18n:
+      en: Add +1 to your search for Equipping/Trading result. Note that you only get +1 even if you have two Bedouins.
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 2 Bedouin
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/arabian-tomb-raiders
+  source_path:
+  - henchmen
+  - 0 – 2 Bedouin
+  name_i18n:
+    en: Bedouin
+    es: null
+- id: nomad-warriors
+  name: Nomad Warriors
+  type: henchman
+  cost: 25
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - warrior-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules: []
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Nomad Warriors
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/arabian-tomb-raiders
+  source_path:
+  - henchmen
+  - Nomad Warriors
+  name_i18n:
+    en: Nomad Warriors
+    es: null
+- id: slaves
+  name: Slaves
+  type: henchman
+  cost: 15
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 2
+    BS: 2
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 6
+  equipment_lists:
+  - slave-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules:
+  - id: life-of-slavery
+    name: Life of Slavery
+    effect: A Slave may gain experience, but if he rolls Lad’s got Talent, the leader executes the Slave, and he is removed
+      from the roster. The rest of the group may then re-roll their advance.
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 5 Slaves / Special Rules / Life of Slavery
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/arabian-tomb-raiders
+    name_i18n:
+      en: Life of Slavery
+      es: null
+    effect_i18n:
+      en: A Slave may gain experience, but if he rolls Lad’s got Talent, the leader executes the Slave, and he is removed
+        from the roster. The rest of the group may then re-roll their advance.
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 5 Slaves
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/arabian-tomb-raiders
+  source_path:
+  - henchmen
+  - 0 – 5 Slaves
+  name_i18n:
+    en: Slaves
+    es: null
+band_rules:
+- id: special-rules
+  name: special rules
+  effect: 'Hate Undead: The men of Araby have suffered heavily at the hands (or should that be claws!) of the Tomb King’s
+    armies in the Land of the Dead. Therefore, Araby Nomad Heroes hate all Undead.'
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: special rules
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/arabian-tomb-raiders
+  name_i18n:
+    en: special rules
+    es: null
+  effect_i18n:
+    en: 'Hate Undead: The men of Araby have suffered heavily at the hands (or should that be claws!) of the Tomb King’s armies
+      in the Land of the Dead. Therefore, Araby Nomad Heroes hate all Undead.'
+    es: null
+- id: arabian-tomb-raiders-special-skills
+  name: Arabian Tomb Raiders special skills
+  effect: Arab Heroes may use the following skill table instead of any of the standard skill tables available to them.
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Arabian Tomb Raiders special skills
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/arabian-tomb-raiders
+  name_i18n:
+    en: Arabian Tomb Raiders special skills
+    es: null
+  effect_i18n:
+    en: Arab Heroes may use the following skill table instead of any of the standard skill tables available to them.
+    es: null
+- id: arabian-tomb-raiders-special-skills-sand-worm
+  name: Sand Worm
+  effect: The warrior can bury himself in sand and become almost undetectable. The model can hide in open ground. Cannot be
+    used inside buildings.
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Arabian Tomb Raiders special skills / Sand Worm
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/arabian-tomb-raiders
+  name_i18n:
+    en: Sand Worm
+    es: null
+  effect_i18n:
+    en: The warrior can bury himself in sand and become almost undetectable. The model can hide in open ground. Cannot be
+      used inside buildings.
+    es: null
+- id: arabian-tomb-raiders-special-skills-hit-and-run
+  name: Hit and Run
+  effect: The warrior can run and shoot but suffer -2 to hit instead of the -1 to hit for moving.
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Arabian Tomb Raiders special skills / Hit and Run
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/arabian-tomb-raiders
+  name_i18n:
+    en: Hit and Run
+    es: null
+  effect_i18n:
+    en: The warrior can run and shoot but suffer -2 to hit instead of the -1 to hit for moving.
+    es: null
+- id: arabian-tomb-raiders-special-skills-weather-tolerant
+  name: Weather Tolerant
+  effect: The warrior has grown so used to the weather it doesn't even affect him anymore. Weather conditions such as heat
+    and such no longer affect this model.
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Arabian Tomb Raiders special skills / Weather Tolerant
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/arabian-tomb-raiders
+  name_i18n:
+    en: Weather Tolerant
+    es: null
+  effect_i18n:
+    en: The warrior has grown so used to the weather it doesn't even affect him anymore. Weather conditions such as heat and
+      such no longer affect this model.
+    es: null
+source_sections:
+- section: special rules
+  section_path:
+  - special rules
+  text: 'Hate Undead: The men of Araby have suffered heavily at the hands (or should that be claws!) of the Tomb King’s armies
+    in the Land of the Dead. Therefore, Araby Nomad Heroes hate all Undead.'
+- section: Choice of warriors
+  section_path:
+  - Choice of warriors
+  text: An Araby Nomad warband must include a minimum of three models. You have 500 gold crowns to recruit your initial warband.
+    The maximum number of warriors in the warband may never exceed 15.
+- section: Arabian Tomb Raiders special skills
+  section_path:
+  - Arabian Tomb Raiders special skills
+  text: Arab Heroes may use the following skill table instead of any of the standard skill tables available to them.
+- section: Sand Worm
+  section_path:
+  - Arabian Tomb Raiders special skills
+  - Sand Worm
+  text: The warrior can bury himself in sand and become almost undetectable. The model can hide in open ground. Cannot be
+    used inside buildings.
+- section: Hit and Run
+  section_path:
+  - Arabian Tomb Raiders special skills
+  - Hit and Run
+  text: The warrior can run and shoot but suffer -2 to hit instead of the -1 to hit for moving.
+- section: Weather Tolerant
+  section_path:
+  - Arabian Tomb Raiders special skills
+  - Weather Tolerant
+  text: The warrior has grown so used to the weather it doesn't even affect him anymore. Weather conditions such as heat and
+    such no longer affect this model.
+- section: Arabian Tomb Raiders equipment lists
+  section_path:
+  - Arabian Tomb Raiders equipment lists
+  text: 'The following lists are used by Arabian Tomb Raiders warbands to pick their weapons:'
+- section: Missile Weapons
+  section_path:
+  - Arabian Tomb Raiders equipment lists
+  - Slave equipment list
+  - Missile Weapons
+  text: None.
+- section: 1 Sheikh
+  section_path:
+  - heroes
+  - 1 Sheikh
+  text: '60 gold crowns to hire
+
+    The Sheikh is the undisputed leader of the warband. The Sheikh is a hardened warrior living in the burning hell of the
+    desert and having to constantly fight off bandits, members of other rival tribes, and of course, the evil Undead. He is
+    often also the head of the tribe, respected and trusted by his fellow tribesmen. To all the Nomads, the Sheikh’s word
+    is law, and they obey without question, such is their custom. Only very rarely will another member of the tribe, who is
+    of noble birth, challenge the Sheikh’s leadership and then single combat is fought to determine who has the divine right
+    to lead the tribe.
+
+    Weapons and armour: A Sheikh may be equipped with weapons and armour chosen from the Warrior Equipment list.'
+- section: SPECIAL RULES
+  section_path:
+  - heroes
+  - 1 Sheikh
+  - SPECIAL RULES
+  text: 'Leader: The Sheikh is the leader of the Warband and any Tomb Raiders within 6" may use his Leadership characteristic
+    for any Leadership tests.'
+- section: 0 – 2 Champions
+  section_path:
+  - heroes
+  - 0 – 2 Champions
+  text: '40 gold crowns to hire
+
+    Noble relatives of the Sheikh’s family are fanatically loyal to him and give him the necessary support and muscle when
+    needed. The Champion keeps the rest of the Warband in line, disciplines those who have offended the Sheikh, divides up
+    the booty (after the Sheikh has taken his chosen share, of course), and tells tall tales by the fireside to ensure the
+    warband’s morale and respect for him. Needless to say, the Champion needs to be a tough fighter if he is to lead by example.
+
+    Weapons and armour: A Champion may be equipped with weapons and armour chosen from the Warrior Equipment list.'
+- section: 0 – 1 Mystic
+  section_path:
+  - heroes
+  - 0 – 1 Mystic
+  text: '40 gold crowns to hire
+
+    In the distant past, the Arabians were renowned for their studies in the magical arts, whether they were originally taught
+    by the Elves, as were the men of the Old World, is not known. The wisemen of Araby have mastered a strange aspect of color
+    magic, known as Elementalism, which is based on the four primary elements: earth, wind, fire, and water. Unlike the flamboyant
+    and fabulously wealthy sorcerers of the cities, the mystics of the nomadic tribes are more shamanic and are revered by
+    their fellow tribesmen. These scholars are an integral part of the tribe and take a great part in guiding and motivating
+    the tribe as a whole.
+
+    Weapons and armour: A Mystic may be equipped with weapons and armour chosen from the Warrior Equipment List.'
+- section: SPECIAL RULES
+  section_path:
+  - heroes
+  - 0 – 1 Mystic
+  - SPECIAL RULES
+  text: 'Wizard: A Mystic is a Wizard. He uses spells from the Elemental Magic list. He starts with a single spell chosen
+    at random from the list.'
+- section: henchmen
+  section_path:
+  - henchmen
+  text: (Bought in groups of 1-5)
+- section: 0 – 2 Bedouin
+  section_path:
+  - henchmen
+  - 0 – 2 Bedouin
+  text: '35 gold crowns to hire
+
+    Bedouins are nomadic tribesmen who live on the outskirts of tribal life as the tribesmen themselves do with the rest of
+    civilization. Loners by nature, they are experts in desert craft and make excellent scouts and guides for their tribe
+    or outsiders who are willing to pay enough for their services.
+
+    Weapons and armour: A Bedouin may be equipped with weapons and armour chosen from the Warrior Equipment list.'
+- section: SPECIAL RULES
+  section_path:
+  - henchmen
+  - 0 – 2 Bedouin
+  - SPECIAL RULES
+  text: 'Desert Trader: Add +1 to your search for Equipping/Trading result. Note that you only get +1 even if you have two
+    Bedouins.'
+- section: Nomad Warriors
+  section_path:
+  - henchmen
+  - Nomad Warriors
+  text: "25 gold crowns to hire\nAll the males of the tribe are warriors first and foremost; some may be talented in the crafts\
+    \ of weaving or weapon smithing, but all are brought up from an early age in the use of weapons, primarily the bow and\
+    \ the scimitar. These people are hardy, being used to living in the harsh conditions of the desert. They are also a very\
+    \ superstitious people, and their trust is very hard to gain, especially for outsiders. Many are members of the Sheikh\0\
+    ’s extended family, and their loyalty is unquestioned.\nWeapons and armour: Warriors may be equipped with weapons and\
+    \ armour chosen from the Warrior Equipment list."
+- section: 0 – 5 Slaves
+  section_path:
+  - henchmen
+  - 0 – 5 Slaves
+  text: '15 gold crowns to hire
+
+    Slavery is rife in Araby, and indeed the slave markets of Al-Haikk or Lashiek are a testament to this. Many Old Worlders
+    look upon the Arabians with a great deal of contempt and see them as nothing more than barbarians. Nomads look upon slaves
+    as nothing more than a commodity. Most slaves are those taken captive from other tribes, and theirs is a short and often
+    brutal existence. When it comes to battle, they are unmotivated and make poor fighters.
+
+    Weapons and armour: Slaves may be equipped with weapons and armour chosen from the Slave Equipment List.'
+- section: SPECIAL RULES
+  section_path:
+  - henchmen
+  - 0 – 5 Slaves
+  - SPECIAL RULES
+  text: 'Life of Slavery: A Slave may gain experience, but if he rolls Lad’s got Talent, the leader executes the Slave, and
+    he is removed from the roster. The rest of the group may then re-roll their advance.'
+canonical_family: arabian-tomb-raiders

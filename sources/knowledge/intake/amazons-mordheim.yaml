@@ -1,0 +1,558 @@
+id: amazons-mordheim
+name: Amazons (Mordheim)
+grade: 1b
+source_url: https://mordheimer.net/docs/warbands/grade-1b-warbands/amazons
+headings:
+- Special Rules ​
+- Choice of warriors ​
+- Starting Experience ​
+- Amazon Skill Table ​
+- Amazon equipment lists ​
+- Heroines Equipment List ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Miscellaneous ​
+- Henchwomen equipment list ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Scout Equipment List ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Special Equipment ​
+- Claw of the Old Ones ​
+- Javelins ​
+- Sun Gauntlet ​
+- Sunstaff ​
+- Amulet of the Moon ​
+- heroines ​
+- 1 Priestess ​
+- SPECIAL RULES ​
+- 0 – 2 Champions ​
+- 0 – 2 Totem Warriors ​
+- SPECIAL RULES ​
+- henchwomen ​
+- 1+ Amazon warriors ​
+- 0 – 3 Scouts ​
+- Special Rules ​
+tables:
+- section: Amazon Skill Table
+  section_path:
+  - Amazon Skill Table
+  rows:
+  - - ''
+    - Combat
+    - Shooting
+    - Academic
+    - Strength
+    - Speed
+  - - Priestess
+    - ✓
+    - ✓
+    - ✓
+    - ✓
+    - ✓
+  - - Champion
+    - ✓
+    - ✓
+    - ''
+    - ''
+    - ✓
+  - - Totem Warrior
+    - ✓
+    - ''
+    - ''
+    - ✓
+    - ✓
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Amazon equipment lists
+  - Heroines Equipment List
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Club
+    - 3 gc
+  - - Sword
+    - 10 gc
+  - - Spear
+    - 10 gc
+  - - Claw of the Old Ones
+    - 30 gc
+- section: Missile Weapons
+  section_path:
+  - Amazon equipment lists
+  - Heroines Equipment List
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Sunstaff
+    - 50 gc
+  - - Sun Gauntlet
+    - 40 gc
+- section: Armour
+  section_path:
+  - Amazon equipment lists
+  - Heroines Equipment List
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Buckler
+    - 5 gc
+  - - Helmet
+    - 10 gc
+- section: Miscellaneous
+  section_path:
+  - Amazon equipment lists
+  - Heroines Equipment List
+  - Miscellaneous
+  rows:
+  - - Item
+    - Cost
+  - - Amulet of the Moon
+    - 50 gc
+  - - Healing Herbs
+    - 35 gc
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Amazon equipment lists
+  - Henchwomen equipment list
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Club
+    - 3 gc
+  - - Sword
+    - 10 gc
+  - - Spear
+    - 10 gc
+- section: Missile Weapons
+  section_path:
+  - Amazon equipment lists
+  - Henchwomen equipment list
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Sling
+    - 5 gc
+  - - Bow
+    - 10 gc
+- section: Armour
+  section_path:
+  - Amazon equipment lists
+  - Henchwomen equipment list
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Buckler
+    - 5 gc
+  - - Helmet
+    - 10 gc
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Amazon equipment lists
+  - Scout Equipment List
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Club
+    - 3 gc
+  - - Sword
+    - 10 gc
+  - - Spear
+    - 10 gc
+- section: Missile Weapons
+  section_path:
+  - Amazon equipment lists
+  - Scout Equipment List
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Sling
+    - 5 gc
+  - - Javelins
+    - 5 gc
+  - - Bow
+    - 10 gc
+- section: Armour
+  section_path:
+  - Amazon equipment lists
+  - Scout Equipment List
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Buckler
+    - 5 gc
+  - - Helmet
+    - 10 gc
+- section: 1 Priestess
+  section_path:
+  - heroines
+  - 1 Priestess
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '4'
+    - '4'
+    - '3'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '8'
+- section: 0 – 2 Champions
+  section_path:
+  - heroines
+  - 0 – 2 Champions
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 2 Totem Warriors
+  section_path:
+  - heroines
+  - 0 – 2 Totem Warriors
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '4'
+    - '2'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 1+ Amazon warriors
+  section_path:
+  - henchwomen
+  - 1+ Amazon warriors
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 3 Scouts
+  section_path:
+  - henchwomen
+  - 0 – 3 Scouts
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+section_text:
+- section: Special Rules
+  section_path:
+  - Special Rules
+  text: 'Sacrifice: The Amazons are quick to sacrifice
+
+    any captive to their gods. The Amazons follow
+
+    the rules for Possessed in the Rulebook when
+
+    it comes to captives.
+
+    Not one of us: Due to the Amazons’
+
+    isolationism and suspicions about other races
+
+    they never side with anyone else. For this
+
+    reason, the Amazons may not have any Hired
+
+    Swords or Dramatis Personae unless they are
+
+    actually Amazons themselves.'
+- section: Amazon equipment lists
+  section_path:
+  - Amazon equipment lists
+  text: 'The following lists are used by Amazon warbands to pick their weapons:'
+- section: Special Equipment
+  section_path:
+  - Special Equipment
+  text: 'This warband has access to the following special equipment when purchasing
+    items from the Trading Post , outside their starting list:'
+- section: 1 Priestess
+  section_path:
+  - heroines
+  - 1 Priestess
+  text: '70 gold crowns to hire
+
+    Priestesses are part of the religious sisterhood
+
+    that rules Amazon society. They are powerful
+
+    sorceresses and their word is law. The
+
+    younger, more junior members of the
+
+    Priestesshood often gather war parties to
+
+    search for Slann artifacts and also conduct the
+
+    ritual sacrifices of captured enemies.
+
+    Weapons/Armour: The Priestess may be
+
+    equipped with weapons chosen from the
+
+    Heroine’s equipment lists.'
+- section: SPECIAL RULES
+  section_path:
+  - heroines
+  - 1 Priestess
+  - SPECIAL RULES
+  text: 'Leader: Any models in the warband within 6"
+
+    of the Priestess may use her Leadership
+
+    instead of their own.
+
+    Wizard: The Priestess is a Wizard and may
+
+    use Amazon Rituals . She starts with one ritual
+
+    chosen at random from the list.'
+- section: 0 – 2 Champions
+  section_path:
+  - heroines
+  - 0 – 2 Champions
+  text: '35 gold crowns to hire
+
+    Champions are veterans that have participated
+
+    in dozens of war parties over the years. They
+
+    are the right-hand girls to the Priestesses and
+
+    also act as their bodyguards. They are skilled
+
+    in fighting with a variety of different weapons
+
+    including the legendary claws of the Old
+
+    Ones.
+
+    Weapons/Armour: Champions may be
+
+    equipped with weapons chosen from the
+
+    Heroines and special equipment lists.'
+- section: 0 – 2 Totem Warriors
+  section_path:
+  - heroines
+  - 0 – 2 Totem Warriors
+  text: '30 gold crowns to hire
+
+    There is a peculiar sect within Amazon society
+
+    that attracts the most bloodthirsty, unhinged
+
+    members of the population. These sisters are
+
+    feared and revered in equal amounts. They
+
+    are the Totem Warriors – Amazons that follow
+
+    animal totems like the Eagle, Pirahna, Jaguar,
+
+    etc, and adorn themselves in the skins and
+
+    feathers of their patron gods. Totem warriors
+
+    are addicted to dangerous narcotic substances
+
+    that are made from the various rare herbs that
+
+    grow wild in the jungles of Lustria. Before
+
+    they go into battle they imbibe quantities of
+
+    psychedelic herbs and enter a kill-frenzy –
+
+    making them very ferocious opponents
+
+    indeed.
+
+    Weapons/Armour: Totem Warriors may be
+
+    equipped with weapons chosen from the
+
+    Heroines and special equipment lists.'
+- section: SPECIAL RULES
+  section_path:
+  - heroines
+  - 0 – 2 Totem Warriors
+  - SPECIAL RULES
+  text: 'Frenzy: Totem Warriors are
+
+    utterly fanatical, blood crazed
+
+    individuals. They are also
+
+    totally out of their heads on
+
+    dangerous, psychedelic, herbal
+
+    concoctions prepared by their
+
+    sisters. Totem Warriors are mad
+
+    berserkers who care little
+
+    about danger or the prospect
+
+    of death. They are subject to
+
+    the rules for frenzy .'
+- section: henchwomen
+  section_path:
+  - henchwomen
+  text: (Bought in groups of 1-5)
+- section: 1+ Amazon warriors
+  section_path:
+  - henchwomen
+  - 1+ Amazon warriors
+  text: '25 gold crowns to hire
+
+    Every Amazon woman is trained in the ways of
+
+    warfare from birth and is hardened by a life in
+
+    the unforgiving nature of their jungle
+
+    environment. On the shattered streets of
+
+    Mordheim, things are hardly that different as
+
+    they have just traded the dense jungle
+
+    undergrowth for broken buildings and rubble.
+
+    Weapons/Armour: Amazon Warriors may be
+
+    equipped with weapons
+
+    chosen from the
+
+    henchwomens
+
+    equipment list.'
+- section: 0 – 3 Scouts
+  section_path:
+  - henchwomen
+  - 0 – 3 Scouts
+  text: '30 gold crowns to hire
+
+    Scouts are known for their exceptional speed
+
+    and agility. They are just at home stealthily
+
+    picking their way through the rubble strewn
+
+    streets of the City of the Damned and hiding
+
+    in the ruins setting up ambushes.
+
+    Weapons/Armour: Scouts can be armed with
+
+    weapons and armour chosen from the Scout
+
+    Equipment list.'
+- section: Special Rules
+  section_path:
+  - henchwomen
+  - 0 – 3 Scouts
+  - Special Rules
+  text: 'Stealthy: A Scout may deploy twice the
+
+    distance onto the battlefield than other
+
+    warriors and may start the battle Hiding.'

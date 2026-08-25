@@ -1,0 +1,695 @@
+id: black-dwarfs
+name: Black Dwarfs
+grade: 1c
+source_url: https://mordheimer.net/docs/warbands/grade-1c-warbands/black-dwarfs
+headings:
+- Special Rules ​
+- Choice of warriors ​
+- Starting experience ​
+- Characteristic increase ​
+- Chaos Dwarf Skill Table ​
+- Chaos Dwarf special skills ​
+- extra tough ​
+- chaos engineer ​
+- thick skull ​
+- resource hunter ​
+- tyrant ​
+- true grit ​
+- Chaos Dwarf equipment lists ​
+- Chaos Dwarf Equipment List ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Miscellaneous Equipment ​
+- Informer Equipment List ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Special Equipment ​
+- Man-catcher ​
+- Obsidian Weapon ​
+- Steel Whip ​
+- Chaos Armour ​
+- Mechanical Suit ​
+- Vehicles ​
+- Engine of Chaos ​
+- heroes ​
+- 1 Sorcerer ​
+- SPECIAL RULES ​
+- 0 – 1 Bull Centaur ​
+- Special Rules ​
+- 0 – 2 Gaolers ​
+- Special Rules ​
+- henchmen ​
+- Informers ​
+- Special Rules ​
+- 0 – 5 Chaos Dwarfs ​
+tables:
+- section: Chaos Dwarf Skill Table
+  section_path:
+  - Chaos Dwarf Skill Table
+  rows:
+  - - ''
+    - Combat
+    - Shooting
+    - Academic
+    - Strength
+    - Speed
+    - Special
+  - - Sorcerer
+    - ✓
+    - ''
+    - ✓
+    - ✓
+    - ''
+    - ✓
+  - - Bull Centaur
+    - ✓
+    - ''
+    - ''
+    - ✓
+    - ''
+    - ''
+  - - Gaolers
+    - ✓
+    - ✓
+    - ''
+    - ✓
+    - ''
+    - ✓
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Chaos Dwarf equipment lists
+  - Chaos Dwarf Equipment List
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free ✏️ /2 gc
+  - - Mace
+    - 3 gc
+  - - Hammer
+    - 3 gc
+  - - Axe
+    - 5 gc
+  - - Sword
+    - 10 gc
+  - - Steel Whip *
+    - 10 gc
+  - - Double-handed weapon
+    - 15 gc
+  - - Man-catcher *
+    - 25 gc
+- section: Missile Weapons
+  section_path:
+  - Chaos Dwarf equipment lists
+  - Chaos Dwarf Equipment List
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Pistol
+    - 15 gc (30 gc for a brace)
+  - - Blunderbuss
+    - 30 gc
+  - - Handgun
+    - 35 gc
+- section: Armour
+  section_path:
+  - Chaos Dwarf equipment lists
+  - Chaos Dwarf Equipment List
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Shield
+    - 5 gc
+  - - Helmet
+    - 10 gc
+  - - Light armour
+    - 20 gc
+  - - Heavy armour
+    - 50 gc
+  - - Mechanical Suit **
+    - 175 gc
+- section: Miscellaneous Equipment
+  section_path:
+  - Chaos Dwarf equipment lists
+  - Chaos Dwarf Equipment List
+  - Miscellaneous Equipment
+  rows:
+  - - Item
+    - Cost
+  - - Engine of Chaos
+    - 125 gc
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Chaos Dwarf equipment lists
+  - Informer Equipment List
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Mace
+    - 3 gc
+  - - Axe
+    - 5 gc
+  - - Spear
+    - 10 gc
+- section: Missile Weapons
+  section_path:
+  - Chaos Dwarf equipment lists
+  - Informer Equipment List
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Sling
+    - 2 gc
+  - - Bow
+    - 10 gc
+- section: Armour
+  section_path:
+  - Chaos Dwarf equipment lists
+  - Informer Equipment List
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Shield
+    - 5 gc
+  - - Helmet
+    - 10 gc
+  - - Light armour
+    - 20 gc
+- section: Engine of Chaos
+  section_path:
+  - Special Equipment
+  - Vehicles
+  - Engine of Chaos
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - Engine
+    - '-'
+    - '-'
+    - '-'
+    - '-'
+    - '8'
+    - '4'
+    - '-'
+    - '-'
+    - '-'
+  - - Wheel
+    - '-'
+    - '-'
+    - '-'
+    - '-'
+    - '6'
+    - '1'
+    - '-'
+    - '-'
+    - '-'
+  - - Daemon
+    - '6'
+    - '-'
+    - '-'
+    - '-'
+    - '6'
+    - '3'
+    - '-'
+    - '-'
+    - '-'
+- section: Engine of Chaos
+  section_path:
+  - Special Equipment
+  - Vehicles
+  - Engine of Chaos
+  rows:
+  - - Captives
+    - Hashut's Reward
+  - - 1-3
+    - +1 Experience points for the leader.
+  - - 4-5
+    - +D3 Experience points which can be distributed among the Heroes.
+  - - '6'
+    - +2D3 Experience points which can be distributed among the Heroes plus D6x5 gold
+      crowns.
+- section: 1 Sorcerer
+  section_path:
+  - heroes
+  - 1 Sorcerer
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '3'
+    - '4'
+    - '3'
+    - '3'
+    - '4'
+    - '1'
+    - '2'
+    - '1'
+    - '9'
+- section: 0 – 1 Bull Centaur
+  section_path:
+  - heroes
+  - 0 – 1 Bull Centaur
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '8'
+    - '4'
+    - '3'
+    - '4'
+    - '4'
+    - '1'
+    - '3'
+    - '2'
+    - '9'
+- section: 0 – 2 Gaolers
+  section_path:
+  - heroes
+  - 0 – 2 Gaolers
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '3'
+    - '4'
+    - '3'
+    - '3'
+    - '4'
+    - '1'
+    - '2'
+    - '1'
+    - '9'
+- section: Informers
+  section_path:
+  - henchmen
+  - Informers
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 5 Chaos Dwarfs
+  section_path:
+  - henchmen
+  - 0 – 5 Chaos Dwarfs
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '3'
+    - '4'
+    - '3'
+    - '3'
+    - '4'
+    - '1'
+    - '2'
+    - '1'
+    - '9'
+section_text:
+- section: Special Rules
+  section_path:
+  - Special Rules
+  text: 'The following special rules apply to all warriors in the
+
+    warband excluding Informers: ✏️
+
+    Hard to Kill: Like their uncorrupted brethren, Chaos Dwarfs are tough, resilient
+    individuals who can only
+
+    be taken out of action on a roll of 6 instead of 5-6
+
+    when rolling on the Injury chart. Treat a roll of 1-2 as
+
+    knocked down, 3-5 as stunned, and 6 as out of action.
+
+    Hard Head: Chaos Dwarfs ignore the special rules for
+
+    clubs, maces, etc. They too are not easy to knock out!
+
+    Armour: Chaos Dwarfs never suffer movement
+
+    penalties for wearing armour.
+
+    Hired Swords: A Chaos Dwarf warband may hire the
+
+    following Hired Swords: Ogre Bodyguard, Pit Fighter,
+
+    Warlock, Imperial Assassin, and Hobgoblin Scout.
+
+    They may hire any Hired Sword described as all may hire , or allowed by Orc warbands
+    and Chaos
+
+    warbands. They may never hire Elves of any sort!'
+- section: Characteristic increase
+  section_path:
+  - Characteristic increase
+  text: Characteristics for warriors may not be increased beyond the maximum limits
+    shown here for Dwarfs and Bull Centaur (Black Dwarfs). Informers are a mixture
+    of races, half-breeds, and mutants. They use the maximum characteristics for humans
+    from the Mordheim rulebook.
+- section: Chaos Dwarf special skills
+  section_path:
+  - Chaos Dwarf special skills
+  text: Chaos Dwarfs may choose to use the following skill list instead of the standard
+    skill lists.
+- section: extra tough
+  section_path:
+  - Chaos Dwarf special skills
+  - extra tough
+  text: 'A Chaos Dwarf with this skill is notorious for walking
+
+    away from wounds that would kill a lesser warrior.
+
+    When rolling on the Heroes Serious Injury chart for
+
+    this Hero after a game in which he has been taken out
+
+    of action, the dice may be re-rolled once. The result
+
+    of this second dice roll must be accepted, even if it is a
+
+    worse result.'
+- section: chaos engineer
+  section_path:
+  - Chaos Dwarf special skills
+  - chaos engineer
+  text: 'The Hero has great technical skill and can use this to
+
+    craft wicked armours and weapons. Whenever a Hero
+
+    with this skill searches for Chaos armour (including
+
+    Mechanical Suits) or Obsidian Weapons, he gets +3
+
+    on the roll. ✏️ This represents the Engineer’s ability to
+
+    craft these items himself. The Hero ignores the Rarity
+
+    and Gift of Chaos special rules and may never wear
+
+    the Chaos Armours.'
+- section: thick skull
+  section_path:
+  - Chaos Dwarf special skills
+  - thick skull
+  text: 'The Hero has a thick skull, even for a Chaos Dwarf.
+
+    He has a 3+ save on a D6 to avoid being stunned. If
+
+    the save is made, treat a stunned result as knocked
+
+    down instead. If the Chaos Dwarf also wears a helmet,
+
+    this save is 2+ instead of 3+ (this takes the place of
+
+    the normal Helmet special rule).'
+- section: resource hunter
+  section_path:
+  - Chaos Dwarf special skills
+  - resource hunter
+  text: 'This Chaos Dwarf is especially good at locating
+
+    valuable resources. When rolling on the Exploration
+
+    chart at the end of a game, the hero may modify one
+
+    dice roll by +1/-1.'
+- section: tyrant
+  section_path:
+  - Chaos Dwarf special skills
+  - tyrant
+  text: 'This skill is for the Chaos Dwarf leader only. This
+
+    Priest of Hashut is renowned for his tyranny. His word
+
+    is absolute so his own warband fears his cruelty more
+
+    then the enemy. When making a Rout test, and if led
+
+    by a leader with this skill, the leader may inspire his
+
+    warband to stick around. This skill allows the leader to
+
+    re-roll any failed Rout test, as long as the leader is not
+
+    knocked down or stunned. If re-rolled, the new result
+
+    will apply even if the new result is worse. If the leader
+
+    is taken out of action the warband must make an
+
+    immediate Rout test.'
+- section: true grit
+  section_path:
+  - Chaos Dwarf special skills
+  - true grit
+  text: 'Chaos Dwarfs are hardy individuals and this Hero is
+
+    resolute, even for a Chaos Dwarf! When rolling on the
+
+    Injury table for this Hero, a roll of 1-3 is treated as knocked down , 4-5 as
+    stunned , and 6 as out of action .'
+- section: Chaos Dwarf equipment lists
+  section_path:
+  - Chaos Dwarf equipment lists
+  text: 'The following lists are used by Chaos Dwarf warbands to choose their equipment.
+
+    Starting warbands receive special prices on the Mechanical suit and the Engine
+    of Chaos. These special
+
+    prices represent the lower rarity of these items in the Dark Lands. When attempting
+    to manufacture these
+
+    items in Mordheim or anywhere else outside Zharr-Naggrund, Chaos Dwarfs pay the
+    full prices, and must
+
+    roll to acquire them as normal.'
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Chaos Dwarf equipment lists
+  - Chaos Dwarf Equipment List
+  - Hand-to-hand Combat Weapons
+  text: '* Gaolers only'
+- section: Armour
+  section_path:
+  - Chaos Dwarf equipment lists
+  - Chaos Dwarf Equipment List
+  - Armour
+  text: '** Sorcerer only'
+- section: Special Equipment
+  section_path:
+  - Special Equipment
+  text: 'This warband has access to the following special equipment when purchasing
+    items from the Trading Post , outside their starting list:'
+- section: 1 Sorcerer
+  section_path:
+  - heroes
+  - 1 Sorcerer
+  text: '85 gold crowns to hire
+
+    It is the Priests of Hashut who administrate insidious edicts on behalf of the
+    Chaos Dwarf race. This includes orchestrating trade agreements with the savage
+    Northmen and Ogre tribes. From out of the Dark Lands they frequently lead warbands
+    to plunder the Silk Road.
+
+    Weapons/Armour: The Sorcerer may be equipped
+
+    with weapons chosen from the Chaos Dwarf
+
+    Equipment list.'
+- section: SPECIAL RULES
+  section_path:
+  - heroes
+  - 1 Sorcerer
+  - SPECIAL RULES
+  text: 'Leader: Any warrior within 6“ of the Sorcerer may use
+
+    his Leadership when taking Ld tests.
+
+    Wizard: The Sorcerer is a wizard and follows the rules
+
+    for wizards in the magic section. Sorcerers may cast Rituals of Hashut .
+
+    Priest: The Sorcerer starts with two rituals. One of
+
+    them is the Sacrificial Ritual . The other spell is
+
+    determined as usual from the Rituals of Hashut .'
+- section: 0 – 1 Bull Centaur
+  section_path:
+  - heroes
+  - 0 – 1 Bull Centaur
+  text: '100 gold crowns to hire
+
+    Bull Centaurs are keen witted creatures with the upper torso of a Chaos Dwarf
+    and the body of a bull. They are the most favoured disciples to the Father of
+    Darkness. In his divine image these mutated centauroids are fewer in number than
+    Chaos Dwarfs, more powerful and swifter in battle.
+
+    Weapons/Armour: Bull Centaur may be equipped
+
+    with weapons and armour chosen from the Chaos
+
+    Dwarf Equipment list, but may never use any missile
+
+    weapons.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 0 – 1 Bull Centaur
+  - Special Rules
+  text: 'Large target: Bull centaurs are large creatures and
+
+    therefore make tempting targets for archers. Anyone
+
+    shooting at the Bull Centaur gains a +1 ‘to hit’ and
+
+    may shoot at it even if it is not the closest target. As
+
+    large targets a Bull Centaur adds an extra +20 to the
+
+    warband’s rating.'
+- section: 0 – 2 Gaolers
+  section_path:
+  - heroes
+  - 0 – 2 Gaolers
+  text: '50 gold crowns to hire
+
+    Of all the Black Dwarfs it is the wicked Gaolers who are the most infamous. The
+    minds of these merciless fiends are bent on inflicting pain and their repulsive
+    methods strike fear into the hearts of men. Gaolers delight in the torture of
+    their prisoners for whom death never comes quick enough.
+
+    Weapons/Armour: Gaolers may be equipped with
+
+    weapons and armour chosen from the Chaos Dwarf
+
+    Equipment list.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 0 – 2 Gaolers
+  - Special Rules
+  text: 'Nasty Reputation: Gaolers are known for their
+
+    brutality. The dreaded sight of them and the very
+
+    thought of being captured causes fear in Humans.'
+- section: henchmen
+  section_path:
+  - henchmen
+  text: (Bought in groups of 1-5)
+- section: Informers
+  section_path:
+  - henchmen
+  - Informers
+  text: '15 gold crowns to hire
+
+    For those imprisoned in the foundries of Zharr- Naggrund, the fires of industry
+    burn night and day. There is little reward for a spy, only deceitful promises
+    of freedom. Lies are enough to motivate these treacherous informants into betraying
+    their own kind for small dispensations.
+
+    Weapons/Armour: Informers may be equipped with
+
+    weapons and armour chosen from the Informer
+
+    Equipment list.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - Informers
+  - Special Rules
+  text: 'Drudgery: Informers have had their will broken by
+
+    their masters. Informers may never become Heroes.
+
+    Re-roll all results of ‘The lad’s got talent’ for them.'
+- section: 0 – 5 Chaos Dwarfs
+  section_path:
+  - henchmen
+  - 0 – 5 Chaos Dwarfs
+  text: '40 gold crowns to hire
+
+    These resentful creatures toil in the forges of their city stronghold. To boost
+    the production of weapons and Chaos armour in the foundries they set out on expeditions
+    armed with blunderbusses to bolster the labour force kept shackled in pits beneath
+    the earth.
+
+    Weapons/Armour: Chaos
+
+    Dwarfs may be equipped
+
+    with weapons and armour
+
+    chosen from the
+
+    Chaos Dwarf
+
+    Equipment list.'

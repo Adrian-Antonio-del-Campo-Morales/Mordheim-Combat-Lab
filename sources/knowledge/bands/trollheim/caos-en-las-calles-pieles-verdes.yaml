@@ -1,0 +1,775 @@
+schema_version: 1
+id: chaos-streets-greenskins
+name: Pieles Verdes
+name_i18n:
+  en: null
+  es: Pieles Verdes
+original_locale: es
+categories:
+- trollheim
+collections:
+- trollheim
+grade: null
+setting: Mordheim
+publication: caos-en-las-calles
+status: source-normalized
+sources:
+- manual: caos-en-las-calles
+  printed_page: 126-135
+  section: Pieles Verdes
+roster:
+  minimum_models: 3
+  maximum_models: 20
+  starting_gold: 500
+  members:
+  - profile_id: orc-boss
+    minimum: 1
+    maximum: 1
+  - profile_id: orc-shaman
+    minimum: 0
+    maximum: 1
+  - profile_id: orc-big-un
+    minimum: 0
+    maximum: 2
+  - profile_id: orc-warrior
+    minimum: 0
+    maximum: null
+  - profile_id: goblin-warrior
+    minimum: 0
+    maximum: null
+  - profile_id: cave-squig
+    minimum: 0
+    maximum: 5
+  - profile_id: troll
+    minimum: 0
+    maximum: 1
+equipment_lists:
+- id: orc-equipment
+  name: Equipo para los Orcos
+  source:
+    manual: caos-en-las-calles
+    printed_page: 131
+    section: Lista de Equipo para los Orcos
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: La primera es gratis
+  - item_id: axe
+    cost: 5
+  - item_id: sword
+    cost: 10
+  - item_id: spear
+    cost: 10
+  - item_id: halberd
+    cost: 10
+  - item_id: chained_club
+    cost: 10
+  - item_id: great_weapon
+    cost: 15
+  - item_id: flail
+    cost: 15
+  - item_id: choppa
+    cost: 15
+  - item_id: bow
+    cost: 10
+  - item_id: crossbow
+    cost: 25
+  - item_id: shield
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  - item_id: light_armour
+    cost: 20
+  - item_id: mad_cap_mushrooms
+    cost: 25
+  name_i18n:
+    en: null
+    es: Equipo para los Orcos
+- id: goblin-equipment
+  name: Equipo para Goblins
+  source:
+    manual: caos-en-las-calles
+    printed_page: 131
+    section: Lista de Equipo para Goblins
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: La primera es gratis
+  - item_id: sword
+    cost: 10
+  - item_id: spear
+    cost: 10
+  - item_id: squig_prodder
+    cost: 15
+  - item_id: ball_and_chain
+    cost: 25
+    notes: La ficha del objeto en la página 128 dice 15 coronas; la lista de compra de la página 131 dice 25. La discrepancia
+      también existe en el manual completo
+  - item_id: short_bow
+    cost: 5
+  - item_id: shield
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  - item_id: light_armour
+    cost: 20
+  - item_id: mad_cap_mushrooms
+    cost: 25
+  name_i18n:
+    en: null
+    es: Equipo para Goblins
+profiles:
+- id: orc-boss
+  name: Jefe Orco
+  type: hero
+  cost: 80
+  experience: 20
+  characteristics:
+    M: 10
+    WS: 4
+    BS: 4
+    S: 4
+    T: 4
+    W: 1
+    I: 3
+    A: 1
+    Ld: 8
+  equipment_lists:
+  - orc-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - shooting
+  - strength
+  - speed
+  - greenskin_special
+  rules:
+  - id: orc-boss-leader
+    name: Jefe
+    effect: Cualquier miembro de la banda situado a 15 cm o menos puede utilizar su Liderazgo para sus chequeos.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 132
+      section: Jefe Orco
+    name_i18n:
+      en: null
+      es: Jefe
+    effect_i18n:
+      en: null
+      es: Cualquier miembro de la banda situado a 15 cm o menos puede utilizar su Liderazgo para sus chequeos.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 132
+    section: Jefe Orco
+  name_i18n:
+    en: null
+    es: Jefe Orco
+- id: orc-shaman
+  name: Chamán Orco
+  type: hero
+  cost: 40
+  experience: 10
+  characteristics:
+    M: 10
+    WS: 3
+    BS: 3
+    S: 3
+    T: 4
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - orc-equipment
+  fixed_equipment: []
+  equipment_restrictions:
+  - No puede equiparse con armadura
+  skill_access:
+  - strength
+  - greenskin_special
+  rules:
+  - id: waaagh-wizard
+    name: Hechicero
+    effect: Utiliza la magia ¡Waaagh! y genera sus hechizos en esa lista.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 132
+      section: Chamán Orco
+    name_i18n:
+      en: null
+      es: Hechicero
+    effect_i18n:
+      en: null
+      es: Utiliza la magia ¡Waaagh! y genera sus hechizos en esa lista.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 132
+    section: Chamán Orco
+  name_i18n:
+    en: null
+    es: Chamán Orco
+- id: orc-big-un
+  name: Orco Grandote
+  type: hero
+  cost: 40
+  experience: 15
+  characteristics:
+    M: 10
+    WS: 4
+    BS: 3
+    S: 3
+    T: 4
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - orc-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - shooting
+  - strength
+  - greenskin_special
+  rules: []
+  source:
+    manual: caos-en-las-calles
+    printed_page: 132
+    section: Orcos Grandotez
+  name_i18n:
+    en: null
+    es: Orco Grandote
+- id: orc-warrior
+  name: Guerrero Orco
+  type: henchman
+  cost: 25
+  experience: 0
+  characteristics:
+    M: 10
+    WS: 3
+    BS: 3
+    S: 3
+    T: 4
+    W: 1
+    I: 2
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - orc-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules:
+  - id: animosity
+    name: Animosidad
+    effect: Está sujeto a las reglas completas de Animosidad de la banda.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 133
+      section: Guerreroz Orcos
+    name_i18n:
+      en: null
+      es: Animosidad
+    effect_i18n:
+      en: null
+      es: Está sujeto a las reglas completas de Animosidad de la banda.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 133
+    section: Guerreroz Orcos
+  name_i18n:
+    en: null
+    es: Guerrero Orco
+- id: goblin-warrior
+  name: Guerrero Goblin
+  type: henchman
+  cost: 15
+  experience: 0
+  characteristics:
+    M: 10
+    WS: 2
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 5
+  equipment_lists:
+  - goblin-equipment
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules:
+  - id: goblin-animosity
+    name: Animosidad
+    effect: Está sujeto a Animosidad
+    ? pero un resultado de uno nunca le hace cargar contra un Secuaz Orco; sí puede dispararle si dispone de arma de proyectiles.
+    : null
+    source:
+      manual: caos-en-las-calles
+      printed_page: 133
+      section: Guerreroz Goblin
+    name_i18n:
+      en: null
+      es: Animosidad
+    effect_i18n:
+      en: null
+      es: Está sujeto a Animosidad
+  - id: not-orcs
+    name: No son Orcos
+    effect: Cada Goblin o Garrapato fuera de combate cuenta como media miniatura al calcular si la banda debe efectuar un
+      chequeo de retirada.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 133
+      section: Guerreroz Goblin
+    name_i18n:
+      en: null
+      es: No son Orcos
+    effect_i18n:
+      en: null
+      es: Cada Goblin o Garrapato fuera de combate cuenta como media miniatura al calcular si la banda debe efectuar un chequeo
+        de retirada.
+  - id: useless-runts
+    name: Tipejos inútiles
+    effect: Gana experiencia normalmente
+    pero si obtiene El chico tiene talento se elimina una miniatura del grupo en vez de ascenderla a héroe.: null
+    source:
+      manual: caos-en-las-calles
+      printed_page: 133
+      section: Guerreroz Goblin
+    name_i18n:
+      en: null
+      es: Tipejos inútiles
+    effect_i18n:
+      en: null
+      es: Gana experiencia normalmente
+  - id: fear-elves
+    name: Miedo a los Orejas Picudas
+    effect: Siente miedo hacia los Elfos.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 133
+      section: Guerreroz Goblin
+    name_i18n:
+      en: null
+      es: Miedo a los Orejas Picudas
+    effect_i18n:
+      en: null
+      es: Siente miedo hacia los Elfos.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 133
+    section: Guerreroz Goblin
+  name_i18n:
+    en: null
+    es: Guerrero Goblin
+- id: cave-squig
+  name: Garrapato Cavernícola
+  type: henchman
+  cost: 15
+  experience: 0
+  characteristics:
+    M: 5D6
+    WS: 4
+    BS: 0
+    S: 4
+    T: 3
+    W: 1
+    I: 4
+    A: 1
+    Ld: 5
+  equipment_lists: []
+  fixed_equipment:
+  - Boca gigantesca
+  equipment_restrictions:
+  - Nunca utiliza ni necesita armas o armaduras
+  skill_access: []
+  rules:
+  - id: squig-movement
+    name: Movimiento
+    effect: Mueve 5D6 cm; nunca corre ni declara cargas. Si alcanza a un enemigo durante su movimiento normal se considera
+      que ha cargado y ataca como tal en la siguiente fase cuerpo a cuerpo.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 134
+      section: Garrapatos Cavernícolas
+    name_i18n:
+      en: null
+      es: Movimiento
+    effect_i18n:
+      en: null
+      es: Mueve 5D6 cm; nunca corre ni declara cargas. Si alcanza a un enemigo durante su movimiento normal se considera que
+        ha cargado y ataca como tal en la siguiente fase cuerpo a cuerpo.
+  - id: squig-keepers
+    name: Kuidadorez
+    effect: Debe permanecer a 15 cm o menos de un Guerrero Goblin. Si no lo está al inicio de su movimiento se descontrola
+      y desde entonces mueve 5D6 cm en dirección aleatoria
+    atacando a cualquier miniatura que alcance: null
+    hasta el final de la partida.: null
+    source:
+      manual: caos-en-las-calles
+      printed_page: 134
+      section: Garrapatos Cavernícolas
+    name_i18n:
+      en: null
+      es: Kuidadorez
+    effect_i18n:
+      en: null
+      es: Debe permanecer a 15 cm o menos de un Guerrero Goblin. Si no lo está al inicio de su movimiento se descontrola y
+        desde entonces mueve 5D6 cm en dirección aleatoria
+  - id: not-orcs
+    name: No son Orcos
+    effect: Cuenta como media miniatura al calcular si la banda debe efectuar un chequeo de retirada.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 134
+      section: Garrapatos Cavernícolas
+    name_i18n:
+      en: null
+      es: No son Orcos
+    effect_i18n:
+      en: null
+      es: Cuenta como media miniatura al calcular si la banda debe efectuar un chequeo de retirada.
+  - id: animal
+    name: Animales
+    effect: No acumula experiencia.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 134
+      section: Garrapatos Cavernícolas
+    name_i18n:
+      en: null
+      es: Animales
+    effect_i18n:
+      en: null
+      es: No acumula experiencia.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 134
+    section: Garrapatos Cavernícolas
+  name_i18n:
+    en: null
+    es: Garrapato Cavernícola
+- id: troll
+  name: Troll
+  type: henchman
+  cost: 200
+  experience: 0
+  characteristics:
+    M: 15
+    WS: 3
+    BS: 1
+    S: 5
+    T: 4
+    W: 3
+    I: 1
+    A: 3
+    Ld: 4
+  equipment_lists: []
+  fixed_equipment:
+  - Garrote gigantesco opcional sin efecto de equipo
+  equipment_restrictions:
+  - Nunca puede equiparse con armas o armaduras
+  skill_access: []
+  rules:
+  - id: fear
+    name: Miedo
+    effect: Causa miedo.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 135
+      section: Troll
+    name_i18n:
+      en: null
+      es: Miedo
+    effect_i18n:
+      en: null
+      es: Causa miedo.
+  - id: stupidity
+    name: Estupidez
+    effect: Está sujeto a las reglas de estupidez.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 135
+      section: Troll
+    name_i18n:
+      en: null
+      es: Estupidez
+    effect_i18n:
+      en: null
+      es: Está sujeto a las reglas de estupidez.
+  - id: regeneration
+    name: Regeneración
+    effect: Cada vez que sufre una herida la ignora con 4+. No puede regenerar heridas causadas por fuego o magia ígnea y
+      no tira Heridas Graves después de la batalla.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 135
+      section: Troll
+    name_i18n:
+      en: null
+      es: Regeneración
+    effect_i18n:
+      en: null
+      es: Cada vez que sufre una herida la ignora con 4+. No puede regenerar heridas causadas por fuego o magia ígnea y no
+        tira Heridas Graves después de la batalla.
+  - id: stupid-monster
+    name: Monstruo estúpido
+    effect: No gana experiencia ni puede aprender habilidades.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 135
+      section: Troll
+    name_i18n:
+      en: null
+      es: Monstruo estúpido
+    effect_i18n:
+      en: null
+      es: No gana experiencia ni puede aprender habilidades.
+  - id: always-hungry
+    name: Siempre hambrientos
+    effect: Después de cada batalla cuesta 15 coronas mantenerlo. En su lugar puede sacrificarse un Guerrero Goblin o Garrapato.
+      Si no se paga de ningún modo
+    abandona la banda.: null
+    source:
+      manual: caos-en-las-calles
+      printed_page: 135
+      section: Troll
+    name_i18n:
+      en: null
+      es: Siempre hambrientos
+    effect_i18n:
+      en: null
+      es: Después de cada batalla cuesta 15 coronas mantenerlo. En su lugar puede sacrificarse un Guerrero Goblin o Garrapato.
+        Si no se paga de ningún modo
+  - id: troll-vomit
+    name: Vómito
+    effect: En vez de atacar normalmente puede efectuar un único ataque cuerpo a cuerpo que impacta automáticamente con Fuerza
+      5 e ignora la armadura.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 135
+      section: Troll
+    name_i18n:
+      en: null
+      es: Vómito
+    effect_i18n:
+      en: null
+      es: En vez de atacar normalmente puede efectuar un único ataque cuerpo a cuerpo que impacta automáticamente con Fuerza
+        5 e ignora la armadura.
+  - id: large-target
+    name: Objetivo Grande
+    effect: Puede ser escogido como blanco aunque no sea el objetivo más cercano y los disparos contra él reciben más uno
+      para impactar.
+    source:
+      manual: caos-en-las-calles
+      printed_page: 135
+      section: Troll
+    name_i18n:
+      en: null
+      es: Objetivo Grande
+    effect_i18n:
+      en: null
+      es: Puede ser escogido como blanco aunque no sea el objetivo más cercano y los disparos contra él reciben más uno para
+        impactar.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 135
+    section: Troll
+  name_i18n:
+    en: null
+    es: Troll
+band_rules:
+- id: greenskin-roster-ratios
+  name: Límites de Goblins y Garrapatos
+  effect: No puede haber más de dos Guerreros Goblin por cada Orco de la banda, contando héroes Orcos. Tampoco puede haber
+    más Garrapatos Cavernícolas que Guerreros Goblin, y en ningún caso más de cinco.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 126
+    section: Elección de Guerreros
+  name_i18n:
+    en: null
+    es: Límites de Goblins y Garrapatos
+  effect_i18n:
+    en: null
+    es: No puede haber más de dos Guerreros Goblin por cada Orco de la banda, contando héroes Orcos. Tampoco puede haber más
+      Garrapatos Cavernícolas que Guerreros Goblin, y en ningún caso más de cinco.
+- id: animosity
+  name: Animosidad
+  effect: Al inicio de cada turno tira 1D6 por cada Secuaz Orco o Goblin que no esté trabado. Con 2-6 actúa normalmente. Con
+    1 tira otra vez; con 1 carga y combate un Secuaz Orco o Goblin o espada de alquiler aliado cercano, o le dispara si no
+    puede cargar, y no hace nada más; con 2 pasa el turno insultando al compañero más próximo salvo que sea atacado; con 3
+    mueve inmediatamente hacia el enemigo visible más próximo y carga si puede, pudiendo volver a mover o cargar en su fase
+    normal.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 127
+    section: Reglas Especiales de los Pieles Verdes
+  name_i18n:
+    en: null
+    es: Animosidad
+  effect_i18n:
+    en: null
+    es: Al inicio de cada turno tira 1D6 por cada Secuaz Orco o Goblin que no esté trabado. Con 2-6 actúa normalmente. Con
+      1 tira otra vez; con 1 carga y combate un Secuaz Orco o Goblin o espada de alquiler aliado cercano, o le dispara si
+      no puede cargar, y no hace nada más; con 2 pasa el turno insultando al compañero más próximo salvo que sea atacado;
+      con 3 mueve inmediatamente hacia el enemigo visible más próximo y carga si puede, pudiendo volver a mover o cargar en
+      su fase normal.
+- id: unpleasant-company
+  name: Compañía Desagradable
+  effect: Solo puede contratar Luchadores de Pozo y Hechiceros, además de espadas de alquiler Pieles Verdes, Ogros, hechiceros
+    malvados o cualquier espada Caótica.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 127
+    section: Reglas Especiales de los Pieles Verdes
+  name_i18n:
+    en: null
+    es: Compañía Desagradable
+  effect_i18n:
+    en: null
+    es: Solo puede contratar Luchadores de Pozo y Hechiceros, además de espadas de alquiler Pieles Verdes, Ogros, hechiceros
+      malvados o cualquier espada Caótica.
+- id: ball-and-chain
+  name: Bola con Kadena
+  effect: Solo Goblins; Común. La ficha indica 15 coronas, pero la lista de banda indica 25. Fuerza del usuario más dos, sin
+    salvación por armadura y cada impacto causa 1D3 heridas. Solo puede usarse bajo Hongos Pirakabezas y excluye cualquier
+    otro equipo. El primer turno mueve 5D6 cm en la dirección elegida; después, 1 mata al portador, 2-5 permite elegir dirección
+    y 6 da dirección aleatoria. Contactar con una miniatura cuenta como carga; los ataques contra el portador sufren menos
+    uno para impactar, no puede quedar retenido y chocar con un obstáculo lo deja fuera de combate. Ignora Animosidad. Al
+    acabar la batalla debe tirar en Heridas Graves aunque no quedase fuera de combate.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 128
+    section: Bola con Kadena
+  name_i18n:
+    en: null
+    es: Bola con Kadena
+  effect_i18n:
+    en: null
+    es: Solo Goblins; Común. La ficha indica 15 coronas, pero la lista de banda indica 25. Fuerza del usuario más dos, sin
+      salvación por armadura y cada impacto causa 1D3 heridas. Solo puede usarse bajo Hongos Pirakabezas y excluye cualquier
+      otro equipo. El primer turno mueve 5D6 cm en la dirección elegida; después, 1 mata al portador, 2-5 permite elegir dirección
+      y 6 da dirección aleatoria. Contactar con una miniatura cuenta como carga; los ataques contra el portador sufren menos
+      uno para impactar, no puede quedar retenido y chocar con un obstáculo lo deja fuera de combate. Ignora Animosidad. Al
+      acabar la batalla debe tirar en Heridas Graves aunque no quedase fuera de combate.
+- id: squig-prodder
+  name: Pinchagarrapatoz
+  effect: Cuesta 15 coronas, es Común y solo para Goblins. Usa la Fuerza del usuario y Ataca Primero en la primera ronda cuerpo
+    a cuerpo. Permite controlar Garrapatos hasta 30 cm. No puede combinarse con segunda arma o rodela, aunque sí con escudo.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 129
+    section: Pinchagarrapatoz
+  name_i18n:
+    en: null
+    es: Pinchagarrapatoz
+  effect_i18n:
+    en: null
+    es: Cuesta 15 coronas, es Común y solo para Goblins. Usa la Fuerza del usuario y Ataca Primero en la primera ronda cuerpo
+      a cuerpo. Permite controlar Garrapatos hasta 30 cm. No puede combinarse con segunda arma o rodela, aunque sí con escudo.
+- id: mad-cap-mushrooms
+  name: Hongos Pirakabezas
+  effect: Cuestan 25 coronas y son Comunes si la banda incluye Goblins. Antes de la batalla conceden Furia Asesina y permiten
+    usar una Bola con Kadena. No afectan a No Muertos ni Poseídos. Después de la batalla, con un 1 en 1D6 el consumidor queda
+    permanentemente estúpido.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 129
+    section: Hongos Pirakabezas
+  name_i18n:
+    en: null
+    es: Hongos Pirakabezas
+  effect_i18n:
+    en: null
+    es: Cuestan 25 coronas y son Comunes si la banda incluye Goblins. Antes de la batalla conceden Furia Asesina y permiten
+      usar una Bola con Kadena. No afectan a No Muertos ni Poseídos. Después de la batalla, con un 1 en 1D6 el consumidor
+      queda permanentemente estúpido.
+- id: hard-head
+  name: Kabezadura
+  effect: Salvación especial de 3+ para convertir un resultado de aturdido en derribado; con Casco es de 2+ y sustituye su
+    regla normal.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 130
+    section: Habilidades Especiales de los Pieles Verdes
+  name_i18n:
+    en: null
+    es: Kabezadura
+  effect_i18n:
+    en: null
+    es: Salvación especial de 3+ para convertir un resultado de aturdido en derribado; con Casco es de 2+ y sustituye su regla
+      normal.
+- id: waaagh-charge
+  name: ¡Waaagh!
+  effect: Suma 1D6 más 2 cm a su movimiento de carga.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 130
+    section: Habilidades Especiales de los Pieles Verdes
+  name_i18n:
+    en: null
+    es: ¡Waaagh!
+  effect_i18n:
+    en: null
+    es: Suma 1D6 más 2 cm a su movimiento de carga.
+- id: here-we-go
+  name: ¡Allá vamoz!
+  effect: Puede ignorar los chequeos de miedo y terror al cargar.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 130
+    section: Habilidades Especiales de los Pieles Verdes
+  name_i18n:
+    en: null
+    es: ¡Allá vamoz!
+  effect_i18n:
+    en: null
+    es: Puede ignorar los chequeos de miedo y terror al cargar.
+- id: cunning-plan
+  name: Un Plan Aztuto
+  effect: Solo el Jefe puede escogerla. La banda puede repetir un chequeo de retirada fallido si el Jefe no está fuera de
+    combate.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 130
+    section: Habilidades Especiales de los Pieles Verdes
+  name_i18n:
+    en: null
+    es: Un Plan Aztuto
+  effect_i18n:
+    en: null
+    es: Solo el Jefe puede escogerla. La banda puede repetir un chequeo de retirada fallido si el Jefe no está fuera de combate.
+- id: very-tough
+  name: Muy Duro
+  effect: Suma uno a sus tiradas de salvación por armadura.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 130
+    section: Habilidades Especiales de los Pieles Verdes
+  name_i18n:
+    en: null
+    es: Muy Duro
+  effect_i18n:
+    en: null
+    es: Suma uno a sus tiradas de salvación por armadura.
+- id: head-basher
+  name: Machacabezas
+  effect: Cualquier resultado de derribado que cause cuerpo a cuerpo se convierte en aturdido.
+  source:
+    manual: caos-en-las-calles
+    printed_page: 130
+    section: Habilidades Especiales de los Pieles Verdes
+  name_i18n:
+    en: null
+    es: Machacabezas
+  effect_i18n:
+    en: null
+    es: Cualquier resultado de derribado que cause cuerpo a cuerpo se convierte en aturdido.
+source_sections: []
+canonical_family: orc-mob

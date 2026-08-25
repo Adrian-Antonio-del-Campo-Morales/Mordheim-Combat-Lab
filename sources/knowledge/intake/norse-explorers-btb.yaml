@@ -1,0 +1,603 @@
+id: norse-explorers-btb
+name: Norse Explorers
+grade: 1c
+source_url: https://mordheimer.net/docs/warbands/grade-1b-warbands/norse
+headings:
+- special rules ​
+- Choice of warriors ​
+- Starting experience ​
+- Norse Skill Table ​
+- Norse special skills ​
+- barbarian courage ​
+- battle tongue ​
+- berserk charge ​
+- crushing blow ​
+- shield master ​
+- Norse equipment lists ​
+- Hero equipment list ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Henchmen equipment list ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Hunters equipment list ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- heroes ​
+- 1 Jarl ​
+- SPECIAL RULES ​
+- 0 – 2 Beserkers ​
+- Special Rules ​
+- 0 – 1 Wulfen ​
+- Special Rules ​
+- 0 – 2 Bondsmen ​
+- henchmen ​
+- Marauders ​
+- 0 – 5 Hunters ​
+- 0 – 5 Wolves ​
+- Special Rules ​
+tables:
+- section: Norse Skill Table
+  section_path:
+  - Norse Skill Table
+  rows:
+  - - ''
+    - Combat
+    - Shooting
+    - Academic
+    - Strength
+    - Speed
+    - Special
+  - - Jarl
+    - ✓
+    - ''
+    - ''
+    - ✓
+    - ✓
+    - ✓
+  - - Berserker
+    - ✓
+    - ''
+    - ''
+    - ✓
+    - ''
+    - ✓
+  - - Wulfen/Ulfwerenar
+    - ✓
+    - ''
+    - ''
+    - ✓
+    - ✓
+    - ✓
+  - - Bondsmen
+    - ✓
+    - ''
+    - ''
+    - ✓
+    - ✓
+    - ✓
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Norse equipment lists
+  - Hero equipment list
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Hammer
+    - 3 gc
+  - - Axe
+    - 5 gc
+  - - Sword
+    - 10 gc
+  - - Double-handed weapon
+    - 15 gc
+  - - Flail
+    - 15 gc
+- section: Missile Weapons
+  section_path:
+  - Norse equipment lists
+  - Hero equipment list
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Throwing Axes (same as Throwing Knives )
+    - 15 gc
+- section: Armour
+  section_path:
+  - Norse equipment lists
+  - Hero equipment list
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Shield
+    - 5 gc
+  - - Helmet
+    - 10 gc
+  - - Light armour
+    - 20 gc
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Norse equipment lists
+  - Henchmen equipment list
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Hammer
+    - 3 gc
+  - - Axe
+    - 5 gc
+  - - Sword
+    - 10 gc
+  - - Spear
+    - 10 gc
+  - - Double-handed weapon
+    - 15 gc
+- section: Missile Weapons
+  section_path:
+  - Norse equipment lists
+  - Henchmen equipment list
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Throwing Axes (same as Throwing Knives )
+    - 15 gc
+- section: Armour
+  section_path:
+  - Norse equipment lists
+  - Henchmen equipment list
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Shield
+    - 5 gc
+  - - Helmet
+    - 10 gc
+  - - Light armour
+    - 20 gc
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Norse equipment lists
+  - Hunters equipment list
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Hammer
+    - 3 gc
+  - - Axe
+    - 5 gc
+  - - Sword
+    - 10 gc
+  - - Spear
+    - 10 gc
+  - - Double-handed weapon
+    - 15 gc
+- section: Missile Weapons
+  section_path:
+  - Norse equipment lists
+  - Hunters equipment list
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Javelins
+    - 5 gc
+  - - Bow
+    - 10 gc
+- section: Armour
+  section_path:
+  - Norse equipment lists
+  - Hunters equipment list
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Shield
+    - 5 gc
+  - - Helmet
+    - 10 gc
+- section: 1 Jarl
+  section_path:
+  - heroes
+  - 1 Jarl
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '4'
+    - '3'
+    - '4'
+    - '3'
+    - '1'
+    - '4'
+    - '2'
+    - '8'
+- section: 0 – 2 Beserkers
+  section_path:
+  - heroes
+  - 0 – 2 Beserkers
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '4'
+    - '3'
+    - '4'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 1 Wulfen
+  section_path:
+  - heroes
+  - 0 – 1 Wulfen
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '6'
+    - '4'
+    - '0'
+    - '4'
+    - '4'
+    - 2 ✏️
+    - '4'
+    - '2'
+    - '7'
+- section: 0 – 2 Bondsmen
+  section_path:
+  - heroes
+  - 0 – 2 Bondsmen
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '2'
+    - '3'
+    - '3'
+    - '1'
+    - '2'
+    - '1'
+    - '6'
+- section: Marauders
+  section_path:
+  - henchmen
+  - Marauders
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 5 Hunters
+  section_path:
+  - henchmen
+  - 0 – 5 Hunters
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 5 Wolves
+  section_path:
+  - henchmen
+  - 0 – 5 Wolves
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '9'
+    - '3'
+    - '0'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '5'
+section_text:
+- section: special rules
+  section_path:
+  - special rules
+  text: 'All Norse Warriors are subject to the following special rules:
+
+    Seafaring: The Norse are seafaring people and spend much of their time rowing
+    boats. To represent this, all Norse warriors get +2 to Strength when they row
+    a boat.'
+- section: Norse special skills
+  section_path:
+  - Norse special skills
+  text: Norse heroes may use the following skill list instead of any of the standard
+    skill lists.
+- section: barbarian courage
+  section_path:
+  - Norse special skills
+  - barbarian courage
+  text: As Norse warriors strive to die bravely in battle, they learn to fear nothing
+    and embrace hardship. This hero never needs to take all alone tests and may re-roll
+    failed fear tests.
+- section: battle tongue
+  section_path:
+  - Norse special skills
+  - battle tongue
+  text: Only a hero with the leader skill may gain this skill. It allows models within
+    12" of him to use his leadership, rather than the normal 6".
+- section: berserk charge
+  section_path:
+  - Norse special skills
+  - berserk charge
+  text: 'The Norse are very skilled with weapons that many other races see as primitive
+    and savage. When this hero is armed with an axe or double handed weapon,
+
+    he may re-roll all failed to hit rolls when he charges.'
+- section: crushing blow
+  section_path:
+  - Norse special skills
+  - crushing blow
+  text: Norse warriors train in almost all of their spare time. They are expert fighters
+    and learn to put all of their strength into very powerful attacks. No enemy may
+    parry an attack made by this hero because it strikes with such great power that
+    it pushes right through a buckler or sword.
+- section: shield master
+  section_path:
+  - Norse special skills
+  - shield master
+  text: Norse warriors begin training with shields when they are still children. Some
+    warriors become so skilled with these weapons they can block almost any blow against
+    them. When this hero is armed with a shield he may parry with it in addition to
+    getting a 6+ save.
+- section: Norse equipment lists
+  section_path:
+  - Norse equipment lists
+  text: 'The following lists are used by Norse warbands to pick their weapons:'
+- section: 1 Jarl
+  section_path:
+  - heroes
+  - 1 Jarl
+  text: '70 gold crowns to hire
+
+    The Jarl of a Norse warband is the most battle hardened veteran of his group and
+    often a lesser clan chieftain of his tribe. He has seen many battles and is used
+    to the bloodshed. While some Jarls choose to command their forces with strategy,
+    most just run into the fray with the rest of the warriors. However the Jarl decides
+    to run his warband, all of the other warriors respect him and look up to him.
+
+    Weapons/Armour: A Jarl may be equipped with
+
+    weapons and armour chosen from the Norse Heroes
+
+    Equipment list.'
+- section: SPECIAL RULES
+  section_path:
+  - heroes
+  - 1 Jarl
+  - SPECIAL RULES
+  text: 'Leader: Any Warrior within 6“ of the Jarl may use his Leadership instead
+    of his own when taking Ld tests.'
+- section: 0 – 2 Beserkers
+  section_path:
+  - heroes
+  - 0 – 2 Beserkers
+  text: '50 gold crowns to hire
+
+    Berserkers are some of the most ferocious warriors in any Norse warband. They
+    have proven their worth over countless battles and have learned that death is
+    nothing to be feared. They charge into battle without any regard for their own
+    safety and are really quite demented.
+
+    Weapons/Armour : A Berserker may be equipped with
+
+    weapons chosen from the Norse Heroes Equipment
+
+    list but they may never wear armour.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 0 – 2 Beserkers
+  - Special Rules
+  text: 'Berserkers: Berserkers are subject to frenzy as detailed in the Psychology
+    section of the Mordheim rulebook.'
+- section: 0 – 1 Wulfen
+  section_path:
+  - heroes
+  - 0 – 1 Wulfen
+  text: '90 gold crowns to hire
+
+    Wulfen are Berserkers with a very rare mutation.
+
+    When there is a full moon, or when blood starts
+
+    flowing on the battlefield, the mysterious and deadly
+
+    Wulfen turn into blood hungry beasts, part man,
+
+    and part wolf or bear. These creatures are known and
+
+    greatly feared as werewolves to most Old Worlders. To
+
+    the Norse they are Werekin, monstrous beasts which
+
+    can tear through flesh and armour with their huge
+
+    claws and massive fangs as they go on the rampage.
+
+    Weapons/Armour : A Wulfen is a ravening beast of teeth and claws and may never
+    use weapons or armour, although suffers no penalty for being unarmed.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 0 – 1 Wulfen
+  - Special Rules
+  text: 'Fear: Wulfen are terrifying creatures to behold and cause fear .
+
+    Bestial: Wulfen are ravenous beasts and therefore immune to psychology . Also
+    despite being greatly revered by their barbarian kinsmen, Wulfen are
+
+    too feral and uncontrolled to become the leader of the warband.'
+- section: 0 – 2 Bondsmen
+  section_path:
+  - heroes
+  - 0 – 2 Bondsmen
+  text: '15 gold crowns to hire
+
+    These are young fighters who are still inexperienced. They are bonded to their
+    Jarl by the oath of servitude.
+
+    Weapons/Armour: Bondsmen may be equipped with
+
+    weapons and armour chosen from the Norse Heroes
+
+    Equipment list'
+- section: henchmen
+  section_path:
+  - henchmen
+  text: (Bought in groups of 1-5)
+- section: Marauders
+  section_path:
+  - henchmen
+  - Marauders
+  text: '25 gold crowns to hire
+
+    Marauders are the standard warriors in any Norse warband. They have experienced
+    bloodshed and have been trained to fight since they were children. Marauders are
+    so named as they are pirates and raiders.
+
+    Weapons/Armour: Marauders may be equipped with weapons and armour chosen from
+    the Norse Henchman Equipment list.'
+- section: 0 – 5 Hunters
+  section_path:
+  - henchmen
+  - 0 – 5 Hunters
+  text: '25 gold crowns to hire
+
+    Hunters are expertly skilled in stalking the wild game of the Umbra. When warriors
+    are exiled from a tribe they become renegades, following Norse champions on epic
+    voyages to offer ranged attacks as well as their exceptional hunting skills.
+
+    Weapons/Armour: Hunters may be equipped with weapons and armour chosen from the
+    Norse Hunters Equipment list.'
+- section: 0 – 5 Wolves
+  section_path:
+  - henchmen
+  - 0 – 5 Wolves
+  text: '15 gold crowns to hire
+
+    The harsh lands of Norsca are inhabited by a great many ferocious beasts: massive
+    woolly mammoths, vicious polar bears and wolves far larger than those encountered
+    elsewhere in the world. Norse hunters capture and use these beasts. Properly trained
+    they make formidable foes.
+
+    Weapons/Armour: Wolves have very sharp fangs. They
+
+    never use or need weapons and armour.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 5 Wolves
+  - Special Rules
+  text: 'Animals: Wolves are animals and thus do not gain
+
+    experience.
+
+    Pack Leader: Wolves are feral animals that only
+
+    respond to the strongest in their pack – the
+
+    Wulfen. In the event that no Wulfen is
+
+    included in the warband due to a death or an injury,
+
+    the wolves cannot be used until the creature is
+
+    replaced.'

@@ -1,0 +1,555 @@
+id: horned-hunters
+name: Horned Hunters
+grade: 1b
+source_url: https://mordheimer.net/docs/warbands/grade-1b-warbands/horned-hunters
+headings:
+- special rules ​
+- Choice of warriors ​
+- Starting experience ​
+- Horned Hunter Skill Table ​
+- Horned Hunter Special Skills ​
+- master trapper ​
+- infiltration ​
+- foul odour ​
+- animal friendship ​
+- pathfinder ​
+- hide in shadows ​
+- Horned Hunter equipment lists ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Miscellaneous ​
+- Henchmen equipment list ​
+- Hand-to-hand Combat Weapons ​
+- Missile Weapons ​
+- Armour ​
+- Special Equipment ​
+- Blessed Stag Hide ​
+- Trip Wire ​
+- heroes ​
+- 1 Horned Hunter ​
+- SPECIAL RULES ​
+- 0 – 1 Priest of Taal ​
+- Special Rules ​
+- 0 – 3 Initiates ​
+- Special Rules ​
+- henchmen ​
+- 0 – 5 Drunken Gang ​
+- Special Rules ​
+- Zealots ​
+- Special Rules ​
+- 0 – 5 Warhounds ​
+- Special Rules ​
+tables:
+- section: Horned Hunter Skill Table
+  section_path:
+  - Horned Hunter Skill Table
+  rows:
+  - - ''
+    - Combat
+    - Shooting
+    - Academic
+    - Strength
+    - Speed
+    - Special
+  - - Horned Hunter
+    - ✓
+    - ✓
+    - ''
+    - ✓
+    - ✓
+    - ✓
+  - - Initiates
+    - ✓
+    - ✓
+    - ''
+    - ✓
+    - ✓
+    - ✓
+  - - Priest of Taal
+    - ✓
+    - ''
+    - ✓
+    - ✓
+    - ✓
+    - ✓
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Horned Hunter equipment lists
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Mace / Hammer
+    - 3 gc
+  - - Axe
+    - 5 gc
+  - - Sword
+    - 10 gc
+  - - Spear
+    - 5 gc
+  - - Double-handed weapon
+    - 15 gc
+- section: Missile Weapons
+  section_path:
+  - Horned Hunter equipment lists
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Short Bow
+    - 5 gc
+  - - Bow
+    - 10 gc
+  - - Long bow
+    - 15 gc
+- section: Armour
+  section_path:
+  - Horned Hunter equipment lists
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Toughened Leathers
+    - 5 gc
+  - - Light armour
+    - 20 gc
+  - - Shield
+    - 5 gc
+- section: Miscellaneous
+  section_path:
+  - Horned Hunter equipment lists
+  - Miscellaneous
+  rows:
+  - - Item
+    - Cost
+  - - Hunting arrows
+    - 20 gc
+  - - Blessed Stag Hide
+    - 40 gc
+  - - Trip wire
+    - 15 gc
+- section: Hand-to-hand Combat Weapons
+  section_path:
+  - Horned Hunter equipment lists
+  - Henchmen equipment list
+  - Hand-to-hand Combat Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Dagger
+    - 1st free/2 gc
+  - - Mace / Hammer
+    - 3 gc
+  - - Axe
+    - 5 gc
+  - - Sword
+    - 10 gc
+  - - Spear
+    - 5 gc
+- section: Missile Weapons
+  section_path:
+  - Horned Hunter equipment lists
+  - Henchmen equipment list
+  - Missile Weapons
+  rows:
+  - - Item
+    - Cost
+  - - Bow
+    - 10 gc
+- section: Armour
+  section_path:
+  - Horned Hunter equipment lists
+  - Henchmen equipment list
+  - Armour
+  rows:
+  - - Item
+    - Cost
+  - - Toughened Leathers
+    - 5 gc
+  - - Shield
+    - 5 gc
+- section: 1 Horned Hunter
+  section_path:
+  - heroes
+  - 1 Horned Hunter
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '4'
+    - '4'
+    - '3'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '8'
+- section: 0 – 1 Priest of Taal
+  section_path:
+  - heroes
+  - 0 – 1 Priest of Taal
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '2'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 3 Initiates
+  section_path:
+  - heroes
+  - 0 – 3 Initiates
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 5 Drunken Gang
+  section_path:
+  - henchmen
+  - 0 – 5 Drunken Gang
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '3'
+    - '3'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: Zealots
+  section_path:
+  - henchmen
+  - Zealots
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '4'
+    - '2'
+    - '2'
+    - '3'
+    - '3'
+    - '1'
+    - '3'
+    - '1'
+    - '7'
+- section: 0 – 5 Warhounds
+  section_path:
+  - henchmen
+  - 0 – 5 Warhounds
+  rows:
+  - - Profile
+    - M
+    - WS
+    - BS
+    - S
+    - T
+    - W
+    - I
+    - A
+    - Ld
+  - - ''
+    - '6'
+    - '4'
+    - '0'
+    - '4'
+    - '3'
+    - '1'
+    - '4'
+    - '1'
+    - '5'
+section_text:
+- section: special rules
+  section_path:
+  - special rules
+  text: 'Woodcraft: Followers of Taal make their homes in the wilderness and shall
+    only frequent towns or cities when it is compulsory for them to do so. They are
+    expert woodsmen and their knowledge of the wilds is unrivalled by all except perhaps
+    the Wood Elves. Horned Hunter warbands move through any difficult terrain they
+    encounter without suffering any movement penalties.'
+- section: Horned Hunter Special Skills
+  section_path:
+  - Horned Hunter Special Skills
+  text: Horned Hunter Heroes may choose to use the following Skill list instead of
+    any of the standard Skill tables available to them.
+- section: master trapper
+  section_path:
+  - Horned Hunter Special Skills
+  - master trapper
+  text: 'This huntsman is a masterful trap setter. Trip wire range has been extended
+    by this warrior to reach 4".
+
+    Traps set by a master trapper are triggered by a score of 2+.'
+- section: infiltration
+  section_path:
+  - Horned Hunter Special Skills
+  - infiltration
+  text: 'A warrior with this skill is always placed on the
+
+    battlefield after the opposing warband and can be
+
+    placed anywhere on the table as long as it is out of
+
+    sight of the opposing warband and more than 12" away
+
+    from any enemy model.
+
+    If both players have models which infiltrate, roll a D6
+
+    for each, and the lowest roll sets up first.'
+- section: foul odour
+  section_path:
+  - Horned Hunter Special Skills
+  - foul odour
+  text: 'Worshippers of Taal are one and all prodigious
+
+    drinkers and none too hygienic! This warrior rises head
+
+    and shoulders above the rest. After a lifetime of
+
+    drinking, liquor has little effect on him any more... not
+
+    that this stops him from consuming massive quantities!
+
+    His unwashed clothes and sweat reek of alcohol and all
+
+    living enemies (not Undead or Possessed) are at -1 to hit him in close combat.
+    In addition, the warrior cannot carry any open flames (torch, lantern, etc.) and
+    fire
+
+    attacks made against him are resolved at +1 Strength as
+
+    his beer soaked clothing burns readily.'
+- section: animal friendship
+  section_path:
+  - Horned Hunter Special Skills
+  - animal friendship
+  text: 'Having grown up amidst the animals of the forest this warrior exudes a certain
+    charm to all ‘normal’ animals (warhorses, warhounds, etc.). Animals will never
+    attack him and up to two wardogs that the warrior owns do not count against the
+
+    maximum number of models in the Warband.'
+- section: pathfinder
+  section_path:
+  - Horned Hunter Special Skills
+  - pathfinder
+  text: 'Taal has gifted this hunter with an uncanny ability to
+
+    find paths through unexplored territories. Roll one
+
+    additional D6 during the exploration phase. A warband
+
+    may only contain one pathfinder.'
+- section: hide in shadows
+  section_path:
+  - Horned Hunter Special Skills
+  - hide in shadows
+  text: 'The hunter has learned to crouch unseen in any cover
+
+    they can find. Enemy models must halve their Initiative
+
+    when attempting to find this warrior when he is Hidden .'
+- section: Horned Hunter equipment lists
+  section_path:
+  - Horned Hunter equipment lists
+  text: 'The following lists are used by Horned Hunter warbands to pick their weapons:'
+- section: Special Equipment
+  section_path:
+  - Special Equipment
+  text: 'This warband has access to the following special equipment when purchasing
+    items from the Trading Post , outside their starting list:'
+- section: 1 Horned Hunter
+  section_path:
+  - heroes
+  - 1 Horned Hunter
+  text: '60 gold crowns to hire
+
+    The Horned Hunters are deeply zealous and shun the city of Talabheim. They safeguard
+    pilgrims from the predations of bandits and hunt down dangerous beasts and the
+    Mutants that flout Taal’s will.
+
+    Weapons/Armour: A Horned Hunter may be equipped with weapons and armour chosen
+    from the Horned Hunter equipment list.'
+- section: SPECIAL RULES
+  section_path:
+  - heroes
+  - 1 Horned Hunter
+  - SPECIAL RULES
+  text: 'Leader: Any warrior within 6" of the Horned Hunter may use his Leadership
+    value when taking Leadership tests.
+
+    Hang the Bandit!: A Horned Hunter hates all Bandits and Outlaws.'
+- section: 0 – 1 Priest of Taal
+  section_path:
+  - heroes
+  - 0 – 1 Priest of Taal
+  text: '45 gold crowns to hire
+
+    It is said that every priest of Taal is born during the darkest phase of the moon.
+    A few Priests are ordained by their hierarchs to live in the wilderness, following
+    the Path of Taal. They are guardians of wild places and those who wander them.
+    To the creatures of Chaos lurking in the woods, they are terrors.
+
+    Weapons/Armour: A Priest of Taal may be equipped with weapons chosen from the
+    Horned Hunter equipment list.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 0 – 1 Priest of Taal
+  - Special Rules
+  text: 'Prayers: A Priest of Taal may use the Prayers of Taal .
+
+    Strictures: Priests of Taal may never wear heavy armour.'
+- section: 0 – 3 Initiates
+  section_path:
+  - heroes
+  - 0 – 3 Initiates
+  text: '40 gold crowns to hire
+
+    Part of their initiation into this group is to undergo extensive tattooing, covering
+    their chest and face. These feral hunters serve as masterful scouts.
+
+    Weapons/Armour: Initiates of Taal may be equipped with weapons chosen from the
+    Horned Hunter equipment list.'
+- section: Special Rules
+  section_path:
+  - heroes
+  - 0 – 3 Initiates
+  - Special Rules
+  text: 'Infiltrator : A warrior with this skill is always placed on the battlefield
+    after the opposing warband and can be placed anywhere on the table as long as
+    it is out of sight of the opposing warband and more than 12" away from any enemy
+    model.
+
+    If both players have models which infiltrate, roll a D6 for each, and the lowest
+    roll sets up first.
+
+    Hang the Bandit!: Taal’s Initiates hate all Bandits and Outlaws.
+
+    Strictures: Taal’s Initiates may never wear armour.'
+- section: henchmen
+  section_path:
+  - henchmen
+  text: (Bought in groups of 1-5)
+- section: 0 – 5 Drunken Gang
+  section_path:
+  - henchmen
+  - 0 – 5 Drunken Gang
+  text: '30 gold crowns to hire
+
+    The militia is a hodgepodge of trusted citizens, woodsmen, and hunters that band
+    together in times of need. Ancient law dictates all able-bodied men must muster
+    when summoned by the Hunters Council in times of war. Though how many come depends
+    on the amount of Rotfire moonshine consumed the night before. For this reason
+    the army commonly refers to them as the ‘Drunken Gang’. Despite its malign reputation,
+    the militia is capable, made up of rugged and dependable Talabeclanders.
+
+    Weapons/Armour: Drunken Gang may be equipped with weapons chosen from the Henchmen
+    equipment list.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 5 Drunken Gang
+  - Special Rules
+  text: 'Drunk: The militia are blasted out of their tiny minds on Rotfire moonshine
+    and cheap ale. As such, they automatically pass all Leadership-based tests
+
+    they are required to take.'
+- section: Zealots
+  section_path:
+  - henchmen
+  - Zealots
+  text: '20 gold crowns to hire
+
+    While they lack the fiery rhetoric of most zealots, Taal’s followers are still
+    fervent in their beliefs. They give up much in the way of a material life. They
+    shun normal clothing and armour and wear animal skins, loincloths or less.
+
+    Weapons/Armour: Zealots may be equipped with weapons chosen from the Henchmen
+    equipment list.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - Zealots
+  - Special Rules
+  text: 'Strictures: Zealots may never wear armour.'
+- section: 0 – 5 Warhounds
+  section_path:
+  - henchmen
+  - 0 – 5 Warhounds
+  text: '15 gold crowns to hire
+
+    Horned Hunters often keep packs of ferocious hunting dogs. With their huge jaws
+    and powerful bite, they are perfect for hunting down (and tearing apart) any bandits,
+    beasts and mutants.
+
+    Weapons/Armour: Jaws and brutality! Warhounds never use or need weapons and armour.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - 0 – 5 Warhounds
+  - Special Rules
+  text: 'Animals: Warhounds are animals and thus do not gain experience.'

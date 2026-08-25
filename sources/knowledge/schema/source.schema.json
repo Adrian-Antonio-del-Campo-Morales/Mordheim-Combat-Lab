@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "source.schema.json",
+  "type": "object",
+  "required": ["manual", "printed_page", "section"],
+  "properties": {
+    "manual": {"type": "string", "minLength": 1},
+    "printed_page": {"type": ["integer", "string"]},
+    "section": {"type": "string", "minLength": 1},
+    "url": {"type": "string"},
+    "note": {"type": "string"}
+  }
+}

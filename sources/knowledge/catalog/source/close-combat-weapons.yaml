@@ -1,0 +1,3527 @@
+source_url: https://mordheimer.net/docs/weapons-armour/close-combat
+records:
+- id: axe
+  name: Axe
+  text: 'Axe
+
+    ​
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    Cost:
+
+    5 gc
+
+    Availability:
+
+    Common
+
+    The axe is the traditional weapon of Empire woodsmen, and is also used as a weapon
+    in poorer rural areas. Axes have a heavy blade and, if swung by a strong man,
+    can cause a lot of damage. The blade of an axe can easily cut through armour,
+    though it requires considerable strength from the wielder.
+
+    Of all the warriors in the Old World, Dwarfs are the most adept at making axes.
+    Their axes are invaluable to the warriors of the Old World and are some of the
+    most sought after weapons.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    Cutting Edge
+
+    :
+
+    An axe has an extra save modifier of -1, so a model with Strength 4 using an axe
+    has a -2 save modifier when he hits an opponent in hand-to-hand combat.'
+- id: ball-and-chain
+  name: Ball and Chain
+  text: 'Ball and Chain
+
+    ​
+
+    Town Cryer #6
+
+    (
+
+    1a
+
+    )
+
+    Cost:
+
+    15 gc
+
+    Availability:
+
+    Common
+
+    Goblins only
+
+    This is a huge iron ball with a chain attached, used by the dreaded Night Goblin
+    Fanatics to deal out whirling death. Enormously heavy, it can only be used when
+    combined with Mad Cap Mushrooms.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user +2
+
+    Special Rules
+
+    Incredible Force
+
+    :
+
+    Because the Ball and Chain is so heavy, normal armour does very little to protect
+    against it. No armour saves are allowed against wounds caused by a Ball and Chain.
+    In addition, any hit from a Ball and Chain is very likely to take off someone''s
+    head (or at least break some ribs!). Therefore, any hit that successfully wounds
+    will do 1D3 wounds instead of 1.
+
+    Random
+
+    The only way to wield a Ball and Chain is to swing it around in large circles,
+    using your body as a counter-weight. Unfortunately this is not a very controllable
+    fighting style, and as soon as he starts swinging his Ball and Chain, a warrior
+    starts to lose control. The first turn he starts swinging the Ball and Chain,
+    the model is moved 2D6" in a direction nominated by the controlling player. In
+    his subsequent Movement phases, roll a D6 to determine what the model does:
+
+    D6
+
+    Result
+
+    1
+
+    The model trips and strangles himself with the chain. The model is taken out of
+    action. When rolling for Injury after the game, a roll of 1-3 means the model
+    is out permanently, instead of the normal 1-2.
+
+    2-5
+
+    The model moves 2D6" in a direction nominated by the controlling player.
+
+    6
+
+    The model moves 2D6" in a random direction. If the player owns a Scatter dice
+    (available from Games Workshop stores), roll that to determine direction. If not,
+    then roll a D6: 1 – Straight Forward, 2-3 – Right, 4-5 – Left, 6 – Straight Back.
+
+    If the Ball and Chain wielding model moves into contact with another model (friend
+    or foe), he counts as charging into close combat, and will engage in close combat
+    until his next Movement phase. Opponents wishing to attack a Ball and Chain wielding
+    model suffer a To Hit penalty of -1, as they must dodge the whirling ball to get
+    close enough to strike. The Ball and Chain wielder cannot be held in close combat
+    and will automatically move even if he starts the Movement phase in base contact
+    with another model. If the model moves into contact with a building, wall, or
+    other obstruction, he is automatically taken out of action. In addition, a ball
+    and chain wielding Goblin is much too busy trying to control the spinning weapon
+    to worry about what others are saying about him behind his back, so ignores the
+    special rules for Animosity.
+
+    Cumbersome
+
+    Because the Ball and Chain is so heavy, a model equipped with one may carry no
+    other weapons or equipment. In addition, only a model under the influence of
+
+    Mad Cap Mushrooms
+
+    has the strength to wield a ball and chain.
+
+    Unwieldy
+
+    The great weight of the Ball and Chain can easily tear ligaments or pull a wielder''s
+    arms out of their sockets. While someone under the influence of Mad Cap Mushrooms
+    will not notice such effects, when the drug wears off he will be in great pain.
+    To represent this, at the end of the battle the controlling player must roll for
+    Injury for each model that used a Ball and Chain, just as if the model had been
+    taken out of action. If the model was actually taken out of action normally, just
+    roll once for Injury – there is no need to make a second roll.'
+- id: barbed-whip
+  name: Barbed Whip
+  text: 'Barbed Whip
+
+    ​
+
+    Border Town Burning
+
+    (
+
+    1c
+
+    )
+
+    Cost:
+
+    15 gc
+
+    Availability:
+
+    Rare 9
+
+    One Marauders of Chaos Hero only
+
+    Originally used for taming the wild Chaos Hounds the barbed whips have proven
+    effective in combat also.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    Whipcrack
+
+    :
+
+    When the wielder charges they gain +1A for that turn. This bonus attack is added
+    after any other modifications. When the wielder is charged they gain +1A that
+    they may only use against the charger. This additional attack will ''strike first''.
+    If the wielder is simultaneously charged by two or more opponents they will still
+    only receive a total of +1A. If the wielder is using two whips at the same time
+    then they get +1A for the additional hand weapon, but only the first whip gets
+    the whipcrack +1A.
+
+    ✏️
+
+    Cannot Be Parried
+
+    A model attacked by a barbed whip may not
+
+    parry
+
+    with a sword or buckler.
+
+    Enrage
+
+    The Hero may use his whip to make the Warhounds charge wildly. As long as he is
+    not involved in close combat all Warhounds of Chaos within 4" gain +1 attack.'
+- id: beastlash
+  name: Beastlash
+  text: 'Beastlash
+
+    ​
+
+    Town Cryer #12
+
+    (
+
+    1b
+
+    )
+
+    Cost:
+
+    10 + 1D6 gc
+
+    Availability:
+
+    Rare 8
+
+    Dark Elves Beastmaster only
+
+    The Beastmaster make good use of their whips to goad their hounds and creatures
+    into combat.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user -1
+
+    Special Rules
+
+    Beastbane
+
+    :
+
+    The Beastmaster wielding a Beastlash causes Fear in animals, any animal charged
+    or wishing to charge a Beastmaster with one of these weapons must first take a
+
+    Fear
+
+    test as mentioned in the psychology section of the Mordheim rules.
+
+    Cannot Be Parried
+
+    The Beastlash is a flexible weapon and the Beastmaster use it with great expertise.
+    Attempts to parry its strikes are futile. A model attacked by a Beastlash may
+    not make
+
+    parries
+
+    with swords or bucklers.
+
+    Whipcrack
+
+    When the wielder charges they gain +1A for that turn. This bonus attack is added
+    after any other modifications. When the wielder is charged they gain +1A that
+    they may only use against the charger. This additional attack will ‘strike first''.
+    If the wielder is simultaneously charged by two or more opponents they will still
+    only receive a total of +1A. If the wielder is using two whips at the same time
+    then they get +1A for the additional hand weapon, but only the first whip gets
+    the whipcrack +1A.'
+- id: bec-de-corbin
+  name: Bec de Corbin
+  text: 'Bec de Corbin
+
+    ​
+
+    Lustrian Reavers
+
+    (
+
+    1c
+
+    )
+
+    Availability:
+
+    Common
+
+    A Tilean invention, Bec de Corbin is a polearm that combines the best aspects
+    of a Halberd, spear and warhammer.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user +1
+
+    Special Rules
+
+    Two-handed
+
+    :
+
+    A model armed with a Bec de Corbin may not use a shield, buckler or additional
+    weapon in close combat. If the model has a shield he still gets a +1 bonus to
+    his armour save against shooting.
+
+    Strike First
+
+    The model armed with Bec de Corbin strikes in initiative order when charged instead
+    of going last.
+
+    Concussion
+
+    When rolling for Injuries, 2-4 is treated as stunned when rolling on the Injury
+    chart. Dwarfs are immune to this effect.'
+- id: boat-hook
+  name: Boat Hook
+  text: 'Boat Hook
+
+    ​
+
+    Town Cryer #9
+
+    (
+
+    1b
+
+    )
+
+    Cost:
+
+    8 gc
+
+    Availability:
+
+    Common
+
+    Pirates only
+
+    These are normally used to pull in ropes or other objects from the water, but
+    their long reach and wicked metal catches makes them also useful in combat.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user -1
+
+    Special Rules
+
+    Strike First
+
+    :
+
+    Boat Hooks are used in Close Combat. They allow the user to Strike First in the
+    first round of any close combat, no matter which model charged, but require both
+    hands to use.
+
+    Two Handed
+
+    Models using a Boat Hook in combat cannot use any other weapons, or gain benefit
+    from a shield or buckler, while in close combat.'
+- id: boss-pole
+  name: Boss Pole
+  text: 'Boss Pole
+
+    ​
+
+    Nemesis Crown Supplement
+
+    (
+
+    1b
+
+    )
+
+    Cost:
+
+    20 gc
+
+    Availability:
+
+    Common
+
+    Forest and Night Goblins only
+
+    Some influential Goblins carry badges of office, usually taking the form of long
+    wooden poles with an icon or sharp blade on the end. This allows the hero and
+    any Goblin henchmen within 6" to ignore animosity. Additionally, the Boss Pole
+    acts as a spear in close combat.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    Strike First
+
+    :
+
+    A warrior with a spear strikes first, even if charged. Note that this only applies
+    in the first turn of hand-to-hand combat.
+
+    Unwieldy
+
+    A warrior with a spear may only use a shield or a buckler in his other hand. He
+    may not use a second weapon.
+
+    ✏️
+
+    Cavalry Bonus
+
+    If using the optional rules for mounted models, a mounted warrior armed with a
+    spear receives a +1 Strength bonus when he charges. This bonus only applies for
+    that turn.
+
+    Ignore Animosity
+
+    Heroes and henchmen within 6" ignore
+
+    Animosity
+
+    .'
+- id: brass-knuckles
+  name: Brass Knuckles
+  text: 'Brass Knuckles
+
+    ​
+
+    Ye Old Curiosity Shoppe, Town Cryer 7, this was removed in the Mordheim Annual
+    2002
+
+    (
+
+    1b
+
+    )
+
+    Cost:
+
+    20 gc per pair
+
+    Availability:
+
+    Rare 6
+
+    Brass knuckles are a weapon commonly used by streets thugs and robbers who are
+    all too common an infestation in the mighty cities of the Empire. Easily secreted,
+    they are used in pairs and while cumbersome to use in a straight fight, can cause
+    crippling blows to an opponent with a single well landed punch.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user +1
+
+    Special Rules
+
+    Pair
+
+    :
+
+    Brass knuckles are used in pairs and the warrior fighting with them gains an extra
+    Attack. He may not use any other weapons or items in his hands while doing this
+    however. He is free to swap his brass knuckles for other weapons and items during
+    the battle but may not do this if in combat.
+
+    Cumbersome
+
+    Brass knuckles are difficult to use due to the fact that they offer little in
+    the way of range and a warrior must get close up to his opponent before he can
+    strike. For this reason a warrior using brass knuckles suffers a -2 to Initiative
+    in close combat.'
+- id: brazier-iron
+  name: Brazier Iron
+  text: 'Brazier Iron
+
+    ​
+
+    Ye Old Curiosity Shoppe, Mordheim Annual 2002
+
+    (
+
+    1a
+
+    )
+
+    Cost:
+
+    35 gc
+
+    Availability:
+
+    Rare 7
+
+    Witch Hunters only
+
+    The brazier Iron is a weapon commonly used by witch hunters. It consists of a
+    long heft topped by an iron cup filled with burning hot coals. In combat, the
+    weapon takes on an eldritch quality as the burning embers sear the air as it is
+    swung, opponents sent reeling in flaming agony as they are set on fire.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user +1
+
+    Special Rules
+
+    Two handed
+
+    :
+
+    A warrior armed with a brazier staff requires two hands to wield it effectively
+    and so may not use a shield with it or another hand weapon or buckler in close
+    combat. The warrior may still use a shield for the purposes of missile fire though.
+
+    Fire
+
+    The burning brazier of coals atop the staff is deadly, capable of setting an opponent
+    ablaze with even the slightest glancing blow. Whenever you score a successful
+    hit with the brazier staff roll a D6. If you roll a 5+ the victim is set on fire.
+    If the warrior survives the attack they must score a 4+ in the recovery phase
+    or they will suffer a strength 4 hit each turn they are on fire and will be unable
+    to do anything other than move. Other warriors from the same warband may help
+    to put the warrior out if they wish. They must move into base-to-base contact
+    and score a 4+ in the recovery phase.'
+- id: broadsword
+  name: Broadsword
+  text: 'Broadsword
+
+    ​
+
+    Bretonnian Chapel Guard
+
+    (
+
+    1c
+
+    )
+
+    Cost:
+
+    15 gc
+
+    Availability:
+
+    Common
+
+    Bretonnian Chapel Guard Knights only
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user +1
+
+    Special Rules
+
+    Difficult to use
+
+    :
+
+    A model with a Broadsword may not use a second weapon or buckler in his other
+    hand because it requires all his skill to wield it. He may carry a shield or a
+    kite shield as normal though.
+
+    Strike last
+
+    Broadswords are so heavy that the model using them always strikes last, even when
+    charging. Just like a Double-Handed weapon, learning the skill ''Strongman'' negates
+    ''Strike Last''.'
+- id: cat-o-nine-tails
+  name: Cat O' Nine Tails
+  text: 'Cat O'' Nine Tails
+
+    ​
+
+    Town Cryer #9
+
+    (
+
+    1b
+
+    )
+
+    Cost:
+
+    8 gc
+
+    Availability:
+
+    Common
+
+    Pirate Heroes only
+
+    Order is often maintained aboard the ship with the threat of the lash. In battle
+    the long barbed whip of the Cat is also seen, but this time dealing out punishment
+    to the enemy!
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    Cannot be parried
+
+    :
+
+    Like the Steel Whips of the Sisterhood, Cats cannot be
+
+    parried
+
+    by swords or bucklers.
+
+    Weak
+
+    Since they are made of rope and not steel, they give the enemy model a +1 to his
+    armour save (6+ for no armour), like a hit from a fist or dagger.
+
+    Whipcrack
+
+    When the wielder charges they gain +1A for that turn. This bonus attack is added
+    after any other modifications. When the wielder is charged they gain +1A that
+    they may only use against the charger. This additional attack will ''strike first''.
+    If the wielder is simultaneously charged by two or more opponents they will still
+    only receive a total of +1A. If the wielder is using two whips at the same time
+    then they get +1A for the additional hand weapon, but only the first whip gets
+    the whipcrack +1A.
+
+    ✏️'
+- id: cathayan-longsword
+  name: Cathayan Longsword
+  text: 'Cathayan Longsword
+
+    ​
+
+    Border Town Burning Supplement
+
+    (
+
+    1c
+
+    )
+
+    Cost:
+
+    75 + 2D6 gc
+
+    Availability:
+
+    Rare 12
+
+    Prized indeed are blades of Ithilmar forged by Elves. Even more masterful are
+    the arms crafted by swordsmiths in Cathay. Known as a Jintachi blade among Estalian
+    merchants, the Cathayan longsword is a deadly crown jewel in the hands of a skilled
+    fighter. Gold alone is never enough to acquire such a weapon. Jintachi are heirlooms
+    and highly coveted. The few still smithed are gifted only in reward for some heroic
+    deed that is done in the kingdoms to the east.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    Mastercrafted
+
+    :
+
+    Attacks made with a Cathayan longsword give the bearer +1 Initiative and +1 Weapon
+    Skill.
+
+    Cutting Edge
+
+    An axe has an extra save modifier of -1, so a model with Strength 4 using an axe
+    has a -2 save modifier when he hits an opponent in hand-to-hand combat.'
+- id: censer
+  name: Censer
+  text: 'Censer
+
+    ​
+
+    Town Cryer #29
+
+    (
+
+    1b
+
+    )
+
+    Cost:
+
+    40 gc
+
+    Availability:
+
+    Rare 9
+
+    Skaven of Clan Pestilens only
+
+    The censer is a hollow spiked metal ball attached to a long chain and is swung
+    like a flail. A plague infested shard of warpstone burns inside the ball and emits
+    pestilential fumes that nauseate the opponents and may turn the wielder of the
+    censer into a difficult target to shoot at.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user +2
+
+    Special Rules
+
+    Heavy
+
+    :
+
+    The +2 Strength bonus applies only to the first turn of hand to hand combat.
+
+    Two-handed
+
+    A censer requires two hands to be used and the wielder cannot use a shield, buckler
+    or additional weapon in close combat.
+
+    Fog of Death
+
+    A model hit by the censer must take a Toughness test. Roll a D6. If the result
+    is higher than the Toughness of the model taking the test, he will suffer an automatic
+    wound in addition to the censer hit. A result of 6 always inflicts a wound. Also
+    the model wielding the censer must take the test and will suffer a wound with
+    a result of 6. Models of undead and possessed are immune to the fog of death and
+    do not take the test. If the model wielding the censer also has the
+
+    fog-enhancing warpstone shards
+
+    , he becomes a difficult target to shoot at, and models targeting him with missile
+    weapons suffer a -1 penalty to hit.'
+- id: chain-sticks
+  name: Chain Sticks
+  text: 'Chain Sticks
+
+    ​
+
+    Border Town Burning
+
+    (
+
+    1c
+
+    )
+
+    Cost:
+
+    20 gc
+
+    Availability:
+
+    Rare 7
+
+    Battle Monks of Cathay only
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    Flurry
+
+    :
+
+    A set of chain sticks allows its wielder to unleash a furious bludgeoning. A warrior
+    armed with chain sticks gets +2 Attacks. This bonus only applies in the first
+    turn of each hand-to-hard combat. Using chain sticks otherwise counts as having
+    two hand weapons.
+
+    Two-handed
+
+    Requires two hands to wield'
+- id: claw-of-the-old-ones
+  name: Claw of the Old Ones
+  text: 'Claw of the Old Ones
+
+    ​
+
+    Town Cryer #23
+
+    (
+
+    1b
+
+    )
+
+    Cost:
+
+    30 gc
+
+    Availability:
+
+    Rare 12
+
+    Amazons (Mordheim) only
+
+    This is a very ancient weapon made from a strange metal that is impervious to
+    age and corrosion. The powers of this artefact can only be unleashed through a
+    ritual known only to a handful of Amazons. The blade of this weapon glows white
+    hot and can cut through armour as if it were paper.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user +1
+
+    Special Rules
+
+    No save
+
+    :
+
+    The blade of the Claw can literally cut through anything. A warrior wounded by
+    a Claw receives no armour save whatsoever.
+
+    Parry
+
+    Swords offer an excellent balance of defence and offence. A model armed with a
+    sword may
+
+    parry
+
+    blows. When his opponent rolls to hit, the model armed with a sword may roll a
+    D6. If the score is greater than the highest to hit score of his opponent, the
+    model has parried the blow, and that attack is discarded. A model may not parry
+    attacks made with double or more its own Strength – they are simply too powerful
+    to be stopped.'
+- id: cleaver
+  name: Cleaver
+  text: 'Cleaver
+
+    ​
+
+    Citadel Journal 36
+
+    (
+
+    1b
+
+    )
+
+    Cost:
+
+    3 gc
+
+    Availability:
+
+    Common
+
+    Mootlanders only
+
+    Cleavers are one of the best kitchen tools for fighting with, it''s fairly light
+    and can cut through things rather like an axe.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    -1 Save
+
+    :
+
+    Target gets -1 to armour save'
+- id: club
+  name: Club
+  text: 'Club
+
+    ​
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    Cost:
+
+    3 gc
+
+    Availability:
+
+    Common
+
+    Perhaps the simplest type of weapon, these brutal, bludgeoning instruments range
+    from primitive wooden clubs to elaborately forged Dwarf hammers made from the
+    finest steel. A blow from a mace can easily crush a skull or knock a man unconscious.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    Concussion
+
+    :
+
+    Hammers and other bludgeoning weapons are excellent to use for striking your enemy
+    senseless. When using a hammer, club or mace, a roll of 2-4 is treated as
+
+    stunned
+
+    when rolling to see the extent of a model''s injuries.'
+- id: club-mace-or-hammer
+  name: Club, Mace or Hammer
+  text: 'Club, Mace or Hammer
+
+    ​
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    Cost:
+
+    3 gc
+
+    Availability:
+
+    Common
+
+    Perhaps the simplest type of weapon, these brutal, bludgeoning instruments range
+    from primitive wooden clubs to elaborately forged Dwarf hammers made from the
+    finest steel. A blow from a mace can easily crush a skull or knock a man unconscious.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    Concussion
+
+    :
+
+    Hammers and other bludgeoning weapons are excellent to use for striking your enemy
+    senseless. When using a hammer, club or mace, a roll of 2-4 is treated as
+
+    stunned
+
+    when rolling to see the extent of a model''s injuries.'
+- id: dagger
+  name: Dagger
+  text: 'Dagger
+
+    ​
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    Cost:
+
+    1st free/2 gc
+
+    Availability:
+
+    Common
+
+    Daggers and knives are extremely common, and men are allowed to carry them in
+    enclaves where weapons are otherwise forbidden. Many a warrior in Mordheim has
+    died with a dagger in his back.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    +1 Enemy armour save
+
+    :
+
+    Daggers are not the best weapons to use for penetrating an enemy model''s armour.
+    An enemy wounded by a dagger gains a +1 bonus to his armour save, and a 6+ armour
+    save if he has none normally.'
+- id: dark-elf-blade
+  name: Dark Elf Blade
+  text: 'Dark Elf Blade
+
+    ​
+
+    Town Cryer #12
+
+    (
+
+    1b
+
+    )
+
+    Cost:
+
+    + 20 gc
+
+    Availability:
+
+    Rare 9
+
+    Dark Elves only
+
+    Dark Elf Blades are forged in the city of Hag Graef, the Dark Crag. They are fashioned
+    from Blacksteel, a rare form of steel found deep within the mountains around the
+    city. Dark Elf Blades have wicked protrusions and serrated edges, which inflict
+    serious damage on an opponent. Any Dark Elf can upgrade a sword or dagger to a
+    Dark Elf Blade by paying an additional 20 gc at the time of purchase. Weapons
+    upgraded to a Dark Elf Blade retain all of their abilities (i.e. swords can parry,
+    daggers grant an armour save of 6).
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    Critical Damage
+
+    :
+
+    Dark Elf Blades inflict serious damage on their opponents. When rolling on the
+
+    critical hit
+
+    chart a Dark Elf Blade will add +1 to the result.
+
+    Wicked Edge
+
+    Dark Elf Blades are set with sharp protrusions and serrated edges which inflict
+    serious damage on an opponent. A roll of 2-4 on the injury table is a
+
+    Stunned
+
+    result.'
+- id: disease-dagger
+  name: Disease Dagger
+  text: 'Disease Dagger
+
+    ​
+
+    Town Cryer #29
+
+    (
+
+    1b
+
+    )
+
+    Cost:
+
+    15 gc
+
+    Availability:
+
+    Rare 8
+
+    Skaven of Clan Pestilens only
+
+    This dagger is permanently covered with a disgusting and moulderish layer of green
+    ooze that may infect those that are hit with terrible diseases.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    +1 Enemy Armour Save
+
+    :
+
+    Daggers are not the best weapons to use for penetrating an enemy model''s armour.
+    An enemy wounded by a dagger gains a +1 bonus to his armour save, and a 6+ armour
+    save if he has none normally.
+
+    Infecting
+
+    a natural 6 on an hit roll means that the model hit has been infected with the
+    disease and that he must take a Toughness test. Roll a D6. If the result is higher
+    than the Toughness of the model taking the test, he will suffer an automatic wound
+    in addition to the dagger hit. Models of undead and possessed are immune to this
+    disease and do not take the test. A model wielding two Disease Daggers gains a
+    +1 Attack bonus for wielding two weapons and there is no further effect, except
+    that the chances of rolling an infecting 6 on the hit rolls are higher.'
+- id: double-handed-weapon
+  name: Double-handed weapon
+  text: 'Double-handed weapon
+
+    ​
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    Cost:
+
+    15 gc
+
+    Availability:
+
+    Common
+
+    A blow from a double-handed axe or sword can cut a foe in half and break armour
+    apart. It takes a long time to learn how to use these weapons and even then only
+    extremely strong men are able to wield them effectively.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user +2
+
+    Special Rules
+
+    Two-handed
+
+    :
+
+    A model armed with a double-handed weapon may not use a shield, buckler or additional
+    weapon in close combat. If the model is equipped with a shield he will still get
+    a +1 bonus to his armour save against shooting.
+
+    Strike last
+
+    Double-handed weapons are so heavy that the model using them always strikes last,
+    even when charging.'
+- id: dragon-sword
+  name: Dragon Sword
+  text: 'Dragon Sword
+
+    ​
+
+    Border Town Burning Supplement
+
+    (
+
+    1c
+
+    )
+
+    Cost:
+
+    20 gc
+
+    Availability:
+
+    Rare 10
+
+    Battle Monks and Merchant Caravans only
+
+    Dragon Swords are great-swords that are typically used by Cathayan soldiers and
+    ronins, and occasionally lifted by monks.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user +1
+
+    Special Rules
+
+    Two-handed
+
+    :
+
+    A model armed with a Dragon Sword may not use a shield, buckler or additional
+    weapon in close combat. It gets an additional +1 armour save bonus against ranged
+    attacks if it carries a shield.
+
+    Parry
+
+    Dragon Swords, despite their great size, can be used for
+
+    parrying
+
+    like a sword. When his opponent rolls to hit, the model armed with it may roll
+    a D6. If the score is greater than the highest to hit score of his opponent, the
+    model has parried the blow, and that attack is discarded. A model may not parry
+    attacks made with double or more its own Strength - they are simply too powerful
+    to be stopped.
+
+    Katana
+
+    In some older material, the Dragon Sword was referred to as "Katana".'
+- id: dwarf-axe
+  name: Dwarf Axe
+  text: 'Dwarf Axe
+
+    ​
+
+    Town Cryer #4
+
+    (
+
+    1a
+
+    )
+
+    Cost:
+
+    15 gc
+
+    Availability:
+
+    Rare 8
+
+    Dwarfs only
+
+    Dwarf axes are smaller-hafted weapons made of lighter (but stronger) materials
+    than normal axes. Dwarf Warriors are specially trained in their use and are able
+    to use them as deftly as a Human warrior might wield a sword.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    Cutting Edge
+
+    :
+
+    Dwarf axes have an extra save modifier of -1, so a model with Strength 4 using
+    a Dwarf axe has a -2 save modifier when he hits an opponent with the axe in close
+    combat.
+
+    Parry
+
+    Dwarf axes offer an excellent balance of defence and offense. A model armed with
+    a Dwarf axe may
+
+    parry
+
+    blows. When his opponent rolls to hit, the model armed with a Dwarf axe may roll
+    a D6. If the score is greater than the highest to hit score of his opponent, the
+    model has parried the blow and that attack is discarded. A model may not parry
+    attacks made with double or more its own Strength - they are simply too powerful
+    to be stopped. A model may not parry more than one attack in a single Close Combat
+    phase; a model armed with two Dwarf axes (or a Dwarf axe and a sword, etc) does
+    not get to parry two attacks but may instead re-roll a failed parry.'
+- id: fighting-claws
+  name: Fighting Claws
+  text: 'Fighting Claws
+
+    ​
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    Cost:
+
+    35 gc per pair
+
+    Availability:
+
+    Rare 7
+
+    Skaven only
+
+    The martial arts practised by Clan Eshin employ many unusual weapons. The most
+    famous of these are the Eshin Fighting Claws: sharp metal blades attached to the
+    paws of a Skaven warrior. It takes a real expert to use them effectively, but
+    an adept of Clan Eshin is a fearsome opponent when armed this way.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    Pair
+
+    :
+
+    Fighting Claws are traditionally used in pairs, one in each hand. A warrior armed
+    with Fighting Claws gets an additional attack.
+
+    Climb
+
+    A Skaven equipped with Fighting Claws can add +1 to his Initiative when making
+
+    Climbing
+
+    tests.
+
+    Parry
+
+    A Skaven armed with Fighting Claws may
+
+    parry
+
+    blows and can re-roll a failed attempt once, in the same way as a model armed
+    with a sword and buckler.
+
+    Cumbersome
+
+    A model armed with Fighting Claws may not use any other weapons in the entire
+    battle.'
+- id: fist
+  name: Fist
+  text: 'Fist
+
+    ​
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    Availability:
+
+    Common
+
+    The truly desperate, who don''t even own a knife, have to fight with their bare
+    hands. Needless to say, their chances of survival are comparable to Halflings
+    going without food for eight hours!
+
+    Note:
+
+    The following rules
+
+    only
+
+    apply to warriors who have lost their weapons. Creatures such as Zombies, animals,
+    etc, ignore these rules.
+
+    ❓
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user -1
+
+    Special Rules
+
+    Warriors using their fists can only ever make
+
+    1
+
+    attack.
+
+    +1 Enemy armour save
+
+    :
+
+    An enemy wounded by a fist gains a +1 bonus to his armour save, and a 6+ armour
+    save if he normally has none.'
+- id: flail
+  name: Flail
+  text: 'Flail
+
+    ​
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    Cost:
+
+    15 gc
+
+    Availability:
+
+    Common
+
+    The flail is a heavy weapon wielded with both hands. It normally consists of heavy
+    weights, often spiked, attached to a pole or handle by means of heavy chains.
+    Flails drain the user''s stamina quickly, but are awesomely destructive in the
+    hands of a skilled (or unhinged) warrior.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user +2
+
+    Special Rules
+
+    Heavy
+
+    :
+
+    A flail is extremely tiring to use and thus the +2 Strength bonus applies only
+    in the first turn of each hand-to-hand combat.
+
+    Two-handed
+
+    As a flail requires two hands to use, a model using a flail may not use a shield,
+    buckler or additional weapon in close combat. If the model has a shield he still
+    gets a +1 bonus to his armour save against shooting.'
+- id: great-axe
+  name: Great Axe
+  text: 'Great Axe
+
+    ​
+
+    Border Town Burning
+
+    (
+
+    1c
+
+    )
+
+    Cost:
+
+    25 gc
+
+    Availability:
+
+    Rare 8
+
+    Marauders of Chaos Heroes with the Chosen of Chaos skill only
+
+    These over-sized Battle Axes can be wielded only by the strongest of warriors.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user +2
+
+    Special Rules
+
+    Two-handed
+
+    :
+
+    As a great axe requires two hands to use, a model using a great axe may not use
+    a shield, buckler or additional weapon in close combat. If the model has a shield
+    he still gets a +1 bonus to his armour save against shooting.
+
+    Strike last
+
+    Great Axes are so heavy that the model using them always strikes last, even when
+    charging, unless it has the Strongman skill.
+
+    Cutting Edge
+
+    A Great Axe has an extra save modifier of -1, so a model with Strength 4 using
+    a Chaos Battle Axe has a -4 save modifier in hand-to-hand combat.'
+- id: gromril-weapon
+  name: Gromril Weapon
+  text: 'Gromril Weapon
+
+    ​
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    Cost:
+
+    4 x Price
+
+    Availability:
+
+    Rare 11
+
+    Only a Dwarf Runesmith can forge a weapon from gromril, a rare meteoric iron.
+    A blade fashioned from this metal will stay keen for a thousand years.
+
+    Special Rules
+
+    Gromril
+
+    :
+
+    A gromril weapon has an extra -1 save modifier, and costs four times the price
+    of a normal weapon of its kind. You may choose which type of hand-to-hand weapon
+    is offered to you as explained in the Trading section.
+
+    ❓'
+- id: halberd
+  name: Halberd
+  text: 'Halberd
+
+    ​
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    Cost:
+
+    10 gc
+
+    Availability:
+
+    Common
+
+    The halberd''s heavy blade is mounted upon a sturdy shaft of oak or steel and
+    has a point like a spear and a cutting edge like an axe. Since it can be used
+    to chop as well as thrust, it is an adaptable weapon, but is difficult to use
+    inside buildings.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user +1
+
+    Special Rules
+
+    Two-handed
+
+    :
+
+    A model armed with a halberd may not use a shield, buckler or additional weapon
+    in close combat. If the model has a shield he still gets a +1 bonus to his armour
+    save against shooting.'
+- id: hammer
+  name: Hammer
+  text: 'Hammer
+
+    ​
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    Cost:
+
+    3 gc
+
+    Availability:
+
+    Common
+
+    Perhaps the simplest type of weapon, these brutal, bludgeoning instruments range
+    from primitive wooden clubs to elaborately forged Dwarf hammers made from the
+    finest steel. A blow from a mace can easily crush a skull or knock a man unconscious.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    Concussion
+
+    :
+
+    Hammers and other bludgeoning weapons are excellent to use for striking your enemy
+    senseless. When using a hammer, club or mace, a roll of 2-4 is treated as
+
+    stunned
+
+    when rolling to see the extent of a model''s injuries.'
+- id: hobgoblin-poisoned-daggers
+  name: Hobgoblin Poisoned Daggers
+  text: 'Hobgoblin Poisoned Daggers
+
+    ​
+
+    GW Troll Magazine
+
+    (
+
+    1c
+
+    )
+
+    Cost:
+
+    15 gc
+
+    Availability:
+
+    Rare 9
+
+    Hobgoblins only
+
+    Hobgoblins, also called "slippery fellows", poison the blades of their daggers.
+    Cunning and crafty, Hobgoblins are often employed by their masters as assassins,
+    although they are rather cullable and unreliable troops.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    Pair
+
+    :
+
+    Poisoned Daggers are traditionally used in pairs, one in each hand. A warrior
+    armed with Poisoned Daggers gets an additional attack (for the offhand weapon
+    attack).
+
+    Swift
+
+    Hobgoblins armed with Poisoned Daggers count as having +1 Initiative when determining
+    combat order.
+
+    Poisoned
+
+    The venom of Poisoned Daggers will enter the blood of the victim and ravage his
+    organs and muscles. The weapons count as being permanently coated in
+
+    Black Lotus
+
+    . No additional poison may be applied to Poisoned Daggers.
+
+    +1 Enemy Armour Save
+
+    Poisoned Daggers count as daggers, and thus an enemy wounded by a dagger gains
+    a +1 bonus to his armour save, and a 6+ armour save if he has none normally.'
+- id: horseman-s-hammer
+  name: Horseman's Hammer
+  text: 'Horseman''s Hammer
+
+    ​
+
+    Empire in Flames Supplement, Town Crier 24
+
+    (
+
+    1a
+
+    )
+
+    Cost:
+
+    12 gc
+
+    Availability:
+
+    Rare 10
+
+    This is a great hammer similar to the ones used by Knights of the White Wolf.
+    Far too bulky to use in one hand, a Horseman''s Hammer is best suited to mounted
+    combat, when the impetus of the horse may be used to add to the power of the weapon.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user +1
+
+    Special Rules
+
+    Two-handed
+
+    :
+
+    A model armed with a Horseman''s Hammer may not use a shield, buckler, or additional
+    weapon in close combat. If the model is equipped with a shield he will still get
+    a +1 bonus to his armour save against shooting.
+
+    Cavalry Charge
+
+    A model armed with a Horseman''s Hammer may use the speed of his charge to increase
+    the might of his attacks. A model on a steed with a Horseman''s Hammer gains a
+    further +1 Strength bonus when he charges. This bonus only applies for that turn.'
+- id: iron-fist
+  name: Iron Fist
+  text: 'Iron Fist
+
+    ​
+
+    Border Town Burning supplement
+
+    (
+
+    1c
+
+    )
+
+    Cost:
+
+    15 gc
+
+    Availability:
+
+    Common
+
+    Maneaters only
+
+    Ogres often shield their off-hand with some kind of spiked gauntlet. Such a heavy
+    glove can be used to bat aside the strongest of attacks in a similar way to a
+    giant buckler or to smash an enemy''s face to a pulp.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    Parry
+
+    :
+
+    A model with an iron fist may parry enemy blows.
+
+    Gloved
+
+    A model armed with an iron fist may not hold another weapon in the same hand.
+    This means a double-handed weapon cannot be used. Having two iron fists means
+    the Ogre may not use any other close combat weapons during a battle.
+
+    Dual-role
+
+    Iron fists operate like a buckler and a bladed hand weapon at the same time. This
+    means that an iron fist allows the wearer to re-roll failed parry attempts if
+    paired with a sword or another iron fist.'
+- id: ithilmar-weapon
+  name: Ithilmar Weapon
+  text: 'Ithilmar Weapon
+
+    ​
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    Cost:
+
+    3 x Price
+
+    Availability:
+
+    Rare 9
+
+    Elven blades are forged from priceless ithilmar, an extremely light but strong
+    metal, found only in the fabled Elven kingdoms. A few of these weapons are occasionally
+    found in the Old World and these are normally spoils of war, taken by the Norse
+    raiders who pillage the coastal settlements of the Elves.
+
+    Special Rules
+
+    Ithilmar
+
+    :
+
+    An ithilmar weapon gives its user +1 Initiative in hand-to-hand combat, and costs
+    three times the price of a normal weapon of its kind. You may choose which hand-to-hand
+    weapon is offered to you as explained in the Trading section.
+
+    ❓'
+- id: katar
+  name: Katar
+  text: 'Katar
+
+    ​
+
+    Khemri setting, Town Cryer #18
+
+    (
+
+    1b
+
+    )
+
+    Cost:
+
+    5 gc
+
+    Availability:
+
+    Rare 4
+
+    This is an Arabian-style punch dagger. It has a handle perpendicular to the blade
+    and is used in a punching thrusting manner.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    -1 enemy armour save
+
+    :
+
+    Target gets -1 to armour save'
+- id: kitchen-knife
+  name: Kitchen Knife
+  text: 'Kitchen Knife
+
+    ​
+
+    Citadel Journal 36
+
+    (
+
+    1b
+
+    )
+
+    Cost:
+
+    2 gc
+
+    Availability:
+
+    Common
+
+    Mootlanders only
+
+    The common kitchen knife does not only have to be used for chopping vegetables,
+    in the chubby but expert hands of a Master Chef it can make an awful mess of his
+    enemies!
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    +1 Enemy armour save
+
+    :
+
+    Kitchen knives are not the best weapons to use for penetrating an enemy model''s
+    armour. An enemy wounded by a kitchen knife gains a +1 bonus to his armour save,
+    and a 6+ armour save if he has none normally.
+
+    ✏️'
+- id: ladle
+  name: Ladle
+  text: 'Ladle
+
+    ​
+
+    Citadel Journal 36
+
+    (
+
+    1b
+
+    )
+
+    Cost:
+
+    2 gc
+
+    Availability:
+
+    Common
+
+    Mootlanders only
+
+    A ladle isn''t very good for killing your foes but if aimed correctly, a crack
+    across the knuckles can seriously reduce even the best warrior''s fighting ability.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    No save except shields
+
+    :
+
+    A Master Chef knows exactly where to aim his ladle, helmets and breast plates
+    are of little use against a ladle whacked across the hands. The only saving throws
+    allowed are from shields or skills.
+
+    Knuckle Cracking
+
+    If a Master Chef manages to hit an enemy in close combat (a feat within itself)
+    and scores a ''6'' in doing so he has rapped his enemy across the knuckles and
+    forced him to drop his weapon.'
+- id: lance
+  name: Lance
+  text: 'Lance
+
+    ​
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    Cost:
+
+    40 gc
+
+    Availability:
+
+    Rare 8
+
+    Lances are long, heavy spears used by mounted shock troops to rip through armour
+    and fling their foes to the ground. They are the chosen weapons of Knights Templar
+    and other wealthy warriors. To use a lance requires great skill and strength,
+    and only the richest warriors ride the heavy warhorses needed to wield these mighty
+    weapons effectively.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user +2 when charging on horseback
+
+    Special Rules
+
+    Cavalry weapon
+
+    :
+
+    A warrior must own a warhorse to use a lance, as it can only be used whilst he
+    is on horseback.
+
+    Cavalry bonus
+
+    If using optional rules for mounted models, a warrior armed with a lance receives
+    a +2 Strength bonus when he charges.
+
+    ❓
+
+    This bonus only applies for that turn.'
+- id: mace
+  name: Mace
+  text: 'Mace
+
+    ​
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    Cost:
+
+    3 gc
+
+    Availability:
+
+    Common
+
+    Perhaps the simplest type of weapon, these brutal, bludgeoning instruments range
+    from primitive wooden clubs to elaborately forged Dwarf hammers made from the
+    finest steel. A blow from a mace can easily crush a skull or knock a man unconscious.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    Concussion
+
+    :
+
+    Hammers and other bludgeoning weapons are excellent to use for striking your enemy
+    senseless. When using a hammer, club or mace, a roll of 2-4 is treated as
+
+    stunned
+
+    when rolling to see the extent of a model''s injuries.'
+- id: main-gauche
+  name: Main Gauche
+  text: 'Main Gauche
+
+    ​
+
+    Nemesis Crown Supplement
+
+    (
+
+    1b
+
+    )
+
+    Cost:
+
+    7 gc
+
+    Availability:
+
+    Rare 7
+
+    Hochland Bandits only
+
+    A main gauche is a dagger with a large hand guard, often used in conjunction with
+    a rapier or other sword. Popular among duellists and petty nobles, the main gauche
+    is sometimes seen as a "foppish" weapon, but in reality it provides the wielder
+    the ability to be strong both in attack and defense.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    Parry
+
+    :
+
+    Can parry enemy blows
+
+    +1 Enemy Armour Save
+
+    Target gets +1 to armour save'
+- id: man-catcher
+  name: Man-catcher
+  text: 'Man-catcher
+
+    ​
+
+    Border Town Burning supplement
+
+    (
+
+    1c
+
+    )
+
+    Cost:
+
+    25 gc
+
+    Availability:
+
+    Rare 10
+
+    Semi-circular prongs mounted on pole-arms are popular among the Gaolers of Zharr-Naggrund.
+    This non-lethal spring loaded device can ensnare the most violent of prisoners.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    Capture
+
+    :
+
+    A model taken
+
+    out of action
+
+    by a Mancatcher becomes captured. Do not roll for Serious Injuries. The catch
+    is locked up in the
+
+    Engine of Chaos
+
+    instead. If the warband does not include an Engine of Chaos, roll for Serious
+    Injuries as normal. Large models, such as Ogres, Trolls and Minotaurs, cannot
+    be captured this way, and neither can animals.
+
+    Two-handed
+
+    Requires two hands to wield'
+- id: misericordia
+  name: Misericordia
+  text: 'Misericordia
+
+    ​
+
+    Lustrian Reavers
+
+    (
+
+    1c
+
+    )
+
+    Cost:
+
+    10 gc
+
+    Availability:
+
+    Common
+
+    Lustrian Reavers only
+
+    These long daggers have been specifically designed to kill downed opponents through
+    chinks in armour, and piercing vulnerable spots such as eyes and the throat.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    +1 Enemy armour save
+
+    :
+
+    Daggers are not the best weapons to use for penetrating an enemy model''s armour.
+    An enemy wounded by a dagger gains a +1 bonus to his armour save, and a 6+ armour
+    save if he has none normally.
+
+    Armour Piercing
+
+    When attacking enemies that are Knocked-Down you get to roll 2D6 and pick the
+    highest number on ‘to wound’ roll.'
+- id: morning-star
+  name: Morning Star
+  text: 'Morning Star
+
+    ​
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    Cost:
+
+    15 gc
+
+    Availability:
+
+    Common
+
+    A morning star consists of a wooden or steel shaft with heavy chains that have
+    spiked steel balls attached. It is very destructive and requires great skill to
+    wield effectively.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user +1
+
+    Special Rules
+
+    Heavy
+
+    :
+
+    The morning star is extremely tiring to use, so its +1 Strength bonus applies
+    only in the first turn of each hand-to-hand combat.
+
+    Difficult to use
+
+    A model with a morning star may not use a second weapon or buckler in his other
+    hand because it requires all his skill to wield it. He may carry a shield as normal
+    though.'
+- id: obsidian-weapon
+  name: Obsidian Weapon
+  text: 'Obsidian Weapon
+
+    ​
+
+    Border Town Burning
+
+    (
+
+    1c
+
+    )
+
+    Cost:
+
+    4 x Price
+
+    Availability:
+
+    Rare 12
+
+    Marauders of Chaos, Norse, Beastmen, Chaos Dwarfs, Possessed and Carnival of Chaos
+    only
+
+    Obsidian is mined in the Dark Lands by the minions of Chaos. When expertly derived
+    from its ore, the curious volcanic rock becomes ensorcelled by engineers manufacturing
+    artefacts in the furnaces of Zharr-Naggrund. Forging weapons using these vile
+    techniques requires acute diabolic expertise making them extremely rare.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user +1
+
+    Special Rules
+
+    Blemished
+
+    :
+
+    Although not strictly tainted by Chaos, all artefacts of Obsidian are considered
+    tinged with evil, by the same darkness associated with their artisans. Obsidian
+    weapons may never be used by Dwarfs, Elves, Sisters of Sigmar, Witch Hunters or
+    Priests.
+
+    Heavy
+
+    Obsidian weapons are so heavy that the warrior using them always strikes last,
+    even when charging.
+
+    Conflicting Names
+
+    Both the Sons of Hashut warband and Border Town Burning contain the Obsidian Weapon.
+    The Sons of Hashut editor recommends your campaign use EITHER the obsidian rules
+    contained, or from Border Town Burning; do not use both, unless you rename one
+    of them for clarity'
+- id: ogre-club
+  name: Ogre Club
+  text: 'Ogre Club
+
+    ​
+
+    Border Town Burning supplement
+
+    (
+
+    1c
+
+    )
+
+    Cost:
+
+    10 gc
+
+    Availability:
+
+    Common
+
+    Maneaters only
+
+    Ogre clubs are crudely fashioned with bindings, spikes, and studs, and the craftsmanship
+    and size of the club an Ogre wields is an indication of his status. An Ogre wielding
+    a simple log is generally seen as desperate or extremely poor while wandering
+    ones are known to wield almost anything of suitable size such as street lamps,
+    salvaged artillery or pieces of architecture. These clubs are normally used for
+    knocking out food so that it can be dragged back to the cave without losing much
+    blood, but are also perfect for breaking enemies defence in a fight. An Ogre trusts
+    his club and will eat it only in the direst of circumstances.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    Concussion
+
+    :
+
+    Ogre clubs are excellent to use for striking enemies senseless. When using an
+    Ogre club, a roll of 2-4 is treated as stunned when rolling for Injuries.
+
+    Crushing Attack
+
+    Ogre clubs may be wielded with impressive strength imposing -1 to enemy armour
+    saves. Also the Strength of the attack is considered one higher for
+
+    parry
+
+    attempts by the defender, so a S3 model may not parry attacks by a S5 Ogre wielding
+    the club. Crushing Attack only applies if the Ogre uses the club with both hands.'
+- id: pike-merchant-caravans
+  name: Pike (Merchant Caravans)
+  text: 'Pike (Merchant Caravans)
+
+    ​
+
+    Border Town Burning
+
+    (
+
+    1c
+
+    )
+
+    Cost:
+
+    10 gc
+
+    Availability:
+
+    Rare 8
+
+    Merchant Caravans only
+
+    A Pike is comparable to a spear, though its length exceeds the one of a common
+    one. The Tileans use them in their civil wars, and with the silk road, they came
+    to the outer border towns of Cathay.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    Strike First
+
+    :
+
+    A warrior with a pike strikes first in the first turn of a hand-to-hand combat.
+    For that turn, he gains +1 Initiative representing the pike''s long shaft that
+    allows him to attack even before the enemy reaches him.
+
+    Two Handed
+
+    A model armed with a pike may not use a shield, buckler, or additional weapon
+    in close combat. However, it gets an additional +1 armor save bonus against ranged
+    attacks if it carries a shield.'
+- id: pike-tileans
+  name: Pike (Tileans)
+  text: 'Pike (Tileans)
+
+    ​
+
+    Lustria, Cities of Gold
+
+    (
+
+    1b
+
+    )
+
+    Cost:
+
+    12 gc
+
+    Availability:
+
+    Rare 7
+
+    Tileans only
+
+    The Pike is a special weapon in Lustria - Cities of Gold. It is somewhat longer
+    than a spear and is weighted so that it can be wielded efficiently between the
+    trees and underbrush and that is so common in the jungle.
+
+    Range:
+
+    Close Combat (3")
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    Strike First
+
+    :
+
+    A model wielding a pike can strike first in the first round of combat even when
+    charged by a model wielding a spear. After the initial round of combat resolve
+    strikes in Initiative order. The model can change to normal hand-to-hand weapons
+    after the initial round.
+
+    Long Polearm
+
+    Due to its considerable length, a model that has a pike can attack another model
+    from up to 3" away without being a part of a hand-to-hand melee.
+
+    Unwieldy
+
+    Pikes have to be used with both hands therefore only 1 attack is allowed. The
+    model also cannot take advantage of a shield or buckler while using a pike.
+
+    Large
+
+    Because of its length and weight only man-sized or larger creatures can use pikes.
+    Skaven, Skinks, Halflings, etc cannot.
+
+    Reach
+
+    Due to the fact any "reach" mechanic was removed from Mordheim, we recommend using
+    the later
+
+    Pike (Merchant Caravans)
+
+    rules from Border Town Burning.'
+- id: poison-daggers
+  name: Poison Daggers
+  text: 'Poison Daggers
+
+    ​
+
+    Mordheimer Information Centre
+
+    (
+
+    1c
+
+    )
+
+    Cost:
+
+    25 gc
+
+    Availability:
+
+    Common
+
+    Night Goblins only
+
+    A pair of daggers which are coated in Death Cap mushroom juice. The coating is
+    re-applied for free after every game. It is derived from the poisonous Death Cap
+    mushrooms and has the same effect as
+
+    Black Lotus
+
+    .
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    Paired
+
+    :
+
+    Poisoned Daggers are traditionally used in pairs, one in each hand. A warrior
+    armed with Poisoned Daggers gets an additional attack.
+
+    Poisoned
+
+    These blades are coated in Death Cap Mushroom juice. The daggers are re-coated
+    for free after every game, and they have the same effect as Black Lotus. For reference:
+    they will wound the target automatically if you roll a 6 to hit. Note that you
+    can still roll a dice for every wound inflicted in this way. If you roll a 6,
+    you will inflict a critical hit with that roll. If you do not roll a 6, you will
+    cause a normal wound. Take armour saves as normal.
+
+    +1 Enemy armour save
+
+    Target gets +1 to armour save'
+- id: quarter-staff
+  name: Quarter Staff
+  text: 'Quarter Staff
+
+    ​
+
+    Border Town Burning
+
+    (
+
+    1c
+
+    )
+
+    Cost:
+
+    15 gc
+
+    Availability:
+
+    Common
+
+    Battle Monks of Cathay only
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    Balanced
+
+    :
+
+    A quarter staff is especially light and easy to wield. A model armed with a fighting
+    staff gets +1 Initiative in close combat.
+
+    Parry
+
+    Can parry enemy blows
+
+    Freestyle
+
+    Although a staff does not always require two hands to use, it cannot be combined
+    with another weapon, shield, buckler, etc. However, it can be combined with the
+    Monks bare hand attacks. This means that the Monk is still getting +1 Attack.'
+- id: rapier
+  name: Rapier
+  text: 'Rapier
+
+    ​
+
+    Ye Old Curiosity Shoppe, Mordheim Annual 2002
+
+    (
+
+    1a
+
+    )
+
+    Cost:
+
+    15 gc
+
+    Availability:
+
+    Rare 5
+
+    Reiklanders, Marienburgers, Tileans, Hochland Bandits, and Merchant Caravans only
+
+    The rapier is a long thing blade commonly used by dualists. It is a deadly, shard
+    weapon capable of delivering a multitude of blows but lacks the power of a broadsword.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    Parry
+
+    :
+
+    Like all swords, you may use a rapier to
+
+    parry
+
+    in hand to hand combat. When your opponent scores a hit you must roll a D6. If
+    you can score greater than the highest ''to hit'' roll you have parried the blow
+    and the attack is discarded.
+
+    Barrage
+
+    A warrior armed with a rapier rolls to hit and wound as normal. However, if you
+    mange to hit your opponent but fail to wound, you may attack again just as if
+    you had another attack but at –1 to hit (down to a maximum to needing a 6 to hit).
+    You may continue attacking as long as you hit and it is possible to strike your
+    opponent many times, particularly if your warrior has more then one attack on
+    his profile.
+
+    Armour Save
+
+    Because a rapier is a very light sword that lacks the thick armour breaking blade
+    of the broadsword, armour saves are made at +1.'
+- id: serpent-staff
+  name: Serpent Staff
+  text: 'Serpent Staff
+
+    ​
+
+    Town Cryer 18
+
+    (
+
+    1b
+
+    )
+
+    Cost:
+
+    30 gc
+
+    Availability:
+
+    Common
+
+    Tomb Guardians Liche Priest only
+
+    The highest Liche Priests of their order carry staffs adorned with a serpent head
+    as their badge of office.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    Parry
+
+    :
+
+    The staff is used with two hands and may be used to
+
+    . However, the Liche Priest may forgo all his normal attacks and parries in a
+    round to use the power contained within the staff. A single word of command brings
+    the serpent to life to attack their enemy. The staff always attacks first in close
+    combat and makes a single attack with WS4 and S4.'
+- id: shortsword
+  name: Shortsword
+  text: 'Shortsword
+
+    ​
+
+    Bretonnian Chapel Guard
+
+    (
+
+    1c
+
+    )
+
+    Cost:
+
+    7 gc
+
+    Availability:
+
+    Common
+
+    Bretonnian Chapel Guard Knights only
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    Parry
+
+    :
+
+    Shortswords offer an excellent balance of defence and offence. A model armed with
+    a sword may parry blows. When his opponent rolls to hit, the model armed with
+    a sword may roll a D6. If the score is greater than the highest to hit score of
+    his opponent, the model has parried the blow, and that attack is discarded. A
+    model may not parry attacks made with double or more its own Strength – they are
+    simply too powerful to be stopped.
+
+    +1 Enemy armour save
+
+    Shortswords are not the best weapons to use for penetrating an enemy model''s
+    armour. An enemy wounded by a short sword gains a +1 bonus to his armour save,
+    and a 6+ armour save if he has none normally.'
+- id: sigmarite-warhammer
+  name: Sigmarite Warhammer
+  text: 'Sigmarite Warhammer
+
+    ​
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    Cost:
+
+    15 gc
+
+    Availability:
+
+    Common
+
+    Sisters of Sigmar only
+
+    One of the traditional weapons of the Sisterhood, the warhammer echoes Ghal-Maraz,
+    the great hammer of Sigmar himself.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user +1
+
+    Special Rules
+
+    Concussion
+
+    :
+
+    Warhammers are excellent at striking people senseless. When using a warhammer
+    in close combat a roll of 2-4 is treated as stunned when rolling on the Injury
+    chart.
+
+    Holy Weapon
+
+    Each warhammer is blessed by the High Matriarch herself before it is handed to
+    the Sisters. The warhammer has a +1 bonus on all to wound rolls against any Possessed
+    or Undead models.
+
+    ❓
+
+    Note that you will still need to score a 6 before any modifiers in order to cause
+    a critical hit. Only Matriarchs and Sister Superiors may carry two Sigmarite warhammers.'
+- id: sons-of-hashut-obsidian-weapon
+  name: Sons of Hashut Obsidian Weapon
+  text: 'Sons of Hashut Obsidian Weapon
+
+    ​
+
+    GW Troll Magazine
+
+    (
+
+    1c
+
+    )
+
+    Cost:
+
+    60 gc
+
+    Availability:
+
+    Rare 10
+
+    Chaos Dwarfs only
+
+    Obsidian weapons are very rare because it takes a long time to forge the weapon
+    without causing fissures in the stone; however, once forged, they are prepared
+    to withstand heavy impacts during use.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user +1
+
+    Special Rules
+
+    Personal
+
+    :
+
+    The weapon keeps the bonuses for weapons of this type; only
+
+    swords
+
+    ,
+
+    axes
+
+    , and
+
+    hammers
+
+    can be made of obsidian (all three weapons cost the same: 60 crowns).
+
+    Heavy
+
+    A warrior equipped with an obsidian weapon subtracts 1 from his Initiative attribute
+    in melee combat.
+
+    Conflicting Names
+
+    Both the Sons of Hashut warband and Border Town Burning contain the Obsidian Weapon.
+    The Sons of Hashut editor recommends your campaign use EITHER the obsidian rules
+    contained, or from Border Town Burning; do not use both, unless you rename one
+    of them for clarity'
+- id: spear
+  name: Spear
+  text: 'Spear
+
+    ​
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    Cost:
+
+    10 gc
+
+    Availability:
+
+    Common
+
+    Spears range from sharpened sticks used by Goblins to the impressive cavalry spears
+    typical of the Elves.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    Strike first
+
+    :
+
+    A warrior with a spear ''strikes first'' in the first turn of hand-to-hand combat.
+
+    ✏️
+
+    Unwieldy
+
+    A warrior with a spear may only use a shield or a buckler in his other hand. He
+    may not use a second weapon.
+
+    Cavalry bonus
+
+    If using the rules for mounted models, a mounted warrior armed with a spear receives
+    a +1 Strength bonus when he charges. This bonus only applies for that turn.'
+- id: spiked-gauntlet
+  name: Spiked Gauntlet
+  text: 'Spiked Gauntlet
+
+    ​
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    Cost:
+
+    15 gc
+
+    Availability:
+
+    Common
+
+    Pit Fighters only
+
+    The spiked gauntlet counts as an additional hand weapon and a buckler. And no,
+    your Heroes cannot learn to use it!
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    Parry
+
+    :
+
+    Can parry enemy blows'
+- id: starblade
+  name: Starblade
+  text: 'Starblade
+
+    ​
+
+    Town Cryer #15
+
+    (
+
+    1b
+
+    )
+
+    Cost:
+
+    15 gc
+
+    Availability:
+
+    Rare 7
+
+    Amazons (Lustria) only
+
+    Of the many strange weapons the Amazons possess the Starblade is built like an
+    Amazonian dagger. It is usually painted exotic colours and contains magical properties
+    that enhance the fighting prowess of the Amazons.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    +1 Enemy armour save
+
+    :
+
+    Enemy gets +1 to armour save
+
+    Potential Parry
+
+    A Starblade can
+
+    parry
+
+    the first successful hit of any combat on a 4+.'
+- id: starsword
+  name: Starsword
+  text: 'Starsword
+
+    ​
+
+    Town Cryer #15
+
+    (
+
+    1b
+
+    )
+
+    Cost:
+
+    30 gc
+
+    Availability:
+
+    Rare 10
+
+    Amazons (Lustria) only
+
+    This is an ancient and legendary sword that can cut through armour as if it were
+    a leaf.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user +1
+
+    Special Rules
+
+    Parry
+
+    :
+
+    Can parry enemy blows
+
+    Ignores Armour
+
+    A Starsword ignores all armour saves except for ward and Dodge saves.'
+- id: steel-whip
+  name: Steel Whip
+  text: 'Steel Whip
+
+    ​
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    Cost:
+
+    10 gc
+
+    Availability:
+
+    Common
+
+    Sisters of Sigmar and Chaos Dwarfs only
+
+    Another weapon unique to the Sisterhood is the steel whip, made from barbed steel
+    chains.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    Cannot be parried
+
+    :
+
+    The steel whip is a flexible weapon and the Priestesses use it with great expertise.
+    Attempts to
+
+    parry
+
+    its strikes are futile. A model attacked by a steel whip may not make parries
+    with swords or bucklers.
+
+    Whipcrack
+
+    When the wielder charges they gain +1A for that turn. This bonus attack is added
+    after any other modifications. When the wielder is charged they gain +1A that
+    they may only use against the charger. This additional attack will ''strike first''.
+    If the wielder is simultaneously charged by two or more opponents they will still
+    only receive a total of +1A. If the wielder is using two whips at the same time
+    then they get +1A for the additional hand weapon, but only the first whip gets
+    the whipcrack +1A.
+
+    ✏️'
+- id: sword
+  name: Sword
+  text: 'Sword
+
+    ​
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    Cost:
+
+    10 gc
+
+    Availability:
+
+    Common
+
+    The sword is often referred to as the ''king of weapons''. The most common sword
+    available, the broadsword of the Empire, is a masterpiece by the standards of
+    any smith: four full feet of gleaming steel, double-edged and razor-sharp.
+
+    Swords are much more effective weapons than crude clubs and axes, though learning
+    to use a sword is a long and difficult process. It takes years to truly master
+    this weapon – most warriors in Mordheim die long before they get this far!
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    Parry
+
+    :
+
+    Swords offer an excellent balance of defence and offence. A model armed with a
+    sword may
+
+    parry
+
+    blows. When his opponent rolls to hit, the model armed with a sword may roll a
+    D6. If the score is greater than the highest to hit score of his opponent, the
+    model has parried the blow, and that attack is discarded. A model may not parry
+    attacks made with double or more its own Strength – they are simply too powerful
+    to be stopped.'
+- id: sword-breaker
+  name: Sword Breaker
+  text: 'Sword Breaker
+
+    ​
+
+    Ye Old Curiosity Shoppe, Mordheim Annual 2002
+
+    (
+
+    1a
+
+    )
+
+    Cost:
+
+    30 gc
+
+    Availability:
+
+    Rare 8
+
+    The sword breaker is a specialist weapon wrought by only the most talented swordsmiths.
+    Next to the hilt are two prongs concealed within the blade that can be used to
+    trap an opponent''s blade, twisting and snapping it with a single, well timed
+    movement.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    Parry
+
+    :
+
+    The sword breaker allows the wielder to
+
+    parry
+
+    the attacks of his opponents in close combat. When your opponent scores a hit
+    roll a D6. If you can roll greater than the highest ''to hit'' roll of your opponent
+    you have parried the attack and the blow is wasted.
+
+    Trap Blade
+
+    The two prongs used to trap an opponent''s weapon are snapped out when the warrior
+    parries. Whenever you make a successful parry attempt roll a D6. If you score
+    a 4+ you break the weapon your opponent was using. The weapon is now useless and
+    they must use another one, or if they have no other weapon, resort to unarmed
+    combat.'
+- id: tenderiser
+  name: Tenderiser
+  text: 'Tenderiser
+
+    ​
+
+    Citadel Journal 36
+
+    (
+
+    1b
+
+    )
+
+    Cost:
+
+    3 gc
+
+    Availability:
+
+    Common
+
+    Mootlanders only
+
+    Although other warbands scoff at your rolling pins and tenderisers, they are fully
+    capable of crushing a skull or knocking an opponent unconscious.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    Stuns on 2-4
+
+    :'
+- id: trident
+  name: Trident
+  text: 'Trident
+
+    ​
+
+    Town Cryer #21
+
+    (
+
+    1b
+
+    )
+
+    Cost:
+
+    15 gc
+
+    Availability:
+
+    Rare 7
+
+    Pit Fighters only
+
+    The Trident as a Pit Fighter weapon originates in Tilea from the ancient days
+    when gladiators, as the Tileans called them, would fight in the massive public
+    arenas. This weapon is similar to a spear and has all of its advantages in length
+    but it has three spear points, allowing an adept user to catch blades between
+    them and turn them aside.
+
+    Traditionally, the trident is a weapon that is combined with a net and used by
+    a lightly armoured Pit Fighter against the more heavily armed Swordsmen.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    Parry
+
+    :
+
+    Can parry enemy blows
+
+    Strike first
+
+    Strikes first when charged'
+- id: weeping-blades
+  name: Weeping Blades
+  text: 'Weeping Blades
+
+    ​
+
+    Mordheim Rulebook
+
+    (
+
+    core
+
+    )
+
+    Cost:
+
+    50 gc per pair
+
+    Availability:
+
+    Rare 9
+
+    Skaven only
+
+    The adepts of Clan Eshin use weapons called Weeping Blades, murderous swords constructed
+    with a small amount of warpstone in their structure. A Weeping Blade constantly
+    sweats a deadly corrosive venom.
+
+    Range:
+
+    Close Combat
+
+    Strength:
+
+    As user
+
+    Special Rules
+
+    Pair
+
+    :
+
+    Weeping Blades are traditionally used in pairs, one in each hand. A warrior armed
+    with Weeping Blades gets an additional attack.
+
+    Venomous
+
+    The venom of Weeping Blades will enter the blood of the victim and ravage his
+    organs and muscles. These weapons count as being permanently coated in
+
+    black lotus
+
+    . No additional poison may be applied to Weeping Blades.
+
+    Parry
+
+    Weeping Blades are swords and can be used for
+
+    parrying
+
+    .
+
+    Last updated
+
+    on
+
+    Aug 16, 2026
+
+    Previous
+
+    Weapons, Armour & Equipment
+
+    Next
+
+    Missile Weapons
+
+    Contact
+
+    [email protected]
+
+    Buy me a coffee
+
+    Feedback discord
+
+    Community
+
+    Broheim.net
+
+    r/mordheim
+
+    Mordheim discord
+
+    servo_scribe projects
+
+    The New Mordheimer
+
+    Warcrier
+
+    Friendly resources
+
+    Wahapedia
+
+    This site is a free community project not associated with Games Workshop. All
+    original content is Copyright © 2026 Games Workshop.'

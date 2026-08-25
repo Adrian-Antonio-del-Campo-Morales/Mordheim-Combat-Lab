@@ -1,0 +1,706 @@
+schema_version: 1
+id: amazons-mordheim
+name: Amazons (Mordheim)
+name_i18n:
+  en: Amazons (Mordheim)
+  es: null
+original_locale: en
+categories:
+- 1b
+collections:
+- mordheimer
+grade: 1b
+setting: Mordheim
+publication: Town Cryer 23
+status: source-normalized
+sources:
+- manual: mordheimer.net
+  printed_page: 0
+  section: Amazons (Mordheim)
+  url: https://mordheimer.net/docs/warbands/grade-1b-warbands/amazons
+roster:
+  minimum_models: 3
+  maximum_models: 15
+  starting_gold: 500
+  members:
+  - profile_id: priestess
+    minimum: 1
+    maximum: 1
+  - profile_id: champions
+    minimum: 0
+    maximum: 2
+  - profile_id: totem-warriors
+    minimum: 0
+    maximum: 2
+  - profile_id: amazon-warriors
+    minimum: 1
+    maximum: 1
+  - profile_id: scouts
+    minimum: 0
+    maximum: 3
+equipment_lists:
+- id: heroines-equipment-list
+  name: Heroines Equipment List
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: 1st free/2 gc
+  - item_id: club
+    cost: 3
+  - item_id: sword
+    cost: 10
+  - item_id: spear
+    cost: 10
+  - item_id: claw_of_the_old_ones
+    cost: 30
+  - item_id: sunstaff
+    cost: 50
+  - item_id: sun_gauntlet
+    cost: 40
+  - item_id: buckler
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  - item_id: amulet_of_the_moon
+    cost: 50
+  - item_id: healing_herbs
+    cost: 35
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Heroines Equipment List
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/amazons
+  name_i18n:
+    en: Heroines Equipment List
+    es: null
+- id: henchwomen-equipment-list
+  name: Henchwomen equipment list
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: 1st free/2 gc
+  - item_id: club
+    cost: 3
+  - item_id: sword
+    cost: 10
+  - item_id: spear
+    cost: 10
+  - item_id: sling
+    cost: 5
+  - item_id: bow
+    cost: 10
+  - item_id: buckler
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Henchwomen equipment list
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/amazons
+  name_i18n:
+    en: Henchwomen equipment list
+    es: null
+- id: scout-equipment-list
+  name: Scout Equipment List
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: 1st free/2 gc
+  - item_id: club
+    cost: 3
+  - item_id: sword
+    cost: 10
+  - item_id: spear
+    cost: 10
+  - item_id: sling
+    cost: 5
+  - item_id: javelins
+    cost: 5
+  - item_id: bow
+    cost: 10
+  - item_id: buckler
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Scout Equipment List
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/amazons
+  name_i18n:
+    en: Scout Equipment List
+    es: null
+profiles:
+- id: priestess
+  name: Priestess
+  type: hero
+  cost: 70
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 4
+    BS: 4
+    S: 3
+    T: 3
+    W: 1
+    I: 4
+    A: 1
+    Ld: 8
+  equipment_lists:
+  - heroines-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - shooting
+  - academic
+  - strength
+  - speed
+  rules:
+  - id: leader
+    name: Leader
+    effect: 'Any models in the warband within 6"
+
+      of the Priestess may use her Leadership
+
+      instead of their own.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: heroines / 1 Priestess / Special Rules / Leader
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/amazons
+    name_i18n:
+      en: Leader
+      es: null
+    effect_i18n:
+      en: 'Any models in the warband within 6"
+
+        of the Priestess may use her Leadership
+
+        instead of their own.'
+      es: null
+  - id: wizard
+    name: Wizard
+    effect: 'The Priestess is a Wizard and may
+
+      use Amazon Rituals . She starts with one ritual
+
+      chosen at random from the list.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: heroines / 1 Priestess / Special Rules / Wizard
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/amazons
+    name_i18n:
+      en: Wizard
+      es: null
+    effect_i18n:
+      en: 'The Priestess is a Wizard and may
+
+        use Amazon Rituals . She starts with one ritual
+
+        chosen at random from the list.'
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 1 Priestess
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/amazons
+  source_path:
+  - heroines
+  - 1 Priestess
+  name_i18n:
+    en: Priestess
+    es: null
+- id: champions
+  name: Champions
+  type: hero
+  cost: 35
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 4
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - heroines-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - shooting
+  - speed
+  rules: []
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 2 Champions
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/amazons
+  source_path:
+  - heroines
+  - 0 – 2 Champions
+  name_i18n:
+    en: Champions
+    es: null
+- id: totem-warriors
+  name: Totem Warriors
+  type: hero
+  cost: 30
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 4
+    BS: 2
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - heroines-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: &id001
+  - combat
+  - strength
+  - speed
+  rules:
+  - id: frenzy
+    name: Frenzy
+    effect: 'Totem Warriors are
+
+      utterly fanatical, blood crazed
+
+      individuals. They are also
+
+      totally out of their heads on
+
+      dangerous, psychedelic, herbal
+
+      concoctions prepared by their
+
+      sisters. Totem Warriors are mad
+
+      berserkers who care little
+
+      about danger or the prospect
+
+      of death. They are subject to
+
+      the rules for frenzy .'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: heroines / 0 – 2 Totem Warriors / Special Rules / Frenzy
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/amazons
+    name_i18n:
+      en: Frenzy
+      es: null
+    effect_i18n:
+      en: 'Totem Warriors are
+
+        utterly fanatical, blood crazed
+
+        individuals. They are also
+
+        totally out of their heads on
+
+        dangerous, psychedelic, herbal
+
+        concoctions prepared by their
+
+        sisters. Totem Warriors are mad
+
+        berserkers who care little
+
+        about danger or the prospect
+
+        of death. They are subject to
+
+        the rules for frenzy .'
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 2 Totem Warriors
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/amazons
+  source_path:
+  - heroines
+  - 0 – 2 Totem Warriors
+  name_i18n:
+    en: Totem Warriors
+    es: null
+- id: amazon-warriors
+  name: + Amazon warriors
+  type: henchman
+  cost: 25
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - heroines-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: *id001
+  rules: []
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 1+ Amazon warriors
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/amazons
+  source_path:
+  - henchwomen
+  - 1+ Amazon warriors
+  name_i18n:
+    en: + Amazon warriors
+    es: null
+- id: scouts
+  name: Scouts
+  type: henchman
+  cost: 30
+  experience: 0
+  characteristics:
+    M: 4
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - scout-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules:
+  - id: stealthy
+    name: Stealthy
+    effect: 'A Scout may deploy twice the
+
+      distance onto the battlefield than other
+
+      warriors and may start the battle Hiding.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchwomen / 0 – 3 Scouts / Special Rules / Stealthy
+      url: https://mordheimer.net/docs/warbands/grade-1b-warbands/amazons
+    name_i18n:
+      en: Stealthy
+      es: null
+    effect_i18n:
+      en: 'A Scout may deploy twice the
+
+        distance onto the battlefield than other
+
+        warriors and may start the battle Hiding.'
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 3 Scouts
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/amazons
+  source_path:
+  - henchwomen
+  - 0 – 3 Scouts
+  name_i18n:
+    en: Scouts
+    es: null
+band_rules:
+- id: special-rules
+  name: Special Rules
+  effect: 'Sacrifice: The Amazons are quick to sacrifice
+
+    any captive to their gods. The Amazons follow
+
+    the rules for Possessed in the Rulebook when
+
+    it comes to captives.
+
+    Not one of us: Due to the Amazons’
+
+    isolationism and suspicions about other races
+
+    they never side with anyone else. For this
+
+    reason, the Amazons may not have any Hired
+
+    Swords or Dramatis Personae unless they are
+
+    actually Amazons themselves.'
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Special Rules
+    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/amazons
+  name_i18n:
+    en: Special Rules
+    es: null
+  effect_i18n:
+    en: 'Sacrifice: The Amazons are quick to sacrifice
+
+      any captive to their gods. The Amazons follow
+
+      the rules for Possessed in the Rulebook when
+
+      it comes to captives.
+
+      Not one of us: Due to the Amazons’
+
+      isolationism and suspicions about other races
+
+      they never side with anyone else. For this
+
+      reason, the Amazons may not have any Hired
+
+      Swords or Dramatis Personae unless they are
+
+      actually Amazons themselves.'
+    es: null
+source_sections:
+- section: Special Rules
+  section_path:
+  - Special Rules
+  text: 'Sacrifice: The Amazons are quick to sacrifice
+
+    any captive to their gods. The Amazons follow
+
+    the rules for Possessed in the Rulebook when
+
+    it comes to captives.
+
+    Not one of us: Due to the Amazons’
+
+    isolationism and suspicions about other races
+
+    they never side with anyone else. For this
+
+    reason, the Amazons may not have any Hired
+
+    Swords or Dramatis Personae unless they are
+
+    actually Amazons themselves.'
+- section: Amazon equipment lists
+  section_path:
+  - Amazon equipment lists
+  text: 'The following lists are used by Amazon warbands to pick their weapons:'
+- section: Special Equipment
+  section_path:
+  - Special Equipment
+  text: 'This warband has access to the following special equipment when purchasing items from the Trading Post , outside
+    their starting list:'
+- section: 1 Priestess
+  section_path:
+  - heroines
+  - 1 Priestess
+  text: '70 gold crowns to hire
+
+    Priestesses are part of the religious sisterhood
+
+    that rules Amazon society. They are powerful
+
+    sorceresses and their word is law. The
+
+    younger, more junior members of the
+
+    Priestesshood often gather war parties to
+
+    search for Slann artifacts and also conduct the
+
+    ritual sacrifices of captured enemies.
+
+    Weapons/Armour: The Priestess may be
+
+    equipped with weapons chosen from the
+
+    Heroine’s equipment lists.'
+- section: SPECIAL RULES
+  section_path:
+  - heroines
+  - 1 Priestess
+  - SPECIAL RULES
+  text: 'Leader: Any models in the warband within 6"
+
+    of the Priestess may use her Leadership
+
+    instead of their own.
+
+    Wizard: The Priestess is a Wizard and may
+
+    use Amazon Rituals . She starts with one ritual
+
+    chosen at random from the list.'
+- section: 0 – 2 Champions
+  section_path:
+  - heroines
+  - 0 – 2 Champions
+  text: '35 gold crowns to hire
+
+    Champions are veterans that have participated
+
+    in dozens of war parties over the years. They
+
+    are the right-hand girls to the Priestesses and
+
+    also act as their bodyguards. They are skilled
+
+    in fighting with a variety of different weapons
+
+    including the legendary claws of the Old
+
+    Ones.
+
+    Weapons/Armour: Champions may be
+
+    equipped with weapons chosen from the
+
+    Heroines and special equipment lists.'
+- section: 0 – 2 Totem Warriors
+  section_path:
+  - heroines
+  - 0 – 2 Totem Warriors
+  text: '30 gold crowns to hire
+
+    There is a peculiar sect within Amazon society
+
+    that attracts the most bloodthirsty, unhinged
+
+    members of the population. These sisters are
+
+    feared and revered in equal amounts. They
+
+    are the Totem Warriors – Amazons that follow
+
+    animal totems like the Eagle, Pirahna, Jaguar,
+
+    etc, and adorn themselves in the skins and
+
+    feathers of their patron gods. Totem warriors
+
+    are addicted to dangerous narcotic substances
+
+    that are made from the various rare herbs that
+
+    grow wild in the jungles of Lustria. Before
+
+    they go into battle they imbibe quantities of
+
+    psychedelic herbs and enter a kill-frenzy –
+
+    making them very ferocious opponents
+
+    indeed.
+
+    Weapons/Armour: Totem Warriors may be
+
+    equipped with weapons chosen from the
+
+    Heroines and special equipment lists.'
+- section: SPECIAL RULES
+  section_path:
+  - heroines
+  - 0 – 2 Totem Warriors
+  - SPECIAL RULES
+  text: 'Frenzy: Totem Warriors are
+
+    utterly fanatical, blood crazed
+
+    individuals. They are also
+
+    totally out of their heads on
+
+    dangerous, psychedelic, herbal
+
+    concoctions prepared by their
+
+    sisters. Totem Warriors are mad
+
+    berserkers who care little
+
+    about danger or the prospect
+
+    of death. They are subject to
+
+    the rules for frenzy .'
+- section: henchwomen
+  section_path:
+  - henchwomen
+  text: (Bought in groups of 1-5)
+- section: 1+ Amazon warriors
+  section_path:
+  - henchwomen
+  - 1+ Amazon warriors
+  text: '25 gold crowns to hire
+
+    Every Amazon woman is trained in the ways of
+
+    warfare from birth and is hardened by a life in
+
+    the unforgiving nature of their jungle
+
+    environment. On the shattered streets of
+
+    Mordheim, things are hardly that different as
+
+    they have just traded the dense jungle
+
+    undergrowth for broken buildings and rubble.
+
+    Weapons/Armour: Amazon Warriors may be
+
+    equipped with weapons
+
+    chosen from the
+
+    henchwomens
+
+    equipment list.'
+- section: 0 – 3 Scouts
+  section_path:
+  - henchwomen
+  - 0 – 3 Scouts
+  text: '30 gold crowns to hire
+
+    Scouts are known for their exceptional speed
+
+    and agility. They are just at home stealthily
+
+    picking their way through the rubble strewn
+
+    streets of the City of the Damned and hiding
+
+    in the ruins setting up ambushes.
+
+    Weapons/Armour: Scouts can be armed with
+
+    weapons and armour chosen from the Scout
+
+    Equipment list.'
+- section: Special Rules
+  section_path:
+  - henchwomen
+  - 0 – 3 Scouts
+  - Special Rules
+  text: 'Stealthy: A Scout may deploy twice the
+
+    distance onto the battlefield than other
+
+    warriors and may start the battle Hiding.'
+canonical_family: amazons-mordheim

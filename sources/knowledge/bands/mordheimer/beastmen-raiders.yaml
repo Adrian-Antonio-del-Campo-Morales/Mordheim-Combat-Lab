@@ -1,0 +1,1062 @@
+schema_version: 1
+id: beastmen-raiders
+name: Beastmen Raiders
+name_i18n:
+  en: Beastmen Raiders
+  es: null
+original_locale: en
+categories:
+- 1a
+collections:
+- mordheimer
+grade: 1a
+setting: The Empire
+publication: Empire in Flames
+status: source-normalized
+sources:
+- manual: mordheimer.net
+  printed_page: 0
+  section: Beastmen Raiders
+  url: https://mordheimer.net/docs/warbands/grade-1a-warbands/beastmen-raiders
+roster:
+  minimum_models: 3
+  maximum_models: 15
+  starting_gold: 500
+  members:
+  - profile_id: beastmen-chieftain
+    minimum: 1
+    maximum: 1
+  - profile_id: beastmen-shaman
+    minimum: 0
+    maximum: 1
+  - profile_id: bestigors
+    minimum: 0
+    maximum: 2
+  - profile_id: centigors
+    minimum: 0
+    maximum: 1
+  - profile_id: ungor
+    minimum: 0
+    maximum: null
+  - profile_id: gor
+    minimum: 0
+    maximum: 5
+  - profile_id: warhounds-of-chaos
+    minimum: 0
+    maximum: 5
+  - profile_id: minotaur
+    minimum: 0
+    maximum: 1
+equipment_lists:
+- id: beastmen-equipment-list
+  name: Beastmen Equipment List
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: 1st free/2 gc
+  - item_id: mace
+    cost: 3
+  - item_id: hammer
+    cost: 3
+  - item_id: battle_axe
+    cost: 5
+  - item_id: sword
+    cost: 10
+  - item_id: halberd
+    cost: 10
+  - item_id: great_weapon
+    cost: 15
+  - item_id: light_armour
+    cost: 20
+  - item_id: heavy_armour
+    cost: 50
+  - item_id: shield
+    cost: 5
+  - item_id: helmet
+    cost: 10
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Beastmen Equipment List
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/beastmen-raiders
+  name_i18n:
+    en: Beastmen Equipment List
+    es: null
+- id: ungor-equipment-list
+  name: Ungor Equipment List
+  items:
+  - item_id: dagger
+    cost: 2
+    notes: 1st free/2 gc
+  - item_id: mace
+    cost: 3
+  - item_id: hammer
+    cost: 3
+  - item_id: battle_axe
+    cost: 5
+  - item_id: spear
+    cost: 10
+  - item_id: shield
+    cost: 5
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Ungor Equipment List
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/beastmen-raiders
+  name_i18n:
+    en: Ungor Equipment List
+    es: null
+profiles:
+- id: beastmen-chieftain
+  name: Beastmen Chieftain
+  type: hero
+  cost: 65
+  experience: 0
+  characteristics:
+    M: 5
+    WS: 4
+    BS: 3
+    S: 4
+    T: 4
+    W: 1
+    I: 4
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - beastmen-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - strength
+  - speed
+  - special
+  rules:
+  - id: leader
+    name: Leader
+    effect: 'Any Warrior within 6" of the Beastman
+
+      Chieftain may use his Leadership characteristic when
+
+      taking Leadership tests.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: heroes / 1 Beastmen Chieftain / Special Rules / Leader
+      url: https://mordheimer.net/docs/warbands/grade-1a-warbands/beastmen-raiders
+    name_i18n:
+      en: Leader
+      es: null
+    effect_i18n:
+      en: 'Any Warrior within 6" of the Beastman
+
+        Chieftain may use his Leadership characteristic when
+
+        taking Leadership tests.'
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 1 Beastmen Chieftain
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/beastmen-raiders
+  source_path:
+  - heroes
+  - 1 Beastmen Chieftain
+  name_i18n:
+    en: Beastmen Chieftain
+    es: null
+- id: beastmen-shaman
+  name: Beastmen Shaman
+  type: hero
+  cost: 45
+  experience: 11
+  characteristics:
+    M: 5
+    WS: 4
+    BS: 3
+    S: 3
+    T: 4
+    W: 1
+    I: 3
+    A: 1
+    Ld: 6
+  equipment_lists:
+  - beastmen-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - speed
+  - special
+  rules:
+  - id: wizard
+    name: Wizard
+    effect: 'A Beastmen Shaman is a Wizard
+
+      and may use Chaos Rituals .'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: heroes / 0 – 1 Beastmen Shaman / Special Rules / Wizard
+      url: https://mordheimer.net/docs/warbands/grade-1a-warbands/beastmen-raiders
+    name_i18n:
+      en: Wizard
+      es: null
+    effect_i18n:
+      en: 'A Beastmen Shaman is a Wizard
+
+        and may use Chaos Rituals .'
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 1 Beastmen Shaman
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/beastmen-raiders
+  source_path:
+  - heroes
+  - 0 – 1 Beastmen Shaman
+  name_i18n:
+    en: Beastmen Shaman
+    es: null
+- id: bestigors
+  name: Bestigors
+  type: hero
+  cost: 45
+  experience: 8
+  characteristics:
+    M: 5
+    WS: 4
+    BS: 3
+    S: 4
+    T: 4
+    W: 1
+    I: 3
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - beastmen-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - strength
+  - special
+  rules: []
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 2 Bestigors
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/beastmen-raiders
+  source_path:
+  - heroes
+  - 0 – 2 Bestigors
+  name_i18n:
+    en: Bestigors
+    es: null
+- id: centigors
+  name: Centigors
+  type: hero
+  cost: 80
+  experience: 8
+  characteristics:
+    M: 8
+    WS: 4
+    BS: 3
+    S: 4
+    T: 4
+    W: 1
+    I: 2
+    A: 1
+    Ld: 7
+  equipment_lists:
+  - beastmen-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access:
+  - combat
+  - strength
+  - special
+  rules:
+  - id: drunken
+    name: Drunken
+    effect: 'Centigor are inclined to drink
+
+      vast quantities of noxious beer and looted
+
+      wine and spirits before battle, working
+
+      themselves up into a drunken frenzy. Roll
+
+      1D6 at the start of each turn. On a roll of 1,
+
+      they must test for stupidity that turn. On a
+
+      roll of 2-5 nothing happens and on the roll
+
+      of a 6 they become subject to frenzy for that
+
+      turn. Whilst subject to either stupidity or
+
+      frenzy, they are immune to all other forms of
+
+      psychology.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: heroes / 0 – 1 Centigors / Special Rules / Drunken
+      url: https://mordheimer.net/docs/warbands/grade-1a-warbands/beastmen-raiders
+    name_i18n:
+      en: Drunken
+      es: null
+    effect_i18n:
+      en: 'Centigor are inclined to drink
+
+        vast quantities of noxious beer and looted
+
+        wine and spirits before battle, working
+
+        themselves up into a drunken frenzy. Roll
+
+        1D6 at the start of each turn. On a roll of 1,
+
+        they must test for stupidity that turn. On a
+
+        roll of 2-5 nothing happens and on the roll
+
+        of a 6 they become subject to frenzy for that
+
+        turn. Whilst subject to either stupidity or
+
+        frenzy, they are immune to all other forms of
+
+        psychology.'
+      es: null
+  - id: woodland-dwelling
+    name: Woodland Dwelling
+    effect: 'Centigors are creatures
+
+      of the deep, dark forests. They suffer no
+
+      movement penalties for moving through
+
+      wooded areas.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: heroes / 0 – 1 Centigors / Special Rules / Woodland Dwelling
+      url: https://mordheimer.net/docs/warbands/grade-1a-warbands/beastmen-raiders
+    name_i18n:
+      en: Woodland Dwelling
+      es: null
+    effect_i18n:
+      en: 'Centigors are creatures
+
+        of the deep, dark forests. They suffer no
+
+        movement penalties for moving through
+
+        wooded areas.'
+      es: null
+  - id: trample
+    name: Trample
+    effect: 'As well as their weapons,
+
+      Centigors use their hooves and sheer size to
+
+      crush their enemies. This counts as an
+
+      additional attack, which does not benefit
+
+      from weapon bonuses or penalties...'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: heroes / 0 – 1 Centigors / Special Rules / Trample
+      url: https://mordheimer.net/docs/warbands/grade-1a-warbands/beastmen-raiders
+    name_i18n:
+      en: Trample
+      es: null
+    effect_i18n:
+      en: 'As well as their weapons,
+
+        Centigors use their hooves and sheer size to
+
+        crush their enemies. This counts as an
+
+        additional attack, which does not benefit
+
+        from weapon bonuses or penalties...'
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 1 Centigors
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/beastmen-raiders
+  source_path:
+  - heroes
+  - 0 – 1 Centigors
+  name_i18n:
+    en: Centigors
+    es: null
+- id: ungor
+  name: Ungor
+  type: henchman
+  cost: 25
+  experience: 0
+  characteristics:
+    M: 5
+    WS: 3
+    BS: 3
+    S: 3
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 6
+  equipment_lists:
+  - ungor-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules:
+  - id: lowest-of-the-low
+    name: Lowest of the Low
+    effect: 'Ungor are on the lowest
+
+      rung of Beastmen society and regardless of how
+
+      much Experience they accrue they will never
+
+      acquire a position of authority. If an Ungor rolls
+
+      ‘That lad’s got talent’ it must be re-rolled.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / Ungor / Special Rules / Lowest of the Low
+      url: https://mordheimer.net/docs/warbands/grade-1a-warbands/beastmen-raiders
+    name_i18n:
+      en: Lowest of the Low
+      es: null
+    effect_i18n:
+      en: 'Ungor are on the lowest
+
+        rung of Beastmen society and regardless of how
+
+        much Experience they accrue they will never
+
+        acquire a position of authority. If an Ungor rolls
+
+        ‘That lad’s got talent’ it must be re-rolled.'
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Ungor
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/beastmen-raiders
+  source_path:
+  - henchmen
+  - Ungor
+  name_i18n:
+    en: Ungor
+    es: null
+- id: gor
+  name: Gor
+  type: henchman
+  cost: 35
+  experience: 0
+  characteristics:
+    M: 5
+    WS: 4
+    BS: 3
+    S: 3
+    T: 4
+    W: 1
+    I: 3
+    A: 1
+    Ld: 6
+  equipment_lists:
+  - beastmen-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules: []
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 5 Gor
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/beastmen-raiders
+  source_path:
+  - henchmen
+  - 0 – 5 Gor
+  name_i18n:
+    en: Gor
+    es: null
+- id: warhounds-of-chaos
+  name: Warhounds of Chaos
+  type: animal
+  cost: 15
+  experience: 0
+  characteristics:
+    M: 7
+    WS: 4
+    BS: 0
+    S: 4
+    T: 3
+    W: 1
+    I: 3
+    A: 1
+    Ld: 5
+  equipment_lists: []
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules:
+  - id: animals
+    name: Animals
+    effect: 'Chaos Hounds are animals and never
+
+      gain Experience.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 5 Warhounds of Chaos / Special Rules / Animals
+      url: https://mordheimer.net/docs/warbands/grade-1a-warbands/beastmen-raiders
+    name_i18n:
+      en: Animals
+      es: null
+    effect_i18n:
+      en: 'Chaos Hounds are animals and never
+
+        gain Experience.'
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 5 Warhounds of Chaos
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/beastmen-raiders
+  source_path:
+  - henchmen
+  - 0 – 5 Warhounds of Chaos
+  name_i18n:
+    en: Warhounds of Chaos
+    es: null
+- id: minotaur
+  name: Minotaur
+  type: henchman
+  cost: 200
+  experience: 0
+  characteristics:
+    M: 6
+    WS: 4
+    BS: 3
+    S: 4
+    T: 4
+    W: 3
+    I: 4
+    A: 3
+    Ld: 8
+  equipment_lists:
+  - beastmen-equipment-list
+  fixed_equipment: []
+  equipment_restrictions: []
+  skill_access: []
+  rules:
+  - id: fear
+    name: Fear
+    effect: 'Minotaurs are huge, bellowing monsters
+
+      and cause fear .'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 1 Minotaur / Special Rules / Fear
+      url: https://mordheimer.net/docs/warbands/grade-1a-warbands/beastmen-raiders
+    name_i18n:
+      en: Fear
+      es: null
+    effect_i18n:
+      en: 'Minotaurs are huge, bellowing monsters
+
+        and cause fear .'
+      es: null
+  - id: bloodgreed
+    name: Bloodgreed
+    effect: 'If a Minotaur puts all of its
+
+      enemies out of action in hand-to-hand combat,
+
+      it becomes frenzied on a D6 roll of 4+.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 1 Minotaur / Special Rules / Bloodgreed
+      url: https://mordheimer.net/docs/warbands/grade-1a-warbands/beastmen-raiders
+    name_i18n:
+      en: Bloodgreed
+      es: null
+    effect_i18n:
+      en: 'If a Minotaur puts all of its
+
+        enemies out of action in hand-to-hand combat,
+
+        it becomes frenzied on a D6 roll of 4+.'
+      es: null
+  - id: animal
+    name: Animal
+    effect: 'A Minotaur is far more bestial than its
+
+      Beastmen brethren and, although it may gain
+
+      Experience, it may never become a Hero.'
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 1 Minotaur / Special Rules / Animal
+      url: https://mordheimer.net/docs/warbands/grade-1a-warbands/beastmen-raiders
+    name_i18n:
+      en: Animal
+      es: null
+    effect_i18n:
+      en: 'A Minotaur is far more bestial than its
+
+        Beastmen brethren and, although it may gain
+
+        Experience, it may never become a Hero.'
+      es: null
+  - id: large-target
+    name: Large Target
+    effect: Minotaurs are Large Targets as defined in the shooting rules . ✏️
+    source:
+      manual: mordheimer.net
+      printed_page: 0
+      section: henchmen / 0 – 1 Minotaur / Special Rules / Large Target
+      url: https://mordheimer.net/docs/warbands/grade-1a-warbands/beastmen-raiders
+    name_i18n:
+      en: Large Target
+      es: null
+    effect_i18n:
+      en: Minotaurs are Large Targets as defined in the shooting rules . ✏️
+      es: null
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: 0 – 1 Minotaur
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/beastmen-raiders
+  source_path:
+  - henchmen
+  - 0 – 1 Minotaur
+  name_i18n:
+    en: Minotaur
+    es: null
+band_rules:
+- id: special-rules
+  name: Special Rules
+  effect: 'Animals: Beastmen are fearsome creatures of Chaos that do not interact with other races other than in war. A Beastmen
+    warband may never hire any Hired Swords unless specifically stated with the Hired Sword.'
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Special Rules
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/beastmen-raiders
+  name_i18n:
+    en: Special Rules
+    es: null
+  effect_i18n:
+    en: 'Animals: Beastmen are fearsome creatures of Chaos that do not interact with other races other than in war. A Beastmen
+      warband may never hire any Hired Swords unless specifically stated with the Hired Sword.'
+    es: null
+- id: beastmen-special-skills-shaggy-hide
+  name: Shaggy Hide
+  effect: 'The Beastman’s massively shaggy hide acts as armour, deflecting sword strokes and
+
+    protecting him from harm. The model gains a 6+ Armour Save that can be combined
+
+    with other armour as normal. ✏️'
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Beastmen Special Skills / Shaggy Hide
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/beastmen-raiders
+  name_i18n:
+    en: Shaggy Hide
+    es: null
+  effect_i18n:
+    en: 'The Beastman’s massively shaggy hide acts as armour, deflecting sword strokes and
+
+      protecting him from harm. The model gains a 6+ Armour Save that can be combined
+
+      with other armour as normal. ✏️'
+    es: null
+- id: beastmen-special-skills-mutant
+  name: Mutant
+  effect: 'The Beastman may buy one mutation.
+
+    See Mutants section on special rules.'
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Beastmen Special Skills / Mutant
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/beastmen-raiders
+  name_i18n:
+    en: Mutant
+    es: null
+  effect_i18n:
+    en: 'The Beastman may buy one mutation.
+
+      See Mutants section on special rules.'
+    es: null
+- id: beastmen-special-skills-fearless
+  name: Fearless
+  effect: Immune to fear and All Alone tests.
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Beastmen Special Skills / Fearless
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/beastmen-raiders
+  name_i18n:
+    en: Fearless
+    es: null
+  effect_i18n:
+    en: Immune to fear and All Alone tests.
+    es: null
+- id: beastmen-special-skills-horned-one
+  name: Horned One
+  effect: The Beastman has mighty horns, and can make an additional Attack with its basic Strength on a turn it charges.
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Beastmen Special Skills / Horned One
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/beastmen-raiders
+  name_i18n:
+    en: Horned One
+    es: null
+  effect_i18n:
+    en: The Beastman has mighty horns, and can make an additional Attack with its basic Strength on a turn it charges.
+    es: null
+- id: beastmen-special-skills-bellowing-roar
+  name: Bellowing Roar
+  effect: Only the Beastmen Chief may have this skill. He may re-roll any failed Rout tests.
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Beastmen Special Skills / Bellowing Roar
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/beastmen-raiders
+  name_i18n:
+    en: Bellowing Roar
+    es: null
+  effect_i18n:
+    en: Only the Beastmen Chief may have this skill. He may re-roll any failed Rout tests.
+    es: null
+- id: beastmen-special-skills-manhater
+  name: Manhater
+  effect: Will be affected by the rules of hatred when fighting any Human warbands.
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: Beastmen Special Skills / Manhater
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/beastmen-raiders
+  name_i18n:
+    en: Manhater
+    es: null
+  effect_i18n:
+    en: Will be affected by the rules of hatred when fighting any Human warbands.
+    es: null
+source_sections:
+- section: Special Rules
+  section_path:
+  - Special Rules
+  text: 'Animals: Beastmen are fearsome creatures of Chaos that do not interact with other races other than in war. A Beastmen
+    warband may never hire any Hired Swords unless specifically stated with the Hired Sword.'
+- section: Choice of warriors
+  section_path:
+  - Choice of warriors
+  text: 'A Beastmen warband must include a minimum of 3 models. You have 500 Gold Crowns which you can use to recruit your
+    initial warband. The maximum number of warriors in the warband is 15, though some buildings in the warband’s encampment
+    may increase this.
+
+    Beastmen Chief: Each Beastmen warband must have one Chief: no more, no less! Shaman: Your warband may include a single
+    Beastmen Shaman. Bestigors: Your warband may include up to two Bestigors. Centigors: Your warband may include a single
+    Centigor. Gor: Your warband may include up to five Gor. Ungor: Your warband may include any number of Ungor. Minotaur:
+    Your warband may include a single Minotaur. Warhounds of Chaos: Your warband may include up to five Warhounds of Chaos.'
+- section: Starting experience
+  section_path:
+  - Starting experience
+  text: The Beastman Chief starts with 20 Experience. A Beastman Shaman starts with 11 Experience. Bestigors start with 8
+    Experience. Centigors start with 8 Experience. All Henchmen start with 0 experience.
+- section: Shaggy Hide
+  section_path:
+  - Beastmen Special Skills
+  - Shaggy Hide
+  text: 'The Beastman’s massively shaggy hide acts as armour, deflecting sword strokes and
+
+    protecting him from harm. The model gains a 6+ Armour Save that can be combined
+
+    with other armour as normal. ✏️'
+- section: Mutant
+  section_path:
+  - Beastmen Special Skills
+  - Mutant
+  text: 'The Beastman may buy one mutation.
+
+    See Mutants section on special rules.'
+- section: Fearless
+  section_path:
+  - Beastmen Special Skills
+  - Fearless
+  text: Immune to fear and All Alone tests.
+- section: Horned One
+  section_path:
+  - Beastmen Special Skills
+  - Horned One
+  text: The Beastman has mighty horns, and can make an additional Attack with its basic Strength on a turn it charges.
+- section: Bellowing Roar
+  section_path:
+  - Beastmen Special Skills
+  - Bellowing Roar
+  text: Only the Beastmen Chief may have this skill. He may re-roll any failed Rout tests.
+- section: Manhater
+  section_path:
+  - Beastmen Special Skills
+  - Manhater
+  text: Will be affected by the rules of hatred when fighting any Human warbands.
+- section: Beastmen equipment lists
+  section_path:
+  - Beastmen equipment lists
+  text: 'The following lists are used by Beastman warbands to pick their weapons:'
+- section: Missile Weapons
+  section_path:
+  - Beastmen equipment lists
+  - Beastmen Equipment List
+  - Missile Weapons
+  text: None.
+- section: Missile Weapons
+  section_path:
+  - Beastmen equipment lists
+  - Ungor Equipment List
+  - Missile Weapons
+  text: None.
+- section: 1 Beastmen Chieftain
+  section_path:
+  - heroes
+  - 1 Beastmen Chieftain
+  text: '65 gold crowns to hire
+
+    Beastmen chieftains have gained their position through sheer brutality. He leads the Beastmen to Mordheim to gather the
+    Chaos Stones to his Herdstone.
+
+    Weapons/Armour: The Beastmen Chieftain
+
+    may be equipped with weapons and armour
+
+    chosen from the Beastmen Equipment list.'
+- section: SPECIAL RULES
+  section_path:
+  - heroes
+  - 1 Beastmen Chieftain
+  - SPECIAL RULES
+  text: 'Leader: Any Warrior within 6" of the Beastman
+
+    Chieftain may use his Leadership characteristic when
+
+    taking Leadership tests.'
+- section: 0 – 1 Beastmen Shaman
+  section_path:
+  - heroes
+  - 0 – 1 Beastmen Shaman
+  text: '45 gold crowns to hire
+
+    Beastmen Shamans are prophets of the Dark Gods, and the most respected of all the Beastmen.
+
+    Weapons/Armour: Beastmen Shamans
+
+    may be equipped with weapons chosen
+
+    from the Beastmen Equipment list
+
+    except that they never wear armour.'
+- section: Special rules
+  section_path:
+  - heroes
+  - 0 – 1 Beastmen Shaman
+  - Special rules
+  text: 'Wizard: A Beastmen Shaman is a Wizard
+
+    and may use Chaos Rituals .'
+- section: 0 – 2 Bestigors
+  section_path:
+  - heroes
+  - 0 – 2 Bestigors
+  text: '45 gold crowns to hire
+
+    Bestigors are the largest type of Beastmen, the great horned warriors of the Beastmen warbands. They are massive creatures
+    with an inhuman resistance of pain.
+
+    Weapons/Armour: Bestigors may be
+
+    equipped with weapons chosen from
+
+    the Beastmen Equipment list.'
+- section: 0 – 1 Centigors
+  section_path:
+  - heroes
+  - 0 – 1 Centigors
+  text: '80 gold crowns to hire
+
+    A Centigor is a disturbing cross between a horse or oxen and Beastman. Being quadruped grants them great strength and
+    speed whilst their humanoid upper torsos allow them to wield weapons. These beastcentaurs are powerful creatures but they
+    are not particularly agile or dexterous.
+
+    Weapons/Armour: Centigors may be armed
+
+    with weapons and armour chosen from Beastmen
+
+    Equipment list.'
+- section: SPECIAL RULES
+  section_path:
+  - heroes
+  - 0 – 1 Centigors
+  - SPECIAL RULES
+  text: 'Drunken: Centigor are inclined to drink
+
+    vast quantities of noxious beer and looted
+
+    wine and spirits before battle, working
+
+    themselves up into a drunken frenzy. Roll
+
+    1D6 at the start of each turn. On a roll of 1,
+
+    they must test for stupidity that turn. On a
+
+    roll of 2-5 nothing happens and on the roll
+
+    of a 6 they become subject to frenzy for that
+
+    turn. Whilst subject to either stupidity or
+
+    frenzy, they are immune to all other forms of
+
+    psychology.
+
+    Woodland Dwelling: Centigors are creatures
+
+    of the deep, dark forests. They suffer no
+
+    movement penalties for moving through
+
+    wooded areas.
+
+    Trample: As well as their weapons,
+
+    Centigors use their hooves and sheer size to
+
+    crush their enemies. This counts as an
+
+    additional attack, which does not benefit
+
+    from weapon bonuses or penalties...'
+- section: henchmen
+  section_path:
+  - henchmen
+  text: (Bought in groups of 1-5)
+- section: Ungor
+  section_path:
+  - henchmen
+  - Ungor
+  text: '25 gold crowns to hire
+
+    Ungor are the most numerous of the Beastmen. They are small, spiteful creatures, but dangerous in large masses.
+
+    Weapons/Armour: Ungor may be armed with
+
+    weapons and armour chosen from Ungor
+
+    Equipment list.'
+- section: Special Rules
+  section_path:
+  - henchmen
+  - Ungor
+  - Special Rules
+  text: 'Lowest of the Low: Ungor are on the lowest
+
+    rung of Beastmen society and regardless of how
+
+    much Experience they accrue they will never
+
+    acquire a position of authority. If an Ungor rolls
+
+    ‘That lad’s got talent’ it must be re-rolled.'
+- section: 0 – 5 Gor
+  section_path:
+  - henchmen
+  - 0 – 5 Gor
+  text: '35 gold crowns to hire
+
+    Gor are nearly as numerous as Ungor but are larger and more brutish.
+
+    Weapons/Armour: Gor may be armed with
+
+    weapons and armour chosen from Beastmen
+
+    Equipment list.'
+- section: 0 – 5 Warhounds of Chaos
+  section_path:
+  - henchmen
+  - 0 – 5 Warhounds of Chaos
+  text: '15 gold crowns to hire
+
+    Chaos Hounds are titanic, mastiff-like creatures which are insanely dangerous in combat.
+
+    Weapons/Armour: None! Apart from their
+
+    fangs and nasty tempers the Chaos Hounds
+
+    don’t have weapons and can fight without any
+
+    penalties.'
+- section: SPECIAL RULES
+  section_path:
+  - henchmen
+  - 0 – 5 Warhounds of Chaos
+  - SPECIAL RULES
+  text: 'Animals: Chaos Hounds are animals and never
+
+    gain Experience.'
+- section: 0 – 1 Minotaur
+  section_path:
+  - henchmen
+  - 0 – 1 Minotaur
+  text: '200 gold crowns to hire
+
+    Minotaurs are gigantic, bull-headed Beastmen. Fearsome and powerful, any Beastmen Chief will try to recruit a Minotaur
+    into his warband if possible.
+
+    Weapons/Armour: Minotaurs may be armed
+
+    with weapons and armour chosen from the
+
+    Beastmen Equipment list.'
+- section: SPECIAL RULES
+  section_path:
+  - henchmen
+  - 0 – 1 Minotaur
+  - SPECIAL RULES
+  text: 'Fear: Minotaurs are huge, bellowing monsters
+
+    and cause fear .
+
+    Bloodgreed: If a Minotaur puts all of its
+
+    enemies out of action in hand-to-hand combat,
+
+    it becomes frenzied on a D6 roll of 4+.
+
+    Animal: A Minotaur is far more bestial than its
+
+    Beastmen brethren and, although it may gain
+
+    Experience, it may never become a Hero.
+
+    Large Target: Minotaurs are Large Targets as defined in the shooting rules . ✏️'
+canonical_family: beastmen-raiders
