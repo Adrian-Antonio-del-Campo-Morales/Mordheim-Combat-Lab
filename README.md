@@ -24,6 +24,14 @@ tipado de esta KB en una entrega posterior.
 - Todas las referencias de equipo resuelven a una mecánica compartida o a una
   clasificación explícita fuera del alcance del duelo.
 
+## Estructura
+
+- `core/`: modelos, compilación de combatientes y motor vectorizado.
+- `catalog/`: carga y validación de la KB versionada en `sources/knowledge/`.
+- `legacy_ui/`: interfaz Tkinter anterior, archivada como referencia para su
+  rework; no forma parte del runtime activo.
+- `cli/`: puntos de entrada para validación y herramientas de desarrollo.
+
 ## Uso
 
 ```python

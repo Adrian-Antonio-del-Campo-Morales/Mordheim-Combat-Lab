@@ -2,9 +2,9 @@
 from pathlib import Path
 import sys
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/"src"))
-from mordheim_combat_lab.catalog import knowledge_root,load_bands,load_collections,load_items,load_mechanics,load_runtime_scope,load_simulation_mappings,read_yaml
-from mordheim_combat_lab.compiler import TRAIT_TYPES,compile_fighter,validate_execution_contract
-from mordheim_combat_lab.models import FighterBuild
+from mordheim_combat_lab.catalog.loader import knowledge_root,load_bands,load_collections,load_items,load_mechanics,load_runtime_scope,load_simulation_mappings,read_yaml
+from mordheim_combat_lab.core.compiler import TRAIT_TYPES,compile_fighter,validate_execution_contract
+from mordheim_combat_lab.core.models import FighterBuild
 def validate_mordheim_profiles(bands):
     errors=[];scope=load_runtime_scope("mordheim")
     exclusions={(row.get("band_id"),row.get("profile_id")) for row in scope.get("profile_exclusions") or ()}

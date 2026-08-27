@@ -11,10 +11,11 @@ requires-python = ">=3.10"
 dependencies = [
     "numpy>=1.24,<3",
     "PyYAML>=6,<7",
+    "openpyxl>=3.1,<4",
 ]
 
 [project.scripts]
-mordheim-combat-lab = "mordheim_combat_lab.__main__:main"
+mordheim-combat-lab = "mordheim_combat_lab.ui.app:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}

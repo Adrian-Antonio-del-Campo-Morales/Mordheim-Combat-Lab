@@ -14,7 +14,7 @@ def knowledge_root() -> Path:
     override = os.environ.get("MORDHEIM_COMBAT_LAB_KNOWLEDGE_PATH")
     if override: return Path(override)
     if getattr(sys, "frozen", False): return Path(sys._MEIPASS) / "sources" / "knowledge"
-    return Path(__file__).resolve().parents[2] / "sources" / "knowledge"
+    return Path(__file__).resolve().parents[3] / "sources" / "knowledge"
 
 def read_yaml(path: Path) -> dict:
     value = yaml.safe_load(path.read_text(encoding="utf-8"))

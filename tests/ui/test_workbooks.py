@@ -1,0 +1,33 @@
+from mordheim_combat_lab import Characteristics, DuelResult, FighterBuild
+from mordheim_combat_lab.ui.services import DuelExecutionSettings
+import pytest
+
+from mordheim_combat_lab.ui.workbooks import CombatLabWorkbookError, load_ui_workbook, save_workbook
+
+
+def test_workbook_round_trip_preserves_stable_build_ids_and_result(tmp_path):
+    candidate = FighterBuild(
+        "mordheim", collection="mordheim", band_id="mercenaries", profile_id="mercenary-captain",
+        main_weapon_id="weapon.sword", off_hand_id="defence.shield", defence_ids=("defence.helmet",),
+        skill_ids=("skill.mighty-blow",),
+    )
+    enemy = FighterBuild("mordheim", Characteristics(3, 3, 3, 1, 3, 1), main_weapon_id="weapon.mace")
+    settings = DuelExecutionSettings(5_000, 123, 500, 30)
+    result = DuelResult(2_500, 2_400, 100, 5_000)
+    path = tmp_path / "duel.xlsx"
+
+    save_workbook(path, candidate, enemy, settings, result)
+    restored_candidate, restored_enemy, restored_settings, restored_result = load_ui_workbook(path)
+
+    assert restored_candidate == candidate
+    assert restored_enemy == enemy
+    assert restored_settings == settings
+    assert restored_result == result
+
+
+def test_workbook_rejects_unknown_or_corrupt_files(tmp_path):
+    path = tmp_path / "not-a-workbook.xlsx"
+    path.write_text("not an Excel file", encoding="utf-8")
+
+    with pytest.raises(CombatLabWorkbookError):
+        load_ui_workbook(path)

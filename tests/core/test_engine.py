@@ -3,7 +3,7 @@ from dataclasses import replace
 import numpy as np
 import pytest
 from mordheim_combat_lab import Characteristics, DuelRequest, FighterBuild, SimulationCancelled, compile_fighter, simulate_duel
-from mordheim_combat_lab.models import EffectSet
+from mordheim_combat_lab.core.models import EffectSet
 
 class FixedRng:
     def __init__(self, *values): self.values=list(values)
@@ -36,7 +36,7 @@ def test_higher_strength_has_expected_advantage():
     assert strong.first_win_rate>strong.second_win_rate
 
 def test_shield_does_not_grant_an_attack_but_second_weapon_does():
-    from mordheim_combat_lab.engine import attack_count
+    from mordheim_combat_lab.core.engine import attack_count
     import numpy as np
     stats=Characteristics(3,3,3,1,3,1)
     shield=compile_fighter(FighterBuild("mordheim",stats,off_hand_id="defence.shield"))
@@ -46,7 +46,7 @@ def test_shield_does_not_grant_an_attack_but_second_weapon_does():
     assert attack_count(dagger,charging)[0]==2
 
 def test_conditional_hit_rerolls_and_berserker_only_apply_while_charging():
-    from mordheim_combat_lab.engine import _new_state, _prepare_weapon_attack
+    from mordheim_combat_lab.core.engine import _new_state, _prepare_weapon_attack
     stats=Characteristics(3,3,3,1,3,1)
     attacker=compile_fighter(FighterBuild(
         "mordheim",stats,skill_ids=("skill.berserker","skill.infallible")))
@@ -60,7 +60,7 @@ def test_conditional_hit_rerolls_and_berserker_only_apply_while_charging():
     assert prepared.hit_rows.tolist()==[0]
 
 def test_sweep_replaces_all_attacks_with_one_initiative_test():
-    from mordheim_combat_lab.engine import attack_count
+    from mordheim_combat_lab.core.engine import attack_count
     attacker=compile_fighter(FighterBuild(
         "mordheim",Characteristics(3,3,3,1,3,4),main_weapon_id="weapon.double-handed-weapon",
         skill_ids=("skill.sweep",)))
@@ -90,8 +90,8 @@ def test_armour_poison_and_regeneration_change_aggregate_outcomes():
     assert vs_regeneration.first_win_rate<vs_plain.first_win_rate
 
 def test_wound_modifier_improves_the_wound_roll_target():
-    from mordheim_combat_lab.engine import _new_state, _resolve_weapon
-    from mordheim_combat_lab.models import EffectSet
+    from mordheim_combat_lab.core.engine import _new_state, _resolve_weapon
+    from mordheim_combat_lab.core.models import EffectSet
     defender=fighter()
     plain=replace(fighter(),main_weapon=EffectSet(automatic_hit=True))
     improved=replace(fighter(),main_weapon=EffectSet(automatic_hit=True,wound_modifier=1))
@@ -107,8 +107,8 @@ def test_wound_modifier_improves_the_wound_roll_target():
 
 @pytest.mark.parametrize("protection", (EffectSet(ward_save=2), EffectSet(regeneration_save=2)))
 def test_profile_two_is_not_out_when_a_special_save_ignores_the_wound(protection):
-    from mordheim_combat_lab.engine import STANDING, _new_state, _resolve_weapon
-    from mordheim_combat_lab.models import EffectSet
+    from mordheim_combat_lab.core.engine import STANDING, _new_state, _resolve_weapon
+    from mordheim_combat_lab.core.models import EffectSet
     attacker=replace(fighter(),main_weapon=EffectSet(automatic_hit=True))
     defender=replace(fighter(),global_effects=protection,injury_profile=2)
     attacker_state=_new_state(attacker,1,np.random.default_rng(1))
@@ -119,8 +119,8 @@ def test_profile_two_is_not_out_when_a_special_save_ignores_the_wound(protection
     assert defender_state.wounds[0]==1
 
 def test_charge_conditions_are_isolated_per_vector_row():
-    from mordheim_combat_lab.engine import _new_state, _resolve_weapon
-    from mordheim_combat_lab.models import EffectSet
+    from mordheim_combat_lab.core.engine import _new_state, _resolve_weapon
+    from mordheim_combat_lab.core.models import EffectSet
     base=fighter()
     attacker=replace(base,main_weapon=EffectSet(tags=("weapon.chained-squig",)),global_effects=EffectSet(tags=("skill.infallible",)))
     defender=fighter()
@@ -129,7 +129,7 @@ def test_charge_conditions_are_isolated_per_vector_row():
     assert defender_state.entangled.tolist()==[True,False]
 
 def test_parry_is_one_attempt_per_phase_and_respects_strength_limit():
-    from mordheim_combat_lab.engine import _new_state, _parry_hits
+    from mordheim_combat_lab.core.engine import _new_state, _parry_hits
     defender=compile_fighter(FighterBuild("mordheim",Characteristics(3,3,3,1,3,1),main_weapon_id="weapon.sword"))
     state=_new_state(defender,2,np.random.default_rng(1))
     effect=defender.main_weapon
@@ -144,7 +144,7 @@ def test_parry_is_one_attempt_per_phase_and_respects_strength_limit():
     assert remaining.size==1 and blocked.size==1
 
 def test_unbeatable_warrior_parries_twice_with_two_parry_weapons():
-    from mordheim_combat_lab.engine import _new_state, _parry_hits
+    from mordheim_combat_lab.core.engine import _new_state, _parry_hits
     defender=compile_fighter(FighterBuild(
         "mordheim",Characteristics(3,3,3,1,3,1),main_weapon_id="weapon.sword",
         off_hand_id="weapon.sword",skill_ids=("skill.unbeatable-warrior",)))
@@ -154,7 +154,7 @@ def test_unbeatable_warrior_parries_twice_with_two_parry_weapons():
     assert remaining.size==0 and blocked.tolist()==[0,0]
 
 def test_parry_selects_highest_hit_across_main_and_off_hand(monkeypatch):
-    import mordheim_combat_lab.engine as engine
+    import mordheim_combat_lab.core.engine as engine
     attacker=compile_fighter(FighterBuild("mordheim",Characteristics(3,3,3,1,3,1),main_weapon_id="weapon.mace",off_hand_id="weapon.dagger"))
     defender=compile_fighter(FighterBuild("mordheim",Characteristics(3,3,3,1,3,1),main_weapon_id="weapon.sword"))
     attacker_state=engine._new_state(attacker,1,np.random.default_rng(1));defender_state=engine._new_state(defender,1,np.random.default_rng(2))
@@ -169,14 +169,14 @@ def test_parry_selects_highest_hit_across_main_and_off_hand(monkeypatch):
     assert selected==[(3,[]),(5,[0])]
 
 def test_only_one_critical_can_be_claimed_per_row_and_phase():
-    from mordheim_combat_lab.engine import _claim_criticals, _new_state
+    from mordheim_combat_lab.core.engine import _claim_criticals, _new_state
     unit=fighter();state=_new_state(unit,2,np.random.default_rng(1))
     assert _claim_criticals(np.array([True,True]),np.array([0,1]),state).tolist()==[True,True]
     assert _claim_criticals(np.array([True,True]),np.array([0,1]),state).tolist()==[False,False]
 
 def test_incapacitated_states_are_resolved_separately():
-    from mordheim_combat_lab.engine import KNOCKED_DOWN, OUT, STUNNED, _new_state, _resolve_weapon
-    from mordheim_combat_lab.models import EffectSet
+    from mordheim_combat_lab.core.engine import KNOCKED_DOWN, OUT, STUNNED, _new_state, _resolve_weapon
+    from mordheim_combat_lab.core.models import EffectSet
     attacker=replace(fighter(),main_weapon=EffectSet(automatic_hit=True))
     defender=fighter(wounds=2)
     attacker_state=_new_state(attacker,3,np.random.default_rng(1));defender_state=_new_state(defender,3,np.random.default_rng(2))
@@ -187,7 +187,7 @@ def test_incapacitated_states_are_resolved_separately():
     assert defender_state.condition.tolist()==[KNOCKED_DOWN,OUT,OUT]
 
 def test_random_profile_characteristics_are_rolled_per_simulation_row():
-    from mordheim_combat_lab.engine import _new_state
+    from mordheim_combat_lab.core.engine import _new_state
     condemned=compile_fighter(FighterBuild("mordheim",band_id="marauders-of-chaos",profile_id="condemned"))
     spawn=compile_fighter(FighterBuild("mordheim",band_id="marauders-of-chaos",profile_id="spawn-of-chaos"))
     condemned_state=_new_state(condemned,200,np.random.default_rng(41));spawn_state=_new_state(spawn,200,np.random.default_rng(42))
@@ -199,8 +199,8 @@ def test_random_profile_characteristics_are_rolled_per_simulation_row():
     assert np.unique(condemned_state.weapon_skill).size>1 and np.unique(spawn_state.attacks).size>1
 
 def test_lustria_scaly_skin_keeps_its_shared_six_plus_floor():
-    from mordheim_combat_lab.engine import STANDING, _new_state, _resolve_weapon
-    from mordheim_combat_lab.models import EffectSet
+    from mordheim_combat_lab.core.engine import STANDING, _new_state, _resolve_weapon
+    from mordheim_combat_lab.core.models import EffectSet
     attacker=replace(fighter(),main_weapon=EffectSet(fixed_strength=10,automatic_hit=True))
     defender=compile_fighter(FighterBuild(
         "mordheim",band_id="lustria-lizardmen",profile_id="saurus-totem-warrior",
@@ -212,8 +212,8 @@ def test_lustria_scaly_skin_keeps_its_shared_six_plus_floor():
     assert defender_state.condition[0]==STANDING and defender_state.wounds[0]==1
 
 def test_shared_hard_to_kill_and_fragile_injury_profiles():
-    from mordheim_combat_lab.engine import KNOCKED_DOWN, OUT, _new_state, _resolve_weapon
-    from mordheim_combat_lab.models import EffectSet
+    from mordheim_combat_lab.core.engine import KNOCKED_DOWN, OUT, _new_state, _resolve_weapon
+    from mordheim_combat_lab.core.models import EffectSet
     attacker=replace(fighter(),main_weapon=EffectSet(fixed_strength=10,automatic_hit=True))
     hard=compile_fighter(FighterBuild(
         "mordheim",band_id="chaos-streets-dwarf-treasure-hunters",profile_id="beardlings",

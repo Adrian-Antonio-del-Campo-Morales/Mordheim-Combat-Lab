@@ -1,10 +1,10 @@
 from pathlib import Path
 import yaml
-from mordheim_combat_lab.catalog import load_bands, load_collections, load_execution_contract, load_items, load_mechanics, load_simulation_mappings
-from mordheim_combat_lab.compiler import compile_fighter, validate_execution_contract
-from mordheim_combat_lab.models import FighterBuild
+from mordheim_combat_lab.catalog.loader import load_bands, load_collections, load_execution_contract, load_items, load_mechanics, load_simulation_mappings
+from mordheim_combat_lab.core.compiler import compile_fighter, validate_execution_contract
+from mordheim_combat_lab.core.models import FighterBuild
 
-ROOT=Path(__file__).resolve().parents[1]/"sources/knowledge"
+ROOT=Path(__file__).resolve().parents[2]/"sources/knowledge"
 
 def test_runtime_contains_mordheim_and_trollheim_bands():
     collections={row["id"]:row for row in load_collections(ROOT)}
@@ -191,8 +191,8 @@ def test_every_catalogue_mechanic_has_an_executable_definition():
     assert all(row["application"] == ("attack" if row["trigger"] == "attack" else "fighter") for row in execution["mechanics"])
 
 def test_execution_metadata_controls_effect_context_and_stacking():
-    from mordheim_combat_lab.compiler import ExecutionEffect, apply_execution_effects
-    from mordheim_combat_lab.models import EffectSet
+    from mordheim_combat_lab.core.compiler import ExecutionEffect, apply_execution_effects
+    from mordheim_combat_lab.core.models import EffectSet
     effects={
         "passive": ExecutionEffect(EffectSet(strength_bonus=1), "passive", "fighter", "stack"),
         "attack": ExecutionEffect(EffectSet(strength_bonus=2), "attack", "attack", "stack"),
@@ -308,7 +308,7 @@ def test_every_catalogued_mechanic_can_be_compiled_in_its_legal_slot():
         if row["id"]!="skill.combat-master":compile_fighter(FighterBuild("mordheim",c,skill_ids=(row["id"],)),ROOT)
 
 def test_all_profiles_are_compilable_or_explicitly_outside_duel_scope():
-    from mordheim_combat_lab.catalog import load_runtime_scope
+    from mordheim_combat_lab.catalog.loader import load_runtime_scope
     exclusions={(row["band_id"],row["profile_id"]) for row in load_runtime_scope("mordheim",ROOT)["profile_exclusions"]}
     compiled=0
     for band in load_bands("mordheim",ROOT):

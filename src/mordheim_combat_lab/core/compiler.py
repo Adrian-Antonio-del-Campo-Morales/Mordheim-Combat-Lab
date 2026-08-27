@@ -4,7 +4,7 @@ from dataclasses import dataclass, fields
 from functools import lru_cache
 from pathlib import Path
 import re
-from .catalog import load_bands, load_execution_contract, load_mechanics, load_runtime_scope, load_simulation_mappings, load_skills
+from ..catalog.loader import load_bands, load_execution_contract, load_mechanics, load_runtime_scope, load_simulation_mappings, load_skills
 from .models import Characteristics, CompiledFighter, EffectSet, FighterBuild
 
 COLLECTIONS = ("weapons","armours","defences","materials","preparations","poisons","skills")
@@ -155,7 +155,12 @@ def validate_execution_contract(ruleset="mordheim", root=None):
     return errors
 
 def _profile(build, root):
-    if build.characteristics is not None: return build.characteristics, {}, None, None, ()
+    # A free-selection build supplies its whole profile as characteristics.
+    # A band/profile build may also supply them: those are player advances
+    # over the KB starting profile, while the package still governs legal
+    # equipment, skills and special rules.
+    if build.characteristics is not None and not build.band_id:
+        return build.characteristics, {}, None, None, ()
     for package in load_bands(build.collection, root):
         if package.band.get("id") != build.band_id: continue
         if package.ruleset != build.ruleset:
@@ -177,7 +182,8 @@ def _profile(build, root):
                 if not match:raise ValueError(f"profile {build.band_id}/{build.profile_id} is not an individual close-combat fighter")
                 dice=int(match.group(1) or 1);sides=int(match.group(2));bonus=int(match.group(3) or 0)
                 values[key]=dice+bonus;random.append((key,dice,sides,bonus))
-            return Characteristics(values["WS"],values["S"],values["T"],values["W"],values["I"],values["A"]), dict(profile.get("combat_traits") or {}), package, profile, tuple(random)
+            base = Characteristics(values["WS"],values["S"],values["T"],values["W"],values["I"],values["A"])
+            return build.characteristics or base, dict(profile.get("combat_traits") or {}), package, profile, tuple(random)
         raise KeyError(f"unknown profile {build.band_id}/{build.profile_id}")
     raise KeyError(f"unknown band {build.collection}/{build.band_id}")
 
