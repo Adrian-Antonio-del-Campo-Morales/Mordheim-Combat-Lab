@@ -458,7 +458,6 @@ profiles:
   combat_traits:
     starting_skills:
     - skill.ignore-pain
-    charge_attack_bonus: true
 - id: vampire-bat
   name: Vampire Bats
   type: summoned
@@ -500,4 +499,3 @@ profiles:
   combat_traits:
     starting_skills:
     - skill.ignore-pain
-    injury_profile: 2

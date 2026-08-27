@@ -17,6 +17,15 @@ rules:
   applies_to:
     profile_ids:
     - shadow-master
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.chaos-streets-sons-of-nagarythe.shadow-master.leader
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: shadow-weaver--wizard
   name: Wizard
   effect: The Shadow Weaver is a Wizard and may use Shadow Magic. The spell list itself is intentionally not modelled in this
@@ -35,6 +44,15 @@ rules:
   applies_to:
     profile_ids:
     - shadow-weaver
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.chaos-streets-sons-of-nagarythe.shadow-weaver.wizard
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--hate-dark-elves
   name: Hate Dark Elves
   effect: All Sons of Nagarythe warriors, excluding Hired Swords, are subject to Hatred against Dark Elves.
@@ -50,6 +68,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.chaos-streets-sons-of-nagarythe.band.hate-dark-elves
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--excellent-sight
   name: Excellent Sight
   effect: All Elves in the warband spot Hidden enemies at twice the normal distance.
@@ -65,6 +92,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.chaos-streets-sons-of-nagarythe.band.excellent-sight
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--honourable
   name: Honourable
   effect: Warriors in the warband may not use poisons or drugs of any kind.
@@ -80,6 +116,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.chaos-streets-sons-of-nagarythe.band.honourable
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--unforgiving
   name: Unforgiving
   effect: In multiplayer games, the warband may never form an alliance with a Chaotic warband, including Possessed, Skaven,
@@ -97,6 +142,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.chaos-streets-sons-of-nagarythe.band.unforgiving
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--tolerant
   name: Tolerant
   effect: The warband may hire Hired Swords provided they are not Chaotic or evil. The source explicitly excludes Skaven,
@@ -114,6 +168,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.chaos-streets-sons-of-nagarythe.band.tolerant
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--shadow-warrior-special-skills-see-in-shadows
   name: See in Shadows
   effect: If the warrior has enough Movement to reach an unseen opponent, he may re-roll the test made to charge that opponent;
@@ -135,6 +198,15 @@ rules:
   - shadow-walker
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.chaos-streets-sons-of-nagarythe.band.shadow-warrior-special-skills-see-in-shadows
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--shadow-warrior-special-skills-master-of-runes
   name: Master of Runes
   effect: When using Elven Runestones, the warrior gains +1 to the roll to dispel a spell. The warrior may also inscribe Elven
@@ -160,7 +232,26 @@ rules:
   - shadow-weaver
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.chaos-streets-sons-of-nagarythe.band.shadow-warrior-special-skills-master-of-runes
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--shadow-warrior-special-skills-elven-agility
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: skill.elven-agility
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.elven-agility
   name: Elven Agility
   effect: The Elf avoids close-combat and missile attacks on a 6+. If he also has Dodge or Step Aside, the corresponding save
     improves to 4+ for the attack type covered by that skill.
@@ -181,7 +272,6 @@ rules:
   - shadow-walker
   applies_to:
     band: true
-  mechanic_id: skill.elven-agility
 - id: band--shadow-warrior-special-skills-powerful-build
   name: Powerful Build
   effect: The warrior may choose skills from the Strength skill list. A Shadow Weaver may never take this skill, and no more
@@ -202,6 +292,15 @@ rules:
   - shadow-walker
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.chaos-streets-sons-of-nagarythe.band.shadow-warrior-special-skills-powerful-build
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--shadow-warrior-special-skills-infiltration
   name: Infiltration
   effect: The warrior deploys after the opposing warband and may be placed anywhere outside enemy line of sight and more than
@@ -223,6 +322,15 @@ rules:
   - shadow-walker
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.chaos-streets-sons-of-nagarythe.band.shadow-warrior-special-skills-infiltration
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--shadow-warrior-special-skills-sniper
   name: Sniper
   effect: If Hidden, the warrior may shoot or cast spells and remain Hidden.
@@ -242,6 +350,15 @@ rules:
   - shadow-walker
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.chaos-streets-sons-of-nagarythe.band.shadow-warrior-special-skills-sniper
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--shadow-warrior-special-skills-hide-in-shadows
   name: Hide in Shadows
   effect: An enemy attempting to detect this Hidden warrior halves its Initiative before measuring the detection distance.
@@ -261,3 +378,12 @@ rules:
   - shadow-walker
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.chaos-streets-sons-of-nagarythe.band.shadow-warrior-special-skills-hide-in-shadows
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'

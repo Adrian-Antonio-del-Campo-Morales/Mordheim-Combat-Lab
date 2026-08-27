@@ -2,6 +2,15 @@ schema_version: 2
 band_id: merchant-caravans
 rules:
 - id: merchant--merchant
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.merchant-caravans.merchant.merchant
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Merchant
   effect: The Merchant is always the warband's leader. Leadership succession and Merchant-specific effects are defined by
     the warband's Merchant rule.
@@ -21,8 +30,16 @@ rules:
     profile_ids:
     - merchant
 - id: knights-vanguard--lightning-reflexes
-  mechanic_id: skill.lightning-reflexes
-  runtime_grant: true
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: profile
+    effects:
+    - id: skill.lightning-reflexes
+      scope: "YES"
+      binding:
+        kind: mechanic
+        id: skill.lightning-reflexes
   name: Lightning Reflexes
   effect: If the Knights Vanguard is charged, he will 'strike first' against those that charged that turn. As the charger(s)
     will also normally 'strike first' (for charging), the order of attack between the charger(s) and the Knights Vanguard
@@ -44,6 +61,15 @@ rules:
     profile_ids:
     - knights-vanguard
 - id: knights-vanguard--ride-warhorse
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.merchant-caravans.knights-vanguard.ride-warhorse
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: monturas."
   name: Ride Warhorse
   effect: The Knights Vanguard is trained in riding Warhorses.
   source:
@@ -61,6 +87,15 @@ rules:
     profile_ids:
     - knights-vanguard
 - id: knights-vanguard--hirelings
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.merchant-caravans.knights-vanguard.hirelings
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Hirelings
   effect: The Knights Vanguard is a hireling, paid by the Merchant and therefore can never become the warband's leader.
   source:
@@ -78,6 +113,15 @@ rules:
     profile_ids:
     - knights-vanguard
 - id: magician--wizard
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.merchant-caravans.magician.wizard
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: magia."
   name: Wizard
   effect: A Magician is a wizard and uses Lesser Magic. See the Magic section in the Mordheim rulebook for details.
   source:
@@ -95,6 +139,15 @@ rules:
     profile_ids:
     - magician
 - id: magician--hireling
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.merchant-caravans.magician.hireling
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Hireling
   effect: The Magician is a hireling, paid by the Merchant. He can never become the warband's leader.
   source:
@@ -112,8 +165,16 @@ rules:
     profile_ids:
     - magician
 - id: blackguards--strongman
-  mechanic_id: skill.strongman
-  runtime_grant: true
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: profile
+    effects:
+    - id: skill.strongman
+      scope: "YES"
+      binding:
+        kind: mechanic
+        id: skill.strongman
   name: Strongman
   effect: Blackguards are capable of great feats of strength. They may use a double-handed weapon without the usual penalty
     of always striking last. Work out the order of battle as you would with other weapons.
@@ -133,6 +194,15 @@ rules:
     profile_ids:
     - blackguards
 - id: blackguards--unreliable-hirelings
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.merchant-caravans.blackguards.unreliable-hirelings
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Unreliable Hirelings
   effect: Blackguards are only hired by the Merchant to serve him by protecting his cargo. They are not much trusted or granted
     with any responsibilities. Therefore they may never become Heroes. Re-roll all results of 'The lad's got talent' for them.
@@ -153,6 +223,15 @@ rules:
     profile_ids:
     - blackguards
 - id: band--merchant-leadership
+  runtime:
+    scope: "YES"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.merchant-caravans.band.merchant-leadership
+      scope: "YES"
+      binding: null
+      reason: "No executable binding exists for this in-scope rule."
   name: Merchant
   effect: The Merchant is the warband leader and warriors within 6" may use his Leadership for Leadership tests. If the Merchant
     permanently leaves the warband, determine a new leader normally. The new leader gains the Merchant special rule, counts
@@ -175,6 +254,15 @@ rules:
   applies_to:
     band: true
 - id: band--trade
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.merchant-caravans.band.trade
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Trade
   effect: 'Instead of searching for a rare item, the Merchant may try to sell one rare item that was stored in the Trade Wagon
     during the preceding battle, before Heroes search for rare items. Roll D6: 1-2 = half the item''s basic price; 3-4 = the
@@ -197,6 +285,15 @@ rules:
   applies_to:
     band: true
 - id: band--open-for-business
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.merchant-caravans.band.open-for-business
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Open for Business
   effect: Other players may send a Hero to the Merchant instead of searching for rare items. That Hero may buy one stored
     item from the Merchant Caravan or sell one item to it if both players agree on the price or exchange. If no agreement
@@ -217,6 +314,15 @@ rules:
   applies_to:
     band: true
 - id: band--rarity
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.merchant-caravans.band.rarity
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Rarity
   effect: Any rare item whose Rarity is reduced to 2 or less by the Trade Wagon's Reputation rule, Streetwise, or similar
     effects may be bought as a Common item.
@@ -235,6 +341,15 @@ rules:
   applies_to:
     band: true
 - id: band--hired-swords
+  runtime:
+    scope: "YES"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.merchant-caravans.band.hired-swords
+      scope: "YES"
+      binding: null
+      reason: "No executable binding exists for this in-scope rule."
   name: Hired Swords
   effect: Merchant Caravans may hire every Hired Sword available to Mercenary warbands.
   source:
@@ -251,6 +366,15 @@ rules:
   applies_to:
     band: true
 - id: band--trade-wagon-required
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.merchant-caravans.band.trade-wagon-required
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Trade Wagon Required
   effect: A starting Merchant Caravan must include one Trade Wagon. The Trade Wagon remains equipment rather than a warrior
     profile in this data model.
@@ -269,6 +393,15 @@ rules:
   applies_to:
     band: true
 - id: band--human-characteristic-maximum
+  runtime:
+    scope: "YES"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.merchant-caravans.band.human-characteristic-maximum
+      scope: "YES"
+      binding: null
+      reason: "No executable binding exists for this in-scope rule."
   name: Human Characteristic Maximum
   effect: Merchants and their retinue are humans and use the Human maximum characteristic profile.
   source:
@@ -285,6 +418,15 @@ rules:
   applies_to:
     band: true
 - id: band--merchant-special-skills-bribery
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.merchant-caravans.band.merchant-special-skills-bribery
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Bribery
   effect: Whenever the warband has to take a Rout test, the Merchant may talk his hirelings into staying a little longer and
     face the danger. He may immediately pay 5 gc per non-Hero warband member (including Hired Swords!) still in the game.
@@ -307,6 +449,15 @@ rules:
   applies_to:
     band: true
 - id: band--merchant-special-skills-dubious-income
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.merchant-caravans.band.merchant-special-skills-dubious-income
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Dubious Income
   effect: The Merchant has set up an underground business that proves to be quite profitable. After every battle in which
     the Merchant was not taken out of action, he may choose to use this skill before the trading phase (i.e. before any gold
@@ -329,6 +480,15 @@ rules:
   applies_to:
     band: true
 - id: band--merchant-special-skills-wholesale
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.merchant-caravans.band.merchant-special-skills-wholesale
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Wholesale
   effect: The Merchant is known for buying items in greater numbers and so is especially welcome at the other merchants. He
     may search for D3+1 rare items after each battle instead of one item only (if he was not taken out of action, of course!).
@@ -347,6 +507,15 @@ rules:
   applies_to:
     band: true
 - id: band--merchant-special-skills-deal-breaker
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.merchant-caravans.band.merchant-special-skills-deal-breaker
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Deal Breaker
   effect: When trying to sell items through the Trade special rule, the Merchant gets a +1 bonus on the roll to see what the
     item would fetch.
@@ -365,6 +534,15 @@ rules:
   applies_to:
     band: true
 - id: band--merchant-special-skills-connected
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.merchant-caravans.band.merchant-special-skills-connected
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Connected
   effect: Instead of searching for rare items normally, the Merchant may search the special black-market table using the normal
     rarity rules. Items bought through this table may never be sold back through that table. The individual black-market item

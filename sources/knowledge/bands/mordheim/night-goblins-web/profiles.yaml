@@ -301,7 +301,6 @@ profiles:
   - snotlings--dodgy
   - snotlings--insignificant
   combat_traits:
-    cloud_of_flies: true
     injury_profile: 1
 - id: great-squig
   name: Great Squig
@@ -380,6 +379,3 @@ profiles:
   - troll--always-hungry
   - troll--vomit-attack
   - troll--large-target
-  combat_traits:
-    starting_skills:
-    - skill.regeneration

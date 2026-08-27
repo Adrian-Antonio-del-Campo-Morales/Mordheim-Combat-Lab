@@ -26,6 +26,15 @@ rules:
   applies_to:
     profile_ids:
     - pit-king
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.pit-fighters.pit-king.leader
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: pit-king--pit-fighter
   name: Pit Fighter
   effect: This warrior has the warband's Pit Fighter skill.
@@ -43,6 +52,15 @@ rules:
   applies_to:
     profile_ids:
     - pit-king
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.pit-fighters.pit-king.pit-fighter
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: dwarf-troll-slayer--pit-fighter
   name: Pit Fighter
   effect: This warrior has the warband's Pit Fighter skill.
@@ -60,9 +78,26 @@ rules:
   applies_to:
     profile_ids:
     - dwarf-troll-slayer
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.pit-fighters.dwarf-troll-slayer.pit-fighter
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: dwarf-troll-slayer--hard-to-kill
-  mechanic_id: skill.hard-to-kill
-  runtime_grant: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: skill.hard-to-kill
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.hard-to-kill
   name: Hard to Kill
   effect: 'Dwarfs are tough, resilient
 
@@ -124,6 +159,18 @@ rules:
   applies_to:
     profile_ids:
     - dwarf-troll-slayer
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: trait.concussion-immune
+      scope: 'YES'
+      binding:
+        kind: trait
+        id: trait.concussion-immune
+        parameters:
+          value: true
 - id: dwarf-troll-slayer--hate-orcs-and-goblins
   name: Hate Orcs and Goblins
   effect: 'All Dwarfs hate Orcs
@@ -153,6 +200,15 @@ rules:
   applies_to:
     profile_ids:
     - dwarf-troll-slayer
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.pit-fighters.dwarf-troll-slayer.hate-orcs-and-goblins
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: dwarf-troll-slayer--grudgebearers
   name: Grudgebearers
   effect: 'Dwarfs hold an ancient
@@ -194,6 +250,15 @@ rules:
   applies_to:
     profile_ids:
     - dwarf-troll-slayer
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.pit-fighters.dwarf-troll-slayer.grudgebearers
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: dwarf-troll-slayer--death-wish
   name: Death Wish
   effect: 'Troll Slayers seek an honourable
@@ -219,6 +284,15 @@ rules:
   applies_to:
     profile_ids:
     - dwarf-troll-slayer
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.pit-fighters.dwarf-troll-slayer.death-wish
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: pit-veterans--pit-fighter
   name: Pit Fighter
   effect: This warrior has the warband's Pit Fighter skill.
@@ -236,6 +310,15 @@ rules:
   applies_to:
     profile_ids:
     - pit-veterans
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.pit-fighters.pit-veterans.pit-fighter
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: pit-fighters--pit-fighter
   name: Pit Fighter
   effect: This warrior has the warband's Pit Fighter skill.
@@ -253,6 +336,15 @@ rules:
   applies_to:
     profile_ids:
     - pit-fighters
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.pit-fighters.pit-fighters.pit-fighter
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: pursuers--pit-fighter
   name: Pit Fighter
   effect: This warrior has the warband's Pit Fighter skill.
@@ -270,6 +362,15 @@ rules:
   applies_to:
     profile_ids:
     - pursuers
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.pit-fighters.pursuers.pit-fighter
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: pursuers--evade
   name: Evade
   effect: When an enemy charges a Pursuer, the Pursuer may attempt to evade. On a successful Initiative test the charge counts
@@ -289,6 +390,15 @@ rules:
   applies_to:
     profile_ids:
     - pursuers
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.pit-fighters.pursuers.evade
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: ogre-pit-fighter--pit-fighter
   name: Pit Fighter
   effect: This warrior has the warband's Pit Fighter skill.
@@ -306,6 +416,15 @@ rules:
   applies_to:
     profile_ids:
     - ogre-pit-fighter
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.pit-fighters.ogre-pit-fighter.pit-fighter
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: ogre-pit-fighter--fear
   name: Fear
   effect: 'Ogre Pit Fighters are large, threatening
@@ -327,6 +446,15 @@ rules:
   applies_to:
     profile_ids:
     - ogre-pit-fighter
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.pit-fighters.ogre-pit-fighter.fear
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: ogre-pit-fighter--large
   name: Large
   effect: 'Ogre Pit Fighters are huge, lumbering
@@ -356,6 +484,15 @@ rules:
   applies_to:
     profile_ids:
     - ogre-pit-fighter
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.pit-fighters.ogre-pit-fighter.large
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: ogre-pit-fighter--skills
   name: Skills
   effect: If the Ogre Pit Fighter becomes a Hero through The Lad's Got Talent, it may choose Combat, Strength and Pit Fighter
@@ -375,6 +512,15 @@ rules:
   applies_to:
     profile_ids:
     - ogre-pit-fighter
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.pit-fighters.ogre-pit-fighter.skills
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: ogre-pit-fighter--slow-witted
   name: Slow Witted
   effect: 'Although Ogres are capable of
@@ -412,6 +558,15 @@ rules:
   applies_to:
     profile_ids:
     - ogre-pit-fighter
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.pit-fighters.ogre-pit-fighter.slow-witted
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--pit-fighter-skill
   name: Pit Fighter
   effect: 'All Pit Fighters have the Pit Fighter skill: they gain +1 WS and +1 A when fighting in ruins, buildings or The
@@ -429,6 +584,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.pit-fighters.band.pit-fighter-skill
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--hired-swords
   name: Hired Swords
   effect: Pit Fighters may hire all normally available Hired Swords except the Elf Ranger.
@@ -445,6 +609,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.pit-fighters.band.hired-swords
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--fighting-styles
   name: Weapons & Armour — Fighting Styles
   effect: Pit Kings, Veterans, Pit Fighters and Pursuers must select one of the fighting styles in their appropriate equipment
@@ -469,6 +642,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.pit-fighters.band.fighting-styles
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--free-the-slaves
   name: Free the Slaves!
   effect: Pit Fighters hate slavers and will never sell captured opponents to slavers.
@@ -485,6 +667,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.pit-fighters.band.free-the-slaves
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--in-the-pit
   name: In the Pit!
   effect: A captured opponent may be sent to fight in the pits against one or more warriors from the Pit Fighter warband.
@@ -509,7 +700,26 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.pit-fighters.band.in-the-pit
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--pit-fighter-skill-bulging-biceps
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: special-rule.band--pit-fighter-skill-bulging-biceps
+      scope: 'YES'
+      binding:
+        kind: compiler
+        id: special-rule.band--pit-fighter-skill-bulging-biceps
   name: Bulging Biceps
   effect: The warrior ignores the penalty from the Heavy weapon special rule; a weapon's Strength bonus therefore applies
     in every round of close combat.
@@ -547,6 +757,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.pit-fighters.band.pit-fighter-skill-force-of-will
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--pit-fighter-skill-arms-master
   name: Arms Master
   effect: The warrior ignores all 'difficult to use' weapon restrictions, allowing combinations that would normally be prohibited.
@@ -563,6 +782,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.pit-fighters.band.pit-fighter-skill-arms-master
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--pit-fighter-skill-body-slam
   name: Body Slam
   effect: Instead of a normal charge attack sequence, the warrior may make one Body Slam attack at +1 Strength and +1 to hit,
@@ -581,6 +809,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.pit-fighters.band.pit-fighter-skill-body-slam
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--pit-fighter-skill-grizzled-veteran
   name: Grizzled Veteran
   effect: The warrior is immune to all psychology.
@@ -597,6 +834,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.pit-fighters.band.pit-fighter-skill-grizzled-veteran
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--troll-slayer-special-skills-ferocious-charge
   name: Ferocious Charge
   effect: The Slayer may double his attacks on the turn that he charges. He will suffer a -1 to hit penalty on that turn.
@@ -615,6 +861,16 @@ rules:
   - dwarf-troll-slayer
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: skill.ferocious-charge
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.ferocious-charge
 - id: band--troll-slayer-special-skills-monster-slayer
   name: Monster Slayer
   effect: The Slayer always wounds any opponent on a roll of 4+, regardless of Toughness, unless his own Strength (after all
@@ -635,7 +891,27 @@ rules:
   - dwarf-troll-slayer
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: skill.monster-slayer
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.monster-slayer
 - id: band--troll-slayer-special-skills-berserker
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: special-rule.band--troll-slayer-special-skills-berserker
+      scope: 'YES'
+      binding:
+        kind: compiler
+        id: special-rule.band--troll-slayer-special-skills-berserker
   name: Berserker
   effect: The Slayer may add +1 to his close combat to hit rolls during the turn which he charges (may not be used with Ferocious
     Charge).

@@ -313,7 +313,7 @@ POISON_DESCRIPTIONS = {
     "Nightshade": "Each unsaved wound reduces the opponent’s Initiative by 1, to a minimum of 1.",
     "Bloodroot": "Doubles wounds caused.",
     "Devil's Toxin": "Re-rolls failed wound rolls; the re-roll cannot cause a critical hit.",
-    "Spider Spittle": "to the hit, the opponent chequea R or is paralizado.",
+    "Spider Spittle": "to the hit, the opponent cheques R or is paralized.",
 }
 
 

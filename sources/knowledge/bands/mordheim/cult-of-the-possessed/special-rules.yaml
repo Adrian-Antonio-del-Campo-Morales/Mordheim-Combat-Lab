@@ -2,6 +2,15 @@ schema_version: 2
 band_id: cult-of-the-possessed
 rules:
 - id: magister--leader
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.cult-of-the-possessed.magister.leader
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Leader
   effect: Any models in the warband within 6" of the Magister may use his Leadership instead of their own.
   source:
@@ -19,6 +28,15 @@ rules:
     profile_ids:
     - magister
 - id: magister--magic-user
+  runtime:
+    scope: "YES"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.cult-of-the-possessed.magister.magic-user
+      scope: "YES"
+      binding: null
+      reason: "No executable binding exists for this in-scope rule."
   name: Magic User
   effect: The Magister has the ability to use magic and casts spells like any other magicians, and the Magister starts with
     one spell generated at random from the Chaos Rituals. In addition the Magister may learn a new Spell instead of a new
@@ -40,6 +58,15 @@ rules:
     profile_ids:
     - magister
 - id: the-possessed--fear
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.cult-of-the-possessed.the-possessed.fear
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Fear
   effect: The Possessed are terrifying, twisted creatures and therefore cause fear.
   source:
@@ -57,6 +84,15 @@ rules:
     profile_ids:
     - the-possessed
 - id: the-possessed--mutations
+  runtime:
+    scope: "YES"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.cult-of-the-possessed.the-possessed.mutations
+      scope: "YES"
+      binding: null
+      reason: "No executable binding exists for this in-scope rule."
   name: Mutations
   effect: Possessed may start the game with one or more mutations each. See the Mutations list for costs.
   source:
@@ -74,6 +110,15 @@ rules:
     profile_ids:
     - the-possessed
 - id: mutants--mutations
+  runtime:
+    scope: "YES"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.cult-of-the-possessed.mutants.mutations
+      scope: "YES"
+      binding: null
+      reason: "No executable binding exists for this in-scope rule."
   name: Mutations
   effect: Mutants must start the game with one or more mutations each. See the Mutations list for the cost.
   source:
@@ -91,6 +136,15 @@ rules:
     profile_ids:
     - mutants
 - id: darksouls--crazed
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.cult-of-the-possessed.darksouls.crazed
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Crazed
   effect: Darksouls have been driven insane by daemonic possession and know no fear. They automatically pass any Leadership
     tests they are required to take.
@@ -110,6 +164,15 @@ rules:
     profile_ids:
     - darksouls
 - id: band--mutations
+  runtime:
+    scope: "YES"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.cult-of-the-possessed.band.mutations
+      scope: "YES"
+      binding: null
+      reason: "No executable binding exists for this in-scope rule."
   name: Mutations
   effect: 'Those who dwell in Mordheim soon develop horrible mutations, and the Cult of the Possessed seem to be especially
     susceptible. In addition, Mordheim attracts mutants from all over the Empire, who are always quick to join the Chaos covens.
@@ -138,6 +201,15 @@ rules:
   applies_to:
     band: true
 - id: band--mutations-daemon-soul
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.band-mutations-daemon-soul
+      scope: "NO"
+      binding: null
+      reason: "only affects spells and prayers"
   name: Daemon Soul
   effect: 'A Daemon lives within the mutant’s soul. This gives him a 4+ save against the effects of spells or prayers.
 
@@ -158,6 +230,16 @@ rules:
   applies_to:
     band: true
 - id: band--mutations-great-claw
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: selectable
+    effects:
+    - id: special-rule.band--mutations-great-claw
+      scope: "YES"
+      binding:
+        kind: compiler
+        id: special-rule.band--mutations-great-claw
   name: Great Claw
   effect: 'One of the mutant’s arms ends in a great, crab-like claw. He may carry no weapons in this arm, but gains an extra
     attack in hand-to-hand combat with a +1 Strength bonus.
@@ -180,6 +262,15 @@ rules:
   applies_to:
     band: true
 - id: band--mutations-cloven-hoofs
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.band-mutations-cloven-hoofs
+      scope: "NO"
+      binding: null
+      reason: "movement is outside the close-combat duel"
   name: Cloven Hoofs
   effect: 'The warrior gains +1 Movement.
 
@@ -200,6 +291,16 @@ rules:
   applies_to:
     band: true
 - id: band--mutations-tentacle
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: selectable
+    effects:
+    - id: special-rule.band--mutations-tentacle
+      scope: "YES"
+      binding:
+        kind: compiler
+        id: special-rule.band--mutations-tentacle
   name: Tentacle
   effect: 'One of the mutant’s arms ends in a tentacle. He may grapple his opponent in close combat to reduce his attacks
     by -1, down to a minimum of 1. The mutant may decide which attack his opponent loses.
@@ -222,6 +323,15 @@ rules:
   applies_to:
     band: true
 - id: band--mutations-blackblood
+  runtime:
+    scope: "YES"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.band-mutations-blackblood
+      scope: "YES"
+      binding: null
+      reason: "requires a reactive independent hit"
   name: Blackblood
   effect: 'If the model loses a wound in close combat, anyone in base contact with the model suffers a Strength 3 hit (no
     critical hits) from the spurting corrosive blood.
@@ -244,6 +354,15 @@ rules:
   applies_to:
     band: true
 - id: band--mutations-spines
+  runtime:
+    scope: "YES"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.band-mutations-spines
+      scope: "YES"
+      binding: null
+      reason: "requires an independent start-of-phase hit"
   name: Spines
   effect: 'Any model in base contact with the mutant suffers an automatic Strength 1 hit at the beginning of each close combat
     phase. Spines will never cause critical hits.
@@ -266,6 +385,15 @@ rules:
   applies_to:
     band: true
 - id: band--mutations-scorpion-tail
+  runtime:
+    scope: "YES"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.band-mutations-scorpion-tail
+      scope: "YES"
+      binding: null
+      reason: "requires an independent attack profile"
   name: Scorpion Tail
   effect: 'The mutant has a long barbed tail with a venomed tip, allowing him to make an extra Strength 5 attack in each hand-to-hand
     combat phase. If the model hit by the tail is immune to poison, the Strength of the hit is reduced to 2.
@@ -288,6 +416,17 @@ rules:
   applies_to:
     band: true
 - id: band--mutations-extra-arm
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: selectable
+    effects:
+    - id: special-rule.band--mutations-extra-arm
+      scope: "YES"
+      binding:
+        kind: compiler
+        id: special-rule.band--mutations-extra-arm
+  runtime_selectable: true
   name: Extra Arm
   effect: 'The mutant may use any single-handed weapon in the extra arm, giving him +1 attack when fighting in hand-to-hand
     combat. Alternatively, he may carry a shield or a buckler in the extra arm. If a Possessed chooses to do this, he gains
@@ -312,6 +451,15 @@ rules:
   applies_to:
     band: true
 - id: band--mutations-hideous
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.band-mutations-hideous
+      scope: "LATER"
+      binding: null
+      reason: "fear/psychology is outside the duel runtime"
   name: Hideous
   effect: 'The mutant causes fear.
 

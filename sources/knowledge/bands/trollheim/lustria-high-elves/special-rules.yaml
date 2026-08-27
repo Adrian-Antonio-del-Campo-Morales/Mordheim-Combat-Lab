@@ -17,6 +17,15 @@ rules:
   applies_to:
     profile_ids:
     - loremaster
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-high-elves.loremaster.leader
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: loremaster--spellcaster
   name: Spellcaster
   effect: The Loremaster is a spellcaster and begins with one randomly generated High Elf Magic spell. Whenever he gains a
@@ -37,6 +46,15 @@ rules:
   applies_to:
     profile_ids:
     - loremaster
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-high-elves.loremaster.spellcaster
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: sword-guardians--swordmaster-protection
   name: Swordmaster Protection
   effect: While armed with a Sword or Elven Greatsword, shooting attacks against the Sword Guardian suffer -1 To Hit. An ordinary
@@ -55,6 +73,15 @@ rules:
   applies_to:
     profile_ids:
     - sword-guardians
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-high-elves.sword-guardians.swordmaster-protection
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: explorers--searcher
   name: Searcher
   effect: If the Explorer was not taken Out of Action, when the warband rolls on the Exploration table the Explorer may modify
@@ -73,6 +100,15 @@ rules:
   applies_to:
     profile_ids:
     - explorers
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-high-elves.explorers.searcher
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--excellent-sight
   name: Excellent Sight
   effect: High Elves detect Hidden enemies at twice the normal detection distance. The Spanish source parenthetically expresses
@@ -90,6 +126,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.lustria-high-elves.band.excellent-sight
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--haughty
   name: Haughty
   effect: The warband may never hire a Hired Sword who is not of High Elf blood, and may never use Dwarf-made equipment, including
@@ -107,6 +152,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.lustria-high-elves.band.haughty
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--honourable
   name: Honourable
   effect: High Elves may never use drugs or poisons of any kind under any circumstances.
@@ -122,6 +176,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.lustria-high-elves.band.honourable
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--ancestral-customs
   name: Ancestral Customs
   effect: High Elves may never use blackpowder weapons.
@@ -137,6 +200,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.lustria-high-elves.band.ancestral-customs
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--determination
   name: Determination
   effect: When fighting a Dark Elf warband, High Elves count as Leadership 10 when taking Rout tests and may never voluntarily
@@ -154,7 +226,26 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.lustria-high-elves.band.determination
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--high-elf-special-skills-elven-agility
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: skill.elven-agility
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.elven-agility
   name: Elven Agility
   effect: The Hero has a 6+ special save against close-combat and missile attacks. If the Hero also has Dodge or Step Aside,
     the relevant save improves to 4+ and Elven Agility no longer applies to that attack type.
@@ -175,7 +266,6 @@ rules:
   - explorers
   applies_to:
     band: true
-  mechanic_id: skill.elven-agility
 - id: band--high-elf-special-skills-rune-master
   name: Rune Master
   effect: Loremaster only. When using Elven Runestones, the Loremaster gains +1 on the attempt to dispel a spell. In addition,
@@ -197,7 +287,26 @@ rules:
   - loremaster
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.lustria-high-elves.band.high-elf-special-skills-rune-master
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--high-elf-special-skills-miniath
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: skill.miniath
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.miniath
   name: Miniath
   effect: The Hero may parry with any weapon. If using a weapon that normally allows parrying, the Hero may re-roll a failed
     parry attempt.
@@ -218,8 +327,17 @@ rules:
   - explorers
   applies_to:
     band: true
-  mechanic_id: skill.miniath
 - id: band--high-elf-special-skills-infallible-strike
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: skill.sure-strike
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.sure-strike
   name: Infallible Strike
   effect: The Hero may re-roll any failed To Wound roll.
   source:
@@ -238,7 +356,6 @@ rules:
   - explorers
   applies_to:
     band: true
-  mechanic_id: skill.sure-strike
 - id: band--high-elf-special-skills-stand-and-shoot
   name: Stand and Shoot
   effect: When an enemy declares a charge against the Hero, the Hero may take a Leadership test. If passed, the Hero may shoot
@@ -262,6 +379,15 @@ rules:
   - explorers
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.lustria-high-elves.band.high-elf-special-skills-stand-and-shoot
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--high-elf-special-skills-faerie
   name: Faerie
   effect: Explorers only. Enemy spells do not affect the Explorer on a D6 roll of 4+.
@@ -279,7 +405,26 @@ rules:
   - explorers
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.lustria-high-elves.band.high-elf-special-skills-faerie
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--high-elf-special-skills-luck
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: skill.luck
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.luck
   name: Luck
   effect: Explorers only. Once per battle, the Explorer may re-roll any roll made by that Explorer, but may not re-roll a
     roll made by another warband member.
@@ -298,4 +443,3 @@ rules:
   - explorers
   applies_to:
     band: true
-  mechanic_id: skill.luck

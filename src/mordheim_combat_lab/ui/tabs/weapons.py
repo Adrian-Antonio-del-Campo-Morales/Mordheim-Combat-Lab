@@ -11,17 +11,19 @@ from ...core.compiler import compile_fighter
 from ...core.engine import simulate_duel
 from ...core.models import SimulationCancelled
 from ..widgets import AnalysisProgress
+from ..services import motta_score
 
 
 class WeaponAnalysisTab(ttk.Frame):
     """Compare every legal candidate weapon against the configured enemy."""
 
-    def __init__(self, parent, catalogue, candidate_editor, enemy_editor, settings_provider):
+    def __init__(self, parent, catalogue, candidate_editor, enemy_editor, settings_provider, simulations):
         super().__init__(parent, padding=12)
         self.catalogue = catalogue
         self.candidate_editor = candidate_editor
         self.enemy_editor = enemy_editor
         self.settings_provider = settings_provider
+        self.simulations = simulations
         self.status = StringVar(value="Configure the duel, then compare the candidate's legal weapons.")
         self._running = False
         self._build_gui()
@@ -31,15 +33,24 @@ class WeaponAnalysisTab(ttk.Frame):
         ttk.Label(self, text="Each legal main weapon is simulated against the current enemy configuration.", style="Muted.TLabel").pack(anchor="w", pady=(2, 12))
         controls = ttk.Frame(self)
         controls.pack(fill="x", pady=(0, 10))
+        ttk.Label(controls, text="Simulations").pack(side="left", padx=(0, 5))
+        ttk.Spinbox(controls, from_=1_000, to=10_000_000, increment=10_000, textvariable=self.simulations, width=12).pack(side="left", padx=(0, 12))
         self.run_button = ttk.Button(controls, text="Compare weapons", style="Accent.TButton", command=self.run)
         self.run_button.pack(side="left")
         self.progress = AnalysisProgress(self)
         self.progress.pack(fill="x", pady=(0, 10))
-        columns = ("weapon", "candidate", "enemy", "unresolved")
+        columns = ("main", "off", "single", "shield", "dual", "two_hand", "optimal", "motta", "cost", "equipment")
         self.tree = ttk.Treeview(self, columns=columns, show="headings", height=15)
-        for column, heading, width in (("weapon", "Weapon", 300), ("candidate", "Candidate win", 150), ("enemy", "Enemy win", 150), ("unresolved", "Unresolved", 130)):
+        definitions = (
+            ("main", "Main Weapon", 230), ("off", "Off-Hand Weapon", 210),
+            ("single", "Free Hand", 155), ("shield", "Shield", 155),
+            ("dual", "Two Weapons", 155), ("two_hand", "Two Hands", 155),
+            ("optimal", "Best Result", 175), ("motta", "MOTTA Score", 130),
+            ("cost", "Cost", 130), ("equipment", "Equipment Used", 220),
+        )
+        for column, heading, width in definitions:
             self.tree.heading(column, text=heading)
-            self.tree.column(column, width=width, anchor="w" if column == "weapon" else "center")
+            self.tree.column(column, width=width, anchor="w" if column in {"main", "off"} else "center")
         self.tree.pack(fill="both", expand=True)
         ttk.Label(self, textvariable=self.status, style="Muted.TLabel", wraplength=1080).pack(anchor="w", pady=(10, 0))
 
@@ -65,6 +76,7 @@ class WeaponAnalysisTab(ttk.Frame):
     def _compare(self, candidate, enemy, options, settings, cancel_event) -> None:
         try:
             compiled_enemy = compile_fighter(enemy)
+            baseline = simulate_duel(settings.request(compile_fighter(candidate), compiled_enemy, cancel_event))
             rows = []
             for completed, (weapon_id, name) in enumerate(options, start=1):
                 if cancel_event.is_set():
@@ -74,7 +86,7 @@ class WeaponAnalysisTab(ttk.Frame):
                     off_hand = None
                 fighter = compile_fighter(replace(candidate, main_weapon_id=weapon_id, off_hand_id=off_hand))
                 result = simulate_duel(settings.request(fighter, compiled_enemy, cancel_event))
-                rows.append((name, result.first_win_rate, result.second_win_rate, result.unresolved_rate))
+                rows.append((name, result.first_win_rate, result.first_win_rate - baseline.first_win_rate))
                 self.after(0, self.progress.advance, completed)
         except SimulationCancelled:
             self.after(0, self._cancelled)
@@ -86,8 +98,28 @@ class WeaponAnalysisTab(ttk.Frame):
     def _finished(self, rows, simulations: int) -> None:
         for item in self.tree.get_children():
             self.tree.delete(item)
-        for name, candidate, enemy, unresolved in sorted(rows, key=lambda row: row[1], reverse=True):
-            self.tree.insert("", "end", values=(name, f"{candidate:.2f}%", f"{enemy:.2f}%", f"{unresolved:.2f}%"))
+        configured_candidate = self.candidate_editor.build()
+        off_hand = self.candidate_editor.off_hand_name.get() or "Free hand"
+        for name, candidate, impact in sorted(rows, key=lambda row: row[1], reverse=True):
+            weapon_id = next((item_id for item_id, item_name in self.candidate_editor.main_weapon_options() if item_name == name), "")
+            if self.catalogue.mechanic(weapon_id).get("hands") == 2:
+                mode = "two_hand"
+                displayed_off_hand = "—"
+            elif off_hand == "Free hand":
+                mode, displayed_off_hand = "single", "—"
+            elif weapon_id and self.candidate_editor._active_off_hands.get(off_hand, "").startswith("weapon."):
+                mode, displayed_off_hand = "dual", off_hand
+            else:
+                mode, displayed_off_hand = "shield", off_hand
+            mode_cells = ["", "", "", ""]
+            mode_cells[("single", "shield", "dual", "two_hand").index(mode)] = f"{candidate:.2f}% ({impact:+.2f}%)"
+            cost = 0.0 if weapon_id == configured_candidate.main_weapon_id else self.catalogue.cost(weapon_id, self.candidate_editor.choice)
+            motta = motta_score(impact, cost)
+            cost_display = f"{cost:g} gc" if cost is not None else "—"
+            self.tree.insert("", "end", values=(
+                name, displayed_off_hand, *mode_cells,
+                f"{candidate:.2f}% ({impact:+.2f}%)", f"{motta:.2f}" if motta is not None else "—", cost_display, "Current configuration",
+            ))
         self.status.set(f"Compared {len(rows)} weapons across {len(rows) * simulations:,} duels.")
         self.progress.finish("Complete")
         self._done()

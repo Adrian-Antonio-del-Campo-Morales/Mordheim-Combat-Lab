@@ -17,6 +17,15 @@ rules:
   applies_to:
     profile_ids:
     - warrior-priest
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.chaos-streets-sigmar-protectorate.warrior-priest.leader
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: warrior-priest--prayers-of-sigmar
   name: Prayers of Sigmar
   effect: The Warrior Priest may use the Prayers of Sigmar. The prayer list and prayer effects are intentionally not modelled
@@ -35,6 +44,15 @@ rules:
   applies_to:
     profile_ids:
     - warrior-priest
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.chaos-streets-sigmar-protectorate.warrior-priest.prayers-of-sigmar
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: ranger--animal-tamer
   name: Animal Tamer
   effect: Any animal in the warband within 6" of the Ranger may use his Leadership. Any animal attempting to charge the Ranger
@@ -53,6 +71,15 @@ rules:
   applies_to:
     profile_ids:
     - ranger
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.chaos-streets-sigmar-protectorate.ranger.animal-tamer
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: templar--devout
   name: Devout
   effect: Templars are subject to Hatred against every model belonging to a Chaotic warband. The source explicitly includes
@@ -71,6 +98,15 @@ rules:
   applies_to:
     profile_ids:
     - templar
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.chaos-streets-sigmar-protectorate.templar.devout
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: protectorate-mastiff--animal
   name: Animal
   effect: Mastiffs are animals and never gain Experience.
@@ -87,6 +123,15 @@ rules:
   applies_to:
     profile_ids:
     - protectorate-mastiff
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.chaos-streets-sigmar-protectorate.protectorate-mastiff.animal
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--warrior-priest-death
   name: Death of the Warrior Priest
   effect: If the Warrior Priest dies, the Initiate with the most Experience takes the leader's place. That model changes its
@@ -110,6 +155,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.chaos-streets-sigmar-protectorate.band.warrior-priest-death
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--ranger-templar-limit
   name: Ranger and Templar Limit
   effect: If the warband includes a Ranger, it may include no more than one Templar.
@@ -125,6 +179,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.chaos-streets-sigmar-protectorate.band.ranger-templar-limit
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--protectorate-special-skills-protection-of-sigmar
   name: Protection of Sigmar
   effect: Any spell cast against the Hero is dispelled on a D6 roll of 4+. If the spell is dispelled, it does not affect any
@@ -146,6 +209,15 @@ rules:
   - initiate
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.chaos-streets-sigmar-protectorate.band.protectorate-special-skills-protection-of-sigmar
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--protectorate-special-skills-absolute-faith
   name: Absolute Faith
   effect: The Hero may re-roll failed Fear tests and does not need to take a test for being engaged by multiple opponents.
@@ -165,6 +237,15 @@ rules:
   - initiate
   applies_to:
     band: true
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.chaos-streets-sigmar-protectorate.band.protectorate-special-skills-absolute-faith
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--protectorate-special-skills-absolute-determination
   name: Absolute Determination
   effect: Warrior Priest only. The Warrior Priest may re-roll failed Rout tests.
@@ -182,7 +263,26 @@ rules:
   - warrior-priest
   applies_to:
     band: true
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.chaos-streets-sigmar-protectorate.band.protectorate-special-skills-absolute-determination
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--protectorate-special-skills-rousing-sermon
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: skill.inspiring-sermon
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.inspiring-sermon
   name: Rousing Sermon
   effect: 'Warrior Priest only. At the start of the Protectorate player''s turn, the Warrior Priest may declare a Rousing
     Sermon. He may not use Prayers that turn. The effect is automatic: the Warrior Priest and all friendly models within 6"
@@ -203,7 +303,6 @@ rules:
   - warrior-priest
   applies_to:
     band: true
-  mechanic_id: skill.inspiring-sermon
 - id: band--protectorate-special-skills-guidance-of-sigmar
   name: Guidance of Sigmar
   effect: When using missile weapons, the Hero may freely choose a target and ignore the normal requirement to shoot at the
@@ -225,3 +324,12 @@ rules:
   - initiate
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.chaos-streets-sigmar-protectorate.band.protectorate-special-skills-guidance-of-sigmar
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'

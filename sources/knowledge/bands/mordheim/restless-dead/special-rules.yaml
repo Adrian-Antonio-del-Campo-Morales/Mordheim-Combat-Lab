@@ -20,6 +20,15 @@ rules:
   applies_to:
     profile_ids:
     - liche
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.restless-dead.liche.wizard
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: liche--cause-fear
   name: Cause Fear
   effect: A Liche is a horrible abomination and causes fear.
@@ -37,6 +46,15 @@ rules:
   applies_to:
     profile_ids:
     - liche
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.restless-dead.liche.cause-fear
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: liche--immune-to-psychology
   name: Immune to Psychology
   effect: A Liche is not affected by psychology and never leaves combat.
@@ -54,9 +72,26 @@ rules:
   applies_to:
     profile_ids:
     - liche
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.restless-dead.liche.immune-to-psychology
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: liche--no-pain
-  mechanic_id: skill.ignore-pain
-  runtime_grant: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: skill.ignore-pain
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.ignore-pain
   name: No Pain
   effect: A Liche treats a stunned result on the injury chart as knocked down.
   source:
@@ -74,9 +109,18 @@ rules:
     profile_ids:
     - liche
 - id: liche--immune-to-poison
-  runtime_grant: true
-  runtime_traits:
-    poison_immune: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: trait.poison-immune
+      scope: 'YES'
+      binding:
+        kind: trait
+        id: trait.poison-immune
+        parameters:
+          value: true
   name: Immune to Poison
   effect: A Liche is not affected by poison.
   source:
@@ -124,6 +168,15 @@ rules:
   applies_to:
     profile_ids:
     - liche
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.restless-dead.liche.eternal
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: liche--feed-upon-magic
   name: Feed Upon Magic
   effect: 'A Liche can perform spells that, with the consumption of D3 Treasures, can give the
@@ -156,6 +209,15 @@ rules:
   applies_to:
     profile_ids:
     - liche
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.restless-dead.liche.feed-upon-magic
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: liche--warrior-wizard
   name: Warrior Wizard
   effect: 'The Liche may wear armour and cast spells. Indeed, it is often the clothing and armour
@@ -177,6 +239,15 @@ rules:
   applies_to:
     profile_ids:
     - liche
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.restless-dead.liche.warrior-wizard
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: liche--advancement
   name: Advancement
   effect: 'If a Liche gets an advance roll of +1 Wound, they may instead pick a new skill from their
@@ -198,6 +269,15 @@ rules:
   applies_to:
     profile_ids:
     - liche
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.restless-dead.liche.advancement
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: necromancer--wizard
   name: Wizard
   effect: The Necromancer is a Wizard and starts knowing one of the Liche's two Necromantic spells. The spell list itself
@@ -217,6 +297,15 @@ rules:
   applies_to:
     profile_ids:
     - necromancer
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.restless-dead.necromancer.wizard
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: necromancer--apprentices
   name: Apprentices
   effect: 'Necromancers may only ever know spells known by their Liche masters. Even if they did know
@@ -250,6 +339,15 @@ rules:
   applies_to:
     profile_ids:
     - necromancer
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.restless-dead.necromancer.apprentices
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: necromancer--gofer
   name: Gofer
   effect: 'as an Apprentice, the Necromancer spends much of their time running errands for their Liche
@@ -275,6 +373,15 @@ rules:
   applies_to:
     profile_ids:
     - necromancer
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.restless-dead.necromancer.gofer
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: grave-guards--wight-blades
   name: Wight Blades
   effect: Grave Guards carry weapons laden with evil magic. All close combat 'to hit' rolls of a 6 will automatically wound.
@@ -296,6 +403,15 @@ rules:
   applies_to:
     profile_ids:
     - grave-guards
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.restless-dead.grave-guards.wight-blades
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: grave-guards--cause-fear
   name: Cause Fear
   effect: Grave Guards are terrifying undead creatures and so cause fear.
@@ -313,10 +429,28 @@ rules:
   applies_to:
     profile_ids:
     - grave-guards
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.restless-dead.grave-guards.cause-fear
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: grave-guards--immune-to-poison
-  runtime_grant: true
-  runtime_traits:
-    poison_immune: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: trait.poison-immune
+      scope: 'YES'
+      binding:
+        kind: trait
+        id: trait.poison-immune
+        parameters:
+          value: true
   name: Immune to Poison
   effect: Grave Guards are not affected by poison.
   source:
@@ -350,9 +484,26 @@ rules:
   applies_to:
     profile_ids:
     - grave-guards
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.restless-dead.grave-guards.immune-to-psychology
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: grave-guards--no-pain
-  mechanic_id: skill.ignore-pain
-  runtime_grant: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: skill.ignore-pain
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.ignore-pain
   name: No Pain
   effect: Grave Guards treat a stunned result on the injury chart as knocked down.
   source:
@@ -386,6 +537,15 @@ rules:
   applies_to:
     profile_ids:
     - grave-guards
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.restless-dead.grave-guards.may-not-run
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: grave-guards--no-deal
   name: No deal
   effect: Grave Guards may not search for rare items.
@@ -403,6 +563,15 @@ rules:
   applies_to:
     profile_ids:
     - grave-guards
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.restless-dead.grave-guards.no-deal
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: zombies--cause-fear
   name: Cause Fear
   effect: Zombies are horrible abominations and so cause fear.
@@ -420,6 +589,15 @@ rules:
   applies_to:
     profile_ids:
     - zombies
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.restless-dead.zombies.cause-fear
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: zombies--may-not-run
   name: May not run
   effect: Zombies are slow undead creatures and may not run (but may charge normally).
@@ -437,6 +615,15 @@ rules:
   applies_to:
     profile_ids:
     - zombies
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.restless-dead.zombies.may-not-run
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: zombies--immune-to-psychology
   name: Immune to Psychology
   effect: A Zombie is not affected by psychology and never leaves combat.
@@ -454,10 +641,28 @@ rules:
   applies_to:
     profile_ids:
     - zombies
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.restless-dead.zombies.immune-to-psychology
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: zombies--immune-to-poison
-  runtime_grant: true
-  runtime_traits:
-    poison_immune: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: trait.poison-immune
+      scope: 'YES'
+      binding:
+        kind: trait
+        id: trait.poison-immune
+        parameters:
+          value: true
   name: Immune to Poison
   effect: A Zombie is not affected by poison.
   source:
@@ -475,8 +680,16 @@ rules:
     profile_ids:
     - zombies
 - id: zombies--no-pain
-  mechanic_id: skill.ignore-pain
-  runtime_grant: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: skill.ignore-pain
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.ignore-pain
   name: No Pain
   effect: Zombies treat stunned results on the injury chart as knocked down.
   source:
@@ -510,6 +723,15 @@ rules:
   applies_to:
     profile_ids:
     - zombies
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.restless-dead.zombies.no-brain
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: skeletons--cause-fear
   name: Cause Fear
   effect: Skeletons are horrible abominations and so cause fear.
@@ -527,6 +749,15 @@ rules:
   applies_to:
     profile_ids:
     - skeletons
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.restless-dead.skeletons.cause-fear
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: skeletons--may-not-run
   name: May not run
   effect: Skeletons are slow undead creatures and may not run (but may charge normally).
@@ -544,6 +775,15 @@ rules:
   applies_to:
     profile_ids:
     - skeletons
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.restless-dead.skeletons.may-not-run
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: skeletons--immune-to-psychology
   name: Immune to Psychology
   effect: Skeletons are not affected by psychology and never leaves combat.
@@ -561,10 +801,28 @@ rules:
   applies_to:
     profile_ids:
     - skeletons
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.restless-dead.skeletons.immune-to-psychology
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: skeletons--immune-to-poison
-  runtime_grant: true
-  runtime_traits:
-    poison_immune: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: trait.poison-immune
+      scope: 'YES'
+      binding:
+        kind: trait
+        id: trait.poison-immune
+        parameters:
+          value: true
   name: Immune to Poison
   effect: Skeletons are not affected by poison.
   source:
@@ -582,8 +840,16 @@ rules:
     profile_ids:
     - skeletons
 - id: skeletons--no-pain
-  mechanic_id: skill.ignore-pain
-  runtime_grant: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: skill.ignore-pain
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.ignore-pain
   name: No Pain
   effect: Skeletons treat stunned results on the injury chart as knocked down.
   source:
@@ -617,6 +883,15 @@ rules:
   applies_to:
     profile_ids:
     - skeletons
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.restless-dead.skeletons.no-brain
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: wights--cause-fear
   name: Cause Fear
   effect: Wights are horrible abominations and so cause fear.
@@ -634,6 +909,15 @@ rules:
   applies_to:
     profile_ids:
     - wights
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.restless-dead.wights.cause-fear
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: wights--may-not-run
   name: May not run
   effect: Wights are slow undead creatures and may not run (but may charge normally).
@@ -651,6 +935,15 @@ rules:
   applies_to:
     profile_ids:
     - wights
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.restless-dead.wights.may-not-run
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: wights--immune-to-psychology
   name: Immune to Psychology
   effect: Wights are not affected by psychology and never leaves combat.
@@ -668,10 +961,28 @@ rules:
   applies_to:
     profile_ids:
     - wights
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.restless-dead.wights.immune-to-psychology
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: wights--immune-to-poison
-  runtime_grant: true
-  runtime_traits:
-    poison_immune: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: trait.poison-immune
+      scope: 'YES'
+      binding:
+        kind: trait
+        id: trait.poison-immune
+        parameters:
+          value: true
   name: Immune to Poison
   effect: Wights are not affected by poison.
   source:
@@ -689,8 +1000,16 @@ rules:
     profile_ids:
     - wights
 - id: wights--no-pain
-  mechanic_id: skill.ignore-pain
-  runtime_grant: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: skill.ignore-pain
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.ignore-pain
   name: No Pain
   effect: Wights treat stunned results on the injury chart as knocked down.
   source:
@@ -726,6 +1045,15 @@ rules:
   applies_to:
     profile_ids:
     - wights
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.restless-dead.wights.experience
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: scarecrows--cause-fear
   name: Cause Fear
   effect: 'The sight of a tall, lanky and silent scarecrow moving is highly unnatural and so causes
@@ -747,6 +1075,15 @@ rules:
   applies_to:
     profile_ids:
     - scarecrows
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.restless-dead.scarecrows.cause-fear
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: scarecrows--immune-to-psychology
   name: Immune to Psychology
   effect: The scarecrow is immune to all psychology and will never leave combat.
@@ -764,10 +1101,28 @@ rules:
   applies_to:
     profile_ids:
     - scarecrows
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.restless-dead.scarecrows.immune-to-psychology
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: scarecrows--immune-to-poison
-  runtime_grant: true
-  runtime_traits:
-    poison_immune: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: trait.poison-immune
+      scope: 'YES'
+      binding:
+        kind: trait
+        id: trait.poison-immune
+        parameters:
+          value: true
   name: Immune to Poison
   effect: The scarecrow is immune to all poisons.
   source:
@@ -785,8 +1140,16 @@ rules:
     profile_ids:
     - scarecrows
 - id: scarecrows--no-pain
-  mechanic_id: skill.ignore-pain
-  runtime_grant: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: skill.ignore-pain
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.ignore-pain
   name: No Pain
   effect: The scarecrow treats all stunned results on the injury chart as knocked down.
   source:
@@ -820,6 +1183,15 @@ rules:
   applies_to:
     profile_ids:
     - scarecrows
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.restless-dead.scarecrows.no-brain
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: scarecrows--no-substance
   name: No Substance
   effect: The scarecrow is incredibly difficult to take down with shooting as there are few vital parts to hit. The scarecrow
@@ -841,10 +1213,28 @@ rules:
   applies_to:
     profile_ids:
     - scarecrows
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.restless-dead.scarecrows.no-substance
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: scarecrows--flammable
-  runtime_grant: true
-  runtime_traits:
-    flammable: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: trait.flammable
+      scope: 'YES'
+      binding:
+        kind: trait
+        id: trait.flammable
+        parameters:
+          value: true
   name: Flammable
   effect: 'The scarecrow is primarily ratty cloth, straw and preserved body parts so as a result they
 
@@ -868,9 +1258,18 @@ rules:
     profile_ids:
     - scarecrows
 - id: scarecrows--construct
-  runtime_grant: true
-  runtime_traits:
-    injury_reroll_out: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: trait.injury-reroll-out
+      scope: 'YES'
+      binding:
+        kind: trait
+        id: trait.injury-reroll-out
+        parameters:
+          value: true
   name: Construct
   effect: The scarecrow is an undead construct and may re-roll any rolls on the injury table except for wounds caused by fire.
   source:
@@ -912,6 +1311,15 @@ rules:
   applies_to:
     profile_ids:
     - scarecrows
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.restless-dead.scarecrows.animated-construct
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--bone-goliath-access
   name: Bone Goliath
   effect: Only the Restless Dead may build the unique Bone Goliath Hired Sword, including during warband creation. Its separate
@@ -930,6 +1338,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.restless-dead.band.bone-goliath-access
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--scarecrow-controller-limit
   name: Scarecrow Controllers
   effect: 'Each Scarecrow requires a controller: either the Liche or the Necromancer. Each controller may control at most
@@ -948,6 +1365,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.restless-dead.band.scarecrow-controller-limit
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--restless-dead-maximum-characteristics
   name: Restless Dead Maximum Characteristics
   effect: 'Maximum characteristics: Liche M5 WS4 BS4 S4 T4 W8 I6 A3 Ld10; Grave Guard M5 WS5 BS5 S4 T4 W4 I5 A4 Ld10. Wights
@@ -966,6 +1392,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.restless-dead.band.restless-dead-maximum-characteristics
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--restless-dead-special-skills-corpse-bomb
   name: Corpse Bomb
   effect: 'Special magics and rituals can cause a Zombie to
@@ -1025,6 +1460,15 @@ rules:
   - necromancer
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.restless-dead.band.restless-dead-special-skills-corpse-bomb
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--restless-dead-special-skills-deathspeaker
   name: Deathspeaker
   effect: 'At the start of the battle, the undead player may
@@ -1068,6 +1512,15 @@ rules:
   - necromancer
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.restless-dead.band.restless-dead-special-skills-deathspeaker
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--restless-dead-special-skills-wraith-touch
   name: Wraith Touch
   effect: 'The hero may make a Wraith Touch attack instead of their normal attacks in close combat. The hero making
@@ -1119,6 +1572,15 @@ rules:
   - necromancer
   applies_to:
     band: true
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.restless-dead.band.restless-dead-special-skills-wraith-touch
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--restless-dead-special-skills-forbidden-rite
   name: Forbidden Rite
   effect: 'If the hero with this skill did not search for rare items
@@ -1154,6 +1616,15 @@ rules:
   - necromancer
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.restless-dead.band.restless-dead-special-skills-forbidden-rite
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--restless-dead-special-skills-summoner
   name: Summoner
   effect: The maximum warband size is increased by 1.
@@ -1173,3 +1644,12 @@ rules:
   - necromancer
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.restless-dead.band.restless-dead-special-skills-summoner
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'

@@ -41,8 +41,7 @@ profiles:
   rule_ids:
   - assassin-adept--leader
   - assassin-adept--perfect-killer
-  combat_traits:
-    perfect_killer: true
+  combat_traits: {}
 - id: black-skaven
   name: Black Skaven
   type: hero

@@ -1,7 +1,7 @@
 from pathlib import Path
 import yaml
-from mordheim_combat_lab.catalog.loader import load_bands, load_collections, load_execution_contract, load_items, load_mechanics, load_simulation_mappings
-from mordheim_combat_lab.core.compiler import compile_fighter, validate_execution_contract
+from mordheim_combat_lab.catalog.loader import PROFILE_BINDING_IDS, load_bands, load_collections, load_execution_contract, load_items, load_mechanics, load_simulation_mappings, runtime_bindings
+from mordheim_combat_lab.core.compiler import PROFILE_RULE_EFFECTS, SPECIAL_RULE_EFFECTS, TRAIT_TYPES, compile_fighter, validate_execution_contract
 from mordheim_combat_lab.core.models import FighterBuild
 
 ROOT=Path(__file__).resolve().parents[2]/"sources/knowledge"
@@ -81,7 +81,10 @@ def test_reusable_optional_trollheim_rules_are_bound_but_not_granted():
         "band--lahmian-special-skills-lost-innocence":"skill.always-strikes-first",
         "band--lizardmen-special-skills-hardened-skin":"skill.hard-to-kill",
     }
-    found={rule["id"]:rule.get("mechanic_id") for band in load_bands("trollheim",ROOT) for rule in band.special_rules}
+    found={
+        rule["id"]: next((binding["id"] for binding in runtime_bindings(rule, "mechanic")), None)
+        for band in load_bands("trollheim",ROOT) for rule in band.special_rules
+    }
     assert {rule_id:found.get(rule_id) for rule_id in expected}==expected
 
 def test_profile_special_rules_with_mechanic_ids_are_granted_automatically():
@@ -114,7 +117,8 @@ def test_selected_mutation_and_vampiric_powers_compile():
                           "band--strigoi-power-iron-sinews",
                           "band--strigoi-power-infinite-hatred")),ROOT)
     assert mutant.global_effects.incoming_attacks_modifier==-1
-    assert (vampire.characteristics.wounds,vampire.characteristics.strength)==(3,5)
+    assert (vampire.characteristics.wounds,vampire.characteristics.strength)==(3,4)
+    assert vampire.global_effects.strength_bonus==1
     assert vampire.global_effects.reroll_hits
 
 def test_special_rule_eligibility_and_unsupported_parts_are_explicit():
@@ -123,10 +127,10 @@ def test_special_rule_eligibility_and_unsupported_parts_are_explicit():
         compile_fighter(FighterBuild(
             "mordheim",band_id="carnival-of-chaos",profile_id="brutes",
             special_rule_ids=("band--blessings-of-nurgle-mark-of-nurgle",)),ROOT)
-    with pytest.raises(ValueError,match="independent attack profile"):
-        compile_fighter(FighterBuild(
-            "mordheim",band_id="cult-of-the-possessed",profile_id="mutants",
-            special_rule_ids=("band--mutations-great-claw",)),ROOT)
+    claw=compile_fighter(FighterBuild(
+        "mordheim",band_id="cult-of-the-possessed",profile_id="mutants",
+        special_rule_ids=("band--mutations-great-claw",)),ROOT)
+    assert len(claw.extra_attacks)==1 and claw.extra_attacks[0].strength_bonus==1
 
 def test_mutant_skill_grants_one_cross_band_mutation_per_selection():
     fighter=compile_fighter(FighterBuild(
@@ -236,8 +240,109 @@ def test_trollheim_package_and_item_references_are_closed():
         for equipment_list in band.equipment_lists:
             assert {item["item_id"] for item in equipment_list.get("items") or ()}<=item_ids
         for rule in band.special_rules:
-            if rule.get("mechanic_id"):
-                assert rule["mechanic_id"] in mechanic_ids
+            for binding in runtime_bindings(rule, "mechanic"):
+                assert binding["id"] in mechanic_ids
+
+def test_special_rule_runtime_metadata_is_canonical_and_binary():
+    legacy={"mechanic_id","runtime_grant","runtime_band_grant","runtime_traits"}
+    classified=0
+    for band in (*load_bands("mordheim",ROOT),*load_bands("trollheim",ROOT)):
+        for rule in band.special_rules:
+            assert not legacy.intersection(rule)
+            runtime=rule.get("runtime")
+            if runtime is None:
+                continue
+            classified+=1
+            assert runtime["implemented"] in {"YES","NO"}
+            assert runtime["scope"] in {"YES","NO","LATER"}
+    assert classified==1536
+
+def test_equivalent_no_pain_rules_share_one_runtime_mechanic():
+    bindings=[]
+    for band in (*load_bands("mordheim",ROOT),*load_bands("trollheim",ROOT)):
+        for rule in band.special_rules:
+            if rule.get("name") == "No Pain":
+                bindings.extend(binding["id"] for binding in runtime_bindings(rule,"mechanic"))
+    assert len(bindings)>=10
+    assert set(bindings)=={"skill.ignore-pain"}
+
+def test_every_runtime_binding_resolves_to_a_known_shared_contract():
+    mechanics=load_mechanics("mordheim",ROOT)
+    mechanic_ids={row["id"] for family in ("weapons","armours","defences","materials","preparations","poisons","skills") for row in mechanics[family]}
+    compiler_ids=set()
+    for band in (*load_bands("mordheim",ROOT),*load_bands("trollheim",ROOT)):
+        for rule in band.special_rules:
+            for binding in runtime_bindings(rule):
+                if binding["kind"]=="mechanic":
+                    assert binding["id"] in mechanic_ids
+                elif binding["kind"]=="trait":
+                    assert binding["id"].removeprefix("trait.").replace("-","_") in TRAIT_TYPES
+                elif binding["kind"]=="profile":
+                    assert binding["id"] in PROFILE_BINDING_IDS
+                else:
+                    compiler_ids.add(binding["id"])
+                    prefix,rule_id=binding["id"].split(".",1)
+                    assert rule_id in (PROFILE_RULE_EFFECTS if prefix=="profile-rule" else SPECIAL_RULE_EFFECTS)
+    assert compiler_ids
+
+def test_first_500_previously_unclassified_rules_have_runtime_metadata():
+    first=next(band for band in load_bands("mordheim",ROOT) if band.band["id"]=="amazons-lustria")
+    last=next(band for band in load_bands("mordheim",ROOT) if band.band["id"]=="night-goblins-web")
+    assert next(rule for rule in first.special_rules if rule["id"]=="serpent-priestess--leader")["runtime"]["scope"]=="LATER"
+    assert next(rule for rule in last.special_rules if rule["id"]=="band--fear-elves")["runtime"]["scope"]=="LATER"
+    assert next(rule for rule in last.special_rules if rule["id"]=="band--distasteful-company")["runtime"]["scope"]=="YES"
+
+def test_second_500_previously_unclassified_rules_have_runtime_metadata():
+    first=next(band for band in load_bands("mordheim",ROOT) if band.band["id"]=="night-goblins-web")
+    last=next(band for band in load_bands("trollheim",ROOT) if band.band["id"]=="khemri-lahmian-brotherhood")
+    assert next(rule for rule in first.special_rules if rule["id"]=="band--distasteful-company")["runtime"]["scope"]=="YES"
+    assert next(rule for rule in last.special_rules if rule["id"]=="jackals--pack")["runtime"]["scope"]=="YES"
+    assert next(rule for rule in last.special_rules if rule["id"]=="jackals--animal")["runtime"]["scope"]=="NO"
+
+def test_every_special_rule_is_now_classified():
+    pending=[]
+    for band in (*load_bands("mordheim",ROOT),*load_bands("trollheim",ROOT)):
+        pending.extend(f"{band.band['id']}/{rule['id']}" for rule in band.special_rules if "runtime" not in rule)
+    assert pending==[]
+
+def test_final_batch_profile_backed_rules_have_explicit_contracts():
+    expected={
+        ("khemri-necromancers","nehekharan-vultures--fragile"):{"trait.injury-profile"},
+        ("lustria-lizardmen","kroxigor--scaly-skin-4plus"):{
+            "trait.natural-armour-save","trait.natural-armour-stacks","trait.natural-armour-worst-save"},
+        ("lustria-pygmies","silent-walker--ethereal"):{"trait.ward-save"},
+        ("trollheim-skaven-clan-eshin","assassin-adept--consummate-fighter"):{"trait.perfect-killer"},
+        ("trollheim-undead","dire-wolves--charge"):{"trait.charge-attack-bonus"},
+        ("trollheim-mercenaries","band--middenheim-physical-prowess"):{"profile.characteristics"},
+    }
+    bands={band.band["id"]:band for band in load_bands("trollheim",ROOT)}
+    for (band_id,rule_id),binding_ids in expected.items():
+        rule=next(rule for rule in bands[band_id].special_rules if rule["id"]==rule_id)
+        assert rule["runtime"]["implemented"]=="YES"
+        assert {binding["id"] for binding in runtime_bindings(rule)}==binding_ids
+
+def test_second_batch_common_rules_use_shared_runtime_bindings():
+    expected={
+        ("mordheim","orc-mob","troll--regeneration"):("mechanic","skill.regeneration"),
+        ("mordheim","skaven-clan-eshin","assassin-adept--perfect-killer"):("trait","trait.perfect-killer"),
+        ("mordheim","undead","dire-wolves--charge"):("trait","trait.charge-attack-bonus"),
+        ("trollheim","chaos-streets-undead-bloodlines","vampire-bat--summoned-creature"):("trait","trait.injury-profile"),
+    }
+    collections={name:{band.band["id"]:band for band in load_bands(name,ROOT)} for name in ("mordheim","trollheim")}
+    for (collection,band_id,rule_id),binding_expected in expected.items():
+        rule=next(rule for rule in collections[collection][band_id].special_rules if rule["id"]==rule_id)
+        binding=next(iter(runtime_bindings(rule)))
+        assert (binding["kind"],binding["id"])==binding_expected
+
+def test_new_shared_bindings_replace_profile_trait_duplicates():
+    ranger=compile_fighter(FighterBuild("mordheim",band_id="dwarf-rangers",profile_id="dwarf-clansmen"),ROOT)
+    troll=compile_fighter(FighterBuild("mordheim",band_id="night-goblins-web",profile_id="troll"),ROOT)
+    snotling=compile_fighter(FighterBuild("mordheim",band_id="night-goblins-web",profile_id="snotlings"),ROOT)
+    halfling=compile_fighter(FighterBuild("mordheim",band_id="mootlanders",profile_id="warriors"),ROOT)
+    assert "skill.hard-to-kill" in ranger.global_effects.tags
+    assert troll.global_effects.regeneration_save==4
+    assert "cloud_of_flies" in snotling.global_effects.tags
+    assert "fragile_halflings" in halfling.global_effects.tags
 
 def test_every_catalogue_item_has_a_resolved_simulation_mapping():
     item_ids={row["id"] for row in load_items("mordheim",ROOT)}

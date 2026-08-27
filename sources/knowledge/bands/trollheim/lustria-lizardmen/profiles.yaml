@@ -41,10 +41,7 @@ profiles:
   - skink-priest--scaly-skin-6plus
   - skink-priest--amphibious
   - skink-priest--jungle-native
-  combat_traits:
-    natural_armour_save: 6
-    natural_armour_stacks: true
-    natural_armour_worst_save: 6
+  combat_traits: {}
 - id: saurus-totem-warrior
   name: Saurus Totem Warrior
   type: hero
@@ -84,10 +81,7 @@ profiles:
   rule_ids:
   - saurus-totem-warrior--scaly-skin-5plus
   - saurus-totem-warrior--bite-attack
-  combat_traits:
-    natural_armour_save: 5
-    natural_armour_stacks: true
-    natural_armour_worst_save: 6
+  combat_traits: {}
 - id: skink-great-crests
   name: Great Crested Skinks
   type: hero
@@ -127,10 +121,7 @@ profiles:
   - skink-great-crests--scaly-skin-6plus
   - skink-great-crests--amphibious
   - skink-great-crests--jungle-native
-  combat_traits:
-    natural_armour_save: 6
-    natural_armour_stacks: true
-    natural_armour_worst_save: 6
+  combat_traits: {}
 - id: skink-braves
   name: Skink Braves
   type: henchman
@@ -168,10 +159,7 @@ profiles:
   - skink-braves--scaly-skin-6plus
   - skink-braves--amphibious
   - skink-braves--jungle-native
-  combat_traits:
-    natural_armour_save: 6
-    natural_armour_stacks: true
-    natural_armour_worst_save: 6
+  combat_traits: {}
 - id: saurus-braves
   name: Saurus Braves
   type: henchman
@@ -207,10 +195,7 @@ profiles:
   rule_ids:
   - saurus-braves--scaly-skin-5plus
   - saurus-braves--bite-attack
-  combat_traits:
-    natural_armour_save: 5
-    natural_armour_stacks: true
-    natural_armour_worst_save: 6
+  combat_traits: {}
 - id: kroxigor
   name: Kroxigor
   type: henchman
@@ -248,7 +233,4 @@ profiles:
   - kroxigor--fear
   - kroxigor--large-target
   - kroxigor--animal
-  combat_traits:
-    natural_armour_save: 4
-    natural_armour_stacks: true
-    natural_armour_worst_save: 6
+  combat_traits: {}

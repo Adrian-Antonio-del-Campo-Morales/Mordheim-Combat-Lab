@@ -2,6 +2,15 @@ schema_version: 2
 band_id: hochland-bandits
 rules:
 - id: bandit-prince--leader
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.hochland-bandits.bandit-prince.leader
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Leader
   effect: Any warrior within 6" of the Bandit Prince may use his Leadership characteristic when taking any Leadership tests.
   source:
@@ -19,6 +28,15 @@ rules:
     profile_ids:
     - bandit-prince
 - id: footpads--concealment
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.hochland-bandits.footpads.concealment
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: movimiento."
   name: Concealment
   effect: Enemy warriors often find it difficult to detect a Footpad until he strikes. If an enemy warrior wishes to charge
     a Footpad that he cannot see (but was not declared as Hidden), he must subtract 1 from his Initiative before making his
@@ -43,8 +61,16 @@ rules:
     profile_ids:
     - footpads
 - id: duelist--swordmaster
-  mechanic_id: skill.swordmaster
-  runtime_grant: true
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: profile
+    effects:
+    - id: skill.swordmaster
+      scope: "YES"
+      binding:
+        kind: mechanic
+        id: skill.swordmaster
   name: Swordmaster
   effect: In order to remain alive, a Duelist picks up swordfighting techniques that few others master. The Duelist successfully
     parries an enemy blow on a roll equal to or over the roll to hit, not just over the roll as with normal parries. Obviously
@@ -66,6 +92,15 @@ rules:
     profile_ids:
     - duelist
 - id: duelist--weapon-knowledge
+  runtime:
+    scope: "YES"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.hochland-bandits.duelist.weapon-knowledge
+      scope: "YES"
+      binding: null
+      reason: "No executable binding exists for this in-scope rule."
   name: Weapon Knowledge
   effect: A Duelist must be prepared to fight an opponent with any weapon at any time, so a working knowledge of even exotic
     weapons is critical for his survival. The weapons in the Bandit equipment chart merely represent the weapons a Duelist
@@ -87,6 +122,15 @@ rules:
     profile_ids:
     - duelist
 - id: huckster--convincing-manner
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.hochland-bandits.huckster.convincing-manner
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Convincing Manner
   effect: 'Hucksters specialize in convincing strangers of their benevolent intentions. When an enemy warrior attempts to
     charge a member of the
@@ -138,6 +182,15 @@ rules:
     profile_ids:
     - huckster
 - id: huckster--slick-operator
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.hochland-bandits.huckster.slick-operator
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Slick Operator
   effect: 'In between games the player may choose to have the huckster run a con on the local
 
@@ -179,6 +232,15 @@ rules:
     profile_ids:
     - huckster
 - id: looters--looting-the-dead
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.hochland-bandits.looters.looting-the-dead
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: lesiones."
   name: Looting the Dead
   effect: 'Normally when a warrior is killed or his wounds cause him to leave the warband and he is taken off the warband''s
     roster, all of his equipment is lost. However, some unscrupulous individuals will stoop to robbing a dead or incapacitated
@@ -220,6 +282,15 @@ rules:
     profile_ids:
     - looters
 - id: blackhearts--hardened
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.hochland-bandits.blackhearts.hardened
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Hardened
   effect: Blackhearts are not as put off by the evils of the world when they come across them… in fact persons of this nature
     are often more uncomfortable around situations where warmth and love are in abundance! Blackhearts are immune to Fear,
@@ -241,6 +312,15 @@ rules:
     profile_ids:
     - blackhearts
 - id: poachers--trailblazers
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.hochland-bandits.poachers.trailblazers
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Trailblazers
   effect: Poachers are experts at finding new game or safe campsites for the warband. In the game this is represented by allowing
     the warband to reroll one D6 for each Poacher in the Exploration phase. Poachers are not as good as Elf Rangers for scouting,
@@ -262,6 +342,15 @@ rules:
     profile_ids:
     - poachers
 - id: gutterscum--utterly-inept
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.hochland-bandits.gutterscum.utterly-inept
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Utterly Inept
   effect: Gutterscum have turned to a life of crime because they lack the ability to fit into normal society. They lack both
     the ambition and the capacity for self-improvement. Gutterscum do not gain experience.
@@ -281,6 +370,15 @@ rules:
     profile_ids:
     - gutterscum
 - id: band--hired-swords
+  runtime:
+    scope: "YES"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.hochland-bandits.band.hired-swords
+      scope: "YES"
+      binding: null
+      reason: "No executable binding exists for this in-scope rule."
   name: Hired Swords
   effect: The warband may hire any Hired Sword available to a Human Mercenary warband.
   source:
@@ -297,6 +395,15 @@ rules:
   applies_to:
     band: true
 - id: band--powders-expensive
+  runtime:
+    scope: "YES"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.hochland-bandits.band.powders-expensive
+      scope: "YES"
+      binding: null
+      reason: "No executable binding exists for this in-scope rule."
   name: Powder's Expensive!
   effect: Bandit Henchmen may not purchase black powder weapons. Bandit Heroes may use them where their equipment access allows,
     but the warband uses the higher black-powder weapon costs shown in its equipment lists.
@@ -315,6 +422,15 @@ rules:
   applies_to:
     band: true
 - id: band--foragers
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.hochland-bandits.band.foragers
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Foragers
   effect: When determining Income, use the next lower warband-size category than the warband's actual size. A warband of 1-3
     members still uses the first category.
@@ -333,6 +449,15 @@ rules:
   applies_to:
     band: true
 - id: band--know-who-to-sell-to
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.hochland-bandits.band.know-who-to-sell-to
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Know Who To Sell To
   effect: When selling equipment, the warband receives half of any random component of the item's cost in addition to the
     normal half of its basic cost.
@@ -351,6 +476,15 @@ rules:
   applies_to:
     band: true
 - id: band--bandit-special-skills-banditry
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.hochland-bandits.band.bandit-special-skills-banditry
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Banditry
   effect: 'Between missions, the bandit goes off and robs
 
@@ -419,6 +553,15 @@ rules:
   applies_to:
     band: true
 - id: band--bandit-special-skills-hide-in-shadows
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.hochland-bandits.band.bandit-special-skills-hide-in-shadows
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: movimiento."
   name: Hide In Shadows
   effect: 'The Bandit has become an expert at concealing himself
 
@@ -451,6 +594,15 @@ rules:
   applies_to:
     band: true
 - id: band--bandit-special-skills-jump-back
+  runtime:
+    scope: "YES"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.hochland-bandits.band.bandit-special-skills-jump-back
+      scope: "YES"
+      binding: null
+      reason: "No executable binding exists for this in-scope rule."
   name: Jump Back
   effect: 'This warrior is an expert at getting himself out of sticky
 
@@ -511,6 +663,15 @@ rules:
   applies_to:
     band: true
 - id: band--bandit-special-skills-sniper
+  runtime:
+    scope: "YES"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.hochland-bandits.band.bandit-special-skills-sniper
+      scope: "YES"
+      binding: null
+      reason: "No executable binding exists for this in-scope rule."
   name: Sniper
   effect: 'The bandit is an expert at shooting his victims from the
 
@@ -543,6 +704,15 @@ rules:
   applies_to:
     band: true
 - id: band--bandit-special-skills-throw-voice
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.hochland-bandits.band.bandit-special-skills-throw-voice
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: movimiento."
   name: Throw Voice
   effect: 'This rogue has mastered the art of misdirecting
 

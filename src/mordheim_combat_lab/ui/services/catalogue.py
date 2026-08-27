@@ -58,6 +58,7 @@ class CombatCatalogue:
             for row in load_simulation_mappings(ruleset).get("item_mappings", ())
             if row.get("status") == "implemented" and str(row.get("engine_option")) in option_to_id
         }
+        self._global_costs = self._costs_for_packages(tuple(self._packages.values()))
 
     def collections(self) -> tuple[tuple[str, str], ...]:
         return tuple((str(row["id"]), str(row.get("name") or row["id"])) for row in load_collections() if self.ruleset in row.get("rulesets", ()))
@@ -95,11 +96,30 @@ class CombatCatalogue:
 
     def skills(self, choice: ProfileChoice | None) -> tuple[SkillChoice, ...]:
         """Return profile-legal skills, or every executable skill for free selection."""
-        allowed_categories = set(self.profile(choice).get("skill_access") or ()) if choice else None
+        profile = self.profile(choice) if choice else None
+        allowed_categories = set(profile.get("skill_access") or ()) if profile else None
         return tuple(
             SkillChoice(str(skill["id"]), str(skill["name"]), str(skill["category"]), str(skill.get("summary") or ""))
             for skill in load_skills(self.ruleset)
-            if (allowed_categories is None or skill.get("category") in allowed_categories) and skill.get("id") not in self._excluded_mechanics
+            if self._skill_is_legal_for_profile(skill, choice, allowed_categories)
+            and skill.get("id") not in self._excluded_mechanics
+        )
+
+    def _skill_is_legal_for_profile(self, skill: dict, choice: ProfileChoice | None, allowed_categories: set[str] | None) -> bool:
+        """Filter special skills by their warband source instead of its shared category."""
+        category = str(skill.get("category") or "")
+        if allowed_categories is None:
+            return True
+        if category not in allowed_categories:
+            return False
+        if category != "special":
+            return True
+        # Trollheim variants retain the canonical Mordheim family in the KB,
+        # so a skill source can legitimately cite that canonical band id.
+        source_ids = {choice.band_id, str(self._packages[(choice.collection, choice.band_id)].band.get("canonical_family") or "")}
+        return any(
+            any(f"/{band_id}" in str(reference.get("url") or "") for band_id in source_ids if band_id)
+            for reference in skill.get("source_refs") or ()
         )
 
     def profile_rules(self, choice: ProfileChoice | None) -> tuple[ProfileRule, ...]:
@@ -114,7 +134,10 @@ class CombatCatalogue:
                 str(rule["id"]),
                 str(rule["name"]),
                 str(rule.get("effect") or ""),
-                bool(rule.get("runtime_grant") is True),
+                bool(
+                    (rule.get("runtime") or {}).get("implemented") == "YES"
+                    and (rule.get("runtime") or {}).get("grant") in {"profile", "band"}
+                ),
             )
             for rule in package.special_rules
             if rule.get("id") in rule_ids
@@ -150,6 +173,32 @@ class CombatCatalogue:
 
     def poisons(self, choice: ProfileChoice | None) -> tuple[tuple[str | None, str], ...]:
         return ((None, "No poison"), *self._equipment(choice, "poisons", lambda _row: True))
+
+    def cost(self, mechanic_id: str | None, choice: ProfileChoice | None) -> float | None:
+        """Lowest legal acquisition cost for one executable mechanic."""
+        if mechanic_id is None or mechanic_id in {"armour.no-armour", "material.normal"}:
+            return 0.0
+        if choice is None:
+            return self._global_costs.get(mechanic_id)
+        package = self._packages[(choice.collection, choice.band_id)]
+        profile = self.profile(choice)
+        allowed_lists = set(profile.get("equipment_lists") or ())
+        costs = self._costs_for_packages((package,), allowed_lists)
+        return costs.get(mechanic_id, self._global_costs.get(mechanic_id))
+
+    def _costs_for_packages(self, packages: tuple[BandPackage, ...], allowed_lists: set[str] | None = None) -> dict[str, float]:
+        costs: dict[str, float] = {}
+        for package in packages:
+            for equipment_list in package.equipment_lists:
+                if allowed_lists is not None and str(equipment_list.get("id")) not in allowed_lists:
+                    continue
+                for item in equipment_list.get("items") or ():
+                    mechanic_id = self._item_mechanics.get(str(item.get("item_id")))
+                    cost = item.get("cost")
+                    if mechanic_id is None or not isinstance(cost, (int, float)):
+                        continue
+                    costs[mechanic_id] = min(costs.get(mechanic_id, float(cost)), float(cost))
+        return costs
 
     def _equipment(self, choice, families, allowed) -> tuple[tuple[str, str], ...]:
         return self._profile_equipment(choice, families, allowed) if choice else self._runtime_equipment(families, allowed)

@@ -2,6 +2,15 @@ schema_version: 2
 band_id: gunnery-school-of-nuln
 rules:
 - id: senior-gunnery-officer--leader
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.gunnery-school-of-nuln.senior-gunnery-officer.leader
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Leader
   effect: Any models in the warband within 12” of the Senior Gunnery Officer may use his Leadership value when using Leadership
     tests.
@@ -21,6 +30,15 @@ rules:
     profile_ids:
     - senior-gunnery-officer
 - id: senior-gunnery-officer--hunter
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.gunnery-school-of-nuln.senior-gunnery-officer.hunter
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: disparo."
   name: Hunter
   effect: See Shooting Skills.
   source:
@@ -38,6 +56,15 @@ rules:
     profile_ids:
     - senior-gunnery-officer
 - id: instructor--expert-weaponsmith
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.gunnery-school-of-nuln.instructor.expert-weaponsmith
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: disparo."
   name: Expert Weaponsmith
   effect: 'The Instructors know every trick in the book when it comes to working with black
 
@@ -63,6 +90,15 @@ rules:
     profile_ids:
     - instructor
 - id: marksmen--quick-reload
+  runtime:
+    scope: "YES"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.gunnery-school-of-nuln.marksmen.quick-reload
+      scope: "YES"
+      binding: null
+      reason: "No executable binding exists for this in-scope rule."
   name: Quick Reload
   effect: 'Marksmen trained at the Gunnery School are forced to practice many drills day after
 
@@ -96,8 +132,16 @@ rules:
     profile_ids:
     - marksmen
 - id: pistoliers--crack-shot
-  mechanic_id: skill.crack-shot
-  runtime_grant: true
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: profile
+    effects:
+    - id: skill.crack-shot
+      scope: "YES"
+      binding:
+        kind: mechanic
+        id: skill.crack-shot
   name: Crack Shot
   effect: 'Experts with pistols in close quarters; they have an uncanny ability to turn what should have
 
@@ -123,6 +167,15 @@ rules:
     profile_ids:
     - pistoliers
 - id: band--impeccable-care
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.gunnery-school-of-nuln.band.impeccable-care
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Impeccable Care
   effect: The warband may always use the reduced black-powder weapon costs listed in its starting Equipment Lists and gains
     +2 on rarity rolls to find black-powder weapons.
@@ -141,6 +194,15 @@ rules:
   applies_to:
     band: true
 - id: band--properly-used
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.gunnery-school-of-nuln.band.properly-used
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: disparo."
   name: Properly Used
   effect: 'When using the optional Misfire rules, if a 1 is rolled, roll another D6. On a 3+ the misfire is ignored: the shot
     still misses, but the weapon does not explode.'
@@ -159,6 +221,15 @@ rules:
   applies_to:
     band: true
 - id: band--proud-to-a-fault
+  runtime:
+    scope: "YES"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.gunnery-school-of-nuln.band.proud-to-a-fault
+      scope: "YES"
+      binding: null
+      reason: "No executable binding exists for this in-scope rule."
   name: Proud To A Fault!
   effect: Members of the Gunnery School warband may never use non-black-powder ranged weapons. This restriction does not apply
     to Hired Swords or Dramatis Personae.

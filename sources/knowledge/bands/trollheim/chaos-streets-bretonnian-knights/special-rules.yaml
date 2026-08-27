@@ -17,6 +17,15 @@ rules:
   applies_to:
     profile_ids:
     - questing-knight
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.chaos-streets-bretonnian-knights.questing-knight.leader
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: questing-knight--knights-virtue
   name: Knight's Virtue
   effect: The Questing Knight never panics or flees from combat and never needs to take a Leadership test for fighting alone.
@@ -33,6 +42,15 @@ rules:
   applies_to:
     profile_ids:
     - questing-knight
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.chaos-streets-bretonnian-knights.questing-knight.knights-virtue
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: questing-knight--ride-warhorse
   name: Ride Warhorse
   effect: The Questing Knight has the Ride Warhorse skill.
@@ -49,6 +67,15 @@ rules:
   applies_to:
     profile_ids:
     - questing-knight
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.chaos-streets-bretonnian-knights.questing-knight.ride-warhorse
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: knights-errant--knights-virtue
   name: Knight's Virtue
   effect: A Knight Errant never panics or flees from combat and never needs to take a Leadership test for fighting alone.
@@ -65,6 +92,15 @@ rules:
   applies_to:
     profile_ids:
     - knights-errant
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.chaos-streets-bretonnian-knights.knights-errant.knights-virtue
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: knights-errant--ride-warhorse
   name: Ride Warhorse
   effect: A Knight Errant has the Ride Warhorse skill.
@@ -81,6 +117,15 @@ rules:
   applies_to:
     profile_ids:
     - knights-errant
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.chaos-streets-bretonnian-knights.knights-errant.ride-warhorse
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: squires--ride-horse
   name: Ride Horse
   effect: A Squire has the Ride Horse skill.
@@ -97,6 +142,15 @@ rules:
   applies_to:
     profile_ids:
     - squires
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.chaos-streets-bretonnian-knights.squires.ride-horse
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--lady-of-the-lake-blessing
   name: Lady of the Lake's Blessing
   effect: Before each battle, make a Leadership test using the warband leader's Leadership. If successful, the Lady of the
@@ -120,6 +174,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.chaos-streets-bretonnian-knights.band.lady-of-the-lake-blessing
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--virtue-of-purity
   name: Virtue of Purity
   effect: Any spell cast on this Knight is dispelled on a D6 roll of 4+.
@@ -139,7 +202,26 @@ rules:
   - squires
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.chaos-streets-bretonnian-knights.band.virtue-of-purity
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--virtue-of-valour
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: skill.virtue-of-valour
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.virtue-of-valour
   name: Virtue of Valour
   effect: When fighting a model with a higher Strength characteristic, this Knight may re-roll failed To Hit rolls in close
     combat.
@@ -160,7 +242,6 @@ rules:
   - squires
   applies_to:
     band: true
-  mechanic_id: skill.virtue-of-valour
 - id: band--virtue-of-noble-disdain
   name: Virtue of Noble Disdain
   effect: This Knight is subject to Hatred against all enemies equipped with missile weapons.
@@ -180,6 +261,15 @@ rules:
   - squires
   applies_to:
     band: true
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.chaos-streets-bretonnian-knights.band.virtue-of-noble-disdain
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--virtue-of-the-impetuous-knight
   name: Virtue of the Impetuous Knight
   effect: When this Knight charges, add the result of 1D6 × 0.4" to his Movement. Roll before moving the charging model.
@@ -199,6 +289,15 @@ rules:
   - squires
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.chaos-streets-bretonnian-knights.band.virtue-of-the-impetuous-knight
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--virtue-of-discipline
   name: Virtue of Discipline
   effect: Once per battle, if this Knight is not Knocked Down, Stunned or Out of Action, the warband may re-roll a Rout test.
@@ -218,3 +317,12 @@ rules:
   - squires
   applies_to:
     band: true
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.chaos-streets-bretonnian-knights.band.virtue-of-discipline
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'

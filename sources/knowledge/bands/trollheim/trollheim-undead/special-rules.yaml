@@ -17,6 +17,15 @@ rules:
   applies_to:
     profile_ids:
     - vampire
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.trollheim-undead.vampire.leader
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: vampire--fear
   name: Fear
   effect: The Vampire causes Fear.
@@ -33,6 +42,15 @@ rules:
   applies_to:
     profile_ids:
     - vampire
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.trollheim-undead.vampire.fear
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: vampire--immune-to-psychology
   name: Immune to Psychology
   effect: The Vampire is immune to Psychology and never leaves close combat because of Psychology.
@@ -49,10 +67,28 @@ rules:
   applies_to:
     profile_ids:
     - vampire
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.trollheim-undead.vampire.immune-to-psychology
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: vampire--immune-to-poison
-  runtime_grant: true
-  runtime_traits:
-    poison_immune: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: trait.poison-immune
+      scope: 'YES'
+      binding:
+        kind: trait
+        id: trait.poison-immune
+        parameters:
+          value: true
   name: Immune to Poison
   effect: The Vampire is immune to poison.
   source:
@@ -69,8 +105,16 @@ rules:
     profile_ids:
     - vampire
 - id: vampire--no-pain
-  mechanic_id: skill.ignore-pain
-  runtime_grant: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: skill.ignore-pain
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.ignore-pain
   name: No Pain
   effect: The Vampire treats a Stunned result on the Injury chart as Knocked Down.
   source:
@@ -86,7 +130,6 @@ rules:
   applies_to:
     profile_ids:
     - vampire
-  mechanic_id: skill.ignore-pain
 - id: necromancer--spellcaster
   name: Spellcaster
   effect: The Necromancer is a spellcaster and may use Necromantic Magic. The spell list and spell effects are intentionally
@@ -105,6 +148,15 @@ rules:
   applies_to:
     profile_ids:
     - necromancer
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.trollheim-undead.necromancer.spellcaster
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: zombies--may-not-run
   name: May Not Run
   effect: Zombies may not run, but may charge normally.
@@ -121,6 +173,15 @@ rules:
   applies_to:
     profile_ids:
     - zombies
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.trollheim-undead.zombies.may-not-run
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: zombies--fear
   name: Fear
   effect: Zombies cause Fear.
@@ -137,6 +198,15 @@ rules:
   applies_to:
     profile_ids:
     - zombies
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.trollheim-undead.zombies.fear
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: zombies--immune-to-psychology
   name: Immune to Psychology
   effect: Zombies are immune to Psychology and never leave close combat because of Psychology.
@@ -153,10 +223,28 @@ rules:
   applies_to:
     profile_ids:
     - zombies
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.trollheim-undead.zombies.immune-to-psychology
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: zombies--immune-to-poison
-  runtime_grant: true
-  runtime_traits:
-    poison_immune: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: trait.poison-immune
+      scope: 'YES'
+      binding:
+        kind: trait
+        id: trait.poison-immune
+        parameters:
+          value: true
   name: Immune to Poison
   effect: Zombies are immune to poison.
   source:
@@ -173,8 +261,16 @@ rules:
     profile_ids:
     - zombies
 - id: zombies--no-pain
-  mechanic_id: skill.ignore-pain
-  runtime_grant: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: skill.ignore-pain
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.ignore-pain
   name: No Pain
   effect: Zombies treat a Stunned result on the Injury chart as Knocked Down.
   source:
@@ -190,7 +286,6 @@ rules:
   applies_to:
     profile_ids:
     - zombies
-  mechanic_id: skill.ignore-pain
 - id: zombies--brainless
   name: Brainless
   effect: Zombies never gain Experience.
@@ -207,6 +302,15 @@ rules:
   applies_to:
     profile_ids:
     - zombies
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.trollheim-undead.zombies.brainless
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: ghouls--fear
   name: Fear
   effect: Ghouls cause Fear.
@@ -223,6 +327,15 @@ rules:
   applies_to:
     profile_ids:
     - ghouls
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.trollheim-undead.ghouls.fear
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: dire-wolves--charge
   name: Charge
   effect: A Dire Wolf has 2 Attacks instead of 1 during a turn in which it charges.
@@ -239,6 +352,18 @@ rules:
   applies_to:
     profile_ids:
     - dire-wolves
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: trait.charge-attack-bonus
+      scope: 'YES'
+      binding:
+        kind: trait
+        id: trait.charge-attack-bonus
+        parameters:
+          value: true
 - id: dire-wolves--may-not-run
   name: May Not Run
   effect: Dire Wolves may not run, but may charge normally.
@@ -255,6 +380,15 @@ rules:
   applies_to:
     profile_ids:
     - dire-wolves
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.trollheim-undead.dire-wolves.may-not-run
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: dire-wolves--fear
   name: Fear
   effect: Dire Wolves cause Fear.
@@ -271,6 +405,15 @@ rules:
   applies_to:
     profile_ids:
     - dire-wolves
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.trollheim-undead.dire-wolves.fear
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: dire-wolves--immune-to-psychology
   name: Immune to Psychology
   effect: Dire Wolves are immune to Psychology and never leave close combat because of Psychology.
@@ -287,10 +430,28 @@ rules:
   applies_to:
     profile_ids:
     - dire-wolves
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.trollheim-undead.dire-wolves.immune-to-psychology
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: dire-wolves--immune-to-poison
-  runtime_grant: true
-  runtime_traits:
-    poison_immune: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: trait.poison-immune
+      scope: 'YES'
+      binding:
+        kind: trait
+        id: trait.poison-immune
+        parameters:
+          value: true
   name: Immune to Poison
   effect: Dire Wolves are immune to poison.
   source:
@@ -322,9 +483,26 @@ rules:
   applies_to:
     profile_ids:
     - dire-wolves
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.trollheim-undead.dire-wolves.dead
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: dire-wolves--no-pain
-  mechanic_id: skill.ignore-pain
-  runtime_grant: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: skill.ignore-pain
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.ignore-pain
   name: No Pain
   effect: Dire Wolves treat a Stunned result on the Injury chart as Knocked Down.
   source:
@@ -340,4 +518,3 @@ rules:
   applies_to:
     profile_ids:
     - dire-wolves
-  mechanic_id: skill.ignore-pain

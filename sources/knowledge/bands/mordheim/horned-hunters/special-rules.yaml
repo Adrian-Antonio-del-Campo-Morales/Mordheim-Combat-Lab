@@ -2,6 +2,15 @@ schema_version: 2
 band_id: horned-hunters
 rules:
 - id: horned-hunter--leader
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.horned-hunters.horned-hunter.leader
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Leader
   effect: Any warrior within 6" of the Horned Hunter may use his Leadership value when taking Leadership tests.
   source:
@@ -19,6 +28,15 @@ rules:
     profile_ids:
     - horned-hunter
 - id: horned-hunter--hang-the-bandit
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.horned-hunters.horned-hunter.hang-the-bandit
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Hang the Bandit!
   effect: A Horned Hunter hates all Bandits and Outlaws.
   source:
@@ -36,6 +54,15 @@ rules:
     profile_ids:
     - horned-hunter
 - id: priest-of-taal--prayers
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.horned-hunters.priest-of-taal.prayers
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: magia."
   name: Prayers
   effect: A Priest of Taal may use the Prayers of Taal.
   source:
@@ -53,6 +80,18 @@ rules:
     profile_ids:
     - priest-of-taal
 - id: priest-of-taal--strictures
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: profile
+    effects:
+    - id: profile.equipment-restrictions
+      scope: "YES"
+      binding:
+        kind: profile
+        id: profile.equipment-restrictions
+        parameters:
+          forbids: heavy-armour
   name: Strictures
   effect: Priests of Taal may never wear heavy armour.
   source:
@@ -70,6 +109,15 @@ rules:
     profile_ids:
     - priest-of-taal
 - id: initiates--infiltrator
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.horned-hunters.initiates.infiltrator
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: movimiento."
   name: Infiltrator
   effect: 'A warrior with this skill is always placed on the battlefield after the opposing warband and can be placed anywhere
     on the table as long as it is out of sight of the opposing warband and more than 12" away from any enemy model.
@@ -93,6 +141,15 @@ rules:
     profile_ids:
     - initiates
 - id: initiates--hang-the-bandit
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.horned-hunters.initiates.hang-the-bandit
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Hang the Bandit!
   effect: Taal's Initiates hate all Bandits and Outlaws.
   source:
@@ -110,6 +167,18 @@ rules:
     profile_ids:
     - initiates
 - id: initiates--strictures
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: profile
+    effects:
+    - id: profile.equipment-restrictions
+      scope: "YES"
+      binding:
+        kind: profile
+        id: profile.equipment-restrictions
+        parameters:
+          forbids: armour
   name: Strictures
   effect: Taal's Initiates may never wear armour.
   source:
@@ -127,6 +196,15 @@ rules:
     profile_ids:
     - initiates
 - id: drunken-gang--drunk
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.horned-hunters.drunken-gang.drunk
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Drunk
   effect: The Drunken Gang automatically passes all Leadership-based tests it is required to take.
   source:
@@ -144,6 +222,18 @@ rules:
     profile_ids:
     - drunken-gang
 - id: zealots--strictures
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: profile
+    effects:
+    - id: profile.equipment-restrictions
+      scope: "YES"
+      binding:
+        kind: profile
+        id: profile.equipment-restrictions
+        parameters:
+          forbids: armour
   name: Strictures
   effect: Zealots may never wear armour.
   source:
@@ -161,6 +251,15 @@ rules:
     profile_ids:
     - zealots
 - id: warhounds--animals
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.horned-hunters.warhounds.animals
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Animals
   effect: Warhounds are animals and thus do not gain experience.
   source:
@@ -178,6 +277,15 @@ rules:
     profile_ids:
     - warhounds
 - id: band--woodcraft
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.horned-hunters.band.woodcraft
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: movimiento."
   name: Woodcraft
   effect: Horned Hunter warbands move through any difficult terrain without suffering movement penalties.
   source:
@@ -194,6 +302,15 @@ rules:
   applies_to:
     band: true
 - id: band--horned-hunter-special-skills-master-trapper
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.horned-hunters.band.horned-hunter-special-skills-master-trapper
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: movimiento."
   name: Master Trapper
   effect: 'This huntsman is a masterful trap setter. Trip wire range has been extended by this warrior to reach 4".
 
@@ -214,6 +331,15 @@ rules:
   applies_to:
     band: true
 - id: band--horned-hunter-special-skills-infiltration
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.horned-hunters.band.horned-hunter-special-skills-infiltration
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: movimiento."
   name: Infiltration
   effect: 'A warrior with this skill is always placed on the
 
@@ -254,6 +380,15 @@ rules:
   applies_to:
     band: true
 - id: band--horned-hunter-special-skills-foul-odour
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.horned-hunters.band.horned-hunter-special-skills-foul-odour
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Foul Odour
   effect: 'Worshippers of Taal are one and all prodigious
 
@@ -304,6 +439,15 @@ rules:
   applies_to:
     band: true
 - id: band--horned-hunter-special-skills-animal-friendship
+  runtime:
+    scope: "YES"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.horned-hunters.band.horned-hunter-special-skills-animal-friendship
+      scope: "YES"
+      binding: null
+      reason: "No executable binding exists for this in-scope rule."
   name: Animal Friendship
   effect: 'Having grown up amidst the animals of the forest this warrior exudes a certain charm to all ''normal'' animals
     (warhorses, warhounds, etc.). Animals will never attack him and up to two wardogs that the warrior owns do not count against
@@ -327,6 +471,15 @@ rules:
   applies_to:
     band: true
 - id: band--horned-hunter-special-skills-pathfinder
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.horned-hunters.band.horned-hunter-special-skills-pathfinder
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Pathfinder
   effect: 'Taal has gifted this hunter with an uncanny ability to
 
@@ -355,6 +508,15 @@ rules:
   applies_to:
     band: true
 - id: band--horned-hunter-special-skills-hide-in-shadows
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.horned-hunters.band.horned-hunter-special-skills-hide-in-shadows
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: movimiento."
   name: Hide in Shadows
   effect: 'The hunter has learned to crouch unseen in any cover
 

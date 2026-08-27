@@ -1064,7 +1064,7 @@ armours:
   - *id029
 - id: armour.gromril-armour
   name: Gromril armour
-  summary: 'Save: 4+ Special Rules Movement Penalty: Gromril armour ❓ gives the wearer a 4+ basic save, and does not slow
+  summary: 'Save: 4+ Special Rules Movement Penalty: Gromril armour gives the wearer a 4+ basic save, and does not slow
     him down if he is also armed with a shield.'
   base_save: 4
   engine_option: Gromril armour
@@ -1076,7 +1076,7 @@ armours:
   - *id032
 - id: armour.ithilmar-armour
   name: Ithilmar armour
-  summary: 'Save: 5+ Special Rules Movement Penalty: Ithilmar armour ❓ gives the wearer a 5+ basic save, and does not slow
+  summary: 'Save: 5+ Special Rules Movement Penalty: Ithilmar armour gives the wearer a 5+ basic save, and does not slow
     him down if he is also armed with a shield.'
   base_save: 5
   engine_option: Ithilmar armour
@@ -1092,7 +1092,7 @@ armours:
 - id: armour.toughened-leathers
   name: Toughened leathers
   summary: 'Save: 6+ Special Rules Compatibility: Toughened leathers cannot be combined with the effects of any other armour
-    except a helmet or buckler (so not a shield). ❓ Sellback Toughened leathers cannot be sold back at the Trading Posts;'
+    except a helmet or buckler (so not a shield). Sellback Toughened leathers cannot be sold back at the Trading Posts;'
   base_save: 6
   engine_option: Toughened leathers
   engine_code: 5
@@ -1341,7 +1341,7 @@ poisons:
   source_refs: []
 - id: poison.spider-spittle
   name: Spider Spittle
-  summary: to the hit, the opponent chequea R or is paralizado.
+  summary: to the hit, the opponent cheques R or is paralized.
   engine_option: Spider Spittle
   engine_code: 9
   source_refs: []

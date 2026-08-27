@@ -86,7 +86,6 @@ profiles:
   combat_traits:
     starting_skills:
     - skill.hard-to-kill
-    concussion_immune: true
 - id: pit-veterans
   name: Pit Veterans
   type: hero

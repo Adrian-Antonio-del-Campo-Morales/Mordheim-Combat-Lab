@@ -20,6 +20,15 @@ rules:
   applies_to:
     profile_ids:
     - sigmarite-matriarch
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.sisters-of-sigmar.sigmarite-matriarch.leader
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: sigmarite-matriarch--prayers-of-sigmar
   name: Prayers of Sigmar
   effect: The Sigmarite Matriarch may use the Prayers of Sigmar and begins with one randomly generated prayer. She may learn
@@ -39,9 +48,26 @@ rules:
   applies_to:
     profile_ids:
     - sigmarite-matriarch
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.sisters-of-sigmar.sigmarite-matriarch.prayers-of-sigmar
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: augur--blessed-sight
-  mechanic_id: skill.blessed-sight
-  runtime_grant: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: skill.blessed-sight
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.blessed-sight
   name: Blessed Sight
   effect: The Augur may re-roll failed characteristic tests and failed rolls to hit in close combat or shooting; the second
     result must be accepted. If she was not taken Out of Action, she rolls two dice for her contribution during Exploration
@@ -78,6 +104,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.sisters-of-sigmar.band.human-maximum-characteristics
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--special-skills-sign-of-sigmar
   name: Sign of Sigmar
   effect: The Sister is favoured by the great god Sigmar. Possessed or Undead opponents lose their first attack against the
@@ -100,6 +135,15 @@ rules:
   - augur
   applies_to:
     band: true
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.sisters-of-sigmar.band.special-skills-sign-of-sigmar
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--special-skills-protection-of-sigmar
   name: Protection of Sigmar
   effect: The Sister has been blessed by the High Matriarch. Any spell which would affect her is nullified on a D6 roll of
@@ -122,6 +166,15 @@ rules:
   - augur
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.sisters-of-sigmar.band.special-skills-protection-of-sigmar
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--special-skills-utter-determination
   name: Utter Determination
   effect: Only the Matriarch may have this skill, which allows her to re-roll any failed Rout tests.
@@ -140,6 +193,15 @@ rules:
   - sigmarite-matriarch
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.sisters-of-sigmar.band.special-skills-utter-determination
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--special-skills-righteous-fury
   name: Righteous Fury
   effect: The Sister hates all Skaven, Undead, Possessed, Beastmen, Dark Elves, and other warbands classed as evil. Non-Chaos
@@ -162,6 +224,15 @@ rules:
   - augur
   applies_to:
     band: true
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.sisters-of-sigmar.band.special-skills-righteous-fury
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--special-skills-absolute-faith
   name: Absolute Faith
   effect: The Sister puts her faith in Sigmar, and faces dangers unflinchingly. She may re-roll any fear tests and does not
@@ -184,3 +255,12 @@ rules:
   - augur
   applies_to:
     band: true
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.sisters-of-sigmar.band.special-skills-absolute-faith
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'

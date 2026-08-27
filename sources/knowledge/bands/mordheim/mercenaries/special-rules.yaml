@@ -2,6 +2,15 @@ schema_version: 2
 band_id: mercenaries
 rules:
 - id: mercenary-captain--leader
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.mercenaries.mercenary-captain.leader
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Leader
   effect: 'Any warrior within 6" of the Mercenary
 
@@ -27,6 +36,16 @@ rules:
     profile_ids:
     - mercenary-captain
 - id: swordsmen--expert-swordsmen
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: selectable
+    effects:
+    - id: special-rule.swordsmen--expert-swordsmen
+      scope: "YES"
+      binding:
+        kind: compiler
+        id: special-rule.swordsmen--expert-swordsmen
   name: Expert Swordsmen
   effect: 'Swordsmen are so skilled with
 
@@ -56,6 +75,15 @@ rules:
     profile_ids:
     - swordsmen
 - id: band--reikland-command-radius
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.mercenaries.band.reikland-command-radius
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Reikland — Military Discipline
   effect: Reikland fighters may use their Captain's Leadership while within 12" instead of the normal 6".
   source:
@@ -72,6 +100,15 @@ rules:
   applies_to:
     band: true
 - id: band--reikland-marksman-training
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.mercenaries.band.reikland-marksman-training
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: disparo."
   name: Reikland — Marksman Training
   effect: All Reikland Marksmen have +1 Ballistic Skill, including Marksmen recruited after the warband is created.
   source:
@@ -88,6 +125,15 @@ rules:
   applies_to:
     band: true
 - id: band--middenheim-physical-prowess
+  runtime:
+    scope: "YES"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.mercenaries.band.middenheim-physical-prowess
+      scope: "YES"
+      binding: null
+      reason: "No executable binding exists for this in-scope rule."
   name: Middenheim — Physical Prowess
   effect: The Mercenary Captain and all Champions in a Middenheim warband start with Strength 4 instead of Strength 3.
   source:
@@ -104,6 +150,15 @@ rules:
   applies_to:
     band: true
 - id: band--marienburg-traders
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.mercenaries.band.marienburg-traders
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Marienburg — Natural Traders
   effect: A Marienburg warband receives +1 when attempting to find Rare items.
   source:
@@ -120,6 +175,15 @@ rules:
   applies_to:
     band: true
 - id: band--marienburg-wealth
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.mercenaries.band.marienburg-wealth
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Marienburg — Enormous Wealth
   effect: A Marienburg warband starts a campaign with 600 gc instead of 500 gc. In a one-off game it receives 20% more gold
     crowns for recruitment.
@@ -138,6 +202,15 @@ rules:
   applies_to:
     band: true
 - id: band--ostermark-stubborn-resolve
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.mercenaries.band.ostermark-stubborn-resolve
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Ostermark — Stubborn Resolve
   effect: Ostermark Heroes and Henchmen may re-roll a failed Leadership test for All Alone, and the warband may re-roll a
     failed Rout test. The second result must be accepted.

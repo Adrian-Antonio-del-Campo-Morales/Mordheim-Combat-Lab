@@ -181,7 +181,6 @@ profiles:
   combat_traits:
     starting_skills:
     - skill.ignore-pain
-    injury_profile: 3
 - id: necromantic-abomination
   name: Necromantic Abomination
   type: henchman

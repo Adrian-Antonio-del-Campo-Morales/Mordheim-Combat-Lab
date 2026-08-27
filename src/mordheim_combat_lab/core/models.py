@@ -23,6 +23,7 @@ class FighterBuild:
     main_material_id: str = "material.normal"; off_material_id: str = "material.normal"
     skill_ids: tuple[str, ...] = (); preparation_ids: tuple[str, ...] = ()
     special_rule_ids: tuple[str, ...] = ()
+    extra_hand_id: str | None = None
     main_poison_id: str | None = None; off_poison_id: str | None = None
     trait_overrides: Mapping[str, object] = field(default_factory=dict)
     collection: str = "mordheim"
@@ -43,12 +44,14 @@ class EffectSet:
     attacks_bonus: int = 0; charge_attacks_bonus: int = 0; charge_ws_bonus: int = 0
     first_round_attacks_bonus: int = 0; incoming_strength_modifier: int = 0
     incoming_attacks_modifier: int = 0
+    incoming_hit_modifier: int = 0
     armour_save_bonus: int = 0; ward_save: int = 7; priority: int = 0
     parry: bool = False; concussion: bool = False; two_handed: bool = False; paired: bool = False
     reroll_hits: bool = False; reroll_wounds: bool = False; strongman: bool = False
     charge_reroll_hits: bool = False
     step_aside: bool = False; thick_skull: bool = False
     ignore_armour: bool = False; automatic_hit: bool = False; cannot_be_parried: bool = False
+    bear_hug: bool = False
     poison_immunity: bool = False; frenzy: bool = False
     damage: int = 1; regeneration_save: int = 7; out_of_action_threshold: int = 5
     maximum_wound_target: int = 7
@@ -63,6 +66,7 @@ class CompiledFighter:
     injury_profile: int = 0
     random_characteristics: tuple[tuple[str,int,int,int], ...] = ()
     natural_armour_worst_save: int = 7
+    extra_attacks: tuple[EffectSet, ...] = ()
 
 @dataclass(frozen=True, slots=True)
 class DuelRequest:

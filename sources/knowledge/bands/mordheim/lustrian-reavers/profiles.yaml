@@ -36,8 +36,6 @@ profiles:
     es: null
   rule_ids:
   - conqueror--survivor
-  combat_traits:
-    survivor: true
 - id: saurus-slayer
   name: Saurus Slayer
   type: hero

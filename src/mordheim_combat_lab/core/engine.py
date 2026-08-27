@@ -180,6 +180,7 @@ def _prepare_weapon_attack(attacker: CompiledFighter, defender: CompiledFighter,
         attacker_ws_values = attacker_ws
     hit_target = np.array([to_hit(int(ws),int(dws)) for ws,dws in zip(attacker_ws_values,defender_state.weapon_skill[active])],dtype=np.int8)
     modifier = np.full(active.size, effect.hit_modifier, dtype=np.int8)
+    modifier += defender.global_effects.incoming_hit_modifier
     knife_fighting=has(effect,"skill.knife-fighting") and (has(weapon,"weapon.dagger") or has(weapon,"weapon.yambiya"))
     modifier += int(knife_fighting)
     if has(effect, "skill.berserker"):
@@ -268,6 +269,29 @@ def _resolve_weapon(attacker: CompiledFighter, defender: CompiledFighter, weapon
     wound_rolls = rng.integers(1, 7, hit_rows.size)
     critical_rolls = wound_rolls.copy()
     wounded = automatic_wound | (wound_rolls >= targets)
+    bear_hug_rows = np.zeros(hit_rows.size, dtype=bool)
+    # The Bear may replace two successful hits against one opponent with one
+    # crushing contest.  It is resolved here, after parries and charms but
+    # before armour, so its successful wound correctly permits no armour save.
+    bear_hug = attacker.global_effects.bear_hug
+    if bear_hug and hit_rows.size:
+        unique, counts = np.unique(hit_rows, return_counts=True)
+        hug_rows = unique[counts >= 2]
+        if hug_rows.size:
+            hug_positions = np.array([np.flatnonzero(hit_rows == row)[0] for row in hug_rows])
+            attacker_rolls = rng.integers(1, 7, hug_rows.size)
+            defender_rolls = rng.integers(1, 7, hug_rows.size)
+            won = attacker_rolls + strength_hits[hug_positions] >= defender_rolls + defender_state.strength[hug_rows]
+            keep = ~np.isin(hit_rows, hug_rows)
+            hit_rows = np.concatenate((hit_rows[keep], hug_rows))
+            hit_positions = np.concatenate((hit_positions[keep], hit_positions[hug_positions]))
+            strength_hits = np.concatenate((strength_hits[keep], strength_hits[hug_positions]))
+            wound_rolls = np.concatenate((wound_rolls[keep], wound_rolls[hug_positions]))
+            critical_rolls = np.concatenate((critical_rolls[keep], critical_rolls[hug_positions]))
+            targets = np.concatenate((targets[keep], targets[hug_positions]))
+            automatic_wound = np.concatenate((automatic_wound[keep], won))
+            wounded = np.concatenate((wounded[keep], won))
+            bear_hug_rows = np.concatenate((np.zeros(int(keep.sum()), dtype=bool), np.ones(hug_rows.size, dtype=bool)))
     if has(weapon,"weapon.rapier") and (~wounded).any():
         failed=np.flatnonzero(~wounded);extra_hits=rng.integers(1,7,failed.size)>=np.minimum(6,hit_target[hit_positions[failed]]+1)
         extra_wounds=rng.integers(1,7,failed.size)>=targets[failed]
@@ -298,6 +322,8 @@ def _resolve_weapon(attacker: CompiledFighter, defender: CompiledFighter, weapon
     save_target=np.minimum(save_target,natural)
     if effect.ignore_armour:
         save_target[:] = 7
+    elif bear_hug_rows.any():
+        save_target[bear_hug_rows[wounded]] = 7
     saved = np.zeros(wound_rows.size, dtype=bool)
     eligible = save_target <= 6
     saved[eligible] = rng.integers(1, 7, int(eligible.sum())) >= np.maximum(2, save_target[eligible])
@@ -400,6 +426,9 @@ def resolve_attacks(attacker: CompiledFighter, defender: CompiledFighter, rows: 
             off = _prepare_weapon_attack(attacker,defender,attacker.off_hand,active[use_off],charging,attacker_state,defender_state,rng,first_round)
             if off is not None:
                 prepared_attacks.append(off)
+    for weapon in attacker.extra_attacks:
+        extra = _prepare_weapon_attack(attacker, defender, weapon, rows, charging, attacker_state, defender_state, rng, first_round)
+        if extra is not None: prepared_attacks.append(extra)
     best_roll = np.full(charging.size,-1,dtype=np.int8)
     second_roll = np.full(charging.size,-1,dtype=np.int8)
     selected = [np.zeros(0,dtype=np.int64) for _ in prepared_attacks]

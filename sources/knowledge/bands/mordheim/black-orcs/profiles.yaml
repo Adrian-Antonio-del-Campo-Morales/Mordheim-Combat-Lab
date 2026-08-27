@@ -41,9 +41,6 @@ profiles:
   - black-orc-boss--leader
   - black-orc-boss--black-orc
   - black-orc-boss--oi-behave
-  combat_traits:
-    natural_armour_save: 6
-    natural_armour_stacks: true
 - id: black-orcs
   name: Black Orcs
   type: hero
@@ -82,9 +79,6 @@ profiles:
     es: null
   rule_ids:
   - black-orcs--black-orc
-  combat_traits:
-    natural_armour_save: 6
-    natural_armour_stacks: true
 - id: younguns
   name: Young’uns
   type: hero
@@ -239,9 +233,6 @@ profiles:
   - orc-nuttaz--unstable
   - orc-nuttaz--crazy
   - orc-nuttaz--savage
-  combat_traits:
-    starting_skills:
-    - skill.extra-attack
 - id: troll
   name: Troll
   type: henchman
@@ -284,6 +275,3 @@ profiles:
   - troll--always-hungry
   - troll--vomit-attack
   - troll--large-target
-  combat_traits:
-    starting_skills:
-    - skill.regeneration

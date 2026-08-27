@@ -17,6 +17,15 @@ rules:
   applies_to:
     profile_ids:
     - plague-priest
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-clan-pestilens.plague-priest.leader
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: pestilens-sorcerer--spellcaster
   name: Spellcaster
   effect: The Pestilens Sorcerer is a spellcaster and begins with one randomly generated spell from Magic of the Horned Rat.
@@ -35,6 +44,15 @@ rules:
   applies_to:
     profile_ids:
     - pestilens-sorcerer
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-clan-pestilens.pestilens-sorcerer.spellcaster
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: giant-rats--animal
   name: Animal
   effect: Giant Rats are animals and never gain Experience.
@@ -51,6 +69,15 @@ rules:
   applies_to:
     profile_ids:
     - giant-rats
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-clan-pestilens.giant-rats.animal
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: rat-ogre--fear
   name: Fear
   effect: The Rat Ogre causes Fear.
@@ -67,6 +94,15 @@ rules:
   applies_to:
     profile_ids:
     - rat-ogre
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-clan-pestilens.rat-ogre.fear
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: rat-ogre--stupidity
   name: Stupidity
   effect: The Rat Ogre is subject to Stupidity unless a Skaven Hero is within 6".
@@ -83,6 +119,15 @@ rules:
   applies_to:
     profile_ids:
     - rat-ogre
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-clan-pestilens.rat-ogre.stupidity
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: rat-ogre--experience
   name: Experience
   effect: The Rat Ogre never gains Experience.
@@ -99,6 +144,15 @@ rules:
   applies_to:
     profile_ids:
     - rat-ogre
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-clan-pestilens.rat-ogre.experience
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: rat-ogre--large-target
   name: Large Target
   effect: The Rat Ogre may be selected as a shooting target even when it is not the closest eligible target, and missile attacks
@@ -117,6 +171,15 @@ rules:
   applies_to:
     profile_ids:
     - rat-ogre
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-clan-pestilens.rat-ogre.large-target
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--clan-pestilens-special-skills-black-hunger
   name: Black Hunger
   effect: At the beginning of his turn, the Hero may invoke Black Hunger. For that turn he gains +1 Attack and adds the result
@@ -139,6 +202,15 @@ rules:
   - monk-initiates
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.lustria-clan-pestilens.band.clan-pestilens-special-skills-black-hunger
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--clan-pestilens-special-skills-censer-bearer
   name: Censer Bearer
   effect: Requires Black Hunger. The Hero gains Frenzy and may use only a Censer as a close-combat weapon.
@@ -159,6 +231,15 @@ rules:
   - monk-initiates
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.lustria-clan-pestilens.band.clan-pestilens-special-skills-censer-bearer
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--clan-pestilens-special-skills-rotten-body
   name: Rotten Body
   effect: The Hero is immune to poisons and diseases. If taken Out of Action because of a failed test while using a Censer,
@@ -181,6 +262,15 @@ rules:
   - monk-initiates
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.lustria-clan-pestilens.band.clan-pestilens-special-skills-rotten-body
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--clan-pestilens-special-skills-contagious
   name: Contagious
   effect: Requires Rotten Body. A model that takes this Hero Out of Action in close combat must take a Toughness test. Roll
@@ -205,7 +295,26 @@ rules:
   - monk-initiates
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.lustria-clan-pestilens.band.clan-pestilens-special-skills-contagious
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--clan-pestilens-special-skills-ignore-pain
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: skill.ignore-pain
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.ignore-pain
   name: Ignore Pain
   effect: Requires the Resilient Strength skill. The Hero treats a Stunned result on the Injury chart as Knocked Down.
   source:
@@ -225,7 +334,6 @@ rules:
   - monk-initiates
   applies_to:
     band: true
-  mechanic_id: skill.ignore-pain
 - id: band--clan-pestilens-special-skills-natural-climber
   name: Natural Climber
   effect: The Hero does not need to take Initiative tests when climbing walls or other vertical surfaces.
@@ -246,3 +354,12 @@ rules:
   - monk-initiates
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.lustria-clan-pestilens.band.clan-pestilens-special-skills-natural-climber
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'

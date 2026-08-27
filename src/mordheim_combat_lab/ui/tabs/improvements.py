@@ -16,12 +16,13 @@ from ..widgets import AnalysisProgress
 class ImprovementAnalysisTab(ttk.Frame):
     """Compare each selectable additional skill against the current build."""
 
-    def __init__(self, parent, catalogue, candidate_editor, enemy_editor, settings_provider):
+    def __init__(self, parent, catalogue, candidate_editor, enemy_editor, settings_provider, simulations):
         super().__init__(parent, padding=12)
         self.catalogue = catalogue
         self.candidate_editor = candidate_editor
         self.enemy_editor = enemy_editor
         self.settings_provider = settings_provider
+        self.simulations = simulations
         self.status = StringVar(value="Compare each legal additional skill against the candidate baseline.")
         self._running = False
         self._build_gui()
@@ -29,16 +30,28 @@ class ImprovementAnalysisTab(ttk.Frame):
     def _build_gui(self) -> None:
         ttk.Label(self, text="Improvement analysis", style="Heading.TLabel").pack(anchor="w")
         ttk.Label(self, text="Each result adds one currently unselected, profile-legal skill to the candidate configuration.", style="Muted.TLabel").pack(anchor="w", pady=(2, 12))
-        self.run_button = ttk.Button(self, text="Compare improvements", style="Accent.TButton", command=self.run)
-        self.run_button.pack(anchor="w", pady=(0, 10))
+        controls = ttk.Frame(self)
+        controls.pack(fill="x", pady=(0, 10))
+        ttk.Label(controls, text="Simulations").pack(side="left", padx=(0, 5))
+        ttk.Spinbox(controls, from_=1_000, to=10_000_000, increment=10_000, textvariable=self.simulations, width=12).pack(side="left", padx=(0, 12))
+        self.run_button = ttk.Button(controls, text="Compare improvements", style="Accent.TButton", command=self.run)
+        self.run_button.pack(side="left")
         self.progress = AnalysisProgress(self)
         self.progress.pack(fill="x", pady=(0, 10))
-        columns = ("skill", "candidate", "impact", "enemy", "unresolved")
+        # Keep the workbook-style result layout from the legacy Improvements
+        # page.  The current runtime evaluates one added skill at a time, so
+        # only the first improvement column is populated.
+        columns = ("improvement1", "improvement2", "improvement3", "improvement4", "improvement5", "optimal", "equipment")
         self.tree = ttk.Treeview(self, columns=columns, show="headings", height=15)
-        definitions = (("skill", "Skill", 280), ("candidate", "Candidate win", 145), ("impact", "Impact", 120), ("enemy", "Enemy win", 145), ("unresolved", "Unresolved", 130))
+        definitions = (
+            ("improvement1", "Improvement 1", 210), ("improvement2", "Improvement 2", 160),
+            ("improvement3", "Improvement 3", 160), ("improvement4", "Improvement 4", 160),
+            ("improvement5", "Improvement 5", 160), ("optimal", "Best Result", 170),
+            ("equipment", "Equipment Used", 230),
+        )
         for column, heading, width in definitions:
             self.tree.heading(column, text=heading)
-            self.tree.column(column, width=width, anchor="w" if column == "skill" else "center")
+            self.tree.column(column, width=width, anchor="w" if column.startswith("improvement") else "center")
         self.tree.pack(fill="both", expand=True)
         ttk.Label(self, textvariable=self.status, style="Muted.TLabel", wraplength=1080).pack(anchor="w", pady=(10, 0))
 
@@ -83,8 +96,11 @@ class ImprovementAnalysisTab(ttk.Frame):
     def _finished(self, rows, baseline: float, simulations: int) -> None:
         for item in self.tree.get_children():
             self.tree.delete(item)
-        for skill, candidate, impact, enemy, unresolved in sorted(rows, key=lambda row: row[2], reverse=True):
-            self.tree.insert("", "end", values=(skill, f"{candidate:.2f}%", f"{impact:+.2f}%", f"{enemy:.2f}%", f"{unresolved:.2f}%"))
+        for skill, candidate, impact, _enemy, _unresolved in sorted(rows, key=lambda row: row[2], reverse=True):
+            self.tree.insert("", "end", values=(
+                skill, "—", "—", "—", "—",
+                f"{candidate:.2f}% ({impact:+.2f}%)", "Current configuration",
+            ))
         self.status.set(f"Baseline: {baseline:.2f}% candidate win rate. Compared {len(rows)} skills across {(len(rows) + 1) * simulations:,} duels.")
         self.progress.finish("Complete")
         self._done()

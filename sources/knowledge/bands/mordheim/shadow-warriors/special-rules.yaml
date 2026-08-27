@@ -26,6 +26,15 @@ rules:
   applies_to:
     profile_ids:
     - shadow-master
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.shadow-warriors.shadow-master.leader
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: shadow-weaver--wizard
   name: Wizard
   effect: The Shadow Weaver is a wizard and may use Shadow Magic. The spell list itself is not modelled in this file.
@@ -43,6 +52,15 @@ rules:
   applies_to:
     profile_ids:
     - shadow-weaver
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.shadow-warriors.shadow-weaver.wizard
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--hate-dark-elves
   name: Hate Dark Elves
   effect: All warriors in the Shadow Warrior warband, excluding Hired Swords, are subject to Hatred against Dark Elves.
@@ -59,6 +77,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.shadow-warriors.band.hate-dark-elves
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--excellent-sight
   name: Excellent Sight
   effect: 'All Elves in the warband spot Hidden enemies at twice the normal distance: twice their Initiative in inches.'
@@ -75,6 +102,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.shadow-warriors.band.excellent-sight
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--distaste-for-poison
   name: Distaste for Poison
   effect: Warriors in the Shadow Warrior warband may not use poisons of any type.
@@ -91,6 +127,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.shadow-warriors.band.distaste-for-poison
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--unforgiving
   name: Unforgiving
   effect: In multiplayer games, the Shadow Warrior warband may never form an alliance with a warband of a Chaotic nature,
@@ -109,6 +154,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.shadow-warriors.band.unforgiving
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--tolerant
   name: Tolerant
   effect: The warband may hire Hired Swords that are not Chaotic or evil and do not specialise in poison. Examples explicitly
@@ -127,6 +181,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.shadow-warriors.band.tolerant
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--elf-maximum-characteristics
   name: Elf Maximum Characteristics
   effect: 'Shadow Warriors are Elves and use the Elf racial maximum profile: M5, WS7, BS7, S4, T4, W3, I9, A4, Ld10.'
@@ -143,6 +206,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.shadow-warriors.band.elf-maximum-characteristics
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--shadow-warrior-special-skills-infiltration
   name: Infiltration
   effect: An Elf with this skill is always placed on the battlefield after the opposing warband and can be placed anywhere
@@ -163,6 +235,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.shadow-warriors.band.shadow-warrior-special-skills-infiltration
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--shadow-warrior-special-skills-see-in-shadows
   name: See in Shadows
   effect: 'The warrior''s senses have become especially
@@ -199,6 +280,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.shadow-warriors.band.shadow-warrior-special-skills-see-in-shadows
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--shadow-warrior-special-skills-hide-in-shadows
   name: Hide in Shadows
   effect: 'Over time Shadow Warriors have learned how
@@ -239,6 +329,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.shadow-warriors.band.shadow-warrior-special-skills-hide-in-shadows
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--shadow-warrior-special-skills-sniper
   name: Sniper
   effect: Long years of guerrilla warfare against the Dark Elves have taught Shadow Warriors how to strike from the shadows
@@ -261,6 +360,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.shadow-warriors.band.shadow-warrior-special-skills-sniper
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--shadow-warrior-special-skills-powerful-build
   name: Powerful Build
   effect: 'The warrior is strongly built for an Elf, and is
@@ -305,6 +413,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.shadow-warriors.band.shadow-warrior-special-skills-powerful-build
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--shadow-warrior-special-skills-master-of-runes
   name: Master of Runes
   effect: 'The Shadow Weaver has learned to harness
@@ -371,3 +488,12 @@ rules:
   - shadow-weaver
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.shadow-warriors.band.shadow-warrior-special-skills-master-of-runes
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.

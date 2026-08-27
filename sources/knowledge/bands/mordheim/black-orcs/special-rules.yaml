@@ -2,6 +2,15 @@ schema_version: 2
 band_id: black-orcs
 rules:
 - id: black-orc-boss--leader
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.black-orcs.black-orc-boss.leader
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Leader
   effect: 'Any warrior within 6" of the Boss may use his
 
@@ -23,6 +32,25 @@ rules:
     profile_ids:
     - black-orc-boss
 - id: black-orc-boss--black-orc
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: profile
+    effects:
+    - id: trait.natural-armour-save
+      scope: "YES"
+      binding:
+        kind: trait
+        id: trait.natural-armour-save
+        parameters:
+          value: 6
+    - id: trait.natural-armour-stacks
+      scope: "YES"
+      binding:
+        kind: trait
+        id: trait.natural-armour-stacks
+        parameters:
+          value: true
   name: Black Orc
   effect: Model starts with a natural 6+ Armour Black Orc Save. This save may be combined with other equipment to improve
     it.
@@ -41,6 +69,15 @@ rules:
     profile_ids:
     - black-orc-boss
 - id: black-orc-boss--oi-behave
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.black-orcs.black-orc-boss.oi-behave
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Oi Behave!
   effect: 'If any Henchman fails his Animosity test
 
@@ -110,6 +147,25 @@ rules:
     profile_ids:
     - black-orc-boss
 - id: black-orcs--black-orc
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: profile
+    effects:
+    - id: trait.natural-armour-save
+      scope: "YES"
+      binding:
+        kind: trait
+        id: trait.natural-armour-save
+        parameters:
+          value: 6
+    - id: trait.natural-armour-stacks
+      scope: "YES"
+      binding:
+        kind: trait
+        id: trait.natural-armour-stacks
+        parameters:
+          value: true
   name: Black Orc
   effect: Model starts with a natural 6+ Armour Black Orc Save. This save may be combined with other equipment to improve
     it.
@@ -128,6 +184,15 @@ rules:
     profile_ids:
     - black-orcs
 - id: younguns--black-orc-blood
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.black-orcs.younguns.black-orc-blood
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Black Orc Blood
   effect: 'One Young’un may be upgraded to
 
@@ -157,6 +222,15 @@ rules:
     profile_ids:
     - younguns
 - id: orc-boyz--animosity
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.black-orcs.orc-boyz.animosity
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Animosity
   effect: Subject to the warband's Animosity rule. At the start of the Orc player's turn, roll a D6 for this Orc Henchman
     if it is not in hand-to-hand combat; on a 1, roll on the Animosity result table.
@@ -176,6 +250,15 @@ rules:
     profile_ids:
     - orc-boyz
 - id: orc-shootaz--animosity
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.black-orcs.orc-shootaz.animosity
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Animosity
   effect: Subject to the warband's Animosity rule. At the start of the Orc player's turn, roll a D6 for this Orc Henchman
     if it is not in hand-to-hand combat; on a 1, roll on the Animosity result table.
@@ -195,6 +278,15 @@ rules:
     profile_ids:
     - orc-shootaz
 - id: orc-shootaz--uncommon
+  runtime:
+    scope: "YES"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.black-orcs.orc-shootaz.uncommon
+      scope: "YES"
+      binding: null
+      reason: "No executable binding exists for this in-scope rule."
   name: Uncommon
   effect: 'A warband may not
 
@@ -236,6 +328,15 @@ rules:
     profile_ids:
     - orc-shootaz
 - id: orc-nuttaz--unstable
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.black-orcs.orc-nuttaz.unstable
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Unstable
   effect: 'These Orcs are not quite all there. They do
 
@@ -261,6 +362,15 @@ rules:
     profile_ids:
     - orc-nuttaz
 - id: orc-nuttaz--crazy
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.black-orcs.orc-nuttaz.crazy
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Crazy
   effect: 'Nuttaz always pass any Leadership-based Tests
 
@@ -294,6 +404,31 @@ rules:
     profile_ids:
     - orc-nuttaz
 - id: orc-nuttaz--savage
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: profile
+    effects:
+    - id: skill.extra-attack
+      scope: "YES"
+      binding:
+        kind: mechanic
+        id: skill.extra-attack
+    - id: profile.equipment-restrictions
+      scope: "YES"
+      binding:
+        kind: profile
+        id: profile.equipment-restrictions
+        parameters:
+          forbids: [armour, ranged-weapons]
+    - id: movement.compulsory-charge
+      scope: "NO"
+      binding: null
+      reason: "Movement is outside the duel runtime."
+    - id: psychology.leadership-restrictions
+      scope: "LATER"
+      binding: null
+      reason: "Psychology is deferred."
   name: Savage
   effect: 'Nuttaz must always run or charge their
 
@@ -363,6 +498,15 @@ rules:
     profile_ids:
     - orc-nuttaz
 - id: troll--fear
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.black-orcs.troll.fear
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Fear
   effect: Trolls are frightening monsters which cause fear.
   source:
@@ -380,6 +524,15 @@ rules:
     profile_ids:
     - troll
 - id: troll--stupidity
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.black-orcs.troll.stupidity
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Stupidity
   effect: A Troll is subject to the rules for stupidity.
   source:
@@ -397,6 +550,20 @@ rules:
     profile_ids:
     - troll
 - id: troll--regeneration
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: profile
+    effects:
+    - id: skill.regeneration
+      scope: "YES"
+      binding:
+        kind: mechanic
+        id: skill.regeneration
+    - id: campaign.post-battle-injury
+      scope: "NO"
+      binding: null
+      reason: "Post-battle injury is a campaign state."
   name: Regeneration
   effect: Trolls have a unique physiology that allows them to regenerate wounds. Whenever an enemy successfully inflicts a
     wound on a Troll roll a D6, on a result of 4 or more the wound is ignored and the Troll is unhurt. Trolls may not regenerate
@@ -420,6 +587,15 @@ rules:
     profile_ids:
     - troll
 - id: troll--dumb-monster
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.black-orcs.troll.dumb-monster
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: psicología."
   name: Dumb Monster
   effect: 'A Troll is far too stupid to ever learn any
 
@@ -441,6 +617,15 @@ rules:
     profile_ids:
     - troll
 - id: troll--always-hungry
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.black-orcs.troll.always-hungry
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Always Hungry
   effect: A Troll requires an upkeep cost. This upkeep represents the copious amounts of food that must be fed to the Troll
     in order to keep him loyal to the warband. The warband must pay 20 gold crowns after every game in order to keep the Troll.
@@ -464,7 +649,16 @@ rules:
     profile_ids:
     - troll
 - id: troll--vomit-attack
-  mechanic_id: weapon.vomit-attack
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: selectable
+    effects:
+    - id: weapon.vomit-attack
+      scope: "YES"
+      binding:
+        kind: mechanic
+        id: weapon.vomit-attack
   name: Vomit Attack
   effect: Instead of his normal attacks, a Troll can regurgitate its highly corrosive digestive juices on an unfortunate hand-to-hand
     combat opponent. This is a single attack that automatically hits with a Strength of 5 and ignores armour saves.
@@ -484,6 +678,15 @@ rules:
     profile_ids:
     - troll
 - id: troll--large-target
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.black-orcs.troll.large-target
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: disparo."
   name: Large Target
   effect: Trolls are Large Targets as defined in the shooting rules.
   source:
@@ -501,6 +704,15 @@ rules:
     profile_ids:
     - troll
 - id: band--let-the-goons-do-the-work
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.black-orcs.band.let-the-goons-do-the-work
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: monturas."
   name: Let the goons do the work
   effect: Black Orcs do not ride mounts of any kind. Only normal Orcs in the warband may ride a boar or another permitted
     mount.
@@ -518,6 +730,15 @@ rules:
   applies_to:
     band: true
 - id: band--da-boss-is-dead
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.black-orcs.band.da-boss-is-dead
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Da Boss is Dead!
   effect: If the Boss is killed, a Black Orc takes over leadership before any other warrior regardless of relative experience,
     and the replacement automatically gains "Oi Behave!".
@@ -536,6 +757,15 @@ rules:
   applies_to:
     band: true
 - id: band--animosity
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.black-orcs.band.animosity
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Animosity
   effect: 'At the start of the Orc player''s turn, roll a D6 for each Orc or Goblin Henchman not engaged in hand-to-hand combat.
     On a 1, roll another D6: 1 = attack the nearest eligible friendly Orc/Goblin Henchman or Hired Sword if possible (charge
@@ -564,6 +794,18 @@ rules:
   applies_to:
     band: true
 - id: band--black-orc-special-skills
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: band
+    effects:
+    - id: profile.skill-access
+      scope: "YES"
+      binding:
+        kind: profile
+        id: profile.skill-access
+        parameters:
+          category: special
   name: Black Orc Special Skills
   effect: Black Orc Heroes may use the following Skill list instead of the standard skill lists available to them.
   source:
@@ -580,6 +822,15 @@ rules:
   applies_to:
     band: true
 - id: band--black-orc-special-skills-proven-warrior
+  runtime:
+    scope: "YES"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.black-orcs.band.black-orc-special-skills-proven-warrior
+      scope: "YES"
+      binding: null
+      reason: "No executable binding exists for this in-scope rule."
   name: proven warrior
   effect: 'This young warrior has proven himself worthy of his
 
@@ -624,6 +875,15 @@ rules:
   applies_to:
     band: true
 - id: band--black-orc-special-skills-ard-ead
+  runtime:
+    scope: "YES"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.black-orcs.band.black-orc-special-skills-ard-ead
+      scope: "YES"
+      binding: null
+      reason: "No executable binding exists for this in-scope rule."
   name: ’ard ead
   effect: The warrior has a thick skull even for an Orc. He has a special 3+ save on a D6 to avoid being stunned. If the save
     is made, treat a stunned result as knocked down instead. If the Orc also wears a helmet, this save is 2+ instead of 3+
@@ -644,6 +904,15 @@ rules:
   applies_to:
     band: true
 - id: band--black-orc-special-skills-waaagh
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.black-orcs.band.black-orc-special-skills-waaagh
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: ataques."
   name: waaagh!
   effect: Orcs are aggressive creatures and some are experts at bulldozing charges. The warrior may add +D3" to his charge
     range.
@@ -661,6 +930,15 @@ rules:
   applies_to:
     band: true
 - id: band--black-orc-special-skills-ere-we-go
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.black-orcs.band.black-orc-special-skills-ere-we-go
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: ’ere we go!
   effect: 'Orcs often charge even the most fearsome opponents. The
 
@@ -681,6 +959,15 @@ rules:
   applies_to:
     band: true
 - id: band--black-orc-special-skills-da-cunnin-plan
+  runtime:
+    scope: "YES"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.black-orcs.band.black-orc-special-skills-da-cunnin-plan
+      scope: "YES"
+      binding: null
+      reason: "No executable binding exists for this in-scope rule."
   name: da cunnin’ plan
   effect: 'Only the Boss may have this skill. The warband may re-roll
 
@@ -701,6 +988,16 @@ rules:
   applies_to:
     band: true
 - id: band--black-orc-special-skills-eadbasher
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: selectable
+    effects:
+    - id: skill.head-crusher
+      scope: "YES"
+      binding:
+        kind: mechanic
+        id: skill.head-crusher
   name: ’eadbasher
   effect: Orcs have massive physical strength and some of them even learn to aim their blows at the heads of their opponents,
     with obvious results. Any knocked down results which the Orc causes in hand-to-hand count as stunned results instead.

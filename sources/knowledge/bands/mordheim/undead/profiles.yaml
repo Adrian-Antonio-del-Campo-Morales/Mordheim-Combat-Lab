@@ -194,7 +194,6 @@ profiles:
   - dire-wolves--no-pain
   combat_traits:
     poison_immune: true
-    charge_attack_bonus: true
 - id: zombies
   name: Zombies
   type: henchman

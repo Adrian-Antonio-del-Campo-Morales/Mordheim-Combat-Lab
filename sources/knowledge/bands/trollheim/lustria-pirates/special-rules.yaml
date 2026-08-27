@@ -17,6 +17,15 @@ rules:
   applies_to:
     profile_ids:
     - pirate-captain
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-pirates.pirate-captain.leader
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: gunners--carronades-are-dangerous
   name: Carronades Are Dangerous, Cabin Boy!
   effect: A Gunner carrying a Carronade must form a one-model Henchman group. The carrier may be recruited as a new Gunner
@@ -37,6 +46,15 @@ rules:
   applies_to:
     profile_ids:
     - gunners
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-pirates.gunners.carronades-are-dangerous
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: boatswains--expert-rigger
   name: Expert Rigger
   effect: A Boatswain may re-roll any failed Initiative test made to leap across a gap, jump down, make a diving charge, or
@@ -55,6 +73,15 @@ rules:
   applies_to:
     profile_ids:
     - boatswains
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-pirates.boatswains.expert-rigger
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: swabbies--special-recruitment
   name: Not Recruited Normally
   effect: Swabbies may not be hired through the normal recruitment procedure; they join only through the Pirates' special
@@ -73,6 +100,15 @@ rules:
   applies_to:
     profile_ids:
     - swabbies
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-pirates.swabbies.special-recruitment
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: swabbies--never-gain-experience
   name: Never Gain Experience
   effect: Swabbies never gain Experience.
@@ -89,6 +125,15 @@ rules:
   applies_to:
     profile_ids:
     - swabbies
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-pirates.swabbies.never-gain-experience
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: swabbies--rabble
   name: Rabble
   effect: Members of a Swabbie group do not need identical equipment. Each Swabbie may be equipped differently, but only with
@@ -107,6 +152,15 @@ rules:
   applies_to:
     profile_ids:
     - swabbies
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-pirates.swabbies.rabble
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: swabbies--curse-they-have-escaped
   name: Curse Them, They've Escaped!
   effect: If the Pirate warband Routs, every Swabbie that had already left the table in an earlier turn because of the scenario
@@ -125,6 +179,15 @@ rules:
   applies_to:
     profile_ids:
     - swabbies
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-pirates.swabbies.curse-they-have-escaped
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: swabbies--do-not-worry-about-them
   name: Don't Worry About Them
   effect: Swabbies that are fleeing or Out of Action are ignored when determining whether the warband must take a Rout test.
@@ -141,6 +204,15 @@ rules:
   applies_to:
     profile_ids:
     - swabbies
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-pirates.swabbies.do-not-worry-about-them
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--swabbie-limit
   name: Swabbie Limit
   effect: The warband may never include more Swabbies than Crew models.
@@ -156,6 +228,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.lustria-pirates.band.swabbie-limit
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--kidnapped
   name: Kidnapped!
   effect: 'If an enemy Human Hero suffers the Captured result on the Serious Injury table, the Pirates may attempt to press
@@ -191,6 +272,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.lustria-pirates.band.kidnapped
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--stragglers-and-prisoners
   name: Stragglers and Prisoners
   effect: When Exploration produces a Straggler, the Pirate Captain may take a Leadership test; if passed, the Straggler joins
@@ -218,6 +308,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.lustria-pirates.band.stragglers-and-prisoners
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--hired-swords
   name: Hired Swords
   effect: Unless stated otherwise, the Pirates may hire the same Hired Swords and access the same equipment as a Human Mercenary
@@ -235,6 +334,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.lustria-pirates.band.hired-swords
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--one-off-games
   name: One-Off Games
   effect: In games that are not part of a campaign, the Pirate warband begins with two free Swabbies.
@@ -250,6 +358,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.lustria-pirates.band.one-off-games
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--succession
   name: Succession
   effect: If the Pirate Captain dies, one of the Ship's Mates becomes the new Captain and assumes leadership in the same way
@@ -267,6 +384,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.lustria-pirates.band.succession
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--pirate-special-skills-sea-shanty-singer
   name: Sea Shanty Singer
   effect: At the start of the Combat phase, choose one enemy model in base contact with the Hero. That model must pass a Leadership
@@ -288,6 +414,15 @@ rules:
   - cabin-boys
   applies_to:
     band: true
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.lustria-pirates.band.pirate-special-skills-sea-shanty-singer
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--pirate-special-skills-sea-legs
   name: Sea Legs
   effect: If the Hero falls, each of the 1D3 resulting hits may be ignored on a 4+ on D6, rolling separately for each hit.
@@ -311,6 +446,15 @@ rules:
   - cabin-boys
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.lustria-pirates.band.pirate-special-skills-sea-legs
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--pirate-special-skills-cutlass-master
   name: Cutlass Master
   effect: While armed with a Cutlass, the Hero may successfully parry an attack by matching the opponent's highest successful
@@ -334,6 +478,15 @@ rules:
   - cabin-boys
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.lustria-pirates.band.pirate-special-skills-cutlass-master
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--pirate-special-skills-booming-voice
   name: Booming Voice
   effect: Pirate Captain only. Once per turn, while the Captain is standing and not engaged in close combat, one Pirate within
@@ -353,7 +506,26 @@ rules:
   - pirate-captain
   applies_to:
     band: true
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.lustria-pirates.band.pirate-special-skills-booming-voice
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--pirate-special-skills-hardy-constitution
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: skill.hardy-constitution
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.hardy-constitution
   name: Hardy Constitution
   effect: When the Hero suffers a critical hit, roll D6. On 5+ the critical effect is ignored and the wound is resolved normally;
     on a failure, resolve the critical hit normally.
@@ -374,7 +546,6 @@ rules:
   - cabin-boys
   applies_to:
     band: true
-  mechanic_id: skill.hardy-constitution
 - id: band--pirate-special-skills-swashbuckler
   name: Swashbuckler
   effect: At the end of any close-combat phase, whether the Hero's or the opponent's, if the Hero is in base contact with
@@ -400,3 +571,12 @@ rules:
   - cabin-boys
   applies_to:
     band: true
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.lustria-pirates.band.pirate-special-skills-swashbuckler
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'

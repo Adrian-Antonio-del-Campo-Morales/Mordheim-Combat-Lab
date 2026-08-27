@@ -17,6 +17,15 @@ rules:
   applies_to:
     profile_ids:
     - assassin-adept
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.trollheim-skaven-clan-eshin.assassin-adept.leader
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: assassin-adept--consummate-fighter
   name: Consummate Fighter
   effect: Any armour save caused by a Wound inflicted by the Assassin suffers an additional -1 modifier, whether the Wound
@@ -35,6 +44,18 @@ rules:
   applies_to:
     profile_ids:
     - assassin-adept
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: trait.perfect-killer
+      scope: 'YES'
+      binding:
+        kind: trait
+        id: trait.perfect-killer
+        parameters:
+          value: true
 - id: eshin-sorcerer--spellcaster
   name: Spellcaster
   effect: The Eshin Sorcerer is a spellcaster and may use Magic of the Horned Rat. The spell list and spell effects are intentionally
@@ -53,6 +74,15 @@ rules:
   applies_to:
     profile_ids:
     - eshin-sorcerer
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.trollheim-skaven-clan-eshin.eshin-sorcerer.spellcaster
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: giant-rats--pack-size
   name: Pack Size
   effect: The warband may recruit any number of Giant Rats.
@@ -69,6 +99,15 @@ rules:
   applies_to:
     profile_ids:
     - giant-rats
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.trollheim-skaven-clan-eshin.giant-rats.pack-size
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: giant-rats--animal
   name: Animal
   effect: Giant Rats are animals and never gain Experience.
@@ -85,6 +124,15 @@ rules:
   applies_to:
     profile_ids:
     - giant-rats
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.trollheim-skaven-clan-eshin.giant-rats.animal
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: rat-ogre--fear
   name: Fear
   effect: The Rat Ogre causes Fear.
@@ -101,6 +149,15 @@ rules:
   applies_to:
     profile_ids:
     - rat-ogre
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.trollheim-skaven-clan-eshin.rat-ogre.fear
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: rat-ogre--stupidity
   name: Stupidity
   effect: The Rat Ogre is subject to Stupidity unless a Skaven Hero is within 6".
@@ -117,6 +174,15 @@ rules:
   applies_to:
     profile_ids:
     - rat-ogre
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.trollheim-skaven-clan-eshin.rat-ogre.stupidity
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: rat-ogre--experience
   name: Experience
   effect: The Rat Ogre never gains Experience.
@@ -133,6 +199,15 @@ rules:
   applies_to:
     profile_ids:
     - rat-ogre
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.trollheim-skaven-clan-eshin.rat-ogre.experience
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: rat-ogre--large-target
   name: Large Target
   effect: 'The Trollheim errata replaces the original Large rule with Large Target: the Rat Ogre counts as a Large Target
@@ -151,6 +226,15 @@ rules:
   applies_to:
     profile_ids:
     - rat-ogre
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.trollheim-skaven-clan-eshin.rat-ogre.large-target
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--skaven-special-skills-black-hunger
   name: Black Hunger
   effect: At the start of his turn, the Skaven Hero may invoke Black Hunger. For that turn he gains +1 Attack and adds the
@@ -173,7 +257,27 @@ rules:
   - night-runners
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.trollheim-skaven-clan-eshin.band.skaven-special-skills-black-hunger
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--skaven-special-skills-tail-fighting
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: special-rule.band--skaven-special-skills-tail-fighting
+      scope: 'YES'
+      binding:
+        kind: compiler
+        id: special-rule.band--skaven-special-skills-tail-fighting
+  runtime_selectable: true
   name: Tail Fighting
   effect: The Skaven may wield a Dagger, Shield or Sword with his tail. A weapon held this way grants one additional attack
     with that weapon; a Shield held this way grants +1 to the armour save instead.
@@ -215,6 +319,15 @@ rules:
   - night-runners
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.trollheim-skaven-clan-eshin.band.skaven-special-skills-wall-runner
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--skaven-special-skills-infiltration
   name: Infiltration
   effect: The Skaven deploys after the opposing warband and may be placed anywhere outside the opponent's line of sight and
@@ -239,7 +352,26 @@ rules:
   - night-runners
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.trollheim-skaven-clan-eshin.band.skaven-special-skills-infiltration
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--skaven-special-skills-art-of-silent-death
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: skill.art-of-silent-death
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.art-of-silent-death
   name: Art of Silent Death
   effect: In close combat the Skaven may fight with bare claws without penalty and counts as using two close-combat weapons,
     gaining +1 Attack. The Hero causes a critical hit on a To Hit roll of 5-6 instead of only 6. When combined with Eshin
@@ -263,4 +395,3 @@ rules:
   - night-runners
   applies_to:
     band: true
-  mechanic_id: skill.art-of-silent-death

@@ -2,6 +2,15 @@ schema_version: 2
 band_id: amazons-lustria
 rules:
 - id: serpent-priestess--leader
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.amazons-lustria.serpent-priestess.leader
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Leader
   effect: 'Any models in the warband within 6"
 
@@ -27,6 +36,15 @@ rules:
     profile_ids:
     - serpent-priestess
 - id: serpent-priestess--wizard
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.amazons-lustria.serpent-priestess.wizard
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: magia."
   name: Wizard
   effect: 'The Priestess is a Wizard and may
 
@@ -52,6 +70,15 @@ rules:
     profile_ids:
     - serpent-priestess
 - id: jaguar-warriors--one-with-the-jungle
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.amazons-lustria.jaguar-warriors.one-with-the-jungle
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: movimiento."
   name: One with the Jungle
   effect: 'A Jaguar has lived her life in the deepest parts and can move
 
@@ -73,6 +100,15 @@ rules:
     profile_ids:
     - jaguar-warriors
 - id: band--special-rules
+  runtime:
+    scope: "YES"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.amazons-lustria.band.special-rules
+      scope: "YES"
+      binding: null
+      reason: "No executable binding exists for this in-scope rule."
   name: Special Rules
   effect: 'Isolationists: The Amazons are constantly battling against the predations of the Lizardmen and greedy treasure-seeking
     Norse. Amazon culture reflects their dislike and distrust of outsiders and in battle they are particularly savage. Amazons
@@ -115,6 +151,18 @@ rules:
   applies_to:
     band: true
 - id: band--amazon-special-skills
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: band
+    effects:
+    - id: profile.skill-access
+      scope: "YES"
+      binding:
+        kind: profile
+        id: profile.skill-access
+        parameters:
+          category: special
   name: Amazon special skills
   effect: Amazon Heroines may use the following skill table instead of any of the standard skill tables available to them.
   source:
@@ -131,6 +179,15 @@ rules:
   applies_to:
     band: true
 - id: band--amazon-special-skills-skink-hunter
+  runtime:
+    scope: "YES"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.amazons-lustria.band.amazon-special-skills-skink-hunter
+      scope: "YES"
+      binding: null
+      reason: "No executable binding exists for this in-scope rule."
   name: skink hunter
   effect: Through her exploits the Amazon has proven herself a master when it comes to hunting Lizardmen, particularly Skinks.
     An Amazon with this skill will always strike first in the first round of combat against Skink models no matter who charged.
@@ -149,6 +206,15 @@ rules:
   applies_to:
     band: true
 - id: band--amazon-special-skills-elixir-of-life
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.amazons-lustria.band.amazon-special-skills-elixir-of-life
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: elixir of life
   effect: After years of service among her tribe an Amazon is granted access to the waters that make the Elixir of Life. The
     Elixir is said to heal wounds and make the Amazons immortal. Any Amazon with this Elixir can re-roll a Serious Injury
@@ -169,6 +235,15 @@ rules:
   applies_to:
     band: true
 - id: band--amazon-special-skills-mesmerising-dance
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.amazons-lustria.band.amazon-special-skills-mesmerising-dance
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: mesmerising dance
   effect: Some Amazon women develop their fighting motions into a graceful dance that can transfix their foes. Any model fighting
     in base contact with the Amazon must take a Leadership test at the start of each turn. If they fail they cannot attack
@@ -191,6 +266,15 @@ rules:
   applies_to:
     band: true
 - id: band--amazon-special-skills-savage-fury
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.amazons-lustria.band.amazon-special-skills-savage-fury
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: savage fury
   effect: The Amazon has learned to channel her anger and aggression making her a veritable animal while attacking her foes.
     Any Amazon model with this skill receives + 1 A when charging and is immune to charm effects and fear.
@@ -209,6 +293,15 @@ rules:
   applies_to:
     band: true
 - id: band--amazon-special-skills-concealment
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.amazons-lustria.band.amazon-special-skills-concealment
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: movimiento."
   name: concealment
   effect: The Amazon is adept at blending in with her surroundings. When hiding in jungle terrain all enemy models must halve
     the range at which they can spot them.

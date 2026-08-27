@@ -12,6 +12,7 @@ from ...core.compiler import compile_fighter
 from ...core.engine import simulate_duel
 from ...core.models import SimulationCancelled
 from ..widgets import AnalysisProgress
+from ..services import motta_score
 
 
 class EquipmentAnalysisTab(ttk.Frame):
@@ -19,12 +20,13 @@ class EquipmentAnalysisTab(ttk.Frame):
 
     MAX_CONFIGURATIONS = 500
 
-    def __init__(self, parent, catalogue, candidate_editor, enemy_editor, settings_provider):
+    def __init__(self, parent, catalogue, candidate_editor, enemy_editor, settings_provider, simulations):
         super().__init__(parent, padding=12)
         self.catalogue = catalogue
         self.candidate_editor = candidate_editor
         self.enemy_editor = enemy_editor
         self.settings_provider = settings_provider
+        self.simulations = simulations
         self.maximum_changed_slots = IntVar(value=1)
         self.status = StringVar(value="Compare the candidate's legal off-hand and armour configurations.")
         self._running = False
@@ -35,18 +37,24 @@ class EquipmentAnalysisTab(ttk.Frame):
         ttk.Label(self, text="The selected main weapon and skills remain fixed while legal equipment configurations are simulated.", style="Muted.TLabel").pack(anchor="w", pady=(2, 12))
         controls = ttk.Frame(self)
         controls.pack(fill="x", pady=(0, 10))
+        ttk.Label(controls, text="Simulations").pack(side="left", padx=(0, 5))
+        ttk.Spinbox(controls, from_=1_000, to=10_000_000, increment=10_000, textvariable=self.simulations, width=12).pack(side="left", padx=(0, 12))
         self.run_button = ttk.Button(controls, text="Compare equipment", style="Accent.TButton", command=self.run)
         self.run_button.pack(side="left")
         ttk.Label(controls, text="Maximum changed slots").pack(side="left", padx=(14, 5))
         ttk.Spinbox(controls, from_=1, to=8, textvariable=self.maximum_changed_slots, width=5).pack(side="left")
         self.progress = AnalysisProgress(self)
         self.progress.pack(fill="x", pady=(0, 10))
-        columns = ("equipment", "candidate", "enemy", "unresolved")
+        columns = ("item1", "item2", "item3", "item4", "item5", "optimal", "motta", "cost", "equipment")
         self.tree = ttk.Treeview(self, columns=columns, show="headings", height=15)
-        definitions = (("equipment", "Equipment configuration", 570), ("candidate", "Candidate win", 145), ("enemy", "Enemy win", 145), ("unresolved", "Unresolved", 130))
+        definitions = (
+            ("item1", "Item 1", 180), ("item2", "Item 2", 180), ("item3", "Item 3", 180),
+            ("item4", "Item 4", 180), ("item5", "Item 5", 180), ("optimal", "Best Result", 175),
+            ("motta", "MOTTA Score", 130), ("cost", "Cost", 130), ("equipment", "Equipment Used", 220),
+        )
         for column, heading, width in definitions:
             self.tree.heading(column, text=heading)
-            self.tree.column(column, width=width, anchor="w" if column == "equipment" else "center")
+            self.tree.column(column, width=width, anchor="w" if column.startswith("item") else "center")
         self.tree.pack(fill="both", expand=True)
         ttk.Label(self, textvariable=self.status, style="Muted.TLabel", wraplength=1080).pack(anchor="w", pady=(10, 0))
 
@@ -121,6 +129,7 @@ class EquipmentAnalysisTab(ttk.Frame):
     def _compare(self, candidate, enemy, configurations, settings, cancel_event) -> None:
         try:
             compiled_enemy = compile_fighter(enemy)
+            baseline = simulate_duel(settings.request(compile_fighter(candidate), compiled_enemy, cancel_event))
             rows = []
             skipped = 0
             for completed, (updates, label) in enumerate(configurations, start=1):
@@ -133,7 +142,7 @@ class EquipmentAnalysisTab(ttk.Frame):
                     self.after(0, self.progress.advance, completed)
                     continue
                 result = simulate_duel(settings.request(fighter, compiled_enemy, cancel_event))
-                rows.append((label, result.first_win_rate, result.second_win_rate, result.unresolved_rate))
+                rows.append((label, result.first_win_rate, result.first_win_rate - baseline.first_win_rate))
                 self.after(0, self.progress.advance, completed)
         except SimulationCancelled:
             self.after(0, self._cancelled)
@@ -145,12 +154,51 @@ class EquipmentAnalysisTab(ttk.Frame):
     def _finished(self, rows, skipped: int, simulations: int) -> None:
         for item in self.tree.get_children():
             self.tree.delete(item)
-        for equipment, candidate, enemy, unresolved in sorted(rows, key=lambda row: row[1], reverse=True):
-            self.tree.insert("", "end", values=(equipment, f"{candidate:.2f}%", f"{enemy:.2f}%", f"{unresolved:.2f}%"))
+        for equipment, candidate, impact in sorted(rows, key=lambda row: row[1], reverse=True):
+            items = equipment.split(" · ")[:5]
+            items.extend("—" for _ in range(5 - len(items)))
+            cost = self._acquisition_cost(equipment)
+            motta = motta_score(impact, cost)
+            self.tree.insert("", "end", values=(
+                *items, f"{candidate:.2f}% ({impact:+.2f}%)",
+                f"{motta:.2f}" if motta is not None else "—",
+                f"{cost:g} gc" if cost is not None else "—", "Current configuration",
+            ))
         skipped_message = f" Skipped {skipped} invalid configurations." if skipped else ""
         self.status.set(f"Compared {len(rows)} configurations across {len(rows) * simulations:,} duels.{skipped_message}")
         self.progress.finish("Complete")
         self._done()
+
+    def _acquisition_cost(self, label: str) -> float | None:
+        """Price only changed equipment, matching the legacy MOTTA convention."""
+        baseline = self.candidate_editor.build()
+        baseline_by_slot = {
+            "Off hand": baseline.off_hand_id, "Armour": baseline.armour_id,
+            "Helmet": baseline.defence_ids[0] if baseline.defence_ids else None,
+            "Main material": baseline.main_material_id,
+            "Preparation": baseline.preparation_ids[0] if baseline.preparation_ids else None,
+            "Main poison": baseline.main_poison_id,
+            "Off-hand material": baseline.off_material_id,
+            "Off-hand poison": baseline.off_poison_id,
+        }
+        name_to_id = {
+            name: item_id for options in (
+                self.catalogue.off_hand_options(self.candidate_editor.choice), self.catalogue.armours(self.candidate_editor.choice),
+                self.catalogue.helmets(self.candidate_editor.choice), self.catalogue.materials(self.candidate_editor.choice),
+                self.catalogue.preparations(self.candidate_editor.choice), self.catalogue.poisons(self.candidate_editor.choice),
+            ) for item_id, name in options
+        }
+        total = 0.0
+        for part in label.split(" · "):
+            slot, _, name = part.partition(": ")
+            item_id = name_to_id.get(name)
+            if not _ or item_id == baseline_by_slot.get(slot):
+                continue
+            cost = self.catalogue.cost(item_id, self.candidate_editor.choice)
+            if cost is None:
+                return None
+            total += cost
+        return total
 
     def _failed(self, error: str) -> None:
         self.status.set(f"Equipment analysis error: {error}")

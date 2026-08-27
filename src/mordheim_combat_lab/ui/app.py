@@ -2,17 +2,13 @@
 
 from __future__ import annotations
 
-import threading
 import tkinter as tk
 from tkinter import filedialog, ttk
 
-from ..core.compiler import compile_fighter
-from ..core.engine import simulate_duel
 from .editors import FighterEditor
 from .services import CombatCatalogue, DuelExecutionSettings
 from .tabs import EquipmentAnalysisTab, ImprovementAnalysisTab, WeaponAnalysisTab
 from .theme import apply_theme
-from .widgets import DuelResultCards
 from .preferences import load_preferences, save_preferences
 from .workbooks import CombatLabWorkbookError, load_ui_workbook, save_workbook
 
@@ -52,8 +48,11 @@ class CombatLabApp(tk.Tk):
         self.seed = tk.IntVar(value=_preference_int(self._preferences, "seed", 0))
         self.batch_size = tk.IntVar(value=_preference_int(self._preferences, "batch_size", 100_000, 1))
         self.maximum_rounds = tk.IntVar(value=_preference_int(self._preferences, "maximum_rounds", 50, 1))
-        self.status = tk.StringVar(value="Configure the candidate and enemy, then run the simulation.")
-        self._running = False
+        self.analysis_simulations = {
+            tab: tk.IntVar(value=self.simulations.get())
+            for tab in ("improvements", "weapons", "equipment")
+        }
+        self.status = tk.StringVar(value="Configure the candidate and enemy, then use an analysis tab.")
         self._last_result = None
         self._build_gui()
         self._restore_geometry()
@@ -90,9 +89,9 @@ class CombatLabApp(tk.Tk):
         self.notebook.add(enemy_tab, text="Enemy")
         self._build_candidate_tab(candidate_tab)
         self._build_enemy_tab(enemy_tab)
-        self.notebook.add(ImprovementAnalysisTab(self.notebook, self.catalogue, self.candidate_editor, self.enemy_editor, self.execution_settings), text="Improvements")
-        self.notebook.add(WeaponAnalysisTab(self.notebook, self.catalogue, self.candidate_editor, self.enemy_editor, self.execution_settings), text="Weapons")
-        self.notebook.add(EquipmentAnalysisTab(self.notebook, self.catalogue, self.candidate_editor, self.enemy_editor, self.execution_settings), text="Equipment")
+        self.notebook.add(ImprovementAnalysisTab(self.notebook, self.catalogue, self.candidate_editor, self.enemy_editor, self._analysis_settings("improvements"), self.analysis_simulations["improvements"]), text="Improvements")
+        self.notebook.add(WeaponAnalysisTab(self.notebook, self.catalogue, self.candidate_editor, self.enemy_editor, self._analysis_settings("weapons"), self.analysis_simulations["weapons"]), text="Weapons")
+        self.notebook.add(EquipmentAnalysisTab(self.notebook, self.catalogue, self.candidate_editor, self.enemy_editor, self._analysis_settings("equipment"), self.analysis_simulations["equipment"]), text="Equipment")
         rules_tab = ttk.Frame(self.notebook, padding=20)
         self.notebook.add(rules_tab, text="House Rules")
         self._build_rules_tab(rules_tab)
@@ -102,23 +101,6 @@ class CombatLabApp(tk.Tk):
         ttk.Label(parent, text="Choose a warrior and their legal combat configuration.", style="Muted.TLabel").pack(anchor="w", pady=(2, 12))
         self.candidate_editor = FighterEditor(parent, "Candidate", self.catalogue, self._editor_changed)
         self.candidate_editor.pack(fill="x")
-        self.result_cards = DuelResultCards(parent)
-        self.result_cards.pack(fill="x", pady=(12, 0))
-        controls = ttk.Frame(parent, padding=(0, 14, 0, 0))
-        controls.pack(fill="x")
-        for label, variable, minimum, maximum, increment in (
-            ("Simulations", self.simulations, 1_000, 10_000_000, 10_000),
-            ("Seed", self.seed, 0, 2_147_483_647, 1),
-            ("Batch size", self.batch_size, 1, 1_000_000, 10_000),
-            ("Maximum rounds", self.maximum_rounds, 1, 500, 1),
-        ):
-            ttk.Label(controls, text=label).pack(side="left", padx=(0, 5))
-            ttk.Spinbox(controls, from_=minimum, to=maximum, increment=increment, textvariable=variable, width=10).pack(side="left", padx=(0, 12))
-        self.run_button = ttk.Button(controls, text="Run simulation", style="Accent.TButton", command=self._run_simulation)
-        self.run_button.pack(side="left")
-        self.cancel_button = ttk.Button(controls, text="Cancel", command=self._cancel_simulation, state="disabled")
-        self.cancel_button.pack(side="left", padx=(8, 0))
-        ttk.Label(parent, textvariable=self.status, style="Muted.TLabel", wraplength=1080).pack(anchor="w", pady=(10, 0))
 
     def _build_enemy_tab(self, parent) -> None:
         ttk.Label(parent, text="Enemy", style="Heading.TLabel").pack(anchor="w")
@@ -154,58 +136,20 @@ class CombatLabApp(tk.Tk):
         self.geometry(f"{width}x{height}+{max(0, (self.winfo_screenwidth() - width) // 2)}+{max(0, (self.winfo_screenheight() - height) // 2)}")
 
     def _editor_changed(self) -> None:
-        if not self._running:
-            self.status.set("Ready to simulate the selected fighters.")
-
-    def _run_simulation(self) -> None:
-        if self._running:
-            return
-        try:
-            settings = self.execution_settings()
-            first = compile_fighter(self.candidate_editor.build())
-            second = compile_fighter(self.enemy_editor.build())
-        except (KeyError, TypeError, ValueError) as exc:
-            self.status.set(f"Configuration error: {exc}")
-            return
-        self._running = True
-        self._cancel_event = threading.Event()
-        self.run_button.configure(state="disabled")
-        self.cancel_button.configure(state="normal")
-        self.status.set(f"Running {settings.simulations:,} simulated duels…")
-        threading.Thread(target=self._simulate, args=(first, second, settings, self._cancel_event), daemon=True).start()
+        self.status.set("Ready for an analysis with the selected fighters.")
 
     def execution_settings(self) -> DuelExecutionSettings:
         """Snapshot the execution controls for one simulation or analysis run."""
         return DuelExecutionSettings(int(self.simulations.get()), int(self.seed.get()), int(self.batch_size.get()), int(self.maximum_rounds.get()))
 
-    def _cancel_simulation(self) -> None:
-        if self._running:
-            self._cancel_event.set()
-            self.cancel_button.configure(state="disabled")
-            self.status.set("Cancelling after the current simulation batch…")
-
-    def _simulate(self, first, second, settings, cancel_event) -> None:
-        try:
-            result = simulate_duel(settings.request(first, second, cancel_event))
-        except Exception as exc:
-            self.after(0, self._simulation_failed, str(exc))
-        else:
-            self.after(0, self._simulation_finished, result)
-
-    def _simulation_finished(self, result) -> None:
-        self._last_result = result
-        self.result_cards.show(result)
-        self.status.set(f"Candidate {result.first_win_rate:.2f}% · Enemy {result.second_win_rate:.2f}% · Unresolved {result.unresolved_rate:.2f}% ({result.simulations:,} duels)")
-        self._simulation_done()
-
-    def _simulation_failed(self, error: str) -> None:
-        self.status.set(f"Simulation error: {error}")
-        self._simulation_done()
-
-    def _simulation_done(self) -> None:
-        self._running = False
-        self.run_button.configure(state="normal")
-        self.cancel_button.configure(state="disabled")
+    def _analysis_settings(self, tab: str):
+        """Return the independent simulation count configured on one analysis tab."""
+        def provider() -> DuelExecutionSettings:
+            simulations = int(self.analysis_simulations[tab].get())
+            # The workbook retains the most recently used analysis settings.
+            self.simulations.set(simulations)
+            return DuelExecutionSettings(simulations, int(self.seed.get()), int(self.batch_size.get()), int(self.maximum_rounds.get()))
+        return provider
 
     def _save_workbook(self) -> None:
         try:
@@ -240,6 +184,8 @@ class CombatLabApp(tk.Tk):
                 self.enemy_editor.load_build(enemy)
             if target == "both":
                 self.simulations.set(settings.simulations)
+                for variable in self.analysis_simulations.values():
+                    variable.set(settings.simulations)
                 self.seed.set(settings.seed)
                 self.batch_size.set(settings.batch_size)
                 self.maximum_rounds.set(settings.maximum_rounds)
@@ -247,8 +193,6 @@ class CombatLabApp(tk.Tk):
             self.status.set(f"Workbook load error: {exc}")
             return
         self._last_result = result if target == "both" else self._last_result
-        if result and target == "both":
-            self.result_cards.show(result)
         description = {"both": "workbook", "candidate": "candidate", "enemy": "enemy"}[target]
         self.status.set(f"Loaded {description}: {path}")
 

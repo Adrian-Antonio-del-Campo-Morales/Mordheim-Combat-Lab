@@ -17,6 +17,15 @@ rules:
   applies_to:
     profile_ids:
     - prophet
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.chaos-streets-mordheim-inhabitants.prophet.leader
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: prophet--fanatic
   name: Fanatic
   effect: The Prophet automatically passes every test based on Leadership.
@@ -33,6 +42,15 @@ rules:
   applies_to:
     profile_ids:
     - prophet
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.chaos-streets-mordheim-inhabitants.prophet.fanatic
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: prophet--orator
   name: Orator
   effect: The Prophet begins with one randomly generated Revival Sermon. The individual sermon list and sermon effects are
@@ -51,6 +69,15 @@ rules:
   applies_to:
     profile_ids:
     - prophet
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.chaos-streets-mordheim-inhabitants.prophet.orator
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: desolate-soul--fanatic
   name: Fanatic
   effect: The Desolate Soul automatically passes every test based on Leadership.
@@ -67,6 +94,15 @@ rules:
   applies_to:
     profile_ids:
     - desolate-soul
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.chaos-streets-mordheim-inhabitants.desolate-soul.fanatic
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: desolate-soul--death-wish
   name: Death Wish
   effect: The Desolate Soul must always move toward the nearest visible enemy model. It does not have to run or charge, but
@@ -85,6 +121,15 @@ rules:
   applies_to:
     profile_ids:
     - desolate-soul
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.chaos-streets-mordheim-inhabitants.desolate-soul.death-wish
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: desolate-soul--profound-hatred
   name: Profound Hatred
   effect: The Desolate Soul is subject to Hatred against warriors from every opposing warband except the Sisters of Sigmar.
@@ -101,10 +146,28 @@ rules:
   applies_to:
     profile_ids:
     - desolate-soul
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.chaos-streets-mordheim-inhabitants.desolate-soul.profound-hatred
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: lunatics--frenzy
-  runtime_grant: true
-  runtime_traits:
-    frenzy: true
+  runtime:
+    scope: LATER
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: trait.frenzy
+      scope: LATER
+      binding:
+        kind: trait
+        id: trait.frenzy
+        parameters:
+          value: true
   name: Frenzy
   effect: Lunatics are subject to Frenzy.
   source:
@@ -142,6 +205,15 @@ rules:
   applies_to:
     profile_ids:
     - cripples
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.chaos-streets-mordheim-inhabitants.cripples.disability
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: street-dogs--animal
   name: Animal
   effect: Street Dogs are animals and never gain Experience.
@@ -158,6 +230,15 @@ rules:
   applies_to:
     profile_ids:
     - street-dogs
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.chaos-streets-mordheim-inhabitants.street-dogs.animal
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--mordheim-natives
   name: Mordheim Natives
   effect: During a campaign set in Mordheim, the warband may modify one die by +1 or -1 on every Exploration roll.
@@ -173,6 +254,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.chaos-streets-mordheim-inhabitants.band.mordheim-natives
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--wanderers
   name: Wanderers
   effect: While the Prophet remains alive, during a campaign set in Mordheim the warband may re-roll one die during each Exploration
@@ -190,6 +280,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.chaos-streets-mordheim-inhabitants.band.wanderers
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--look-after-their-own
   name: Look After Their Own
   effect: If the warband rolls a double 4 during Exploration, it gains one new Henchman for any existing Henchman group.
@@ -205,6 +304,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.chaos-streets-mordheim-inhabitants.band.look-after-their-own
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--hired-swords
   name: Hired Swords
   effect: The warband may hire Hired Swords available to Mercenary warbands and any Hired Sword explicitly willing to work
@@ -222,6 +330,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.chaos-streets-mordheim-inhabitants.band.hired-swords
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--revival-sermons
   name: Revival Sermons
   effect: Revival Sermons are not magical and affect only members of the Mordheim Inhabitants warband; they never affect enemy
@@ -251,3 +368,12 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.chaos-streets-mordheim-inhabitants.band.revival-sermons
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.

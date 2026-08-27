@@ -76,8 +76,7 @@ profiles:
     es: null
   rule_ids:
   - beserkers--berserkers
-  combat_traits:
-    frenzy: true
+  combat_traits: {}
 - id: wulfen
   name: Wulfen
   type: hero

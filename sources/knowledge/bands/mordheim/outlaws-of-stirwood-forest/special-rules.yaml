@@ -18,6 +18,15 @@ rules:
   applies_to:
     profile_ids:
     - bandit-leader
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.outlaws-of-stirwood-forest.bandit-leader.leader
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: cleric--disciple-of-sigmar
   name: Disciple of Sigmar
   effect: The Cleric is a follower of Sigmar and may never learn Sorcery or Arcane Lore. The Cleric begins with a Prayer of
@@ -37,6 +46,15 @@ rules:
   applies_to:
     profile_ids:
     - cleric
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.outlaws-of-stirwood-forest.cleric.disciple-of-sigmar
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--bow-discipline
   name: Bow Discipline
   effect: Every warrior may carry only one missile weapon at a time. Every warrior except the Cleric must carry a bow-type
@@ -55,6 +73,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.outlaws-of-stirwood-forest.band.bow-discipline
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--hired-swords
   name: Hired Swords
   effect: 'The following Hired Swords are not available to the Outlaws: Bounty Hunter, Wolf-Priest of Ulric, Norse Shaman,
@@ -73,6 +100,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.outlaws-of-stirwood-forest.band.hired-swords
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--cleric-hero-slot
   name: Cleric Hero Slot
   effect: A Cleric may only be included instead of either a Champion or a Petty Thief. Therefore, if a Cleric is included,
@@ -91,3 +127,12 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.outlaws-of-stirwood-forest.band.cleric-hero-slot
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'

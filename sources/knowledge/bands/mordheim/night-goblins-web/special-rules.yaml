@@ -2,6 +2,15 @@ schema_version: 2
 band_id: night-goblins-web
 rules:
 - id: boss--leader
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.night-goblins-web.boss.leader
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psicología.'
   name: Leader
   effect: 'Any warrior within 6" of the Boss may use their
 
@@ -23,6 +32,15 @@ rules:
     profile_ids:
     - boss
 - id: boss--da-biggest-boss
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.night-goblins-web.boss.da-biggest-boss
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
   name: Da Biggest Boss
   effect: 'The Boss is so big, compared to other
 
@@ -56,6 +74,15 @@ rules:
     profile_ids:
     - boss
 - id: squig-herder--handle-animal-squig
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.night-goblins-web.squig-herder.handle-animal-squig
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psicología.'
   name: Handle Animal - Squig
   effect: Any Cave Squig within 6" (12" with a Squig Prodder) of the herder can use their Leadership value when taking Leadership
     tests.
@@ -75,6 +102,15 @@ rules:
     profile_ids:
     - squig-herder
 - id: squig-herder--master-herder
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.night-goblins-web.squig-herder.master-herder
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psicología.'
   name: Master Herder
   effect: 'During the recovery phase, any out of control Cave Squigs or Great Squigs in the herder''s control
 
@@ -104,6 +140,15 @@ rules:
     profile_ids:
     - squig-herder
 - id: squig-herder--squig-herder-skill-gassy-squigs
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.night-goblins-web.squig-herder.squig-herder-skill-gassy-squigs
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
   name: Gassy Squigs
   effect: When an untrained Cave Squig goes Out of Action, roll immediately instead of making its normal post-battle recovery
     roll. On 1-2 it explodes, is dead, and every model within D6 inches suffers a Strength 3 hit.
@@ -123,6 +168,15 @@ rules:
     profile_ids:
     - squig-herder
 - id: squig-herder--squig-herder-skill-threaten
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.night-goblins-web.squig-herder.squig-herder-skill-threaten
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: movimiento.'
   name: Threaten
   effect: During the Movement phase, all Cave Squigs and Great Squigs within 6" of the Squig Herder (12" if the Herder has
     a Squig Prodder) may re-roll their movement dice.
@@ -142,6 +196,15 @@ rules:
     profile_ids:
     - squig-herder
 - id: squig-herder--squig-herder-skill-trainin
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.night-goblins-web.squig-herder.squig-herder-skill-trainin
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: lesiones.'
   name: Trainin'
   effect: The next Cave Squig bought may become the warband's single Trained Squig. It gains Experience normally and rolls
     on the Henchman Advance table, re-rolling Lad's Got Talent. It still counts against the Cave Squig maximum. If the Herder
@@ -167,6 +230,15 @@ rules:
     profile_ids:
     - squig-herder
 - id: shaman--wizard
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.night-goblins-web.shaman.wizard
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: magia.'
   name: Wizard
   effect: The Shaman is a Wizard and begins with one randomly chosen Goblin Magic spell.
   source:
@@ -184,6 +256,15 @@ rules:
     profile_ids:
     - shaman
 - id: shaman--fungus-brew
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.night-goblins-web.shaman.fungus-brew
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psicología.'
   name: Fungus Brew
   effect: 'Before a battle, the Shaman may brew Fungus Brew using 1 to 3 Mad Cap Mushrooms. The brew affects one Night Goblin
     Warrior henchman group until the end of the battle. Roll once per mushroom; if any dice duplicate a result, the batch
@@ -211,6 +292,15 @@ rules:
     profile_ids:
     - shaman
 - id: night-goblin-warriors--animosity
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.night-goblins-web.night-goblin-warriors.animosity
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psicología.'
   name: Animosity
   effect: Night Goblins are subject to the rules for Animosity.
   source:
@@ -228,6 +318,15 @@ rules:
     profile_ids:
     - night-goblin-warriors
 - id: night-goblin-fanatics--addict
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.night-goblins-web.night-goblin-fanatics.addict
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaña.'
   name: Addict
   effect: 'Fanatics are dependent on a regular supply of Mad Cap Mushrooms which must be bought each game. If a fanatic can''t
     get any before a battle they will stay in their cave foaming at the mouth and not take part. If available they will eat
@@ -253,6 +352,15 @@ rules:
     profile_ids:
     - night-goblin-fanatics
 - id: night-goblin-fanatics--loony
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.night-goblins-web.night-goblin-fanatics.loony
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psicología.'
   name: Loony
   effect: Fanatics are so far gone from reality that they are not subject to the rules for Animosity. Fanatics must re-roll
     results of “Lad's Got Talent.”
@@ -272,6 +380,15 @@ rules:
     profile_ids:
     - night-goblin-fanatics
 - id: cave-squigs--movement
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.night-goblins-web.cave-squigs.movement
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: movimiento.'
   name: Movement
   effect: 'Cave Squigs do not have a set Movement characteristic but move with an ungainly
 
@@ -321,6 +438,15 @@ rules:
     profile_ids:
     - cave-squigs
 - id: cave-squigs--minderz
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.night-goblins-web.cave-squigs.minderz
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: movimiento.'
   name: Minderz
   effect: 'Each Cave Squig must always remain
 
@@ -374,6 +500,15 @@ rules:
     profile_ids:
     - cave-squigs
 - id: cave-squigs--just-squigs
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.night-goblins-web.cave-squigs.just-squigs
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psicología.'
   name: Just Squigs
   effect: 'Night Goblins don''t care much whether
 
@@ -407,6 +542,15 @@ rules:
     profile_ids:
     - cave-squigs
 - id: cave-squigs--animals
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.night-goblins-web.cave-squigs.animals
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: movimiento.'
   name: Animals
   effect: 'Cave Squigs are animals of a sort and so
 
@@ -440,6 +584,15 @@ rules:
     profile_ids:
     - cave-squigs
 - id: snotlings--mob
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.night-goblins-web.snotlings.mob
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaña.'
   name: Mob
   effect: 'All Snotlings in a warband count as one model
 
@@ -461,9 +614,18 @@ rules:
     profile_ids:
     - snotlings
 - id: snotlings--weedy
-  runtime_grant: true
-  runtime_traits:
-    injury_profile: 1
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: trait.injury-profile
+      scope: 'YES'
+      binding:
+        kind: trait
+        id: trait.injury-profile
+        parameters:
+          value: 1
   name: Weedy
   effect: 'Snotlings are not the most robust of
 
@@ -489,6 +651,22 @@ rules:
     profile_ids:
     - snotlings
 - id: snotlings--dodgy
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: trait.cloud-of-flies
+      scope: 'YES'
+      binding:
+        kind: trait
+        id: trait.cloud-of-flies
+        parameters:
+          value: true
+    - id: shooting.incoming-hit-modifier
+      scope: 'NO'
+      binding: null
+      reason: Shooting is outside the duel runtime.
   name: Dodgy
   effect: 'The little creatures are constantly ducking
 
@@ -518,6 +696,15 @@ rules:
     profile_ids:
     - snotlings
 - id: snotlings--insignificant
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.night-goblins-web.snotlings.insignificant
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psicología.'
   name: Insignificant
   effect: 'Nobody cares about the Snotlings. All
 
@@ -567,6 +754,15 @@ rules:
     profile_ids:
     - snotlings
 - id: great-squig--movement
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.night-goblins-web.great-squig.movement
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: movimiento.'
   name: Movement
   effect: 'A Great Squig will move just like Cave
 
@@ -588,6 +784,15 @@ rules:
     profile_ids:
     - great-squig
 - id: great-squig--wild
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.night-goblins-web.great-squig.wild
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: movimiento.'
   name: Wild
   effect: 'A Great Squig will need a Goblin to keep it in
 
@@ -633,6 +838,15 @@ rules:
     profile_ids:
     - great-squig
 - id: great-squig--cause-fear
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.night-goblins-web.great-squig.cause-fear
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psicología.'
   name: Cause Fear
   effect: 'Great Squigs are massive balls of flesh
 
@@ -654,6 +868,15 @@ rules:
     profile_ids:
     - great-squig
 - id: great-squig--large-target
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.night-goblins-web.great-squig.large-target
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: disparo.'
   name: Large Target
   effect: 'Great Squigs are large targets as
 
@@ -675,6 +898,15 @@ rules:
     profile_ids:
     - great-squig
 - id: great-squig--animal
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.night-goblins-web.great-squig.animal
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: movimiento.'
   name: Animal
   effect: 'Great Squigs are animals of a sort and so do
 
@@ -708,6 +940,15 @@ rules:
     profile_ids:
     - great-squig
 - id: troll--fear
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.night-goblins-web.troll.fear
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psicología.'
   name: Fear
   effect: Trolls are frightening monsters which cause fear .
   source:
@@ -725,6 +966,15 @@ rules:
     profile_ids:
     - troll
 - id: troll--stupidity
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.night-goblins-web.troll.stupidity
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psicología.'
   name: Stupidity
   effect: A Troll is subject to the rules for stupidity .
   source:
@@ -742,6 +992,20 @@ rules:
     profile_ids:
     - troll
 - id: troll--regeneration
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: skill.regeneration
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.regeneration
+    - id: campaign.post-battle-injury
+      scope: 'NO'
+      binding: null
+      reason: Post-battle injury is a campaign state.
   name: Regeneration
   effect: 'Trolls have a unique physiology that allow
 
@@ -779,6 +1043,15 @@ rules:
     profile_ids:
     - troll
 - id: troll--dumb-monster
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.night-goblins-web.troll.dumb-monster
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: psicología.'
   name: Dumb Monster
   effect: 'A Troll is far too stupid to ever learn any
 
@@ -800,6 +1073,15 @@ rules:
     profile_ids:
     - troll
 - id: troll--always-hungry
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.night-goblins-web.troll.always-hungry
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaña.'
   name: Always Hungry
   effect: 'A Troll requires an upkeep cost. This
 
@@ -853,7 +1135,16 @@ rules:
     profile_ids:
     - troll
 - id: troll--vomit-attack
-  mechanic_id: weapon.vomit-attack
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: weapon.vomit-attack
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: weapon.vomit-attack
   name: Vomit Attack
   effect: 'Instead of his normal attacks, a Troll can
 
@@ -887,6 +1178,15 @@ rules:
     profile_ids:
     - troll
 - id: troll--large-target
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.night-goblins-web.troll.large-target
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: disparo.'
   name: Large Target
   effect: Trolls are Large Targets as defined in the shooting rules.
   source:
@@ -904,6 +1204,15 @@ rules:
     profile_ids:
     - troll
 - id: band--animosity
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.night-goblins-web.band.animosity
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psicología.'
   name: Animosity
   effect: 'At the start of the Night Goblin player''s turn, roll a D6 for each Night Goblin Warrior Henchman not engaged in
     hand-to-hand combat. On a 1, roll another D6: 1 = attack the nearest eligible friendly Orc/Goblin Henchman or Hired Sword
@@ -932,6 +1241,15 @@ rules:
   applies_to:
     band: true
 - id: band--hate-stunties
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.night-goblins-web.band.hate-stunties
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psicología.'
   name: Hate Stunties
   effect: Night Goblins are subject to Hatred against Dwarfs. This affects Night Goblins only, not other models in the warband.
     Fanatics are exempt.
@@ -950,6 +1268,15 @@ rules:
   applies_to:
     band: true
 - id: band--fear-elves
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.night-goblins-web.band.fear-elves
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psicología.'
   name: Fear Elves
   effect: Night Goblins are subject to Fear of Elves. This affects Night Goblins only, not other models in the warband. Fanatics
     are exempt.
@@ -985,6 +1312,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.night-goblins-web.band.distasteful-company
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--mad-cap-masters
   name: Mad Cap Masters
   effect: A Night Goblin suffering Stupidity from Mad Cap Mushroom overuse may ignore that Stupidity while currently under
@@ -1005,6 +1341,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.night-goblins-web.band.mad-cap-masters
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--great-squig-or-troll
   name: Great Squig or Troll
   effect: The warband may include either one Great Squig or one Troll, but never both at the same time.
@@ -1021,6 +1366,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.night-goblins-web.band.great-squig-or-troll
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--night-goblin-maximum-characteristics
   name: Night Goblin Maximum Characteristics
   effect: 'Night Goblins use the following maximum profile when gaining advances: M4, WS5, BS6, S4, T4, W3, I6, A4, Ld7.'
@@ -1037,6 +1391,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.night-goblins-web.band.night-goblin-maximum-characteristics
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--promoted-henchmen-no-strength
   name: Promoted Henchmen Cannot Choose Strength
   effect: A Henchman promoted to Hero may never choose Strength as one of its skill sets. The current warband leader may gain
@@ -1055,6 +1418,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.night-goblins-web.band.promoted-henchmen-no-strength
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--night-goblin-special-skills-fungus-farmer
   name: Fungus Farmer
   effect: 'The industrious little git has a mushroom crop back at
@@ -1099,6 +1471,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.night-goblins-web.band.night-goblin-special-skills-fungus-farmer
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--night-goblin-special-skills-hide-in-shadows
   name: Hide in Shadows
   effect: 'The sneaky Goblin has become an expert at
@@ -1131,6 +1512,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.night-goblins-web.band.night-goblin-special-skills-hide-in-shadows
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--night-goblin-special-skills-infiltrate
   name: Infiltrate
   effect: 'A Night Goblin with this skill is always placed on the
@@ -1171,6 +1561,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.night-goblins-web.band.night-goblin-special-skills-infiltrate
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--night-goblin-special-skills-netter
   name: Netter
   effect: 'The Goblin applies techniques learned hunting wild
@@ -1223,6 +1622,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.night-goblins-web.band.night-goblin-special-skills-netter
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--night-goblin-special-skills-ride-squig
   name: Ride Squig
   effect: 'This Goblin can ride one of the warband''s Cave
@@ -1343,6 +1751,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.night-goblins-web.band.night-goblin-special-skills-ride-squig
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--night-goblin-special-skills-sneaky-git
   name: Sneaky Git
   effect: 'The Goblin specializes in attacking their targets from
@@ -1399,3 +1816,12 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.night-goblins-web.band.night-goblin-special-skills-sneaky-git
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.

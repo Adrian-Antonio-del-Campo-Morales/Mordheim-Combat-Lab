@@ -2,6 +2,15 @@ schema_version: 2
 band_id: imperial-outriders
 rules:
 - id: knight--leader
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.imperial-outriders.knight.leader
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Leader
   effect: Any warrior within 6” of the Knight may use his Leadership characteristic when taking a Leadership test.
   source:
@@ -19,6 +28,15 @@ rules:
     profile_ids:
     - knight
 - id: knight--ride
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.imperial-outriders.knight.ride
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: monturas."
   name: Ride
   effect: The Knight has the Ride skill as detailed in the Blazing Saddles article.
   source:
@@ -36,6 +54,15 @@ rules:
     profile_ids:
     - knight
 - id: outriders--ride
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.imperial-outriders.outriders.ride
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: monturas."
   name: Ride
   effect: Outriders have the Ride skill as detailed in the Blazing Saddles article.
   source:
@@ -53,6 +80,15 @@ rules:
     profile_ids:
     - outriders
 - id: scouts--ride
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.imperial-outriders.scouts.ride
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: monturas."
   name: Ride
   effect: Scouts have the Ride skill as detailed in the Blazing Saddles article.
   source:
@@ -70,6 +106,15 @@ rules:
     profile_ids:
     - scouts
 - id: chasseurs--ride
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.imperial-outriders.chasseurs.ride
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: monturas."
   name: Ride
   effect: Chasseurs have the Ride skill as detailed in the Blazing Saddles article.
   source:
@@ -87,6 +132,15 @@ rules:
     profile_ids:
     - chasseurs
 - id: hussars--ride
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.imperial-outriders.hussars.ride
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: monturas."
   name: Ride
   effect: Horsemen have the Ride skill as detailed in the Blazing Saddles article.
   source:
@@ -104,6 +158,15 @@ rules:
     profile_ids:
     - hussars
 - id: hussars--combat-riding
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.imperial-outriders.hussars.combat-riding
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: monturas."
   name: Combat Riding
   effect: Horsemen have the Combat Riding skill as detailed in the Blazing Saddles article.
   source:
@@ -121,6 +184,15 @@ rules:
     profile_ids:
     - hussars
 - id: grooms--ride
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.imperial-outriders.grooms.ride
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: monturas."
   name: Ride
   effect: Grooms have the Ride skill as detailed in the Blazing Saddles article.
   source:
@@ -138,6 +210,15 @@ rules:
     profile_ids:
     - grooms
 - id: grooms--horse-handling
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.imperial-outriders.grooms.horse-handling
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: monturas."
   name: Horse Handling
   effect: Grooms have the Animal Handling skill as detailed in the Blazing Saddles article.
   source:
@@ -155,6 +236,15 @@ rules:
     profile_ids:
     - grooms
 - id: band--hired-swords
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.imperial-outriders.band.hired-swords
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: monturas."
   name: Hired Swords
   effect: Imperial Outriders may only be accompanied by mounted Hired Swords. The Freelance Knight and Roadwarden are allowed;
     the Highwayman may not be hired.
@@ -173,6 +263,15 @@ rules:
   applies_to:
     band: true
 - id: band--mounted-two-weapon-fighting
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.imperial-outriders.band.mounted-two-weapon-fighting
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: monturas."
   name: Two Weapon Fighting
   effect: Mounted warriors may not fight with two weapons. A shield or buckler may be used normally, but two-handed weapons
     are not permitted. A pistol used in the first round of hand-to-hand combat replaces the rider's usual weapon for that
@@ -193,6 +292,15 @@ rules:
   applies_to:
     band: true
 - id: band--targeting-mounted-warriors
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.imperial-outriders.band.targeting-mounted-warriors
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: monturas."
   name: Targeting Mounted Warriors
   effect: A ridden horse may not be targeted separately by shooting or hand-to-hand attacks. A mounted warrior may always
     be selected as a shooting target even if closer enemies exist, but shooters do not gain +1 to hit merely because the target
@@ -213,6 +321,15 @@ rules:
   applies_to:
     band: true
 - id: band--mounted-injuries
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.imperial-outriders.band.mounted-injuries
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: monturas."
   name: Injuries
   effect: Resolve the effects of wounds on mounted models using the Whoa Boy! table from the Blazing Saddles mounted rules.
   source:
@@ -229,6 +346,15 @@ rules:
   applies_to:
     band: true
 - id: band--stunned-riders
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.imperial-outriders.band.stunned-riders
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: monturas."
   name: Stunned Riders
   effect: A Stunned rider falls from the mount as specified by the Whoa Boy! table. If the mount bolts, it may be remounted
     if the warrior reaches it before it leaves the table. A bolting mount is recovered unscathed after the battle whether
@@ -249,6 +375,15 @@ rules:
   applies_to:
     band: true
 - id: band--out-of-action-models
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.imperial-outriders.band.out-of-action-models
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: monturas."
   name: Out-Of-Action Models
   effect: If a rider is killed but the mount survives, the replacement warrior may use that mount, reducing the replacement's
     cost by 40 gc.
@@ -267,6 +402,15 @@ rules:
   applies_to:
     band: true
 - id: band--dead-horses
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.imperial-outriders.band.dead-horses
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: monturas."
   name: Dead Horses
   effect: Dead horses must be replaced before any other income is spent, using Treasures if necessary. A warrior without a
     mount may not take part in a battle.
@@ -285,6 +429,15 @@ rules:
   applies_to:
     band: true
 - id: band--dense-terrain
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.imperial-outriders.band.dense-terrain
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: monturas."
   name: Dense Terrain
   effect: Imperial Outriders ignore the normal warband limit of two mounts in areas of dense terrain.
   source:
@@ -301,6 +454,15 @@ rules:
   applies_to:
     band: true
 - id: band--mounted-scenarios
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.imperial-outriders.band.mounted-scenarios
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: movimiento."
   name: Scenarios
   effect: In scenarios that require models to cross the table, sizeable areas of dense terrain should be placed so that crossing
     the board requires entering dense terrain, forcing the Outriders to dismount.

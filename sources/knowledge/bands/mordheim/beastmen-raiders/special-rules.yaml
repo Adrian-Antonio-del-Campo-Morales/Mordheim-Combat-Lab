@@ -2,6 +2,15 @@ schema_version: 2
 band_id: beastmen-raiders
 rules:
 - id: beastmen-chieftain--leader
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.beastmen-raiders.beastmen-chieftain.leader
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Leader
   effect: 'Any Warrior within 6" of the Beastman
 
@@ -27,6 +36,15 @@ rules:
     profile_ids:
     - beastmen-chieftain
 - id: beastmen-shaman--wizard
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.beastmen-raiders.beastmen-shaman.wizard
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: magia."
   name: Wizard
   effect: 'A Beastmen Shaman is a Wizard
 
@@ -48,6 +66,15 @@ rules:
     profile_ids:
     - beastmen-shaman
 - id: centigors--drunken
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.beastmen-raiders.centigors.drunken
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Drunken
   effect: 'Centigor are inclined to drink
 
@@ -105,6 +132,15 @@ rules:
     profile_ids:
     - centigors
 - id: centigors--woodland-dwelling
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.beastmen-raiders.centigors.woodland-dwelling
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: movimiento."
   name: Woodland Dwelling
   effect: 'Centigors are creatures
 
@@ -134,6 +170,16 @@ rules:
     profile_ids:
     - centigors
 - id: centigors--trample
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: profile
+    effects:
+    - id: profile-rule.centigors--trample
+      scope: "YES"
+      binding:
+        kind: compiler
+        id: profile-rule.centigors--trample
   name: Trample
   effect: 'As well as their weapons,
 
@@ -167,6 +213,15 @@ rules:
     profile_ids:
     - centigors
 - id: ungor--lowest-of-the-low
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.beastmen-raiders.ungor.lowest-of-the-low
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Lowest of the Low
   effect: 'Ungor are on the lowest
 
@@ -200,6 +255,16 @@ rules:
     profile_ids:
     - ungor
 - id: warhounds-of-chaos--natural-weapons
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: profile
+    effects:
+    - id: profile.natural-attacks
+      scope: "YES"
+      binding:
+        kind: profile
+        id: profile.natural-attacks
   name: Natural Weapons
   effect: Chaos Hounds have no weapons, but can fight without any penalties.
   source:
@@ -217,6 +282,15 @@ rules:
     profile_ids:
     - warhounds-of-chaos
 - id: warhounds-of-chaos--animals
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.beastmen-raiders.warhounds-of-chaos.animals
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Animals
   effect: 'Chaos Hounds are animals and never
 
@@ -238,6 +312,15 @@ rules:
     profile_ids:
     - warhounds-of-chaos
 - id: minotaur--fear
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.beastmen-raiders.minotaur.fear
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Fear
   effect: 'Minotaurs are huge, bellowing monsters
 
@@ -259,6 +342,15 @@ rules:
     profile_ids:
     - minotaur
 - id: minotaur--bloodgreed
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.beastmen-raiders.minotaur.bloodgreed
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Bloodgreed
   effect: 'If a Minotaur puts all of its
 
@@ -284,6 +376,15 @@ rules:
     profile_ids:
     - minotaur
 - id: minotaur--animal
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.beastmen-raiders.minotaur.animal
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Animal
   effect: 'A Minotaur is far more bestial than its
 
@@ -309,6 +410,15 @@ rules:
     profile_ids:
     - minotaur
 - id: minotaur--large-target
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.beastmen-raiders.minotaur.large-target
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: disparo."
   name: Large Target
   effect: Minotaurs are Large Targets as defined in the shooting rules .
   source:
@@ -326,6 +436,15 @@ rules:
     profile_ids:
     - minotaur
 - id: band--animals
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.beastmen-raiders.band.animals
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Animals
   effect: 'Animals: Beastmen are fearsome creatures of Chaos that do not interact with other races other than in war. A Beastmen
     warband may never hire any Hired Swords unless specifically stated with the Hired Sword.'
@@ -344,6 +463,15 @@ rules:
   applies_to:
     band: true
 - id: band--beastmen-special-skills-shaggy-hide
+  runtime:
+    scope: "YES"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.beastmen-raiders.band.beastmen-special-skills-shaggy-hide
+      scope: "YES"
+      binding: null
+      reason: "No executable binding exists for this in-scope rule."
   name: Shaggy Hide
   effect: 'The Beastman’s massively shaggy hide acts as armour, deflecting sword strokes and
 
@@ -368,6 +496,16 @@ rules:
   applies_to:
     band: true
 - id: band--beastmen-special-skills-mutant
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: selectable
+    effects:
+    - id: special-rule.band--beastmen-special-skills-mutant
+      scope: "YES"
+      binding:
+        kind: compiler
+        id: special-rule.band--beastmen-special-skills-mutant
   name: Mutant
   effect: 'The Beastman may buy one mutation.
 
@@ -388,6 +526,15 @@ rules:
   applies_to:
     band: true
 - id: band--beastmen-special-skills-fearless
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.beastmen-raiders.band.beastmen-special-skills-fearless
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Fearless
   effect: Immune to fear and All Alone tests.
   source:
@@ -404,6 +551,16 @@ rules:
   applies_to:
     band: true
 - id: band--beastmen-special-skills-horned-one
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: selectable
+    effects:
+    - id: special-rule.band--beastmen-special-skills-horned-one
+      scope: "YES"
+      binding:
+        kind: compiler
+        id: special-rule.band--beastmen-special-skills-horned-one
   name: Horned One
   effect: The Beastman has mighty horns, and can make an additional Attack with its basic Strength on a turn it charges.
   source:
@@ -420,6 +577,15 @@ rules:
   applies_to:
     band: true
 - id: band--beastmen-special-skills-bellowing-roar
+  runtime:
+    scope: "YES"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.beastmen-raiders.band.beastmen-special-skills-bellowing-roar
+      scope: "YES"
+      binding: null
+      reason: "No executable binding exists for this in-scope rule."
   name: Bellowing Roar
   effect: Only the Beastmen Chief may have this skill. He may re-roll any failed Rout tests.
   source:
@@ -436,6 +602,15 @@ rules:
   applies_to:
     band: true
 - id: band--beastmen-special-skills-manhater
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.beastmen-raiders.band.beastmen-special-skills-manhater
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Manhater
   effect: Will be affected by the rules of hatred when fighting any Human warbands.
   source:

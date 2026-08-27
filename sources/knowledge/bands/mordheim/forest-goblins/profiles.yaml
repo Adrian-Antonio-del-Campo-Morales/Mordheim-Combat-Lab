@@ -185,8 +185,6 @@ profiles:
   rule_ids:
   - red-toof-goblins--animosity
   - red-toof-goblins--berserkers
-  combat_traits:
-    frenzy: true
 - id: sluggas
   name: Sluggas
   type: henchman
@@ -261,5 +259,3 @@ profiles:
   - gigantic-spider--native
   - gigantic-spider--non-sentient
   - gigantic-spider--may-ride
-  combat_traits:
-    poisonous_injury: true

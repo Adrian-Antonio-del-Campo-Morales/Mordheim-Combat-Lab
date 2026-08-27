@@ -17,6 +17,15 @@ rules:
   applies_to:
     profile_ids:
     - shadow-blade
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.chaos-streets-deathbringers.shadow-blade.leader
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: shadow-blade--consummate-fighter
   name: Consummate Fighter
   effect: Wounds inflicted by the Shadow Blade, whether in shooting or close combat, impose an additional -1 modifier to the
@@ -35,6 +44,18 @@ rules:
   applies_to:
     profile_ids:
     - shadow-blade
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: trait.perfect-killer
+      scope: 'YES'
+      binding:
+        kind: trait
+        id: trait.perfect-killer
+        parameters:
+          value: true
 - id: shadow-blade--fear
   name: Fear
   effect: The Shadow Blade causes Fear.
@@ -51,6 +72,15 @@ rules:
   applies_to:
     profile_ids:
     - shadow-blade
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.chaos-streets-deathbringers.shadow-blade.fear
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: shadow-blade--fade-into-shadows
   name: Fade into the Shadows
   effect: At the beginning of a close-combat round, the Shadow Blade may declare a voluntary Rout for the warband provided
@@ -71,6 +101,15 @@ rules:
   applies_to:
     profile_ids:
     - shadow-blade
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.chaos-streets-deathbringers.shadow-blade.fade-into-shadows
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: silent-hunter--infiltration
   name: Infiltration
   effect: The Silent Hunter deploys after the opposing warband and may be placed anywhere outside enemy line of sight and
@@ -89,6 +128,15 @@ rules:
   applies_to:
     profile_ids:
     - silent-hunter
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.chaos-streets-deathbringers.silent-hunter.infiltration
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: silent-hunter--loner
   name: Loner
   effect: The Silent Hunter is immune to All Alone tests.
@@ -105,6 +153,15 @@ rules:
   applies_to:
     profile_ids:
     - silent-hunter
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.chaos-streets-deathbringers.silent-hunter.loner
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: snipers--concealed-shot
   name: Concealed Shot
   effect: A Sniper may shoot while Hidden. If the shot hits its target, roll D6; on 3+ the Sniper is revealed.
@@ -121,10 +178,28 @@ rules:
   applies_to:
     profile_ids:
     - snipers
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.chaos-streets-deathbringers.snipers.concealed-shot
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: knives--dagger-master
-  runtime_grant: true
-  runtime_traits:
-    dagger_master: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: trait.dagger-master
+      scope: 'YES'
+      binding:
+        kind: trait
+        id: trait.dagger-master
+        parameters:
+          value: true
   name: Dagger Master
   effect: During a turn in which a Knife charges, it may re-roll failed To Hit rolls made with daggers.
   source:
@@ -157,6 +232,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.chaos-streets-deathbringers.band.look-behind-you
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--no-noise
   name: No Noise!
   effect: No member of the warband may use blackpowder weapons.
@@ -172,6 +256,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.chaos-streets-deathbringers.band.no-noise
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--leader-death
   name: Death of the Boss
   effect: The warband leader should cause Fear whenever possible. If the leader dies, first choose a successor among Heroes
@@ -193,6 +286,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.chaos-streets-deathbringers.band.leader-death
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--deathbringer-special-skills-hit-and-fade
   name: Hit and Fade
   effect: After charging and resolving attacks normally, if the Hero is neither Knocked Down nor Stunned, roll D6. On 5+ the
@@ -219,6 +321,15 @@ rules:
   - young-claw
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.chaos-streets-deathbringers.band.deathbringer-special-skills-hit-and-fade
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--deathbringer-special-skills-death-blow
   name: Death Blow
   effect: If the Hero has at least 2 Attacks on its profile, it may replace all of its attacks with a single attack resolved
@@ -241,6 +352,15 @@ rules:
   - young-claw
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.chaos-streets-deathbringers.band.deathbringer-special-skills-death-blow
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--deathbringer-special-skills-poison-master
   name: Poison Master
   effect: If the Hero does not search for rare items after a battle, it may prepare 1D3-1 doses of Black Venom. The doses
@@ -263,7 +383,26 @@ rules:
   - young-claw
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.chaos-streets-deathbringers.band.deathbringer-special-skills-poison-master
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--deathbringer-special-skills-defensive-stance
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: skill.defensive-stance
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.defensive-stance
   name: Defensive Stance
   effect: The Hero may parry with any weapon it carries. If that weapon already has the Parry rule, the Hero may successfully
     parry by equalling the attack roll instead of having to exceed it.
@@ -285,8 +424,17 @@ rules:
   - young-claw
   applies_to:
     band: true
-  mechanic_id: skill.defensive-stance
 - id: band--deathbringer-special-skills-art-of-unarmed-combat
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: skill.art-of-unarmed-combat
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.art-of-unarmed-combat
   name: Art of Unarmed Combat
   effect: The Hero may fight with bare claws without penalty and counts as using two close-combat weapons, gaining +1 Attack.
     In close combat, it scores a critical hit on a To Hit roll of 5-6 instead of only 6. When combined with Eshin Fighting
@@ -310,7 +458,6 @@ rules:
   - young-claw
   applies_to:
     band: true
-  mechanic_id: skill.art-of-unarmed-combat
 - id: band--deathbringer-special-skills-feign-death
   name: Feign Death
   effect: When the Hero is wounded while not in base contact with an enemy model, it may feign death and is treated as Knocked
@@ -333,6 +480,15 @@ rules:
   - young-claw
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.chaos-streets-deathbringers.band.deathbringer-special-skills-feign-death
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--deathbringer-special-skills-infiltration
   name: Infiltration
   effect: The Hero deploys after the opposing warband and may be placed anywhere outside enemy line of sight and more than
@@ -355,3 +511,12 @@ rules:
   - young-claw
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.chaos-streets-deathbringers.band.deathbringer-special-skills-infiltration
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'

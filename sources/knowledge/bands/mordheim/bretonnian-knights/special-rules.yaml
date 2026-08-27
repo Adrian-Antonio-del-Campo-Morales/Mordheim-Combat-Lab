@@ -2,6 +2,15 @@ schema_version: 2
 band_id: bretonnian-knights
 rules:
 - id: questing-knight--leader
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.bretonnian-knights.questing-knight.leader
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Leader
   effect: 'Any warrior within 6" of the Questing Knight may
 
@@ -27,6 +36,15 @@ rules:
     profile_ids:
     - questing-knight
 - id: questing-knight--knights-virtue
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.bretonnian-knights.questing-knight.knights-virtue
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Knights Virtue
   effect: 'A Questing Knight is a chivalrous warrior
 
@@ -56,6 +74,15 @@ rules:
     profile_ids:
     - questing-knight
 - id: knights-errant--knights-virtue
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.bretonnian-knights.knights-errant.knights-virtue
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Knights Virtue
   effect: 'A Knight Errant is a chivalrous warrior who
 
@@ -85,6 +112,15 @@ rules:
     profile_ids:
     - knights-errant
 - id: band--lady-of-the-lake-blessing
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.bretonnian-knights.band.lady-of-the-lake-blessing
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: disparo."
   name: Lady of the Lake's Blessing
   effect: 'Before heading into battle Bretonnian Knights kneel and pray
 
@@ -177,6 +213,15 @@ rules:
   applies_to:
     band: true
 - id: band--squire-retinue-limit
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.bretonnian-knights.band.squire-retinue-limit
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Squire Retinue Limit
   effect: The warband may not include more Squires than Knights. For this limit, Knights are the Questing Knight plus all
     Knights Errant in the warband.
@@ -196,6 +241,15 @@ rules:
   applies_to:
     band: true
 - id: band--virtue-of-purity
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.bretonnian-knights.band.virtue-of-purity
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: magia."
   name: Virtue of Purity
   effect: Any spell cast against the warrior is dispelled on a D6 roll of 4+.
   source:
@@ -212,6 +266,16 @@ rules:
   applies_to:
     band: true
 - id: band--virtue-of-valour
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: selectable
+    effects:
+    - id: skill.virtue-of-valour
+      scope: "YES"
+      binding:
+        kind: mechanic
+        id: skill.virtue-of-valour
   name: Virtue of Valour
   effect: When fighting a model with a higher Strength characteristic, the warrior may re-roll failed hand-to-hand hit rolls.
   source:
@@ -229,6 +293,15 @@ rules:
   applies_to:
     band: true
 - id: band--virtue-of-discipline
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.bretonnian-knights.band.virtue-of-discipline
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Virtue of Discipline
   effect: Once per game, if the warrior is not out of action, stunned or knocked down, the warband may re-roll a failed Rout
     test.
@@ -248,6 +321,15 @@ rules:
   applies_to:
     band: true
 - id: band--virtue-of-noble-disdain
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.bretonnian-knights.band.virtue-of-noble-disdain
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Virtue of Noble Disdain
   effect: The warrior is subject to Hatred of all enemies armed with shooting weapons.
   source:
@@ -264,6 +346,15 @@ rules:
   applies_to:
     band: true
 - id: band--virtue-of-impetuous
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.bretonnian-knights.band.virtue-of-impetuous
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: ataques."
   name: Virtue of Impetuous
   effect: The warrior may add +D3" to a charge move. Roll the D3 each time a charge is declared and before moving the model.
   source:

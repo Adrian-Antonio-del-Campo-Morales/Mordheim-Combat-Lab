@@ -77,8 +77,7 @@ profiles:
   - silent-walker--ethereal
   - silent-walker--immune-to-psychology
   - silent-walker--fear
-  combat_traits:
-    ward_save: 5
+  combat_traits: {}
 - id: cannibals
   name: Cannibals
   type: hero

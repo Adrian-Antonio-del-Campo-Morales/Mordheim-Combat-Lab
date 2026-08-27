@@ -22,6 +22,15 @@ rules:
   applies_to:
     profile_ids:
     - orc-boss
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.orc-mob.orc-boss.leader
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: orc-shaman--wizard
   name: Wizard
   effect: The Orc Shaman is a wizard and uses Waaagh! Magic.
@@ -39,6 +48,15 @@ rules:
   applies_to:
     profile_ids:
     - orc-shaman
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.orc-mob.orc-shaman.wizard
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: orc-boyz--animosity
   name: Animosity
   effect: Orc Boyz are subject to the warband's Animosity rule.
@@ -56,6 +74,15 @@ rules:
   applies_to:
     profile_ids:
     - orc-boyz
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.orc-mob.orc-boyz.animosity
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: goblin-warriors--animosity
   name: Animosity
   effect: Goblin Warriors are subject to the warband's Animosity rule. If a Goblin fails Animosity and rolls a 1 on the result
@@ -75,6 +102,15 @@ rules:
   applies_to:
     profile_ids:
     - goblin-warriors
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.orc-mob.goblin-warriors.animosity
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: goblin-warriors--not-orcs
   name: Not Orcs
   effect: 'Orcs don''t expect much from non-Orcs, and are
@@ -124,6 +160,15 @@ rules:
   applies_to:
     profile_ids:
     - goblin-warriors
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.orc-mob.goblin-warriors.not-orcs
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: goblin-warriors--runts
   name: Runts
   effect: 'Goblins may gain experience but if they happen to
@@ -153,6 +198,15 @@ rules:
   applies_to:
     profile_ids:
     - goblin-warriors
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.orc-mob.goblin-warriors.runts
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: cave-squigs--movement
   name: Movement
   effect: 'Cave Squigs do not have a set Movement
@@ -198,6 +252,15 @@ rules:
   applies_to:
     profile_ids:
     - cave-squigs
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.orc-mob.cave-squigs.movement
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: cave-squigs--minderz
   name: Minderz
   effect: 'Each Cave Squig must always remain within 6" of a
@@ -247,6 +310,15 @@ rules:
   applies_to:
     profile_ids:
     - cave-squigs
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.orc-mob.cave-squigs.minderz
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: cave-squigs--not-orcs
   name: Not Orcs
   effect: See Goblin Warriors entry for rules.
@@ -264,6 +336,15 @@ rules:
   applies_to:
     profile_ids:
     - cave-squigs
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.orc-mob.cave-squigs.not-orcs
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: cave-squigs--animals
   name: Animals
   effect: 'Cave Squigs are animals of a sort and so do not gain
@@ -285,6 +366,15 @@ rules:
   applies_to:
     profile_ids:
     - cave-squigs
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.orc-mob.cave-squigs.animals
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: troll--fear
   name: Fear
   effect: Trolls are frightening monsters which cause fear.
@@ -302,6 +392,15 @@ rules:
   applies_to:
     profile_ids:
     - troll
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.orc-mob.troll.fear
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: troll--stupidity
   name: Stupidity
   effect: A Troll is subject to the rules for stupidity.
@@ -319,6 +418,15 @@ rules:
   applies_to:
     profile_ids:
     - troll
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.orc-mob.troll.stupidity
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: troll--regeneration
   name: Regeneration
   effect: 'Trolls have a unique physiology that allow
@@ -356,6 +464,16 @@ rules:
   applies_to:
     profile_ids:
     - troll
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: skill.regeneration
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.regeneration
 - id: troll--dumb-monster
   name: Dumb Monster
   effect: 'A Troll is far too stupid to ever learn any
@@ -377,6 +495,15 @@ rules:
   applies_to:
     profile_ids:
     - troll
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.orc-mob.troll.dumb-monster
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: troll--always-hungry
   name: Always Hungry
   effect: 'A Troll requires an upkeep cost. This
@@ -430,8 +557,26 @@ rules:
   applies_to:
     profile_ids:
     - troll
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.orc-mob.troll.always-hungry
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: troll--vomit-attack
-  mechanic_id: weapon.vomit-attack
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: weapon.vomit-attack
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: weapon.vomit-attack
   name: Vomit Attack
   effect: 'Instead of his normal attacks, a Troll can
 
@@ -481,6 +626,15 @@ rules:
   applies_to:
     profile_ids:
     - troll
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.orc-mob.troll.large-target
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--distasteful-company
   name: Distasteful Company
   effect: Orc Mobs may only hire Pit Fighters, Ogre Bodyguards, or Warlocks as Hired Swords.
@@ -497,6 +651,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.orc-mob.band.distasteful-company
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--animosity
   name: Animosity
   effect: 'At the start of the Orc player''s turn, roll a D6 for each Orc or Goblin Henchman not already engaged in hand-to-hand
@@ -531,6 +694,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.orc-mob.band.animosity
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--goblin-ratio
   name: Goblin Limit
   effect: The warband may never include more than two Goblin Warriors for each Orc in the warband, including Orc Heroes.
@@ -547,6 +719,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.orc-mob.band.goblin-ratio
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--cave-squig-ratio
   name: Cave Squig Limit
   effect: The warband may never include more Cave Squigs than Goblin Warriors.
@@ -563,6 +744,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.orc-mob.band.cave-squig-ratio
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--orc-special-skills-ard-ead
   name: '''Ard Ead'
   effect: The warrior has a thick skull even for an Orc. He has a special 3+ save on a D6 to avoid being stunned. If the save
@@ -583,6 +773,16 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: skill.thick-skull
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.thick-skull
 - id: band--orc-special-skills-waaagh
   name: Waaagh!
   effect: Orcs are aggressive creatures and some are experts at bulldozing charges. The warrior may add +D3" to his charge
@@ -600,6 +800,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.orc-mob.band.orc-special-skills-waaagh
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--orc-special-skills-ere-we-go
   name: '''Ere We Go!'
   effect: 'Orcs often charge even the most fearsome opponents. The
@@ -620,6 +829,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.orc-mob.band.orc-special-skills-ere-we-go
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--orc-special-skills-da-cunnin-plan
   name: Da Cunnin' Plan
   effect: 'Only the Boss may have this skill. The warband may re-roll
@@ -640,7 +858,27 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.orc-mob.band.orc-special-skills-da-cunnin-plan
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--orc-special-skills-well-ard
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: special-rule.band--orc-special-skills-well-ard
+      scope: 'YES'
+      binding:
+        kind: compiler
+        id: special-rule.band--orc-special-skills-well-ard
+  runtime_selectable: true
   name: Well 'Ard
   effect: 'The Orc has a thick, dark-green skin, possibly indicating Black
 
@@ -682,3 +920,13 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: skill.head-crusher
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.head-crusher

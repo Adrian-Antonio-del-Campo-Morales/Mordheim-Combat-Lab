@@ -2,6 +2,15 @@ schema_version: 2
 band_id: lizardmen
 rules:
 - id: skink-priest--leader
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.lizardmen.skink-priest.leader
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Leader
   effect: 'The Skink Priest is the leader of the Warband and any Lizardmen within 6" may use his Leadership characteristic
     for any Leadership tests.
@@ -27,6 +36,15 @@ rules:
     profile_ids:
     - skink-priest
 - id: skink-priest--wizard
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.lizardmen.skink-priest.wizard
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: magia."
   name: Wizard
   effect: The Skink Priest is a Wizard and may use Lizardmen magic.
   source:
@@ -44,6 +62,18 @@ rules:
     profile_ids:
     - skink-priest
 - id: kroxigor--scaly-skin
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: profile
+    effects:
+    - id: trait.natural-armour-save
+      scope: "YES"
+      binding:
+        kind: trait
+        id: trait.natural-armour-save
+        parameters:
+          value: 4
   name: Scaly skin
   effect: Kroxigor has a natural save of 4+.
   source:
@@ -61,6 +91,15 @@ rules:
     profile_ids:
     - kroxigor
 - id: kroxigor--aquatic
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.lizardmen.kroxigor.aquatic
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: movimiento."
   name: Aquatic
   effect: Kroxigor may move through water with no penalty, and count as being in cover whilst in water.
   source:
@@ -78,6 +117,15 @@ rules:
     profile_ids:
     - kroxigor
 - id: kroxigor--cause-fear
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.lizardmen.kroxigor.cause-fear
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Cause Fear
   effect: Kroxigor are large and frightening monsters that cause Fear.
   source:
@@ -95,6 +143,15 @@ rules:
     profile_ids:
     - kroxigor
 - id: kroxigor--large
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.lizardmen.kroxigor.large
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: disparo."
   name: Large
   effect: Kroxigor stand out amongst the rest of the Warband and may be picked out by an archer even if he is not the closest
     model.
@@ -114,6 +171,15 @@ rules:
     profile_ids:
     - kroxigor
 - id: kroxigor--animal
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.lizardmen.kroxigor.animal
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Animal
   effect: Kroxigor are slow-witted creatures that never learn from their mistakes. The Kroxigor doesn't gain experience.
   source:
@@ -131,6 +197,15 @@ rules:
     profile_ids:
     - kroxigor
 - id: band--scaly-skin
+  runtime:
+    scope: "YES"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.band-scaly-skin
+      scope: "YES"
+      binding: null
+      reason: "Legacy band grant had no executable mechanic, trait, or compiler contract."
   name: Scaly Skin
   effect: Skinks have a natural 6+ armour save and Saurus have a natural 5+ armour save. The Kroxigor uses its own 4+ Scaly
     Skin rule instead. Strength modifiers cannot reduce the Skink/Saurus natural save below 6+, but effects that allow no
@@ -151,6 +226,15 @@ rules:
   applies_to:
     band: true
 - id: band--armour
+  runtime:
+    scope: "YES"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.lizardmen.band.armour
+      scope: "YES"
+      binding: null
+      reason: "No executable binding exists for this in-scope rule."
   name: Armour
   effect: Light armour always costs 50 gc for Lizardmen, including when bought from the Equipment chart.
   source:
@@ -167,6 +251,16 @@ rules:
   applies_to:
     band: true
 - id: band--bite-attack
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: profile
+    effects:
+    - id: profile-rule.band--bite-attack
+      scope: "YES"
+      binding:
+        kind: compiler
+        id: profile-rule.band--bite-attack
   name: Bite Attack
   effect: Each Saurus makes one additional bite attack using its own Strength and with no unarmed penalty. The bite always
     strikes last, after all other attacks, including attacks made with double-handed weapons.
@@ -185,6 +279,15 @@ rules:
   applies_to:
     band: true
 - id: band--cold-blooded
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.lizardmen.band.cold-blooded
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Cold Blooded
   effect: When taking a Psychology test or Rout test, Lizardmen roll 3D6 and use the lowest two dice. A Lizardmen warband
     may never use the Leadership of a Saurus or Kroxigor for a Rout test.
@@ -203,6 +306,15 @@ rules:
   applies_to:
     band: true
 - id: band--aquatic
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.lizardmen.band.aquatic
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: movimiento."
   name: Aquatic
   effect: Skinks move through water terrain without penalty and count as being in cover while in water.
   source:
@@ -219,6 +331,15 @@ rules:
   applies_to:
     band: true
 - id: band--jungle-born
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.lizardmen.band.jungle-born
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: movimiento."
   name: Jungle Born
   effect: All Skinks move through jungle terrain without penalty.
   source:
@@ -235,6 +356,15 @@ rules:
   applies_to:
     band: true
 - id: band--saurus-rarity
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.lizardmen.band.saurus-rarity
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Saurus Rarity
   effect: The warband may never include more Saurus Braves than Skink Braves.
   source:
@@ -251,6 +381,15 @@ rules:
   applies_to:
     band: true
 - id: band--saurus-skill-prohibitions
+  runtime:
+    scope: "YES"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.lizardmen.band.saurus-skill-prohibitions
+      scope: "YES"
+      binding: null
+      reason: "No executable binding exists for this in-scope rule."
   name: Saurus Skill Prohibitions
   effect: Saurus can never receive Academic skills and can never use missile weapons.
   source:
@@ -267,6 +406,15 @@ rules:
   applies_to:
     band: true
 - id: band--lizardmen-special-skills-skinks-only-infiltration
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.lizardmen.band.lizardmen-special-skills-skinks-only-infiltration
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: movimiento."
   name: Infiltration
   effect: 'The Skink is a great hunter and is an expert at sneaking upon his prey unnoticed.
 
@@ -287,6 +435,15 @@ rules:
   applies_to:
     band: true
 - id: band--lizardmen-special-skills-skinks-only-great-hunter
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.lizardmen.band.lizardmen-special-skills-skinks-only-great-hunter
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: disparo."
   name: Great Hunter
   effect: The Skink Great Crest is adept at making the most of the cover available and imposes an additional -1 to hit the
     Skink if he is in cover, i.e. a -2 to hit penalty.
@@ -305,6 +462,16 @@ rules:
   applies_to:
     band: true
 - id: band--lizardmen-special-skills-saurus-only-bellowing-battle-roar
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: selectable
+    effects:
+    - id: skill.bellowing-battle-roar
+      scope: "YES"
+      binding:
+        kind: mechanic
+        id: skill.bellowing-battle-roar
   name: Bellowing Battle Roar
   effect: The Saurus' roar is so deafening that enemy models in base contact suffer -1 to hit in the first round of combat
     against them.
@@ -323,6 +490,15 @@ rules:
   applies_to:
     band: true
 - id: band--lizardmen-special-skills-saurus-only-toughened-hide
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.lizardmen.band.lizardmen-special-skills-saurus-only-toughened-hide
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: lesiones."
   name: Toughened Hide
   effect: Through years of battle the Saurus' hide has become hardened and the Saurus will only be taken out of action on
     a 6+.

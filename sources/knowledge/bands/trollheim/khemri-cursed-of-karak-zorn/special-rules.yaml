@@ -17,6 +17,15 @@ rules:
   applies_to:
     profile_ids:
     - karak-zorn-noble
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.khemri-cursed-of-karak-zorn.karak-zorn-noble.leader
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: priest-of-grungni--devout
   name: Devout
   effect: The Priest begins with one vial of Holy Water. For this Priest, Holy Water is treated as Common and a Holy Relic
@@ -35,6 +44,15 @@ rules:
   applies_to:
     profile_ids:
     - priest-of-grungni
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.khemri-cursed-of-karak-zorn.priest-of-grungni.devout
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: troll-slayer--death-oath
   name: Death Oath
   effect: The Troll Slayer is completely immune to Psychology and does not need to take tests for fighting alone.
@@ -51,6 +69,15 @@ rules:
   applies_to:
     profile_ids:
     - troll-slayer
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.khemri-cursed-of-karak-zorn.troll-slayer.death-oath
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: cannibal-dwarfs--fear
   name: Fear
   effect: Cannibal Dwarfs cause Fear.
@@ -67,6 +94,15 @@ rules:
   applies_to:
     profile_ids:
     - cannibal-dwarfs
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.khemri-cursed-of-karak-zorn.cannibal-dwarfs.fear
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: shadowed--may-not-run
   name: May Not Run
   effect: Shadowed may not run, but may charge normally.
@@ -83,6 +119,15 @@ rules:
   applies_to:
     profile_ids:
     - shadowed
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.khemri-cursed-of-karak-zorn.shadowed.may-not-run
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: shadowed--fear
   name: Fear
   effect: Shadowed cause Fear.
@@ -99,6 +144,15 @@ rules:
   applies_to:
     profile_ids:
     - shadowed
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.khemri-cursed-of-karak-zorn.shadowed.fear
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: shadowed--immune-to-psychology
   name: Immune to Psychology
   effect: Shadowed are immune to Psychology and never leave combat because of Psychology.
@@ -115,10 +169,28 @@ rules:
   applies_to:
     profile_ids:
     - shadowed
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.khemri-cursed-of-karak-zorn.shadowed.immune-to-psychology
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: shadowed--immune-to-poison
-  runtime_grant: true
-  runtime_traits:
-    poison_immune: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: trait.poison-immune
+      scope: 'YES'
+      binding:
+        kind: trait
+        id: trait.poison-immune
+        parameters:
+          value: true
   name: Immune to Poison
   effect: Shadowed are immune to poison.
   source:
@@ -135,8 +207,16 @@ rules:
     profile_ids:
     - shadowed
 - id: shadowed--no-pain
-  mechanic_id: skill.ignore-pain
-  runtime_grant: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: skill.ignore-pain
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.ignore-pain
   name: No Pain
   effect: Shadowed treat a Stunned result on the Injury chart as Knocked Down.
   source:
@@ -152,7 +232,6 @@ rules:
   applies_to:
     profile_ids:
     - shadowed
-  mechanic_id: skill.ignore-pain
 - id: shadowed--brainless
   name: Brainless
   effect: Shadowed never gain Experience.
@@ -169,7 +248,26 @@ rules:
   applies_to:
     profile_ids:
     - shadowed
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.khemri-cursed-of-karak-zorn.shadowed.brainless
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--hard-to-kill
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: skill.hard-to-kill
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.hard-to-kill
   name: Hard to Kill
   effect: Dwarfs are taken Out of Action only on a 6 on the Injury chart; 1-2 is Knocked Down and 3-5 is Stunned.
   source:
@@ -184,12 +282,19 @@ rules:
     es: null
   applies_to:
     band: true
-  mechanic_id: skill.hard-to-kill
 - id: band--hard-head
-  runtime_grant: true
-  runtime_band_grant: true
-  runtime_traits:
-    concussion_immune: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: band
+    effects:
+    - id: trait.concussion-immune
+      scope: 'YES'
+      binding:
+        kind: trait
+        id: trait.concussion-immune
+        parameters:
+          value: true
   name: Hard Head
   effect: Dwarfs ignore the special rules of maces, clubs and similar weapons that would make them easier to Stun.
   source:
@@ -219,6 +324,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.khemri-cursed-of-karak-zorn.band.armour
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--hate-greenskins
   name: Hate Greenskins
   effect: All Dwarfs are subject to Hatred against Greenskins.
@@ -234,6 +348,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.khemri-cursed-of-karak-zorn.band.hate-greenskins
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--ancestral-grudge
   name: Ancestral Grudge
   effect: The warband may never hire an Elven Hired Sword.
@@ -249,6 +372,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.khemri-cursed-of-karak-zorn.band.ancestral-grudge
+      scope: 'YES'
+      binding: null
+      reason: No executable binding exists for this in-scope rule.
 - id: band--excellent-miners
   name: Excellent Miners
   effect: At the end of each battle, add +1 wyrdstone shard to the amount found through Exploration.
@@ -264,6 +396,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.khemri-cursed-of-karak-zorn.band.excellent-miners
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--karak-zorn-special-skills-magic-resistant
   name: Magic Resistant
   effect: Whenever this Hero would be affected by a spell, conjuration, scroll, prayer or similar magical effect, roll D6;
@@ -286,6 +427,15 @@ rules:
   - troll-slayer
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.khemri-cursed-of-karak-zorn.band.karak-zorn-special-skills-magic-resistant
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--karak-zorn-special-skills-smith
   name: Smith
   effect: After each battle, this Hero may buy one non-Rare weapon at half its normal price. Rare weapons are excluded from
@@ -308,6 +458,15 @@ rules:
   - troll-slayer
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.khemri-cursed-of-karak-zorn.band.karak-zorn-special-skills-smith
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--karak-zorn-special-skills-white-beard
   name: White Beard
   effect: Leader only. The warband may re-roll a failed Rout test.
@@ -325,6 +484,15 @@ rules:
   - karak-zorn-noble
   applies_to:
     band: true
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.khemri-cursed-of-karak-zorn.band.karak-zorn-special-skills-white-beard
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--karak-zorn-special-skills-fearless
   name: Fearless
   effect: This Hero is immune to Fear.
@@ -345,7 +513,26 @@ rules:
   - troll-slayer
   applies_to:
     band: true
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.khemri-cursed-of-karak-zorn.band.karak-zorn-special-skills-fearless
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--karak-zorn-special-skills-very-tough
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: skill.very-tough
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.very-tough
   name: Very Tough
   effect: When rolling on the Serious Injury table for this Hero after a battle, the roll may be re-rolled once. The second
     result must be accepted even if it is worse.
@@ -367,8 +554,17 @@ rules:
   - troll-slayer
   applies_to:
     band: true
-  mechanic_id: skill.very-tough
 - id: band--karak-zorn-special-skills-hard-as-steel
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: skill.tough-as-steel
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.tough-as-steel
   name: Hard as Steel
   effect: For this Hero, Injury chart results are 1-3 Knocked Down, 4-5 Stunned, and 6 Out of Action.
   source:
@@ -388,8 +584,17 @@ rules:
   - troll-slayer
   applies_to:
     band: true
-  mechanic_id: skill.tough-as-steel
 - id: band--troll-slayer-special-skills-ferocious-charge
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: skill.ferocious-charge
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.ferocious-charge
   name: Ferocious Charge
   effect: The Troll Slayer may double his Attacks during the turn he charges, but suffers -1 To Hit during that turn.
   source:
@@ -406,8 +611,17 @@ rules:
   - troll-slayer
   applies_to:
     band: true
-  mechanic_id: skill.ferocious-charge
 - id: band--troll-slayer-special-skills-berserker
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: skill.berserker
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.berserker
   name: Berserker
   effect: The Troll Slayer gains +1 To Hit during the turn he charges.
   source:
@@ -424,8 +638,17 @@ rules:
   - troll-slayer
   applies_to:
     band: true
-  mechanic_id: skill.berserker
 - id: band--troll-slayer-special-skills-monster-slayer
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: skill.monster-slayer
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.monster-slayer
   name: Monster Slayer
   effect: The Troll Slayer wounds any opponent on 4+ regardless of Toughness, unless his modified Strength would normally
     wound on a lower result. If this rule effectively increases the Strength needed to obtain a 4+ wound roll, use that effective
@@ -446,4 +669,3 @@ rules:
   - troll-slayer
   applies_to:
     band: true
-  mechanic_id: skill.monster-slayer

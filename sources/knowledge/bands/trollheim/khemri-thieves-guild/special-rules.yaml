@@ -17,6 +17,15 @@ rules:
   applies_to:
     profile_ids:
     - guild-chief
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.khemri-thieves-guild.guild-chief.leader
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: guild-chief--wanted
   name: Wanted
   effect: 'If the Guild Chief is captured by an enemy warband after a battle, that warband may sell him to the authorities
@@ -37,6 +46,15 @@ rules:
   applies_to:
     profile_ids:
     - guild-chief
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.khemri-thieves-guild.guild-chief.wanted
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: guild-chief--contacts
   name: Contacts
   effect: The Guild Chief gains +1 on rolls to find Rare items in the black market.
@@ -53,6 +71,15 @@ rules:
   applies_to:
     profile_ids:
     - guild-chief
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.khemri-thieves-guild.guild-chief.contacts
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: guild-chief--disable-traps
   name: Disable Traps
   effect: The Guild Chief is an expert at detecting and disabling traps. Resolve this using the trap rules referenced by the
@@ -71,6 +98,15 @@ rules:
   applies_to:
     profile_ids:
     - guild-chief
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.khemri-thieves-guild.guild-chief.disable-traps
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: guild-master-thief--wanted
   name: Wanted
   effect: 'If the Master Thief is captured by an enemy warband after a battle, that warband may sell him to the authorities
@@ -91,6 +127,15 @@ rules:
   applies_to:
     profile_ids:
     - guild-master-thief
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.khemri-thieves-guild.guild-master-thief.wanted
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: guild-master-thief--contacts
   name: Contacts
   effect: The Master Thief gains +1 on rolls to find Rare items in the black market.
@@ -107,6 +152,15 @@ rules:
   applies_to:
     profile_ids:
     - guild-master-thief
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.khemri-thieves-guild.guild-master-thief.contacts
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: guild-master-thief--disable-traps
   name: Disable Traps
   effect: The Master Thief is an expert at detecting and disabling traps. Resolve this using the trap rules referenced by
@@ -125,6 +179,15 @@ rules:
   applies_to:
     profile_ids:
     - guild-master-thief
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.khemri-thieves-guild.guild-master-thief.disable-traps
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: guild-ruffian--contacts
   name: Contacts
   effect: A Ruffian gains +1 on rolls to find Rare items in the black market.
@@ -141,6 +204,15 @@ rules:
   applies_to:
     profile_ids:
     - guild-ruffian
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.khemri-thieves-guild.guild-ruffian.contacts
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: guild-ruffian--disable-traps
   name: Disable Traps
   effect: Ruffians are experts at detecting and disabling traps. Resolve this using the trap rules referenced by the Khemri
@@ -159,6 +231,15 @@ rules:
   applies_to:
     profile_ids:
     - guild-ruffian
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.khemri-thieves-guild.guild-ruffian.disable-traps
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: guild-hashashiyyin--consummate-fighter
   name: Consummate Fighter
   effect: Any Wound inflicted by the Hashashiyyin Assassin, whether in close combat or shooting, imposes an additional -1
@@ -177,6 +258,18 @@ rules:
   applies_to:
     profile_ids:
     - guild-hashashiyyin
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: trait.perfect-killer
+      scope: 'YES'
+      binding:
+        kind: trait
+        id: trait.perfect-killer
+        parameters:
+          value: true
 - id: guild-hashashiyyin--contacts
   name: Contacts
   effect: The Hashashiyyin Assassin gains +1 on rolls to find Rare items in the black market.
@@ -193,6 +286,15 @@ rules:
   applies_to:
     profile_ids:
     - guild-hashashiyyin
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.khemri-thieves-guild.guild-hashashiyyin.contacts
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: guild-hashashiyyin--disable-traps
   name: Disable Traps
   effect: The Hashashiyyin Assassin is an expert at detecting and disabling traps. Resolve this using the trap rules referenced
@@ -211,6 +313,15 @@ rules:
   applies_to:
     profile_ids:
     - guild-hashashiyyin
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.khemri-thieves-guild.guild-hashashiyyin.disable-traps
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: guild-beggar--alms
   name: Alms
   effect: 'Whenever the warband is in an oasis or a city, a Beggar may go begging. Roll D6: 1 = the Beggar is beaten and misses
@@ -229,6 +340,15 @@ rules:
   applies_to:
     profile_ids:
     - guild-beggar
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.khemri-thieves-guild.guild-beggar.alms
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--guild-special-skills-pickpocket
   name: Pickpocket
   effect: If the Hero moves into contact with an enemy model that is Out of Action but has not yet been removed from the game,
@@ -253,7 +373,26 @@ rules:
   - guild-hashashiyyin
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.khemri-thieves-guild.band.guild-special-skills-pickpocket
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--guild-special-skills-knife-fighting
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: skill.knife-fighting
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.knife-fighting
   name: Knife Fighting
   effect: While using a Yambiya or Dagger, the Hero gains +1 WS and +1 on the Injury roll. The opponent still receives the
     normal +1 armour-save modifier for being attacked with such a weapon.
@@ -275,7 +414,6 @@ rules:
   - guild-hashashiyyin
   applies_to:
     band: true
-  mechanic_id: skill.knife-fighting
 - id: band--guild-special-skills-hide-in-shadows
   name: Hide in Shadows
   effect: While the Hero is within 1" of a wall or another linear obstacle such as a hedge, fence or well, an enemy model
@@ -298,6 +436,15 @@ rules:
   - guild-hashashiyyin
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.khemri-thieves-guild.band.guild-special-skills-hide-in-shadows
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--guild-special-skills-poisoner
   name: Poisoner
   effect: Ruffians may not take this skill. At the start of each battle, choose two of the Hero's own weapons; each is coated
@@ -322,6 +469,15 @@ rules:
   - guild-hashashiyyin
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.khemri-thieves-guild.band.guild-special-skills-poisoner
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--guild-special-skills-fast-legs
   name: Fast Legs
   effect: Ruffians may not take this skill. The Hero increases its base Movement by +1". This skill may not be used while
@@ -343,6 +499,15 @@ rules:
   - guild-hashashiyyin
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.khemri-thieves-guild.band.guild-special-skills-fast-legs
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--guild-special-skills-infiltration
   name: Infiltration
   effect: Ruffians may not take this skill. The Hero deploys after the opposing warband and may be placed anywhere outside
@@ -366,3 +531,12 @@ rules:
   - guild-hashashiyyin
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.khemri-thieves-guild.band.guild-special-skills-infiltration
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
