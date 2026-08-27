@@ -1,0 +1,42 @@
+schema_version: 2
+ruleset: mordheim
+scope: close-combat-only
+profile_exclusions:
+- band_id: carnival-of-chaos
+  profile_id: plague-cart
+  reason: The cart is not an individual fighter and has no WS, S, I or A profile.
+mechanic_exclusions:
+- id: skill.combat-master
+  reason: Its effect requires two or more opponents; the runtime simulates one-against-one duels.
+special_rule_policy:
+  default: editorial_out_of_scope
+  executable_binding: profile.combat_traits
+  note: Only normalized combat_traits participate in one-against-one runtime combat. Other rule_ids remain available to the UI as editorial rules but cannot silently affect a duel.
+supported_combat_traits:
+- starting_skills
+- poison_immune
+- undead_or_possessed
+- natural_armour_save
+- natural_armour_worst_save
+- ward_save
+- regeneration_save
+- frenzy
+- injury_profile
+- cloud_of_flies
+- natural_armour_stacks
+- charge_attack_bonus
+- extra_natural_attacks
+- maddened_with_pain
+- natural_armour_unmodified
+- poisonous_injury
+- survivor
+- concussion_immune
+- wight_blades
+- perfect_killer
+- counts_as_buckler
+- counts_as_shield
+- fragile_halflings
+- flammable
+- injury_reroll_out
+- dagger_master
+- spiritual_weapons

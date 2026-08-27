@@ -1,87 +1,51 @@
 # Mordheim Combat Lab
 
-> **Beta release — v0.9.0-beta.1.** An unofficial Windows desktop tool for
-> analysing one-on-one Mordheim close combat through Monte Carlo simulation.
+Motor Monte Carlo vectorizado para duelos cuerpo a cuerpo 1 contra 1. El núcleo
+se basa exclusivamente en IDs y contratos de la base de conocimiento. La
+interfaz gráfica anterior y sus utilidades de exportación se conservan como
+referencia de migración. No se lanzan por defecto: se adaptarán al contrato
+tipado de esta KB en una entrega posterior.
 
-[English](#english) · [Español](#español)
+## Estado
 
-## English
+- 48 bandas Mordheim: 315 perfiles de duelo compilables y 1 elemento no combatiente excluido explícitamente (Plague Cart).
+- 33 bandas de la colección Trollheim: 218 perfiles compilables bajo el mismo ruleset Mordheim.
+- API tipada: `FighterBuild`, `CompiledFighter`, `DuelRequest` y `DuelResult`.
+- Contrato ejecutable no vacío para cada mecánica del catálogo de combate.
+- Efectos condicionales y persistentes para armas, defensas, materiales,
+  preparaciones, venenos, habilidades, heridas y recuperación.
+- Características aleatorias de perfil resueltas por fila de simulación.
+- Equipo fijo, ataques naturales, listas de equipo, categorías de habilidades y
+  restricciones normalizadas aplicados durante la compilación.
+- Un único motor NumPy vectorizado, reproducible, por lotes y cancelable.
+- Mordheim y Trollheim son colecciones de bandas; ambas reutilizan el ruleset de combate Mordheim.
+- Las reglas innatas Trollheim normalizadas reutilizan los mismos operadores de
+  armadura, carga, regeneración, prioridad, penetración y heridas.
+- Todas las referencias de equipo resuelven a una mecánica compartida o a una
+  clasificación explícita fuera del alcance del duelo.
 
-Mordheim Combat Lab combines the Mordheimer and Trollheim collections in one
-schema-versioned knowledge base and one combat engine. It provides 83 warbands
-and 540 warrior profiles, with Core, 1A, 1B, 1C, and Trollheim catalogue filters.
+## Uso
 
-### Highlights
+```python
+from mordheim_combat_lab import Characteristics, DuelRequest, FighterBuild, compile_fighter, simulate_duel
+stats = Characteristics(3, 3, 3, 1, 3, 1)
+first = compile_fighter(FighterBuild("mordheim", stats, main_weapon_id="weapon.sword"))
+second = compile_fighter(FighterBuild("mordheim", stats, main_weapon_id="weapon.mace"))
+result = simulate_duel(DuelRequest(first, second, simulations=100_000, seed=42))
 
-- Configure candidates and opponents from source-specific warband profiles.
-- Compare weapons, equipment, advances, house rules, and MOTTA rankings.
-- Run cancellable Monte Carlo simulations and export reusable Excel workbooks.
-- Use the interface in English or Spanish. Movement is displayed in inches in
-  English and centimetres in Spanish while retaining the same game value.
-- Keep source variants explicit where rules, costs, equipment, or rosters differ.
-
-### Install on Windows
-
-1. Download `Mordheim-Combat-Lab-Setup-0.9.0.exe` from the latest release.
-2. Run the installer. No administrator privileges are required.
-3. Open **Mordheim Combat Lab** from the Start menu or desktop shortcut.
-
-You can also download `MordheimCombatLab.exe` for a portable build.
-
-### Run from source
-
-Python 3.10 or later is required.
-
-```powershell
-python -m pip install -r requirements.txt
-python Mordheim_Combat_Lab.py
+# Una banda de la colección Trollheim reutiliza el ruleset Mordheim.
+trollheim_fighter = compile_fighter(FighterBuild(
+    "mordheim",
+    band_id="trollheim-mercenaries",
+    profile_id="mercenary-captain",
+    collection="trollheim",
+))
 ```
 
-### Development checks
+## Comprobaciones
 
 ```powershell
-python tools\validate_knowledge_base.py
-python tools\validate_runtime_knowledge.py
+python tools\validate_knowledge.py
 python -m pytest -q
+python tools\benchmark_engine.py -n 500000
 ```
-
-The detailed review of translated and equivalent warbands is available in
-[`notes/warband-equivalence-audit.md`](notes/warband-equivalence-audit.md).
-
-## Español
-
-Mordheim Combat Lab unifica las colecciones de Mordheimer y Trollheim en una
-única base de conocimiento versionada y un único motor de combate. Incluye 83
-bandas y 540 perfiles, con filtros para Básicas, 1A, 1B, 1C y Trollheim.
-
-### Funciones principales
-
-- Configura candidatos y oponentes con perfiles propios de cada fuente.
-- Compara armas, equipo, avances, reglas caseras y clasificaciones MOTTA.
-- Ejecuta simulaciones Monte Carlo cancelables y exporta libros de Excel reutilizables.
-- Usa la interfaz en inglés o español. El movimiento se muestra en pulgadas en
-  inglés y en centímetros en español, conservando el mismo valor de juego.
-- Mantiene las variantes de cada fuente cuando cambian reglas, costes, equipo o plantilla.
-
-### Instalar en Windows
-
-1. Descarga `Mordheim-Combat-Lab-Setup-0.9.0.exe` de la última versión publicada.
-2. Ejecuta el instalador; no requiere permisos de administrador.
-3. Abre **Mordheim Combat Lab** desde el menú Inicio o el acceso directo del escritorio.
-
-También puedes descargar `MordheimCombatLab.exe` como versión portable.
-
-### Ejecutar desde el código fuente
-
-Se necesita Python 3.10 o posterior.
-
-```powershell
-python -m pip install -r requirements.txt
-python Mordheim_Combat_Lab.py
-```
-
-## Legal
-
-Mordheim, Trollheim, and related names and rules belong to their respective
-rights holders. This is an unofficial analytical tool and is not affiliated
-with or endorsed by any rights holder.

@@ -1,0 +1,249 @@
+schema_version: 2
+band_id: lustria-norse
+rules:
+- id: jarl--leader
+  name: Leader
+  effect: Any warband warrior within 6" of the Jarl may use his Leadership when taking Leadership tests.
+  source:
+    manual: lustria
+    printed_page: 108
+    section: Heroes / 1 Jarl / Leader
+  name_i18n:
+    en: Leader
+    es: null
+  effect_i18n:
+    en: Any warband warrior within 6" of the Jarl may use his Leadership when taking Leadership tests.
+    es: null
+  applies_to:
+    profile_ids:
+    - jarl
+- id: berserkers--frenzy
+  runtime_grant: true
+  runtime_traits:
+    frenzy: true
+  name: Frenzy
+  effect: Berserkers are subject to Frenzy.
+  source:
+    manual: lustria
+    printed_page: 108
+    section: Heroes / 0-2 Berserkers / Frenzy
+  name_i18n:
+    en: Frenzy
+    es: null
+  effect_i18n:
+    en: Berserkers are subject to Frenzy.
+    es: null
+  applies_to:
+    profile_ids:
+    - berserkers
+- id: wulfen--fear
+  name: Fear
+  effect: The Wulfen causes Fear.
+  source:
+    manual: lustria
+    printed_page: 109
+    section: Heroes / 0-1 Wulfen / Fear
+  name_i18n:
+    en: Fear
+    es: null
+  effect_i18n:
+    en: The Wulfen causes Fear.
+    es: null
+  applies_to:
+    profile_ids:
+    - wulfen
+- id: wulfen--immune-to-psychology
+  name: Immune to Psychology
+  effect: The Wulfen is immune to Psychology.
+  source:
+    manual: lustria
+    printed_page: 109
+    section: Heroes / 0-1 Wulfen / Immune to Psychology
+  name_i18n:
+    en: Immune to Psychology
+    es: null
+  effect_i18n:
+    en: The Wulfen is immune to Psychology.
+    es: null
+  applies_to:
+    profile_ids:
+    - wulfen
+- id: wulfen--hardened-hide
+  name: Hardened Hide
+  effect: The Wulfen has a natural 6+ armour save, equivalent to Hardened Leather. This save is modified normally by high
+    Strength as if it were ordinary armour.
+  source:
+    manual: lustria
+    printed_page: 109
+    section: Heroes / 0-1 Wulfen / Hardened Hide
+  name_i18n:
+    en: Hardened Hide
+    es: null
+  effect_i18n:
+    en: The Wulfen has a natural 6+ armour save, equivalent to Hardened Leather. This save is modified normally by high Strength
+      as if it were ordinary armour.
+    es: null
+  applies_to:
+    profile_ids:
+    - wulfen
+- id: wolves--animal
+  name: Animal
+  effect: Wolves are animals and never gain Experience.
+  source:
+    manual: lustria
+    printed_page: 110
+    section: Henchmen / 0-5 Wolves / Animal
+  name_i18n:
+    en: Animal
+    es: null
+  effect_i18n:
+    en: Wolves are animals and never gain Experience.
+    es: null
+  applies_to:
+    profile_ids:
+    - wolves
+- id: wolves--pack-leader
+  name: Pack Leader
+  effect: The Wulfen is always the Wolves' alpha. If the Wulfen cannot fight in a battle, the Wolves may not fight either.
+    If the Wulfen dies, the Wolves leave the warband until another Wulfen is recruited; at that point the new Wulfen calls
+    them back.
+  source:
+    manual: lustria
+    printed_page: 110
+    section: Henchmen / 0-5 Wolves / Pack Leader
+  name_i18n:
+    en: Pack Leader
+    es: null
+  effect_i18n:
+    en: The Wulfen is always the Wolves' alpha. If the Wulfen cannot fight in a battle, the Wolves may not fight either. If
+      the Wulfen dies, the Wolves leave the warband until another Wulfen is recruited; at that point the new Wulfen calls
+      them back.
+    es: null
+  applies_to:
+    profile_ids:
+    - wolves
+- id: band--seafarers
+  name: Seafarers
+  effect: Every Norse warrior gains +2 Strength when rowing a boat.
+  source:
+    manual: lustria
+    printed_page: 107
+    section: Norse Special Rules / Seafarers
+  name_i18n:
+    en: Seafarers
+    es: null
+  effect_i18n:
+    en: Every Norse warrior gains +2 Strength when rowing a boat.
+    es: null
+  eligibility:
+  - jarl
+  - berserkers
+  - wulfen
+  - bondsmen
+  - marauders
+  - hunters
+  applies_to:
+    band: true
+- id: band--norse-special-skills-shield-mastery
+  name: Shield Mastery
+  effect: The Hero may parry with a Shield as if it were a Buckler while still receiving the Shield's normal armour-save bonus.
+  source:
+    manual: lustria
+    printed_page: 111
+    section: Norse Special Skills / Shield Mastery
+  name_i18n:
+    en: Shield Mastery
+    es: null
+  effect_i18n:
+    en: The Hero may parry with a Shield as if it were a Buckler while still receiving the Shield's normal armour-save bonus.
+    es: null
+  eligibility:
+  - jarl
+  - berserkers
+  - wulfen
+  - bondsmen
+  applies_to:
+    band: true
+  mechanic_id: skill.shield-mastery
+- id: band--norse-special-skills-northern-weapons
+  name: Northern Weapons
+  effect: When the Hero attacks with an Axe or a two-handed axe, the Hero may re-roll each failed To Hit roll once.
+  source:
+    manual: lustria
+    printed_page: 111
+    section: Norse Special Skills / Northern Weapons
+  name_i18n:
+    en: Northern Weapons
+    es: null
+  effect_i18n:
+    en: When the Hero attacks with an Axe or a two-handed axe, the Hero may re-roll each failed To Hit roll once.
+    es: null
+  eligibility:
+  - jarl
+  - berserkers
+  - wulfen
+  - bondsmen
+  applies_to:
+    band: true
+  mechanic_id: skill.weapons-of-the-north
+- id: band--norse-special-skills-battle-tongue
+  name: Battle Tongue
+  effect: Only the current warband leader may choose this skill. The radius of that warrior's Leader rule increases to 12".
+  source:
+    manual: lustria
+    printed_page: 111
+    section: Norse Special Skills / Battle Tongue
+  name_i18n:
+    en: Battle Tongue
+    es: null
+  effect_i18n:
+    en: Only the current warband leader may choose this skill. The radius of that warrior's Leader rule increases to 12".
+    es: null
+  eligibility:
+  - jarl
+  - berserkers
+  - wulfen
+  - bondsmen
+  applies_to:
+    band: true
+- id: band--norse-special-skills-barbarian-courage
+  name: Barbarian Courage
+  effect: The Hero ignores Leadership tests for being All Alone.
+  source:
+    manual: lustria
+    printed_page: 111
+    section: Norse Special Skills / Barbarian Courage
+  name_i18n:
+    en: Barbarian Courage
+    es: null
+  effect_i18n:
+    en: The Hero ignores Leadership tests for being All Alone.
+    es: null
+  eligibility:
+  - jarl
+  - berserkers
+  - wulfen
+  - bondsmen
+  applies_to:
+    band: true
+- id: band--norse-special-skills-crushing-blow
+  name: Crushing Blow
+  effect: Enemy models may not parry attacks made by the Hero.
+  source:
+    manual: lustria
+    printed_page: 111
+    section: Norse Special Skills / Crushing Blow
+  name_i18n:
+    en: Crushing Blow
+    es: null
+  effect_i18n:
+    en: Enemy models may not parry attacks made by the Hero.
+    es: null
+  eligibility:
+  - jarl
+  - berserkers
+  - wulfen
+  - bondsmen
+  applies_to:
+    band: true
+  mechanic_id: skill.crushing-blow

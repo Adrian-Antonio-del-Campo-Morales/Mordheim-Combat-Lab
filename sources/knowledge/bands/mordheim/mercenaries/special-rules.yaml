@@ -1,0 +1,157 @@
+schema_version: 2
+band_id: mercenaries
+rules:
+- id: mercenary-captain--leader
+  name: Leader
+  effect: 'Any warrior within 6" of the Mercenary
+
+    Captain may use his Leadership characteristic when
+
+    taking Leadership tests.'
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: heroes / 1 Mercenary captain / Special Rules / Leader
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/mercenaries
+  name_i18n:
+    en: Leader
+    es: null
+  effect_i18n:
+    en: 'Any warrior within 6" of the Mercenary
+
+      Captain may use his Leadership characteristic when
+
+      taking Leadership tests.'
+    es: null
+  applies_to:
+    profile_ids:
+    - mercenary-captain
+- id: swordsmen--expert-swordsmen
+  name: Expert Swordsmen
+  effect: 'Swordsmen are so skilled with
+
+    their weapons that they may re-roll any failed hits
+
+    when charging. Note that this only applies when they
+
+    are armed with normal swords, and not with doublehanded swords or any other weapons.'
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: henchmen / 0 – 5 Swordsmen / Special Rules / Expert Swordsmen
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/mercenaries
+  name_i18n:
+    en: Expert Swordsmen
+    es: null
+  effect_i18n:
+    en: 'Swordsmen are so skilled with
+
+      their weapons that they may re-roll any failed hits
+
+      when charging. Note that this only applies when they
+
+      are armed with normal swords, and not with doublehanded swords or any other weapons.'
+    es: null
+  applies_to:
+    profile_ids:
+    - swordsmen
+- id: band--reikland-command-radius
+  name: Reikland — Military Discipline
+  effect: Reikland fighters may use their Captain's Leadership while within 12" instead of the normal 6".
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: special rules / Reikland / Reiklander Special rules
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/mercenaries
+  name_i18n:
+    en: Reikland — Military Discipline
+    es: null
+  effect_i18n:
+    en: Reikland fighters may use their Captain's Leadership while within 12" instead of the normal 6".
+    es: null
+  applies_to:
+    band: true
+- id: band--reikland-marksman-training
+  name: Reikland — Marksman Training
+  effect: All Reikland Marksmen have +1 Ballistic Skill, including Marksmen recruited after the warband is created.
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: special rules / Reikland / Reiklander Special rules
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/mercenaries
+  name_i18n:
+    en: Reikland — Marksman Training
+    es: null
+  effect_i18n:
+    en: All Reikland Marksmen have +1 Ballistic Skill, including Marksmen recruited after the warband is created.
+    es: null
+  applies_to:
+    band: true
+- id: band--middenheim-physical-prowess
+  name: Middenheim — Physical Prowess
+  effect: The Mercenary Captain and all Champions in a Middenheim warband start with Strength 4 instead of Strength 3.
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: special rules / Middenheim / Middenheimer Special rules
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/mercenaries
+  name_i18n:
+    en: Middenheim — Physical Prowess
+    es: null
+  effect_i18n:
+    en: The Mercenary Captain and all Champions in a Middenheim warband start with Strength 4 instead of Strength 3.
+    es: null
+  applies_to:
+    band: true
+- id: band--marienburg-traders
+  name: Marienburg — Natural Traders
+  effect: A Marienburg warband receives +1 when attempting to find Rare items.
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: special rules / Marienburg / Marienburger Special rules
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/mercenaries
+  name_i18n:
+    en: Marienburg — Natural Traders
+    es: null
+  effect_i18n:
+    en: A Marienburg warband receives +1 when attempting to find Rare items.
+    es: null
+  applies_to:
+    band: true
+- id: band--marienburg-wealth
+  name: Marienburg — Enormous Wealth
+  effect: A Marienburg warband starts a campaign with 600 gc instead of 500 gc. In a one-off game it receives 20% more gold
+    crowns for recruitment.
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: special rules / Marienburg / Marienburger Special rules
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/mercenaries
+  name_i18n:
+    en: Marienburg — Enormous Wealth
+    es: null
+  effect_i18n:
+    en: A Marienburg warband starts a campaign with 600 gc instead of 500 gc. In a one-off game it receives 20% more gold
+      crowns for recruitment.
+    es: null
+  applies_to:
+    band: true
+- id: band--ostermark-stubborn-resolve
+  name: Ostermark — Stubborn Resolve
+  effect: Ostermark Heroes and Henchmen may re-roll a failed Leadership test for All Alone, and the warband may re-roll a
+    failed Rout test. The second result must be accepted.
+  source:
+    manual: mordheimer.net
+    printed_page: 0
+    section: special rules / Ostermark / Ostermarker Special rules
+    url: https://mordheimer.net/docs/warbands/grade-1a-warbands/mercenaries
+  name_i18n:
+    en: Ostermark — Stubborn Resolve
+    es: null
+  effect_i18n:
+    en: Ostermark Heroes and Henchmen may re-roll a failed Leadership test for All Alone, and the warband may re-roll a failed
+      Rout test. The second result must be accepted.
+    es: null
+  applies_to:
+    band: true
