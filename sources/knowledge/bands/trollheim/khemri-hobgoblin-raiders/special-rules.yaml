@@ -45,14 +45,14 @@ rules:
     profile_ids:
     - hobgoblin-shaman
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.khemri-hobgoblin-raiders.hobgoblin-shaman.wizard
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: sneaky--unpredictable
   name: Unpredictable
   effect: The Sneaky may declare one of its attacks Unpredictable; that attack cannot be parried by the opponent.
@@ -71,13 +71,14 @@ rules:
     - sneaky
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: profile
     effects:
-    - id: unimplemented.khemri-hobgoblin-raiders.sneaky.unpredictable
+    - id: mechanic.unpredictable-attack
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: mechanic
+        id: mechanic.unpredictable-attack
 - id: archers--moving-shot
   name: Moving Shot
   effect: An Archer ignores the normal shooting penalty for moving. This rule may also be used while the Archer is mounted
@@ -306,13 +307,14 @@ rules:
     band: true
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: selectable
     effects:
-    - id: unimplemented.khemri-hobgoblin-raiders.band.hobgoblin-special-skills-unpredictable
+    - id: mechanic.unpredictable-attack
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: mechanic
+        id: mechanic.unpredictable-attack
 - id: band--hobgoblin-special-skills-wolf-tamer
   name: Wolf Tamer
   effect: The Hero may direct one purchased Giant Wolf in battle without riding it; that wolf still counts toward the warband's

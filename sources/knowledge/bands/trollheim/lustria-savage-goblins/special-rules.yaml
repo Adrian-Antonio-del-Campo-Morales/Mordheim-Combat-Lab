@@ -157,13 +157,14 @@ rules:
     - trackers
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: profile
     effects:
-    - id: unimplemented.lustria-savage-goblins.trackers.tracker-gear
+    - id: compiler.tracker-gear
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: compiler
+        id: compiler.tracker-gear
 - id: zomblins--may-not-run
   name: May Not Run
   effect: Zomblins may not run, but may charge normally.
@@ -530,13 +531,13 @@ rules:
   runtime:
     scope: 'YES'
     implemented: 'YES'
-    grant: selectable
+    grant: profile
     effects:
-    - id: skill.regeneration
+    - id: skill.regeneration-5-plus
       scope: 'YES'
       binding:
         kind: mechanic
-        id: skill.regeneration
+        id: skill.regeneration-5-plus
   name: Regeneration
   effect: Whenever Zomblintua suffers a Wound, roll D6; on 5+ that Wound is ignored. Wounds caused by fire or fire-based magic
     cannot be regenerated. After a battle, Zomblintua does not roll for Serious Injuries unless the relevant wounds were caused
@@ -624,14 +625,14 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.lustria-savage-goblins.band.unpleasant-company
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--camouflage
   name: Camouflage
   effect: A Savage Goblin that is not wearing armour, with Hardened Leather explicitly allowed as an exception, cannot be
@@ -775,13 +776,14 @@ rules:
     band: true
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: selectable
     effects:
-    - id: unimplemented.lustria-savage-goblins.band.savage-goblin-special-skills-unpredictable
+    - id: mechanic.unpredictable-attack
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: mechanic
+        id: mechanic.unpredictable-attack
 - id: band--savage-goblin-special-skills-zomblin-medicine
   name: Zomblin Medicine
   effect: Witch Doctor only. Whenever the Witch Doctor would learn a new skill, he may choose a Necromancy spell instead.
@@ -838,13 +840,14 @@ rules:
     band: true
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: selectable
     effects:
-    - id: unimplemented.lustria-savage-goblins.band.savage-goblin-special-skills-spider-infested
+    - id: mechanic.spider-infested
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: mechanic
+        id: mechanic.spider-infested
 - id: band--savage-goblin-special-skills-master-of-throwing-weapons
   name: Master of Throwing Weapons
   effect: Trackers only. The Hero may carry up to five missile weapons instead of the usual two.
@@ -864,10 +867,11 @@ rules:
     band: true
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: selectable
     effects:
-    - id: unimplemented.lustria-savage-goblins.band.savage-goblin-special-skills-master-of-throwing-weapons
+    - id: mechanic.master-of-throwing-weapons
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: compiler
+        id: compiler.master-of-throwing-weapons

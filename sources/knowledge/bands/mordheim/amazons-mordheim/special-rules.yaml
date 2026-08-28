@@ -168,14 +168,14 @@ rules:
     band: true
 - id: band--human-maximum-characteristics
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.amazons-mordheim.band.human-maximum-characteristics
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Human maximum characteristics
   effect: Although outsiders consider the Amazons to be immortal, the maximum characteristics for each type will be the same
     as any other human warband.

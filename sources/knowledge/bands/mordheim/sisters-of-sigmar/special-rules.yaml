@@ -49,14 +49,14 @@ rules:
     profile_ids:
     - sigmarite-matriarch
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.sisters-of-sigmar.sigmarite-matriarch.prayers-of-sigmar
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: augur--blessed-sight
   runtime:
     scope: 'YES'
@@ -105,14 +105,14 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.sisters-of-sigmar.band.human-maximum-characteristics
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--special-skills-sign-of-sigmar
   name: Sign of Sigmar
   effect: The Sister is favoured by the great god Sigmar. Possessed or Undead opponents lose their first attack against the
@@ -194,14 +194,14 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: selectable
     effects:
     - id: unimplemented.sisters-of-sigmar.band.special-skills-utter-determination
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--special-skills-righteous-fury
   name: Righteous Fury
   effect: The Sister hates all Skaven, Undead, Possessed, Beastmen, Dark Elves, and other warbands classed as evil. Non-Chaos

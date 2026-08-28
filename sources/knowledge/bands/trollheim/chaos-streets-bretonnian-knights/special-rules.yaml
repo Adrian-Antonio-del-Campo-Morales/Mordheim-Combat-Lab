@@ -68,14 +68,14 @@ rules:
     profile_ids:
     - questing-knight
   runtime:
-    scope: 'YES'
+    scope: 'LATER'
     implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.chaos-streets-bretonnian-knights.questing-knight.ride-warhorse
-      scope: 'YES'
+      scope: 'LATER'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: knights-errant--knights-virtue
   name: Knight's Virtue
   effect: A Knight Errant never panics or flees from combat and never needs to take a Leadership test for fighting alone.
@@ -118,14 +118,14 @@ rules:
     profile_ids:
     - knights-errant
   runtime:
-    scope: 'YES'
+    scope: 'LATER'
     implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.chaos-streets-bretonnian-knights.knights-errant.ride-warhorse
-      scope: 'YES'
+      scope: 'LATER'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: squires--ride-horse
   name: Ride Horse
   effect: A Squire has the Ride Horse skill.

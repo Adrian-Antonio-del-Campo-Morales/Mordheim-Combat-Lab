@@ -29,14 +29,14 @@ rules:
     - moot-elder
 - id: master-chef--inspired-cooking
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.mootlanders.master-chef.inspired-cooking
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Inspired Cooking
   effect: Any Halfling models within 6" of a Halfling Master Chef may re-roll any failed hits in combat (once per turn).
   source:

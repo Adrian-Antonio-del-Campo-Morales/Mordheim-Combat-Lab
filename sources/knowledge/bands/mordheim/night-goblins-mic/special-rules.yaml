@@ -577,22 +577,18 @@ rules:
     - troll
 - id: snotling-mob-consists-of-5-snotlings--mob
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.night-goblins-mic.snotling-mob-consists-of-5-snotlings.mob
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Mob
-  effect: 'Snotlings are naturally gregarious creatures. They are initially bought in a mob of 5. You
-
-    may replace mob members up to the maximum of 5. They will always move and fight as a
-
-    mob. All members must stay within 1" and all will join in the same combat if
-
-    possible.'
+  effect: Snotlings are naturally gregarious creatures. They are initially bought in a mob of 5. You may replace mob members
+    up to the maximum of 5. They will always move and fight as a mob. All members must stay within 1" and all will join in the
+    same combat if possible.
   source:
     manual: mordheimer.net
     printed_page: 0
@@ -648,18 +644,17 @@ rules:
     - snotling-mob-consists-of-5-snotlings
 - id: snotling-mob-consists-of-5-snotlings--dodgy
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.night-goblins-mic.snotling-mob-consists-of-5-snotlings.dodgy
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Dodgy
-  effect: 'The little creatures are constantly ducking and diving in the most infuriating way.
-
-    They get a 6+ dodge save against shooting.'
+  effect: The little creatures are constantly ducking and diving in the most infuriating way. They get a 6+ dodge save against
+    shooting.
   source:
     manual: mordheimer.net
     printed_page: 0
@@ -878,38 +873,24 @@ rules:
     band: true
 - id: band--night-goblin-special-skills-netter
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'YES'
+    implemented: 'YES'
     grant: selectable
     effects:
-    - id: unimplemented.night-goblins-mic.band.night-goblin-special-skills-netter
-      scope: "YES"
-      binding: null
-      reason: "No executable binding exists for this in-scope rule."
+    - id: mechanic.netter
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: mechanic.netter
   name: Netter
-  effect: 'The goblin is adept at using a net to disable his enemies. They learn their
-
-    skill hunting wild cave squigs in the depths of the mountains. The technique he has
-
-    mastered is ''chuck and charge''. The goblin may declare that he is making a net
-
-    charge. He throws the net at a target in the same way as described in the Mordheim
-
-    rulebook. If he hits and the target fails to escape the net then target counts as
-
-    knocked down and the goblin completes his charge. If he misses or the target
-
-    escapes then the goblin makes a failed charge. If the failed charge would take him
-
-    into base contact then stop him 1" away. A warrior who is caught in a net will be
-
-    automatically hit in combat. The goblin must still roll to wound just as with a knocked
-
-    down enemy. In the warrior''s next recovery phase, unless he is stunned or out of
-
-    action he will cut himself out of the net but cannot do anything else and will go last in
-
-    combat just as if he had stood up from being knocked down.'
+  effect: The goblin is adept at using a net to disable his enemies. They learn their skill hunting wild cave squigs in the
+    depths of the mountains. The technique he has mastered is 'chuck and charge'. The goblin may declare that he is making a
+    net charge. He throws the net at a target in the same way as described in the Mordheim rulebook. If he hits and the target
+    fails to escape the net then target counts as knocked down and the goblin completes his charge. If he misses or the target
+    escapes then the goblin makes a failed charge. If the failed charge would take him into base contact then stop him 1" away.
+    A warrior who is caught in a net will be automatically hit in combat. The goblin must still roll to wound just as with a
+    knocked down enemy. In the warrior's next recovery phase, unless he is stunned or out of action he will cut himself out
+    of the net but cannot do anything else and will go last in combat just as if he had stood up from being knocked down.
   source:
     manual: mordheimer.net
     printed_page: 0

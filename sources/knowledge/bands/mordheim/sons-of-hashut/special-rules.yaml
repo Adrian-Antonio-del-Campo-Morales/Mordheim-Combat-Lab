@@ -47,14 +47,14 @@ rules:
     profile_ids:
     - apprentice-sorcerer
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.sons-of-hashut.apprentice-sorcerer.rituals-of-chaos
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: bull-centaur--large-target
   name: Large Target
   effect: 'The Bull Centaur is a Large Target: shooting attacks against it gain +1 to hit and it may be selected even if it
@@ -101,14 +101,14 @@ rules:
     profile_ids:
     - hobgoblins
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.sons-of-hashut.hobgoblins.skinny
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: hobgoblins--nobody-cares-about-them
   name: Nobody cares about them
   effect: Hobgoblins count as half a model each when calculating casualties for Rout tests. They can never become Heroes;
@@ -189,14 +189,14 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.sons-of-hashut.band.armour
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--hard-to-kill
   name: Hard to Kill
   effect: Chaos Dwarfs and Bull Centaurs are taken Out of Action only on a 6 on the Injury chart; 1-2 is Knocked Down and
@@ -302,14 +302,14 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.sons-of-hashut.band.indentured-servants
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--hired-swords
   name: Hired Swords
   effect: The warband may hire an Ogre Bodyguard, Pit Fighter, Warlock, Imperial Assassin, Hobgoblin Scout, any Hired Sword
@@ -329,14 +329,14 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.sons-of-hashut.band.hired-swords
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--sons-of-hashut-maximum-characteristics
   name: Sons of Hashut Maximum Characteristics
   effect: 'Chaos Dwarfs use the Dwarf racial maximum profile: M3, WS7, BS6, S4, T5, W3, I5, A4, Ld10. Bull Centaurs in the
@@ -358,14 +358,14 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.sons-of-hashut.band.sons-of-hashut-maximum-characteristics
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--chaos-dwarfs-special-skills-true-grit
   name: True Grit
   effect: When rolling on the Injury table for this Hero, 1-3 is Knocked Down, 4-5 is Stunned, and 6 is Out of Action.
@@ -419,14 +419,14 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: selectable
     effects:
     - id: unimplemented.sons-of-hashut.band.chaos-dwarfs-special-skills-extra-tough
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--chaos-dwarfs-special-skills-unlimited-hatred
   name: Unlimited Hatred
   effect: The Hero is subject to Hatred against everyone.

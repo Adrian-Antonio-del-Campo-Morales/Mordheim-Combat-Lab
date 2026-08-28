@@ -294,8 +294,7 @@ profiles:
   rule_ids:
   - wild-beasts--charge
   - wild-beasts--animal
-  combat_traits:
-    charge_attack_bonus: true
+  combat_traits: {}
 - id: fighting-ape
   name: Fighting Ape
   type: henchman

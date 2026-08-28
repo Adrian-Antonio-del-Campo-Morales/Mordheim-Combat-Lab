@@ -7,7 +7,6 @@ skills:
   category: combat
   summary: +1 Attack while fighting two or more enemies; immune to All Alone tests.
   kind: general
-  engine_option: Combat Master
   rules_source_url: https://mordheimer.net/docs/campaigns/skills
   source_refs:
   - manual: mordheimer.net

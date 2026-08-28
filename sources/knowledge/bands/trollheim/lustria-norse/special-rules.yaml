@@ -110,11 +110,13 @@ rules:
     implemented: 'YES'
     grant: profile
     effects:
-    - id: profile-rule.wulfen--hardened-hide
+    - id: trait.natural-armour-save
       scope: 'YES'
       binding:
-        kind: compiler
-        id: profile-rule.wulfen--hardened-hide
+        kind: trait
+        id: trait.natural-armour-save
+        parameters:
+          value: 6
   name: Hardened Hide
   effect: The Wulfen has a natural 6+ armour save, equivalent to Hardened Leather. This save is modified normally by high
     Strength as if it were ordinary armour.

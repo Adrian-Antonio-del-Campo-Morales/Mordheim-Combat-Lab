@@ -176,14 +176,14 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.chaos-streets-dwarf-treasure-hunters.band.armour
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--hate-orcs-and-goblins
   name: Hate Orcs and Goblins
   effect: All Dwarfs are subject to Hatred against Orcs and Goblins.
@@ -224,14 +224,14 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.chaos-streets-dwarf-treasure-hunters.band.grudgebearers
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--incomparable-miners
   name: Incomparable Miners
   effect: When determining how much wyrdstone the warband finds, add +1 to the number of shards found.
@@ -262,11 +262,16 @@ rules:
     implemented: 'YES'
     grant: selectable
     effects:
-    - id: special-rule.band--dwarf-special-skills-master-of-blades
+    - id: skill.unbeatable-warrior
       scope: 'YES'
       binding:
-        kind: compiler
-        id: special-rule.band--dwarf-special-skills-master-of-blades
+        kind: mechanic
+        id: skill.unbeatable-warrior
+    - id: skill.sword-master
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.sword-master
   name: Master of Blades
   effect: When using a weapon with the Parry special rule, this Hero parries successfully if his roll equals or exceeds the
     opponent's highest To Hit roll. If using two weapons with Parry, he may attempt two parries against the two highest attack

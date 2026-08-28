@@ -1,10 +1,7 @@
 schema_version: 2
 ruleset: mordheim
 scope: close-combat-only
-profile_exclusions:
-- band_id: carnival-of-chaos
-  profile_id: plague-cart
-  reason: The cart is not an individual fighter and has no WS, S, I or A profile.
+profile_exclusions: []
 mechanic_exclusions:
 - id: skill.combat-master
   reason: Its effect requires two or more opponents; the runtime simulates one-against-one duels.
@@ -20,6 +17,12 @@ supported_combat_traits:
 - natural_armour_worst_save
 - ward_save
 - regeneration_save
+- ward_save_mundane_only
+- natural_armour_negated_by_magic
+- magical_attacks
+- regeneration_blocked_by_fire
+- regeneration_blocked_by_blessed
+- caught_fire_threshold
 - frenzy
 - injury_profile
 - cloud_of_flies

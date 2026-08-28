@@ -258,14 +258,14 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.lustria-amazons.band.not-one-of-us
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--isolationists
   name: Isolationists
   effect: All Amazons are subject to Hatred against Norse and Lizardmen.
@@ -361,13 +361,14 @@ rules:
     band: true
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: selectable
     effects:
-    - id: unimplemented.lustria-amazons.band.amazon-special-skills-lizard-hunter
+    - id: mechanic.strike-first-vs-skinks-always
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: mechanic
+        id: mechanic.strike-first-vs-skinks-always
 - id: band--amazon-special-skills-concealment
   name: Concealment
   effect: When the Hero is Hidden in jungle terrain or vegetation, enemy models halve their Initiative when determining whether

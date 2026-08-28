@@ -3,14 +3,14 @@ band_id: battle-monks-of-cathay
 rules:
 - id: emissary--leader
   runtime:
-    scope: "LATER"
-    implemented: "NO"
+    scope: LATER
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.battle-monks-of-cathay.emissary.leader
-      scope: "LATER"
+      scope: LATER
       binding: null
-      reason: "Deferred subsystem: psicología."
+      reason: 'Deferred subsystem: psicología.'
   name: Leader
   effect: Any warrior within 6“ of the Emissary may use his Leadership when taking Ld tests.
   source:
@@ -29,14 +29,14 @@ rules:
     - emissary
 - id: emissary--ride-horse
   runtime:
-    scope: "LATER"
-    implemented: "NO"
+    scope: LATER
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.battle-monks-of-cathay.emissary.ride-horse
-      scope: "LATER"
+      scope: LATER
       binding: null
-      reason: "Deferred subsystem: monturas."
+      reason: 'Deferred subsystem: monturas.'
   name: Ride Horse
   effect: The Emissary is trained in riding Horses.
   source:
@@ -55,14 +55,14 @@ rules:
     - emissary
 - id: emissary--decree
   runtime:
-    scope: "LATER"
-    implemented: "NO"
+    scope: LATER
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.battle-monks-of-cathay.emissary.decree
-      scope: "LATER"
+      scope: LATER
       binding: null
-      reason: "Deferred subsystem: psicología."
+      reason: 'Deferred subsystem: psicología.'
   name: Decree
   effect: When the Emissary dies, a new one must be hired as soon as possible. Until you have done so, no other warriors and/or
     equipment may be bought. The new Emissary will then reclaim Leadership of the warband.
@@ -83,15 +83,15 @@ rules:
     - emissary
 - id: dragon-monks--unarmed-fighting
   runtime:
-    scope: "YES"
-    implemented: "YES"
+    scope: 'YES'
+    implemented: 'YES'
     grant: profile
     effects:
-    - id: skill.art-of-unarmed-combat
-      scope: "YES"
+    - id: skill.unarmed-fighting
+      scope: 'YES'
       binding:
         kind: mechanic
-        id: skill.art-of-unarmed-combat
+        id: skill.unarmed-fighting
   name: Unarmed Fighting
   effect: Monks suffer no penalties whatsoever for fighting unarmed and receive +1 Attack when doing so.
   source:
@@ -110,15 +110,15 @@ rules:
     - dragon-monks
 - id: dragon-monks--art-of-silent-death
   runtime:
-    scope: "YES"
-    implemented: "YES"
+    scope: 'YES'
+    implemented: 'YES'
     grant: profile
     effects:
-    - id: skill.art-of-silent-death
-      scope: "YES"
+    - id: skill.unarmed-critical-strikes
+      scope: 'YES'
       binding:
         kind: mechanic
-        id: skill.art-of-silent-death
+        id: skill.unarmed-critical-strikes
   name: Art of Silent Death
   effect: Dragon Monks have become masters of the Cathayan art of open-hand fighting. In hand-to-hand combat, if fighting
     unarmed, they will cause a critical hit on a roll 'to wound' of 5-6 instead of a 6. If the Dragon Monk wields a quarter
@@ -141,15 +141,15 @@ rules:
     - dragon-monks
 - id: warrior-monks--unarmed-fighting
   runtime:
-    scope: "YES"
-    implemented: "YES"
+    scope: 'YES'
+    implemented: 'YES'
     grant: profile
     effects:
-    - id: skill.art-of-unarmed-combat
-      scope: "YES"
+    - id: skill.unarmed-fighting
+      scope: 'YES'
       binding:
         kind: mechanic
-        id: skill.art-of-unarmed-combat
+        id: skill.unarmed-fighting
   name: Unarmed Fighting
   effect: Monks suffer no penalties whatsoever for fighting unarmed and receive +1 Attack when doing so.
   source:
@@ -168,12 +168,12 @@ rules:
     - warrior-monks
 - id: raging-peasants--unarmed
   runtime:
-    scope: "YES"
-    implemented: "YES"
+    scope: 'YES'
+    implemented: 'YES'
     grant: profile
     effects:
     - id: profile.natural-attacks
-      scope: "YES"
+      scope: 'YES'
       binding:
         kind: profile
         id: profile.natural-attacks
@@ -195,14 +195,14 @@ rules:
     - raging-peasants
 - id: raging-peasants--simple-folk
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.battle-monks-of-cathay.raging-peasants.simple-folk
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: campaña."
+      reason: 'Out of scope: campaña.'
   name: Simple folk
   effect: Peasants never gain Experience.
   source:
@@ -221,14 +221,14 @@ rules:
     - raging-peasants
 - id: raging-peasants--mob
   runtime:
-    scope: "LATER"
-    implemented: "NO"
+    scope: LATER
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.battle-monks-of-cathay.raging-peasants.mob
-      scope: "LATER"
+      scope: LATER
       binding: null
-      reason: "Deferred subsystem: psicología."
+      reason: 'Deferred subsystem: psicología.'
   name: Mob
   effect: Peasants become threatening in large numbers. A Peasant gets +1 Ld for each other allied Peasant model within 3".
     Due to their rage, they do not benefit from the leader rule.
@@ -249,14 +249,14 @@ rules:
     - raging-peasants
 - id: raging-peasants--ignored
   runtime:
-    scope: "LATER"
-    implemented: "NO"
+    scope: LATER
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.battle-monks-of-cathay.raging-peasants.ignored
-      scope: "LATER"
+      scope: LATER
       binding: null
-      reason: "Deferred subsystem: psicología."
+      reason: 'Deferred subsystem: psicología.'
   name: Ignored
   effect: Peasants that are out of action do not count toward the number of out-of-action models for the purpose of Rout tests.
   source:
@@ -275,12 +275,12 @@ rules:
     - raging-peasants
 - id: raging-peasants--downtrodden
   runtime:
-    scope: "YES"
-    implemented: "YES"
+    scope: 'YES'
+    implemented: 'YES'
     grant: profile
     effects:
     - id: trait.injury-profile
-      scope: "YES"
+      scope: 'YES'
       binding:
         kind: trait
         id: trait.injury-profile
@@ -304,14 +304,15 @@ rules:
     - raging-peasants
 - id: band--strictures
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'YES'
+    implemented: 'YES'
     grant: band
     effects:
-    - id: unimplemented.battle-monks-of-cathay.band.strictures
-      scope: "YES"
-      binding: null
-      reason: "No executable binding exists for this in-scope rule."
+    - id: compiler.strictures
+      scope: 'YES'
+      binding:
+        kind: compiler
+        id: compiler.strictures
   name: Strictures
   effect: Dragon Monks and Warrior Monks never wear any kind of armour.
   source:
@@ -329,14 +330,18 @@ rules:
     band: true
 - id: band--distaste-for-poison
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'YES'
+    implemented: 'YES'
     grant: band
     effects:
-    - id: unimplemented.battle-monks-of-cathay.band.distaste-for-poison
-      scope: "YES"
-      binding: null
-      reason: "No executable binding exists for this in-scope rule."
+    - id: compiler.forbid-item-categories
+      scope: 'YES'
+      binding:
+        kind: compiler
+        id: compiler.forbid-item-categories
+        parameters:
+          categories:
+          - poison
   name: Distaste for Poison
   effect: Dragon Monks and Warrior Monks may never use any kind of poison or venom.
   source:
@@ -352,16 +357,19 @@ rules:
     es: null
   applies_to:
     band: true
+  eligibility:
+  - dragon-monks
+  - warrior-monks
 - id: band--outsiders
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.battle-monks-of-cathay.band.outsiders
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: campaña."
+      reason: 'Out of scope: campaña.'
   name: Outsiders
   effect: The Battle Monks warband may never hire any Hired Sword or Dramatis Personae unless that entry specifically states
     that it may be hired by them.
@@ -381,14 +389,14 @@ rules:
     band: true
 - id: band--human-characteristic-maximum
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.battle-monks-of-cathay.band.human-characteristic-maximum
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Human Characteristic Maximum
   effect: Cathayans are humans and therefore use the maximum characteristic profile for humans.
   source:
@@ -406,12 +414,12 @@ rules:
     band: true
 - id: band--battle-monks-special-skills
   runtime:
-    scope: "YES"
-    implemented: "YES"
+    scope: 'YES'
+    implemented: 'YES'
     grant: band
     effects:
     - id: profile.skill-access
-      scope: "YES"
+      scope: 'YES'
       binding:
         kind: profile
         id: profile.skill-access
@@ -438,14 +446,15 @@ rules:
     band: true
 - id: band--battle-monks-special-skills-energy-focus
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'YES'
+    implemented: 'YES'
     grant: selectable
     effects:
-    - id: unimplemented.battle-monks-of-cathay.band.battle-monks-special-skills-energy-focus
-      scope: "YES"
-      binding: null
-      reason: "No executable binding exists for this in-scope rule."
+    - id: compiler.energy-focus
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: mechanic.energy-focus
   name: Energy Focus
   effect: If fighting unarmed, the Hero may choose to reduce his Attacks by –1 and thus gain +1 Strength in close combat.
     The monk may sacrifice any number of attacks this way.
@@ -465,14 +474,14 @@ rules:
     band: true
 - id: band--battle-monks-special-skills-lightning-speed
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: selectable
     effects:
     - id: unimplemented.battle-monks-of-cathay.band.battle-monks-special-skills-lightning-speed
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: movimiento."
+      reason: 'Out of scope: movimiento.'
   name: Lightning Speed
   effect: The monk may triple his Movement whilst running or charging and may run even when there are enemy models within
     8”.
@@ -491,14 +500,14 @@ rules:
     band: true
 - id: band--battle-monks-special-skills-leap-of-faith
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: selectable
     effects:
     - id: unimplemented.battle-monks-of-cathay.band.battle-monks-special-skills-leap-of-faith
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Leap of Faith
   effect: The Hero cannot be intercepted whilst charging. He may escape from combat (as described on p. 161 in the Mordheim
     rulebook) by leaping away without having to pass an Ld test and may declare a leaping charge at the same time in the same
@@ -520,14 +529,14 @@ rules:
     band: true
 - id: band--battle-monks-special-skills-human-shield
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: selectable
     effects:
     - id: unimplemented.battle-monks-of-cathay.band.battle-monks-special-skills-human-shield
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: combate múltiple."
+      reason: 'Out of scope: combate múltiple.'
   name: Human Shield
   effect: If two or more models are engaged in close combat with the monk, he may choose to grab one to use it as a shield
     instead of his normal attacks. To do this, he must pass an Initiative test after the first model has attacked, but before
@@ -553,14 +562,14 @@ rules:
     band: true
 - id: band--battle-monks-special-skills-warmonger
   runtime:
-    scope: "LATER"
-    implemented: "NO"
+    scope: LATER
+    implemented: 'NO'
     grant: selectable
     effects:
     - id: unimplemented.battle-monks-of-cathay.band.battle-monks-special-skills-warmonger
-      scope: "LATER"
+      scope: LATER
       binding: null
-      reason: "Deferred subsystem: psicología."
+      reason: 'Deferred subsystem: psicología.'
   name: Warmonger
   effect: The Emissary may make an Ld test before the battle. If the test is successful, D3+1 Raging Peasants join the warband
     for the next game (this may exceed the maximum number of warriors). Each Raging Peasant in the warband is subject to Hatred

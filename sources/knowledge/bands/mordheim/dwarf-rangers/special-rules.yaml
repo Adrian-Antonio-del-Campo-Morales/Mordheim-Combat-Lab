@@ -33,34 +33,20 @@ rules:
     - runesmith
 - id: runesmith--inscribe-runes
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.dwarf-rangers.runesmith.inscribe-runes
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Inscribe Runes
-  effect: 'A Runesmith knows one minor rune
-
-    (see list at the end of this warband list ), determined
-
-    randomly when the warband is first created. He may
-
-    inscribe the rune on an item carried by one of the
-
-    warriors of his warband, and (if successful, see below)
-
-    the item will gain a bonus from the rune for that
-
-    game. When a Runesmith advances and rolls a skill on
-
-    the Hero Advance table, he may choose to learn an ew
-
-    rune instead of learning a skill (exactly like a
-
-    spellcaster advancing and learning an ew spell).'
+  effect: A Runesmith knows one minor rune (see list at the end of this warband list ), determined randomly when the warband
+    is first created. He may inscribe the rune on an item carried by one of the warriors of his warband, and (if successful,
+    see below) the item will gain a bonus from the rune for that game. When a Runesmith advances and rolls a skill on the Hero
+    Advance table, he may choose to learn a new rune instead of learning a skill (exactly like a spellcaster advancing and learning
+    a new spell).
   source:
     manual: mordheimer.net
     printed_page: 0
@@ -324,14 +310,14 @@ rules:
     band: true
 - id: band--armour
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.dwarf-rangers.band.armour
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Armour
   effect: Dwarfs never suffer movement penalties for wearing armour.
   source:
@@ -424,14 +410,15 @@ rules:
     band: true
 - id: band--no-arcane-lore
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'YES'
+    implemented: 'YES'
     grant: band
     effects:
-    - id: unimplemented.dwarf-rangers.band.no-arcane-lore
-      scope: "YES"
-      binding: null
-      reason: "No executable binding exists for this in-scope rule."
+    - id: compiler.no-arcane-lore
+      scope: 'YES'
+      binding:
+        kind: compiler
+        id: compiler.no-arcane-lore
   name: No Arcane Lore
   effect: Dwarfs may never take the Arcane Lore skill and cannot learn to cast spells.
   source:
@@ -453,11 +440,11 @@ rules:
     implemented: "YES"
     grant: selectable
     effects:
-    - id: special-rule.band--dwarf-special-skills-combat-master
+    - id: skill.unbeatable-warrior
       scope: "YES"
       binding:
-        kind: compiler
-        id: special-rule.band--dwarf-special-skills-combat-master
+        kind: mechanic
+        id: skill.unbeatable-warrior
   name: Combat Master
   effect: 'This Dwarf’s martial skills surpass those of an ormal
 
@@ -515,26 +502,18 @@ rules:
     band: true
 - id: band--dwarf-special-skills-extra-tough
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: selectable
     effects:
     - id: unimplemented.dwarf-rangers.band.dwarf-special-skills-extra-tough
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Extra Tough
-  effect: 'This Dwarf is notorious for walking away from wounds that
-
-    would kill a lesser being. When rolling on the Heroes Serious
-
-    Injury chart for this Hero after a game in which he has been
-
-    taken out of action, the dice may be re-rolled once. The result
-
-    of this second dice roll must be accepted, even if it is a worse
-
-    result.'
+  effect: This Dwarf is notorious for walking away from wounds that would kill a lesser being. When rolling on the Heroes Serious
+    Injury chart for this Hero after a game in which he has been taken out of action, the dice may be re-rolled once. The result
+    of this second dice roll must be accepted, even if it is a worse result.
   source:
     manual: mordheimer.net
     printed_page: 0
@@ -753,11 +732,11 @@ rules:
     implemented: "YES"
     grant: selectable
     effects:
-    - id: special-rule.band--slayer-special-skills-berserker
+    - id: skill.berserker
       scope: "YES"
       binding:
-        kind: compiler
-        id: special-rule.band--slayer-special-skills-berserker
+        kind: mechanic
+        id: skill.berserker
   name: Berserker
   effect: 'The Slayer may add +1 to his to hit rolls during the
 

@@ -106,6 +106,13 @@ rules:
         id: trait.ward-save
         parameters:
           value: 5
+    - id: trait.ward-save-mundane-only
+      scope: 'YES'
+      binding:
+        kind: trait
+        id: trait.ward-save-mundane-only
+        parameters:
+          value: true
 - id: silent-walker--immune-to-psychology
   name: Immune to Psychology
   effect: The Silent Walker is immune to Psychology.
@@ -303,14 +310,14 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.lustria-pygmies.band.poison-experts
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--camouflage
   name: Camouflage
   effect: A Pygmy that is not wearing armour cannot be detected unless the detecting model first passes an Initiative test.

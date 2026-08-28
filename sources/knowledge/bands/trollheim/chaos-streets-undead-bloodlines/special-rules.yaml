@@ -458,14 +458,14 @@ rules:
     profile_ids:
     - blood-dragon-vampire
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.chaos-streets-undead-bloodlines.blood-dragon-vampire.honour
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: blood-dragon-vampire--warriors-code
   name: Warrior's Code
   effect: The Blood Dragon Vampire may never use magic in any way, including through items or skills that would otherwise
@@ -486,13 +486,14 @@ rules:
     - blood-dragon-vampire
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: profile
     effects:
-    - id: unimplemented.chaos-streets-undead-bloodlines.blood-dragon-vampire.warriors-code
+    - id: compiler.warrior-s-code
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: compiler
+        id: compiler.warrior-s-code
 - id: necrarch-vampire--leader
   name: Leader
   effect: Any warband model within 6" of the Vampire may use the Vampire's Leadership instead of its own.
@@ -666,14 +667,14 @@ rules:
     profile_ids:
     - necrarch-vampire
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.chaos-streets-undead-bloodlines.necrarch-vampire.hates-the-living
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: strigoi-vampire--leader
   name: Leader
   effect: Any warband model within 6" of the Vampire may use the Vampire's Leadership instead of its own.
@@ -846,14 +847,14 @@ rules:
     profile_ids:
     - strigoi-vampire
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.chaos-streets-undead-bloodlines.strigoi-vampire.hates-the-living
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: necromancer--wizard
   name: Wizard
   effect: The Necromancer is a Wizard and may use Necromantic Magic. The spell list itself is intentionally not modelled in
@@ -1474,13 +1475,14 @@ rules:
     band: true
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: band
     effects:
-    - id: unimplemented.chaos-streets-undead-bloodlines.band.choose-bloodline
+    - id: compiler.choose-a-bloodline
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: compiler
+        id: compiler.choose-a-bloodline
 - id: band--vampiric-powers
   name: Vampiric Powers
   effect: When the Vampire gains a new skill, it may choose one Vampiric Power from its own bloodline instead of a normal
@@ -1499,13 +1501,14 @@ rules:
     band: true
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: band
     effects:
-    - id: unimplemented.chaos-streets-undead-bloodlines.band.vampiric-powers
+    - id: compiler.vampiric-powers
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: compiler
+        id: compiler.vampiric-powers
 - id: band--vampire-power-hypnotic-gaze
   runtime:
     scope: LATER
@@ -1659,13 +1662,14 @@ rules:
 - id: band--blood-dragon-power-sword-master
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: selectable
     effects:
-    - id: unimplemented.band-blood-dragon-power-sword-master
+    - id: skill.sword-master
       scope: 'YES'
-      binding: null
-      reason: requires enhanced parry resolution
+      binding:
+        kind: mechanic
+        id: skill.sword-master
   name: Sword Master
   effect: When parrying, the Vampire only needs to equal the opponent's roll and may therefore parry a roll of 6. The Vampire
     may also re-roll one failed parry, but may not re-roll the re-roll and may not parry more than one attack.
@@ -1952,6 +1956,11 @@ rules:
       binding:
         kind: mechanic
         id: skill.regeneration
+    - id: skill.regeneration-blocked-by-blessed
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.regeneration-blocked-by-blessed
   name: Curse of the Reborn
   effect: For each unsaved Wound, roll D6; on 4+ the Wound is regenerated and ignored. This regeneration does not work against
     fire, Holy Water or other blessed attacks/items.

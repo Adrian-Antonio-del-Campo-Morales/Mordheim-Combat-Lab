@@ -77,14 +77,14 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.tileans.band.human-maximum-characteristics
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--miraglean-crossbow-mastery
   name: Miraglean — Crossbow Mastery
   effect: Miraglean Heroes gain +1 to hit when using crossbows. The bonus applies only to crossbows.
@@ -177,14 +177,14 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.tileans.band.miraglean-hired-sword-restriction
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--remasen-dark-elf-rout
   name: Remasen — Defiance Against Dark Elves
   effect: When fighting a Dark Elf warband, a Remasen warband may re-roll one failed Rout test. The second result must be
@@ -253,14 +253,14 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.tileans.band.remasen-hired-sword-restriction
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--trantio-wealth
   name: Trantio — Wealth and Experience
   effect: A Trantio warband starts a one-off match with an extra 100 gc. In a Lustrian campaign it starts with 20% more gold

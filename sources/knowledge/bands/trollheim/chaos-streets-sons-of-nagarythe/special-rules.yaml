@@ -118,13 +118,18 @@ rules:
     band: true
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: band
     effects:
-    - id: unimplemented.chaos-streets-sons-of-nagarythe.band.honourable
+    - id: compiler.forbid-item-categories
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: compiler
+        id: compiler.forbid-item-categories
+        parameters:
+          categories:
+          - poison
+          - drug
 - id: band--unforgiving
   name: Unforgiving
   effect: In multiplayer games, the warband may never form an alliance with a Chaotic warband, including Possessed, Skaven,
@@ -169,14 +174,14 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.chaos-streets-sons-of-nagarythe.band.tolerant
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--shadow-warrior-special-skills-see-in-shadows
   name: See in Shadows
   effect: If the warrior has enough Movement to reach an unseen opponent, he may re-roll the test made to charge that opponent;
@@ -233,14 +238,14 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: selectable
     effects:
     - id: unimplemented.chaos-streets-sons-of-nagarythe.band.shadow-warrior-special-skills-master-of-runes
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--shadow-warrior-special-skills-elven-agility
   runtime:
     scope: 'YES'
@@ -294,13 +299,20 @@ rules:
     band: true
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: selectable
     effects:
-    - id: unimplemented.chaos-streets-sons-of-nagarythe.band.shadow-warrior-special-skills-powerful-build
+    - id: profile.skill-access
       scope: 'YES'
+      binding:
+        kind: profile
+        id: profile.skill-access
+        parameters:
+          category: strength
+    - id: roster.maximum-two-powerful-build
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: warband-level roster limit.'
 - id: band--shadow-warrior-special-skills-infiltration
   name: Infiltration
   effect: The warrior deploys after the opposing warband and may be placed anywhere outside enemy line of sight and more than

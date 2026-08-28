@@ -143,6 +143,19 @@ class CombatCatalogue:
             if rule.get("id") in rule_ids
         )
 
+    def selectable_rules(self, choice: ProfileChoice | None) -> tuple[SkillChoice, ...]:
+        """Return executable, fighter-legal optional warband rules."""
+        if choice is None:
+            return ()
+        package = self._packages[(choice.collection, choice.band_id)]
+        return tuple(
+            SkillChoice(str(rule["id"]), str(rule["name"]), "warband rules", str(rule.get("effect") or ""))
+            for rule in package.special_rules
+            if (rule.get("runtime") or {}).get("implemented") == "YES"
+            and (rule.get("runtime") or {}).get("grant") == "selectable"
+            and (not rule.get("eligibility") or choice.profile_id in rule.get("eligibility", ()))
+        )
+
     def weapons(self, choice: ProfileChoice | None) -> tuple[tuple[str, str], ...]:
         return self._equipment(choice, "weapons", lambda row: row.get("main_hand"))
 
@@ -208,8 +221,27 @@ class CombatCatalogue:
         profile = next(row for row in package.profiles if row["id"] == choice.profile_id)
         lists = {str(row["id"]): row for row in package.equipment_lists}
         item_ids = set(profile.get("fixed_equipment") or ())
-        for list_id in profile.get("equipment_lists") or ():
-            item_ids.update(str(row["item_id"]) for row in lists[str(list_id)].get("items") or ())
+        list_ids=list(profile.get("equipment_lists") or ())
+        extra_lists=[]
+        if choice.band_id == "lustria-pirates":
+            mercenary=self._packages[("mordheim","mercenaries")]
+            extra_lists.extend(mercenary.equipment_lists)
+        if choice.band_id == "khemri-lahmian-brotherhood" and not list_ids:
+            role="beloved" if choice.profile_id=="beloved" else "undead"
+            list_ids.append(f"foreign-{role}-equipment-list")
+        for list_id in list_ids:
+            equipment_list=lists[str(list_id)]
+            item_ids.update(str(row["item_id"]) for row in equipment_list.get("items") or ())
+            def loadout_items(value):
+                if isinstance(value,str):yield value
+                elif isinstance(value,list):
+                    for entry in value:yield from loadout_items(entry)
+                elif isinstance(value,dict):
+                    for entry in value.values():yield from loadout_items(entry)
+            for loadout in equipment_list.get("loadouts") or ():
+                item_ids.update(loadout_items(loadout.get("items") or ()))
+        for equipment_list in extra_lists:
+            item_ids.update(str(row["item_id"]) for row in equipment_list.get("items") or ())
         if isinstance(families, str):
             families = (families,)
         prefixes = tuple({"weapons": "weapon.", "defences": "defence.", "armours": "armour.", "materials": "material.", "preparations": "preparation.", "poisons": "poison."}[family] for family in families)

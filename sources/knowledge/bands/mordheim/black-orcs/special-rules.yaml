@@ -279,28 +279,17 @@ rules:
     - orc-shootaz
 - id: orc-shootaz--uncommon
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.black-orcs.orc-shootaz.uncommon
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Uncommon
-  effect: 'A warband may not
-
-    hire more Shootaz than they
-
-    have Boyz. If a boy dies and
-
-    the Shootaz outnumber the
-
-    Boyz, the next hire must be
-
-    a boy so that the balance
-
-    is restored.'
+  effect: A warband may not hire more Shootaz than they have Boyz. If a boy dies and the Shootaz outnumber the Boyz, the next
+    hire must be a boy so that the balance is restored.
   source:
     manual: mordheimer.net
     printed_page: 0
@@ -823,30 +812,20 @@ rules:
     band: true
 - id: band--black-orc-special-skills-proven-warrior
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'YES'
+    implemented: 'YES'
     grant: selectable
     effects:
-    - id: unimplemented.black-orcs.band.black-orc-special-skills-proven-warrior
-      scope: "YES"
-      binding: null
-      reason: "No executable binding exists for this in-scope rule."
+    - id: compiler.proven-warrior
+      scope: 'YES'
+      binding:
+        kind: compiler
+        id: compiler.proven-warrior
   name: proven warrior
-  effect: 'This young warrior has proven himself worthy of his
-
-    Black Orc heritage. This skill may only be taken by a
-
-    Young’un with the Black Orc blood ability and 25
-
-    experience. Once he gains this skill, the model is now
-
-    considered a full Black Orc Warrior (yet still retains
-
-    the title of Young’un). He follows all the rules for
-
-    Black Orcs and uses their equipment list and has
-
-    access to the same skill lists as a Black Orc.'
+  effect: This young warrior has proven himself worthy of his Black Orc heritage. This skill may only be taken by a Young’un
+    with the Black Orc blood ability and 25 experience. Once he gains this skill, the model is now considered a full Black Orc
+    Warrior (yet still retains the title of Young’un). He follows all the rules for Black Orcs and uses their equipment list
+    and has access to the same skill lists as a Black Orc.
   source:
     manual: mordheimer.net
     printed_page: 0
@@ -877,13 +856,14 @@ rules:
 - id: band--black-orc-special-skills-ard-ead
   runtime:
     scope: "YES"
-    implemented: "NO"
+    implemented: "YES"
     grant: selectable
     effects:
-    - id: unimplemented.black-orcs.band.black-orc-special-skills-ard-ead
+    - id: skill.thick-skull
       scope: "YES"
-      binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      binding:
+        kind: mechanic
+        id: skill.thick-skull
   name: ’ard ead
   effect: The warrior has a thick skull even for an Orc. He has a special 3+ save on a D6 to avoid being stunned. If the save
     is made, treat a stunned result as knocked down instead. If the Orc also wears a helmet, this save is 2+ instead of 3+
@@ -960,18 +940,17 @@ rules:
     band: true
 - id: band--black-orc-special-skills-da-cunnin-plan
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: selectable
     effects:
     - id: unimplemented.black-orcs.band.black-orc-special-skills-da-cunnin-plan
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: da cunnin’ plan
-  effect: 'Only the Boss may have this skill. The warband may re-roll
-
-    any failed Rout tests as long as the Boss is not out of action.'
+  effect: Only the Boss may have this skill. The warband may re-roll any failed Rout tests as long as the Boss is not out of
+    action.
   source:
     manual: mordheimer.net
     printed_page: 0

@@ -381,14 +381,14 @@ rules:
     profile_ids:
     - dire-wolves
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.trollheim-undead.dire-wolves.may-not-run
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: dire-wolves--fear
   name: Fear
   effect: Dire Wolves cause Fear.

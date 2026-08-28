@@ -198,18 +198,19 @@ rules:
     - kroxigor
 - id: band--scaly-skin
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'YES'
+    implemented: 'YES'
     grant: band
     effects:
-    - id: unimplemented.band-scaly-skin
-      scope: "YES"
-      binding: null
-      reason: "Legacy band grant had no executable mechanic, trait, or compiler contract."
+    - id: compiler.lizardmen-scaly-skin
+      scope: 'YES'
+      binding:
+        kind: compiler
+        id: compiler.lizardmen-scaly-skin
   name: Scaly Skin
   effect: Skinks have a natural 6+ armour save and Saurus have a natural 5+ armour save. The Kroxigor uses its own 4+ Scaly
-    Skin rule instead. Strength modifiers cannot reduce the Skink/Saurus natural save below 6+, but effects that allow no
-    save negate it. Light armour adds +1 to the save, as does a shield.
+    Skin rule instead. Strength modifiers cannot reduce the Skink/Saurus natural save below 6+, but effects that allow no save
+    negate it. Light armour adds +1 to the save, as does a shield.
   source:
     manual: mordheimer.net
     printed_page: 0
@@ -227,14 +228,14 @@ rules:
     band: true
 - id: band--armour
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.lizardmen.band.armour
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Armour
   effect: Light armour always costs 50 gc for Lizardmen, including when bought from the Equipment chart.
   source:
@@ -256,11 +257,11 @@ rules:
     implemented: "YES"
     grant: profile
     effects:
-    - id: profile-rule.band--bite-attack
+    - id: compiler.bite-attack
       scope: "YES"
       binding:
         kind: compiler
-        id: profile-rule.band--bite-attack
+        id: compiler.bite-attack
   name: Bite Attack
   effect: Each Saurus makes one additional bite attack using its own Strength and with no unarmed penalty. The bite always
     strikes last, after all other attacks, including attacks made with double-handed weapons.
@@ -382,14 +383,15 @@ rules:
     band: true
 - id: band--saurus-skill-prohibitions
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'YES'
+    implemented: 'YES'
     grant: band
     effects:
-    - id: unimplemented.lizardmen.band.saurus-skill-prohibitions
-      scope: "YES"
-      binding: null
-      reason: "No executable binding exists for this in-scope rule."
+    - id: compiler.saurus-skill-prohibitions
+      scope: 'YES'
+      binding:
+        kind: compiler
+        id: compiler.saurus-skill-prohibitions
   name: Saurus Skill Prohibitions
   effect: Saurus can never receive Academic skills and can never use missile weapons.
   source:

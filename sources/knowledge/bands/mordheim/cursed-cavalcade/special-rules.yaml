@@ -427,11 +427,13 @@ rules:
     implemented: "YES"
     grant: profile
     effects:
-    - id: profile-rule.wild-beasts--charge
+    - id: trait.charge-attack-bonus
       scope: "YES"
       binding:
-        kind: compiler
-        id: profile-rule.wild-beasts--charge
+        kind: trait
+        id: trait.charge-attack-bonus
+        parameters:
+          value: true
   name: Charge
   effect: When charging their enemies the Wild Beasts gain +1 Attack on the first turn of close combat.
   source:
@@ -615,19 +617,19 @@ rules:
     band: true
 - id: band--capture
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.cursed-cavalcade.band.capture
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Capture!
   effect: 'If a Hero takes an enemy human Henchman Out of Action with a Misericordia and the warband has fewer than 5 Captured
     Thralls, roll a D6: on 5+ the model is captured. Enemy Heroes can only be captured through a 61 - Captured! Serious Injury
-    result. No more than 2 models may be captured per game. If 2 models have already been captured, or the warband already
-    has 5 Captured Thralls, reroll 61 - Captured! results for enemy Heroes.'
+    result. No more than 2 models may be captured per game. If 2 models have already been captured, or the warband already has
+    5 Captured Thralls, reroll 61 - Captured! results for enemy Heroes.'
   source:
     manual: mordheimer.net
     printed_page: 0
@@ -819,36 +821,20 @@ rules:
     band: true
 - id: band--cursed-cavalcade-special-skills-duelist
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: selectable
     effects:
     - id: unimplemented.cursed-cavalcade.band.cursed-cavalcade-special-skills-duelist
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Duelist
-  effect: 'The warrior is an expert in hand-to-hand combat method of
-
-    the Imperial duelist, aristocrats famed for their skill in single
-
-    combat.
-
-    At the end of each Close Combat phase, the Duelist
-
-    can force any non-large opponent he is fighting one-on-one
-
-    to pass a Strength test or be pushed 2" in any direction
-
-    chosen by the Duelist. If this brings the target in contact
-
-    with another model, both suffer an automatic Strength 2 hit.
-
-    If this pushes the opponent off from a high place, then he
-
-    falls and takes damage as normal. The duelist stays on the
-
-    elevated area.'
+  effect: The warrior is an expert in hand-to-hand combat method of the Imperial duelist, aristocrats famed for their skill
+    in single combat. At the end of each Close Combat phase, the Duelist can force any non-large opponent he is fighting one-on-one
+    to pass a Strength test or be pushed 2" in any direction chosen by the Duelist. If this brings the target in contact with
+    another model, both suffer an automatic Strength 2 hit. If this pushes the opponent off from a high place, then he falls
+    and takes damage as normal. The duelist stays on the elevated area.
   source:
     manual: mordheimer.net
     printed_page: 0

@@ -68,6 +68,32 @@ def test_catalogue_uses_a_trollheim_band_canonical_family_for_special_skills():
     }
 
 
+def test_catalogue_exposes_executable_selectable_warband_rules():
+    catalogue = CombatCatalogue()
+    pit_king = next(
+        choice for choice in catalogue.profiles("mordheim", "pit-fighters")
+        if choice.profile_id == "pit-king"
+    )
+    rules = {rule.id for rule in catalogue.selectable_rules(pit_king)}
+
+    assert {
+        "band--pit-fighter-skill-arms-master",
+        "band--pit-fighter-skill-body-slam",
+        "band--pit-fighter-skill-force-of-will",
+    } <= rules
+
+
+def test_catalogue_exposes_new_first_batch_choices_and_pirate_mercenary_equipment():
+    catalogue = CombatCatalogue()
+    horned = next(choice for choice in catalogue.profiles("mordheim", "horned-hunters") if choice.profile_id == "horned-hunter")
+    ogre = next(choice for choice in catalogue.profiles("mordheim", "maneaters") if choice.profile_id == "captain")
+    pirate = next(choice for choice in catalogue.profiles("trollheim", "lustria-pirates") if choice.profile_id == "pirate-captain")
+
+    assert "band--horned-hunter-special-skills-animal-friendship" in {rule.id for rule in catalogue.selectable_rules(horned)}
+    assert "band--ogres-special-skills-master-of-arms" in {rule.id for rule in catalogue.selectable_rules(ogre)}
+    assert ("armour.heavy-armour", "Heavy armour") in catalogue.armours(pirate)
+
+
 def test_no_profile_receives_a_special_skill_from_another_band():
     catalogue = CombatCatalogue()
     skills = {str(skill["id"]): skill for skill in load_skills("mordheim")}

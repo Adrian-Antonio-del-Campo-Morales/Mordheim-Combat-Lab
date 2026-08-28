@@ -78,14 +78,14 @@ rules:
     profile_ids:
     - eshin-sorcerer
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.skaven-clan-eshin.eshin-sorcerer.magic-user
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: giant-rats--pack-size
   name: Pack Size
   effect: The warband may recruit any number of Giant Rats, subject only to the overall warband maximum.
@@ -259,14 +259,14 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.skaven-clan-eshin.band.skaven-maximum-characteristics
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--skaven-special-skills-black-hunger
   name: Black Hunger
   effect: At the start of his turn, the Skaven Hero may invoke Black Hunger. For that turn he gains +1 Attack and +D3 inches
@@ -292,13 +292,14 @@ rules:
     band: true
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: selectable
     effects:
-    - id: unimplemented.skaven-clan-eshin.band.skaven-special-skills-black-hunger
+    - id: mechanic.black-hunger
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: mechanic
+        id: mechanic.black-hunger
 - id: band--skaven-special-skills-tail-fighting
   runtime:
     scope: 'YES'
@@ -401,11 +402,11 @@ rules:
     implemented: 'YES'
     grant: selectable
     effects:
-    - id: special-rule.band--skaven-special-skills-art-of-silent-death
+    - id: skill.art-of-silent-death
       scope: 'YES'
       binding:
-        kind: compiler
-        id: special-rule.band--skaven-special-skills-art-of-silent-death
+        kind: mechanic
+        id: skill.art-of-silent-death
   name: Art of Silent Death
   effect: The Skaven may fight unarmed without penalties and counts as using two weapons, gaining +1 Attack. He scores a critical
     hit on a To Wound roll of 5-6 instead of only 6. When used with Eshin Fighting Claws, this grants +2 Attacks instead of

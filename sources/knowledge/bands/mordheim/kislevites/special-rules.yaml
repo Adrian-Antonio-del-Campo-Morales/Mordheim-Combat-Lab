@@ -37,44 +37,22 @@ rules:
     - druzhina-captain
 - id: druzhina-captain--inheritance
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.kislevites.druzhina-captain.inheritance
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Inheritance
-  effect: 'When the Kislevite warband is first created, the
-
-    Druzhina Captain is allowed to purchase one item from the
-
-    Kislevite Warrior equipment list at half the normal cost. This
-
-    item represents a treasured family heirloom that has been
-
-    passed down through the generations. Losing an ancestral
-
-    item is considered very disrespectful and if the item is ever
-
-    lost (e.g. from a Robbed result on the Serious Injury chart),
-
-    the Captain MUST replace it with a finely-made substitute as
-
-    quickly as possible or risk being haunted by the angry spirits
-
-    of his ancestors. To replace an ancestral item, the Captain
-
-    must purchase the same item of equipment at 150% of its
-
-    normal price. This higher cost represents the fine detail and
-
-    valuable materials used in the item''s manufacture. Until the
-
-    item is replaced, the Captain suffers a -1 penalty to all tests
-
-    and rolls to hit.'
+  effect: When the Kislevite warband is first created, the Druzhina Captain is allowed to purchase one item from the Kislevite
+    Warrior equipment list at half the normal cost. This item represents a treasured family heirloom that has been passed down
+    through the generations. Losing an ancestral item is considered very disrespectful and if the item is ever lost (e.g. from
+    a Robbed result on the Serious Injury chart), the Captain MUST replace it with a finely-made substitute as quickly as possible
+    or risk being haunted by the angry spirits of his ancestors. To replace an ancestral item, the Captain must purchase the
+    same item of equipment at 150% of its normal price. This higher cost represents the fine detail and valuable materials used
+    in the item's manufacture. Until the item is replaced, the Captain suffers a -1 penalty to all tests and rolls to hit.
   source:
     manual: mordheimer.net
     printed_page: 0
@@ -281,24 +259,23 @@ rules:
     - trained-bear
 - id: trained-bear--trained
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'LATER'
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.kislevites.trained-bear.trained
-      scope: "YES"
+      scope: 'LATER'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Deferred subsystem: psychology or mounts.'
   name: Trained
-  effect: A bear doesn’t care about the warband's mission or enmity for other warbands – it’s just following the orders of
-    its trainer. Sometimes it gets bored waiting for orders; for this reason Trained Bears are subject to the rules for Stupidity.
+  effect: A bear doesn’t care about the warband's mission or enmity for other warbands – it’s just following the orders of its
+    trainer. Sometimes it gets bored waiting for orders; for this reason Trained Bears are subject to the rules for Stupidity.
     If given ‘special attention’ by its trainer, it will mind a bit better, so a bear is not required to take these Stupidity
     tests if the warband's Bear Tamer is within 6". In fact this is the only member of the warband the bear will listen to;
     a Trained Bear will never use the warband leader’s Leadership for any tests it is required to take. It may use the Bear
     Tamer's leadership if within 6" of him however. Note that the warband cannot control the bear without a Bear Tamer. The
-    Trained Bear may not be used in any game in which the warband's Bear Tamer does not take part (and this means that if
-    the warband does not include a Bear Tamer at all, the warband must keep the bear staked back at camp until they hire a
-    new one!).
+    Trained Bear may not be used in any game in which the warband's Bear Tamer does not take part (and this means that if the
+    warband does not include a Bear Tamer at all, the warband must keep the bear staked back at camp until they hire a new one!).
   source:
     manual: mordheimer.net
     printed_page: 0
@@ -503,14 +480,14 @@ rules:
     - trained-bear
 - id: band--may-hire
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.kislevites.band.may-hire
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: May Hire
   effect: A Kislevite warband may hire the same Hired Swords as Human Mercenary warbands.
   source:

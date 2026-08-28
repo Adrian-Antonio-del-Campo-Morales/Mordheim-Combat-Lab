@@ -3,14 +3,14 @@ band_id: black-dwarfs
 rules:
 - id: sorcerer--leader
   runtime:
-    scope: "LATER"
-    implemented: "NO"
+    scope: LATER
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.black-dwarfs.sorcerer.leader
-      scope: "LATER"
+      scope: LATER
       binding: null
-      reason: "Deferred subsystem: psicología."
+      reason: 'Deferred subsystem: psicología.'
   name: Leader
   effect: 'Any warrior within 6“ of the Sorcerer may use
 
@@ -33,14 +33,14 @@ rules:
     - sorcerer
 - id: sorcerer--wizard
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.black-dwarfs.sorcerer.wizard
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: magia."
+      reason: 'Out of scope: magia.'
   name: Wizard
   effect: 'The Sorcerer is a wizard and follows the rules
 
@@ -63,14 +63,14 @@ rules:
     - sorcerer
 - id: sorcerer--priest
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.black-dwarfs.sorcerer.priest
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: magia."
+      reason: 'Out of scope: magia.'
   name: Priest
   effect: 'The Sorcerer starts with two rituals. One of
 
@@ -97,14 +97,14 @@ rules:
     - sorcerer
 - id: bull-centaur--large-target
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.black-dwarfs.bull-centaur.large-target
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: disparo."
+      reason: 'Out of scope: disparo.'
   name: Large target
   effect: 'Bull centaurs are large creatures and
 
@@ -143,14 +143,14 @@ rules:
     - bull-centaur
 - id: gaolers--nasty-reputation
   runtime:
-    scope: "LATER"
-    implemented: "NO"
+    scope: LATER
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.black-dwarfs.gaolers.nasty-reputation
-      scope: "LATER"
+      scope: LATER
       binding: null
-      reason: "Deferred subsystem: psicología."
+      reason: 'Deferred subsystem: psicología.'
   name: Nasty Reputation
   effect: 'Gaolers are known for their
 
@@ -177,14 +177,14 @@ rules:
     - gaolers
 - id: informers--drudgery
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.black-dwarfs.informers.drudgery
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: campaña."
+      reason: 'Out of scope: campaña.'
   name: Drudgery
   effect: 'Informers have had their will broken by
 
@@ -211,14 +211,15 @@ rules:
     - informers
 - id: band--hard-to-kill
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'YES'
+    implemented: 'YES'
     grant: band
     effects:
-    - id: unimplemented.black-dwarfs.band.hard-to-kill
-      scope: "YES"
-      binding: null
-      reason: "No executable binding exists for this in-scope rule."
+    - id: skill.hard-to-kill
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.hard-to-kill
   name: Hard to Kill
   effect: Applies to all warriors except Informers. When rolling on the Injury chart, the warrior is taken out of action only
     on a 6; 1-2 is knocked down and 3-5 is stunned.
@@ -236,16 +237,21 @@ rules:
     es: null
   applies_to:
     band: true
+  eligibility:
+  - sorcerer
+  - bull-centaur
+  - gaolers
+  - chaos-dwarfs
 - id: band--hard-head
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.black-dwarfs.band.hard-head
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: lesiones."
+      reason: 'Out of scope: lesiones.'
   name: Hard Head
   effect: Applies to all warriors except Informers. Chaos Dwarfs ignore the special rules for clubs, maces, and similar weapons.
   source:
@@ -263,14 +269,14 @@ rules:
     band: true
 - id: band--armour
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.black-dwarfs.band.armour
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Armour
   effect: Applies to all warriors except Informers. Chaos Dwarfs never suffer movement penalties for wearing armour.
   source:
@@ -288,14 +294,14 @@ rules:
     band: true
 - id: band--hired-swords
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.black-dwarfs.band.hired-swords
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Hired Swords
   effect: The warband may hire Ogre Bodyguards, Pit Fighters, Warlocks, Imperial Assassins and Hobgoblin Scouts, plus Hired
     Swords available to all warbands or to Orc or Chaos warbands. It may never hire Elves.
@@ -315,14 +321,14 @@ rules:
     band: true
 - id: band--characteristic-maximum
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.black-dwarfs.band.characteristic-maximum
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Characteristic Maximum
   effect: Chaos Dwarf warriors and the Bull Centaur use the Black Dwarf maximum characteristic profiles; Informers use the
     human maximum characteristics from the Mordheim rulebook.
@@ -342,12 +348,12 @@ rules:
     band: true
 - id: band--chaos-dwarf-special-skills
   runtime:
-    scope: "YES"
-    implemented: "YES"
+    scope: 'YES'
+    implemented: 'YES'
     grant: band
     effects:
     - id: profile.skill-access
-      scope: "YES"
+      scope: 'YES'
       binding:
         kind: profile
         id: profile.skill-access
@@ -370,28 +376,18 @@ rules:
     band: true
 - id: band--chaos-dwarf-special-skills-extra-tough
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: selectable
     effects:
     - id: unimplemented.black-dwarfs.band.chaos-dwarf-special-skills-extra-tough
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: extra tough
-  effect: 'A Chaos Dwarf with this skill is notorious for walking
-
-    away from wounds that would kill a lesser warrior.
-
-    When rolling on the Heroes Serious Injury chart for
-
-    this Hero after a game in which he has been taken out
-
-    of action, the dice may be re-rolled once. The result
-
-    of this second dice roll must be accepted, even if it is a
-
-    worse result.'
+  effect: A Chaos Dwarf with this skill is notorious for walking away from wounds that would kill a lesser warrior. When rolling
+    on the Heroes Serious Injury chart for this Hero after a game in which he has been taken out of action, the dice may be
+    re-rolled once. The result of this second dice roll must be accepted, even if it is a worse result.
   source:
     manual: mordheimer.net
     printed_page: 0
@@ -419,30 +415,20 @@ rules:
     band: true
 - id: band--chaos-dwarf-special-skills-chaos-engineer
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'YES'
+    implemented: 'YES'
     grant: selectable
     effects:
-    - id: unimplemented.black-dwarfs.band.chaos-dwarf-special-skills-chaos-engineer
-      scope: "YES"
-      binding: null
-      reason: "No executable binding exists for this in-scope rule."
+    - id: mechanic.chaos-engineer
+      scope: 'YES'
+      binding:
+        kind: compiler
+        id: compiler.chaos-engineer
   name: chaos engineer
-  effect: 'The Hero has great technical skill and can use this to
-
-    craft wicked armours and weapons. Whenever a Hero
-
-    with this skill searches for Chaos armour (including
-
-    Mechanical Suits) or Obsidian Weapons, he gets +3
-
-    on the roll. This represents the Engineer’s ability to
-
-    craft these items himself. The Hero ignores the Rarity
-
-    and Gift of Chaos special rules and may never wear
-
-    the Chaos Armours.'
+  effect: The Hero has great technical skill and can use this to craft wicked armours and weapons. Whenever a Hero with this
+    skill searches for Chaos armour (including Mechanical Suits) or Obsidian Weapons, he gets +3 on the roll. This represents
+    the Engineer’s ability to craft these items himself. The Hero ignores the Rarity and Gift of Chaos special rules and may
+    never wear the Chaos Armours.
   source:
     manual: mordheimer.net
     printed_page: 0
@@ -472,12 +458,12 @@ rules:
     band: true
 - id: band--chaos-dwarf-special-skills-thick-skull
   runtime:
-    scope: "YES"
-    implemented: "YES"
+    scope: 'YES'
+    implemented: 'YES'
     grant: selectable
     effects:
     - id: skill.thick-skull
-      scope: "YES"
+      scope: 'YES'
       binding:
         kind: mechanic
         id: skill.thick-skull
@@ -518,14 +504,14 @@ rules:
     band: true
 - id: band--chaos-dwarf-special-skills-resource-hunter
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: selectable
     effects:
     - id: unimplemented.black-dwarfs.band.chaos-dwarf-special-skills-resource-hunter
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: campaña."
+      reason: 'Out of scope: campaña.'
   name: resource hunter
   effect: 'This Chaos Dwarf is especially good at locating
 
@@ -555,14 +541,14 @@ rules:
     band: true
 - id: band--chaos-dwarf-special-skills-tyrant
   runtime:
-    scope: "LATER"
-    implemented: "NO"
+    scope: LATER
+    implemented: 'NO'
     grant: selectable
     effects:
     - id: unimplemented.black-dwarfs.band.chaos-dwarf-special-skills-tyrant
-      scope: "LATER"
+      scope: LATER
       binding: null
-      reason: "Deferred subsystem: psicología."
+      reason: 'Deferred subsystem: psicología.'
   name: tyrant
   effect: 'This skill is for the Chaos Dwarf leader only. This
 
@@ -620,12 +606,12 @@ rules:
     band: true
 - id: band--chaos-dwarf-special-skills-true-grit
   runtime:
-    scope: "YES"
-    implemented: "YES"
+    scope: 'YES'
+    implemented: 'YES'
     grant: selectable
     effects:
     - id: skill.tough-as-steel
-      scope: "YES"
+      scope: 'YES'
       binding:
         kind: mechanic
         id: skill.tough-as-steel

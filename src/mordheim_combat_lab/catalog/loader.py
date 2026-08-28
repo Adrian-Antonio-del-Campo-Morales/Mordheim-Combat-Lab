@@ -83,8 +83,15 @@ def validate_rule_runtime(rule: dict, *, context: str = "special rule") -> None:
     if scope != expected_scope:
         raise ValueError(f"{context} {rule.get('id')}: runtime scope {scope} does not match effects ({expected_scope})")
 
-def runtime_bindings(rule: dict, kind: str | None = None) -> tuple[dict, ...]:
+def runtime_bindings(rule: dict, kind: str | None = None, *, include_pending: bool = False) -> tuple[dict, ...]:
+    """Return executable bindings, or design-time bindings when explicitly requested.
+
+    Pending rules may already point at a canonical future contract.  They must
+    remain invisible to compiler/engine consumers until ``implemented`` is YES.
+    """
     runtime = rule.get("runtime") or {}
+    if not include_pending and runtime.get("implemented") != "YES":
+        return ()
     result = []
     for effect in runtime.get("effects") or ():
         binding = effect.get("binding")

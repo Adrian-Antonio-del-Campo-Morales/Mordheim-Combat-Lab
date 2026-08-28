@@ -41,11 +41,11 @@ rules:
     implemented: "YES"
     grant: selectable
     effects:
-    - id: special-rule.swordsmen--expert-swordsmen
+    - id: skill.expert-swordsman
       scope: "YES"
       binding:
-        kind: compiler
-        id: special-rule.swordsmen--expert-swordsmen
+        kind: mechanic
+        id: skill.expert-swordsman
   name: Expert Swordsmen
   effect: 'Swordsmen are so skilled with
 
@@ -127,13 +127,20 @@ rules:
 - id: band--middenheim-physical-prowess
   runtime:
     scope: "YES"
-    implemented: "NO"
-    grant: band
+    implemented: "YES"
+    grant: selectable
     effects:
-    - id: unimplemented.mercenaries.band.middenheim-physical-prowess
+    - id: profile.characteristics
       scope: "YES"
-      binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      binding:
+        kind: profile
+        id: profile.characteristics
+        parameters:
+          profile_ids:
+          - mercenary-captain
+          - champions
+          bonuses:
+            strength: 1
   name: Middenheim — Physical Prowess
   effect: The Mercenary Captain and all Champions in a Middenheim warband start with Strength 4 instead of Strength 3.
   source:
@@ -149,6 +156,9 @@ rules:
     es: null
   applies_to:
     band: true
+  eligibility:
+  - mercenary-captain
+  - champions
 - id: band--marienburg-traders
   runtime:
     scope: "NO"

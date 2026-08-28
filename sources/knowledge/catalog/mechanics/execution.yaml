@@ -251,6 +251,8 @@ mechanics:
   parameters:
     tags:
     - weapon.brazier-iron
+    - attack.fire
+    ignition_threshold: 5
     two_handed: true
     strength_bonus: 1
   trigger: attack
@@ -1064,12 +1066,11 @@ mechanics:
   trigger: passive
   application: fighter
   stacking: stack
-- id: skill.art-of-unarmed-combat
+- id: skill.unarmed-fighting
   handler: effect-set
   parameters:
     tags:
-    - skill.art-of-unarmed-combat
-    attacks_bonus: 1
+    - skill.unarmed-fighting
   trigger: passive
   application: fighter
   stacking: stack
@@ -1102,14 +1103,6 @@ mechanics:
   parameters:
     tags:
     - skill.berserker
-  trigger: passive
-  application: fighter
-  stacking: stack
-- id: skill.combat-master
-  handler: effect-set
-  parameters:
-    tags:
-    - skill.combat-master
   trigger: passive
   application: fighter
   stacking: stack
@@ -1297,6 +1290,14 @@ mechanics:
   trigger: passive
   application: fighter
   stacking: stack
+- id: skill.monster-slayer-effective-strength-armour
+  handler: effect-set
+  parameters:
+    tags:
+    - skill.monster-slayer-effective-strength-armour
+  trigger: passive
+  application: fighter
+  stacking: once
 - id: skill.monstrous
   handler: effect-set
   parameters:
@@ -1320,9 +1321,29 @@ mechanics:
     tags:
     - skill.regeneration
     regeneration_save: 4
+    regeneration_blocked_by_fire: true
   trigger: passive
   application: fighter
   stacking: stack
+- id: skill.regeneration-5-plus
+  handler: effect-set
+  parameters:
+    tags:
+    - skill.regeneration-5-plus
+    regeneration_save: 5
+    regeneration_blocked_by_fire: true
+  trigger: passive
+  application: fighter
+  stacking: stack
+- id: skill.regeneration-blocked-by-blessed
+  handler: effect-set
+  parameters:
+    regeneration_blocked_by_blessed: true
+    tags:
+    - skill.regeneration-blocked-by-blessed
+  trigger: passive
+  application: fighter
+  stacking: once
 - id: skill.resilient
   handler: effect-set
   parameters:
@@ -1469,15 +1490,6 @@ mechanics:
   trigger: passive
   application: fighter
   stacking: stack
-- id: skill.very-tough
-  handler: effect-set
-  parameters:
-    tags:
-    - skill.very-tough
-    armour_save_bonus: 1
-  trigger: passive
-  application: fighter
-  stacking: stack
 - id: skill.virtue-of-valour
   handler: effect-set
   parameters:
@@ -1507,6 +1519,14 @@ mechanics:
   parameters:
     tags:
     - skill.art-of-silent-death
+  trigger: passive
+  application: fighter
+  stacking: stack
+- id: skill.unarmed-critical-strikes
+  handler: effect-set
+  parameters:
+    tags:
+    - skill.unarmed-critical-strikes
   trigger: passive
   application: fighter
   stacking: stack
@@ -1560,3 +1580,162 @@ mechanics:
   trigger: passive
   application: fighter
   stacking: stack
+- id: mechanic.black-hunger
+  handler: effect-set
+  parameters:
+    attacks_bonus: 1
+    tags:
+    - mechanic.black-hunger
+  trigger: passive
+  application: fighter
+  stacking: once
+- id: mechanic.body-slam
+  handler: effect-set
+  parameters:
+    tags:
+    - mechanic.body-slam
+  trigger: passive
+  application: fighter
+  stacking: once
+- id: mechanic.bull-charge
+  handler: effect-set
+  parameters:
+    tags:
+    - mechanic.bull-charge
+  trigger: passive
+  application: fighter
+  stacking: once
+- id: mechanic.force-of-will
+  handler: effect-set
+  parameters:
+    tags:
+    - mechanic.force-of-will
+  trigger: passive
+  application: fighter
+  stacking: once
+- id: mechanic.unpredictable-attack
+  handler: effect-set
+  parameters:
+    tags:
+    - mechanic.unpredictable-attack
+  trigger: passive
+  application: fighter
+  stacking: once
+- id: mechanic.strike-first-vs-skinks-first-round
+  handler: effect-set
+  parameters:
+    tags:
+    - mechanic.strike-first-vs-skinks-first-round
+  trigger: passive
+  application: fighter
+  stacking: once
+- id: mechanic.strike-first-vs-skinks-always
+  handler: effect-set
+  parameters:
+    tags:
+    - mechanic.strike-first-vs-skinks-always
+  trigger: passive
+  application: fighter
+  stacking: once
+- id: mechanic.anvil-head
+  handler: effect-set
+  parameters:
+    tags:
+    - mechanic.anvil-head
+  trigger: passive
+  application: fighter
+  stacking: once
+- id: mechanic.death-blow
+  handler: effect-set
+  parameters:
+    tags:
+    - mechanic.death-blow
+    hit_modifier: 1
+    wound_modifier: 1
+    injury_modifier: 1
+  trigger: passive
+  application: fighter
+  stacking: once
+- id: mechanic.disability
+  handler: effect-set
+  parameters:
+    tags:
+    - mechanic.disability
+  trigger: passive
+  application: fighter
+  stacking: once
+- id: mechanic.energy-focus
+  handler: effect-set
+  parameters:
+    tags:
+    - mechanic.energy-focus
+  trigger: passive
+  application: fighter
+  stacking: once
+- id: mechanic.mark-of-the-old-ones
+  handler: effect-set
+  parameters:
+    tags:
+    - mechanic.mark-of-the-old-ones
+  trigger: passive
+  application: fighter
+  stacking: once
+- id: mechanic.netter
+  handler: effect-set
+  parameters:
+    tags:
+    - mechanic.netter
+  trigger: passive
+  application: fighter
+  stacking: once
+- id: mechanic.spawn-special-attacks
+  handler: effect-set
+  parameters:
+    tags:
+    - mechanic.spawn-special-attacks
+  trigger: passive
+  application: fighter
+  stacking: once
+- id: mechanic.amazon-isolationists
+  handler: effect-set
+  parameters:
+    tags:
+    - mechanic.amazon-isolationists
+  trigger: passive
+  application: fighter
+  stacking: once
+- id: mechanic.spider-infested
+  handler: effect-set
+  parameters:
+    tags:
+    - mechanic.spider-infested
+  trigger: passive
+  application: fighter
+  stacking: once
+- id: mechanic.untiring
+  handler: effect-set
+  parameters:
+    tags:
+    - mechanic.untiring
+    armour_save_floor: 5
+    armour_cannot_be_ignored: true
+  trigger: passive
+  application: fighter
+  stacking: once
+- id: mechanic.armour-save-bonus
+  handler: effect-set
+  parameters:
+    tags:
+    - mechanic.armour-save-bonus
+    armour_save_bonus: 1
+  trigger: passive
+  application: fighter
+  stacking: once
+- id: mechanic.retain-flail-morning-star-strength-bonus
+  handler: effect-set
+  parameters:
+    tags:
+    - mechanic.retain-flail-morning-star-strength-bonus
+  trigger: passive
+  application: fighter
+  stacking: once

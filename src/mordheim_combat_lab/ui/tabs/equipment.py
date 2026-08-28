@@ -90,7 +90,11 @@ class EquipmentAnalysisTab(ttk.Frame):
             ("Preparation", self.catalogue.preparations(choice), candidate.preparation_ids[0] if candidate.preparation_ids else None),
             ("Main poison", self.catalogue.poisons(choice), candidate.main_poison_id),
         ]
-        if self.catalogue.mechanic(candidate.main_weapon_id).get("hands") == 2:
+        arms_master = bool({
+            "band--pit-fighter-skill-arms-master",
+            "band--ogres-special-skills-master-of-arms",
+        } & set(candidate.special_rule_ids))
+        if self.catalogue.mechanic(candidate.main_weapon_id).get("hands") == 2 and not arms_master:
             slots[0] = ("Off hand", ((None, "Free hand"),), None)
         maximum = int(self.maximum_changed_slots.get())
         values = [options for _name, options, _baseline in slots]

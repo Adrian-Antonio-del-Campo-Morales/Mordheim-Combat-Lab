@@ -652,14 +652,14 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.orc-mob.band.distasteful-company
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--animosity
   name: Animosity
   effect: 'At the start of the Orc player''s turn, roll a D6 for each Orc or Goblin Henchman not already engaged in hand-to-hand
@@ -859,25 +859,25 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: selectable
     effects:
     - id: unimplemented.orc-mob.band.orc-special-skills-da-cunnin-plan
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--orc-special-skills-well-ard
   runtime:
     scope: 'YES'
     implemented: 'YES'
     grant: selectable
     effects:
-    - id: special-rule.band--orc-special-skills-well-ard
+    - id: mechanic.armour-save-bonus
       scope: 'YES'
       binding:
-        kind: compiler
-        id: special-rule.band--orc-special-skills-well-ard
+        kind: mechanic
+        id: mechanic.armour-save-bonus
   runtime_selectable: true
   name: Well 'Ard
   effect: 'The Orc has a thick, dark-green skin, possibly indicating Black

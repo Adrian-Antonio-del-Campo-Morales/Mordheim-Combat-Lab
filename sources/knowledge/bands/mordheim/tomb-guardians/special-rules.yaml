@@ -234,14 +234,14 @@ rules:
     profile_ids:
     - tomb-guardians
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.tomb-guardians.tomb-guardians.experience
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: tomb-scorpions--living
   name: Living
   effect: Tomb Scorpions are living creatures and are affected by Psychology normally, but they do not need water.
@@ -576,14 +576,14 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'LATER'
     implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.tomb-guardians.band.drive-chariot
-      scope: 'YES'
+      scope: 'LATER'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--tomb-guardian-experience-clarification
   name: Tomb Guardian Experience Clarification
   effect: The Town Cryer text is inconsistent about 'No Brain'. Mordheimer notes that the original Khemri material specifically
@@ -604,14 +604,14 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.tomb-guardians.band.tomb-guardian-experience-clarification
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--tomb-guardian-maximum-characteristics
   name: Tomb Guardian Maximum Characteristics
   effect: 'Tomb Lord maximum: M4, WS6, BS6, S5, T5, W5, I5, A4, Ld9. Liche Priest and Acolyte maximum: M4, WS6, BS6, S4, T4,
@@ -631,11 +631,11 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.tomb-guardians.band.tomb-guardian-maximum-characteristics
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'

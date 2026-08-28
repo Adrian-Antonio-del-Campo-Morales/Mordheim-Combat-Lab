@@ -7,7 +7,7 @@ profiles:
   cost: 85
   experience: 20
   characteristics:
-    M: 8
+    M: 3
     WS: 5
     BS: 4
     S: 3
@@ -46,7 +46,7 @@ profiles:
   cost: 50
   experience: 10
   characteristics:
-    M: 8
+    M: 3
     WS: 4
     BS: 3
     S: 3
@@ -82,7 +82,7 @@ profiles:
   cost: 50
   experience: 8
   characteristics:
-    M: 8
+    M: 3
     WS: 4
     BS: 3
     S: 3
@@ -121,7 +121,7 @@ profiles:
   cost: 40
   experience: 0
   characteristics:
-    M: 8
+    M: 3
     WS: 4
     BS: 3
     S: 3
@@ -153,7 +153,7 @@ profiles:
   cost: 40
   experience: 0
   characteristics:
-    M: 8
+    M: 3
     WS: 4
     BS: 3
     S: 3
@@ -185,7 +185,7 @@ profiles:
   cost: 25
   experience: 0
   characteristics:
-    M: 8
+    M: 3
     WS: 3
     BS: 2
     S: 3

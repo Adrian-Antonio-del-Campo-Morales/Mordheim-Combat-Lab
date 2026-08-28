@@ -259,13 +259,14 @@ rules:
     band: true
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: selectable
     effects:
-    - id: unimplemented.trollheim-skaven-clan-eshin.band.skaven-special-skills-black-hunger
+    - id: mechanic.black-hunger
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: mechanic
+        id: mechanic.black-hunger
 - id: band--skaven-special-skills-tail-fighting
   runtime:
     scope: 'YES'
@@ -374,7 +375,7 @@ rules:
         id: skill.art-of-silent-death
   name: Art of Silent Death
   effect: In close combat the Skaven may fight with bare claws without penalty and counts as using two close-combat weapons,
-    gaining +1 Attack. The Hero causes a critical hit on a To Hit roll of 5-6 instead of only 6. When combined with Eshin
+    gaining +1 Attack. The Hero causes a critical hit on a 'to wound' roll of 5-6 instead of only 6. When combined with Eshin
     Fighting Claws, the skill grants +2 Attacks instead of +1.
   source:
     manual: trollheim
@@ -385,7 +386,7 @@ rules:
     es: null
   effect_i18n:
     en: In close combat the Skaven may fight with bare claws without penalty and counts as using two close-combat weapons,
-      gaining +1 Attack. The Hero causes a critical hit on a To Hit roll of 5-6 instead of only 6. When combined with Eshin
+      gaining +1 Attack. The Hero causes a critical hit on a 'to wound' roll of 5-6 instead of only 6. When combined with Eshin
       Fighting Claws, the skill grants +2 Attacks instead of +1.
     es: null
   eligibility:

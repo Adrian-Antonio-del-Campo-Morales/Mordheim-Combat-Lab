@@ -196,11 +196,11 @@ rules:
     implemented: 'YES'
     grant: profile
     effects:
-    - id: profile-rule.saurus-totem-warrior--bite-attack
+    - id: compiler.bite-attack
       scope: 'YES'
       binding:
         kind: compiler
-        id: profile-rule.saurus-totem-warrior--bite-attack
+        id: compiler.bite-attack
   name: Bite Attack
   effect: The Saurus Totem Warrior makes one additional bite attack using its own Strength to wound and suffers no penalty
     for fighting unarmed. The bite always strikes last, regardless of who charged or which weapons are used, and is resolved
@@ -454,11 +454,11 @@ rules:
     implemented: 'YES'
     grant: profile
     effects:
-    - id: profile-rule.saurus-braves--bite-attack
+    - id: compiler.bite-attack
       scope: 'YES'
       binding:
         kind: compiler
-        id: profile-rule.saurus-braves--bite-attack
+        id: compiler.bite-attack
   name: Bite Attack
   effect: A Saurus Brave makes one additional bite attack using its own Strength to wound and suffers no penalty for fighting
     unarmed. The bite always strikes last, regardless of who charged or which weapons are used, and is resolved after attacks
@@ -625,13 +625,14 @@ rules:
 - id: band--scaly-skin
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: band
     effects:
-    - id: unimplemented.band-scaly-skin
+    - id: compiler.lizardmen-scaly-skin
       scope: 'YES'
-      binding: null
-      reason: Legacy band grant had no executable mechanic, trait, or compiler contract.
+      binding:
+        kind: compiler
+        id: compiler.lizardmen-scaly-skin
   name: Scaly Skin
   effect: Lizardmen have natural Scaly Skin saves. Strength modifiers may not reduce a Scaly Skin save beyond 6+, although
     an Injury-table result that denies armour saves also denies that 6+ Scaly Skin save. Scaly Skin may be combined with other
@@ -836,13 +837,14 @@ rules:
     band: true
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: band
     effects:
-    - id: unimplemented.lustria-lizardmen.band.sacred-marks
+    - id: compiler.sacred-marks
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: compiler
+        id: compiler.sacred-marks
 - id: band--sacred-mark-huge-jaws
   name: Huge Jaws
   effect: Costs 40 gc. Saurus Heroes only. The Hero's Bite Attack gains +1 Strength.
@@ -862,13 +864,16 @@ rules:
     band: true
   runtime:
     scope: 'YES'
-    implemented: 'NO'
-    grant: band
+    implemented: 'YES'
+    grant: selectable
     effects:
-    - id: unimplemented.lustria-lizardmen.band.sacred-mark-huge-jaws
+    - id: trait.huge-jaws
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: trait
+        id: trait.huge-jaws
+        parameters:
+          value: true
 - id: band--sacred-mark-venom-glands
   runtime:
     scope: 'YES'
@@ -925,10 +930,11 @@ rules:
     band: true
   runtime:
     scope: 'YES'
-    implemented: 'NO'
-    grant: band
+    implemented: 'YES'
+    grant: selectable
     effects:
-    - id: unimplemented.lustria-lizardmen.band.sacred-mark-of-the-old-ones
+    - id: compiler.mark-of-the-old-ones
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: mechanic
+        id: mechanic.mark-of-the-old-ones

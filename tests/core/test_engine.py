@@ -105,6 +105,41 @@ def test_wound_modifier_improves_the_wound_roll_target():
     assert plain_defender_state.wounds[0]==1
     assert improved_defender_state.wounds[0]==0
 
+def test_scorpion_tail_loses_strength_against_poison_immunity():
+    from mordheim_combat_lab.core.engine import _new_state, _prepare_weapon_attack
+    attacker=replace(fighter(),main_weapon=EffectSet(tags=("rule.scorpion-tail",),fixed_strength=5))
+    plain=fighter()
+    immune=replace(fighter(),global_effects=EffectSet(poison_immunity=True))
+    active=np.array([0]);charging=np.zeros(1,dtype=bool)
+    normal=_prepare_weapon_attack(attacker,plain,attacker.main_weapon,active,charging,
+        _new_state(attacker,1,np.random.default_rng(1)),_new_state(plain,1,np.random.default_rng(2)),FixedRng(6),False)
+    resisted=_prepare_weapon_attack(attacker,immune,attacker.main_weapon,active,charging,
+        _new_state(attacker,1,np.random.default_rng(1)),_new_state(immune,1,np.random.default_rng(2)),FixedRng(6),False)
+    assert normal.strength.tolist()==[5]
+    assert resisted.strength.tolist()==[2]
+
+def test_acid_blood_retaliates_once_per_wound_lost():
+    from mordheim_combat_lab.core.engine import _new_state, _resolve_weapon
+    attacker=replace(fighter(wounds=3),main_weapon=EffectSet(automatic_hit=True,fixed_strength=10))
+    defender=replace(fighter(wounds=2),global_effects=EffectSet(tags=("acid_blood",)))
+    attacker_state=_new_state(attacker,1,np.random.default_rng(1))
+    defender_state=_new_state(defender,1,np.random.default_rng(2))
+    _resolve_weapon(attacker,defender,attacker.main_weapon,np.array([0]),np.zeros(1,dtype=bool),
+                    attacker_state,defender_state,FixedRng(2,1,6,1),False)
+    assert defender_state.wounds[0]==1
+    assert attacker_state.wounds[0]==2
+
+def test_spines_resolve_simultaneously_at_the_start_of_the_phase():
+    from mordheim_combat_lab.core.engine import _new_state, _resolve_spines
+    spined=replace(fighter(),global_effects=EffectSet(tags=("spines",)))
+    plain=fighter(wounds=2)
+    first_state=_new_state(spined,1,np.random.default_rng(1))
+    second_state=_new_state(plain,1,np.random.default_rng(2))
+    charging=np.zeros(1,dtype=bool)
+    _resolve_spines(spined,plain,np.array([0]),charging,charging,
+                    first_state,second_state,FixedRng(6,1))
+    assert second_state.wounds[0]==1
+
 @pytest.mark.parametrize("protection", (EffectSet(ward_save=2), EffectSet(regeneration_save=2)))
 def test_profile_two_is_not_out_when_a_special_save_ignores_the_wound(protection):
     from mordheim_combat_lab.core.engine import STANDING, _new_state, _resolve_weapon
@@ -212,7 +247,7 @@ def test_lustria_scaly_skin_keeps_its_shared_six_plus_floor():
     assert defender_state.condition[0]==STANDING and defender_state.wounds[0]==1
 
 def test_shared_hard_to_kill_and_fragile_injury_profiles():
-    from mordheim_combat_lab.core.engine import KNOCKED_DOWN, OUT, _new_state, _resolve_weapon
+    from mordheim_combat_lab.core.engine import OUT, STUNNED, _new_state, _resolve_weapon
     from mordheim_combat_lab.core.models import EffectSet
     attacker=replace(fighter(),main_weapon=EffectSet(fixed_strength=10,automatic_hit=True))
     hard=compile_fighter(FighterBuild(
@@ -222,9 +257,45 @@ def test_shared_hard_to_kill_and_fragile_injury_profiles():
     fragile=compile_fighter(FighterBuild(
         "mordheim",band_id="khemri-necromancers",profile_id="nehekharan-vultures",
         collection="trollheim"))
-    for defender,injury_roll,expected in ((hard,3,KNOCKED_DOWN),(fragile,4,OUT)):
+    for defender,injury_roll,expected in ((hard,3,STUNNED),(fragile,4,OUT)):
         attacker_state=_new_state(attacker,1,np.random.default_rng(3))
         defender_state=_new_state(defender,1,np.random.default_rng(4))
         _resolve_weapon(attacker,defender,attacker.main_weapon,np.array([0]),np.zeros(1,dtype=bool),
                         attacker_state,defender_state,FixedRng(5,injury_roll,injury_roll),False)
         assert defender_state.condition[0]==expected
+
+def test_skink_hunter_priority_distinguishes_first_round_from_always():
+    from mordheim_combat_lab.core.engine import priority
+    skink=replace(fighter(),global_effects=EffectSet(tags=("species.skink",)))
+    first_round_only=replace(fighter(),global_effects=EffectSet(tags=("mechanic.strike-first-vs-skinks-first-round",)))
+    always=replace(fighter(),global_effects=EffectSet(tags=("mechanic.strike-first-vs-skinks-always",)))
+    flags=np.zeros(1,dtype=bool)
+    assert priority(first_round_only,skink,True,flags,flags,flags)[0]==20
+    assert priority(first_round_only,skink,False,flags,flags,flags)[0]==0
+    assert priority(always,skink,False,flags,flags,flags)[0]==20
+
+def test_master_of_blades_rerolls_only_with_two_dwarf_axes():
+    from mordheim_combat_lab.core.engine import _new_state, _parry_hits
+    axe=EffectSet(tags=("weapon.dwarf-axe",),parry=True)
+    core=replace(fighter(),main_weapon=axe,off_hand=axe,global_effects=EffectSet(tags=("skill.unbeatable-warrior",)))
+    master=replace(core,global_effects=EffectSet(tags=("skill.unbeatable-warrior","skill.sword-master")))
+    core_state=_new_state(core,1,np.random.default_rng(1))
+    master_state=_new_state(master,1,np.random.default_rng(1))
+    remaining,_=_parry_hits(core,axe,np.array([0]),np.array([4]),np.array([3]),core_state,FixedRng(3))
+    rerolled,_=_parry_hits(master,axe,np.array([0]),np.array([4]),np.array([3]),master_state,FixedRng(3,6))
+    assert remaining.tolist()==[0]
+    assert rerolled.size==0
+
+def test_scarecrow_catches_fire_on_three_plus_instead_of_brazier_five_plus():
+    from mordheim_combat_lab.core.engine import _new_state, _resolve_weapon
+    brazier=EffectSet(tags=("weapon.brazier-iron","attack.fire"),automatic_hit=True,ignition_threshold=5)
+    attacker=replace(fighter(),main_weapon=brazier)
+    ordinary=fighter(wounds=2)
+    scarecrow=replace(ordinary,global_effects=EffectSet(tags=("flammable",),caught_fire_threshold=3))
+    ordinary_state=_new_state(ordinary,1,np.random.default_rng(1));scarecrow_state=_new_state(scarecrow,1,np.random.default_rng(1))
+    attacker_state=_new_state(attacker,1,np.random.default_rng(2))
+    _resolve_weapon(attacker,ordinary,brazier,np.array([0]),np.zeros(1,dtype=bool),attacker_state,ordinary_state,FixedRng(4,1),False)
+    attacker_state=_new_state(attacker,1,np.random.default_rng(2))
+    _resolve_weapon(attacker,scarecrow,brazier,np.array([0]),np.zeros(1,dtype=bool),attacker_state,scarecrow_state,FixedRng(4,1),False)
+    assert not ordinary_state.on_fire[0]
+    assert scarecrow_state.on_fire[0]

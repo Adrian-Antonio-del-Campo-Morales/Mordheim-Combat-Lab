@@ -325,14 +325,14 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.khemri-cursed-of-karak-zorn.band.armour
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--hate-greenskins
   name: Hate Greenskins
   effect: All Dwarfs are subject to Hatred against Greenskins.
@@ -373,14 +373,14 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.khemri-cursed-of-karak-zorn.band.ancestral-grudge
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--excellent-miners
   name: Excellent Miners
   effect: At the end of each battle, add +1 wyrdstone shard to the amount found through Exploration.
@@ -524,15 +524,14 @@ rules:
       reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--karak-zorn-special-skills-very-tough
   runtime:
-    scope: 'YES'
-    implemented: 'YES'
+    scope: 'NO'
+    implemented: 'NO'
     grant: selectable
     effects:
-    - id: skill.very-tough
-      scope: 'YES'
-      binding:
-        kind: mechanic
-        id: skill.very-tough
+    - id: unimplemented.khemri-cursed-of-karak-zorn.band.karak-zorn-special-skills.very-tough
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: this rule only re-rolls a post-battle Serious Injury result.'
   name: Very Tough
   effect: When rolling on the Serious Injury table for this Hero after a battle, the roll may be re-rolled once. The second
     result must be accepted even if it is worse.
@@ -649,6 +648,11 @@ rules:
       binding:
         kind: mechanic
         id: skill.monster-slayer
+    - id: skill.monster-slayer-effective-strength-armour
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.monster-slayer-effective-strength-armour
   name: Monster Slayer
   effect: The Troll Slayer wounds any opponent on 4+ regardless of Toughness, unless his modified Strength would normally
     wound on a lower result. If this rule effectively increases the Strength needed to obtain a 4+ wound roll, use that effective

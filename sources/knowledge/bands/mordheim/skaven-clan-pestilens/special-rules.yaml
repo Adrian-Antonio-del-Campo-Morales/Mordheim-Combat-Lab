@@ -202,14 +202,14 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.skaven-clan-pestilens.band.clan-pestilens-maximum-characteristics
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--clan-pestilens-special-skills-black-hunger
   name: Black Hunger
   effect: At the beginning of his turn, the Hero may invoke Black Hunger. For that turn he gains +1 Attack and +D3" to his
@@ -235,13 +235,14 @@ rules:
     band: true
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: selectable
     effects:
-    - id: unimplemented.skaven-clan-pestilens.band.clan-pestilens-special-skills-black-hunger
+    - id: mechanic.black-hunger
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: mechanic
+        id: mechanic.black-hunger
 - id: band--clan-pestilens-special-skills-censer-bearer
   name: Censer Bearer
   effect: Requires Black Hunger. The Hero gains Frenzy and may use only a Censer as a close-combat weapon.
@@ -265,13 +266,14 @@ rules:
     band: true
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: selectable
     effects:
-    - id: unimplemented.skaven-clan-pestilens.band.clan-pestilens-special-skills-censer-bearer
+    - id: compiler.censer-bearer-loadout
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: compiler
+        id: compiler.censer-bearer-loadout
 - id: band--clan-pestilens-special-skills-rotten-body
   name: Rotten Body
   effect: The Hero is immune to poisons and diseases. If taken Out of Action because of a failed Censer-related test, he automatically
@@ -297,13 +299,20 @@ rules:
     band: true
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: selectable
     effects:
-    - id: unimplemented.skaven-clan-pestilens.band.clan-pestilens-special-skills-rotten-body
+    - id: trait.poison-immune
       scope: 'YES'
+      binding:
+        kind: trait
+        id: trait.poison-immune
+        parameters:
+          value: true
+    - id: campaign.censer-recovery
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: post-battle recovery and Serious Injury.'
 - id: band--clan-pestilens-special-skills-contagious
   name: Contagious
   effect: Requires Rotten Body. A model that inflicts the close-combat injury which takes this Hero Out of Action must take

@@ -209,13 +209,18 @@ rules:
     - ogre
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: profile
     effects:
-    - id: unimplemented.ostlanders.ogre.skills
+    - id: compiler.promoted-hero-skill-access
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: compiler
+        id: compiler.promoted-hero-skill-access
+        parameters:
+          allowed_skill_lists:
+          - combat
+          - strength
 - id: ogre--slow-witted
   name: Slow witted
   effect: The Ogre gains advances at half the normal rate and must earn twice the usual Experience for each advance.
@@ -259,14 +264,14 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.ostlanders.band.self-sufficient
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--ostlander-special-skills-bull-rush
   name: Bull Rush
   effect: 'This warrior is huge, even by Ostlander
@@ -333,13 +338,14 @@ rules:
     band: true
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: selectable
     effects:
-    - id: unimplemented.ostlanders.band.ostlander-special-skills-bull-rush
+    - id: mechanic.bull-charge
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: mechanic
+        id: mechanic.bull-charge
 - id: band--ostlander-special-skills-foul-odour
   name: Foul Odour
   effect: 'Ostlanders are prodigious drinkers and none
@@ -632,11 +638,11 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: selectable
     effects:
     - id: unimplemented.ostlanders.band.ostlander-special-skills-blood-oath
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'

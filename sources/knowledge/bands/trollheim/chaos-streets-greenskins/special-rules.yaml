@@ -491,14 +491,14 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.chaos-streets-greenskins.band.distasteful-company
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--animosity
   name: Animosity
   effect: 'At the start of each Orc player''s turn, roll D6 for every Orc or Goblin Henchman not already engaged in close
@@ -712,11 +712,11 @@ rules:
     implemented: 'YES'
     grant: selectable
     effects:
-    - id: special-rule.band--orc-special-skills-well-ard
+    - id: mechanic.armour-save-bonus
       scope: 'YES'
       binding:
-        kind: compiler
-        id: special-rule.band--orc-special-skills-well-ard
+        kind: mechanic
+        id: mechanic.armour-save-bonus
   runtime_selectable: true
   name: Well 'Ard
   effect: The Orc gains +1 to its armour saving throws.

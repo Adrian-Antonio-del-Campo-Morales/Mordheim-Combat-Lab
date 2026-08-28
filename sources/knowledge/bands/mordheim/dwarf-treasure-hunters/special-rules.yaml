@@ -194,14 +194,14 @@ rules:
     band: true
 - id: band--armour
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.dwarf-treasure-hunters.band.armour
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Armour
   effect: Dwarfs never suffer movement penalties for wearing armour.
   source:
@@ -298,11 +298,16 @@ rules:
     implemented: "YES"
     grant: selectable
     effects:
-    - id: special-rule.band--dwarf-special-skills-master-of-blades
+    - id: skill.unbeatable-warrior
       scope: "YES"
       binding:
-        kind: compiler
-        id: special-rule.band--dwarf-special-skills-master-of-blades
+        kind: mechanic
+        id: skill.unbeatable-warrior
+    - id: skill.sword-master
+      scope: "YES"
+      binding:
+        kind: mechanic
+        id: skill.sword-master
   name: Master of Blades
   effect: 'This Dwarf’s martial skills surpass those of a normal warrior; he
 
@@ -388,26 +393,18 @@ rules:
     band: true
 - id: band--dwarf-special-skills-extra-tough
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: selectable
     effects:
     - id: unimplemented.dwarf-treasure-hunters.band.dwarf-special-skills-extra-tough
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Extra Tough
-  effect: 'This Dwarf is notorious for walking away from wounds that
-
-    would kill a lesser being. When rolling on the Heroes Serious
-
-    Injury chart for this Hero after a game in which he has been
-
-    taken out of action, the dice may be re-rolled once. The result
-
-    of this second dice roll must be accepted, even if it is a worse
-
-    result.'
+  effect: This Dwarf is notorious for walking away from wounds that would kill a lesser being. When rolling on the Heroes Serious
+    Injury chart for this Hero after a game in which he has been taken out of action, the dice may be re-rolled once. The result
+    of this second dice roll must be accepted, even if it is a worse result.
   source:
     manual: mordheimer.net
     printed_page: 0
@@ -608,11 +605,11 @@ rules:
     implemented: "YES"
     grant: selectable
     effects:
-    - id: special-rule.band--slayer-special-skills-berserker
+    - id: skill.berserker
       scope: "YES"
       binding:
-        kind: compiler
-        id: special-rule.band--slayer-special-skills-berserker
+        kind: mechanic
+        id: skill.berserker
   name: Berserker
   effect: The Slayer adds +1 to his close combat to-hit rolls during the turn in which he charges.
   source:

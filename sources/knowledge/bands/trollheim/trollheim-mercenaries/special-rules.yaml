@@ -122,13 +122,22 @@ rules:
   runtime:
     scope: 'YES'
     implemented: 'YES'
-    grant: band
+    grant: selectable
     effects:
     - id: profile.characteristics
       scope: 'YES'
       binding:
         kind: profile
         id: profile.characteristics
+        parameters:
+          profile_ids:
+          - mercenary-captain
+          - champions
+          bonuses:
+            strength: 1
+  eligibility:
+  - mercenary-captain
+  - champions
 - id: band--marienburg-traders
   name: Marienburg — Natural Traders
   effect: A Marienburg warband receives +1 when attempting to find Rare items.

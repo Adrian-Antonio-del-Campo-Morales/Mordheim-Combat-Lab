@@ -137,7 +137,7 @@ profiles:
   equipment_lists:
   - savage-goblin-hero-equipment-list
   fixed_equipment:
-  - rope_and_hook
+  - rope_hook
   - bolas
   equipment_restrictions:
   - The starting Rope and Hook and Bolas may not be sold or transferred and are replaced automatically before the next battle

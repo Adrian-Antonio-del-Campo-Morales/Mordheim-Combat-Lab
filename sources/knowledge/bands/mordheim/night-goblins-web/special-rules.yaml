@@ -34,13 +34,20 @@ rules:
 - id: boss--da-biggest-boss
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: profile
     effects:
-    - id: unimplemented.night-goblins-web.boss.da-biggest-boss
+    - id: profile.skill-access
       scope: 'YES'
+      binding:
+        kind: profile
+        id: profile.skill-access
+        parameters:
+          category: strength
+    - id: campaign.leader-inheritance
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: leader succession after death.'
   name: Da Biggest Boss
   effect: 'The Boss is so big, compared to other
 
@@ -141,14 +148,14 @@ rules:
     - squig-herder
 - id: squig-herder--squig-herder-skill-gassy-squigs
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.night-goblins-web.squig-herder.squig-herder-skill-gassy-squigs
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Gassy Squigs
   effect: When an untrained Cave Squig goes Out of Action, roll immediately instead of making its normal post-battle recovery
     roll. On 1-2 it explodes, is dead, and every model within D6 inches suffers a Strength 3 hit.
@@ -1313,14 +1320,14 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.night-goblins-web.band.distasteful-company
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--mad-cap-masters
   name: Mad Cap Masters
   effect: A Night Goblin suffering Stupidity from Mad Cap Mushroom overuse may ignore that Stupidity while currently under
@@ -1392,14 +1399,14 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.night-goblins-web.band.night-goblin-maximum-characteristics
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--promoted-henchmen-no-strength
   name: Promoted Henchmen Cannot Choose Strength
   effect: A Henchman promoted to Hero may never choose Strength as one of its skill sets. The current warband leader may gain
@@ -1418,15 +1425,19 @@ rules:
     es: null
   applies_to:
     band: true
+  eligibility:
+  - night-goblin-warriors
+  - night-goblin-fanatics
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: band
     effects:
-    - id: unimplemented.night-goblins-web.band.promoted-henchmen-no-strength
+    - id: compiler.promoted-hero-no-strength-access
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: compiler
+        id: compiler.promoted-hero-no-strength-access
 - id: band--night-goblin-special-skills-fungus-farmer
   name: Fungus Farmer
   effect: 'The industrious little git has a mushroom crop back at
@@ -1817,11 +1828,11 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: selectable
     effects:
     - id: unimplemented.night-goblins-web.band.night-goblin-special-skills-sneaky-git
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'

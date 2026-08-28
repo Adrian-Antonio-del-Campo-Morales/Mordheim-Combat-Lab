@@ -120,7 +120,7 @@ profiles:
   - dragon-monks--art-of-silent-death
   combat_traits:
     starting_skills:
-    - skill.art-of-silent-death
+    - skill.unarmed-critical-strikes
 - id: soldiers
   name: Soldiers
   type: henchman

@@ -144,14 +144,14 @@ rules:
     profile_ids:
     - dwarf-troll-slayer
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.chaos-streets-pit-fighters.dwarf-troll-slayer.ancestral-grudge
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: dwarf-troll-slayer--death-oath
   name: Death Oath
   effect: The Dwarf Troll Slayer is completely immune to Psychology and does not need to take tests for fighting alone.
@@ -227,13 +227,14 @@ rules:
     - dwarf-troll-slayer
   runtime:
     scope: 'YES'
-    implemented: 'NO'
-    grant: selectable
+    implemented: 'YES'
+    grant: profile
     effects:
-    - id: unimplemented.chaos-streets-pit-fighters.dwarf-troll-slayer.slayer-skill-options
+    - id: compiler.slayer-skill-options
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: compiler
+        id: compiler.slayer-skill-options
 - id: pit-veterans--pit-fighter
   name: Pit Fighter
   effect: This warrior has the warband's Pit Fighter rule.
@@ -328,14 +329,14 @@ rules:
     profile_ids:
     - pursuers
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.chaos-streets-pit-fighters.pursuers.evade
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: ogre-pit-fighter--pit-fighter
   name: Pit Fighter
   effect: This warrior has the warband's Pit Fighter rule.
@@ -433,13 +434,19 @@ rules:
     - ogre-pit-fighter
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: profile
     effects:
-    - id: unimplemented.chaos-streets-pit-fighters.ogre-pit-fighter.skills
+    - id: compiler.promoted-hero-skill-access
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: compiler
+        id: compiler.promoted-hero-skill-access
+        parameters:
+          allowed_skill_lists:
+          - combat
+          - strength
+          - special
 - id: ogre-pit-fighter--slow-witted
   name: Slow Witted
   effect: The Ogre Pit Fighter gains Experience normally, but requires twice as much Experience as other warband members to
@@ -515,13 +522,14 @@ rules:
     band: true
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: band
     effects:
-    - id: unimplemented.chaos-streets-pit-fighters.band.fighting-styles
+    - id: compiler.pit-fighter-fighting-styles
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: compiler
+        id: compiler.pit-fighter-fighting-styles
 - id: band--hired-swords
   name: Hired Swords
   effect: Pit Fighters may hire any Hired Sword except Elves.
@@ -538,14 +546,14 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.chaos-streets-pit-fighters.band.hired-swords
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--free-the-slaves
   name: Free the Slaves!
   effect: Pit Fighters hate slavers and will never sell captured opponents to slavers.
@@ -594,14 +602,14 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.chaos-streets-pit-fighters.band.in-the-pit
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--pit-fighter-skill-bulging-biceps
   runtime:
     scope: 'YES'
@@ -658,13 +666,14 @@ rules:
     band: true
   runtime:
     scope: 'YES'
-    implemented: 'NO'
-    grant: band
+    implemented: 'YES'
+    grant: selectable
     effects:
-    - id: unimplemented.chaos-streets-pit-fighters.band.pit-fighter-skill-force-of-will
+    - id: mechanic.force-of-will
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: mechanic
+        id: mechanic.force-of-will
 - id: band--pit-fighter-skill-arms-master
   name: Arms Master
   effect: The Hero ignores all Difficult to Use weapon restrictions and may combine weapons that would normally be prohibited.
@@ -686,13 +695,14 @@ rules:
     band: true
   runtime:
     scope: 'YES'
-    implemented: 'NO'
-    grant: band
+    implemented: 'YES'
+    grant: selectable
     effects:
-    - id: unimplemented.chaos-streets-pit-fighters.band.pit-fighter-skill-arms-master
+    - id: compiler.ignore-difficult-to-use-restrictions
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: compiler
+        id: compiler.ignore-difficult-to-use-restrictions
 - id: band--pit-fighter-skill-body-slam
   name: Body Slam
   effect: Instead of making normal charge attacks, the Hero may make a single Body Slam attack at +1 Strength and +1 To Hit,
@@ -716,13 +726,14 @@ rules:
     band: true
   runtime:
     scope: 'YES'
-    implemented: 'NO'
-    grant: band
+    implemented: 'YES'
+    grant: selectable
     effects:
-    - id: unimplemented.chaos-streets-pit-fighters.band.pit-fighter-skill-body-slam
+    - id: mechanic.body-slam
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: mechanic
+        id: mechanic.body-slam
 - id: band--pit-fighter-skill-grizzled-veteran
   name: Grizzled Veteran
   effect: The Hero is immune to Psychology.

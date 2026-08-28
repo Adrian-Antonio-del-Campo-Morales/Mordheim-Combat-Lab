@@ -3,14 +3,14 @@ band_id: carnival-of-chaos
 rules:
 - id: carnival-master--leader
   runtime:
-    scope: "LATER"
-    implemented: "NO"
+    scope: LATER
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.carnival-of-chaos.carnival-master.leader
-      scope: "LATER"
+      scope: LATER
       binding: null
-      reason: "Deferred subsystem: psicología."
+      reason: 'Deferred subsystem: psicología.'
   name: Leader
   effect: 'Any models in the warband within 6" of
 
@@ -37,14 +37,14 @@ rules:
     - carnival-master
 - id: carnival-master--wizard
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.carnival-of-chaos.carnival-master.wizard
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: magia."
+      reason: 'Out of scope: magia.'
   name: Wizard
   effect: The Master is a wizard and uses Nurgle Rituals.
   source:
@@ -63,12 +63,12 @@ rules:
     - carnival-master
 - id: brutes--unnatural-strength
   runtime:
-    scope: "YES"
-    implemented: "YES"
+    scope: 'YES'
+    implemented: 'YES'
     grant: profile
     effects:
     - id: skill.strongman
-      scope: "YES"
+      scope: 'YES'
       binding:
         kind: mechanic
         id: skill.strongman
@@ -98,20 +98,17 @@ rules:
     - brutes
 - id: tainted-ones--nurgles-blessings
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'YES'
+    implemented: 'YES'
     grant: profile
     effects:
-    - id: unimplemented.carnival-of-chaos.tainted-ones.nurgles-blessings
-      scope: "YES"
-      binding: null
-      reason: "No executable binding exists for this in-scope rule."
+    - id: compiler.nurgle-s-blessings
+      scope: 'YES'
+      binding:
+        kind: compiler
+        id: compiler.nurgle-s-blessings
   name: Nurgle’s Blessings
-  effect: 'Tainted Ones must start the
-
-    game with one or more Blessings of Nurgle. See
-
-    the Blessings of Nurgle that follow.'
+  effect: Tainted Ones must start the game with one or more Blessings of Nurgle. See the Blessings of Nurgle that follow.
   source:
     manual: mordheimer.net
     printed_page: 0
@@ -132,12 +129,12 @@ rules:
     - tainted-ones
 - id: plague-bearers--cloud-of-flies
   runtime:
-    scope: "YES"
-    implemented: "YES"
+    scope: 'YES'
+    implemented: 'YES'
     grant: profile
     effects:
     - id: trait.cloud-of-flies
-      scope: "YES"
+      scope: 'YES'
       binding:
         kind: trait
         id: trait.cloud-of-flies
@@ -181,14 +178,14 @@ rules:
     - plague-bearers
 - id: plague-bearers--stream-of-corruption
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.carnival-of-chaos.plague-bearers.stream-of-corruption
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: disparo."
+      reason: 'Out of scope: disparo.'
   name: Stream of Corruption
   effect: 'Plague Bearers can
 
@@ -223,14 +220,14 @@ rules:
     - plague-bearers
 - id: plague-bearers--demonic
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.carnival-of-chaos.plague-bearers.demonic
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: campaña."
+      reason: 'Out of scope: campaña.'
   name: Demonic
   effect: 'Plague Bearers are Daemons of the
 
@@ -261,12 +258,12 @@ rules:
     - plague-bearers
 - id: plague-bearers--immune-to-poison
   runtime:
-    scope: "YES"
-    implemented: "YES"
+    scope: 'YES'
+    implemented: 'YES'
     grant: profile
     effects:
     - id: trait.poison-immune
-      scope: "YES"
+      scope: 'YES'
       binding:
         kind: trait
         id: trait.poison-immune
@@ -302,14 +299,14 @@ rules:
     - plague-bearers
 - id: plague-bearers--immune-to-psychology
   runtime:
-    scope: "LATER"
-    implemented: "NO"
+    scope: LATER
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.carnival-of-chaos.plague-bearers.immune-to-psychology
-      scope: "LATER"
+      scope: LATER
       binding: null
-      reason: "Deferred subsystem: psicología."
+      reason: 'Deferred subsystem: psicología.'
   name: Immune to Psychology
   effect: 'Plague Bearers are
 
@@ -340,14 +337,14 @@ rules:
     - plague-bearers
 - id: plague-bearers--cause-fear
   runtime:
-    scope: "LATER"
-    implemented: "NO"
+    scope: LATER
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.carnival-of-chaos.plague-bearers.cause-fear
-      scope: "LATER"
+      scope: LATER
       binding: null
-      reason: "Deferred subsystem: psicología."
+      reason: 'Deferred subsystem: psicología.'
   name: Cause Fear
   effect: 'Plague Bearers are horrifying
 
@@ -370,25 +367,31 @@ rules:
     - plague-bearers
 - id: plague-bearers--daemonic-aura
   runtime:
-    scope: "YES"
-    implemented: "YES"
+    scope: 'YES'
+    implemented: 'YES'
     grant: profile
     effects:
     - id: trait.natural-armour-save
-      scope: "YES"
+      scope: 'YES'
       binding:
         kind: trait
         id: trait.natural-armour-save
         parameters:
           value: 5
-    - id: magic.daemonic-negation
-      scope: "NO"
-      binding: null
-      reason: "Magic weapons and spells are outside the current runtime."
-    - id: magic.magical-attacks
-      scope: "NO"
-      binding: null
-      reason: "Magical attack typing is outside the current runtime."
+    - id: trait.natural-armour-negated-by-magic
+      scope: 'YES'
+      binding:
+        kind: trait
+        id: trait.natural-armour-negated-by-magic
+        parameters:
+          value: true
+    - id: trait.magical-attacks
+      scope: 'YES'
+      binding:
+        kind: trait
+        id: trait.magical-attacks
+        parameters:
+          value: true
   name: Daemonic Aura
   effect: 'Due to the magical, intangible
 
@@ -427,14 +430,14 @@ rules:
     - plague-bearers
 - id: plague-bearers--daemonic-instability
   runtime:
-    scope: "LATER"
-    implemented: "NO"
+    scope: LATER
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.carnival-of-chaos.plague-bearers.daemonic-instability
-      scope: "LATER"
+      scope: LATER
       binding: null
-      reason: "Deferred subsystem: psicología."
+      reason: 'Deferred subsystem: psicología.'
   name: Daemonic Instability
   effect: 'Plague Bearers are
 
@@ -489,12 +492,12 @@ rules:
     - plague-bearers
 - id: nurglings--cloud-of-flies
   runtime:
-    scope: "YES"
-    implemented: "YES"
+    scope: 'YES'
+    implemented: 'YES'
     grant: profile
     effects:
     - id: trait.cloud-of-flies
-      scope: "YES"
+      scope: 'YES'
       binding:
         kind: trait
         id: trait.cloud-of-flies
@@ -542,14 +545,14 @@ rules:
     - nurglings
 - id: nurglings--swarm
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.carnival-of-chaos.nurglings.swarm
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: campaña."
+      reason: 'Out of scope: campaña.'
   name: Swarm
   effect: 'You may summon as many Nurglings as
 
@@ -576,14 +579,14 @@ rules:
     - nurglings
 - id: nurglings--daemonic
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.carnival-of-chaos.nurglings.daemonic
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: campaña."
+      reason: 'Out of scope: campaña.'
   name: Daemonic
   effect: 'Nurglings are Daemons of the
 
@@ -614,12 +617,12 @@ rules:
     - nurglings
 - id: nurglings--immune-to-poison
   runtime:
-    scope: "YES"
-    implemented: "YES"
+    scope: 'YES'
+    implemented: 'YES'
     grant: profile
     effects:
     - id: trait.poison-immune
-      scope: "YES"
+      scope: 'YES'
       binding:
         kind: trait
         id: trait.poison-immune
@@ -655,14 +658,14 @@ rules:
     - nurglings
 - id: nurglings--immune-to-psychology
   runtime:
-    scope: "LATER"
-    implemented: "NO"
+    scope: LATER
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.carnival-of-chaos.nurglings.immune-to-psychology
-      scope: "LATER"
+      scope: LATER
       binding: null
-      reason: "Deferred subsystem: psicología."
+      reason: 'Deferred subsystem: psicología.'
   name: Immune to Psychology
   effect: 'Nurglings are
 
@@ -693,25 +696,31 @@ rules:
     - nurglings
 - id: nurglings--daemonic-aura
   runtime:
-    scope: "YES"
-    implemented: "YES"
+    scope: 'YES'
+    implemented: 'YES'
     grant: profile
     effects:
     - id: trait.natural-armour-save
-      scope: "YES"
+      scope: 'YES'
       binding:
         kind: trait
         id: trait.natural-armour-save
         parameters:
           value: 5
-    - id: magic.daemonic-negation
-      scope: "NO"
-      binding: null
-      reason: "Magic weapons and spells are outside the current runtime."
-    - id: magic.magical-attacks
-      scope: "NO"
-      binding: null
-      reason: "Magical attack typing is outside the current runtime."
+    - id: trait.natural-armour-negated-by-magic
+      scope: 'YES'
+      binding:
+        kind: trait
+        id: trait.natural-armour-negated-by-magic
+        parameters:
+          value: true
+    - id: trait.magical-attacks
+      scope: 'YES'
+      binding:
+        kind: trait
+        id: trait.magical-attacks
+        parameters:
+          value: true
   name: Daemonic Aura
   effect: 'Due to the magical, intangible
 
@@ -750,14 +759,14 @@ rules:
     - nurglings
 - id: nurglings--daemonic-instability
   runtime:
-    scope: "LATER"
-    implemented: "NO"
+    scope: LATER
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.carnival-of-chaos.nurglings.daemonic-instability
-      scope: "LATER"
+      scope: LATER
       binding: null
-      reason: "Deferred subsystem: psicología."
+      reason: 'Deferred subsystem: psicología.'
   name: Daemonic Instability
   effect: 'Nurglings are bound to
 
@@ -808,14 +817,14 @@ rules:
     - nurglings
 - id: plague-cart--plague-cart
   runtime:
-    scope: "LATER"
-    implemented: "NO"
+    scope: LATER
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.carnival-of-chaos.plague-cart.plague-cart
-      scope: "LATER"
+      scope: LATER
       binding: null
-      reason: "Deferred subsystem: psicología."
+      reason: 'Deferred subsystem: psicología.'
   name: Plague Cart
   effect: While the Plague Cart is in the warband, the maximum number of warriors is increased by 2. Plague Bearers and Nurglings
     may re-roll Leadership tests for Daemonic Instability and add +1 to their Injury tests if taken out of action.
@@ -836,14 +845,14 @@ rules:
     - plague-cart
 - id: plague-cart--guardian
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.carnival-of-chaos.plague-cart.guardian
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: ataques."
+      reason: 'Out of scope: ataques.'
   name: Guardian
   effect: The Guardian is permanently part of the Cart and can never dismount. It cannot be injured separately; if the Cart
     is destroyed, the Guardian is destroyed as well. The Guardian is Daemonic, never gains Experience, and its attacks cause
@@ -866,14 +875,17 @@ rules:
     - plague-cart
 - id: plague-cart--guardian-unarmed
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'YES'
+    implemented: 'YES'
     grant: profile
     effects:
-    - id: unimplemented.carnival-of-chaos.plague-cart.guardian-unarmed
-      scope: "YES"
-      binding: null
-      reason: "No executable binding exists for this in-scope rule."
+    - id: mechanic.guardian-unarmed
+      scope: 'YES'
+      binding:
+        kind: trait
+        id: trait.guardian-unarmed
+        parameters:
+          value: true
   name: Guardian Unarmed
   effect: The Guardian suffers no penalties for fighting unarmed.
   source:
@@ -892,14 +904,14 @@ rules:
     - plague-cart
 - id: plague-cart--immune-to-psychology
   runtime:
-    scope: "LATER"
-    implemented: "NO"
+    scope: LATER
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.carnival-of-chaos.plague-cart.immune-to-psychology
-      scope: "LATER"
+      scope: LATER
       binding: null
-      reason: "Deferred subsystem: psicología."
+      reason: 'Deferred subsystem: psicología.'
   name: Immune to Psychology
   effect: The Plague Cart and Guardian are Daemonic. The Plague Cart automatically passes any Leadership-based test it is
     required to take.
@@ -920,14 +932,14 @@ rules:
     - plague-cart
 - id: band--dangerous-to-know
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.carnival-of-chaos.band.dangerous-to-know
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: campaña."
+      reason: 'Out of scope: campaña.'
   name: Dangerous to Know
   effect: A Carnival of Chaos may never hire any type of Hired Sword.
   source:
@@ -945,14 +957,14 @@ rules:
     band: true
 - id: band--tainted
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.carnival-of-chaos.band.tainted
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: campaña."
+      reason: 'Out of scope: campaña.'
   name: Tainted
   effect: The Carnival counts as a Possessed warband for purposes of exploration and serious injuries.
   source:
@@ -970,26 +982,20 @@ rules:
     band: true
 - id: band--blessings-of-nurgle
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'YES'
+    implemented: 'YES'
     grant: band
     effects:
-    - id: unimplemented.carnival-of-chaos.band.blessings-of-nurgle
-      scope: "YES"
-      binding: null
-      reason: "No executable binding exists for this in-scope rule."
+    - id: mechanic.blessings-of-nurgle
+      scope: 'YES'
+      binding:
+        kind: compiler
+        id: compiler.blessings-of-nurgle
   name: Blessings of Nurgle
-  effect: 'Those that worship at the fetid altar of the Lord of Decay suffer from terrible diseases
-
-    and decay, which are known as Blessings of Nurgle.
-
-    Blessings of Nurgle may be bought for Tainted Ones only when they are recruited; you
-
-    may not buy new Blessings for a model after recruitment. Any Tainted may have one or
-
-    more Blessings. The first Blessing is bought at the price indicated, but second and
-
-    subsequent Blessings cost double.'
+  effect: Those that worship at the fetid altar of the Lord of Decay suffer from terrible diseases and decay, which are known
+    as Blessings of Nurgle. Blessings of Nurgle may be bought for Tainted Ones only when they are recruited; you may not buy
+    new Blessings for a model after recruitment. Any Tainted may have one or more Blessings. The first Blessing is bought
+    at the price indicated, but second and subsequent Blessings cost double.
   source:
     manual: mordheimer.net
     printed_page: 0
@@ -1015,14 +1021,14 @@ rules:
     band: true
 - id: band--blessings-of-nurgle-stream-of-corruption
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: selectable
     effects:
     - id: unimplemented.band-blessings-of-nurgle-stream-of-corruption
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "is a shooting attack"
+      reason: is a shooting attack
   name: Stream of Corruption
   effect: 'Cost: 25 Gold Crowns
 
@@ -1052,12 +1058,12 @@ rules:
     band: true
 - id: band--blessings-of-nurgle-nurgles-rot
   runtime:
-    scope: "YES"
-    implemented: "YES"
+    scope: 'YES'
+    implemented: 'YES'
     grant: selectable
     effects:
     - id: special-rule.band--blessings-of-nurgle-nurgles-rot
-      scope: "YES"
+      scope: 'YES'
       binding:
         kind: compiler
         id: special-rule.band--blessings-of-nurgle-nurgles-rot
@@ -1132,12 +1138,12 @@ rules:
     band: true
 - id: band--blessings-of-nurgle-cloud-of-flies
   runtime:
-    scope: "YES"
-    implemented: "YES"
+    scope: 'YES'
+    implemented: 'YES'
     grant: profile
     effects:
     - id: trait.cloud-of-flies
-      scope: "YES"
+      scope: 'YES'
       binding:
         kind: trait
         id: trait.cloud-of-flies
@@ -1176,12 +1182,12 @@ rules:
     band: true
 - id: band--blessings-of-nurgle-bloated-foulness
   runtime:
-    scope: "YES"
-    implemented: "YES"
+    scope: 'YES'
+    implemented: 'YES'
     grant: selectable
     effects:
     - id: special-rule.band--blessings-of-nurgle-bloated-foulness
-      scope: "YES"
+      scope: 'YES'
       binding:
         kind: compiler
         id: special-rule.band--blessings-of-nurgle-bloated-foulness
@@ -1210,12 +1216,12 @@ rules:
     band: true
 - id: band--blessings-of-nurgle-mark-of-nurgle
   runtime:
-    scope: "YES"
-    implemented: "YES"
+    scope: 'YES'
+    implemented: 'YES'
     grant: selectable
     effects:
     - id: special-rule.band--blessings-of-nurgle-mark-of-nurgle
-      scope: "YES"
+      scope: 'YES'
       binding:
         kind: compiler
         id: special-rule.band--blessings-of-nurgle-mark-of-nurgle
@@ -1244,14 +1250,14 @@ rules:
     band: true
 - id: band--blessings-of-nurgle-hideous
   runtime:
-    scope: "LATER"
-    implemented: "NO"
+    scope: LATER
+    implemented: 'NO'
     grant: selectable
     effects:
     - id: unimplemented.band-blessings-of-nurgle-hideous
-      scope: "LATER"
+      scope: LATER
       binding: null
-      reason: "fear/psychology is outside the duel runtime"
+      reason: fear/psychology is outside the duel runtime
   name: Hideous
   effect: 'Cost: 40 Gold Crowns
 

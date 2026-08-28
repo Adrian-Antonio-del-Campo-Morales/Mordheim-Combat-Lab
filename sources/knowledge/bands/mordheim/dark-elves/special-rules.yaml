@@ -3,14 +3,14 @@ band_id: dark-elves
 rules:
 - id: high-born--leader
   runtime:
-    scope: "LATER"
-    implemented: "NO"
+    scope: LATER
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.dark-elves.high-born.leader
-      scope: "LATER"
+      scope: LATER
       binding: null
-      reason: "Deferred subsystem: psicología."
+      reason: 'Deferred subsystem: psicología.'
   name: Leader
   effect: 'Any models in the warband within 6" of the High
 
@@ -33,14 +33,14 @@ rules:
     - high-born
 - id: beastmaster--cold-one-beasthound
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.dark-elves.beastmaster.cold-one-beasthound
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: campaña."
+      reason: 'Out of scope: campaña.'
   name: Cold One Beasthound
   effect: 'The Beastmaster may be
 
@@ -67,20 +67,17 @@ rules:
     - beastmaster
 - id: fellblades--melee-specialists
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'YES'
+    implemented: 'YES'
     grant: profile
     effects:
-    - id: unimplemented.dark-elves.fellblades.melee-specialists
-      scope: "YES"
-      binding: null
-      reason: "No executable binding exists for this in-scope rule."
+    - id: compiler.no-missile-weapons
+      scope: 'YES'
+      binding:
+        kind: compiler
+        id: compiler.no-missile-weapons
   name: Melee Specialists
-  effect: 'Fellblades live by a strict code of close
-
-    quarter fighting. Fellblades may not use missile weapons of
-
-    any sort.'
+  effect: Fellblades live by a strict code of close quarter fighting. Fellblades may not use missile weapons of any sort.
   source:
     manual: mordheimer.net
     printed_page: 0
@@ -101,14 +98,14 @@ rules:
     - fellblades
 - id: dark-elf-sorceress--wizard
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.dark-elves.dark-elf-sorceress.wizard
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: magia."
+      reason: 'Out of scope: magia.'
   name: Wizard
   effect: The Dark Elf Sorceress is a wizard and uses Dark Elf Magic.
   source:
@@ -127,22 +124,17 @@ rules:
     - dark-elf-sorceress
 - id: shades--natural-stealth
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.dark-elves.shades.natural-stealth
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Natural Stealth
-  effect: 'The first thing that Dark Elf Scouts master
-
-    is the art of moving without being seen or heard. If a Dark Elf
-
-    is Hiding, enemy models suffer -1 to their Initiative value for
-
-    determining if they can detect him.'
+  effect: The first thing that Dark Elf Scouts master is the art of moving without being seen or heard. If a Dark Elf is Hiding,
+    enemy models suffer -1 to their Initiative value for determining if they can detect him.
   source:
     manual: mordheimer.net
     printed_page: 0
@@ -165,14 +157,14 @@ rules:
     - shades
 - id: cold-one-beasthounds--animals
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.dark-elves.cold-one-beasthounds.animals
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: campaña."
+      reason: 'Out of scope: campaña.'
   name: Animals
   effect: 'Cold One Beasthounds are animals and all animal
 
@@ -195,14 +187,14 @@ rules:
     - cold-one-beasthounds
 - id: cold-one-beasthounds--beastmaster
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.dark-elves.cold-one-beasthounds.beastmaster
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: campaña."
+      reason: 'Out of scope: campaña.'
   name: Beastmaster
   effect: 'Cold One Beasthounds are nasty viscous
 
@@ -237,14 +229,14 @@ rules:
     - cold-one-beasthounds
 - id: cold-one-beasthounds--stupidity
   runtime:
-    scope: "LATER"
-    implemented: "NO"
+    scope: LATER
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.dark-elves.cold-one-beasthounds.stupidity
-      scope: "LATER"
+      scope: LATER
       binding: null
-      reason: "Deferred subsystem: psicología."
+      reason: 'Deferred subsystem: psicología.'
   name: Stupidity
   effect: 'Cold One Beasthounds may use the basic
 
@@ -279,19 +271,19 @@ rules:
     - cold-one-beasthounds
 - id: cold-one-beasthounds--scaly-skin
   runtime:
-    scope: "YES"
-    implemented: "YES"
+    scope: 'YES'
+    implemented: 'YES'
     grant: profile
     effects:
     - id: trait.natural-armour-save
-      scope: "YES"
+      scope: 'YES'
       binding:
         kind: trait
         id: trait.natural-armour-save
         parameters:
           value: 6
     - id: trait.natural-armour-unmodified
-      scope: "YES"
+      scope: 'YES'
       binding:
         kind: trait
         id: trait.natural-armour-unmodified
@@ -319,14 +311,14 @@ rules:
     - cold-one-beasthounds
 - id: cold-one-beasthounds--fear
   runtime:
-    scope: "LATER"
-    implemented: "NO"
+    scope: LATER
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.dark-elves.cold-one-beasthounds.fear
-      scope: "LATER"
+      scope: LATER
       binding: null
-      reason: "Deferred subsystem: psicología."
+      reason: 'Deferred subsystem: psicología.'
   name: Fear
   effect: Cold One Beasthounds cause Fear.
   source:
@@ -345,14 +337,14 @@ rules:
     - cold-one-beasthounds
 - id: band--kindred-hatred
   runtime:
-    scope: "LATER"
-    implemented: "NO"
+    scope: LATER
+    implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.dark-elves.band.kindred-hatred
-      scope: "LATER"
+      scope: LATER
       binding: null
-      reason: "Deferred subsystem: psicología."
+      reason: 'Deferred subsystem: psicología.'
   name: Kindred Hatred
   effect: Dark Elves Hate all High Elf warriors, including High Elf Hired Swords.
   source:
@@ -370,14 +362,14 @@ rules:
     band: true
 - id: band--excellent-sight
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.dark-elves.band.excellent-sight
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: movimiento."
+      reason: 'Out of scope: movimiento.'
   name: Excellent Sight
   effect: 'All Elves in the warband can spot Hidden enemies from twice as far away as normal: twice their Initiative in inches.'
   source:
@@ -395,14 +387,15 @@ rules:
     band: true
 - id: band--black-powder-weapons
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'YES'
+    implemented: 'YES'
     grant: band
     effects:
-    - id: unimplemented.dark-elves.band.black-powder-weapons
-      scope: "YES"
-      binding: null
-      reason: "No executable binding exists for this in-scope rule."
+    - id: compiler.no-blackpowder-weapons
+      scope: 'YES'
+      binding:
+        kind: compiler
+        id: compiler.no-blackpowder-weapons
   name: Black Powder Weapons
   effect: Dark Elves may never use black powder weapons.
   source:
@@ -420,28 +413,19 @@ rules:
     band: true
 - id: band--dark-elf-special-skills-fury-of-khaine
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: selectable
     effects:
     - id: unimplemented.dark-elves.band.dark-elf-special-skills-fury-of-khaine
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Fury of Khaine
-  effect: 'The Dark Elf is infused with an intense raging
-
-    thirst for blood and is a whirlwind in hand-to-hand combat, moving
-
-    from opponent to opponent. The Dark Elf may make a 4" follow up
-
-    move if he takes all of his opponents Out Of Action. If he comes
-
-    into contact with another enemy this starts a new combat. This new
-
-    combat takes place in the following turn and the model counts as
-
-    charging. May not follow up in the opponent’s turn.'
+  effect: The Dark Elf is infused with an intense raging thirst for blood and is a whirlwind in hand-to-hand combat, moving
+    from opponent to opponent. The Dark Elf may make a 4" follow up move if he takes all of his opponents Out Of Action. If
+    he comes into contact with another enemy this starts a new combat. This new combat takes place in the following turn and
+    the model counts as charging. May not follow up in the opponent’s turn.
   source:
     manual: mordheimer.net
     printed_page: 0
@@ -469,14 +453,21 @@ rules:
     band: true
 - id: band--dark-elf-special-skills-powerful-build
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'YES'
+    implemented: 'YES'
     grant: selectable
     effects:
-    - id: unimplemented.dark-elves.band.dark-elf-special-skills-powerful-build
-      scope: "YES"
+    - id: profile.skill-access
+      scope: 'YES'
+      binding:
+        kind: profile
+        id: profile.skill-access
+        parameters:
+          category: strength
+    - id: roster.maximum-two-powerful-build
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: warband-level roster limit.'
   name: Powerful Build
   effect: 'The warrior is strongly built for an Elf and is
 
@@ -508,16 +499,20 @@ rules:
     es: null
   applies_to:
     band: true
+  eligibility:
+  - high-born
+  - beastmaster
+  - fellblades
 - id: band--dark-elf-special-skills-fey-quickness
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: selectable
     effects:
     - id: unimplemented.dark-elves.band.dark-elf-special-skills-fey-quickness
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: ataques."
+      reason: 'Out of scope: ataques.'
   name: Fey Quickness
   effect: 'Few can ever hope to match an Elf’s inhuman
 
@@ -555,14 +550,14 @@ rules:
     band: true
 - id: band--dark-elf-special-skills-infiltration
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: selectable
     effects:
     - id: unimplemented.dark-elves.band.dark-elf-special-skills-infiltration
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: movimiento."
+      reason: 'Out of scope: movimiento.'
   name: Infiltration
   effect: 'The Dark Elf with this skill is always placed on the
 
@@ -600,14 +595,14 @@ rules:
     band: true
 - id: band--dark-elf-special-skills-master-of-poisons
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: selectable
     effects:
     - id: unimplemented.dark-elves.band.dark-elf-special-skills-master-of-poisons
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: recursos intermedios."
+      reason: 'Out of scope: recursos intermedios.'
   name: Master of Poisons
   effect: 'The Dark Elf is proficient in concocting
 

@@ -93,18 +93,19 @@ rules:
     - duelist
 - id: duelist--weapon-knowledge
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'YES'
+    implemented: 'YES'
     grant: profile
     effects:
-    - id: unimplemented.hochland-bandits.duelist.weapon-knowledge
-      scope: "YES"
-      binding: null
-      reason: "No executable binding exists for this in-scope rule."
+    - id: compiler.weapon-knowledge
+      scope: 'YES'
+      binding:
+        kind: compiler
+        id: compiler.weapon-knowledge
   name: Weapon Knowledge
   effect: A Duelist must be prepared to fight an opponent with any weapon at any time, so a working knowledge of even exotic
-    weapons is critical for his survival. The weapons in the Bandit equipment chart merely represent the weapons a Duelist
-    may start with. A Duelist may use any close combat or missile weapon that the warband members can get hold of.
+    weapons is critical for his survival. The weapons in the Bandit equipment chart merely represent the weapons a Duelist may
+    start with. A Duelist may use any close combat or missile weapon that the warband members can get hold of.
   source:
     manual: mordheimer.net
     printed_page: 0
@@ -371,14 +372,14 @@ rules:
     - gutterscum
 - id: band--hired-swords
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.hochland-bandits.band.hired-swords
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Hired Swords
   effect: The warband may hire any Hired Sword available to a Human Mercenary warband.
   source:
@@ -396,14 +397,15 @@ rules:
     band: true
 - id: band--powders-expensive
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'YES'
+    implemented: 'YES'
     grant: band
     effects:
-    - id: unimplemented.hochland-bandits.band.powders-expensive
-      scope: "YES"
-      binding: null
-      reason: "No executable binding exists for this in-scope rule."
+    - id: compiler.powder-s-expensive
+      scope: 'YES'
+      binding:
+        kind: compiler
+        id: compiler.powder-s-expensive
   name: Powder's Expensive!
   effect: Bandit Henchmen may not purchase black powder weapons. Bandit Heroes may use them where their equipment access allows,
     but the warband uses the higher black-powder weapon costs shown in its equipment lists.
@@ -595,38 +597,21 @@ rules:
     band: true
 - id: band--bandit-special-skills-jump-back
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: selectable
     effects:
     - id: unimplemented.hochland-bandits.band.bandit-special-skills-jump-back
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Jump Back
-  effect: 'This warrior is an expert at getting himself out of sticky
-
-    situations. If the warrior is in close combat with an enemy warrior (and not Knocked Down or Stunned) at
-
-    the start of his Movement Phase, he may attempt to
-
-    jump out of combat. To attempt to do so, the warrior
-
-    must make an Initiative test. If he fails the test, the
-
-    warrior will automatically strike last in that round of
-
-    combat. However, if he passes, immediately move him
-
-    1" away from the enemy warrior (this does not count
-
-    against his movement for that Movement Phase); he
-
-    may then move and otherwise act normally for the test
-
-    of that that turn (even charging back into combat if he
-
-    chooses!).'
+  effect: This warrior is an expert at getting himself out of sticky situations. If the warrior is in close combat with an enemy
+    warrior (and not Knocked Down or Stunned) at the start of his Movement Phase, he may attempt to jump out of combat. To attempt
+    to do so, the warrior must make an Initiative test. If he fails the test, the warrior will automatically strike last in
+    that round of combat. However, if he passes, immediately move him 1" away from the enemy warrior (this does not count against
+    his movement for that Movement Phase); he may then move and otherwise act normally for the test of that that turn (even
+    charging back into combat if he chooses!).
   source:
     manual: mordheimer.net
     printed_page: 0
@@ -664,24 +649,17 @@ rules:
     band: true
 - id: band--bandit-special-skills-sniper
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: selectable
     effects:
     - id: unimplemented.hochland-bandits.band.bandit-special-skills-sniper
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Sniper
-  effect: 'The bandit is an expert at shooting his victims from the
-
-    comfort of cover. When Hiding, the warrior may cast
-
-    spells or shoot and still remain Hidden. Note that the
-
-    bandit may not use this skill if he is shooting a
-
-    Blackpowder weapon!'
+  effect: The bandit is an expert at shooting his victims from the comfort of cover. When Hiding, the warrior may cast spells
+    or shoot and still remain Hidden. Note that the bandit may not use this skill if he is shooting a Blackpowder weapon!
   source:
     manual: mordheimer.net
     printed_page: 0

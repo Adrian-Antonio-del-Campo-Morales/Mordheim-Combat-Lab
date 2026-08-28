@@ -207,13 +207,14 @@ rules:
     - cripples
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: profile
     effects:
-    - id: unimplemented.chaos-streets-mordheim-inhabitants.cripples.disability
+    - id: compiler.disability
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: mechanic
+        id: mechanic.disability
 - id: street-dogs--animal
   name: Animal
   effect: Street Dogs are animals and never gain Experience.
@@ -331,14 +332,14 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.chaos-streets-mordheim-inhabitants.band.hired-swords
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--revival-sermons
   name: Revival Sermons
   effect: Revival Sermons are not magical and affect only members of the Mordheim Inhabitants warband; they never affect enemy
@@ -369,11 +370,11 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: LATER
     implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.chaos-streets-mordheim-inhabitants.band.revival-sermons
-      scope: 'YES'
+      scope: LATER
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Deferred subsystem: psychology or mounts.'

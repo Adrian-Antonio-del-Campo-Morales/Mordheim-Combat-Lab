@@ -48,13 +48,14 @@ rules:
     - cleric
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: profile
     effects:
-    - id: unimplemented.outlaws-of-stirwood-forest.cleric.disciple-of-sigmar
+    - id: mechanic.disciple-of-sigmar
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: compiler
+        id: compiler.disciple-of-sigmar
 - id: band--bow-discipline
   name: Bow Discipline
   effect: Every warrior may carry only one missile weapon at a time. Every warrior except the Cleric must carry a bow-type
@@ -75,13 +76,14 @@ rules:
     band: true
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: band
     effects:
-    - id: unimplemented.outlaws-of-stirwood-forest.band.bow-discipline
+    - id: mechanic.bow-discipline
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: compiler
+        id: compiler.bow-discipline
 - id: band--hired-swords
   name: Hired Swords
   effect: 'The following Hired Swords are not available to the Outlaws: Bounty Hunter, Wolf-Priest of Ulric, Norse Shaman,
@@ -101,14 +103,14 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.outlaws-of-stirwood-forest.band.hired-swords
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--cleric-hero-slot
   name: Cleric Hero Slot
   effect: A Cleric may only be included instead of either a Champion or a Petty Thief. Therefore, if a Cleric is included,

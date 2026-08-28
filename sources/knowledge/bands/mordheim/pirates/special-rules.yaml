@@ -190,13 +190,14 @@ rules:
     - swabbies
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: profile
     effects:
-    - id: unimplemented.pirates.swabbies.rabble
+    - id: compiler.swabbie-rabble-loadout
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: compiler
+        id: compiler.swabbie-rabble-loadout
 - id: swabbies--escaped-swabbies
   name: Blimey, They Got Away!
   effect: If the Pirate warband Routs, any Swabbies that had already left the table in earlier turns escape permanently and
@@ -282,14 +283,14 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.pirates.band.kidnapped
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--stragglers-and-prisoners
   name: Stragglers and Prisoners
   effect: When exploration finds Stragglers, the Captain may pass a Leadership test to turn the Straggler into a Swabbie.
@@ -343,14 +344,14 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.pirates.band.hired-swords
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--one-off-games
   name: One-off Games
   effect: In one-off games, a Pirate warband starts with two Swabbies for free.

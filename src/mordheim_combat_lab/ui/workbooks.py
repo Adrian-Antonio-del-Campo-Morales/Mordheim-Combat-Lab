@@ -47,6 +47,7 @@ def _build_from_payload(payload: dict) -> FighterBuild:
             off_material_id=str(payload.get("off_material_id") or "material.normal"),
             skill_ids=tuple(payload.get("skill_ids") or ()), preparation_ids=tuple(payload.get("preparation_ids") or ()),
             special_rule_ids=tuple(payload.get("special_rule_ids") or ()),
+            variant_ids=tuple(payload.get("variant_ids") or ()),
             main_poison_id=payload.get("main_poison_id"), off_poison_id=payload.get("off_poison_id"),
             trait_overrides=dict(payload.get("trait_overrides") or {}), collection=str(payload.get("collection") or "mordheim"),
         )

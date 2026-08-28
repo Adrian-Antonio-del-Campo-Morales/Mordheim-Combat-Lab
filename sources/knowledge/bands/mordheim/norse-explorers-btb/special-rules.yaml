@@ -191,14 +191,14 @@ rules:
     profile_ids:
     - wolves
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.norse-explorers-btb.wolves.pack-leader
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--seafaring
   name: Seafaring
   effect: All Norse warriors receive +2 Strength when rowing a boat.
@@ -316,11 +316,11 @@ rules:
     implemented: 'YES'
     grant: selectable
     effects:
-    - id: special-rule.band--norse-special-skills-crushing-blow
+    - id: skill.crushing-blow
       scope: 'YES'
       binding:
-        kind: compiler
-        id: special-rule.band--norse-special-skills-crushing-blow
+        kind: mechanic
+        id: skill.crushing-blow
   name: Crushing Blow
   effect: Norse warriors train in almost all of their spare time. They are expert fighters and learn to put all of their strength
     into very powerful attacks. No enemy may parry an attack made by this hero because it strikes with such great power that
@@ -346,11 +346,11 @@ rules:
     implemented: 'YES'
     grant: selectable
     effects:
-    - id: special-rule.band--norse-special-skills-shield-master
+    - id: skill.shield-mastery
       scope: 'YES'
       binding:
-        kind: compiler
-        id: special-rule.band--norse-special-skills-shield-master
+        kind: mechanic
+        id: skill.shield-mastery
   name: Shield Master
   effect: Norse warriors begin training with shields when they are still children. Some warriors become so skilled with these
     weapons they can block almost any blow against them. When this hero is armed with a shield he may parry with it in addition

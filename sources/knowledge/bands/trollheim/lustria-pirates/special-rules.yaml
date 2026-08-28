@@ -154,13 +154,14 @@ rules:
     - swabbies
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: profile
     effects:
-    - id: unimplemented.lustria-pirates.swabbies.rabble
+    - id: compiler.swabbie-rabble-loadout
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: compiler
+        id: compiler.swabbie-rabble-loadout
 - id: swabbies--curse-they-have-escaped
   name: Curse Them, They've Escaped!
   effect: If the Pirate warband Routs, every Swabbie that had already left the table in an earlier turn because of the scenario
@@ -336,13 +337,14 @@ rules:
     band: true
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: band
     effects:
-    - id: unimplemented.lustria-pirates.band.hired-swords
+    - id: compiler.pirate-human-mercenary-equipment-access
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: compiler
+        id: compiler.pirate-human-mercenary-equipment-access
 - id: band--one-off-games
   name: One-Off Games
   effect: In games that are not part of a campaign, the Pirate warband begins with two free Swabbies.

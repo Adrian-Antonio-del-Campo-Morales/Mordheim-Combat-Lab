@@ -224,14 +224,14 @@ rules:
     - blackguards
 - id: band--merchant-leadership
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'LATER'
+    implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.merchant-caravans.band.merchant-leadership
-      scope: "YES"
+      scope: 'LATER'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Deferred subsystem: psychology or mounts.'
   name: Merchant
   effect: The Merchant is the warband leader and warriors within 6" may use his Leadership for Leadership tests. If the Merchant
     permanently leaves the warband, determine a new leader normally. The new leader gains the Merchant special rule, counts
@@ -342,14 +342,14 @@ rules:
     band: true
 - id: band--hired-swords
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.merchant-caravans.band.hired-swords
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Hired Swords
   effect: Merchant Caravans may hire every Hired Sword available to Mercenary warbands.
   source:
@@ -394,14 +394,14 @@ rules:
     band: true
 - id: band--human-characteristic-maximum
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.merchant-caravans.band.human-characteristic-maximum
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Human Characteristic Maximum
   effect: Merchants and their retinue are humans and use the Human maximum characteristic profile.
   source:

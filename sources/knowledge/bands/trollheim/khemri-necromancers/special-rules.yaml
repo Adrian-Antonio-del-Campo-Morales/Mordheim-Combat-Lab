@@ -595,13 +595,14 @@ rules:
     band: true
   runtime:
     scope: 'YES'
-    implemented: 'NO'
-    grant: band
+    implemented: 'YES'
+    grant: selectable
     effects:
-    - id: unimplemented.khemri-necromancers.band.necromantic-modification-ogre-flesh
+    - id: skill.monstrous
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: mechanic
+        id: skill.monstrous
 - id: band--necromantic-modification-bone-armour
   name: Bone Armour
   effect: 3 on 2D6; costs 35 gc. The Necromantic Abomination gains +1 Toughness.
@@ -621,13 +622,17 @@ rules:
     band: true
   runtime:
     scope: 'YES'
-    implemented: 'NO'
-    grant: band
+    implemented: 'YES'
+    grant: selectable
     effects:
-    - id: unimplemented.khemri-necromancers.band.necromantic-modification-bone-armour
+    - id: profile.characteristics
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: profile
+        id: profile.characteristics
+        parameters:
+          bonuses:
+            toughness: 1
 - id: band--necromantic-modification-tremendous-strength
   name: Tremendous Strength
   effect: 4 on 2D6; costs 30 gc. The Necromantic Abomination gains +1 Strength.
@@ -647,13 +652,14 @@ rules:
     band: true
   runtime:
     scope: 'YES'
-    implemented: 'NO'
-    grant: band
+    implemented: 'YES'
+    grant: selectable
     effects:
-    - id: unimplemented.khemri-necromancers.band.necromantic-modification-tremendous-strength
+    - id: skill.iron-sinews
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: mechanic
+        id: skill.iron-sinews
 - id: band--necromantic-modification-killers-precision
   name: Killer's Precision
   effect: 5 on 2D6; costs 20 gc. The Necromantic Abomination gains +1 Weapon Skill.
@@ -673,13 +679,17 @@ rules:
     band: true
   runtime:
     scope: 'YES'
-    implemented: 'NO'
-    grant: band
+    implemented: 'YES'
+    grant: selectable
     effects:
-    - id: unimplemented.khemri-necromancers.band.necromantic-modification-killers-precision
+    - id: profile.characteristics
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: profile
+        id: profile.characteristics
+        parameters:
+          bonuses:
+            weapon_skill: 1
 - id: band--necromantic-modification-paladin-of-horror
   name: Paladin of Horror
   effect: 6 on 2D6; costs 20 gc. The Necromantic Abomination gains +1 Leadership.
@@ -725,13 +735,17 @@ rules:
     band: true
   runtime:
     scope: 'YES'
-    implemented: 'NO'
-    grant: band
+    implemented: 'YES'
+    grant: selectable
     effects:
-    - id: unimplemented.khemri-necromancers.band.necromantic-modification-enhanced-reflexes
+    - id: profile.characteristics
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: profile
+        id: profile.characteristics
+        parameters:
+          bonuses:
+            initiative: 1
 - id: band--necromantic-modification-multiple-limbs
   runtime:
     scope: 'YES'
@@ -834,13 +848,14 @@ rules:
     band: true
   runtime:
     scope: 'YES'
-    implemented: 'NO'
-    grant: band
+    implemented: 'YES'
+    grant: selectable
     effects:
-    - id: unimplemented.khemri-necromancers.band.necromantic-modification-anvil-head
+    - id: compiler.anvil-head
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: mechanic
+        id: mechanic.anvil-head
 - id: band--necromantic-modification-putrid-stench
   runtime:
     scope: 'YES'

@@ -85,14 +85,14 @@ rules:
     - braves
 - id: braves--remove-animosity
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'LATER'
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.forest-goblins.braves.remove-animosity
-      scope: "YES"
+      scope: 'LATER'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Deferred subsystem: psychology or mounts.'
   name: Remove Animosity
   effect: When a Brave earns a skill advance, he may choose to remove his Animosity rule instead of choosing a skill.
   source:
@@ -111,14 +111,14 @@ rules:
     - braves
 - id: shaman--wizard
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.forest-goblins.shaman.wizard
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Wizard
   effect: A Shaman begins with one spell randomly chosen from the Forest Goblin Spell list .
   source:

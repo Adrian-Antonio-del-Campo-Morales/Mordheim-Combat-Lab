@@ -573,7 +573,7 @@ weapons:
 - id: weapon.serpent-staff
   name: Serpent staff
   summary: 'Range: Close Combat Strength: As user Special Rules Parry: The staff is used with two hands and may be used to
-    . However, the Liche Priest may forgo all his normal attacks and parries in a round to use the power contained within
+    Parry. However, the Liche Priest may forgo all his normal attacks and parries in a round to use the power contained within
     the staff.'
   hands: 2
   paired: false
@@ -973,7 +973,7 @@ weapons:
   name: Chain Sticks
   summary: 'Range: Close Combat Strength: As user Special Rules Flurry: A set of chain sticks allows its wielder to unleash
     a furious bludgeoning. A warrior armed with chain sticks gets +2 Attacks. This bonus only applies in the first turn of
-    each hand-to-hard combat.'
+    each hand-to-hand combat.'
   hands: 2
   paired: false
   main_hand: true
@@ -1354,12 +1354,12 @@ skills:
   kind: warband
   engine_option: Always Strikes First
   source_refs: []
-- id: skill.art-of-unarmed-combat
-  name: Art of Unarmed Combat
+- id: skill.unarmed-fighting
+  name: Unarmed Fighting
   category: special
-  summary: +1 Attack while fighting unarmed or with claws.
+  summary: Fights unarmed without penalties and gains +1 Attack while unarmed.
   kind: warband
-  engine_option: Art of Unarmed Combat
+  engine_option: Unarmed Fighting
   source_refs: []
 - id: skill.axe-expert
   name: Axe Expert
@@ -1405,18 +1405,6 @@ skills:
     printed_page: 0
     section: Troll Slayer Special Skills / Berserker
     url: https://mordheimer.net/docs/warbands/grade-1b-warbands/pit-fighters
-- id: skill.combat-master
-  name: Combat Master
-  category: combat
-  summary: +1 Attack while fighting two or more enemies; immune to All Alone tests.
-  kind: general
-  engine_option: Combat Master
-  rules_source_url: https://mordheimer.net/docs/campaigns/skills
-  source_refs:
-  - manual: mordheimer.net
-    printed_page: 0
-    section: Dwarf Special Skills / Combat Master
-    url: https://mordheimer.net/docs/warbands/grade-1b-warbands/dwarf-rangers
 - id: skill.crushing-blow
   name: Crushing Blow
   category: special
@@ -1483,7 +1471,7 @@ skills:
 - id: skill.hard-to-kill
   name: Hard to Kill
   category: special
-  summary: Only goes Out of Action on a 6 on the Injury table.
+  summary: Injury rolls of 1-3 cause Knocked Down, 4-5 cause Stunned, and 6 causes Out of Action.
   kind: warband
   engine_option: Hard to Kill
   source_refs:
@@ -1608,7 +1596,7 @@ skills:
 - id: skill.miniath
   name: Miniath
   category: special
-  summary: Re-rolls one failed parry when using a Parry weapon.
+  summary: May parry with any weapon and re-rolls one failed parry.
   kind: warband
   engine_option: Miniath
   source_refs: []
@@ -1800,16 +1788,9 @@ skills:
 - id: skill.vampire-reflexes
   name: Vampire Reflexes
   category: special
-  summary: 6+ special save against wounds.
+  summary: Unmodifiable 6+ save against wounds, rolled before multiplying Wounds; combines with Step Aside to 4+.
   kind: warband
   engine_option: Vampire Reflexes
-  source_refs: []
-- id: skill.very-tough
-  name: Very Tough
-  category: special
-  summary: +1 armour save.
-  kind: warband
-  engine_option: Very Tough
   source_refs: []
 - id: skill.virtue-of-valour
   name: Virtue of Valour
@@ -1840,21 +1821,28 @@ skills:
 - id: skill.art-of-silent-death
   name: Art of Silent Death
   category: special
-  summary: Improves the warrior's unarmed close-combat attacks.
+  summary: Fights unarmed without penalties, gains +1 Attack unarmed or one additional Attack with Fighting Claws, and scores close-combat criticals on To Wound rolls of 5-6.
   kind: profile
   engine_option: Art of Silent Death
+  source_refs: []
+- id: skill.unarmed-critical-strikes
+  name: Unarmed Critical Strikes
+  category: special
+  summary: Unarmed attacks score critical hits on To Wound rolls of 5-6.
+  kind: profile
+  engine_option: Unarmed Critical Strikes
   source_refs: []
 - id: skill.blessed-sight
   name: Blessed Sight
   category: special
-  summary: Re-rolls failed close-combat hit rolls.
+  summary: Re-rolls failed characteristic tests and failed close-combat hit rolls.
   kind: profile
   engine_option: Blessed Sight
   source_refs: []
 - id: skill.crack-shot
   name: Crack Shot
   category: special
-  summary: Improves close-combat pistol critical hits.
+  summary: Re-rolls missed close-combat pistol attacks in the first combat round.
   kind: profile
   engine_option: Crack Shot
   source_refs: []
@@ -1885,4 +1873,158 @@ skills:
   summary: Applies the profile's documented sword mastery.
   kind: profile
   engine_option: Swordmaster
+  source_refs: []
+- id: mechanic.black-hunger
+  name: Black Hunger
+  category: special
+  summary: 'Simulation convention: activates every turn, granting +1 Attack for that turn before D3 Strength 3 hits that ignore armour.'
+  kind: warband
+  engine_option: Black Hunger
+  source_refs: []
+- id: mechanic.body-slam
+  name: Body Slam
+  category: special
+  summary: Replaces charge attacks with one +1 Strength, +1 To Hit attack that critically wounds on 5+ and ignores weapon and skill modifiers.
+  kind: warband
+  engine_option: Body Slam
+  source_refs: []
+- id: mechanic.bull-charge
+  name: Bull Charge
+  category: special
+  summary: Replaces charge attacks with one +1 To Hit attempt that knocks the target down.
+  kind: warband
+  engine_option: Bull Charge
+  source_refs: []
+- id: mechanic.force-of-will
+  name: Force of Will
+  category: special
+  summary: May survive the first Out of Action result on a Toughness test, with cumulative follow-up tests.
+  kind: warband
+  engine_option: Force of Will
+  source_refs: []
+- id: mechanic.unpredictable-attack
+  name: Unpredictable
+  category: special
+  summary: One attack per combat phase cannot be parried.
+  kind: warband
+  engine_option: Unpredictable
+  source_refs: []
+- id: mechanic.strike-first-vs-skinks-first-round
+  name: Skink Hunter (first round)
+  category: special
+  summary: Always strikes first in the first combat round against Skink profiles.
+  kind: warband
+  engine_option: Strike First vs Skinks (First Round)
+  source_refs: []
+- id: mechanic.strike-first-vs-skinks-always
+  name: Lizard Hunter
+  category: special
+  summary: Always strikes first against Skink profiles in every combat round.
+  kind: warband
+  engine_option: Strike First vs Skinks (Always)
+  source_refs: []
+- id: skill.monster-slayer-effective-strength-armour
+  name: Monster Slayer (effective Strength armour modifier)
+  category: special
+  summary: Uses the effective Strength needed to wound on 4+ when calculating the armour-save modifier.
+  kind: warband
+  engine_option: Monster Slayer Effective Strength
+  source_refs: []
+- id: skill.regeneration-blocked-by-blessed
+  name: Regeneration blocked by blessed attacks
+  category: special
+  summary: Blessed attacks prevent the warrior's Regeneration roll.
+  kind: warband
+  engine_option: Regeneration Blocked by Blessed Attacks
+  source_refs: []
+- id: skill.regeneration-5-plus
+  name: Regeneration (5+)
+  category: armour
+  summary: Ignores wounds on 5+, except wounds caused by fire.
+  kind: warband
+  engine_option: Regeneration 5+
+  source_refs: []
+- id: mechanic.anvil-head
+  name: Anvil Head
+  category: special
+  summary: Replaces charge attacks with one attack that inflicts D3 separately resolved wounds on a hit.
+  kind: warband
+  engine_option: Anvil Head
+  source_refs: []
+- id: mechanic.death-blow
+  name: Death Blow
+  category: special
+  summary: Replaces two or more profile attacks with one attack at +1 To Hit, +1 To Wound and +1 Injury.
+  kind: warband
+  engine_option: Death Blow
+  source_refs: []
+- id: mechanic.disability
+  name: Disability
+  category: special
+  summary: Resolves the Cripple group's permanent D6 disability in each independent simulation row.
+  kind: profile
+  engine_option: Disability
+  source_refs: []
+- id: mechanic.energy-focus
+  name: Energy Focus
+  category: special
+  summary: 'Simulation convention: while unarmed, sacrifices all but one Attack and gains the same amount of Strength.'
+  kind: warband
+  engine_option: Energy Focus
+  source_refs: []
+- id: mechanic.mark-of-the-old-ones
+  name: Mark of the Old Ones
+  category: special
+  summary: Converts the first failed combat roll into a successful result once per duel.
+  kind: warband
+  engine_option: Mark of the Old Ones
+  source_refs: []
+- id: mechanic.netter
+  name: Netter
+  category: special
+  summary: Resolves a net charge before the first close-combat phase and knocks down a target that fails to escape.
+  kind: warband
+  engine_option: Netter
+  source_refs: []
+- id: mechanic.spawn-special-attacks
+  name: Spawn Special Attacks
+  category: attacks
+  summary: Rolls D6+1 Attacks again at the start of every close-combat phase.
+  kind: profile
+  engine_option: Spawn Special Attacks
+  source_refs: []
+- id: mechanic.amazon-isolationists
+  name: Amazon Isolationists
+  category: attacks
+  summary: Re-rolls failed attacks in the first combat round against Lizardmen and Norse.
+  kind: warband
+  engine_option: Amazon Isolationists
+  source_refs: []
+- id: mechanic.spider-infested
+  name: Spider Infested
+  category: initiative
+  summary: 'Simulation convention: applies a cumulative Initiative penalty when an enemy misses or has an attack parried, to a minimum of 1 for the duel.'
+  kind: warband
+  engine_option: Spider Infested
+  source_refs: []
+- id: mechanic.untiring
+  name: Untiring
+  category: armour
+  summary: Preserves a 5+ armour save against modifiers and non-magical armour denial.
+  kind: warband
+  engine_option: Untiring
+  source_refs: []
+- id: mechanic.armour-save-bonus
+  name: Armour Save Bonus
+  category: armour
+  summary: Improves the warrior's armour save by one point.
+  kind: warband
+  engine_option: Armour Save Bonus
+  source_refs: []
+- id: mechanic.retain-flail-morning-star-strength-bonus
+  name: Retain Flail and Morning Star Strength Bonus
+  category: strength
+  summary: Retains the first-round Strength bonus of Flails and Morning Stars in later rounds.
+  kind: warband
+  engine_option: Retain Flail and Morning Star Strength Bonus
   source_refs: []

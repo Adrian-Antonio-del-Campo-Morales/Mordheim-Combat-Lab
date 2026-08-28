@@ -112,8 +112,7 @@ profiles:
   - wulfen--fear
   - wulfen--immune-to-psychology
   - wulfen--hardened-hide
-  combat_traits:
-    natural_armour_save: 6
+  combat_traits: {}
 - id: bondsmen
   name: Bondsmen
   type: hero

@@ -91,24 +91,19 @@ rules:
     - instructor
 - id: marksmen--quick-reload
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'YES'
+    implemented: 'YES'
     grant: profile
     effects:
-    - id: unimplemented.gunnery-school-of-nuln.marksmen.quick-reload
-      scope: "YES"
-      binding: null
-      reason: "No executable binding exists for this in-scope rule."
+    - id: compiler.quick-reload
+      scope: 'YES'
+      binding:
+        kind: compiler
+        id: compiler.quick-reload
   name: Quick Reload
-  effect: 'Marksmen trained at the Gunnery School are forced to practice many drills day after
-
-    day, including those that teach them to load their
-
-    weapons for speed under high-pressure conditions.
-
-    Marksmen have the Hunter skill from the Mordheim
-
-    rulebook. A Marksman who becomes a Hero gains no further effect from taking the Hunter skill in addition to this.'
+  effect: Marksmen trained at the Gunnery School are forced to practice many drills day after day, including those that teach
+    them to load their weapons for speed under high-pressure conditions. Marksmen have the Hunter skill from the Mordheim rulebook.
+    A Marksman who becomes a Hero gains no further effect from taking the Hunter skill in addition to this.
   source:
     manual: mordheimer.net
     printed_page: 0
@@ -222,14 +217,15 @@ rules:
     band: true
 - id: band--proud-to-a-fault
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'YES'
+    implemented: 'YES'
     grant: band
     effects:
-    - id: unimplemented.gunnery-school-of-nuln.band.proud-to-a-fault
-      scope: "YES"
-      binding: null
-      reason: "No executable binding exists for this in-scope rule."
+    - id: compiler.proud-to-a-fault
+      scope: 'YES'
+      binding:
+        kind: compiler
+        id: compiler.proud-to-a-fault
   name: Proud To A Fault!
   effect: Members of the Gunnery School warband may never use non-black-powder ranged weapons. This restriction does not apply
     to Hired Swords or Dramatis Personae.

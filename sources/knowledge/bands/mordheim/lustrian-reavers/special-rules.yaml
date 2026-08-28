@@ -373,21 +373,21 @@ rules:
     - trapmaster
 - id: trapmaster--traps
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.lustrian-reavers.trapmaster.traps
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Traps
-  effect: The Trapmaster starts each game with 1 Trap and can buy up to 5 further of the following Traps before the start
-    of the game at the cost of 5 GC each. Each trap is one use only. Traps are used in the Shooting Phase instead of shooting,
-    1 trap at a time, and cannot be used in Melee combat. When you use a trap, put 2 1" diameter Trap counters (one false,
-    one real) anywhere within 3" of the Trapmaster, but at least 3" away from any other models. Any model that moves within
-    2" of the counter must flip it over. If it is a false one, nothing happens. If it is a real one, the model suffers D3
-    S5 Hits immediately. Traps do not cause Criticals. Remove the counters when the trap is sprung.
+  effect: The Trapmaster starts each game with 1 Trap and can buy up to 5 further of the following Traps before the start of
+    the game at the cost of 5 GC each. Each trap is one use only. Traps are used in the Shooting Phase instead of shooting,
+    1 trap at a time, and cannot be used in Melee combat. When you use a trap, put 2 1" diameter Trap counters (one false, one
+    real) anywhere within 3" of the Trapmaster, but at least 3" away from any other models. Any model that moves within 2" of
+    the counter must flip it over. If it is a false one, nothing happens. If it is a real one, the model suffers D3 S5 Hits
+    immediately. Traps do not cause Criticals. Remove the counters when the trap is sprung.
   source:
     manual: mordheimer.net
     printed_page: 0
@@ -464,14 +464,15 @@ rules:
     band: true
 - id: band--promotions
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'YES'
+    implemented: 'YES'
     grant: band
     effects:
-    - id: unimplemented.lustrian-reavers.band.promotions
-      scope: "YES"
-      binding: null
-      reason: "No executable binding exists for this in-scope rule."
+    - id: compiler.promotions
+      scope: 'YES'
+      binding:
+        kind: compiler
+        id: compiler.promotions
   name: Promotions
   effect: When a Hero is lost, a new copy cannot be bought. Instead, a Prospect may be promoted into that Hero position. The
     promoted Prospect becomes that warrior type, gains its special rules and wargear access, chooses any two skill lists available
@@ -495,14 +496,14 @@ rules:
     band: true
 - id: band--hired-swords
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.lustrian-reavers.band.hired-swords
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Hired Swords
   effect: The warband may hire only an Ogre Bodyguard, Dwarf Trollslayer, Tilean Marksman, or Big Game Hunter.
   source:

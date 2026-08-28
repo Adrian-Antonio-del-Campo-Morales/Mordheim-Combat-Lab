@@ -23,6 +23,7 @@ class FighterBuild:
     main_material_id: str = "material.normal"; off_material_id: str = "material.normal"
     skill_ids: tuple[str, ...] = (); preparation_ids: tuple[str, ...] = ()
     special_rule_ids: tuple[str, ...] = ()
+    variant_ids: tuple[str, ...] = ()
     extra_hand_id: str | None = None
     main_poison_id: str | None = None; off_poison_id: str | None = None
     trait_overrides: Mapping[str, object] = field(default_factory=dict)
@@ -55,6 +56,14 @@ class EffectSet:
     poison_immunity: bool = False; frenzy: bool = False
     damage: int = 1; regeneration_save: int = 7; out_of_action_threshold: int = 5
     maximum_wound_target: int = 7
+    armour_save_floor: int = 7
+    armour_cannot_be_ignored: bool = False
+    ward_save_mundane_only: bool = False
+    natural_armour_negated_by_magic: bool = False
+    regeneration_blocked_by_fire: bool = False
+    regeneration_blocked_by_blessed: bool = False
+    ignition_threshold: int = 7
+    caught_fire_threshold: int = 7
 
 @dataclass(frozen=True, slots=True)
 class CompiledFighter:
@@ -67,6 +76,9 @@ class CompiledFighter:
     random_characteristics: tuple[tuple[str,int,int,int], ...] = ()
     natural_armour_worst_save: int = 7
     extra_attacks: tuple[EffectSet, ...] = ()
+    missile_weapon_limit: int = 2
+    ballistic_skill: int = 0
+    construction_tags: tuple[str, ...] = ()
 
 @dataclass(frozen=True, slots=True)
 class DuelRequest:

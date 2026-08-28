@@ -3,14 +3,14 @@ band_id: marauders-of-chaos
 rules:
 - id: marauder-chieftain--leader
   runtime:
-    scope: "LATER"
-    implemented: "NO"
+    scope: LATER
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.marauders-of-chaos.marauder-chieftain.leader
-      scope: "LATER"
+      scope: LATER
       binding: null
-      reason: "Deferred subsystem: psicología."
+      reason: 'Deferred subsystem: psicología.'
   name: Leader
   effect: Any Warrior within 6" of the Marauder Chieftain may use his Leadership instead of his own when taking Ld tests.
   source:
@@ -29,14 +29,14 @@ rules:
     - marauder-chieftain
 - id: seer--wizard
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.marauders-of-chaos.seer.wizard
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: magia."
+      reason: 'Out of scope: magia.'
   name: Wizard
   effect: A Seer is a Wizard and may use Magic as detailed in the Magic section.
   source:
@@ -55,14 +55,14 @@ rules:
     - seer
 - id: seer--mark-of-chaos
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.marauders-of-chaos.seer.mark-of-chaos
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: magia."
+      reason: 'Out of scope: magia.'
   name: Mark of Chaos
   effect: The Seer gets a Mark of Chaos when hired to determine the kind of magic he uses. He can have the Mark of the Serpent,
     the Mark of the Crow, the Mark of the Eagle, the Mark of Arkhar or the Mark of Chaos Undivided.
@@ -83,12 +83,12 @@ rules:
     - seer
 - id: warhounds-of-chaos--natural-weapons
   runtime:
-    scope: "YES"
-    implemented: "YES"
+    scope: 'YES'
+    implemented: 'YES'
     grant: profile
     effects:
     - id: profile.natural-attacks
-      scope: "YES"
+      scope: 'YES'
       binding:
         kind: profile
         id: profile.natural-attacks
@@ -110,14 +110,14 @@ rules:
     - warhounds-of-chaos
 - id: warhounds-of-chaos--animals
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.marauders-of-chaos.warhounds-of-chaos.animals
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: campaña."
+      reason: 'Out of scope: campaña.'
   name: Animals
   effect: 'Warhounds are animals and thus do not gain
 
@@ -140,17 +140,21 @@ rules:
     - warhounds-of-chaos
 - id: condemned--inconsistency
   runtime:
-    scope: "YES"
-    implemented: "YES"
+    scope: 'YES'
+    implemented: 'YES'
     grant: profile
     effects:
     - id: profile.random-characteristics
-      scope: "YES"
+      scope: 'YES'
       binding:
         kind: profile
         id: profile.random-characteristics
         parameters:
-          characteristics: [WS, S, T, A]
+          characteristics:
+          - WS
+          - S
+          - T
+          - A
   name: Inconsistency
   effect: WS, S, T and A are variable. Whenever one of these characteristics is needed, roll its indicated die once for that
     turn.
@@ -171,14 +175,14 @@ rules:
     - condemned
 - id: condemned--fear
   runtime:
-    scope: "LATER"
-    implemented: "NO"
+    scope: LATER
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.marauders-of-chaos.condemned.fear
-      scope: "LATER"
+      scope: LATER
       binding: null
-      reason: "Deferred subsystem: psicología."
+      reason: 'Deferred subsystem: psicología.'
   name: Fear
   effect: The Condemned causes Fear.
   source:
@@ -197,14 +201,14 @@ rules:
     - condemned
 - id: condemned--variable-experience
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.marauders-of-chaos.condemned.variable-experience
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Experience
   effect: When an advance would increase a variable characteristic, roll its die instead. The player may permanently set the
     characteristic to the result; otherwise it remains variable and the advance is lost. These fixed values may exceed normal
@@ -227,14 +231,14 @@ rules:
     - condemned
 - id: condemned--fate
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.marauders-of-chaos.condemned.fate
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Fate
   effect: Once all variable characteristics are permanently fixed, the Condemned may use equipment normally. If he reaches
     90 Experience while any variable characteristic remains, he becomes a Spawn of Chaos. If the warband already contains
@@ -257,14 +261,15 @@ rules:
     - condemned
 - id: spawn-of-chaos--special-attacks
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'YES'
+    implemented: 'YES'
     grant: profile
     effects:
-    - id: unimplemented.marauders-of-chaos.spawn-of-chaos.special-attacks
-      scope: "YES"
-      binding: null
-      reason: "No executable binding exists for this in-scope rule."
+    - id: mechanic.spawn-special-attacks
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: mechanic.spawn-special-attacks
   name: Special Attacks
   effect: Roll at the beginning of each Close Combat phase to determine the Spawn's Attacks for that phase.
   source:
@@ -283,14 +288,14 @@ rules:
     - spawn-of-chaos
 - id: spawn-of-chaos--fear
   runtime:
-    scope: "LATER"
-    implemented: "NO"
+    scope: LATER
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.marauders-of-chaos.spawn-of-chaos.fear
-      scope: "LATER"
+      scope: LATER
       binding: null
-      reason: "Deferred subsystem: psicología."
+      reason: 'Deferred subsystem: psicología.'
   name: Fear
   effect: A Spawn of Chaos causes Fear.
   source:
@@ -309,14 +314,14 @@ rules:
     - spawn-of-chaos
 - id: spawn-of-chaos--special-movement
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.marauders-of-chaos.spawn-of-chaos.special-movement
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: movimiento."
+      reason: 'Out of scope: movimiento.'
   name: Special Movement
   effect: The Spawn moves 2D6" straight ahead in each Movement phase after choosing its facing. It does not double movement
     when charging; if this move contacts a model, it counts as charging and engages it in close combat.
@@ -337,14 +342,14 @@ rules:
     - spawn-of-chaos
 - id: spawn-of-chaos--psychology
   runtime:
-    scope: "LATER"
-    implemented: "NO"
+    scope: LATER
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.marauders-of-chaos.spawn-of-chaos.psychology
-      scope: "LATER"
+      scope: LATER
       binding: null
-      reason: "Deferred subsystem: psicología."
+      reason: 'Deferred subsystem: psicología.'
   name: Psychology
   effect: The Spawn automatically passes all Leadership-based tests it is required to take.
   source:
@@ -363,14 +368,14 @@ rules:
     - spawn-of-chaos
 - id: spawn-of-chaos--no-brain
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.marauders-of-chaos.spawn-of-chaos.no-brain
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: campaña."
+      reason: 'Out of scope: campaña.'
   name: No Brain
   effect: The Spawn never gains Experience.
   source:
@@ -389,14 +394,14 @@ rules:
     - spawn-of-chaos
 - id: spawn-of-chaos--large
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.marauders-of-chaos.spawn-of-chaos.large
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: disparo."
+      reason: 'Out of scope: disparo.'
   name: Large
   effect: The Spawn counts as a Large Target.
   source:
@@ -415,14 +420,14 @@ rules:
     - spawn-of-chaos
 - id: band--eye-of-the-gods
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.marauders-of-chaos.band.eye-of-the-gods
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: campaña."
+      reason: 'Out of scope: campaña.'
   name: Eye of the Gods
   effect: After each battle, if the warband leader took part, roll 2D6. If the battle was lost, add +1 for each Hero taken
     Out of Action; on 12+ the leader becomes a Spawn of Chaos and loses all previous experience, skills, injuries and equipment.
@@ -448,14 +453,14 @@ rules:
     band: true
 - id: band--hired-swords
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.marauders-of-chaos.band.hired-swords
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Hired Swords
   effect: The warband may hire Pit Fighters, Ogres, Norse Shamans and Imperial Assassins, plus entries that explicitly allow
     Marauders of Chaos. Witches and Warlocks may be hired unless the warband contains a warrior with the Mark of Arkhar.
@@ -475,14 +480,15 @@ rules:
     band: true
 - id: band--tribe-choice
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'YES'
+    implemented: 'YES'
     grant: band
     effects:
-    - id: unimplemented.marauders-of-chaos.band.tribe-choice
-      scope: "YES"
-      binding: null
-      reason: "No executable binding exists for this in-scope rule."
+    - id: mechanic.follow-the-darkest-tribe
+      scope: 'YES'
+      binding:
+        kind: compiler
+        id: compiler.follow-the-darkest-tribe
   name: Follow the Darkest Tribe
   effect: 'When the warband is created, choose one tribe: Norse, Kurgan or Hung. Apply only the special rules belonging to
     the chosen tribe.'
@@ -502,14 +508,14 @@ rules:
     band: true
 - id: band--norse-reavers
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.marauders-of-chaos.band.norse-reavers
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: campaña."
+      reason: 'Out of scope: campaña.'
   name: Norse — Reavers
   effect: Norse warbands gain +1 on rarity rolls during the post-game sequence.
   source:
@@ -527,14 +533,14 @@ rules:
     band: true
 - id: band--norse-pantheon
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.marauders-of-chaos.band.norse-pantheon
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: campaña."
+      reason: 'Out of scope: campaña.'
   name: Norse — Pantheon
   effect: For a Norse warband, Eye of the Gods normally triggers on 13+ instead of 12+. If the leader has Tattooed Body, the
     threshold is 11+ instead of 10+.
@@ -554,14 +560,14 @@ rules:
     band: true
 - id: band--kurgan-pedigree
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.marauders-of-chaos.band.kurgan-pedigree
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: campaña."
+      reason: 'Out of scope: campaña.'
   name: Kurgan — Pedigree
   effect: A Kurgan warband may include any number of Warhounds of Chaos instead of being limited to five.
   source:
@@ -579,14 +585,14 @@ rules:
     band: true
 - id: band--kurgan-difficult-customers
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.marauders-of-chaos.band.kurgan-difficult-customers
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: campaña."
+      reason: 'Out of scope: campaña.'
   name: Kurgan — Difficult Customers
   effect: A Kurgan warband suffers -1 on rolls to find Rare items, except Great Axes and Barbed Whips.
   source:
@@ -604,14 +610,14 @@ rules:
     band: true
 - id: band--hung-disloyalty
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.marauders-of-chaos.band.hung-disloyalty
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: campaña."
+      reason: 'Out of scope: campaña.'
   name: Hung — Disloyalty
   effect: A Hung warband has a maximum of 12 warriors instead of 15.
   source:
@@ -629,14 +635,14 @@ rules:
     band: true
 - id: band--hung-affinity-with-horses
   runtime:
-    scope: "LATER"
-    implemented: "NO"
+    scope: LATER
+    implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.marauders-of-chaos.band.hung-affinity-with-horses
-      scope: "LATER"
+      scope: LATER
       binding: null
-      reason: "Deferred subsystem: monturas."
+      reason: 'Deferred subsystem: monturas.'
   name: Hung — Affinity with Horses
   effect: All Heroes, including Henchmen promoted to Heroes, automatically have the Ride Warhorse skill. The normal Border
     Town Burning mount-count restriction does not apply to the warband.
@@ -656,14 +662,14 @@ rules:
     band: true
 - id: band--marauder-maximum-characteristics
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.marauders-of-chaos.band.marauder-maximum-characteristics
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Marauder Maximum Characteristics
   effect: Marauders of Chaos use the Marauder of Chaos maximum characteristic profile. A Hero with Chosen of Chaos instead
     uses the Warriors of Chaos maximum characteristic profile.
@@ -683,14 +689,14 @@ rules:
     band: true
 - id: band--mark-of-chaos-undivided
   runtime:
-    scope: "LATER"
-    implemented: "NO"
+    scope: LATER
+    implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.marauders-of-chaos.band.mark-of-chaos-undivided
-      scope: "LATER"
+      scope: LATER
       binding: null
-      reason: "Deferred subsystem: psicología."
+      reason: 'Deferred subsystem: psicología.'
   name: Mark of Chaos Undivided
   effect: A marked leader allows all warband members within the Leader radius to re-roll failed Leadership tests. If the Seer
     has this mark, the warband may include 0-3 Gors counting toward the normal warband maximum; The Lad's Got Talent results
@@ -712,14 +718,14 @@ rules:
     band: true
 - id: band--mark-of-tchar
   runtime:
-    scope: "NO"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.marauders-of-chaos.band.mark-of-tchar
-      scope: "NO"
+      scope: 'NO'
       binding: null
-      reason: "Out of scope: magia."
+      reason: 'Out of scope: magia.'
   name: Mark of Tchar the Eagle
   effect: This Mark changes the Hero or Seer's magic access. The spell list and spell effects are intentionally not modelled
     in this file.
@@ -739,14 +745,14 @@ rules:
     band: true
 - id: band--mark-of-arkhar
   runtime:
-    scope: "LATER"
-    implemented: "NO"
+    scope: LATER
+    implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.marauders-of-chaos.band.mark-of-arkhar
-      scope: "LATER"
+      scope: LATER
       binding: null
-      reason: "Deferred subsystem: psicología."
+      reason: 'Deferred subsystem: psicología.'
   name: Mark of Arkhar the Dog
   effect: 'A marked leader is subject to Frenzy and spells targeting him fail on 4+. A Seer with this mark becomes a Bloodfather:
     he cannot cast spells; whenever he takes an enemy Out of Action in hand-to-hand combat, he may pass a Leadership test
@@ -770,14 +776,17 @@ rules:
     band: true
 - id: band--mark-of-onogal
   runtime:
-    scope: "YES"
-    implemented: "NO"
-    grant: band
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
     effects:
-    - id: unimplemented.marauders-of-chaos.band.mark-of-onogal
-      scope: "YES"
-      binding: null
-      reason: "No executable binding exists for this in-scope rule."
+    - id: trait.mark-of-onogal-the-crow
+      scope: 'YES'
+      binding:
+        kind: trait
+        id: trait.mark-of-onogal-the-crow
+        parameters:
+          value: true
   name: Mark of Onogal the Crow
   effect: A marked leader gains +1 Toughness, may re-roll once on the Serious Injuries table, and is immune to poison. A Seer
     with this mark is immune to poison. Ritual details are intentionally not modelled here.
@@ -795,16 +804,19 @@ rules:
     es: null
   applies_to:
     band: true
+  eligibility:
+  - marauder-chieftain
+  - seer
 - id: band--mark-of-shornaal
   runtime:
-    scope: "LATER"
-    implemented: "NO"
+    scope: LATER
+    implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.marauders-of-chaos.band.mark-of-shornaal
-      scope: "LATER"
+      scope: LATER
       binding: null
-      reason: "Deferred subsystem: psicología."
+      reason: 'Deferred subsystem: psicología.'
   name: Mark of Shornaal the Serpent
   effect: Enemy models that are not Immune to Psychology cannot attack a marked leader in close combat unless they pass a
     Leadership test on 3D6, discarding the lowest die. On failure, they are hit automatically in close combat. Once passed,
@@ -828,22 +840,17 @@ rules:
     band: true
 - id: band--marauder-special-skills-chosen-of-chaos
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: selectable
     effects:
     - id: unimplemented.marauders-of-chaos.band.marauder-special-skills-chosen-of-chaos
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Chosen of Chaos
-  effect: 'The Hero has been found worthy of his god’s service
-
-    and entered the rank of a Chaos Warrior. He uses the
-
-    maximum profile for Warriors of Chaos and the Hero
-
-    equipment list (if he does not already).'
+  effect: The Hero has been found worthy of his god’s service and entered the rank of a Chaos Warrior. He uses the maximum
+    profile for Warriors of Chaos and the Hero equipment list (if he does not already).
   source:
     manual: mordheimer.net
     printed_page: 0
@@ -865,28 +872,18 @@ rules:
     band: true
 - id: band--marauder-special-skills-tattooed-body
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: selectable
     effects:
     - id: unimplemented.marauders-of-chaos.band.marauder-special-skills-tattooed-body
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Tattooed Body
-  effect: 'Only the warband''s leader may have this skill. The
-
-    Hero''s body is covered with unholy Chaos signs to
-
-    attract his patron''s attention. The Eye of the Gods
-
-    special rule''s effect (of becoming a Chaos Spawn or
-
-    receiving a Mark) happens on a result of 10+ instead
-
-    of 12+ only. Note that for the less favoured Norse
-
-    leaders this is 11+.'
+  effect: Only the warband's leader may have this skill. The Hero's body is covered with unholy Chaos signs to attract his
+    patron's attention. The Eye of the Gods special rule's effect (of becoming a Chaos Spawn or receiving a Mark) happens
+    on a result of 10+ instead of 12+ only. Note that for the less favoured Norse leaders this is 11+.
   source:
     manual: mordheimer.net
     printed_page: 0
@@ -914,22 +911,17 @@ rules:
     band: true
 - id: band--marauder-special-skills-sweeping-blow
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: selectable
     effects:
     - id: unimplemented.marauders-of-chaos.band.marauder-special-skills-sweeping-blow
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Sweeping Blow
-  effect: 'Whenever the Hero takes an enemy model out of
-
-    action using a double-handed weapon he may
-
-    immediately make an additional attack against another
-
-    model in base contact. Requires the Strongman skill.'
+  effect: Whenever the Hero takes an enemy model out of action using a double-handed weapon he may immediately make an additional
+    attack against another model in base contact. Requires the Strongman skill.
   source:
     manual: mordheimer.net
     printed_page: 0
@@ -951,12 +943,12 @@ rules:
     band: true
 - id: band--marauder-special-skills-mutant
   runtime:
-    scope: "YES"
-    implemented: "YES"
+    scope: 'YES'
+    implemented: 'YES'
     grant: selectable
     effects:
     - id: special-rule.band--marauder-special-skills-mutant
-      scope: "YES"
+      scope: 'YES'
       binding:
         kind: compiler
         id: special-rule.band--marauder-special-skills-mutant
@@ -985,14 +977,14 @@ rules:
     band: true
 - id: band--marauder-special-skills-heart-of-the-warrior
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: LATER
+    implemented: 'NO'
     grant: selectable
     effects:
     - id: unimplemented.marauders-of-chaos.band.marauder-special-skills-heart-of-the-warrior
-      scope: "YES"
+      scope: LATER
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Deferred subsystem: psychology or mounts.'
   name: Heart of the Warrior
   effect: Only the warband's leader may have this skill. He may re-roll any failed Rout test and is immune to fear and all
     alone tests.

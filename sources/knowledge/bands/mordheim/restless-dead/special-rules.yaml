@@ -169,14 +169,14 @@ rules:
     profile_ids:
     - liche
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.restless-dead.liche.eternal
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: liche--feed-upon-magic
   name: Feed Upon Magic
   effect: 'A Liche can perform spells that, with the consumption of D3 Treasures, can give the
@@ -241,13 +241,14 @@ rules:
     - liche
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: profile
     effects:
-    - id: unimplemented.restless-dead.liche.warrior-wizard
+    - id: compiler.warrior-wizard
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: compiler
+        id: compiler.warrior-wizard
 - id: liche--advancement
   name: Advancement
   effect: 'If a Liche gets an advance roll of +1 Wound, they may instead pick a new skill from their
@@ -405,13 +406,16 @@ rules:
     - grave-guards
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: profile
     effects:
-    - id: unimplemented.restless-dead.grave-guards.wight-blades
+    - id: trait.wight-blades
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: trait
+        id: trait.wight-blades
+        parameters:
+          value: true
 - id: grave-guards--cause-fear
   name: Cause Fear
   effect: Grave Guards are terrifying undead creatures and so cause fear.
@@ -1046,14 +1050,14 @@ rules:
     profile_ids:
     - wights
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.restless-dead.wights.experience
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: scarecrows--cause-fear
   name: Cause Fear
   effect: 'The sight of a tall, lanky and silent scarecrow moving is highly unnatural and so causes
@@ -1235,6 +1239,13 @@ rules:
         id: trait.flammable
         parameters:
           value: true
+    - id: trait.caught-fire-threshold
+      scope: 'YES'
+      binding:
+        kind: trait
+        id: trait.caught-fire-threshold
+        parameters:
+          value: 3
   name: Flammable
   effect: 'The scarecrow is primarily ratty cloth, straw and preserved body parts so as a result they
 
@@ -1393,14 +1404,14 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.restless-dead.band.restless-dead-maximum-characteristics
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--restless-dead-special-skills-corpse-bomb
   name: Corpse Bomb
   effect: 'Special magics and rituals can cause a Zombie to
@@ -1461,14 +1472,14 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: selectable
     effects:
     - id: unimplemented.restless-dead.band.restless-dead-special-skills-corpse-bomb
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--restless-dead-special-skills-deathspeaker
   name: Deathspeaker
   effect: 'At the start of the battle, the undead player may

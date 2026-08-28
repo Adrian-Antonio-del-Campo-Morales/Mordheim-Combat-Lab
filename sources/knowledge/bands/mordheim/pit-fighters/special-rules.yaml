@@ -54,13 +54,16 @@ rules:
     - pit-king
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: profile
     effects:
-    - id: unimplemented.pit-fighters.pit-king.pit-fighter
+    - id: trait.pit-fighter
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: trait
+        id: trait.pit-fighter
+        parameters:
+          value: true
 - id: dwarf-troll-slayer--pit-fighter
   name: Pit Fighter
   effect: This warrior has the warband's Pit Fighter skill.
@@ -80,13 +83,16 @@ rules:
     - dwarf-troll-slayer
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: profile
     effects:
-    - id: unimplemented.pit-fighters.dwarf-troll-slayer.pit-fighter
+    - id: trait.pit-fighter
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: trait
+        id: trait.pit-fighter
+        parameters:
+          value: true
 - id: dwarf-troll-slayer--hard-to-kill
   runtime:
     scope: 'YES'
@@ -251,14 +257,14 @@ rules:
     profile_ids:
     - dwarf-troll-slayer
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.pit-fighters.dwarf-troll-slayer.grudgebearers
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: dwarf-troll-slayer--death-wish
   name: Death Wish
   effect: 'Troll Slayers seek an honourable
@@ -312,13 +318,16 @@ rules:
     - pit-veterans
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: profile
     effects:
-    - id: unimplemented.pit-fighters.pit-veterans.pit-fighter
+    - id: trait.pit-fighter
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: trait
+        id: trait.pit-fighter
+        parameters:
+          value: true
 - id: pit-fighters--pit-fighter
   name: Pit Fighter
   effect: This warrior has the warband's Pit Fighter skill.
@@ -338,13 +347,16 @@ rules:
     - pit-fighters
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: profile
     effects:
-    - id: unimplemented.pit-fighters.pit-fighters.pit-fighter
+    - id: trait.pit-fighter
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: trait
+        id: trait.pit-fighter
+        parameters:
+          value: true
 - id: pursuers--pit-fighter
   name: Pit Fighter
   effect: This warrior has the warband's Pit Fighter skill.
@@ -364,13 +376,16 @@ rules:
     - pursuers
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: profile
     effects:
-    - id: unimplemented.pit-fighters.pursuers.pit-fighter
+    - id: trait.pit-fighter
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: trait
+        id: trait.pit-fighter
+        parameters:
+          value: true
 - id: pursuers--evade
   name: Evade
   effect: When an enemy charges a Pursuer, the Pursuer may attempt to evade. On a successful Initiative test the charge counts
@@ -391,14 +406,14 @@ rules:
     profile_ids:
     - pursuers
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.pit-fighters.pursuers.evade
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: ogre-pit-fighter--pit-fighter
   name: Pit Fighter
   effect: This warrior has the warband's Pit Fighter skill.
@@ -418,13 +433,16 @@ rules:
     - ogre-pit-fighter
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: profile
     effects:
-    - id: unimplemented.pit-fighters.ogre-pit-fighter.pit-fighter
+    - id: trait.pit-fighter
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: trait
+        id: trait.pit-fighter
+        parameters:
+          value: true
 - id: ogre-pit-fighter--fear
   name: Fear
   effect: 'Ogre Pit Fighters are large, threatening
@@ -514,13 +532,19 @@ rules:
     - ogre-pit-fighter
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: profile
     effects:
-    - id: unimplemented.pit-fighters.ogre-pit-fighter.skills
+    - id: compiler.promoted-hero-skill-access
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: compiler
+        id: compiler.promoted-hero-skill-access
+        parameters:
+          allowed_skill_lists:
+          - combat
+          - strength
+          - special
 - id: ogre-pit-fighter--slow-witted
   name: Slow Witted
   effect: 'Although Ogres are capable of
@@ -610,14 +634,14 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: band
     effects:
     - id: unimplemented.pit-fighters.band.hired-swords
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--fighting-styles
   name: Weapons & Armour — Fighting Styles
   effect: Pit Kings, Veterans, Pit Fighters and Pursuers must select one of the fighting styles in their appropriate equipment
@@ -644,13 +668,14 @@ rules:
     band: true
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: band
     effects:
-    - id: unimplemented.pit-fighters.band.fighting-styles
+    - id: compiler.pit-fighter-fighting-styles
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: compiler
+        id: compiler.pit-fighter-fighting-styles
 - id: band--free-the-slaves
   name: Free the Slaves!
   effect: Pit Fighters hate slavers and will never sell captured opponents to slavers.
@@ -715,11 +740,11 @@ rules:
     implemented: 'YES'
     grant: selectable
     effects:
-    - id: special-rule.band--pit-fighter-skill-bulging-biceps
+    - id: skill.mighty-biceps
       scope: 'YES'
       binding:
-        kind: compiler
-        id: special-rule.band--pit-fighter-skill-bulging-biceps
+        kind: mechanic
+        id: skill.mighty-biceps
   name: Bulging Biceps
   effect: The warrior ignores the penalty from the Heavy weapon special rule; a weapon's Strength bonus therefore applies
     in every round of close combat.
@@ -759,13 +784,14 @@ rules:
     band: true
   runtime:
     scope: 'YES'
-    implemented: 'NO'
-    grant: band
+    implemented: 'YES'
+    grant: selectable
     effects:
-    - id: unimplemented.pit-fighters.band.pit-fighter-skill-force-of-will
+    - id: mechanic.force-of-will
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: mechanic
+        id: mechanic.force-of-will
 - id: band--pit-fighter-skill-arms-master
   name: Arms Master
   effect: The warrior ignores all 'difficult to use' weapon restrictions, allowing combinations that would normally be prohibited.
@@ -784,13 +810,14 @@ rules:
     band: true
   runtime:
     scope: 'YES'
-    implemented: 'NO'
-    grant: band
+    implemented: 'YES'
+    grant: selectable
     effects:
-    - id: unimplemented.pit-fighters.band.pit-fighter-skill-arms-master
+    - id: compiler.ignore-difficult-to-use-restrictions
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: compiler
+        id: compiler.ignore-difficult-to-use-restrictions
 - id: band--pit-fighter-skill-body-slam
   name: Body Slam
   effect: Instead of a normal charge attack sequence, the warrior may make one Body Slam attack at +1 Strength and +1 to hit,
@@ -811,13 +838,14 @@ rules:
     band: true
   runtime:
     scope: 'YES'
-    implemented: 'NO'
-    grant: band
+    implemented: 'YES'
+    grant: selectable
     effects:
-    - id: unimplemented.pit-fighters.band.pit-fighter-skill-body-slam
+    - id: mechanic.body-slam
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: mechanic
+        id: mechanic.body-slam
 - id: band--pit-fighter-skill-grizzled-veteran
   name: Grizzled Veteran
   effect: The warrior is immune to all psychology.
@@ -907,11 +935,16 @@ rules:
     implemented: 'YES'
     grant: selectable
     effects:
-    - id: special-rule.band--troll-slayer-special-skills-berserker
+    - id: skill.berserker
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.berserker
+    - id: compiler.berserker-incompatible-with-ferocious-charge
       scope: 'YES'
       binding:
         kind: compiler
-        id: special-rule.band--troll-slayer-special-skills-berserker
+        id: compiler.berserker-incompatible-with-ferocious-charge
   name: Berserker
   effect: The Slayer may add +1 to his close combat to hit rolls during the turn which he charges (may not be used with Ferocious
     Charge).

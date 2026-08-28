@@ -472,14 +472,14 @@ rules:
     profile_ids:
     - jackals
   runtime:
-    scope: 'YES'
+    scope: 'NO'
     implemented: 'NO'
     grant: profile
     effects:
     - id: unimplemented.khemri-lahmian-brotherhood.jackals.pack
-      scope: 'YES'
+      scope: 'NO'
       binding: null
-      reason: No executable binding exists for this in-scope rule.
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: jackals--animal
   name: Animal
   effect: Jackals are animals and never gain Experience.
@@ -528,13 +528,14 @@ rules:
     band: true
   runtime:
     scope: 'YES'
-    implemented: 'NO'
+    implemented: 'YES'
     grant: band
     effects:
-    - id: unimplemented.khemri-lahmian-brotherhood.band.background-selection
+    - id: compiler.foreign-or-native-background
       scope: 'YES'
-      binding: null
-      reason: No executable binding exists for this in-scope rule.
+      binding:
+        kind: compiler
+        id: compiler.foreign-or-native-background
 - id: band--cause-fear
   name: Cause Fear
   effect: Warriors with the Undead special rule cause Fear.

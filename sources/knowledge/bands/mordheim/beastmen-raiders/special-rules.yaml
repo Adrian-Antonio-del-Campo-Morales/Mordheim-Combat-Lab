@@ -465,13 +465,23 @@ rules:
 - id: band--beastmen-special-skills-shaggy-hide
   runtime:
     scope: "YES"
-    implemented: "NO"
+    implemented: "YES"
     grant: selectable
     effects:
-    - id: unimplemented.beastmen-raiders.band.beastmen-special-skills-shaggy-hide
+    - id: trait.natural-armour-save
       scope: "YES"
-      binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      binding:
+        kind: trait
+        id: trait.natural-armour-save
+        parameters:
+          value: 6
+    - id: trait.natural-armour-stacks
+      scope: "YES"
+      binding:
+        kind: trait
+        id: trait.natural-armour-stacks
+        parameters:
+          value: true
   name: Shaggy Hide
   effect: 'The Beastman’s massively shaggy hide acts as armour, deflecting sword strokes and
 
@@ -578,14 +588,14 @@ rules:
     band: true
 - id: band--beastmen-special-skills-bellowing-roar
   runtime:
-    scope: "YES"
-    implemented: "NO"
+    scope: 'NO'
+    implemented: 'NO'
     grant: selectable
     effects:
     - id: unimplemented.beastmen-raiders.band.beastmen-special-skills-bellowing-roar
-      scope: "YES"
+      scope: 'NO'
       binding: null
-      reason: "No executable binding exists for this in-scope rule."
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Bellowing Roar
   effect: Only the Beastmen Chief may have this skill. He may re-roll any failed Rout tests.
   source:
