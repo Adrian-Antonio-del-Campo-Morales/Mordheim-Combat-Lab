@@ -1020,6 +1020,7 @@ rules:
   applies_to:
     band: true
 - id: band--blessings-of-nurgle-stream-of-corruption
+  kind: blessing
   runtime:
     scope: 'NO'
     implemented: 'NO'
@@ -1057,6 +1058,7 @@ rules:
   applies_to:
     band: true
 - id: band--blessings-of-nurgle-nurgles-rot
+  kind: blessing
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -1181,6 +1183,7 @@ rules:
   applies_to:
     band: true
 - id: band--blessings-of-nurgle-bloated-foulness
+  kind: blessing
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -1215,6 +1218,7 @@ rules:
   applies_to:
     band: true
 - id: band--blessings-of-nurgle-mark-of-nurgle
+  kind: blessing
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -1249,6 +1253,7 @@ rules:
   applies_to:
     band: true
 - id: band--blessings-of-nurgle-hideous
+  kind: blessing
   runtime:
     scope: LATER
     implemented: 'NO'

@@ -346,6 +346,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--mage-special-skills-dispel-magic
+  kind: warband_skill
   name: Dispel Magic
   effect: Whenever an opponent successfully casts a spell, this Hero may attempt to dispel it by rolling 2D6 and exceeding
     the opponent's successful casting result. For example, a casting result of 10 requires an 11 or 12 to dispel.
@@ -376,6 +377,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--mage-special-skills-store-spell
+  kind: warband_skill
   name: Store Spell
   effect: Requires a Staff. Before the battle, the Hero may store one chosen spell in the Staff and decide when to use it
     during the game. Resolve the stored spell with the source's additional +3 casting difficulty; if the casting roll is a
@@ -408,6 +410,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--mage-special-skills-mechanic
+  kind: warband_skill
   name: Mechanic
   effect: The Hero may improve Mechanical Beasts by paying 5 gc to increase either WS by +1 or Movement by +1". The maximum
     improvement is +2 WS or +2" Movement respectively, and the whole Mechanical Beast group must be upgraded together.

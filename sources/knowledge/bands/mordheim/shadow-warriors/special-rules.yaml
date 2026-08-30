@@ -220,6 +220,7 @@ rules:
       binding: null
       reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--shadow-warrior-special-skills-infiltration
+  kind: warband_skill
   name: Infiltration
   effect: An Elf with this skill is always placed on the battlefield after the opposing warband and can be placed anywhere
     on the table as long as it is out of sight of the opposing warband and more than 12" away from any enemy model. If both
@@ -249,6 +250,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--shadow-warrior-special-skills-see-in-shadows
+  kind: warband_skill
   name: See in Shadows
   effect: 'The warrior''s senses have become especially
 
@@ -294,6 +296,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--shadow-warrior-special-skills-hide-in-shadows
+  kind: warband_skill
   name: Hide in Shadows
   effect: 'Over time Shadow Warriors have learned how
 
@@ -343,6 +346,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--shadow-warrior-special-skills-sniper
+  kind: warband_skill
   name: Sniper
   effect: Long years of guerrilla warfare against the Dark Elves have taught Shadow Warriors how to strike from the shadows
     without being seen. If Hidden, a warrior with this skill may shoot or cast spells and still remain Hidden. If his target
@@ -374,6 +378,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--shadow-warrior-special-skills-powerful-build
+  kind: warband_skill
   name: Powerful Build
   effect: 'The warrior is strongly built for an Elf, and is
 
@@ -437,6 +442,7 @@ rules:
       binding: null
       reason: 'Out of scope: warband-level roster limit.'
 - id: band--shadow-warrior-special-skills-master-of-runes
+  kind: warband_skill
   name: Master of Runes
   effect: 'The Shadow Weaver has learned to harness
 

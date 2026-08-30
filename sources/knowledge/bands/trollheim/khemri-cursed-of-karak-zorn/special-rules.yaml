@@ -258,10 +258,11 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--hard-to-kill
+  kind: profile_ability
   runtime:
     scope: 'YES'
     implemented: 'YES'
-    grant: selectable
+    grant: band
     effects:
     - id: skill.hard-to-kill
       scope: 'YES'
@@ -406,6 +407,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--karak-zorn-special-skills-magic-resistant
+  kind: warband_skill
   name: Magic Resistant
   effect: Whenever this Hero would be affected by a spell, conjuration, scroll, prayer or similar magical effect, roll D6;
     on 4+ the Hero ignores that effect.
@@ -437,6 +439,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--karak-zorn-special-skills-smith
+  kind: warband_skill
   name: Smith
   effect: After each battle, this Hero may buy one non-Rare weapon at half its normal price. Rare weapons are excluded from
     this skill.
@@ -468,6 +471,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--karak-zorn-special-skills-white-beard
+  kind: warband_skill
   name: White Beard
   effect: Leader only. The warband may re-roll a failed Rout test.
   source:
@@ -494,6 +498,7 @@ rules:
       binding: null
       reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--karak-zorn-special-skills-fearless
+  kind: warband_skill
   name: Fearless
   effect: This Hero is immune to Fear.
   source:
@@ -523,6 +528,7 @@ rules:
       binding: null
       reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--karak-zorn-special-skills-very-tough
+  kind: warband_skill
   runtime:
     scope: 'NO'
     implemented: 'NO'
@@ -554,6 +560,7 @@ rules:
   applies_to:
     band: true
 - id: band--karak-zorn-special-skills-hard-as-steel
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -584,6 +591,7 @@ rules:
   applies_to:
     band: true
 - id: band--troll-slayer-special-skills-ferocious-charge
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -611,6 +619,7 @@ rules:
   applies_to:
     band: true
 - id: band--troll-slayer-special-skills-berserker
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -638,6 +647,7 @@ rules:
   applies_to:
     band: true
 - id: band--troll-slayer-special-skills-monster-slayer
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'

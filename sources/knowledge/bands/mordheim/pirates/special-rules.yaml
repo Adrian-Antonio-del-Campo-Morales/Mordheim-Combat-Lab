@@ -430,6 +430,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--pirate-special-skills-sea-shanty-singer
+  kind: warband_skill
   name: Sea Shanty Singer
   effect: 'The pirate is renowned throughout the seas as
 
@@ -495,6 +496,7 @@ rules:
       binding: null
       reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--pirate-special-skills-sea-legs
+  kind: warband_skill
   name: Sea Legs
   effect: 'Even in the strongest seas, the pirate has
 
@@ -548,6 +550,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--pirate-special-skills-cutlass-master
+  kind: warband_skill
   name: Cutlass Master
   effect: 'These short, single bladed swords are the
 
@@ -617,6 +620,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--pirate-special-skills-booming-voice
+  kind: warband_skill
   name: Booming Voice
   effect: '(Captain only) The Captain has spent many a
 
@@ -684,6 +688,7 @@ rules:
       binding: null
       reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--pirate-special-skills-hardy-constitution
+  kind: warband_skill
   name: Hardy Constitution
   effect: 'Many months at sea, and especially many
 
@@ -738,6 +743,7 @@ rules:
         kind: mechanic
         id: skill.hardy-constitution
 - id: band--pirate-special-skills-swashbuckler
+  kind: warband_skill
   name: Swashbuckler
   effect: 'The pirate cuts a dashing figure in combat,
 

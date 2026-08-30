@@ -172,11 +172,11 @@ rules:
     implemented: 'YES'
     grant: profile
     effects:
-    - id: profile.natural-attacks
+    - id: profile.fist
       scope: 'YES'
       binding:
         kind: profile
-        id: profile.natural-attacks
+        id: profile.fist
   name: Unarmed
   effect: Raging Peasants are treated as fighting unarmed, but without any penalties.
   source:
@@ -445,6 +445,7 @@ rules:
   applies_to:
     band: true
 - id: band--battle-monks-special-skills-energy-focus
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -472,7 +473,10 @@ rules:
     es: null
   applies_to:
     band: true
+  eligibility:
+  - dragon-monks
 - id: band--battle-monks-special-skills-lightning-speed
+  kind: warband_skill
   runtime:
     scope: 'NO'
     implemented: 'NO'
@@ -498,7 +502,10 @@ rules:
     es: null
   applies_to:
     band: true
+  eligibility:
+  - dragon-monks
 - id: band--battle-monks-special-skills-leap-of-faith
+  kind: warband_skill
   runtime:
     scope: 'NO'
     implemented: 'NO'
@@ -527,7 +534,10 @@ rules:
     es: null
   applies_to:
     band: true
+  eligibility:
+  - dragon-monks
 - id: band--battle-monks-special-skills-human-shield
+  kind: warband_skill
   runtime:
     scope: 'NO'
     implemented: 'NO'
@@ -560,7 +570,10 @@ rules:
     es: null
   applies_to:
     band: true
+  eligibility:
+  - dragon-monks
 - id: band--battle-monks-special-skills-warmonger
+  kind: warband_skill
   runtime:
     scope: LATER
     implemented: 'NO'
@@ -589,3 +602,5 @@ rules:
     es: null
   applies_to:
     band: true
+  eligibility:
+  - emissary

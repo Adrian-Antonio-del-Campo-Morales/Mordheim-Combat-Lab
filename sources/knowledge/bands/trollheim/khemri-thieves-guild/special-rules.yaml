@@ -350,6 +350,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--guild-special-skills-pickpocket
+  kind: warband_skill
   name: Pickpocket
   effect: If the Hero moves into contact with an enemy model that is Out of Action but has not yet been removed from the game,
     the Hero may try to steal one of that model's weapons. Roll D6; on 5+ the weapon is stolen. The Hero may take no other
@@ -383,6 +384,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--guild-special-skills-knife-fighting
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -415,6 +417,7 @@ rules:
   applies_to:
     band: true
 - id: band--guild-special-skills-hide-in-shadows
+  kind: warband_skill
   name: Hide in Shadows
   effect: While the Hero is within 1" of a wall or another linear obstacle such as a hedge, fence or well, an enemy model
     must pass an Initiative test before it can charge or shoot at the Hero.
@@ -446,6 +449,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--guild-special-skills-poisoner
+  kind: warband_skill
   name: Poisoner
   effect: Ruffians may not take this skill. At the start of each battle, choose two of the Hero's own weapons; each is coated
     with either Black Venom or Black Lotus, chosen before the battle. No gold is paid for these poisons and they may not be
@@ -479,6 +483,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--guild-special-skills-fast-legs
+  kind: warband_skill
   name: Fast Legs
   effect: Ruffians may not take this skill. The Hero increases its base Movement by +1". This skill may not be used while
     wearing Heavy Armour, carrying a Shield or wearing a Helmet.
@@ -509,6 +514,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--guild-special-skills-infiltration
+  kind: warband_skill
   name: Infiltration
   effect: Ruffians may not take this skill. The Hero deploys after the opposing warband and may be placed anywhere outside
     enemy line of sight and more than 12" from every enemy model. If both players have infiltrating models, roll D6 for each;

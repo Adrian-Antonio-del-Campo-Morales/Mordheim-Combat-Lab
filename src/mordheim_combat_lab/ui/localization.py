@@ -1,4 +1,7 @@
-"""English UI copy and formatting helpers."""
+"""ui.localization: responsabilidad extraída sin alterar las reglas."""
+from __future__ import annotations
+
+
 
 UI_TEXT = {
     "en": {

@@ -375,6 +375,7 @@ rules:
   applies_to:
     band: true
 - id: band--chaos-dwarf-special-skills-extra-tough
+  kind: warband_skill
   runtime:
     scope: 'NO'
     implemented: 'NO'
@@ -414,6 +415,7 @@ rules:
   applies_to:
     band: true
 - id: band--chaos-dwarf-special-skills-chaos-engineer
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -457,6 +459,7 @@ rules:
   applies_to:
     band: true
 - id: band--chaos-dwarf-special-skills-thick-skull
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -503,6 +506,7 @@ rules:
   applies_to:
     band: true
 - id: band--chaos-dwarf-special-skills-resource-hunter
+  kind: warband_skill
   runtime:
     scope: 'NO'
     implemented: 'NO'
@@ -540,6 +544,7 @@ rules:
   applies_to:
     band: true
 - id: band--chaos-dwarf-special-skills-tyrant
+  kind: warband_skill
   runtime:
     scope: LATER
     implemented: 'NO'
@@ -605,6 +610,7 @@ rules:
   applies_to:
     band: true
 - id: band--chaos-dwarf-special-skills-true-grit
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'

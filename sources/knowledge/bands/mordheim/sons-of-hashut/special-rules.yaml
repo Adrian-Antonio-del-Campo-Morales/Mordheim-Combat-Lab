@@ -367,6 +367,7 @@ rules:
       binding: null
       reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--chaos-dwarfs-special-skills-true-grit
+  kind: warband_skill
   name: True Grit
   effect: When rolling on the Injury table for this Hero, 1-3 is Knocked Down, 4-5 is Stunned, and 6 is Out of Action.
   source:
@@ -397,6 +398,7 @@ rules:
         kind: mechanic
         id: skill.tough-as-steel
 - id: band--chaos-dwarfs-special-skills-extra-tough
+  kind: warband_skill
   name: Extra Tough
   effect: After a game in which this Hero was taken Out of Action, the Hero may re-roll the Serious Injury roll once. The
     second result must be accepted.
@@ -428,6 +430,7 @@ rules:
       binding: null
       reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--chaos-dwarfs-special-skills-unlimited-hatred
+  kind: warband_skill
   name: Unlimited Hatred
   effect: The Hero is subject to Hatred against everyone.
   source:
@@ -457,6 +460,7 @@ rules:
       binding: null
       reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--chaos-dwarfs-special-skills-thick-skull
+  kind: warband_skill
   name: Thick Skull
   effect: The Hero has a 3+ save to turn a Stunned result into Knocked Down. If wearing a Helmet this becomes 2+ and replaces
     the Helmet's normal rule.

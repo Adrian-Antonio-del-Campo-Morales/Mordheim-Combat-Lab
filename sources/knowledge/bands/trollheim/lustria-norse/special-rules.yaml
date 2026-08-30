@@ -220,6 +220,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--norse-special-skills-shield-mastery
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -250,6 +251,7 @@ rules:
   applies_to:
     band: true
 - id: band--norse-special-skills-northern-weapons
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -280,6 +282,7 @@ rules:
   applies_to:
     band: true
 - id: band--norse-special-skills-battle-tongue
+  kind: warband_skill
   name: Battle Tongue
   effect: Only the current warband leader may choose this skill. The radius of that warrior's Leader rule increases to 12".
   source:
@@ -309,6 +312,7 @@ rules:
       binding: null
       reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--norse-special-skills-barbarian-courage
+  kind: warband_skill
   name: Barbarian Courage
   effect: The Hero ignores Leadership tests for being All Alone.
   source:
@@ -338,6 +342,7 @@ rules:
       binding: null
       reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--norse-special-skills-crushing-blow
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'

@@ -293,6 +293,7 @@ rules:
   applies_to:
     band: true
 - id: band--dwarf-special-skills-master-of-blades
+  kind: warband_skill
   runtime:
     scope: "YES"
     implemented: "YES"
@@ -392,6 +393,7 @@ rules:
   applies_to:
     band: true
 - id: band--dwarf-special-skills-extra-tough
+  kind: warband_skill
   runtime:
     scope: 'NO'
     implemented: 'NO'
@@ -429,6 +431,7 @@ rules:
   applies_to:
     band: true
 - id: band--dwarf-special-skills-resource-hunter
+  kind: warband_skill
   runtime:
     scope: "NO"
     implemented: "NO"
@@ -462,6 +465,7 @@ rules:
   applies_to:
     band: true
 - id: band--dwarf-special-skills-true-grit
+  kind: warband_skill
   runtime:
     scope: "YES"
     implemented: "YES"
@@ -500,6 +504,7 @@ rules:
   applies_to:
     band: true
 - id: band--dwarf-special-skills-thick-skull
+  kind: warband_skill
   runtime:
     scope: "YES"
     implemented: "YES"
@@ -546,6 +551,7 @@ rules:
   applies_to:
     band: true
 - id: band--slayer-special-skills-ferocious-charge
+  kind: warband_skill
   runtime:
     scope: "YES"
     implemented: "YES"
@@ -572,6 +578,7 @@ rules:
   applies_to:
     band: true
 - id: band--slayer-special-skills-monster-slayer
+  kind: warband_skill
   runtime:
     scope: "YES"
     implemented: "YES"
@@ -600,6 +607,7 @@ rules:
   applies_to:
     band: true
 - id: band--slayer-special-skills-berserker
+  kind: warband_skill
   runtime:
     scope: "YES"
     implemented: "YES"

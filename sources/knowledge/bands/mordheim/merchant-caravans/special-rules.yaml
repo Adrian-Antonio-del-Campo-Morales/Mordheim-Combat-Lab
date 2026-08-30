@@ -418,6 +418,7 @@ rules:
   applies_to:
     band: true
 - id: band--merchant-special-skills-bribery
+  kind: warband_skill
   runtime:
     scope: "LATER"
     implemented: "NO"
@@ -449,6 +450,7 @@ rules:
   applies_to:
     band: true
 - id: band--merchant-special-skills-dubious-income
+  kind: warband_skill
   runtime:
     scope: "NO"
     implemented: "NO"
@@ -480,6 +482,7 @@ rules:
   applies_to:
     band: true
 - id: band--merchant-special-skills-wholesale
+  kind: warband_skill
   runtime:
     scope: "NO"
     implemented: "NO"
@@ -507,6 +510,7 @@ rules:
   applies_to:
     band: true
 - id: band--merchant-special-skills-deal-breaker
+  kind: warband_skill
   runtime:
     scope: "NO"
     implemented: "NO"
@@ -534,6 +538,7 @@ rules:
   applies_to:
     band: true
 - id: band--merchant-special-skills-connected
+  kind: warband_skill
   runtime:
     scope: "NO"
     implemented: "NO"

@@ -1,5 +1,6 @@
-"""Mordheim Combat Lab's new user-interface layer."""
+"""ui: responsabilidad extraída sin alterar las reglas."""
+from __future__ import annotations
 
-from .app import CombatLabApp
+
 
 __all__ = ["CombatLabApp"]

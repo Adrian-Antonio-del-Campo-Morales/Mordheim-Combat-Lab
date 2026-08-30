@@ -408,6 +408,7 @@ rules:
   applies_to:
     band: true
 - id: band--lizardmen-special-skills-skinks-only-infiltration
+  kind: warband_skill
   runtime:
     scope: "NO"
     implemented: "NO"
@@ -434,9 +435,13 @@ rules:
 
       The Hero may set up anywhere on the table but no closer than 12" to an enemy and he must start the game in hiding.'
     es: null
+  eligibility:
+  - skink-priest
+  - skink-great-crests
   applies_to:
     band: true
 - id: band--lizardmen-special-skills-skinks-only-great-hunter
+  kind: warband_skill
   runtime:
     scope: "NO"
     implemented: "NO"
@@ -461,9 +466,13 @@ rules:
     en: The Skink Great Crest is adept at making the most of the cover available and imposes an additional -1 to hit the Skink
       if he is in cover, i.e. a -2 to hit penalty.
     es: null
+  eligibility:
+  - skink-priest
+  - skink-great-crests
   applies_to:
     band: true
 - id: band--lizardmen-special-skills-saurus-only-bellowing-battle-roar
+  kind: warband_skill
   runtime:
     scope: "YES"
     implemented: "YES"
@@ -489,9 +498,12 @@ rules:
     en: The Saurus' roar is so deafening that enemy models in base contact suffer -1 to hit in the first round of combat against
       them.
     es: null
+  eligibility:
+  - saurus-totem-warrior
   applies_to:
     band: true
 - id: band--lizardmen-special-skills-saurus-only-toughened-hide
+  kind: warband_skill
   runtime:
     scope: "NO"
     implemented: "NO"
@@ -516,5 +528,7 @@ rules:
     en: Through years of battle the Saurus' hide has become hardened and the Saurus will only be taken out of action on a
       6+.
     es: null
+  eligibility:
+  - saurus-totem-warrior
   applies_to:
     band: true

@@ -1,16 +1,27 @@
-"""Composition root for the new Tkinter application."""
-
+"""ui.app: responsabilidad extraída sin alterar las reglas."""
 from __future__ import annotations
 
+from mordheim_combat_lab.application.catalogue import CombatCatalogue
+from mordheim_combat_lab.application.settings import DuelExecutionSettings
+from mordheim_combat_lab.persistence.preferences import load_preferences
+from mordheim_combat_lab.persistence.preferences import save_preferences
+from mordheim_combat_lab.persistence.workbooks import CombatLabWorkbookError
+from mordheim_combat_lab.persistence.workbooks import load_ui_workbook
+from mordheim_combat_lab.persistence.workbooks import save_workbook
+from mordheim_combat_lab.ui.editors import FighterEditor
+from mordheim_combat_lab.ui.tabs.equipment import EquipmentAnalysisTab
+from mordheim_combat_lab.ui.tabs.improvements import ImprovementAnalysisTab
+from mordheim_combat_lab.ui.tabs.weapons import WeaponAnalysisTab
+from mordheim_combat_lab.ui.theme import apply_theme
+from mordheim_combat_lab.ui.widgets.feedback import destroy_tooltips
+import os as os
+import time as time
 import tkinter as tk
-from tkinter import filedialog, ttk
+from tkinter import filedialog
+from tkinter import ttk
 
-from .editors import FighterEditor
-from .services import CombatCatalogue, DuelExecutionSettings
-from .tabs import EquipmentAnalysisTab, ImprovementAnalysisTab, WeaponAnalysisTab
-from .theme import apply_theme
-from .preferences import load_preferences, save_preferences
-from .workbooks import CombatLabWorkbookError, load_ui_workbook, save_workbook
+
+WINDOW_MOVE_THROTTLE_MS = 12 if os.name == "nt" else 0
 
 
 def _preference_int(preferences: dict, key: str, default: int, minimum: int = 0) -> int:
@@ -54,8 +65,10 @@ class CombatLabApp(tk.Tk):
         }
         self.status = tk.StringVar(value="Configure the candidate and enemy, then use an analysis tab.")
         self._last_result = None
+        self.enemy_editor = None
         self._build_gui()
         self._restore_geometry()
+        self._initialize_window_move_throttle()
         self.protocol("WM_DELETE_WINDOW", self._close)
 
     def _build_gui(self) -> None:
@@ -88,13 +101,40 @@ class CombatLabApp(tk.Tk):
         self.notebook.add(candidate_tab, text="Candidate")
         self.notebook.add(enemy_tab, text="Enemy")
         self._build_candidate_tab(candidate_tab)
-        self._build_enemy_tab(enemy_tab)
-        self.notebook.add(ImprovementAnalysisTab(self.notebook, self.catalogue, self.candidate_editor, self.enemy_editor, self._analysis_settings("improvements"), self.analysis_simulations["improvements"]), text="Improvements")
-        self.notebook.add(WeaponAnalysisTab(self.notebook, self.catalogue, self.candidate_editor, self.enemy_editor, self._analysis_settings("weapons"), self.analysis_simulations["weapons"]), text="Weapons")
-        self.notebook.add(EquipmentAnalysisTab(self.notebook, self.catalogue, self.candidate_editor, self.enemy_editor, self._analysis_settings("equipment"), self.analysis_simulations["equipment"]), text="Equipment")
+        self._enemy_tab = enemy_tab
+        self.notebook.bind("<<NotebookTabChanged>>", self._build_enemy_tab_on_selection, add="+")
+        self._lazy_analysis_tabs = {}
+        for tab_type, tab_key, title in (
+            (ImprovementAnalysisTab, "improvements", "Improvements"),
+            (WeaponAnalysisTab, "weapons", "Weapons"),
+            (EquipmentAnalysisTab, "equipment", "Equipment"),
+        ):
+            tab = ttk.Frame(self.notebook)
+            self.notebook.add(tab, text=title)
+            self._lazy_analysis_tabs[str(tab)] = (tab, tab_type, tab_key)
+        self.notebook.bind("<<NotebookTabChanged>>", self._build_selected_analysis_tab, add="+")
         rules_tab = ttk.Frame(self.notebook, padding=20)
         self.notebook.add(rules_tab, text="House Rules")
         self._build_rules_tab(rules_tab)
+
+    def _build_selected_analysis_tab(self, _event=None) -> None:
+        """Build an analysis page only when the user first opens it."""
+        tab_id = str(self.notebook.select())
+        specification = self._lazy_analysis_tabs.pop(tab_id, None)
+        if specification is None:
+            return
+
+        enemy_editor = self._ensure_enemy_editor()
+        tab, tab_type, tab_key = specification
+        view = tab_type(
+            tab,
+            self.catalogue,
+            self.candidate_editor,
+            enemy_editor,
+            self._analysis_settings(tab_key),
+            self.analysis_simulations[tab_key],
+        )
+        view.pack(fill="both", expand=True)
 
     def _build_candidate_tab(self, parent) -> None:
         ttk.Label(parent, text="Candidate", style="Heading.TLabel").pack(anchor="w")
@@ -102,17 +142,28 @@ class CombatLabApp(tk.Tk):
         self.candidate_editor = FighterEditor(parent, "Candidate", self.catalogue, self._editor_changed)
         self.candidate_editor.pack(fill="x")
 
-    def _build_enemy_tab(self, parent) -> None:
-        ttk.Label(parent, text="Enemy", style="Heading.TLabel").pack(anchor="w")
-        ttk.Label(parent, text="Configure the opposing warrior used by every simulation and analysis.", style="Muted.TLabel").pack(anchor="w", pady=(2, 12))
-        self.enemy_editor = FighterEditor(parent, "Enemy", self.catalogue, self._editor_changed)
+    def _build_enemy_tab_on_selection(self, _event=None) -> None:
+        """Build the Enemy editor the first time its page is selected."""
+        if str(self.notebook.select()) == str(self._enemy_tab):
+            self._ensure_enemy_editor()
+
+    def _ensure_enemy_editor(self) -> FighterEditor:
+        """Return the Enemy editor, constructing its deferred page if needed."""
+        if self.enemy_editor is not None:
+            return self.enemy_editor
+
+        ttk.Label(self._enemy_tab, text="Enemy", style="Heading.TLabel").pack(anchor="w")
+        ttk.Label(self._enemy_tab, text="Configure the opposing warrior used by every simulation and analysis.", style="Muted.TLabel").pack(anchor="w", pady=(2, 12))
+        self.enemy_editor = FighterEditor(self._enemy_tab, "Enemy", self.catalogue, self._editor_changed)
         self.enemy_editor.pack(fill="x")
+        return self.enemy_editor
 
     def _collections_changed(self) -> None:
         """Filter both editor warband lists by the selected KB source grades."""
         categories = {category for category, variable in self.collection_categories.items() if variable.get()}
         self.candidate_editor.set_categories(categories)
-        self.enemy_editor.set_categories(categories)
+        if self.enemy_editor is not None:
+            self.enemy_editor.set_categories(categories)
 
     def _build_rules_tab(self, parent) -> None:
         ttk.Label(parent, text="House Rules", style="Heading.TLabel").pack(anchor="w")
@@ -135,6 +186,31 @@ class CombatLabApp(tk.Tk):
         height = min(1050, max(700, self.winfo_screenheight() - 30))
         self.geometry(f"{width}x{height}+{max(0, (self.winfo_screenwidth() - width) // 2)}+{max(0, (self.winfo_screenheight() - height) // 2)}")
 
+    def _initialize_window_move_throttle(self) -> None:
+        """Throttle pure window movement on Windows to coalesce Configure events."""
+        if WINDOW_MOVE_THROTTLE_MS <= 0:
+            return
+
+        self._window_move_throttle_geometry = None
+        self.bind("<Configure>", self._throttle_window_move, add="+")
+
+    def _throttle_window_move(self, event) -> None:
+        """Delay only pure top-level movement; resizing is never throttled."""
+        if event.widget is not self:
+            return
+
+        geometry = (int(event.x), int(event.y), int(event.width), int(event.height))
+        previous = self._window_move_throttle_geometry
+        self._window_move_throttle_geometry = geometry
+
+        if previous is None:
+            return
+
+        moved = geometry[:2] != previous[:2]
+        resized = geometry[2:] != previous[2:]
+        if moved and not resized:
+            time.sleep(WINDOW_MOVE_THROTTLE_MS / 1000.0)
+
     def _editor_changed(self) -> None:
         self.status.set("Ready for an analysis with the selected fighters.")
 
@@ -154,7 +230,7 @@ class CombatLabApp(tk.Tk):
     def _save_workbook(self) -> None:
         try:
             candidate = self.candidate_editor.build()
-            enemy = self.enemy_editor.build()
+            enemy = self._ensure_enemy_editor().build()
             settings = self.execution_settings()
         except (KeyError, TypeError, ValueError) as exc:
             self.status.set(f"Configuration error: {exc}")
@@ -181,7 +257,7 @@ class CombatLabApp(tk.Tk):
             if target in {"both", "candidate"}:
                 self.candidate_editor.load_build(candidate)
             if target in {"both", "enemy"}:
-                self.enemy_editor.load_build(enemy)
+                self._ensure_enemy_editor().load_build(enemy)
             if target == "both":
                 self.simulations.set(settings.simulations)
                 for variable in self.analysis_simulations.values():
@@ -204,6 +280,7 @@ class CombatLabApp(tk.Tk):
             "batch_size": self.batch_size.get(),
             "maximum_rounds": self.maximum_rounds.get(),
         })
+        destroy_tooltips(self)
         self.destroy()
 
 

@@ -1413,6 +1413,7 @@ rules:
       binding: null
       reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--restless-dead-special-skills-corpse-bomb
+  kind: warband_skill
   name: Corpse Bomb
   effect: 'Special magics and rituals can cause a Zombie to
 
@@ -1481,6 +1482,7 @@ rules:
       binding: null
       reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--restless-dead-special-skills-deathspeaker
+  kind: warband_skill
   name: Deathspeaker
   effect: 'At the start of the battle, the undead player may
 
@@ -1533,6 +1535,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--restless-dead-special-skills-wraith-touch
+  kind: warband_skill
   name: Wraith Touch
   effect: 'The hero may make a Wraith Touch attack instead of their normal attacks in close combat. The hero making
 
@@ -1593,6 +1596,7 @@ rules:
       binding: null
       reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--restless-dead-special-skills-forbidden-rite
+  kind: warband_skill
   name: Forbidden Rite
   effect: 'If the hero with this skill did not search for rare items
 
@@ -1637,6 +1641,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--restless-dead-special-skills-summoner
+  kind: warband_skill
   name: Summoner
   effect: The maximum warband size is increased by 1.
   source:

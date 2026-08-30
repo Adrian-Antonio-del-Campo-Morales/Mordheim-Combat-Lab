@@ -478,6 +478,7 @@ rules:
   applies_to:
     band: true
 - id: band--bandit-special-skills-banditry
+  kind: warband_skill
   runtime:
     scope: "NO"
     implemented: "NO"
@@ -555,6 +556,7 @@ rules:
   applies_to:
     band: true
 - id: band--bandit-special-skills-hide-in-shadows
+  kind: warband_skill
   runtime:
     scope: "NO"
     implemented: "NO"
@@ -596,6 +598,7 @@ rules:
   applies_to:
     band: true
 - id: band--bandit-special-skills-jump-back
+  kind: warband_skill
   runtime:
     scope: 'NO'
     implemented: 'NO'
@@ -648,6 +651,7 @@ rules:
   applies_to:
     band: true
 - id: band--bandit-special-skills-sniper
+  kind: warband_skill
   runtime:
     scope: 'NO'
     implemented: 'NO'
@@ -682,6 +686,7 @@ rules:
   applies_to:
     band: true
 - id: band--bandit-special-skills-throw-voice
+  kind: warband_skill
   runtime:
     scope: "NO"
     implemented: "NO"

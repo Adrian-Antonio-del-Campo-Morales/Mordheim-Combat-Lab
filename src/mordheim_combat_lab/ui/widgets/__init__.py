@@ -1,8 +1,6 @@
-"""Reusable widgets extracted from the previous interface."""
+"""ui.widgets: responsabilidad extraída sin alterar las reglas."""
+from __future__ import annotations
 
-from .feedback import ToolTip
-from .skills import SkillChecklist
-from .results import DuelResultCards
-from .progress import AnalysisProgress
+
 
 __all__ = ["AnalysisProgress", "DuelResultCards", "SkillChecklist", "ToolTip"]

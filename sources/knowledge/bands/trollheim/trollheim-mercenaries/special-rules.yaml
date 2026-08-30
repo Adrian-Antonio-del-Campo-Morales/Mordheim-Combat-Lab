@@ -27,6 +27,7 @@ rules:
       binding: null
       reason: 'Deferred subsystem: psychology or mounts.'
 - id: swordsmen--expert-swordsmen
+  kind: profile_ability
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -105,6 +106,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--middenheim-physical-prowess
+  kind: warband_variant
   name: Middenheim — Physical Prowess
   effect: The Mercenary Captain and all Champions in a Middenheim warband start with Strength 4 instead of Strength 3.
   source:

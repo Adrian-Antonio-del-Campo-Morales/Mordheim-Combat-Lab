@@ -224,6 +224,7 @@ rules:
       binding: null
       reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--hobgoblin-special-skills-moving-shot
+  kind: warband_skill
   name: Moving Shot
   effect: The Hero ignores the normal shooting penalty for moving. This skill may also be used while the Hero is mounted on
     a Giant Wolf.
@@ -255,6 +256,7 @@ rules:
       binding: null
       reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--hobgoblin-special-skills-disguised
+  kind: warband_skill
   name: Disguised
   effect: The Hero deploys after the opposing warband and may be placed anywhere outside the opposing warband's line of sight
     and more than 12" from every enemy model.
@@ -286,6 +288,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--hobgoblin-special-skills-unpredictable
+  kind: warband_skill
   name: Unpredictable
   effect: The Hero may declare one of its attacks Unpredictable; that attack cannot be parried by the opponent.
   source:
@@ -316,6 +319,7 @@ rules:
         kind: mechanic
         id: mechanic.unpredictable-attack
 - id: band--hobgoblin-special-skills-wolf-tamer
+  kind: warband_skill
   name: Wolf Tamer
   effect: The Hero may direct one purchased Giant Wolf in battle without riding it; that wolf still counts toward the warband's
     normal 0-5 Giant Wolf limit. If the Hero rides a Giant Wolf, it may re-roll failed Riding tests but must accept the second
@@ -351,6 +355,7 @@ rules:
       binding: null
       reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--hobgoblin-special-skills-ambush
+  kind: warband_skill
   name: Ambush
   effect: Khann only. After both warbands have deployed and before the first turn begins, 1D3 members of the warband may each
     make one free Movement turn.

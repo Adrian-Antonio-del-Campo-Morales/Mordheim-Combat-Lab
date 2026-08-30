@@ -396,6 +396,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--pirate-special-skills-sea-shanty-singer
+  kind: warband_skill
   name: Sea Shanty Singer
   effect: At the start of the Combat phase, choose one enemy model in base contact with the Hero. That model must pass a Leadership
     test or lose 1 Attack for that turn. Models immune to Psychology are unaffected.
@@ -426,6 +427,7 @@ rules:
       binding: null
       reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--pirate-special-skills-sea-legs
+  kind: warband_skill
   name: Sea Legs
   effect: If the Hero falls, each of the 1D3 resulting hits may be ignored on a 4+ on D6, rolling separately for each hit.
     If the Hero is Knocked Down or Stunned within 1" of a precipice, the Hero may re-roll the Initiative test made to determine
@@ -458,6 +460,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--pirate-special-skills-cutlass-master
+  kind: warband_skill
   name: Cutlass Master
   effect: While armed with a Cutlass, the Hero may successfully parry an attack by matching the opponent's highest successful
     To Hit roll instead of needing to exceed it. This benefit applies only while the Hero is under cover, inside a building,
@@ -490,6 +493,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--pirate-special-skills-booming-voice
+  kind: warband_skill
   name: Booming Voice
   effect: Pirate Captain only. Once per turn, while the Captain is standing and not engaged in close combat, one Pirate within
     8" who has just failed a test to flee from combat or to stop fleeing may re-roll that test.
@@ -518,6 +522,7 @@ rules:
       binding: null
       reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--pirate-special-skills-hardy-constitution
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -549,6 +554,7 @@ rules:
   applies_to:
     band: true
 - id: band--pirate-special-skills-swashbuckler
+  kind: warband_skill
   name: Swashbuckler
   effect: At the end of any close-combat phase, whether the Hero's or the opponent's, if the Hero is in base contact with
     an enemy model the Hero may take a Leadership test. If passed, the Hero may immediately make one normal move, but may

@@ -183,6 +183,7 @@ rules:
       binding: null
       reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--shadow-warrior-special-skills-see-in-shadows
+  kind: warband_skill
   name: See in Shadows
   effect: If the warrior has enough Movement to reach an unseen opponent, he may re-roll the test made to charge that opponent;
     the source contrasts this with the normal 4" limit.
@@ -213,6 +214,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--shadow-warrior-special-skills-master-of-runes
+  kind: warband_skill
   name: Master of Runes
   effect: When using Elven Runestones, the warrior gains +1 to the roll to dispel a spell. The warrior may also inscribe Elven
     runes on a warband member's weapon or armour; once during that battle, that model may re-roll one failed armour save or
@@ -247,6 +249,7 @@ rules:
       binding: null
       reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--shadow-warrior-special-skills-elven-agility
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -278,6 +281,7 @@ rules:
   applies_to:
     band: true
 - id: band--shadow-warrior-special-skills-powerful-build
+  kind: warband_skill
   name: Powerful Build
   effect: The warrior may choose skills from the Strength skill list. A Shadow Weaver may never take this skill, and no more
     than two warriors in the warband may have it at the same time.
@@ -314,6 +318,7 @@ rules:
       binding: null
       reason: 'Out of scope: warband-level roster limit.'
 - id: band--shadow-warrior-special-skills-infiltration
+  kind: warband_skill
   name: Infiltration
   effect: The warrior deploys after the opposing warband and may be placed anywhere outside enemy line of sight and more than
     12" from every enemy model. If both players have infiltrating models, roll D6 for each; the lowest roll deploys first.
@@ -344,6 +349,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--shadow-warrior-special-skills-sniper
+  kind: warband_skill
   name: Sniper
   effect: If Hidden, the warrior may shoot or cast spells and remain Hidden.
   source:
@@ -372,6 +378,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--shadow-warrior-special-skills-hide-in-shadows
+  kind: warband_skill
   name: Hide in Shadows
   effect: An enemy attempting to detect this Hidden warrior halves its Initiative before measuring the detection distance.
   source:

@@ -726,6 +726,7 @@ rules:
       binding: null
       reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--savage-goblin-special-skills-infiltration
+  kind: warband_skill
   name: Infiltration
   effect: Red Teeth and the Witch Doctor may not take this skill. The Hero deploys after the opposing warband, outside enemy
     line of sight and more than 12" from every enemy model.
@@ -755,6 +756,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--savage-goblin-special-skills-unpredictable
+  kind: warband_skill
   name: Unpredictable
   effect: The Hero may declare one of its attacks Unpredictable; that attack cannot be parried.
   source:
@@ -785,6 +787,7 @@ rules:
         kind: mechanic
         id: mechanic.unpredictable-attack
 - id: band--savage-goblin-special-skills-zomblin-medicine
+  kind: warband_skill
   name: Zomblin Medicine
   effect: Witch Doctor only. Whenever the Witch Doctor would learn a new skill, he may choose a Necromancy spell instead.
     Zomblins and Zomblintua count as Zombies for those spells. The individual Necromancy spell list and spell effects are
@@ -815,6 +818,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--savage-goblin-special-skills-spider-infested
+  kind: warband_skill
   name: Spider Infested
   effect: Whenever an enemy fails a To Hit roll against the Hero, or the Hero successfully parries an attack, that enemy suffers
     a cumulative -1 Initiative penalty until it is no longer engaged with the Hero or the Hero is taken Out of Action. The
@@ -849,6 +853,7 @@ rules:
         kind: mechanic
         id: mechanic.spider-infested
 - id: band--savage-goblin-special-skills-master-of-throwing-weapons
+  kind: warband_skill
   name: Master of Throwing Weapons
   effect: Trackers only. The Hero may carry up to five missile weapons instead of the usual two.
   source:

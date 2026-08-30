@@ -1,4 +1,7 @@
-from mordheim_combat_lab.ui.services import motta_score
+"""external.test_motta: responsabilidad extraída sin alterar las reglas."""
+from __future__ import annotations
+
+from mordheim_combat_lab.application.motta import motta_score
 
 
 def test_motta_uses_the_legacy_cost_regularisation():

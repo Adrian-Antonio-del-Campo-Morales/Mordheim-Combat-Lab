@@ -1,16 +1,14 @@
-"""Knowledge-base driven skill-improvement comparison tab."""
-
+"""ui.tabs.improvements: responsabilidad extraída sin alterar las reglas."""
 from __future__ import annotations
 
-from dataclasses import replace
-import threading
+from mordheim_combat_lab.application.analyses import (
+    ComparisonCandidate, add_improvement, compare_builds, improvement_choices,
+)
+from mordheim_combat_lab.domain.models import SimulationCancelled
+from mordheim_combat_lab.ui.widgets.progress import AnalysisProgress
+import threading as threading
 from tkinter import StringVar
 from tkinter import ttk
-
-from ...core.compiler import compile_fighter
-from ...core.engine import simulate_duel
-from ...core.models import SimulationCancelled
-from ..widgets import AnalysisProgress
 
 
 class ImprovementAnalysisTab(ttk.Frame):
@@ -62,8 +60,9 @@ class ImprovementAnalysisTab(ttk.Frame):
             settings = self.settings_provider()
             candidate = self.candidate_editor.build()
             enemy = self.enemy_editor.build()
-            selected = set(candidate.skill_ids)
-            skills = tuple(skill for skill in self.catalogue.skills(self.candidate_editor.choice) if skill.id not in selected)
+            skills = improvement_choices(
+                self.catalogue, self.candidate_editor.choice, candidate,
+            )
         except (KeyError, TypeError, ValueError) as exc:
             self.status.set(f"Configuration error: {exc}")
             return
@@ -75,23 +74,19 @@ class ImprovementAnalysisTab(ttk.Frame):
 
     def _compare(self, candidate, enemy, skills, settings, cancel_event) -> None:
         try:
-            compiled_enemy = compile_fighter(enemy)
-            baseline = simulate_duel(settings.request(compile_fighter(candidate), compiled_enemy, cancel_event))
             self.after(0, self.progress.advance, 1)
-            rows = []
-            for completed, skill in enumerate(skills, start=2):
-                if cancel_event.is_set():
-                    raise SimulationCancelled()
-                fighter = compile_fighter(replace(candidate, skill_ids=(*candidate.skill_ids, skill.id)))
-                result = simulate_duel(settings.request(fighter, compiled_enemy, cancel_event))
-                rows.append((skill.name, result.first_win_rate, result.first_win_rate - baseline.first_win_rate, result.second_win_rate, result.unresolved_rate))
-                self.after(0, self.progress.advance, completed)
+            variants = tuple(ComparisonCandidate(skill.id, skill.name,
+                add_improvement(self.catalogue, candidate, skill)) for skill in skills)
+            batch = compare_builds(candidate, enemy, variants, settings, cancel_event,
+                lambda completed: self.after(0, self.progress.advance, completed + 1))
+            rows = [(row.candidate.label, row.win_rate, row.improvement,
+                     row.enemy_win_rate, row.unresolved_rate) for row in batch.results]
         except SimulationCancelled:
             self.after(0, self._cancelled)
         except Exception as exc:
             self.after(0, self._failed, str(exc))
         else:
-            self.after(0, self._finished, rows, baseline.first_win_rate, settings.simulations)
+            self.after(0, self._finished, rows, batch.baseline_win_rate, settings.simulations)
 
     def _finished(self, rows, baseline: float, simulations: int) -> None:
         for item in self.tree.get_children():

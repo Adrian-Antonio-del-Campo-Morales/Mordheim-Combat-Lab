@@ -507,6 +507,7 @@ rules:
     profile_ids:
     - troll
 - id: troll--vomit-attack
+  kind: profile_ability
   runtime:
     scope: "YES"
     implemented: "YES"
@@ -785,6 +786,7 @@ rules:
   applies_to:
     band: true
 - id: band--night-goblin-special-skills-ded-shooty
+  kind: warband_skill
   runtime:
     scope: "NO"
     implemented: "NO"
@@ -814,6 +816,7 @@ rules:
   applies_to:
     band: true
 - id: band--night-goblin-special-skills-sneaky-git
+  kind: warband_skill
   runtime:
     scope: "NO"
     implemented: "NO"
@@ -843,6 +846,7 @@ rules:
   applies_to:
     band: true
 - id: band--night-goblin-special-skills-infiltrate
+  kind: warband_skill
   runtime:
     scope: "NO"
     implemented: "NO"
@@ -872,6 +876,7 @@ rules:
   applies_to:
     band: true
 - id: band--night-goblin-special-skills-netter
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'

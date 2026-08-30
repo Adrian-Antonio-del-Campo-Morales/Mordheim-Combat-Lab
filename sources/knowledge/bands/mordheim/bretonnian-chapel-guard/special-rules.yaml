@@ -484,6 +484,7 @@ rules:
   applies_to:
     band: true
 - id: band--virtue-of-purity
+  kind: virtue
   runtime:
     scope: LATER
     implemented: 'NO'
@@ -511,6 +512,7 @@ rules:
   applies_to:
     band: true
 - id: band--renowned-virtue
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -564,6 +566,7 @@ rules:
   applies_to:
     band: true
 - id: band--shield-bash
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -593,6 +596,7 @@ rules:
   applies_to:
     band: true
 - id: band--bulging-muscles
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -619,6 +623,7 @@ rules:
   applies_to:
     band: true
 - id: band--untiring
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'

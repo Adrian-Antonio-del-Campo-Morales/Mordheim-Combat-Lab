@@ -176,6 +176,7 @@ rules:
   applies_to:
     band: true
 - id: band--amazon-special-skills-skink-hunter
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -204,6 +205,7 @@ rules:
   applies_to:
     band: true
 - id: band--amazon-special-skills-elixir-of-life
+  kind: warband_skill
   runtime:
     scope: 'NO'
     implemented: 'NO'
@@ -233,6 +235,7 @@ rules:
   applies_to:
     band: true
 - id: band--amazon-special-skills-mesmerising-dance
+  kind: warband_skill
   runtime:
     scope: LATER
     implemented: 'NO'
@@ -264,6 +267,7 @@ rules:
   applies_to:
     band: true
 - id: band--amazon-special-skills-savage-fury
+  kind: warband_skill
   runtime:
     scope: LATER
     implemented: 'NO'
@@ -291,6 +295,7 @@ rules:
   applies_to:
     band: true
 - id: band--amazon-special-skills-concealment
+  kind: warband_skill
   runtime:
     scope: 'NO'
     implemented: 'NO'

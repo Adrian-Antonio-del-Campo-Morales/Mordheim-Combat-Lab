@@ -1,4 +1,4 @@
-schema_version: 1
+schema_version: 2
 entity: special-rule
 description: Canonical runtime metadata for KB rules. Source rule IDs remain unique; shared bindings identify common engine implementations.
 runtime:
@@ -19,6 +19,17 @@ runtime:
   - band
   - selectable
   - none
+selectable_rule:
+  required_field: kind
+  kind_values:
+  - warband_skill
+  - mutation
+  - blessing
+  - virtue
+  - mark
+  - modification
+  - profile_ability
+  - warband_variant
   binding_kinds:
   - mechanic
   - trait
@@ -29,6 +40,7 @@ runtime:
   - scope
 invariants:
 - A rule keeps its own KB id; equivalent rules share binding.kind, binding.id and binding.parameters.
+- Every rule with grant selectable declares what type of choice it is in kind.
 - Equivalence is always explicit and is never inferred from rule names or prose.
 - Every YES effect must have a binding when runtime.implemented is YES.
 - A rule is implemented YES only when every YES effect has an executable binding.

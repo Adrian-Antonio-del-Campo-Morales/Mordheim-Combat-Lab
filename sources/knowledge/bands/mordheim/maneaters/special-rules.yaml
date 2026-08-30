@@ -488,6 +488,7 @@ rules:
   applies_to:
     band: true
 - id: band--ogres-special-skills-master-of-arms
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -519,6 +520,7 @@ rules:
   applies_to:
     band: true
 - id: band--ogres-special-skills-crude-belch
+  kind: warband_skill
   runtime:
     scope: LATER
     implemented: 'NO'
@@ -561,6 +563,7 @@ rules:
   applies_to:
     band: true
 - id: band--ogres-special-skills-maneater
+  kind: warband_skill
   runtime:
     scope: 'NO'
     implemented: 'NO'
@@ -610,6 +613,7 @@ rules:
   applies_to:
     band: true
 - id: band--ogres-special-skills-bull-charge
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -646,6 +650,7 @@ rules:
   applies_to:
     band: true
 - id: band--ogres-special-skills-dog-of-war
+  kind: warband_skill
   runtime:
     scope: 'NO'
     implemented: 'NO'
@@ -699,6 +704,7 @@ rules:
   applies_to:
     band: true
 - id: band--ogres-special-skills-bellowing-roar
+  kind: warband_skill
   runtime:
     scope: LATER
     implemented: 'NO'

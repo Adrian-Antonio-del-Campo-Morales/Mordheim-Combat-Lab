@@ -273,6 +273,7 @@ rules:
       binding: null
       reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--ostlander-special-skills-bull-rush
+  kind: warband_skill
   name: Bull Rush
   effect: 'This warrior is huge, even by Ostlander
 
@@ -347,6 +348,7 @@ rules:
         kind: mechanic
         id: mechanic.bull-charge
 - id: band--ostlander-special-skills-foul-odour
+  kind: warband_skill
   name: Foul Odour
   effect: 'Ostlanders are prodigious drinkers and none
 
@@ -432,6 +434,7 @@ rules:
       binding: null
       reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--ostlander-special-skills-taunt
+  kind: warband_skill
   name: Taunt
   effect: 'After years of baiting opponents into drunken
 
@@ -525,6 +528,7 @@ rules:
       binding: null
       reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--ostlander-special-skills-animal-friendship
+  kind: warband_skill
   name: Animal Friendship
   effect: 'Having grown up amidst the animals of the forest, this
 
@@ -582,6 +586,7 @@ rules:
       binding: null
       reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--ostlander-special-skills-blood-oath
+  kind: warband_skill
   name: Blood Oath
   effect: 'The leader of an Ostlander
 

@@ -241,6 +241,7 @@ rules:
   applies_to:
     band: true
 - id: band--virtue-of-purity
+  kind: virtue
   runtime:
     scope: "NO"
     implemented: "NO"
@@ -266,6 +267,7 @@ rules:
   applies_to:
     band: true
 - id: band--virtue-of-valour
+  kind: virtue
   runtime:
     scope: "YES"
     implemented: "YES"
@@ -293,6 +295,7 @@ rules:
   applies_to:
     band: true
 - id: band--virtue-of-discipline
+  kind: virtue
   runtime:
     scope: "LATER"
     implemented: "NO"
@@ -321,6 +324,7 @@ rules:
   applies_to:
     band: true
 - id: band--virtue-of-noble-disdain
+  kind: virtue
   runtime:
     scope: "LATER"
     implemented: "NO"
@@ -346,6 +350,7 @@ rules:
   applies_to:
     band: true
 - id: band--virtue-of-impetuous
+  kind: virtue
   runtime:
     scope: "NO"
     implemented: "NO"

@@ -243,6 +243,7 @@ rules:
       binding: null
       reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--high-elf-special-skills-elven-agility
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -274,6 +275,7 @@ rules:
   applies_to:
     band: true
 - id: band--high-elf-special-skills-rune-master
+  kind: warband_skill
   name: Rune Master
   effect: Loremaster only. When using Elven Runestones, the Loremaster gains +1 on the attempt to dispel a spell. In addition,
     once per battle he may inscribe a rune on one friendly warrior's weapon or armour; that warrior may re-roll one failed
@@ -304,6 +306,7 @@ rules:
       binding: null
       reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--high-elf-special-skills-miniath
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -335,6 +338,7 @@ rules:
   applies_to:
     band: true
 - id: band--high-elf-special-skills-infallible-strike
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -364,6 +368,7 @@ rules:
   applies_to:
     band: true
 - id: band--high-elf-special-skills-stand-and-shoot
+  kind: warband_skill
   name: Stand and Shoot
   effect: When an enemy declares a charge against the Hero, the Hero may take a Leadership test. If passed, the Hero may shoot
     at the charging model before contact, suffering -1 To Hit. If the attacker is Knocked Down or Stunned by that shot, place
@@ -396,6 +401,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--high-elf-special-skills-faerie
+  kind: warband_skill
   name: Faerie
   effect: Explorers only. Enemy spells do not affect the Explorer on a D6 roll of 4+.
   source:
@@ -422,6 +428,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--high-elf-special-skills-luck
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'

@@ -1,17 +1,14 @@
-"""Knowledge-base driven weapon comparison tab."""
-
+"""ui.tabs.weapons: responsabilidad extraída sin alterar las reglas."""
 from __future__ import annotations
 
 from dataclasses import replace
-import threading
+from mordheim_combat_lab.application.motta import motta_score
+from mordheim_combat_lab.application.analyses import ComparisonCandidate, compare_builds
+from mordheim_combat_lab.domain.models import SimulationCancelled
+from mordheim_combat_lab.ui.widgets.progress import AnalysisProgress
+import threading as threading
 from tkinter import StringVar
 from tkinter import ttk
-
-from ...core.compiler import compile_fighter
-from ...core.engine import simulate_duel
-from ...core.models import SimulationCancelled
-from ..widgets import AnalysisProgress
-from ..services import motta_score
 
 
 class WeaponAnalysisTab(ttk.Frame):
@@ -75,19 +72,16 @@ class WeaponAnalysisTab(ttk.Frame):
 
     def _compare(self, candidate, enemy, options, settings, cancel_event) -> None:
         try:
-            compiled_enemy = compile_fighter(enemy)
-            baseline = simulate_duel(settings.request(compile_fighter(candidate), compiled_enemy, cancel_event))
-            rows = []
-            for completed, (weapon_id, name) in enumerate(options, start=1):
-                if cancel_event.is_set():
-                    raise SimulationCancelled()
+            variants = []
+            for weapon_id, name in options:
                 off_hand = candidate.off_hand_id
                 if self.catalogue.mechanic(weapon_id).get("hands") == 2:
                     off_hand = None
-                fighter = compile_fighter(replace(candidate, main_weapon_id=weapon_id, off_hand_id=off_hand))
-                result = simulate_duel(settings.request(fighter, compiled_enemy, cancel_event))
-                rows.append((name, result.first_win_rate, result.first_win_rate - baseline.first_win_rate))
-                self.after(0, self.progress.advance, completed)
+                variants.append(ComparisonCandidate(weapon_id, name,
+                    replace(candidate, main_weapon_id=weapon_id, off_hand_id=off_hand)))
+            batch = compare_builds(candidate, enemy, variants, settings, cancel_event,
+                lambda completed: self.after(0, self.progress.advance, completed))
+            rows = [(row.candidate.label, row.win_rate, row.improvement) for row in batch.results]
         except SimulationCancelled:
             self.after(0, self._cancelled)
         except Exception as exc:

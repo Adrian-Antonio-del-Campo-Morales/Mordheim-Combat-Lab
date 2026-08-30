@@ -167,6 +167,7 @@ rules:
   applies_to:
     band: true
 - id: band--arabian-tomb-raiders-special-skills-sand-worm
+  kind: warband_skill
   runtime:
     scope: "NO"
     implemented: "NO"
@@ -194,6 +195,7 @@ rules:
   applies_to:
     band: true
 - id: band--arabian-tomb-raiders-special-skills-hit-and-run
+  kind: warband_skill
   runtime:
     scope: "NO"
     implemented: "NO"
@@ -219,6 +221,7 @@ rules:
   applies_to:
     band: true
 - id: band--arabian-tomb-raiders-special-skills-weather-tolerant
+  kind: warband_skill
   runtime:
     scope: "NO"
     implemented: "NO"

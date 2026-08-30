@@ -1,6 +1,8 @@
-"""Tkinter visual theme extracted from the previous interface."""
+"""ui.theme: responsabilidad extraída sin alterar las reglas."""
+from __future__ import annotations
 
 from tkinter import ttk
+
 
 COLORS = {
     "bg": "#17191D",
@@ -63,9 +65,10 @@ def apply_theme(root) -> None:
     style.configure("Card.Muted.TLabel", background=COLORS["surface"], foreground=COLORS["text_muted"])
     style.configure("TButton", padding=(12, 7), background=COLORS["surface_alt"], foreground=COLORS["text"], bordercolor=COLORS["border"], relief="flat")
     style.map("TButton", background=[("pressed", COLORS["surface_hover"]), ("active", COLORS["surface_hover"]), ("disabled", COLORS["surface"])], foreground=[("disabled", COLORS["text_disabled"])])
-    style.configure("Stat.TButton", padding=(3, 1), background=COLORS["surface_alt"], foreground=COLORS["text"], bordercolor=COLORS["border"], width=2)
+    style.configure("Stat.TButton", padding=(5, 9), background=COLORS["surface_alt"], foreground=COLORS["text"], bordercolor=COLORS["border"], width=2, font=("Segoe UI Semibold", 14))
     style.map("Stat.TButton", background=[("pressed", COLORS["accent_pressed"]), ("active", COLORS["surface_hover"])])
     style.configure("Stat.TEntry", fieldbackground=COLORS["bg"], foreground=COLORS["text"], bordercolor=COLORS["border"], justify="center", padding=(3, 2))
+    style.configure("StatValue.TEntry", fieldbackground=COLORS["bg"], foreground=COLORS["text"], bordercolor=COLORS["accent"], justify="center", padding=(8, 8), font=("Segoe UI Semibold", 24))
     style.configure("Accent.TButton", background=COLORS["accent"], foreground="#111111", bordercolor=COLORS["accent"], font=("Segoe UI Semibold", 10), padding=(16, 8))
     style.map("Accent.TButton", background=[("pressed", COLORS["accent_pressed"]), ("active", COLORS["accent_hover"]), ("disabled", COLORS["surface_alt"])])
     style.configure("TCombobox", fieldbackground=COLORS["surface_alt"], background=COLORS["surface_alt"], foreground=COLORS["text"], arrowcolor=COLORS["text_muted"], bordercolor=COLORS["border"], padding=(6, 5))

@@ -302,6 +302,7 @@ rules:
   applies_to:
     band: true
 - id: band--horned-hunter-special-skills-master-trapper
+  kind: warband_skill
   runtime:
     scope: 'NO'
     implemented: 'NO'
@@ -331,6 +332,7 @@ rules:
   applies_to:
     band: true
 - id: band--horned-hunter-special-skills-infiltration
+  kind: warband_skill
   runtime:
     scope: 'NO'
     implemented: 'NO'
@@ -380,6 +382,7 @@ rules:
   applies_to:
     band: true
 - id: band--horned-hunter-special-skills-foul-odour
+  kind: warband_skill
   runtime:
     scope: LATER
     implemented: 'NO'
@@ -439,6 +442,7 @@ rules:
   applies_to:
     band: true
 - id: band--horned-hunter-special-skills-animal-friendship
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -472,6 +476,7 @@ rules:
   applies_to:
     band: true
 - id: band--horned-hunter-special-skills-pathfinder
+  kind: warband_skill
   runtime:
     scope: 'NO'
     implemented: 'NO'
@@ -509,6 +514,7 @@ rules:
   applies_to:
     band: true
 - id: band--horned-hunter-special-skills-hide-in-shadows
+  kind: warband_skill
   runtime:
     scope: 'NO'
     implemented: 'NO'

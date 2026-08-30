@@ -211,6 +211,7 @@ rules:
       binding: null
       reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--clan-pestilens-special-skills-black-hunger
+  kind: warband_skill
   name: Black Hunger
   effect: At the beginning of his turn, the Hero may invoke Black Hunger. For that turn he gains +1 Attack and +D3" to his
     total Movement, then suffers D3 Strength 3 hits with no armour save at the end of the turn.
@@ -244,6 +245,7 @@ rules:
         kind: mechanic
         id: mechanic.black-hunger
 - id: band--clan-pestilens-special-skills-censer-bearer
+  kind: warband_skill
   name: Censer Bearer
   effect: Requires Black Hunger. The Hero gains Frenzy and may use only a Censer as a close-combat weapon.
   source:
@@ -275,6 +277,7 @@ rules:
         kind: compiler
         id: compiler.censer-bearer-loadout
 - id: band--clan-pestilens-special-skills-rotten-body
+  kind: warband_skill
   name: Rotten Body
   effect: The Hero is immune to poisons and diseases. If taken Out of Action because of a failed Censer-related test, he automatically
     recovers after the battle and does not roll for injury.
@@ -314,6 +317,7 @@ rules:
       binding: null
       reason: 'Out of scope: post-battle recovery and Serious Injury.'
 - id: band--clan-pestilens-special-skills-contagious
+  kind: warband_skill
   name: Contagious
   effect: Requires Rotten Body. A model that inflicts the close-combat injury which takes this Hero Out of Action must take
     a Toughness test. If the D6 result is higher than its Toughness it suffers one automatic Wound; a 6 always causes a Wound.
@@ -348,6 +352,7 @@ rules:
       binding: null
       reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--clan-pestilens-special-skills-ignore-pain
+  kind: warband_skill
   name: Ignore Pain
   effect: Requires the Resilient Strength skill. The Hero treats Stunned injury results as Knocked Down.
   source:

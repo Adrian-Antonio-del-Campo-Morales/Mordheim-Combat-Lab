@@ -157,6 +157,7 @@ rules:
       binding: null
       reason: 'Deferred subsystem: psychology or mounts.'
 - id: necrotect--hatred
+  kind: profile_ability
   runtime:
     scope: LATER
     implemented: 'YES'

@@ -189,6 +189,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--protectorate-special-skills-protection-of-sigmar
+  kind: warband_skill
   name: Protection of Sigmar
   effect: Any spell cast against the Hero is dispelled on a D6 roll of 4+. If the spell is dispelled, it does not affect any
     other model either.
@@ -219,6 +220,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--protectorate-special-skills-absolute-faith
+  kind: warband_skill
   name: Absolute Faith
   effect: The Hero may re-roll failed Fear tests and does not need to take a test for being engaged by multiple opponents.
   source:
@@ -247,6 +249,7 @@ rules:
       binding: null
       reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--protectorate-special-skills-absolute-determination
+  kind: warband_skill
   name: Absolute Determination
   effect: Warrior Priest only. The Warrior Priest may re-roll failed Rout tests.
   source:
@@ -273,6 +276,7 @@ rules:
       binding: null
       reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--protectorate-special-skills-rousing-sermon
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -304,6 +308,7 @@ rules:
   applies_to:
     band: true
 - id: band--protectorate-special-skills-guidance-of-sigmar
+  kind: warband_skill
   name: Guidance of Sigmar
   effect: When using missile weapons, the Hero may freely choose a target and ignore the normal requirement to shoot at the
     nearest enemy.

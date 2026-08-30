@@ -1,9 +1,14 @@
+"""external.test_execution: responsabilidad extraída sin alterar las reglas."""
+from __future__ import annotations
+
+from mordheim_combat_lab.application.settings import DuelExecutionSettings
+from mordheim_combat_lab.combat.vectorized import simulate_duel
+from mordheim_combat_lab.construction.compiler import compile_fighter
+from mordheim_combat_lab.domain.models import Characteristics
+from mordheim_combat_lab.domain.models import FighterBuild
+from mordheim_combat_lab.domain.models import SimulationCancelled
+import pytest as pytest
 from threading import Event
-
-import pytest
-
-from mordheim_combat_lab import Characteristics, FighterBuild, SimulationCancelled, compile_fighter, simulate_duel
-from mordheim_combat_lab.ui.services import DuelExecutionSettings
 
 
 def test_execution_settings_build_a_runtime_request():

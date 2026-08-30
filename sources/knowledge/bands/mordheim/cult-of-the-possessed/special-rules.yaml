@@ -203,6 +203,7 @@ rules:
   applies_to:
     band: true
 - id: band--mutations-daemon-soul
+  kind: mutation
   runtime:
     scope: 'NO'
     implemented: 'NO'
@@ -232,6 +233,7 @@ rules:
   applies_to:
     band: true
 - id: band--mutations-great-claw
+  kind: mutation
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -264,6 +266,7 @@ rules:
   applies_to:
     band: true
 - id: band--mutations-cloven-hoofs
+  kind: mutation
   runtime:
     scope: 'NO'
     implemented: 'NO'
@@ -293,6 +296,7 @@ rules:
   applies_to:
     band: true
 - id: band--mutations-tentacle
+  kind: mutation
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -325,6 +329,7 @@ rules:
   applies_to:
     band: true
 - id: band--mutations-blackblood
+  kind: mutation
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -359,6 +364,7 @@ rules:
   applies_to:
     band: true
 - id: band--mutations-spines
+  kind: mutation
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -393,6 +399,7 @@ rules:
   applies_to:
     band: true
 - id: band--mutations-scorpion-tail
+  kind: mutation
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -427,6 +434,7 @@ rules:
   applies_to:
     band: true
 - id: band--mutations-extra-arm
+  kind: mutation
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -462,6 +470,7 @@ rules:
   applies_to:
     band: true
 - id: band--mutations-hideous
+  kind: mutation
   runtime:
     scope: LATER
     implemented: 'NO'

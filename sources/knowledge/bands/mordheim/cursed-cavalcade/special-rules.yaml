@@ -706,6 +706,7 @@ rules:
   applies_to:
     band: true
 - id: band--cursed-cavalcade-special-skills-noblesse-obliges
+  kind: warband_skill
   runtime:
     scope: "LATER"
     implemented: "NO"
@@ -763,6 +764,7 @@ rules:
   applies_to:
     band: true
 - id: band--cursed-cavalcade-special-skills-torturer
+  kind: warband_skill
   runtime:
     scope: "LATER"
     implemented: "NO"
@@ -820,6 +822,7 @@ rules:
   applies_to:
     band: true
 - id: band--cursed-cavalcade-special-skills-duelist
+  kind: warband_skill
   runtime:
     scope: 'NO'
     implemented: 'NO'

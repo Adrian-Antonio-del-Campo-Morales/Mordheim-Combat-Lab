@@ -1,8 +1,14 @@
-from mordheim_combat_lab import Characteristics, DuelResult, FighterBuild
-from mordheim_combat_lab.ui.services import DuelExecutionSettings
-import pytest
+"""external.test_workbooks: responsabilidad extraída sin alterar las reglas."""
+from __future__ import annotations
 
-from mordheim_combat_lab.ui.workbooks import CombatLabWorkbookError, load_ui_workbook, save_workbook
+from mordheim_combat_lab.application.settings import DuelExecutionSettings
+from mordheim_combat_lab.domain.models import Characteristics
+from mordheim_combat_lab.domain.models import DuelResult
+from mordheim_combat_lab.domain.models import FighterBuild
+from mordheim_combat_lab.persistence.workbooks import CombatLabWorkbookError
+from mordheim_combat_lab.persistence.workbooks import load_ui_workbook
+from mordheim_combat_lab.persistence.workbooks import save_workbook
+import pytest as pytest
 
 
 def test_workbook_round_trip_preserves_stable_build_ids_and_result(tmp_path):

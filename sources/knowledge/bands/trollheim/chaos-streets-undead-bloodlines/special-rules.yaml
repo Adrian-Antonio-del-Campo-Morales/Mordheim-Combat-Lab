@@ -805,6 +805,7 @@ rules:
     profile_ids:
     - strigoi-vampire
 - id: strigoi-vampire--hatred-everyone
+  kind: profile_ability
   runtime:
     scope: LATER
     implemented: 'YES'
@@ -1510,6 +1511,7 @@ rules:
         kind: compiler
         id: compiler.vampiric-powers
 - id: band--vampire-power-hypnotic-gaze
+  kind: warband_skill
   runtime:
     scope: LATER
     implemented: 'NO'
@@ -1541,6 +1543,7 @@ rules:
   applies_to:
     band: true
 - id: band--von-carstein-power-dark-majesty
+  kind: warband_skill
   runtime:
     scope: LATER
     implemented: 'NO'
@@ -1569,6 +1572,7 @@ rules:
   applies_to:
     band: true
 - id: band--von-carstein-power-call-the-bats
+  kind: warband_skill
   runtime:
     scope: 'NO'
     implemented: 'NO'
@@ -1603,6 +1607,7 @@ rules:
   applies_to:
     band: true
 - id: band--von-carstein-power-summon-storm
+  kind: warband_skill
   runtime:
     scope: 'NO'
     implemented: 'NO'
@@ -1633,6 +1638,7 @@ rules:
   applies_to:
     band: true
 - id: band--blood-dragon-power-red-fury
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -1660,6 +1666,7 @@ rules:
   applies_to:
     band: true
 - id: band--blood-dragon-power-sword-master
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -1689,6 +1696,7 @@ rules:
   applies_to:
     band: true
 - id: band--blood-dragon-power-infallible
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -1716,6 +1724,7 @@ rules:
   applies_to:
     band: true
 - id: band--blood-dragon-power-strength-of-steel
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -1745,6 +1754,7 @@ rules:
   applies_to:
     band: true
 - id: band--necrarch-power-unholy-focus
+  kind: warband_skill
   runtime:
     scope: 'NO'
     implemented: 'NO'
@@ -1771,6 +1781,7 @@ rules:
   applies_to:
     band: true
 - id: band--necrarch-power-master-of-the-black-arts
+  kind: warband_skill
   runtime:
     scope: 'NO'
     implemented: 'NO'
@@ -1797,6 +1808,7 @@ rules:
   applies_to:
     band: true
 - id: band--necrarch-power-awakening
+  kind: warband_skill
   runtime:
     scope: 'NO'
     implemented: 'NO'
@@ -1829,6 +1841,7 @@ rules:
   applies_to:
     band: true
 - id: band--necrarch-power-noble-blood-of-nehekhara
+  kind: warband_skill
   runtime:
     scope: 'NO'
     implemented: 'NO'
@@ -1855,6 +1868,7 @@ rules:
   applies_to:
     band: true
 - id: band--lahmia-power-deceive
+  kind: warband_skill
   runtime:
     scope: LATER
     implemented: 'NO'
@@ -1885,6 +1899,7 @@ rules:
   applies_to:
     band: true
 - id: band--lahmia-power-seduction
+  kind: warband_skill
   runtime:
     scope: LATER
     implemented: 'NO'
@@ -1917,6 +1932,7 @@ rules:
   applies_to:
     band: true
 - id: band--lahmia-power-lost-innocence
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -1946,6 +1962,7 @@ rules:
   applies_to:
     band: true
 - id: band--strigoi-power-curse-of-the-reborn
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -1980,6 +1997,7 @@ rules:
   applies_to:
     band: true
 - id: band--strigoi-power-monstrosity
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -2007,6 +2025,7 @@ rules:
   applies_to:
     band: true
 - id: band--strigoi-power-iron-sinews
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -2034,6 +2053,7 @@ rules:
   applies_to:
     band: true
 - id: band--strigoi-power-infinite-hatred
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'

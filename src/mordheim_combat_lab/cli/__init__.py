@@ -1,1 +1,1 @@
-"""Command-line entry points for development and validation."""
+"""Entradas de línea de comandos."""

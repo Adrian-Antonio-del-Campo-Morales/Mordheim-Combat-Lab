@@ -775,6 +775,7 @@ rules:
   applies_to:
     band: true
 - id: band--mark-of-onogal
+  kind: mark
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -839,6 +840,7 @@ rules:
   applies_to:
     band: true
 - id: band--marauder-special-skills-chosen-of-chaos
+  kind: warband_skill
   runtime:
     scope: 'NO'
     implemented: 'NO'
@@ -871,6 +873,7 @@ rules:
   applies_to:
     band: true
 - id: band--marauder-special-skills-tattooed-body
+  kind: warband_skill
   runtime:
     scope: 'NO'
     implemented: 'NO'
@@ -910,6 +913,7 @@ rules:
   applies_to:
     band: true
 - id: band--marauder-special-skills-sweeping-blow
+  kind: warband_skill
   runtime:
     scope: 'NO'
     implemented: 'NO'
@@ -942,6 +946,7 @@ rules:
   applies_to:
     band: true
 - id: band--marauder-special-skills-mutant
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -976,6 +981,7 @@ rules:
   applies_to:
     band: true
 - id: band--marauder-special-skills-heart-of-the-warrior
+  kind: warband_skill
   runtime:
     scope: LATER
     implemented: 'NO'

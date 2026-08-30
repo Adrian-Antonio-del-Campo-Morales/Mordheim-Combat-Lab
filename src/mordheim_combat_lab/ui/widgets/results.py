@@ -1,5 +1,4 @@
-"""Result cards adapted from the legacy analysis-card layout."""
-
+"""ui.widgets.results: responsabilidad extraída sin alterar las reglas."""
 from __future__ import annotations
 
 from tkinter import StringVar

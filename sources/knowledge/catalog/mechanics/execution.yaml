@@ -204,6 +204,7 @@ mechanics:
     tags:
     - weapon.bagh-nakh
     armour_penetration: 1
+    strength_bonus: 1
   trigger: attack
   application: attack
   stacking: stack
@@ -243,6 +244,16 @@ mechanics:
   parameters:
     tags:
     - weapon.natural-attacks
+  trigger: attack
+  application: attack
+  stacking: stack
+- id: weapon.fist
+  handler: effect-set
+  parameters:
+    tags:
+    - weapon.fist
+    strength_bonus: -1
+    target_armour_bonus: 1
   trigger: attack
   application: attack
   stacking: stack
@@ -532,6 +543,7 @@ mechanics:
     concussion: true
     strength_bonus: 2
     priority: -1
+    critical_injury_bonus: 1
   trigger: attack
   application: attack
   stacking: stack
@@ -551,6 +563,7 @@ mechanics:
     - weapon.yari-two-handed
     two_handed: true
     parry: true
+    priority: 1
   trigger: attack
   application: attack
   stacking: stack
@@ -663,6 +676,7 @@ mechanics:
     parry: true
     armour_penetration: 1
     initiative_bonus: 1
+    weapon_skill_bonus: 1
   trigger: attack
   application: attack
   stacking: stack
@@ -1003,6 +1017,7 @@ mechanics:
     tags:
     - poison.reptile-venom
     strength_bonus: 1
+    armour_strength_modifier: -1
   trigger: attack
   application: attack
   stacking: stack

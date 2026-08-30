@@ -1142,6 +1142,7 @@ rules:
     profile_ids:
     - troll
 - id: troll--vomit-attack
+  kind: profile_ability
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -1439,6 +1440,7 @@ rules:
         kind: compiler
         id: compiler.promoted-hero-no-strength-access
 - id: band--night-goblin-special-skills-fungus-farmer
+  kind: warband_skill
   name: Fungus Farmer
   effect: 'The industrious little git has a mushroom crop back at
 
@@ -1492,6 +1494,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--night-goblin-special-skills-hide-in-shadows
+  kind: warband_skill
   name: Hide in Shadows
   effect: 'The sneaky Goblin has become an expert at
 
@@ -1533,6 +1536,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--night-goblin-special-skills-infiltrate
+  kind: warband_skill
   name: Infiltrate
   effect: 'A Night Goblin with this skill is always placed on the
 
@@ -1582,6 +1586,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--night-goblin-special-skills-netter
+  kind: warband_skill
   name: Netter
   effect: 'The Goblin applies techniques learned hunting wild
 
@@ -1643,6 +1648,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--night-goblin-special-skills-ride-squig
+  kind: warband_skill
   name: Ride Squig
   effect: 'This Goblin can ride one of the warband''s Cave
 
@@ -1772,6 +1778,7 @@ rules:
       binding: null
       reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--night-goblin-special-skills-sneaky-git
+  kind: warband_skill
   name: Sneaky Git
   effect: 'The Goblin specializes in attacking their targets from
 

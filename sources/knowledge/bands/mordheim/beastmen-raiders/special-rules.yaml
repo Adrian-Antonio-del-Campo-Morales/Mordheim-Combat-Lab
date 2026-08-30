@@ -463,6 +463,7 @@ rules:
   applies_to:
     band: true
 - id: band--beastmen-special-skills-shaggy-hide
+  kind: warband_skill
   runtime:
     scope: "YES"
     implemented: "YES"
@@ -506,6 +507,7 @@ rules:
   applies_to:
     band: true
 - id: band--beastmen-special-skills-mutant
+  kind: warband_skill
   runtime:
     scope: "YES"
     implemented: "YES"
@@ -536,6 +538,7 @@ rules:
   applies_to:
     band: true
 - id: band--beastmen-special-skills-fearless
+  kind: warband_skill
   runtime:
     scope: "LATER"
     implemented: "NO"
@@ -561,6 +564,7 @@ rules:
   applies_to:
     band: true
 - id: band--beastmen-special-skills-horned-one
+  kind: warband_skill
   runtime:
     scope: "YES"
     implemented: "YES"
@@ -587,6 +591,7 @@ rules:
   applies_to:
     band: true
 - id: band--beastmen-special-skills-bellowing-roar
+  kind: warband_skill
   runtime:
     scope: 'NO'
     implemented: 'NO'
@@ -612,6 +617,7 @@ rules:
   applies_to:
     band: true
 - id: band--beastmen-special-skills-manhater
+  kind: warband_skill
   runtime:
     scope: "LATER"
     implemented: "NO"

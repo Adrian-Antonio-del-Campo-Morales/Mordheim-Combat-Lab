@@ -363,6 +363,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--dark-elf-special-skills-infiltration
+  kind: warband_skill
   name: Infiltration
   effect: The Hero may deploy anywhere on the table at least 12" from every enemy model and must begin the battle Hidden.
   source:
@@ -392,6 +393,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--dark-elf-special-skills-fury-of-khaine
+  kind: warband_skill
   name: Fury of Khaine
   effect: If the Hero takes all current close-combat opponents Out of Action, the Hero may move up to 4". If this move brings
     the Hero into contact with another enemy, a new combat begins; that combat is resolved in the following turn and the move
@@ -425,6 +427,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--dark-elf-special-skills-strong-constitution
+  kind: warband_skill
   name: Strong Constitution
   effect: The Hero gains access to Strength skills. A Dark Elf Sorceress may never take this skill, and no more than two warriors
     in the warband may have it at the same time.
@@ -462,6 +465,7 @@ rules:
       binding: null
       reason: 'Out of scope: warband-level roster limit.'
 - id: band--dark-elf-special-skills-elven-agility
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -494,6 +498,7 @@ rules:
   applies_to:
     band: true
 - id: band--dark-elf-special-skills-poison-expert
+  kind: warband_skill
   name: Poison Expert
   effect: If the Hero does not search for Rare items after a battle, the Hero may prepare 1D3-1 doses of Black Venom. These
     doses must be used in the next battle and may not be traded or sold. The internal poison effect of Black Venom is intentionally

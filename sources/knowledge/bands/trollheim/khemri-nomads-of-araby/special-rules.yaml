@@ -132,6 +132,7 @@ rules:
       binding: null
       reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--nomad-special-skills-sand-worm
+  kind: warband_skill
   name: Sand Worm
   effect: The Hero may Hide in open desert ground without needing terrain or scenery to conceal the model. This skill cannot
     be used inside buildings.
@@ -162,6 +163,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--nomad-special-skills-run-and-shoot
+  kind: warband_skill
   name: Run and Shoot
   effect: The Hero may run and shoot in the same turn, suffering -2 To Hit instead of the normal -1 modifier for moving.
   source:
@@ -190,6 +192,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--nomad-special-skills-climate-adapted
+  kind: warband_skill
   name: Climate Adapted
   effect: The Hero ignores Heat and Infernal Heat results from the weather table.
   source:
@@ -218,6 +221,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--nomad-special-skills-contacts
+  kind: warband_skill
   name: Contacts
   effect: When searching for rare items among merchants in an oasis, the Hero gains +1 on the roll to find those items.
   source:

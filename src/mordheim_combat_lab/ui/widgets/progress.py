@@ -1,9 +1,9 @@
-"""Reusable progress and cancellation controls for background analysis runs."""
-
+"""ui.widgets.progress: responsabilidad extraída sin alterar las reglas."""
 from __future__ import annotations
 
 from threading import Event
-from tkinter import DoubleVar, StringVar
+from tkinter import DoubleVar
+from tkinter import StringVar
 from tkinter import ttk
 
 

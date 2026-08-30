@@ -339,6 +339,7 @@ rules:
       binding: null
       reason: 'Deferred subsystem: psychology or mounts.'
 - id: troll--regeneration
+  kind: profile_ability
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -419,6 +420,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: troll--troll-vomit
+  kind: profile_ability
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -590,6 +592,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--orc-special-skills-ard-ead
+  kind: warband_skill
   name: '''Ard ''Ead'
   effect: The Orc has a special 3+ save to turn a Stunned result into Knocked Down. If wearing a Helmet this save becomes
     2+ and replaces the Helmet's normal special rule.
@@ -621,6 +624,7 @@ rules:
         kind: mechanic
         id: skill.thick-skull
 - id: band--orc-special-skills-waaagh
+  kind: warband_skill
   name: Waaagh!
   effect: The Orc adds 1D6 × 0.4" + 1" to its charge movement. This is the direct inch conversion of the source's +1D6+2 cm
     rule.
@@ -651,6 +655,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--orc-special-skills-ere-we-go
+  kind: warband_skill
   name: '''Ere We Go!'
   effect: The Orc may ignore Fear and Terror tests when charging.
   source:
@@ -679,6 +684,7 @@ rules:
       binding: null
       reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--orc-special-skills-da-cunnin-plan
+  kind: warband_skill
   name: Da Cunnin' Plan
   effect: Only the Orc Boss may take this skill. The warband may re-roll one failed Rout test as long as the Boss has not
     been taken Out of Action.
@@ -707,6 +713,7 @@ rules:
       binding: null
       reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--orc-special-skills-well-ard
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'
@@ -737,6 +744,7 @@ rules:
   applies_to:
     band: true
 - id: band--orc-special-skills-eadbasher
+  kind: warband_skill
   runtime:
     scope: 'YES'
     implemented: 'YES'

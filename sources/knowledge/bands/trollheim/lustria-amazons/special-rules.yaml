@@ -339,6 +339,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--amazon-special-skills-lizard-hunter
+  kind: warband_skill
   name: Lizard Hunter
   effect: The Hero always strikes first in close combat when fighting any type of Skink, regardless of the weapon used or
     which model charged.
@@ -370,6 +371,7 @@ rules:
         kind: mechanic
         id: mechanic.strike-first-vs-skinks-always
 - id: band--amazon-special-skills-concealment
+  kind: warband_skill
   name: Concealment
   effect: When the Hero is Hidden in jungle terrain or vegetation, enemy models halve their Initiative when determining whether
     they can detect her.
@@ -400,6 +402,7 @@ rules:
       binding: null
       reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--amazon-special-skills-hypnotic-dance
+  kind: warband_skill
   name: Hypnotic Dance
   effect: At the start of the Combat phase, any enemy model that wants to attack the Hero must pass a Leadership test. If
     it fails, it may not attack that phase but may defend itself normally. Undead and Lizardmen are unaffected.
@@ -430,6 +433,7 @@ rules:
       binding: null
       reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--amazon-special-skills-animal-fury
+  kind: warband_skill
   name: Animal Fury
   effect: The Hero is immune to Fear and All Alone tests and gains +1 Attack during a turn in which she charges.
   source:
@@ -458,6 +462,7 @@ rules:
       binding: null
       reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--amazon-special-skills-elixir-of-life
+  kind: warband_skill
   name: Elixir of Life
   effect: After a battle, the Hero may re-roll her Injury roll once and must accept the second result even if it is worse.
   source:
