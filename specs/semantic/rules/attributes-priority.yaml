@@ -1,7 +1,7 @@
 schema_version: 1
 specifications:
 - id: skill.red-fury
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: permanent
   sources:
   - target: mechanic/skill.red-fury
@@ -59,7 +59,7 @@ specifications:
     - one-base
     - two-base
 - id: skill.extra-attack
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: permanent
   sources:
   - target: mechanic/skill.extra-attack
@@ -117,7 +117,7 @@ specifications:
     - one-base
     - two-base
 - id: skill.monstrous
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: permanent
   sources:
   - target: mechanic/skill.monstrous
@@ -177,7 +177,7 @@ specifications:
     - three-to-four
     - one-to-two
 - id: skill.strength-of-steel
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: contextual
   sources:
   - target: mechanic/skill.strength-of-steel
@@ -257,7 +257,7 @@ specifications:
     cases:
     - charge
 - id: skill.resilient
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: contextual
   sources:
   - target: mechanic/skill.resilient
@@ -344,7 +344,7 @@ specifications:
     cases:
     - strength-split
 - id: skill.berserker
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: contextual
   sources:
   - target: mechanic/skill.berserker
@@ -415,7 +415,7 @@ specifications:
     cases:
     - active-all-faces
 - id: skill.hatred
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: contextual
   sources:
   - target: mechanic/skill.hatred
@@ -487,7 +487,7 @@ specifications:
     cases:
     - active-all-faces
 - id: skill.infallible
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: contextual
   sources:
   - target: mechanic/skill.infallible
@@ -559,7 +559,7 @@ specifications:
     cases:
     - active-all-faces
 - id: skill.unstoppable-charge
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: contextual
   sources:
   - target: mechanic/skill.unstoppable-charge
@@ -628,7 +628,7 @@ specifications:
     cases:
     - charge
 - id: skill.monster-slayer
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: local
   sources:
   - target: mechanic/skill.monster-slayer
@@ -717,7 +717,7 @@ specifications:
     cases:
     - otherwise-impossible
 - id: skill.always-strikes-first
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: priority
   sources:
   - target: mechanic/skill.always-strikes-first
@@ -823,7 +823,7 @@ specifications:
     cases:
     - active
 - id: skill.lightning-reflexes
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: priority
   sources:
   - target: mechanic/skill.lightning-reflexes

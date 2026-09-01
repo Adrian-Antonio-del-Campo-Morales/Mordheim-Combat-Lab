@@ -34,4 +34,10 @@ def load_fixtures(root: Path | None = None) -> tuple[dict, ...]:
     ids = [spec["id"] for spec in result]
     if len(ids) != len(set(ids)):
         raise ValueError("duplicate semantic specification IDs")
+    for spec in result:
+        for name in ("question", "ruling"):
+            if name in spec and (not isinstance(spec[name], str) or not spec[name].strip()):
+                raise ValueError(f"{spec['id']}: {name} must be a non-empty string")
+        if spec.get("question") and not spec.get("ruling") and not spec.get("pending"):
+            raise ValueError(f"{spec['id']}: unresolved question requires pending")
     return tuple(result)

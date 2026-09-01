@@ -106,10 +106,13 @@ def test_remaining_selected_handlers_project_their_exact_combat_modifier():
         "lustria-lizardmen", "skink-priest", collection="trollheim",
         special_rule_ids=("band--sacred-mark-venom-glands",),
     ))
-    assert berserk.global_effects.charge_reroll_hits
+    # Berserk Charge is weapon-dependent, not a universal charge reroll.
+    assert "rule.berserk-charge" in berserk.global_effects.tags
+    assert not berserk.global_effects.charge_reroll_hits
     assert strigoi.characteristics.wounds == 3
     assert multiple.global_effects.attacks_bonus == 1
     assert putrid.global_effects.incoming_hit_modifier == -1
+    assert "rule.putrid-stench" in putrid.global_effects.tags
     assert "rule.venom-glands" in venom.main_weapon.tags
     assert venom.main_weapon.target_armour_bonus == 1
     assert venom.main_weapon.injury_modifier == 1

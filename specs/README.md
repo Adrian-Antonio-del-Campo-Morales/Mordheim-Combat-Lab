@@ -7,6 +7,7 @@ Este directorio no es parte de la KB ni del runtime distribuido.
 - `semantic/grants/`: concesiones editoriales y destinatarios.
 - `semantic/interactions/`: composiciones entre reglas.
 - `interactions.yaml`: combinaciones de orden superior requeridas.
+- `interaction-policy.yaml`: política de riesgo, exigencia y overrides revisados para interacciones.
 
 Cada especificación semántica fija fuente, interpretación, categoría, estado inicial, dados, decisiones, expectativas y mutaciones. El motor modular es el sistema bajo prueba; nunca se usa su salida para generar el valor esperado.
 

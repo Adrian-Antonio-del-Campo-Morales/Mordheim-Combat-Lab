@@ -692,9 +692,13 @@ rules:
 
       that turn.'
     es: null
+  eligibility:
+  - dwarf-troll-slayers
   applies_to:
     band: true
 - id: band--slayer-special-skills-monster-slayer
+  eligibility:
+  - dwarf-troll-slayers
   kind: warband_skill
   runtime:
     scope: "YES"
@@ -734,6 +738,8 @@ rules:
   applies_to:
     band: true
 - id: band--slayer-special-skills-berserker
+  eligibility:
+  - dwarf-troll-slayers
   kind: warband_skill
   runtime:
     scope: "YES"

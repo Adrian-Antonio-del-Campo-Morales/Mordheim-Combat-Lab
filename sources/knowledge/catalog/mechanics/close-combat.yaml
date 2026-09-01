@@ -1114,7 +1114,7 @@ armours:
   source_refs: []
 - id: armour.plate-armour
   name: Plate armour
-  summary: 'Plate armour: the simulator applies its modelled armour save and special rules.'
+  summary: Grants a 4+ armour save. A shield may be combined with it; the resulting -1 Movement is outside the close-combat duel runtime.
   base_save: 4
   engine_option: Plate armour
   engine_code: 6
@@ -1122,7 +1122,7 @@ armours:
   source_refs: []
 - id: armour.wizard-s-robe
   name: Wizard's robe
-  summary: 'Wizard''s robe: the simulator applies its modelled armour save and special rules.'
+  summary: Grants a 6+ armour save, cannot combine with other armour except a helmet, and does not prevent spellcasting.
   base_save: 6
   engine_option: Wizard's robe
   engine_code: 7
@@ -1130,7 +1130,7 @@ armours:
   source_refs: []
 - id: armour.ninja-robes
   name: Ninja robes
-  summary: 'Ninja robes: the simulator applies its modelled armour save and special rules.'
+  summary: 'Counts as Toughened Leathers (also called Hardened Leathers): grants a 6+ armour save and cannot combine with a shield.'
   base_save: 6
   engine_option: Ninja robes
   engine_code: 8
@@ -1138,7 +1138,7 @@ armours:
   source_refs: []
 - id: armour.eshin-assassin-robes
   name: Eshin assassin robes
-  summary: 'Eshin assassin robes: the simulator applies its modelled armour save and special rules.'
+  summary: Counts as Light Armour, granting a 6+ save; cannot combine with any other armour except a helmet.
   base_save: 6
   engine_option: Eshin assassin robes
   engine_code: 9
@@ -1146,8 +1146,8 @@ armours:
   source_refs: []
 - id: armour.spider-chitin-armour
   name: Spider chitin armour
-  summary: 'Spider chitin armour: the simulator applies its modelled armour save and special rules.'
-  base_save: 6
+  summary: Legacy catalogue entry. The ruling represents chitin as the spider's intrinsic 4+ natural armour, not selectable equipment.
+  base_save: null
   engine_option: Spider chitin armour
   engine_code: 10
   rules_source_url: https://mordheimer.net/docs/weapons-armour/armour
@@ -1194,7 +1194,7 @@ defences:
   - *id005
 - id: defence.sea-dragon-cloak
   name: Sea Dragon cloak
-  summary: Grants a 5+ base save in close combat and can combine with body armour.
+  summary: Grants a 5+ save in close combat and 4+ against shooting; cannot combine with other armour. Shooting is outside the current runtime.
   engine_option: Sea Dragon cloak
   source_refs:
   - *id034
@@ -1684,7 +1684,7 @@ skills:
 - id: skill.shield-strike
   name: Shield Strike
   category: special
-  summary: Gains an additional attack at the user’s Strength with poor armour penetration.
+  summary: Gains an additional attack at the user's Strength; armour is modified normally according to that Strength.
   kind: warband
   engine_option: Shield Strike
   source_refs: []
@@ -1982,7 +1982,7 @@ skills:
 - id: mechanic.energy-focus
   name: Energy Focus
   category: special
-  summary: 'Simulation convention: while unarmed, sacrifices all but one Attack and gains the same amount of Strength.'
+  summary: While unarmed, may sacrifice any number of profile Attacks and gains the same amount of Strength.
   kind: warband
   engine_option: Energy Focus
   source_refs: []
@@ -2017,7 +2017,7 @@ skills:
 - id: mechanic.spider-infested
   name: Spider Infested
   category: initiative
-  summary: 'Simulation convention: applies a cumulative Initiative penalty when an enemy misses or has an attack parried, to a minimum of 1 for the duel.'
+  summary: Applies a cumulative Initiative penalty when an enemy misses or has an attack parried; this penalty may reduce Initiative to 0 while engagement continues.
   kind: warband
   engine_option: Spider Infested
   source_refs: []

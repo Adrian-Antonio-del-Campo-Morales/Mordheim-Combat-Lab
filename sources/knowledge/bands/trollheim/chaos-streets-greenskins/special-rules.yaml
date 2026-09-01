@@ -343,7 +343,7 @@ rules:
   runtime:
     scope: 'YES'
     implemented: 'YES'
-    grant: selectable
+    grant: profile
     effects:
     - id: skill.regeneration
       scope: 'YES'

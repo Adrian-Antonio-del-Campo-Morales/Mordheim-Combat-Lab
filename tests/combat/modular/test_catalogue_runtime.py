@@ -61,8 +61,12 @@ def test_every_execution_mechanism_can_enter_the_scalar_round_pipeline():
             if family == "weapons":
                 options = ({"main_weapon_id": mechanic_id} if row.get("main_hand")
                            else {"off_hand_id": mechanic_id})
+                if mechanic_id == "weapon.lance":
+                    options["mounted"] = True
             elif family == "armours":
-                options = {"armour_id": mechanic_id}
+                options = ({"defence_ids": (mechanic_id,)}
+                           if mechanic_id == "armour.cathayan-quilted-silk"
+                           else {"armour_id": mechanic_id})
             elif family == "defences":
                 options = ({"off_hand_id": mechanic_id}
                            if mechanic_id in {"defence.shield", "defence.buckler", "defence.kite-shield"}
@@ -80,4 +84,4 @@ def test_every_execution_mechanism_can_enter_the_scalar_round_pipeline():
             state = initialize_duel(fighter, opponent, dice)
             assert resolve_round(fighter, opponent, state, dice).state.round_index == 1
             executed += 1
-    assert executed == 193
+    assert executed == 191

@@ -1,7 +1,7 @@
 schema_version: 1
 specifications:
 - id: skill.jump-up
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: local
   sources:
   - target: mechanic/skill.jump-up
@@ -411,7 +411,7 @@ specifications:
     - ordinary-1
     - ordinary-2
 - id: skill.unarmed-fighting
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: contextual
   sources:
   - target: mechanic/skill.unarmed-fighting
@@ -630,7 +630,7 @@ specifications:
     - extra-attack
     - no-unarmoured-save
 - id: skill.expert-swordsman
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: contextual
   sources:
   - target: mechanic/skill.expert-swordsman
@@ -788,7 +788,7 @@ specifications:
     cases:
     - charge-weapon.sword
 - id: skill.strongman
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: priority
   sources:
   - target: mechanic/skill.strongman

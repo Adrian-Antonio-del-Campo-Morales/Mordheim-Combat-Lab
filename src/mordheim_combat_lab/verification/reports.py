@@ -4,6 +4,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from mordheim_combat_lab.verification.inventory import Obligation
 from mordheim_combat_lab.verification.operators import OPERATOR_CHECKS
+from mordheim_combat_lab.verification.interactions import InteractionAssessment
 
 
 class EvidenceMismatch(AssertionError):
@@ -45,11 +46,19 @@ class SemanticReport:
     passed_operator_checks: tuple[str, ...] = ()
     verified_higher_order_interactions: tuple[tuple[str, ...], ...] = ()
     pending_higher_order_interactions: tuple[tuple[str, ...], ...] = ()
+    interaction_assessments: tuple[InteractionAssessment, ...] = ()
+    interaction_policy: str = "critical_and_high_required"
+
+    @property
+    def required_pending_interactions(self) -> tuple[InteractionAssessment, ...]:
+        return tuple(item for item in self.interaction_assessments
+                     if item.verification_requirement == "required"
+                     and item.status not in {"tested", "covered_by_composition", "independent", "illegal"})
 
     @property
     def semantic_complete(self) -> bool:
         return (bool(self.obligations) and not self.pending and not self.errors
-                and not self.unclassified_bindings and not self.pending_interactions
+                and not self.required_pending_interactions
                 and set(self.passed_integrations) == set(INTEGRATION_CHECKS)
                 and set(self.passed_operator_checks) == set(OPERATOR_CHECKS)
                 and not self.pending_higher_order_interactions)

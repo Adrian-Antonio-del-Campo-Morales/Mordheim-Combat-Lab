@@ -1,7 +1,7 @@
 schema_version: 1
 specifications:
 - id: core-two-weapons
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: contextual
   sources:
   - target: core/combat-two-weapons
@@ -133,7 +133,7 @@ specifications:
     - ordinary-two-weapons
     - frenzy-before-offhand
 - id: core-critical-hits
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: stateful
   sources:
   - target: core/combat-critical-hits
@@ -243,7 +243,7 @@ specifications:
     cases:
     - two-natural-sixes-one-critical
 - id: core-parry
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: stateful
   sources:
   - target: core/combat-parry
@@ -362,7 +362,7 @@ specifications:
     cases:
     - highest-hit-consumes-parry
 - id: core-combat-order
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: priority
   sources:
   - target: core/combat-order
@@ -480,7 +480,7 @@ specifications:
     cases:
     - charge-before-fast
 - id: core-injury-states
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: stateful
   sources:
   - target: core/combat-injury-states

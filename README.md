@@ -15,11 +15,12 @@ python -m mordheim_combat_lab
 python -m mordheim_combat_lab ui
 python -m mordheim_combat_lab validate
 python -m mordheim_combat_lab verify
+python -m mordheim_combat_lab audit
 python -m mordheim_combat_lab benchmark -n 500000
 python -m pytest -q
 ```
 
-`validate` comprueba estructura y conexiones. `verify` ejecuta evidencia semántica independiente; `verify --require-complete` es la puerta estricta. El informe ejecutable, no una cifra copiada aquí, es la fuente del estado actual.
+`validate` comprueba estructura y conexiones. `verify` ejecuta evidencia semántica independiente; `verify --require-complete` es la puerta estricta. `audit` genera en `outputs/audit/` un CSV con scope, implementación y evidencia por regla. El informe ejecutable, no una cifra copiada aquí, es la fuente del estado actual.
 
 ## Mapa del proyecto
 

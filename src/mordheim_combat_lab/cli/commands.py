@@ -74,6 +74,11 @@ def verify_command(args) -> int:
               f"{len(semantic.pending)} pending; "
               f"{sum(len(item.passed_cases) for item in semantic.fixtures)} passed cases; "
               f"{sum(len(item.killed_mutations) for item in semantic.fixtures)} detected mutations")
+        required = [item for item in semantic.interaction_assessments
+                    if item.verification_requirement == "required"]
+        print(f"interaction_policy={semantic.interaction_policy}; "
+              f"{len(required) - len(semantic.required_pending_interactions)}/{len(required)} required interactions covered; "
+              f"{len(semantic.required_pending_interactions)} required pending")
         for error in (*structural.errors, *semantic.errors):
             print(f"FAIL: {error}")
         if semantic.pending:
@@ -100,6 +105,19 @@ def benchmark_command(args) -> int:
     return 0
 
 
+def audit_command(args) -> int:
+    from mordheim_combat_lab.verification.audit_export import generate_audit
+
+    path = generate_audit(
+        knowledge=Path(args.knowledge).resolve() if args.knowledge else None,
+        specs=Path(args.specs).resolve() if args.specs else None,
+        output=Path(args.output).resolve() if args.output else None,
+        scope=args.scope, status=args.status, review_status=args.review_status,
+    )
+    print(path.resolve())
+    return 0
+
+
 def ui_command(_args) -> int:
     from mordheim_combat_lab.ui.app import main
     return int(main() or 0)
@@ -120,6 +138,15 @@ def build_parser() -> ArgumentParser:
     verification.add_argument("--json", action="store_true")
     verification.add_argument("--require-complete", action="store_true")
     verification.set_defaults(handler=verify_command)
+    audit = commands.add_parser("audit", help="generar el inventario auditable de reglas")
+    audit.add_argument("--knowledge")
+    audit.add_argument("--specs")
+    audit.add_argument("--output")
+    audit.add_argument("--scope", choices=("YES", "NO", "LATER"))
+    audit.add_argument("--status", choices=("verified", "pending", "out_of_scope"))
+    audit.add_argument("--review-status", choices=("ready", "blocked_by_dependency", "needs_ruling", "verified", "not_applicable"),
+                       help="filtrar por estado de revisión; needs_ruling muestra decisiones sin respuesta")
+    audit.set_defaults(handler=audit_command)
     benchmark = commands.add_parser("benchmark", help="medir el motor vectorizado")
     benchmark.add_argument("-n", "--simulations", type=int, default=500_000)
     benchmark.add_argument("--seed", type=int, default=2026)

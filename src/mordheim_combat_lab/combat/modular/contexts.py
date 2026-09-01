@@ -37,9 +37,11 @@ def _attack_strength(
     first_round: bool, charging: bool,
 ) -> tuple[int, int]:
     strength = effect.fixed_strength or state.strength + effect.strength_bonus
-    if phases.has_tag(effect, "skill.unarmed-fighting") and phases.has_tag(weapon, "weapon.fist"):
+    if phases.ignores_unarmed_penalties(effect) and phases.has_tag(weapon, "weapon.fist"):
         strength += 1
-    if phases.has_tag(effect, "mechanic.energy-focus") and phases.has_tag(weapon, "weapon.fist"):
+    if phases.has_tag(effect, "mechanic.energy-focus") and any(
+        phases.has_tag(weapon, tag) for tag in ("weapon.fist", "weapon.natural-attacks")
+    ):
         strength += effect.energy_focus_attacks
     if phases.has_tag(weapon, "rule.scorpion-tail") and defender.global_effects.poison_immunity:
         strength = 2
@@ -49,7 +51,9 @@ def _attack_strength(
     if first_round or phases.has_tag(effect, "skill.tireless") or phases.has_tag(effect, "skill.mighty-biceps") or retains:
         strength += weapon.first_round_strength_bonus
     if first_round and charging:
-        strength += effect.charge_strength_bonus
+        mounted_only = any(phases.has_tag(weapon, tag) for tag in ("weapon.lance", "weapon.boar-spear"))
+        if not mounted_only or attacker.mounted:
+            strength += effect.charge_strength_bonus
     armour_strength = strength + effect.armour_strength_modifier
     strength = max(1, strength + defender.global_effects.incoming_strength_modifier)
     return strength, armour_strength
@@ -67,6 +71,11 @@ def _hit_reroll(
     return bool(
         effect.reroll_hits
         or charging and effect.charge_reroll_hits
+        or charging and phases.has_tag(effect, "rule.berserk-charge") and (
+            any(phases.has_tag(weapon, tag) for tag in (
+                "weapon.axe", "weapon.dwarf-axe", "weapon.double-handed-weapon",
+            ))
+        )
         or first_round and phases.has_tag(effect, "skill.hatred")
         or first_round and phases.has_tag(effect, "mechanic.amazon-isolationists") and amazon_enemy
         or charging and phases.has_tag(effect, "skill.infallible")
@@ -83,7 +92,9 @@ def _hit_reroll(
             phases.has_tag(weapon, tag) for tag in ("weapon.dagger", "weapon.yambiya")
         )
         or phases.has_tag(effect, "skill.weapons-of-the-north") and (
-            weapon.two_handed or any(phases.has_tag(weapon, tag) for tag in ("weapon.axe", "weapon.dwarf-axe"))
+            any(phases.has_tag(weapon, tag) for tag in (
+                "weapon.axe", "weapon.dwarf-axe", "weapon.double-handed-weapon",
+            ))
         )
         or first_round and phases.has_tag(effect, "skill.duellist")
         or phases.has_tag(effect, "skill.virtue-of-valour")
@@ -97,14 +108,20 @@ def _parry_context(
 ) -> ParryContext | None:
     if defender_state.parries_remaining <= 0:
         return None
+    native_parry = defender.main_weapon.parry or bool(defender.off_hand and defender.off_hand.parry)
     match_allowed = any(phases.has_tag(defender.global_effects, tag) for tag in (
-        "skill.sword-master", "skill.swordmaster", "skill.defensive-stance", "skill.unbeatable-warrior",
-    ))
+        "skill.sword-master", "skill.swordmaster", "skill.unbeatable-warrior",
+    )) or (
+        phases.has_tag(defender.global_effects, "skill.defensive-stance") and native_parry
+    )
     starblade = any(
         phases.has_tag(weapon, "weapon.starblade")
         for weapon in (defender.main_weapon, defender.off_hand or EffectSet())
     )
-    reroll = phases.has_tag(defender.global_effects, "skill.miniath") or phases.has_tag(defender.global_effects, "skill.swordmaster")
+    # Miniath grants a parry to any weapon, but only native parrying weapons
+    # gain the reroll (Lustria, High Elf Special Skills / Miniath).
+    # Hochland Swordmaster changes equality only; it grants no reroll.
+    reroll = native_parry and phases.has_tag(defender.global_effects, "skill.miniath")
     sword_and_buckler = (
         any(phases.has_tag(weapon, "weapon.sword") for weapon in (defender.main_weapon, defender.off_hand or EffectSet()))
         and any(phases.has_tag(weapon, "defence.buckler") for weapon in (
@@ -116,7 +133,10 @@ def _parry_context(
         for weapon in (defender.main_weapon, defender.off_hand)
         if weapon is not None
     ) and defender.off_hand is not None
-    reroll = reroll or sword_and_buckler or phases.has_tag(defender.global_effects, "skill.sword-master") and dwarf_axes
+    sword_master_reroll = phases.has_tag(defender.global_effects, "skill.sword-master") and (
+        not phases.has_tag(defender.global_effects, "rule.dwarf-axe-parry-reroll") or dwarf_axes
+    )
+    reroll = reroll or sword_and_buckler or sword_master_reroll
     reroll = reroll or phases.has_tag(defender.main_weapon, "weapon.double-bladed-sword")
     return ParryContext(
         hit_roll, strength, defender_state.strength,
@@ -125,10 +145,12 @@ def _parry_context(
         fixed_target=4 if starblade else None,
         reroll=reroll,
         key=f"{key}.parry",
+        can_parry_six=phases.has_tag(defender.global_effects, "rule.blood-dragon-sword-master"),
     )
 
 
-def _injury_context(defender: CompiledFighter, effect: EffectSet, key: str) -> InjuryContext:
+def _injury_context(defender: CompiledFighter, effect: EffectSet, key: str,
+                    defender_state: FighterState | None = None) -> InjuryContext:
     global_effects = defender.global_effects
     return InjuryContext(
         modifier=effect.injury_modifier + int(
@@ -138,12 +160,17 @@ def _injury_context(defender: CompiledFighter, effect: EffectSet, key: str) -> I
         critical_bonus=0,
         out_threshold=global_effects.out_of_action_threshold,
         injury_profile=defender.injury_profile,
-        hard_to_kill=any(phases.has_tag(global_effects, tag) for tag in ("skill.hard-to-kill", "skill.tough-as-steel")),
+        hard_to_kill=phases.has_tag(global_effects, "skill.hard-to-kill"),
+        true_grit=phases.has_tag(global_effects, "skill.tough-as-steel"),
         concussion=effect.concussion,
         concussion_immune=phases.has_tag(global_effects, "concussion_immune"),
         fragile=phases.has_tag(global_effects, "fragile_halflings"),
-        poisonous=phases.has_tag(global_effects, "poisonous_injury"),
+        # Poisonous changes injuries inflicted by the attack, not injuries
+        # received by the creature carrying the trait.
+        poisonous=(phases.has_tag(effect, "poisonous_injury")
+                   and not (global_effects.poison_immunity or phases.has_tag(global_effects, "poison_immune"))),
         survivor=phases.has_tag(global_effects, "survivor"),
+        initial_condition=(defender_state.condition if defender_state is not None else phases.Condition.STANDING),
         head_crusher=phases.has_tag(effect, "skill.head-crusher"),
         ignore_pain=phases.has_tag(global_effects, "skill.ignore-pain"),
         jump_up=phases.has_tag(global_effects, "skill.jump-up"),
@@ -163,6 +190,8 @@ def prepare_hit_context(
     if first_round and charging:
         ws += effect.charge_ws_bonus
     modifier = effect.hit_modifier + defender.global_effects.incoming_hit_modifier
+    if phases.has_tag(defender.global_effects, "rule.putrid-stench") and phases.has_tag(attacker.global_effects, "undead_or_possessed"):
+        modifier += 1
     ws += int(phases.has_tag(effect, "skill.knife-fighting") and any(
         phases.has_tag(weapon, tag) for tag in ("weapon.dagger", "weapon.yambiya")
     ))
@@ -207,9 +236,9 @@ def prepare_wound_context(
     strength, _ = _attack_strength(attacker, defender, attacker_state, weapon, effect, first_round, charging)
     poison_blocked = defender.global_effects.poison_immunity or phases.has_tag(defender.global_effects, "poison_immune")
     automatic = phases.has_tag(effect, "effect.automatic-wound") or (
-        hit_roll == 6 and (phases.has_tag(effect, "wight_blades")
-                          or phases.has_tag(effect, "poison.black-lotus") and not poison_blocked)
+        hit_roll == 6 and phases.has_tag(effect, "poison.black-lotus") and not poison_blocked
     )
+    failure_still_wounds = hit_roll == 6 and phases.has_tag(effect, "wight_blades")
     maximum = min(effect.maximum_wound_target, 4) if phases.has_tag(effect, "skill.monster-slayer") else effect.maximum_wound_target
     modifier = effect.wound_modifier + int(
         phases.has_tag(weapon, "weapon.sigmarite-hammer") and phases.has_tag(defender.global_effects, "undead_or_possessed")
@@ -227,6 +256,7 @@ def prepare_wound_context(
         critical_threshold=critical_threshold,
         critical_available=attacker_state.critical_available and not phases.has_tag(effect, "effect.no-critical"),
         critical_on_reroll=poison_blocked or not phases.has_tag(effect, "poison.devil-s-toxin"),
+        failure_still_wounds=failure_still_wounds,
         key=key,
     )
 
@@ -246,7 +276,7 @@ def prepare_armour_context(
         armour_strength, effect.armour_penetration,
         effect.target_armour_bonus - (
             weapon.target_armour_bonus
-            if phases.has_tag(weapon, "weapon.fist") and phases.has_tag(effect, "skill.unarmed-fighting") else 0
+            if phases.has_tag(weapon, "weapon.fist") and phases.ignores_unarmed_penalties(effect) else 0
         ),
         effect.ignore_armour, defender.global_effects.armour_save_floor,
         defender.global_effects.armour_cannot_be_ignored,

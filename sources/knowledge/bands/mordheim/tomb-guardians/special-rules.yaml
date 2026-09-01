@@ -374,10 +374,16 @@ rules:
       binding: null
       reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--no-pain
+  eligibility:
+  - acolytes
+  - liche-priest
+  - skeleton-warriors
+  - tomb-guardians
+  - tomb-lord
   runtime:
     scope: 'YES'
     implemented: 'YES'
-    grant: profile
+    grant: band
     effects:
     - id: skill.ignore-pain
       scope: 'YES'
@@ -425,10 +431,11 @@ rules:
       binding: null
       reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--immune-to-poison
+  eligibility: [acolytes, liche-priest, skeleton-warriors, tomb-guardians, tomb-lord]
   runtime:
     scope: 'YES'
     implemented: 'YES'
-    grant: profile
+    grant: band
     effects:
     - id: trait.poison-immune
       scope: 'YES'

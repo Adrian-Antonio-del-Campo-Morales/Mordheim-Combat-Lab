@@ -16,6 +16,7 @@ import mordheim_combat_lab.combat.modular.state as combat_state
 import mordheim_combat_lab.combat.phases as phases
 from mordheim_combat_lab.construction.compiler import compile_fighter
 from mordheim_combat_lab.construction.selection import _applicable_rules
+from mordheim_combat_lab.construction.selection import available_special_rules
 from mordheim_combat_lab.domain.dice import DiceSource
 from mordheim_combat_lab.domain.models import Characteristics
 from mordheim_combat_lab.domain.models import FighterBuild
@@ -77,6 +78,11 @@ def _mutate(value, path: list[str], replacement):
         if isinstance(value, tuple):
             return tuple(replacement)
         return replacement
+    if isinstance(value, (tuple, list)) and path[0].isdigit():
+        index = int(path[0])
+        changed = list(value)
+        changed[index] = _mutate(changed[index], path[1:], replacement)
+        return tuple(changed) if isinstance(value, tuple) else changed
     return replace(value, **{path[0]: _mutate(getattr(value, path[0]), path[1:], replacement)})
 
 
@@ -96,12 +102,32 @@ def execute_case(case: dict, root: Path, dice: DiceSource,
                 defender = _mutate(defender, path, change["value"])
     output = {"attacker": attacker, "defender": defender}
     operation = case["operation"]
-    if operation in {"compile", "grant", "selectable_grant", "general_skill_access"} and case.get("decisions"):
+    if operation in {"compile", "grant", "selectable_grant", "general_skill_access", "equipment_choices", "selection_choices"} and case.get("decisions"):
         raise ValueError("construction cases cannot request combat decisions")
-    if operation == "general_skill_access":
+    if operation in {"equipment_choices", "selection_choices"}:
+        accepted, rejected = [], {}
+        allowed_fields = ({"special_rule_ids", "skill_ids", "variant_ids", "energy_focus_attacks"}
+                          if operation == "selection_choices" else
+                          {"main_weapon_id", "off_hand_id", "armour_id", "defence_ids", "extra_hand_id",
+                           "main_poison_id", "off_poison_id", "preparation_ids",
+                           "main_material_id", "off_material_id", "mounted"})
+        for name, equipment in case["context"]["choices"].items():
+            if set(equipment) - allowed_fields:
+                raise ValueError(f"{operation} contains unsupported construction fields")
+            try:
+                _build({**case.get("attacker", {}), **equipment}, root)
+            except ValueError as error:
+                rejected[name] = str(error)
+            else:
+                accepted.append(name)
+        output["result"] = {"accepted": sorted(accepted), "rejected": rejected}
+        return _plain(output)
+    if operation in {"general_skill_access", "special_skill_access"}:
         excluded = {row["id"] for row in load_runtime_scope("mordheim", root).get("mechanic_exclusions", [])}
         candidates = [row["id"] for row in load_skills("mordheim", root)
-                      if row.get("kind") == "general" and row["id"] not in excluded]
+                      if ((row.get("kind") == "general" if operation == "general_skill_access"
+                           else row.get("category") == "special")
+                          and row["id"] not in excluded)]
         accepted = []
         for skill in candidates:
             build = dict(case.get("attacker", {}), skill_ids=[skill])
@@ -114,17 +140,35 @@ def execute_case(case: dict, root: Path, dice: DiceSource,
                 accepted.append(skill)
         output["result"] = {"skills": sorted(accepted)}
         return _plain(output)
+    if operation == "missile_capacity":
+        output["result"] = {"limit": attacker.missile_weapon_limit}
+        return _plain(output)
+    if operation == "trait_presence":
+        output["result"] = {"present": phases.has_tag(attacker.global_effects, case["context"]["tag"])}
+        return _plain(output)
+    if operation == "construction_tag_presence":
+        output["result"] = {"present": case["context"]["tag"] in attacker.construction_tags}
+        return _plain(output)
+    if operation == "special_rule_access":
+        values = {"ruleset": "mordheim", **case.get("attacker", {})}
+        build = FighterBuild(**values)
+        output["result"] = {"rules": list(available_special_rules(build, root))}
+        return _plain(output)
     if operation == "selectable_grant":
         build = case.get("defender", {})
         package = next(band for band in load_bands(build.get("collection", "mordheim"), root)
                        if band.band["id"] == build["band_id"])
         rule_id = case["context"]["rule_id"]
+        prerequisites = list(case["context"].get("prerequisite_rule_ids", ()))
         recipients = []
         for profile in package.profiles:
             try:
-                _build({**build, "profile_id": profile["id"], "special_rule_ids": [rule_id]}, root)
+                _build({**build, "profile_id": profile["id"],
+                        "special_rule_ids": [*prerequisites, rule_id]}, root)
             except ValueError as error:
-                if "special rule is not available" not in str(error):
+                unavailable_prerequisite = bool(build.get("skill_ids")) and "skills are not available" in str(error)
+                forbidden_mutation = rule_id.startswith("band--mutations-") and "mutations are available only" in str(error)
+                if "special rule is not available" not in str(error) and not unavailable_prerequisite and not forbidden_mutation:
                     raise
             else:
                 recipients.append(profile["id"])
@@ -154,12 +198,37 @@ def execute_case(case: dict, root: Path, dice: DiceSource,
     if operation == "strength":
         strength, armour = contexts._attack_strength(attacker, defender, a, weapon, effect, first, charging)
         output["result"] = {"wound": strength, "armour": armour}
+    elif operation == "off_hand_strength":
+        if attacker.off_hand is None:
+            raise ValueError("off_hand_strength requires an off-hand weapon")
+        weapon = contexts.weapon_against_opponent(attacker, defender, attacker.off_hand)
+        effect = contexts._combined_effect(attacker, weapon)
+        strength, armour = contexts._attack_strength(attacker, defender, a, weapon, effect, first, charging)
+        output["result"] = {"wound": strength, "armour": armour}
+    elif operation == "off_hand_armour":
+        if attacker.off_hand is None:
+            raise ValueError("off_hand_armour requires an off-hand weapon")
+        weapon = contexts.weapon_against_opponent(attacker, defender, attacker.off_hand)
+        effect = contexts._combined_effect(attacker, weapon)
+        ctx = contexts.prepare_armour_context(attacker, defender, a, d, weapon, effect,
+            first_round=first, charging=charging, key="armour")
+        output.update(context=ctx, result=phases.resolve_armour(ctx, dice))
     elif operation == "hit":
         ctx = contexts.prepare_hit_context(attacker, defender, a, d, weapon, effect,
                                             first_round=first, charging=charging, key="hit")
         output.update(context=ctx, result=phases.resolve_hit(ctx, dice))
+    elif operation == "characteristic_test":
+        passed = phases._characteristic_test(
+            context["value"], dice, "test.characteristic",
+            six_fails=context.get("six_fails", False),
+            reroll=phases.has_tag(attacker.global_effects, "skill.blessed-sight"),
+        )
+        output["result"] = {"passed": passed}
     elif operation == "special_save":
-        ctx = contexts.prepare_special_save_context(defender, effect, key="special")
+        incoming = effect
+        if context.get("incoming_tags"):
+            incoming = replace(incoming, tags=tuple(context["incoming_tags"]))
+        ctx = contexts.prepare_special_save_context(defender, incoming, key="special")
         output.update(context=ctx, result=phases.resolve_special_save(ctx, dice))
     elif operation == "wound":
         ctx = contexts.prepare_wound_context(attacker, defender, a, d, weapon, effect,
@@ -185,16 +254,79 @@ def execute_case(case: dict, root: Path, dice: DiceSource,
     elif operation == "attacks":
         ctx = phases.AttackPoolContext(attacker, **context)
         output.update(context=ctx, result=phases.build_attacks(ctx))
+    elif operation == "opposed_attacks":
+        ctx = phases.AttackPoolContext(attacker, **context)
+        attacks = phases.build_attacks(ctx).attacks
+        attacks = rounds.apply_opponent_attack_modifiers(
+            attacker, defender, attacks, first_round=context.get("first_round", False)
+        )
+        output.update(context=ctx, result={"attacks": attacks})
+    elif operation == "weapon_attack_count":
+        ctx = phases.AttackPoolContext(attacker, **{
+            key: value for key, value in context.items() if key in {
+                "first_round", "charging", "charged", "frenzy", "wounded",
+                "attack_penalty", "base_attacks",
+            }
+        })
+        attacks = phases.build_attacks(ctx).attacks
+        attacks = rounds.apply_round_weapon_attack_modifiers(
+            attacker, defender, attacks,
+            first_round=context.get("first_round", False),
+            charging=context.get("charging", False),
+            charged=context.get("charged", False),
+        )
+        output.update(context=ctx, result={"attacks": attacks})
+    elif operation == "spawn_attacks":
+        output["result"] = {"attacks": rounds.resolve_spawn_attack_count(
+            attacker, context.get("ordinary_count", 1), dice, "spawn-attacks"
+        )}
     elif operation == "allocate":
         count = phases.build_attacks(phases.AttackPoolContext(attacker, **context)).attacks
         output["result"] = {"count": count, "weapons": pools.allocate_attack_weapons(
             attacker, count, first, choices, key="test")}
     elif operation == "injury":
-        ctx = contexts._injury_context(defender, effect, "test")
+        ctx = contexts._injury_context(defender, effect, "test", d)
         output.update(context=ctx, result=phases.resolve_injury(ctx, dice))
+    elif operation == "stun_reaction":
+        ctx = phases.StunReactionContext(
+            phases.Condition[context.get("condition", "STUNNED")],
+            defender.global_effects.thick_skull,
+            defender.helmet_save,
+            "test",
+        )
+        output.update(context=ctx, result=phases.resolve_stun_reaction(ctx, dice))
+    elif operation == "injury_reaction":
+        injury_ctx = contexts._injury_context(defender, effect, "test", d)
+        injury = phases.resolve_injury(injury_ctx, dice)
+        reaction_ctx = phases.StunReactionContext(
+            injury.condition, defender.global_effects.thick_skull, defender.helmet_save, "test"
+        )
+        reaction = phases.resolve_stun_reaction(reaction_ctx, dice)
+        output["result"] = {"injury": injury, "reaction": reaction, "condition": reaction.condition}
+    elif operation == "spines":
+        a, d, outcomes = aftermath._spines(attacker, defender, a, d, dice, "test.spines")
+        output["result"] = {"attacker": a, "defender": d, "attacks": outcomes}
+    elif operation == "netter":
+        output["result"] = aftermath._netter(attacker, defender, a, d, dice, "test.netter")
+    elif operation == "force_of_will":
+        output["result"] = aftermath._force_of_will(
+            attacker, a, dice, "test.force", sustain=context.get("sustain", False)
+        )
+    elif operation == "black_hunger":
+        after, outcomes = aftermath._black_hunger(attacker, a, dice, "test.black-hunger")
+        output["result"] = {"attacker": after, "attacks": outcomes}
+    elif operation == "extra_attack":
+        weapon = attacker.extra_attacks[context.get("index", 0)]
+        output["result"] = attack_resolution.resolve_reference_attack(
+            attacker, defender, a, d, weapon, dice, key="test")
+    elif operation == "attack_reaction":
+        outcome = attack_resolution.resolve_reference_attack(
+            attacker, defender, a, d, weapon, dice, key="test")
+        output["result"] = aftermath._react_to_wound(attacker, defender, outcome, dice, "test")
     elif operation == "attack":
         output["result"] = attack_resolution.resolve_reference_attack(
-            attacker, defender, a, d, weapon, dice, key="test", **context)
+            attacker, defender, a, d, weapon, dice, key="test",
+            decisions=choices if case.get("decisions") else None, **context)
     elif operation in {"pool", "pool_recovery"}:
         a, d, attack_outcomes = pools._resolve_attack_pool(
             attacker, defender, a, d, context.get("count", a.attacks), dice,
@@ -204,6 +336,34 @@ def execute_case(case: dict, root: Path, dice: DiceSource,
             after_a, _ = aftermath._start_round_state(attacker, a)
             after_d, _ = aftermath._start_round_state(defender, d)
             output["result"]["after_recovery"] = {"attacker": after_a, "defender": after_d}
+    elif operation == "spider_priority":
+        a, d, attack_outcomes = pools._resolve_attack_pool(
+            attacker, defender, a, d, context.get("count", a.attacks), dice,
+            key="test", first_round=first, charging=charging, decisions=choices,
+        )
+        priority = phases.resolve_priority(phases.PriorityContext(
+            attacker, defender,
+            initiative_penalty=a.initiative_penalty,
+            initiative_floor=a.initiative_floor,
+        ))
+        output["result"] = {"attacker": a, "defender": d, "attacks": attack_outcomes,
+                            "priority": priority}
+    elif operation == "replacement_pool":
+        selected = rounds.select_attack_replacement(
+            attacker, first_round=first, charging=charging,
+            decisions=choices, key="test",
+        )
+        count = phases.build_attacks(phases.AttackPoolContext(
+            selected, first_round=first, charging=charging,
+            frenzy=a.frenzy, attack_penalty=a.attack_penalty,
+            base_attacks=a.attacks,
+        )).attacks
+        a, d, attack_outcomes = pools._resolve_attack_pool(
+            selected, defender, a, d, count, dice, key="test",
+            first_round=first, charging=charging, decisions=choices,
+        )
+        output["result"] = {"selected": selected, "count": count,
+                            "attacker": a, "defender": d, "attacks": attack_outcomes}
     elif operation == "bear_hug":
         ctx = phases.BearHugContext(context.get("successful_hits", 2), a.strength,
                                     d.strength, key="hug")
@@ -238,18 +398,33 @@ def check_case(case: dict, root: Path, mutation: dict | None = None):
         "attacks": {field.name for field in fields(phases.AttackPoolContext)} - {"fighter"},
     }
     context_fields = {
-        "compile": set(), "grant": {"rule_id"}, "selectable_grant": {"rule_id"},
-        "general_skill_access": set(), "initialize": set(), "injury": set(), "special_save": set(),
+        "compile": set(), "grant": {"rule_id"},
+        "selectable_grant": {"rule_id", "prerequisite_rule_ids"},
+        "general_skill_access": set(), "special_skill_access": set(), "special_rule_access": set(),
+        "trait_presence": {"tag"},
+        "construction_tag_presence": {"tag"},
+        "equipment_choices": {"choices"}, "selection_choices": {"choices"}, "missile_capacity": set(), "initialize": set(), "injury": set(), "special_save": {"incoming_tags"},
+        "characteristic_test": {"value", "six_fails"},
+        "stun_reaction": {"condition"}, "injury_reaction": set(),
         "strength": {"first_round", "charging"}, "hit": {"first_round", "charging"},
         "wound": {"first_round", "charging", "hit_roll"},
         "armour": {"first_round", "charging"}, "parry": {"first_round", "charging", "hit_roll"},
         "pool": {"first_round", "charging", "count"},
+        "spider_priority": {"first_round", "charging", "count"},
+        "replacement_pool": {"first_round", "charging"},
+        "spines": set(), "extra_attack": {"index"}, "attack_reaction": set(),
         "pool_recovery": {"first_round", "charging", "count"},
         "bear_hug": {"successful_hits"}, "recovery": {"rounds"},
+        "netter": set(), "black_hunger": set(), "force_of_will": {"sustain"},
         "round": {"round_index", "first_charged"},
         "attack": {"first_round", "charging", "helpless_at_start", "hit_only", "defences_resolved",
                    "defences_only", "parry_allowed"},
-        "acting_order": phase_fields["priority"], "allocate": phase_fields["attacks"], **phase_fields,
+        "acting_order": phase_fields["priority"], "allocate": phase_fields["attacks"],
+        "opposed_attacks": phase_fields["attacks"],
+        "weapon_attack_count": phase_fields["attacks"],
+        "spawn_attacks": {"ordinary_count"},
+        "off_hand_strength": {"first_round", "charging"},
+        "off_hand_armour": {"first_round", "charging"}, **phase_fields,
     }
     operation = case["operation"]
     if operation not in context_fields:

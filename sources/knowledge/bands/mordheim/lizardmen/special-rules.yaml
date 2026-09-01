@@ -278,7 +278,9 @@ rules:
       last, after all other attacks, including attacks made with double-handed weapons.
     es: null
   applies_to:
-    band: true
+    profile_ids:
+    - saurus-totem-warrior
+    - saurus-braves
 - id: band--cold-blooded
   runtime:
     scope: "LATER"

@@ -625,6 +625,9 @@ def _resolve_weapon(attacker: CompiledFighter, defender: CompiledFighter, weapon
     if not injury_rows_list:
         return
     injury_rows = np.asarray(injury_rows_list, dtype=np.int64)
+    if defender.injury_profile == 4:
+        defender_state.condition[np.unique(injury_rows)] = OUT
+        return
     injury_criticals = np.asarray(injury_critical_list, dtype=bool)
     injury_rolls = rng.integers(1, 7, injury_rows.size) + effect.injury_modifier + int(knife_fighting)
     critical_bonus=2+int(has(effect,"skill.web-of-steel"))+effect.critical_injury_bonus

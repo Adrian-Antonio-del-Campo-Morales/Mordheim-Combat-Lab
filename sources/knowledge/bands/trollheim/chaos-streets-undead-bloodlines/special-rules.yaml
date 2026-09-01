@@ -1454,7 +1454,7 @@ rules:
         kind: trait
         id: trait.injury-profile
         parameters:
-          value: 2
+          value: 4
 - id: band--choose-bloodline
   name: Choose a Bloodline
   effect: When the warband is created, choose exactly one Vampire bloodline. The choice cannot later be changed. The selected
@@ -1475,15 +1475,14 @@ rules:
   applies_to:
     band: true
   runtime:
-    scope: 'YES'
-    implemented: 'YES'
+    scope: 'NO'
+    implemented: 'NO'
     grant: band
     effects:
     - id: compiler.choose-a-bloodline
-      scope: 'YES'
-      binding:
-        kind: compiler
-        id: compiler.choose-a-bloodline
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: choosing one immutable Vampire leader and excluding other Vampires is a warband-roster and campaign constraint.'
 - id: band--vampiric-powers
   name: Vampiric Powers
   effect: When the Vampire gains a new skill, it may choose one Vampiric Power from its own bloodline instead of a normal

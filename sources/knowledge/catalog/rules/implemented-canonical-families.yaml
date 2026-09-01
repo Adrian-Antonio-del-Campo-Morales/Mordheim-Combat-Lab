@@ -285,13 +285,13 @@ families:
   members:
   - trollheim-cult-of-the-possessed/band--mutation-purchase
   - cult-of-the-possessed/band--mutations
-- id: compiler.possessed-requires-one-or-more-mutations-at-recruitment
+- id: compiler.possessed-optional-mutations-at-recruitment
   kind: compiler
   implemented: 'YES'
   basis: unique-effect
   members:
   - cult-of-the-possessed/the-possessed--mutations
-- id: compiler.possessed-requires-one-or-two-mutations-at-recruitment
+- id: compiler.possessed-optional-zero-to-two-mutations-at-recruitment
   kind: compiler
   implemented: 'YES'
   basis: unique-effect

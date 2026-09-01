@@ -86,8 +86,12 @@ def _projection_errors(ruleset: str, root: Path | None) -> tuple[int, list[str]]
             if family == "weapons":
                 kwargs = ({"main_weapon_id": mechanic_id} if row.get("main_hand")
                           else {"off_hand_id": mechanic_id})
+                if mechanic_id == "weapon.lance":
+                    kwargs["mounted"] = True
             elif family == "armours":
-                kwargs = {"armour_id": mechanic_id}
+                kwargs = ({"defence_ids": (mechanic_id,)}
+                          if mechanic_id == "armour.cathayan-quilted-silk"
+                          else {"armour_id": mechanic_id})
             elif family == "defences":
                 kwargs = ({"off_hand_id": mechanic_id}
                           if mechanic_id in {"defence.shield", "defence.buckler", "defence.kite-shield"}

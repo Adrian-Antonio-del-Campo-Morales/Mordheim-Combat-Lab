@@ -10,8 +10,76 @@ from mordheim_combat_lab.knowledge.loader import load_simulation_mappings
 from mordheim_combat_lab.knowledge.loader import load_skills
 
 
+def _validate_bound_equipment_restrictions(build, main_weapon_id, profile_bindings):
+    """Aplica prohibiciones explícitas independientemente de la lista de acceso."""
+    forbidden = set()
+    for binding in profile_bindings:
+        if binding.get("id") != "profile.equipment-restrictions":
+            continue
+        values = (binding.get("parameters") or {}).get("forbids", ())
+        forbidden.update((values,) if isinstance(values, str) else values)
+    selected = {main_weapon_id, build.armour_id, build.off_hand_id,
+                build.extra_hand_id, *build.defence_ids}
+    armour_defences = {"defence.shield", "defence.buckler", "defence.helmet",
+                      "defence.cooking-pot-helmet"}
+    if "armour" in forbidden and (
+        build.armour_id != "armour.no-armour" or selected & armour_defences
+    ):
+        raise ValueError(f"armour is forbidden for {build.band_id}/{build.profile_id}")
+    if "ranged-weapons" in forbidden and selected & MISSILE_WEAPONS:
+        raise ValueError(f"missile weapons are forbidden for {build.band_id}/{build.profile_id}")
+    if "heavy-armour" in forbidden and build.armour_id in {
+        "armour.heavy-armour", "armour.gromril-armour", "armour.ithilmar-armour", "armour.plate-armour"
+    }:
+        raise ValueError(f"heavy armour is forbidden for {build.band_id}/{build.profile_id}")
+    if "weapon.lance" in forbidden and "weapon.lance" in selected:
+        raise ValueError(f"lance is forbidden for {build.band_id}/{build.profile_id}")
+    if "defence.helmet" in forbidden and selected & {"defence.helmet", "defence.cooking-pot-helmet"}:
+        raise ValueError(f"helmet is forbidden for {build.band_id}/{build.profile_id}")
+
+
+def _validate_category_prohibitions(build, main_weapon_id, compiler_contracts, compiler_bindings):
+    """Prohibiciones explícitas, independientes de las listas de equipo disponibles."""
+    hands = {main_weapon_id, build.off_hand_id, build.extra_hand_id}
+    if "compiler.no-missile-weapons" in compiler_contracts and hands & MISSILE_WEAPONS:
+        raise ValueError(f"missile weapons are forbidden for {build.band_id}/{build.profile_id}")
+    if "compiler.no-blackpowder-weapons" in compiler_contracts and hands & BLACKPOWDER_WEAPONS:
+        raise ValueError(f"blackpowder weapons are forbidden for {build.band_id}/{build.profile_id}")
+    if ("compiler.strictures" in compiler_contracts
+            and build.profile_id in {"dragon-monks", "warrior-monks"}
+            and build.armour_id != "armour.no-armour"):
+        raise ValueError("Dragon Monks and Warrior Monks may never wear armour")
+    categories = {
+        category for binding in compiler_bindings
+        if binding.get("id") == "compiler.forbid-item-categories"
+        for category in (binding.get("parameters") or {}).get("categories", ())
+    }
+    if "poison" in categories and (build.main_poison_id or build.off_poison_id):
+        raise ValueError(f"poisons are forbidden for {build.band_id}/{build.profile_id}")
+    if "drug" in categories and set(build.preparation_ids) & DRUG_PREPARATIONS:
+        raise ValueError(f"drugs are forbidden for {build.band_id}/{build.profile_id}")
+
+
+def _validate_required_initial_choices(build, compiler_contracts):
+    """Elecciones obligatorias de la construcción inicial, no historial de campaña."""
+    if "compiler.mutant-requires-mutation-at-recruitment" in compiler_contracts:
+        if not any(rule_id.startswith("band--mutations-") for rule_id in build.special_rule_ids):
+            raise ValueError(f"at least one mutation is required for {build.band_id}/{build.profile_id}")
+    if "compiler.nurgle-s-blessings" in compiler_contracts:
+        if not any(rule_id.startswith("band--blessings-of-nurgle-") for rule_id in build.special_rule_ids):
+            raise ValueError("Tainted Ones require at least one Blessing of Nurgle")
+
+
+def _validate_possessed_mutation_limit(build, compiler_contracts, mutation_count):
+    if ("compiler.possessed-optional-zero-to-two-mutations-at-recruitment" in compiler_contracts
+            and mutation_count > 2):
+        raise ValueError(f"at most two mutations are allowed for {build.band_id}/{build.profile_id}")
+
+
 def _validate_profile_selections(build, package, profile, mechanics, root, main_weapon_id,
                                  profile_bindings=(), compiler_contracts=(), compiler_bindings=()):
+    _validate_bound_equipment_restrictions(build, main_weapon_id, profile_bindings)
+    _validate_category_prohibitions(build, main_weapon_id, compiler_contracts, compiler_bindings)
     allowed=_profile_allowed_mechanics(package,profile,mechanics,build.ruleset,root)
     access_contracts={
         "compiler.pirate-human-mercenary-equipment-access",
@@ -75,6 +143,28 @@ def _validate_profile_selections(build, package, profile, mechanics, root, main_
     if build.off_hand_id and build.off_material_id!="material.normal":equipment.add(build.off_material_id)
     equipment.discard("armour.no-armour")
     if main_weapon_id in {"weapon.natural-attacks", "weapon.fist"}:equipment.discard(main_weapon_id)
+    hand_equipment={main_weapon_id,build.off_hand_id}
+    is_knight=(any(str(rule_id).endswith("--knight") for rule_id in profile.get("rule_ids") or ())
+               or "promotion.knight-errant" in build.variant_ids)
+    if "compiler.powder-s-expensive" in compiler_contracts and profile.get("type") != "hero" and hand_equipment & BLACKPOWDER_WEAPONS:
+        raise ValueError(f"blackpowder weapons are forbidden for Bandit Henchmen: {build.band_id}/{build.profile_id}")
+    if "compiler.chivalry" in compiler_contracts and is_knight:
+        if hand_equipment & MISSILE_WEAPONS:
+            raise ValueError(f"missile weapons are forbidden for Knights: {build.band_id}/{build.profile_id}")
+        if build.main_poison_id or build.off_poison_id:
+            raise ValueError(f"poisons are forbidden for Knights: {build.band_id}/{build.profile_id}")
+        if set(build.preparation_ids) & DRUG_PREPARATIONS:
+            raise ValueError(f"drugs are forbidden for Knights: {build.band_id}/{build.profile_id}")
+    if "compiler.haughty" in compiler_contracts:
+        dwarf_made={"material.gromril","material.obsidian","armour.gromril-armour"}
+        if equipment & dwarf_made:
+            raise ValueError(f"Dwarf-made equipment is forbidden for {build.band_id}/{build.profile_id}")
+    if "compiler.chaos-engineer" in compiler_contracts and any("chaos" in item for item in equipment if item):
+        raise ValueError(f"Chaos armour is forbidden for {build.band_id}/{build.profile_id}")
+    if ("compiler.saurus-skill-prohibitions" in compiler_contracts
+            and build.profile_id in {"saurus-totem-warrior","saurus-braves"}
+            and hand_equipment & MISSILE_WEAPONS):
+        raise ValueError("missile weapons are forbidden for Saurus")
     illegal=sorted(equipment-allowed)
     if illegal:raise ValueError(f"equipment is not available to {build.band_id}/{build.profile_id}: {illegal}")
     skills={str(row["id"]):row for row in load_skills(build.ruleset,root)}
@@ -88,6 +178,16 @@ def _validate_profile_selections(build, package, profile, mechanics, root, main_
     for binding in compiler_bindings:
         if binding.get("id") == "compiler.promoted-hero-skill-access":
             access.update(str(category) for category in (binding.get("parameters") or {}).get("allowed_skill_lists") or ())
+    promoted_lists={
+        str(value).removeprefix("skill-list.") for value in build.variant_ids
+        if str(value).startswith("skill-list.")
+    }
+    if "compiler.promoted-hero-no-strength-access" in compiler_contracts:
+        if "strength" in promoted_lists:
+            raise ValueError(f"Strength skill list is forbidden for {build.band_id}/{build.profile_id}")
+        if len(promoted_lists) > 2:
+            raise ValueError("a promoted Hero may choose at most two skill lists")
+        access.update(promoted_lists)
     if "compiler.slayer-skill-options" in compiler_contracts:
         access.update(("combat", "strength", "special"))
     if "compiler.proven-warrior" in compiler_contracts:
@@ -108,6 +208,18 @@ def _validate_profile_selections(build, package, profile, mechanics, root, main_
             any(f"/{band_id}" in str(reference.get("url") or "") for band_id in source_ids if band_id)
             for reference in skill.get("source_refs") or ()
         )
+    if "compiler.saurus-skill-prohibitions" in compiler_contracts and build.profile_id in {"saurus-totem-warrior","saurus-braves"}:
+        academic=sorted(skill for skill in build.skill_ids if (skills.get(skill) or {}).get("category")=="academic")
+        if academic:raise ValueError(f"Academic skills are forbidden for Saurus: {academic}")
+    if "compiler.disciple-of-sigmar" in compiler_contracts:
+        forbidden=sorted(skill for skill in build.skill_ids if "arcane" in skill or "sorcery" in skill)
+        if forbidden:raise ValueError(f"sorcery and Arcane Lore are forbidden for {build.band_id}/{build.profile_id}: {forbidden}")
+    if "compiler.swabbie-rabble-loadout" in compiler_contracts:
+        forbidden=sorted(skill for skill in build.skill_ids if "arcane" in skill or "sorcery" in skill)
+        if forbidden:raise ValueError(f"magic is forbidden for Swabbies: {forbidden}")
+    if "compiler.no-arcane-lore" in compiler_contracts:
+        forbidden=sorted(skill for skill in build.skill_ids if "arcane" in skill or "sorcery" in skill)
+        if forbidden:raise ValueError(f"Arcane Lore is forbidden for {build.band_id}/{build.profile_id}: {forbidden}")
     illegal_skills=sorted(skill for skill in build.skill_ids if not skill_is_available(skill))
     if illegal_skills:raise ValueError(f"skills are not available to {build.band_id}/{build.profile_id}: {illegal_skills}")
     if "compiler.knighthood" in compiler_contracts:
@@ -120,12 +232,6 @@ def _validate_profile_selections(build, package, profile, mechanics, root, main_
     if "compiler.promoted-hero-no-strength-access" in compiler_contracts:
         strength_skills=sorted(skill for skill in build.skill_ids if (skills.get(skill) or {}).get("category")=="strength")
         if strength_skills:raise ValueError(f"Strength skills are forbidden for {build.band_id}/{build.profile_id}: {strength_skills}")
-    if "compiler.disciple-of-sigmar" in compiler_contracts:
-        forbidden=sorted(skill for skill in build.skill_ids if (skills.get(skill) or {}).get("category") in {"sorcery","arcane"})
-        if forbidden:raise ValueError(f"sorcery and Arcane Lore are forbidden for {build.band_id}/{build.profile_id}: {forbidden}")
-    if "compiler.no-arcane-lore" in compiler_contracts:
-        forbidden=sorted(skill for skill in build.skill_ids if "arcane" in skill or "sorcery" in skill)
-        if forbidden:raise ValueError(f"Arcane Lore is forbidden for {build.band_id}/{build.profile_id}: {forbidden}")
     restrictions=" ".join(profile.get("equipment_restrictions") or ()).lower()
     forbids_armour=any(text in restrictions for text in (
         "never wear armour","cannot wear armour","armour is not allowed","does not allow armour",
@@ -134,70 +240,17 @@ def _validate_profile_selections(build, package, profile, mechanics, root, main_
     if forbids_armour and build.armour_id!="armour.no-armour":raise ValueError(f"armour is forbidden for {build.band_id}/{build.profile_id}")
     if ("may not use an off-hand weapon" in restrictions or "must use one hand" in restrictions) and build.off_hand_id:
         raise ValueError(f"off-hand equipment is forbidden for {build.band_id}/{build.profile_id}")
-    if "may not take a lance" in restrictions and main_weapon_id=="weapon.lance":raise ValueError(f"lance is forbidden for {build.band_id}/{build.profile_id}")
     if ("may not use double-handed weapons" in restrictions or "double-handed weapons are for" in restrictions) and mechanics[main_weapon_id].get("hands")==2 and "compiler.proven-warrior" not in compiler_contracts:
         raise ValueError(f"two-handed weapons are forbidden for {build.band_id}/{build.profile_id}")
-    if "may never wear heavy armour" in restrictions and build.armour_id in {"armour.heavy-armour","armour.gromril-armour","armour.ithilmar-armour","armour.plate-armour"}:
-        raise ValueError(f"heavy armour is forbidden for {build.band_id}/{build.profile_id}")
-    if "may not wear a helmet" in restrictions and any(x in build.defence_ids for x in ("defence.helmet","defence.cooking-pot-helmet")):
-        raise ValueError(f"helmet is forbidden for {build.band_id}/{build.profile_id}")
-    hand_equipment={main_weapon_id,build.off_hand_id}
-    if "compiler.no-blackpowder-weapons" in compiler_contracts and hand_equipment & BLACKPOWDER_WEAPONS:
-        raise ValueError(f"blackpowder weapons are forbidden for {build.band_id}/{build.profile_id}")
-    if "compiler.no-missile-weapons" in compiler_contracts and hand_equipment & MISSILE_WEAPONS:
-        raise ValueError(f"missile weapons are forbidden for {build.band_id}/{build.profile_id}")
-    if "compiler.powder-s-expensive" in compiler_contracts and profile.get("type") != "hero" and hand_equipment & BLACKPOWDER_WEAPONS:
-        raise ValueError(f"blackpowder weapons are forbidden for Bandit Henchmen: {build.band_id}/{build.profile_id}")
-    forbidden_categories = {
-        str(category)
-        for binding in compiler_bindings
-        if binding.get("id") == "compiler.forbid-item-categories"
-        for category in (binding.get("parameters") or {}).get("categories") or ()
-    }
-    if "poison" in forbidden_categories and (build.main_poison_id or build.off_poison_id):
-        raise ValueError(f"poisons are forbidden for {build.band_id}/{build.profile_id}")
-    if "drug" in forbidden_categories and set(build.preparation_ids) & DRUG_PREPARATIONS:
-        raise ValueError(f"drugs are forbidden for {build.band_id}/{build.profile_id}")
-    is_knight=(any(str(rule_id).endswith("--knight") for rule_id in profile.get("rule_ids") or ())
-               or "promotion.knight-errant" in build.variant_ids)
-    if "compiler.chivalry" in compiler_contracts and is_knight:
-        if hand_equipment & MISSILE_WEAPONS:
-            raise ValueError(f"missile weapons are forbidden for Knights: {build.band_id}/{build.profile_id}")
-        if build.main_poison_id or build.off_poison_id:
-            raise ValueError(f"poisons are forbidden for Knights: {build.band_id}/{build.profile_id}")
-        if set(build.preparation_ids) & DRUG_PREPARATIONS:
-            raise ValueError(f"drugs are forbidden for Knights: {build.band_id}/{build.profile_id}")
-    if "compiler.haughty" in compiler_contracts:
-        dwarf_made={"material.gromril","material.obsidian","armour.gromril-armour"}
-        if equipment & dwarf_made:
-            raise ValueError(f"Dwarf-made equipment is forbidden for {build.band_id}/{build.profile_id}")
-    if "compiler.chaos-engineer" in compiler_contracts:
-        if any("chaos" in item for item in equipment if item):
-            raise ValueError(f"Chaos armour is forbidden for {build.band_id}/{build.profile_id}")
-    if "compiler.mutant-requires-mutation-at-recruitment" in compiler_contracts:
-        if not any(rule_id.startswith("band--mutations-") for rule_id in build.special_rule_ids):
-            raise ValueError(f"at least one mutation is required for {build.band_id}/{build.profile_id}")
+    _validate_required_initial_choices(build, compiler_contracts)
     mutation_count=sum(rule_id.startswith("band--mutations-") for rule_id in build.special_rule_ids)
     if "compiler.mutation-purchase-at-recruitment" in compiler_contracts and mutation_count and build.profile_id not in {"mutants","the-possessed"}:
         raise ValueError(f"mutations are available only to Mutants and the Possessed: {build.band_id}/{build.profile_id}")
-    if "compiler.possessed-requires-one-or-more-mutations-at-recruitment" in compiler_contracts and mutation_count < 1:
-        raise ValueError(f"at least one mutation is required for {build.band_id}/{build.profile_id}")
-    if "compiler.possessed-requires-one-or-two-mutations-at-recruitment" in compiler_contracts and mutation_count not in {1,2}:
-        raise ValueError(f"exactly one or two mutations are required for {build.band_id}/{build.profile_id}")
-    if "compiler.nurgle-s-blessings" in compiler_contracts:
-        blessing_count=sum(rule_id.startswith("band--blessings-of-nurgle-") for rule_id in build.special_rule_ids)
-        if blessing_count < 1:
-            raise ValueError("Tainted Ones require at least one Blessing of Nurgle")
+    _validate_possessed_mutation_limit(build, compiler_contracts, mutation_count)
     if "compiler.sacred-marks" in compiler_contracts:
         sacred_count=sum(rule_id.startswith("band--sacred-mark-") for rule_id in build.special_rule_ids)
         if sacred_count > 1:
             raise ValueError("a Lizardman Hero may have at most one Sacred Mark")
-    if "compiler.saurus-skill-prohibitions" in compiler_contracts and build.profile_id in {"saurus-totem-warrior","saurus-braves"}:
-        academic=sorted(skill for skill in build.skill_ids if (skills.get(skill) or {}).get("category")=="academic")
-        if academic:raise ValueError(f"Academic skills are forbidden for Saurus: {academic}")
-        if hand_equipment & MISSILE_WEAPONS:raise ValueError("missile weapons are forbidden for Saurus")
-    if "compiler.strictures" in compiler_contracts and build.profile_id in {"dragon-monks","warrior-monks"} and build.armour_id!="armour.no-armour":
-        raise ValueError("Dragon Monks and Warrior Monks may never wear armour")
     if "compiler.tracker-gear" in compiler_contracts:
         fixed=set(profile.get("fixed_equipment") or ())
         if not {"rope_hook","bolas"}<=fixed:
@@ -208,6 +261,8 @@ def _validate_profile_selections(build, package, profile, mechanics, root, main_
         foreign=[rule_id for rule_id in powers if f"band--{bloodline}-power-" not in rule_id]
         if foreign:raise ValueError(f"Vampiric Powers must belong to the Vampire's bloodline: {foreign}")
     if "compiler.warrior-s-code" in compiler_contracts:
+        magical_skills=sorted(skill for skill in build.skill_ids if "arcane" in skill or "sorcery" in skill or "magic" in skill)
+        if magical_skills:raise ValueError(f"magic is forbidden by the Warrior's Code: {magical_skills}")
         magical=sorted(rule_id for rule_id in build.special_rule_ids if any(word in rule_id for word in ("spell","magic","arcane")))
         if magical:raise ValueError(f"magic is forbidden by the Warrior's Code: {magical}")
     if "compiler.follow-the-darkest-tribe" in compiler_contracts:

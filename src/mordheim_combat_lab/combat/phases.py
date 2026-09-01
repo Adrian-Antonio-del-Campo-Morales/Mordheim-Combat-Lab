@@ -40,6 +40,13 @@ def has_tag(effect: EffectSet, tag: str) -> bool:
     return tag in effect.tags
 
 
+def ignores_unarmed_penalties(effect: EffectSet) -> bool:
+    return any(has_tag(effect, tag) for tag in (
+        "skill.unarmed-fighting", "skill.art-of-silent-death",
+        "guardian_unarmed", "rule.unarmed-without-penalties",
+    ))
+
+
 def to_hit_target(attacker_ws: int, defender_ws: int) -> int:
     if min(attacker_ws, defender_ws) < 0:
         raise ValueError("Weapon Skill cannot be negative")
@@ -88,6 +95,7 @@ class PriorityContext:
     stood_up: bool = False
     initiative_penalty: int = 0
     initiative_bonus: int = 0
+    initiative_floor: int = 1
 
 
 @dataclass(frozen=True, slots=True)
@@ -112,6 +120,8 @@ def resolve_priority(context: PriorityContext) -> PriorityResult:
     if has_tag(fighter.main_weapon, "weapon.long-boat-hook") and not context.first_round:
         weapon_priority = 0
     value = weapon_priority + fighter.global_effects.priority
+    if has_tag(fighter.main_weapon, "weapon.trident") and context.charged:
+        value = max(value, 1)
     if has_tag(fighter.global_effects, "mechanic.strike-first-vs-skinks-always") and has_tag(opponent.global_effects, "species.skink"):
         value = 20
     if context.first_round:
@@ -120,13 +130,15 @@ def resolve_priority(context: PriorityContext) -> PriorityResult:
             value = 20
         if has_tag(fighter.global_effects, "skill.lightning-reflexes") and context.charged:
             value = max(value, 1)
-    if context.stood_up:
+    # Lost Innocence explicitly retains strike-first when standing up.
+    if context.stood_up and not has_tag(fighter.global_effects, "skill.always-strikes-first"):
         value = -1
     initiative = max(
-        1,
+        context.initiative_floor,
         fighter.characteristics.initiative
         + fighter.global_effects.initiative_bonus
         + fighter.main_weapon.initiative_bonus
+        + (fighter.off_hand.initiative_bonus if fighter.off_hand is not None else 0)
         + context.initiative_bonus
         - context.initiative_penalty,
     )
@@ -170,7 +182,9 @@ def build_attacks(context: AttackPoolContext) -> AttackPoolResult:
         attacks += 1
     if context.charging:
         attacks += effect.charge_attacks_bonus
-    if has_tag(fighter.main_weapon, "weapon.fist") and not has_tag(effect, "skill.unarmed-fighting"):
+    if context.first_round and context.charging:
+        attacks += effect.first_round_charge_attacks_bonus
+    if has_tag(fighter.main_weapon, "weapon.fist") and not ignores_unarmed_penalties(effect):
         attacks = 1
         extra_weapon_attack = 0
     if has_tag(effect, "skill.unarmed-fighting") and has_tag(fighter.main_weapon, "weapon.fist"):
@@ -216,8 +230,10 @@ def build_attacks(context: AttackPoolContext) -> AttackPoolResult:
         attacks = 1
     if has_tag(effect, "mechanic.death-blow") and fighter.characteristics.attacks >= 2:
         attacks = 1
-    if has_tag(effect, "mechanic.energy-focus") and has_tag(fighter.main_weapon, "weapon.fist"):
-        attacks = max(1, attacks - effect.energy_focus_attacks)
+    if has_tag(effect, "mechanic.energy-focus") and any(
+        has_tag(fighter.main_weapon, tag) for tag in ("weapon.fist", "weapon.natural-attacks")
+    ):
+        attacks = max(0, attacks - effect.energy_focus_attacks)
     return AttackPoolResult(max(0, attacks - context.attack_penalty))
 
 
@@ -264,6 +280,7 @@ class ParryContext:
     fixed_target: int | None = None
     reroll: bool = False
     key: str = "parry"
+    can_parry_six: bool = False
 
 
 @dataclass(frozen=True, slots=True)
@@ -278,7 +295,7 @@ def resolve_parry(context: ParryContext, dice: DiceSource) -> ParryResult:
     eligible = (
         context.available
         and not context.cannot_be_parried
-        and context.hit_roll != 6
+        and (context.hit_roll != 6 or context.can_parry_six)
         and context.attacker_strength < 2 * context.defender_strength
     )
     if not eligible:
@@ -311,6 +328,7 @@ class WoundContext:
     critical_available: bool = True
     key: str = "wound"
     critical_on_reroll: bool = True
+    failure_still_wounds: bool = False
 
 
 @dataclass(frozen=True, slots=True)
@@ -333,7 +351,9 @@ def resolve_wound(context: WoundContext, dice: DiceSource) -> WoundResult:
         roll = dice.roll(RollRequest(f"{context.key}.reroll"))
         success = roll >= target
         rerolled = True
-    critical = (success and context.critical_available and target < 6
+    rolled_success = success
+    success = success or context.failure_still_wounds
+    critical = (rolled_success and context.critical_available and target < 6
                 and roll >= context.critical_threshold
                 and (not rerolled or context.critical_on_reroll))
     return WoundResult(target, roll, success, critical, rerolled)
@@ -428,11 +448,13 @@ class InjuryContext:
     out_threshold: int = 5
     injury_profile: int = 0
     hard_to_kill: bool = False
+    true_grit: bool = False
     concussion: bool = False
     concussion_immune: bool = False
     fragile: bool = False
     poisonous: bool = False
     survivor: bool = False
+    initial_condition: Condition = Condition.STANDING
     head_crusher: bool = False
     ignore_pain: bool = False
     jump_up: bool = False
@@ -450,6 +472,8 @@ def injury_condition(total: int, context: InjuryContext) -> Condition:
     result = Condition.OUT if total >= context.out_threshold else Condition.STUNNED if total >= 3 else Condition.KNOCKED_DOWN
     if context.hard_to_kill:
         result = Condition.OUT if total >= 6 else Condition.STUNNED if total >= 3 else Condition.KNOCKED_DOWN
+    if context.true_grit:
+        result = Condition.OUT if total >= 6 else Condition.STUNNED if total >= 4 else Condition.KNOCKED_DOWN
     if context.concussion and not context.concussion_immune and 2 <= total <= 4:
         result = Condition.STUNNED
     if context.injury_profile == 1:
@@ -460,7 +484,7 @@ def injury_condition(total: int, context: InjuryContext) -> Condition:
         result = Condition.STUNNED
     if context.poisonous:
         result = Condition.OUT if total >= 5 else Condition.STUNNED if total >= 2 else Condition.KNOCKED_DOWN
-    if context.survivor and result == Condition.OUT:
+    if context.survivor and context.initial_condition == Condition.STANDING and result == Condition.OUT:
         result = Condition.STUNNED
     if context.head_crusher and result == Condition.KNOCKED_DOWN:
         result = Condition.STUNNED
@@ -477,6 +501,46 @@ def injury_condition(total: int, context: InjuryContext) -> Condition:
 def resolve_injury(context: InjuryContext, dice: DiceSource) -> InjuryResult:
     total = dice.roll(RollRequest(context.key)) + context.modifier + context.critical_bonus
     return InjuryResult(total, injury_condition(total, context))
+
+
+@dataclass(frozen=True, slots=True)
+class StunReactionContext:
+    condition: Condition
+    thick_skull: bool = False
+    helmet_save: int = 7
+    key: str = "stun_reaction"
+
+
+@dataclass(frozen=True, slots=True)
+class StunReactionResult:
+    condition: Condition
+    attempted: bool
+    converted: bool
+    threshold: int | None = None
+    roll: int | None = None
+
+
+def resolve_stun_reaction(context: StunReactionContext, dice: DiceSource) -> StunReactionResult:
+    """Apply Thick Skull or Helmet after the injury table, never both.
+
+    Thick Skull replaces the ordinary Helmet reaction and improves its 3+
+    threshold to 2+ while a helmet is worn. Non-Stunned outcomes consume no
+    die.
+    """
+    if context.condition != Condition.STUNNED:
+        return StunReactionResult(context.condition, False, False)
+    if context.thick_skull:
+        threshold = 2 if context.helmet_save <= 4 else 3
+        key = f"{context.key}.thick-skull"
+    elif context.helmet_save <= 6:
+        threshold = context.helmet_save
+        key = f"{context.key}.helmet"
+    else:
+        return StunReactionResult(context.condition, False, False)
+    roll = dice.roll(RollRequest(key))
+    converted = roll >= threshold
+    condition = Condition.KNOCKED_DOWN if converted else Condition.STUNNED
+    return StunReactionResult(condition, True, converted, threshold, roll)
 
 
 @dataclass(frozen=True, slots=True)

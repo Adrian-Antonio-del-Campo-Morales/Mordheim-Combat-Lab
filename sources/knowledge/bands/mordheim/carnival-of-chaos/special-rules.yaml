@@ -991,6 +991,10 @@ rules:
       binding:
         kind: compiler
         id: compiler.blessings-of-nurgle
+    - id: campaign.blessings-of-nurgle-purchase-history-and-costs
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: recruitment timing, later purchases and escalating campaign costs require roster history and an economy model.'
   name: Blessings of Nurgle
   effect: Those that worship at the fetid altar of the Lord of Decay suffer from terrible diseases and decay, which are known
     as Blessings of Nurgle. Blessings of Nurgle may be bought for Tainted Ones only when they are recruited; you may not buy
@@ -1064,11 +1068,17 @@ rules:
     implemented: 'YES'
     grant: selectable
     effects:
-    - id: special-rule.band--blessings-of-nurgle-nurgles-rot
+    - id: trait.poison-immune
       scope: 'YES'
       binding:
-        kind: compiler
-        id: special-rule.band--blessings-of-nurgle-nurgles-rot
+        kind: trait
+        id: trait.poison-immune
+        parameters:
+          value: true
+    - id: campaign.nurgles-rot-contagion
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: contagion, roster persistence, pre-battle Toughness tests and permanent characteristic loss are campaign effects.'
   name: Nurgle’s Rot
   effect: 'Cost: 50 Gold Crowns
 
@@ -1139,10 +1149,11 @@ rules:
   applies_to:
     band: true
 - id: band--blessings-of-nurgle-cloud-of-flies
+  kind: blessing
   runtime:
     scope: 'YES'
     implemented: 'YES'
-    grant: profile
+    grant: selectable
     effects:
     - id: trait.cloud-of-flies
       scope: 'YES'

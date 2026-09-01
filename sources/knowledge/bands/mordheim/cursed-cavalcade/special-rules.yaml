@@ -427,11 +427,11 @@ rules:
     implemented: "YES"
     grant: profile
     effects:
-    - id: trait.charge-attack-bonus
+    - id: trait.first-round-charge-attack-bonus
       scope: "YES"
       binding:
         kind: trait
-        id: trait.charge-attack-bonus
+        id: trait.first-round-charge-attack-bonus
         parameters:
           value: true
   name: Charge

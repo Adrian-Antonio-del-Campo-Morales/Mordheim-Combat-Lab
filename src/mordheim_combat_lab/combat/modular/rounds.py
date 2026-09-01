@@ -105,55 +105,59 @@ def resolve_round(
     first_priority = phases.resolve_priority(PriorityContext(
         first, second, first_round, first_charging, second_charging, first_stood,
         first_state.initiative_penalty,
+        initiative_floor=first_state.initiative_floor,
     ))
     second_priority = phases.resolve_priority(PriorityContext(
         second, first, first_round, second_charging, first_charging, second_stood,
         second_state.initiative_penalty,
+        initiative_floor=second_state.initiative_floor,
     ))
     first_acts = phases.first_acts_before(
         first_priority, second_priority, dice, key=f"round.{state.round_index}.priority-tie",
     )
 
+    first_attack_fighter = select_attack_replacement(
+        first, first_round=first_round, charging=first_charging,
+        decisions=decisions, key=f"round.{state.round_index}.first",
+    )
+    second_attack_fighter = select_attack_replacement(
+        second, first_round=first_round, charging=second_charging,
+        decisions=decisions, key=f"round.{state.round_index}.second",
+    )
+
     first_count = phases.build_attacks(AttackPoolContext(
-        first, first_round, first_charging, second_charging,
+        first_attack_fighter, first_round, first_charging, second_charging,
         first_state.frenzy, first_state.wounds < first.characteristics.wounds,
         first_state.attack_penalty, first_state.attacks,
     )).attacks
     second_count = phases.build_attacks(AttackPoolContext(
-        second, first_round, second_charging, first_charging,
+        second_attack_fighter, first_round, second_charging, first_charging,
         second_state.frenzy, second_state.wounds < second.characteristics.wounds,
         second_state.attack_penalty, second_state.attacks,
     )).attacks
-    if phases.has_tag(first.global_effects, "mechanic.spawn-special-attacks"):
-        first_count = dice.roll(RollRequest(f"round.{state.round_index}.first.spawn-attacks")) + 1
-    if phases.has_tag(second.global_effects, "mechanic.spawn-special-attacks"):
-        second_count = dice.roll(RollRequest(f"round.{state.round_index}.second.spawn-attacks")) + 1
-    if first_round and phases.has_tag(first.main_weapon, "weapon.serpent-whip") and (first_charging or second_charging):
-        first_count += 1
-    if first_round and phases.has_tag(second.main_weapon, "weapon.serpent-whip") and (first_charging or second_charging):
-        second_count += 1
-    if first_round and phases.has_tag(first.main_weapon, "weapon.boar-spear") and second_charging and second_count:
-        second_count = max(1, second_count - 1)
-    if first_round and phases.has_tag(second.main_weapon, "weapon.boar-spear") and first_charging and first_count:
-        first_count = max(1, first_count - 1)
-    if first_count:
-        first_count = max(1, first_count + second.global_effects.incoming_attacks_modifier)
-    if second_count:
-        second_count = max(1, second_count + first.global_effects.incoming_attacks_modifier)
+    first_count = resolve_spawn_attack_count(
+        first_attack_fighter, first_count, dice, f"round.{state.round_index}.first.spawn-attacks"
+    )
+    second_count = resolve_spawn_attack_count(
+        second_attack_fighter, second_count, dice, f"round.{state.round_index}.second.spawn-attacks"
+    )
+    first_count = apply_round_weapon_attack_modifiers(
+        first, second, first_count, first_round=first_round,
+        charging=first_charging, charged=second_charging,
+    )
+    second_count = apply_round_weapon_attack_modifiers(
+        second, first, second_count, first_round=first_round,
+        charging=second_charging, charged=first_charging,
+    )
+    first_count = apply_opponent_attack_modifiers(first, second, first_count, first_round=first_round)
+    second_count = apply_opponent_attack_modifiers(second, first, second_count, first_round=first_round)
     if first_state.on_fire or first_state.condition != Condition.STANDING:
         first_count = 0
     if second_state.on_fire or second_state.condition != Condition.STANDING:
         second_count = 0
-    if phases.has_tag(first.global_effects, "animal_friendship") and phases.has_tag(second.global_effects, "species.animal"):
-        second_count = 0
-    if phases.has_tag(second.global_effects, "animal_friendship") and phases.has_tag(first.global_effects, "species.animal"):
-        first_count = 0
-    if first_round and phases.has_tag(first.global_effects, "skill.sigmar-s-sign") and phases.has_tag(second.global_effects, "undead_or_possessed"):
-        second_count = max(1, second_count - 1) if second_count else 0
-    if first_round and phases.has_tag(second.global_effects, "skill.sigmar-s-sign") and phases.has_tag(first.global_effects, "undead_or_possessed"):
-        first_count = max(1, first_count - 1) if first_count else 0
-
-    order = ((first, second, True), (second, first, False)) if first_acts else ((second, first, False), (first, second, True))
+    order = ((first_attack_fighter, second, True), (second_attack_fighter, first, False)) if first_acts else (
+        (second_attack_fighter, first, False), (first_attack_fighter, second, True)
+    )
     for attacker, defender, is_first in order:
         if is_first:
             first_state, second_state, resolved = _resolve_attack_pool(
@@ -189,3 +193,67 @@ def resolve_round(
         DuelState(first_state, second_state, state.round_index + 1, state.first_charged, trace),
         tuple(outcomes),
     )
+
+
+def select_attack_replacement(
+    fighter: CompiledFighter, *, first_round: bool, charging: bool,
+    decisions: DecisionPolicy, key: str,
+) -> CompiledFighter:
+    """Apply optional whole-pool replacements before attack count and resolution."""
+    removable = []
+    if (has_tag(fighter.global_effects, "mechanic.anvil-head")
+            and first_round and charging
+            and not decisions.choose(f"{key}.anvil-head", fighter)):
+        removable.append("mechanic.anvil-head")
+    if (has_tag(fighter.global_effects, "mechanic.death-blow")
+            and fighter.characteristics.attacks >= 2
+            and not decisions.choose(f"{key}.death-blow", fighter)):
+        removable.append("mechanic.death-blow")
+    if not removable:
+        return fighter
+    effects = replace(
+        fighter.global_effects,
+        tags=tuple(tag for tag in fighter.global_effects.tags if tag not in removable),
+    )
+    return replace(fighter, global_effects=effects)
+
+
+def resolve_spawn_attack_count(
+    fighter: CompiledFighter, ordinary_count: int, dice: DiceSource, key: str,
+) -> int:
+    if phases.has_tag(fighter.global_effects, "mechanic.spawn-special-attacks"):
+        return dice.roll(RollRequest(key)) + 1
+    return ordinary_count
+
+
+def apply_opponent_attack_modifiers(
+    attacker: CompiledFighter, defender: CompiledFighter, count: int, *, first_round: bool,
+) -> int:
+    if not count:
+        return 0
+    if (
+        phases.has_tag(defender.global_effects, "animal_friendship")
+        and phases.has_tag(attacker.global_effects, "species.animal")
+    ):
+        return 0
+    if (
+        first_round
+        and phases.has_tag(defender.global_effects, "skill.sigmar-s-sign")
+        and phases.has_tag(attacker.global_effects, "undead_or_possessed")
+    ):
+        count = max(1, count - 1)
+    return max(1, count + defender.global_effects.incoming_attacks_modifier)
+
+
+def apply_round_weapon_attack_modifiers(
+    attacker: CompiledFighter, defender: CompiledFighter, count: int, *,
+    first_round: bool, charging: bool, charged: bool,
+) -> int:
+    """Apply weapon rules that change the pool because either fighter charged."""
+    if not count or not first_round:
+        return count
+    if phases.has_tag(attacker.main_weapon, "weapon.serpent-whip") and (charging or charged):
+        count += 1
+    if phases.has_tag(defender.main_weapon, "weapon.boar-spear") and charging:
+        count = max(1, count - 1)
+    return count

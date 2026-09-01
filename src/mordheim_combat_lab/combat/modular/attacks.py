@@ -46,6 +46,7 @@ def resolve_reference_attack(
     defences_resolved: bool = False,
     defences_only: bool = False,
     parry_allowed: bool = True,
+    decisions: DecisionPolicy | None = None,
 ) -> AttackOutcome:
     """Resolve one attack and return new immutable fighter states."""
     if not attacker_state.active or not defender_state.active:
@@ -90,7 +91,11 @@ def resolve_reference_attack(
         hit = replace(hit, success=True, roll=hit.target)
     if not hit.success:
         if phases.has_tag(defender.global_effects, "mechanic.spider-infested"):
-            attacker_state = replace(attacker_state, initiative_penalty=attacker_state.initiative_penalty + 1)
+            attacker_state = replace(
+                attacker_state,
+                initiative_penalty=attacker_state.initiative_penalty + 1,
+                initiative_floor=0,
+            )
         return AttackOutcome(
             attacker_state, defender_state, hit_roll=hit.roll,
             hit_target=hit.target, trace=trace,
@@ -115,7 +120,11 @@ def resolve_reference_attack(
             defender_state = replace(defender_state, parries_remaining=defender_state.parries_remaining - 1)
         if parry.blocked:
             if phases.has_tag(defender.global_effects, "mechanic.spider-infested"):
-                attacker_state = replace(attacker_state, initiative_penalty=attacker_state.initiative_penalty + 1)
+                attacker_state = replace(
+                    attacker_state,
+                    initiative_penalty=attacker_state.initiative_penalty + 1,
+                    initiative_floor=0,
+                )
             if (
                 any(phases.has_tag(candidate, "weapon.cutlass") for candidate in (
                     defender.main_weapon, defender.off_hand or EffectSet()
@@ -134,11 +143,21 @@ def resolve_reference_attack(
             attacker_state, defender_state, hit=True, hit_roll=hit.roll,
             hit_target=hit.target, trace=trace,
         )
+    # Bull Charge substitutes the wound step: an undefended hit is consumed by
+    # the pool handler to knock the target down without a To Wound roll.
+    if phases.has_tag(effect, "mechanic.bull-charge"):
+        return AttackOutcome(
+            attacker_state, defender_state, hit=True, hit_roll=hit.roll,
+            hit_target=hit.target, trace=trace,
+        )
     if phases.has_tag(weapon, "weapon.kusara-kama") and hit.roll >= 5:
         defender_state = replace(defender_state, attack_penalty=defender_state.attack_penalty + 1)
     if phases.has_tag(weapon, "weapon.chained-squig"):
         defender_state = replace(defender_state, entangled=True)
-    ignition = min(effect.ignition_threshold, defender.global_effects.caught_fire_threshold)
+    ignition = (
+        min(effect.ignition_threshold, defender.global_effects.caught_fire_threshold)
+        if effect.ignition_threshold <= 6 else 7
+    )
     if ignition <= 6 and dice.roll(RollRequest(f"{key}.ignition")) >= ignition:
         defender_state = replace(defender_state, on_fire=True)
     poison_blocked = defender.global_effects.poison_immunity or phases.has_tag(defender.global_effects, "poison_immune")
@@ -201,7 +220,12 @@ def resolve_reference_attack(
     if remaining > 0:
         defender_state = replace(defender_state, wounds=remaining)
         return AttackOutcome(attacker_state, defender_state, True, wounded=True, damage=damage, critical=wound.critical, trace=trace)
-    injury_context = _injury_context(defender, effect, key)
+    if defender.injury_profile == 4:
+        return AttackOutcome(
+            attacker_state, replace(defender_state, wounds=remaining, condition=Condition.OUT),
+            True, wounded=True, damage=damage, critical=wound.critical, trace=trace,
+        )
+    injury_context = _injury_context(defender, effect, key, defender_state)
     if wound.critical:
         injury_context = replace(
             injury_context,
@@ -214,35 +238,28 @@ def resolve_reference_attack(
     for injury_index in range(injury_count):
         local = replace(injury_context, key=f"{key}.injury.{injury_index}")
         injury = phases.resolve_injury(local, dice)
-        if (
-            injury.condition == Condition.OUT
-            and phases.has_tag(defender.global_effects, "injury_reroll_out")
+        can_reroll = (
+            phases.has_tag(defender.global_effects, "injury_reroll_out")
             and not phases.has_tag(effect, "attack.fire")
-        ):
+        )
+        reroll = can_reroll and (
+            decisions.choose(f"{key}.injury.{injury_index}.reroll-choice", injury)
+            if decisions is not None else injury.condition == Condition.OUT
+        )
+        if reroll:
             injury = phases.resolve_injury(
                 replace(local, key=f"{key}.injury.{injury_index}.reroll"), dice
             )
         injuries.append(injury)
     trace += (Phase.INJURY,)
     condition = max(injury.condition for injury in injuries)
-    if condition == Condition.STUNNED and defender.global_effects.thick_skull:
-        threshold = 2 if defender.helmet_save <= 4 else 3
-        if dice.roll(RollRequest(f"{key}.thick-skull")) >= threshold:
-            condition = Condition.KNOCKED_DOWN
-    elif condition == Condition.STUNNED and defender.helmet_save <= 6:
-        if dice.roll(RollRequest(f"{key}.helmet")) >= defender.helmet_save:
-            condition = Condition.KNOCKED_DOWN
+    condition = phases.resolve_stun_reaction(phases.StunReactionContext(
+        condition, defender.global_effects.thick_skull, defender.helmet_save, key
+    ), dice).condition
     defender_state = replace(
         defender_state, wounds=remaining, condition=max(defender_state.condition, condition),
         frenzy=defender_state.frenzy and condition == Condition.STANDING,
     )
     return AttackOutcome(attacker_state, defender_state, True, wounded=True, damage=damage, critical=wound.critical, trace=trace)
-
-
-
-
-
-
-
 
 

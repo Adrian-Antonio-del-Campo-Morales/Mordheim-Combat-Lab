@@ -1,7 +1,7 @@
 schema_version: 1
 specifications:
 - id: two-strength-skills-stack
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: interaction
   sources:
   - target: mechanic/skill.mighty-blow
@@ -48,7 +48,7 @@ specifications:
     - forward
     - reverse
 - id: step-aside-then-regeneration
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: interaction
   sources:
   - target: mechanic/skill.step-aside
@@ -135,7 +135,7 @@ specifications:
     cases:
     - fire-only-blocks-regeneration
 - id: hard-to-kill-plus-no-pain
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: interaction
   sources:
   - target: mechanic/skill.hard-to-kill

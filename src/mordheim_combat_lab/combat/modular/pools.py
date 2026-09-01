@@ -148,23 +148,34 @@ def _resolve_attack_pool(
     if count <= 0 or attacker_state.condition != Condition.STANDING:
         return attacker_state, defender_state, ()
     helpless = defender_state.condition in (Condition.KNOCKED_DOWN, Condition.PARALYZED)
-    if first_round and charging and phases.has_tag(attacker.global_effects, "mechanic.bull-charge"):
+    use_bull_charge = (
+        first_round and charging
+        and phases.has_tag(attacker.global_effects, "mechanic.bull-charge")
+        and decisions.choose(f"{key}.bull-charge", attacker)
+    )
+    if use_bull_charge:
         bull = EffectSet(tags=("mechanic.bull-charge",), hit_modifier=1)
         result = resolve_reference_attack(
             attacker, defender, attacker_state, defender_state, bull, dice,
             key=f"{key}.bull-charge", first_round=True, charging=True,
-            helpless_at_start=helpless,
+            helpless_at_start=helpless, decisions=decisions,
         )
         if result.hit and not result.parried and result.defender.condition == Condition.STANDING:
             result = replace(result, defender=replace(result.defender, condition=Condition.KNOCKED_DOWN))
         result = _react_to_wound(attacker, defender, result, dice, f"{key}.bull-charge")
         return result.attacker, result.defender, (result,)
 
-    if first_round and charging and phases.has_tag(attacker.global_effects, "mechanic.body-slam"):
+    use_body_slam = (
+        first_round and charging
+        and phases.has_tag(attacker.global_effects, "mechanic.body-slam")
+        and decisions.choose(f"{key}.body-slam", attacker)
+    )
+    if use_body_slam:
         weapons = (EffectSet(tags=("mechanic.body-slam",), strength_bonus=1, hit_modifier=1),)
     else:
         weapons = allocate_attack_weapons(attacker, count, first_round, decisions, key=key)
-    weapons += attacker.extra_attacks
+    weapons += tuple(weapon for weapon in attacker.extra_attacks
+                     if charging or not phases.has_tag(weapon, "rule.horned-one"))
     weapons = tuple(weapon_against_opponent(attacker, defender, weapon) for weapon in weapons)
     if weapons and phases.has_tag(attacker.global_effects, "mechanic.unpredictable-attack"):
         weapons = (merge_effects(weapons[0], EffectSet(cannot_be_parried=True)), *weapons[1:])
@@ -209,6 +220,7 @@ def _resolve_attack_pool(
                     attacker, defender, attacker_state, defender_state, automatic, dice,
                     key=f"{key}.bear-hug.result", first_round=first_round,
                     charging=charging, helpless_at_start=helpless,
+                    decisions=decisions,
                 )
                 result = _react_to_wound(attacker, defender, result, dice, f"{key}.bear-hug.result")
                 attacker_state, defender_state = result.attacker, result.defender
@@ -222,7 +234,7 @@ def _resolve_attack_pool(
                     key=attack_keys[index], first_round=first_round,
                     charging=charging, helpless_at_start=helpless,
                     prepared_hit=_prepared_hit(prepared_tuple[index][1]),
-                    defences_resolved=True,
+                    defences_resolved=True, decisions=decisions,
                 )
                 result = replace(
                     result, hit_roll=prepared_tuple[index][1].hit_roll,
@@ -244,6 +256,7 @@ def _resolve_attack_pool(
                 key=attack_keys[index], first_round=first_round,
                 charging=charging, helpless_at_start=helpless,
                 prepared_hit=_prepared_hit(prepared), defences_resolved=True,
+                decisions=decisions,
             )
             result = replace(
                 result, hit_roll=prepared.hit_roll, hit_target=prepared.hit_target
@@ -269,6 +282,7 @@ def _resolve_attack_pool(
             key=f"{key}.attack.{index}", first_round=first_round,
             charging=charging, helpless_at_start=helpless,
             prepared_hit=_prepared_hit(prepared), defences_resolved=True,
+            decisions=decisions,
         )
         result = replace(
             result, hit_roll=prepared.hit_roll, hit_target=prepared.hit_target
@@ -284,7 +298,7 @@ def _resolve_attack_pool(
                     attacker, defender, attacker_state, defender_state, repeated, dice,
                     key=f"{key}.attack.{index}.anvil.{repeat_index}",
                     first_round=first_round, charging=charging,
-                    helpless_at_start=helpless,
+                    helpless_at_start=helpless, decisions=decisions,
                 )
                 extra = _react_to_wound(
                     attacker, defender, extra, dice,

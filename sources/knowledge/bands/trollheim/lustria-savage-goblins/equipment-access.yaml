@@ -36,10 +36,6 @@ equipment_lists:
     cost: 5
   - item_id: light_armour
     cost: 20
-  - item_id: spider_chitin_armour
-    cost: 70
-    notes: Warband-creation price from the Hero Equipment List on printed page 97. The detailed entry and Trading price list
-      give 80 gc, Rare 11. Internal armour mechanics are intentionally not modelled here.
   - item_id: feather_headdress
     cost: 20
     notes: Warband leader only. At creation the mandatory Witch Doctor is the leader. The detailed entry is Rare 6 and states

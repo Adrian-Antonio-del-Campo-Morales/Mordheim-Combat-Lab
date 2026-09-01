@@ -185,6 +185,34 @@ def test_profile_two_is_not_out_when_a_special_save_ignores_the_wound(protection
     assert defender_state.wounds[0]==1
 
 
+def test_summoned_bat_loses_two_wounds_before_removal_without_injury_dice():
+    from mordheim_combat_lab.combat.vectorized import _new_state, _resolve_weapon, OUT, STANDING
+
+    class NonemptyDice(FixedRng):
+        def integers(self, low, high=None, size=None, dtype=None):
+            if size == 0:
+                return np.empty(0, dtype=dtype or np.int64)
+            return super().integers(low, high, size, dtype)
+
+    attacker = replace(fighter(), main_weapon=EffectSet(automatic_hit=True))
+    defender = compile_fighter(FighterBuild(
+        "mordheim", collection="trollheim", band_id="chaos-streets-undead-bloodlines",
+        profile_id="vampire-bat",
+    ))
+    assert defender.injury_profile == 4
+    attacker_state = _new_state(attacker, 1, np.random.default_rng(1))
+    defender_state = _new_state(defender, 1, np.random.default_rng(2))
+    for remaining, condition in ((1, STANDING), (0, OUT)):
+        dice = NonemptyDice(5)  # Only the non-critical wound roll; never an injury roll.
+        _resolve_weapon(
+            attacker, defender, attacker.main_weapon, np.array([0]), np.zeros(1, dtype=bool),
+            attacker_state, defender_state, dice, False,
+        )
+        assert dice.values == []
+        assert defender_state.wounds[0] == remaining
+        assert defender_state.condition[0] == condition
+
+
 def test_charge_conditions_are_isolated_per_vector_row():
     from mordheim_combat_lab.combat.vectorized import _new_state
     from mordheim_combat_lab.combat.vectorized import _resolve_weapon

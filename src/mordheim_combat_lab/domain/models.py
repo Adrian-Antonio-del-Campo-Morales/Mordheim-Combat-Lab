@@ -30,6 +30,7 @@ class FighterBuild:
     skill_ids: tuple[str, ...] = (); preparation_ids: tuple[str, ...] = ()
     special_rule_ids: tuple[str, ...] = ()
     energy_focus_attacks: int = 0
+    mounted: bool = False
     variant_ids: tuple[str, ...] = ()
     extra_hand_id: str | None = None
     main_poison_id: str | None = None; off_poison_id: str | None = None
@@ -52,7 +53,7 @@ class EffectSet:
     fixed_strength: int = 0
     armour_penetration: int = 0; target_armour_bonus: int = 0
     hit_modifier: int = 0; wound_modifier: int = 0; injury_modifier: int = 0
-    attacks_bonus: int = 0; charge_attacks_bonus: int = 0; charge_ws_bonus: int = 0
+    attacks_bonus: int = 0; charge_attacks_bonus: int = 0; first_round_charge_attacks_bonus: int = 0; charge_ws_bonus: int = 0
     first_round_attacks_bonus: int = 0; incoming_strength_modifier: int = 0
     armour_strength_modifier: int = 0; weapon_skill_bonus: int = 0
     critical_injury_bonus: int = 0
@@ -86,6 +87,7 @@ class CompiledFighter:
     armour_save: int; helmet_save: int; natural_armour_save: int
     off_hand_attacks: bool = False
     natural_armour_unmodified: bool = False
+    # 0 normal; 1 Weedy; 2 OUT on any wound; 3 Fragile undead; 4 OUT on last wound.
     injury_profile: int = 0
     random_characteristics: tuple[tuple[str,int,int,int], ...] = ()
     natural_armour_worst_save: int = 7
@@ -97,6 +99,7 @@ class CompiledFighter:
     # preserve the independently compiled weapon/material/profile contribution.
     main_weapon_without_poison: EffectSet | None = None
     off_hand_without_poison: EffectSet | None = None
+    mounted: bool = False
 
 
 @dataclass(frozen=True, slots=True)

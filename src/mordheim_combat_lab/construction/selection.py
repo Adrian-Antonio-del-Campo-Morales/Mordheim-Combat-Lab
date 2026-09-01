@@ -117,6 +117,42 @@ def _compiler_contract_bindings(rules):
     )
 
 
+def available_special_rules(build, root):
+    """Return editorial warband skills legally available, regardless of duel support."""
+    _, _, package, profile, _ = _profile(build, root)
+    if package is None or profile is None:
+        return ()
+    has_special_access = "special" in set(profile.get("skill_access") or ())
+    result = []
+    for rule in package.special_rules:
+        if rule.get("kind") != "warband_skill":
+            continue
+        eligible = set(rule.get("eligibility") or ())
+        applicable = set((rule.get("applies_to") or {}).get("profile_ids") or ())
+        if eligible and profile.get("id") not in eligible:
+            continue
+        if applicable and profile.get("id") not in applicable:
+            continue
+        if not eligible and not applicable and not has_special_access:
+            continue
+        result.append(str(rule["id"]))
+    # The Streets Troll Slayer explicitly chooses from both his Pit Fighter
+    # skills and the Dwarf Treasure Hunter special-skill list.
+    contracts = {str(binding["id"]) for binding in _compiler_contract_bindings(_applicable_rules(package, profile))}
+    if "compiler.slayer-skill-options" in contracts:
+        dwarf_package = next(
+            candidate for candidate in load_bands(build.collection, root)
+            if candidate.band.get("id") == "chaos-streets-dwarf-treasure-hunters"
+        )
+        result.extend(
+            str(rule["id"])
+            for rule in dwarf_package.special_rules
+            if rule.get("kind") == "warband_skill"
+            and (rule.get("runtime") or {}).get("implemented") == "YES"
+        )
+    return tuple(sorted(result))
+
+
 def _profile_rule_mechanics(package, profile):
     """Return automatic profile rules that have an executable mechanic binding."""
     rules = _applicable_rules(package, profile)

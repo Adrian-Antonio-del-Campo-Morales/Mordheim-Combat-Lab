@@ -17,19 +17,19 @@ def test_structural_audit_covers_the_current_implemented_catalogue_snapshot():
     assert report.structural_complete
     # Catalogue snapshot only, never an assertion of semantic completeness.
     assert report.execution_mechanics == 193
-    assert report.projected_mechanics == 193
-    assert report.projected_trait_bindings == 35
+    assert report.projected_mechanics == 191
+    assert report.projected_trait_bindings == 36
     assert report.evidenced_profile_bindings == 6
-    assert report.projected_automatic_compiler_bindings == 38
+    assert report.projected_automatic_compiler_bindings == 34
     assert report.evidenced_selectable_compiler_bindings == 8
-    assert report.evidenced_special_compiler_bindings == 19
-    assert report.observable_canonical_bindings == 175
+    assert report.evidenced_special_compiler_bindings == 18
+    assert report.observable_canonical_bindings == 171
     assert report.evidenced_complex_sequences == 13
     assert report.modular_tag_consumers == 74
-    assert report.modular_operator_fields == 53
+    assert report.modular_operator_fields == 54
     assert report.modular_execution_mechanics == 193
-    assert report.implemented_rule_records == 398
-    assert report.canonical_bindings == 175
+    assert report.implemented_rule_records == 394
+    assert report.canonical_bindings == 171
 
 
 def test_every_effect_field_has_an_owned_phase_operator():

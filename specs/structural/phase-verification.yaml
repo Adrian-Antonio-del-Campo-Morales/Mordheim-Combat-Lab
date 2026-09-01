@@ -20,6 +20,7 @@ operator_fields:
   injury_modifier: [injury]
   attacks_bonus: [attacks]
   charge_attacks_bonus: [attacks]
+  first_round_charge_attacks_bonus: [attacks]
   charge_ws_bonus: [hit]
   first_round_attacks_bonus: [attacks]
   incoming_strength_modifier: [wound]
@@ -125,7 +126,6 @@ semantic_evidence:
     special-rule.band--marauder-special-skills-mutant: cross-band-mutation-grant
     special-rule.band--beastmen-special-skills-horned-one: compiled-extra-attack
     special-rule.band--shield-bash: compiled-extra-attack
-    special-rule.band--blessings-of-nurgle-nurgles-rot: compiled-trait
     special-rule.band--blessings-of-nurgle-bloated-foulness: compiled-characteristics
     special-rule.band--blessings-of-nurgle-mark-of-nurgle: compiled-characteristics-and-trait
     special-rule.band--mutations-great-claw: compiled-extra-attack

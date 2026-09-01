@@ -1,7 +1,7 @@
 schema_version: 1
 specifications:
 - id: skill.iron-sinews
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: permanent
   sources:
   - target: mechanic/skill.iron-sinews
@@ -76,7 +76,7 @@ specifications:
     - attack.strength
     - armour.strength
 - id: material.obsidian
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: permanent
   sources:
   - target: mechanic/material.obsidian
@@ -147,7 +147,7 @@ specifications:
     - attack.strength
     - armour.strength
 - id: poison.black-venom
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: permanent
   sources:
   - target: mechanic/poison.black-venom
@@ -219,7 +219,7 @@ specifications:
     - attack.strength
     - armour.strength
 - id: armour.light-armour
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: permanent
   sources:
   - target: mechanic/armour.light-armour
@@ -285,7 +285,7 @@ specifications:
     writes:
     - armour.target
 - id: armour.heavy-armour
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: permanent
   sources:
   - target: mechanic/armour.heavy-armour
@@ -353,7 +353,7 @@ specifications:
     writes:
     - armour.target
 - id: armour.gromril-armour
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: permanent
   sources:
   - target: mechanic/armour.gromril-armour
@@ -421,7 +421,7 @@ specifications:
     writes:
     - armour.target
 - id: armour.ithilmar-armour
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: permanent
   sources:
   - target: mechanic/armour.ithilmar-armour
@@ -489,7 +489,7 @@ specifications:
     writes:
     - armour.target
 - id: skill.step-aside
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: local
   sources:
   - target: mechanic/skill.step-aside
@@ -540,7 +540,7 @@ specifications:
     writes:
     - damage.unsaved
 - id: skill.regeneration
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: local
   sources:
   - target: mechanic/skill.regeneration
@@ -591,7 +591,7 @@ specifications:
     writes:
     - damage.unsaved
 - id: defence.enchanted-skins
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: local
   sources:
   - target: mechanic/defence.enchanted-skins
@@ -642,7 +642,7 @@ specifications:
     writes:
     - damage.unsaved
 - id: skill.infinite-hatred
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: local
   sources:
   - target: mechanic/skill.infinite-hatred
@@ -703,7 +703,7 @@ specifications:
     - hit.success
     - hit.rolls
 - id: skill.sure-strike
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: local
   sources:
   - target: mechanic/skill.sure-strike
@@ -764,7 +764,7 @@ specifications:
     - wound.success
     - wound.rolls
 - id: material.dark-steel
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: local
   sources:
   - target: mechanic/material.dark-steel
@@ -822,7 +822,7 @@ specifications:
     - wound.success
     - wound.rolls
 - id: skill.expert-fighter
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: local
   sources:
   - target: mechanic/skill.expert-fighter
@@ -890,7 +890,7 @@ specifications:
     writes:
     - wound.target
 - id: skill.hard-to-kill
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: local
   sources:
   - target: mechanic/skill.hard-to-kill
@@ -1021,7 +1021,7 @@ specifications:
     writes:
     - injury.condition
 - id: skill.ignore-pain
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: local
   sources:
   - target: mechanic/skill.ignore-pain
@@ -1155,7 +1155,7 @@ specifications:
     writes:
     - injury.condition
 - id: skill.head-crusher
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: local
   sources:
   - target: mechanic/skill.head-crusher
@@ -1288,7 +1288,7 @@ specifications:
     writes:
     - injury.condition
 - id: skill.strike-to-injure
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: local
   sources:
   - target: mechanic/skill.strike-to-injure
@@ -1419,7 +1419,7 @@ specifications:
     writes:
     - injury.total
 - id: material.dark-elf-blade
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: local
   sources:
   - target: mechanic/material.dark-elf-blade
@@ -1543,14 +1543,13 @@ specifications:
     writes:
     - injury.total
 - id: skill.tough-as-steel
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: local
   sources:
   - target: mechanic/skill.tough-as-steel
     digest: 405b225f16f360f04f2f88daddae771eb9d9d72cd0217e1e169b61ac8c84a46f
-  interpretation: The independently transcribed injury outcomes for natural D6 faces 1 through 6 are KNOCKED_DOWN,
-    KNOCKED_DOWN, STUNNED, STUNNED, STUNNED, OUT. The input die is controlled; injury conversion is tested without
-    a duel.
+  interpretation: The six editorial sources independently establish natural D6 outcomes KNOCKED_DOWN, KNOCKED_DOWN,
+    KNOCKED_DOWN, STUNNED, STUNNED, OUT. This differs from Hard to Kill specifically on face 3.
   cases:
   - id: compiled
     roles:
@@ -1609,7 +1608,7 @@ specifications:
     - key: test.injury
       value: 3
     expect:
-      result.condition: STUNNED
+      result.condition: KNOCKED_DOWN
   - id: face-4
     roles:
     - active
@@ -1660,8 +1659,11 @@ specifications:
       result.condition: OUT
   mutations:
   - id: remove-injury-rule
-    path: defender.global_effects.out_of_action_threshold
-    value: 5
+    changes:
+    - path: defender.global_effects.tags
+      value: []
+    - path: defender.global_effects.out_of_action_threshold
+      value: 5
     cases:
     - face-1
     - face-2
@@ -1669,5 +1671,3 @@ specifications:
     - face-4
     - face-5
     - face-6
-  pending: 'Missing authoritative full injury table: the KB summary only specifies Out of Action on 6. The runtime
-    additionally turns 3 into Knocked Down. This extra replacement needs a source or ruling before certification.'

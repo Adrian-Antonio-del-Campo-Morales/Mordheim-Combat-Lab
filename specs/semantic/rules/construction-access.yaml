@@ -1,7 +1,7 @@
 schema_version: 1
 specifications:
 - id: access-mordheim-dark-elves
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: construction
   sources:
   - target: rule/mordheim/dark-elves/band--dark-elf-special-skills-powerful-build/profile.skill-access
@@ -175,7 +175,7 @@ specifications:
     cases:
     - granted-high-born
 - id: access-mordheim-shadow-warriors
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: construction
   sources:
   - target: rule/mordheim/shadow-warriors/band--shadow-warrior-special-skills-powerful-build/profile.skill-access
@@ -309,7 +309,7 @@ specifications:
     cases:
     - granted-shadow-master
 - id: access-trollheim-lustria-dark-elves
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: construction
   sources:
   - target: rule/trollheim/lustria-dark-elves/band--dark-elf-special-skills-strong-constitution/profile.skill-access

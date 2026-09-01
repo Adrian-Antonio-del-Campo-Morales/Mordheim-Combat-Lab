@@ -2,7 +2,7 @@ schema_version: 1
 specifications:
 - id: defence.helmet
   category: local
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   sources:
   - target: mechanic/defence.helmet
     digest: e38f4f8e7da5e91fa8400e0f91b8b4389b266c73cbde0c7896f22388719c4926
@@ -499,7 +499,7 @@ specifications:
     - injury-3-save-4
 - id: defence.cooking-pot-helmet
   category: local
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   sources:
   - target: mechanic/defence.cooking-pot-helmet
     digest: 5626269bfa31ca0b5e8da7cca3b15a8d1bdfe926e3716f1ed517e9ce55f34d04
@@ -996,7 +996,7 @@ specifications:
     - injury-3-save-5
 - id: defence.lucky-charm
   category: stateful
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   sources:
   - target: mechanic/defence.lucky-charm
     digest: f2b78f8f57ab832b02e21358e279961709e3ca5d9a71d329eca90a8cc9a6e91b

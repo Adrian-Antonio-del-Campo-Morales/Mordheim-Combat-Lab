@@ -111,6 +111,17 @@ def test_automatic_wound_never_synthesizes_a_critical():
     assert result.success and not result.critical and result.roll == 0
 
 
+def test_failed_wound_can_still_succeed_without_inventing_a_critical():
+    failed = resolve_wound(
+        WoundContext(3, 6, failure_still_wounds=True), ScriptedDice((1,))
+    )
+    critical = resolve_wound(
+        WoundContext(3, 3, failure_still_wounds=True), ScriptedDice((6,))
+    )
+    assert failed.success and failed.roll == 1 and not failed.critical
+    assert critical.success and critical.critical
+
+
 def test_armour_phase_owns_strength_penetration_natural_armour_and_floors():
     ordinary = ArmourContext(armour_save=5, strength=4, armour_penetration=1)
     natural = replace(ordinary, natural_armour_save=5, natural_armour_unmodified=True)
@@ -141,6 +152,8 @@ def test_special_saves_resolve_ward_before_regeneration_exactly():
         (3, InjuryContext(), Condition.STUNNED),
         (5, InjuryContext(), Condition.OUT),
         (5, InjuryContext(hard_to_kill=True), Condition.STUNNED),
+        (3, InjuryContext(true_grit=True), Condition.KNOCKED_DOWN),
+        (4, InjuryContext(true_grit=True), Condition.STUNNED),
         (4, InjuryContext(injury_profile=3), Condition.OUT),
         (6, InjuryContext(survivor=True), Condition.STUNNED),
         (3, InjuryContext(ignore_pain=True), Condition.KNOCKED_DOWN),
@@ -165,6 +178,27 @@ def test_parry_phase_owns_eligibility_comparison_and_reroll():
     assert starblade.blocked
 
 
+@pytest.mark.parametrize("allowed", [False, True])
+@pytest.mark.parametrize("roll", range(1, 7))
+def test_parry_six_requires_explicit_exception(allowed, roll):
+    result = resolve_parry(
+        ParryContext(6, 3, 3, match_allowed=True, can_parry_six=allowed),
+        ScriptedDice((roll,) if allowed else ()),
+    )
+    assert result.attempted is allowed
+    assert result.blocked is (allowed and roll == 6)
+
+
+@pytest.mark.parametrize("overrides", [
+    {"available": False}, {"cannot_be_parried": True}, {"attacker_strength": 6},
+])
+def test_parry_six_exception_preserves_other_prohibitions(overrides):
+    values = dict(hit_roll=6, attacker_strength=3, defender_strength=3,
+                  match_allowed=True, can_parry_six=True, reroll=True)
+    result = resolve_parry(ParryContext(**(values | overrides)), ScriptedDice(()))
+    assert not result.attempted
+
+
 def test_priority_and_attack_generation_are_directly_testable_phases():
     flags = fighter(main_weapon_id="weapon.double-handed-weapon")
     strong = fighter(
@@ -175,6 +209,17 @@ def test_priority_and_attack_generation_are_directly_testable_phases():
     assert resolve_priority(PriorityContext(strong, fighter())).priority == 0
     assert build_attacks(AttackPoolContext(fighter(), charging=False)).attacks == 1
     assert build_attacks(AttackPoolContext(fighter(off_hand_id="weapon.dagger"))).attacks == 2
+
+
+@pytest.mark.parametrize("charging", [False, True])
+def test_standing_up_preserves_only_explicit_always_strikes_first(charging):
+    ordinary = fighter(main_weapon_id="weapon.mace")
+    always_first = fighter(main_weapon_id="weapon.mace", skill_ids=("skill.always-strikes-first",))
+    for actor, expected in ((ordinary, -1), (always_first, 1)):
+        result = resolve_priority(PriorityContext(
+            actor, ordinary, first_round=True, charging=charging, stood_up=True,
+        ))
+        assert result.priority == expected
 
 
 def test_bear_hug_is_the_minimal_cross_phase_sequence_with_an_explicit_choice():

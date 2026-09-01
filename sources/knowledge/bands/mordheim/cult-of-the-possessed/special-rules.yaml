@@ -89,11 +89,11 @@ rules:
     implemented: 'YES'
     grant: profile
     effects:
-    - id: compiler.possessed-requires-one-or-more-mutations-at-recruitment
+    - id: compiler.possessed-optional-mutations-at-recruitment
       scope: 'YES'
       binding:
         kind: compiler
-        id: compiler.possessed-requires-one-or-more-mutations-at-recruitment
+        id: compiler.possessed-optional-mutations-at-recruitment
   name: Mutations
   effect: Possessed may start the game with one or more mutations each. See the Mutations list for costs.
   source:
@@ -176,6 +176,10 @@ rules:
       binding:
         kind: compiler
         id: compiler.mutation-purchase-at-recruitment
+    - id: campaign.mutation-purchase-history-and-costs
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: recruitment timing, later campaign purchases and escalating gold costs require campaign history.'
   name: Mutations
   effect: Those who dwell in Mordheim soon develop horrible mutations, and the Cult of the Possessed seem to be especially
     susceptible. In addition, Mordheim attracts mutants from all over the Empire, who are always quick to join the Chaos covens.

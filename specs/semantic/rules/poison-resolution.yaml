@@ -1,7 +1,7 @@
 schema_version: 1
 specifications:
 - id: poison.devil-s-toxin
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: local
   sources:
   - target: mechanic/poison.devil-s-toxin
@@ -467,7 +467,7 @@ specifications:
     cases:
     - first-1-repeat-6
 - id: poison.reptile-venom
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: contextual
   sources:
   - target: mechanic/poison.reptile-venom
@@ -564,7 +564,7 @@ specifications:
     cases:
     - strengths
 - id: poison.manbane
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: local
   sources:
   - target: mechanic/poison.manbane
@@ -718,7 +718,7 @@ specifications:
     cases:
     - face-3
 - id: poison.wolfsbane
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: local
   sources:
   - target: mechanic/poison.wolfsbane
@@ -979,7 +979,7 @@ specifications:
     cases:
     - ordinary-5
 - id: poison.black-lotus
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: local
   sources:
   - target: mechanic/poison.black-lotus
@@ -1171,7 +1171,7 @@ specifications:
     cases:
     - compiled-and-triggered
 - id: poison.bloodroot
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: local
   sources:
   - target: mechanic/poison.bloodroot

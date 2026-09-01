@@ -36,13 +36,15 @@ def test_no_scope_yes_rules_remain_without_an_implementation_family():
 
 
 def test_mandatory_mutations_and_blessings_are_enforced():
-    with pytest.raises(ValueError, match="one or two mutations"):
-        compile_fighter(build("trollheim-cult-of-the-possessed", "the-possessed", collection="trollheim"), ROOT)
+    unmutated_possessed = compile_fighter(
+        build("trollheim-cult-of-the-possessed", "the-possessed", collection="trollheim"), ROOT
+    )
+    assert "compiler.possessed-optional-zero-to-two-mutations-at-recruitment" in unmutated_possessed.construction_tags
     possessed = compile_fighter(build(
         "trollheim-cult-of-the-possessed", "the-possessed", collection="trollheim",
         special_rule_ids=("band--mutations-tentacle",),
     ), ROOT)
-    assert "compiler.possessed-requires-one-or-two-mutations-at-recruitment" in possessed.construction_tags
+    assert "compiler.possessed-optional-zero-to-two-mutations-at-recruitment" in possessed.construction_tags
 
     with pytest.raises(ValueError, match="at least one Blessing"):
         compile_fighter(build("carnival-of-chaos", "tainted-ones"), ROOT)

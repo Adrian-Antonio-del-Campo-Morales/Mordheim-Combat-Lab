@@ -575,9 +575,13 @@ rules:
   effect_i18n:
     en: The Slayer may double his attacks on the turn in which he charges, but suffers a -1 to hit penalty that turn.
     es: null
+  eligibility:
+  - dwarf-troll-slayers
   applies_to:
     band: true
 - id: band--slayer-special-skills-monster-slayer
+  eligibility:
+  - dwarf-troll-slayers
   kind: warband_skill
   runtime:
     scope: "YES"
@@ -607,6 +611,8 @@ rules:
   applies_to:
     band: true
 - id: band--slayer-special-skills-berserker
+  eligibility:
+  - dwarf-troll-slayers
   kind: warband_skill
   runtime:
     scope: "YES"

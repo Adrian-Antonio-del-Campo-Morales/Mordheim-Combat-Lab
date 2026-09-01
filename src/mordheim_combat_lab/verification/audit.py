@@ -6,7 +6,7 @@ from itertools import combinations
 from mordheim_combat_lab.knowledge.loader import knowledge_root
 from mordheim_combat_lab.knowledge.loader import read_yaml
 from mordheim_combat_lab.verification.integrations import verify_integrations
-from mordheim_combat_lab.verification.interactions import normalize_interaction_contract
+from mordheim_combat_lab.verification.interactions import assess_interaction, normalize_interaction_contract
 from mordheim_combat_lab.verification.inventory import fingerprint
 from mordheim_combat_lab.verification.inventory import inventory
 from mordheim_combat_lab.verification.operators import verify_operators
@@ -177,6 +177,29 @@ def verify_semantics(root: Path | None = None, specs_root: Path | None = None) -
         if (set(a["writes"]) & (set(b["reads"]) | set(b["writes"]))
                 or set(b["writes"]) & set(a["reads"])):
             candidates.add((left, right))
+    policy_path = specifications_root(specs_root) / "interaction-policy.yaml"
+    overrides = {}
+    policy_name = "critical_and_high_required"
+    if policy_path.exists():
+        policy = read_yaml(policy_path)
+        if policy.get("schema_version") != 1:
+            errors.append("unsupported interaction policy schema")
+        policy_name = str(policy.get("policy") or policy_name)
+        for override in policy.get("overrides", []):
+            pair = tuple(sorted(override.get("bindings", [])))
+            if len(pair) != 2 or len(set(pair)) != 2:
+                errors.append("invalid interaction policy override")
+            elif set(pair) - set(contracts):
+                errors.append(f"interaction policy override references unknown bindings: {pair}")
+            else:
+                overrides[pair] = override
+    assessments = []
+    for pair in sorted(candidates | set(overrides)):
+        try:
+            assessments.append(assess_interaction(
+                *pair, contracts, tested=pair in proved_pairs, override=overrides.get(pair)))
+        except ValueError as error:
+            errors.append(f"interaction policy {pair}: {error}")
     integrations, integration_errors = verify_integrations(root)
     errors.extend(integration_errors)
     operators, operator_errors = verify_operators()
@@ -202,4 +225,5 @@ def verify_semantics(root: Path | None = None, specs_root: Path | None = None) -
         tuple(sorted({item.binding for item in obligations} - set(contracts))),
         tuple(sorted(candidates - proved_pairs)), tuple(sorted(proved_pairs)), integrations, operators,
         tuple(sorted(proved_higher)), tuple(sorted(required_higher - proved_higher)),
+        tuple(assessments), policy_name,
     )

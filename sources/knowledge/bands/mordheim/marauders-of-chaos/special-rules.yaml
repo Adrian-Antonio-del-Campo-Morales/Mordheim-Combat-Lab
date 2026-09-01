@@ -480,15 +480,14 @@ rules:
     band: true
 - id: band--tribe-choice
   runtime:
-    scope: 'YES'
-    implemented: 'YES'
+    scope: 'NO'
+    implemented: 'NO'
     grant: band
     effects:
     - id: mechanic.follow-the-darkest-tribe
-      scope: 'YES'
-      binding:
-        kind: compiler
-        id: compiler.follow-the-darkest-tribe
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: this is an immutable warband-creation choice whose listed consequences concern roster limits, campaign rarity, post-game rewards, riding and mounted campaign options.'
   name: Follow the Darkest Tribe
   effect: 'When the warband is created, choose one tribe: Norse, Kurgan or Hung. Apply only the special rules belonging to
     the chosen tribe.'

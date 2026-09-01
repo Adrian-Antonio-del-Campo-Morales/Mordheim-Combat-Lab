@@ -1,7 +1,7 @@
 schema_version: 1
 specifications:
 - id: weapon.mace
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: local
   sources:
   - target: mechanic/weapon.mace
@@ -102,7 +102,7 @@ specifications:
     cases:
     - face-2
 - id: weapon.stone-axe
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: local
   sources:
   - target: mechanic/weapon.stone-axe
@@ -203,7 +203,7 @@ specifications:
     cases:
     - face-2
 - id: weapon.axe
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: permanent
   sources:
   - target: mechanic/weapon.axe
@@ -268,7 +268,7 @@ specifications:
     - all-armour-faces
     - save-worse-than-six
 - id: material.gromril
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: permanent
   sources:
   - target: mechanic/material.gromril
@@ -337,7 +337,7 @@ specifications:
     - all-armour-faces
     - save-worse-than-six
 - id: weapon.katar
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: permanent
   sources:
   - target: mechanic/weapon.katar
@@ -402,7 +402,7 @@ specifications:
     - all-armour-faces
     - save-worse-than-six
 - id: weapon.dagger
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: permanent
   sources:
   - target: mechanic/weapon.dagger
@@ -468,7 +468,7 @@ specifications:
     - otherwise-unarmoured
     - improves-existing-save
 - id: weapon.yambiya
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: permanent
   sources:
   - target: mechanic/weapon.yambiya
@@ -534,7 +534,7 @@ specifications:
     - otherwise-unarmoured
     - improves-existing-save
 - id: weapon.halberd
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: permanent
   sources:
   - target: mechanic/weapon.halberd
@@ -605,7 +605,7 @@ specifications:
     cases:
     - first-round-strength
 - id: weapon.flail
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: contextual
   sources:
   - target: mechanic/weapon.flail
@@ -676,7 +676,7 @@ specifications:
     cases:
     - first-round-strength
 - id: weapon.double-handed-weapon
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: contextual
   sources:
   - target: mechanic/weapon.double-handed-weapon
@@ -783,7 +783,7 @@ specifications:
     cases:
     - last-despite-initiative
 - id: weapon.sword
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: local
   sources:
   - target: mechanic/weapon.sword
@@ -846,7 +846,7 @@ specifications:
     cases:
     - all-faces
 - id: armour.no-armour
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: permanent
   sources:
   - target: mechanic/armour.no-armour

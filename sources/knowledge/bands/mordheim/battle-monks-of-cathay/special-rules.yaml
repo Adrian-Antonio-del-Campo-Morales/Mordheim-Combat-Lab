@@ -177,6 +177,8 @@ rules:
       binding:
         kind: profile
         id: profile.fist
+        parameters:
+          ignore_penalties: true
   name: Unarmed
   effect: Raging Peasants are treated as fighting unarmed, but without any penalties.
   source:
@@ -332,7 +334,7 @@ rules:
   runtime:
     scope: 'YES'
     implemented: 'YES'
-    grant: band
+    grant: profile
     effects:
     - id: compiler.forbid-item-categories
       scope: 'YES'
@@ -356,7 +358,9 @@ rules:
     en: Dragon Monks and Warrior Monks may never use any kind of poison or venom.
     es: null
   applies_to:
-    band: true
+    profile_ids:
+    - dragon-monks
+    - warrior-monks
   eligibility:
   - dragon-monks
   - warrior-monks

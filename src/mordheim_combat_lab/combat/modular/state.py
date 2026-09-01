@@ -24,6 +24,7 @@ class FighterState:
     entangled: bool = False
     attack_penalty: int = 0
     initiative_penalty: int = 0
+    initiative_floor: int = 1
     parries_remaining: int = 0
     critical_available: bool = True
     force_of_will_active: bool = False
@@ -84,9 +85,8 @@ def _parry_capacity(fighter: CompiledFighter) -> int:
             for weapon in (fighter.main_weapon, fighter.off_hand or EffectSet())
             for tag in ("weapon.axe", "weapon.dwarf-axe")
         ),
-        phases.has_tag(effects, "skill.shield-mastery") and bool(
-            fighter.off_hand and phases.has_tag(fighter.off_hand, "defence.shield")
-        ),
+        phases.has_tag(effects, "skill.shield-mastery")
+        and phases.has_tag(effects, "defence.shield"),
     ))
     return min(2 if phases.has_tag(effects, "skill.unbeatable-warrior") else 1, int(available))
 

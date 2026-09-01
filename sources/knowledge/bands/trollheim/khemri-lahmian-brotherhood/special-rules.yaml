@@ -596,7 +596,7 @@ rules:
   runtime:
     scope: 'YES'
     implemented: 'YES'
-    grant: profile
+    grant: band
     effects:
     - id: skill.ignore-pain
       scope: 'YES'
@@ -654,7 +654,7 @@ rules:
   runtime:
     scope: 'YES'
     implemented: 'YES'
-    grant: profile
+    grant: band
     effects:
     - id: trait.poison-immune
       scope: 'YES'

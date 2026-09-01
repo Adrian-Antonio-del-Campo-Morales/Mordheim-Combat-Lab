@@ -3,6 +3,10 @@ ruleset: mordheim
 scope: close-combat-only
 profile_exclusions: []
 mechanic_exclusions:
+- id: armour.spider-chitin-armour
+  reason: The ruling represents chitin as the Gigantic Spider's intrinsic natural armour, not as selectable equipment.
+- id: weapon.man-catcher
+  reason: Capturing an out-of-action model, using an Engine of Chaos and replacing Serious Injuries are post-battle roster and campaign effects.
 - id: skill.acrobat
   reason: Movement, falling and diving-charge rules are outside the current one-against-one combat scope.
 - id: skill.arcane-lore

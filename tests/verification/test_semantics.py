@@ -19,6 +19,44 @@ import pytest as pytest
 import yaml as yaml
 
 
+@pytest.mark.parametrize("spec_id", ["initial-choice-mordheim-mutants", "initial-choice-tainted-ones"])
+def test_initial_choice_mutation_is_isolated(spec_id):
+    spec = next(s for s in load_fixtures() if s["id"] == spec_id)
+    case = next(c for c in spec["cases"] if c["id"] == "choices")
+    check_case(case, knowledge_root())
+    with pytest.raises(EvidenceMismatch):
+        check_case(case, knowledge_root(), spec["mutations"][0])
+    check_case(case, knowledge_root())
+
+
+@pytest.mark.parametrize("operation, choices", [
+    ("selection_choices", {"bad": {"armour_id": "armour.light-armour"}}),
+    ("selection_choices", {"bad": {"arbitrary_code": "pass"}}),
+    ("equipment_choices", {"bad": {"special_rule_ids": []}}),
+])
+def test_construction_choices_reject_fields_outside_their_contract(operation, choices):
+    with pytest.raises(ValueError, match="unsupported construction fields"):
+        check_case({"operation": operation, "context": {"choices": choices},
+                    "expect": {"result.accepted": []}}, knowledge_root())
+
+
+def test_selection_choices_cannot_ignore_decisions():
+    with pytest.raises(ValueError, match="construction cases cannot request combat decisions"):
+        check_case({"operation": "selection_choices", "context": {"choices": {}},
+                    "decisions": [{"key": "unrelated", "value": True}],
+                    "expect": {"result.accepted": []}}, knowledge_root())
+
+
+def test_category_prohibition_mutation_is_isolated():
+    spec = next(s for s in load_fixtures()
+                if s["id"] == "category-prohibitions-battle-monks-of-cathay-poison")
+    case = next(c for c in spec["cases"] if c["id"] == "choices-dragon-monks")
+    check_case(case, knowledge_root())
+    with pytest.raises(EvidenceMismatch):
+        check_case(case, knowledge_root(), spec["mutations"][0])
+    check_case(case, knowledge_root())
+
+
 def test_semantic_inventory_includes_effects_not_only_implemented_rules(tmp_path):
     def write(name, value):
         path = tmp_path / name
@@ -61,7 +99,28 @@ def test_structural_success_is_not_semantic_success():
     assert set(report.verified).isdisjoint(target for target, _ in report.pending)
     assert len(report.verified) + len(report.pending) == len(report.obligations)
     assert report.semantic_complete == (not report.pending and not report.errors
-        and not report.unclassified_bindings and not report.pending_interactions)
+        and not report.required_pending_interactions
+        and not report.pending_higher_order_interactions)
+
+
+def test_interaction_risk_is_separate_from_verification_requirement():
+    from mordheim_combat_lab.verification.interactions import assess_interaction
+    contracts = {
+        "left": {"reads": [], "writes": ["state.wounds"]},
+        "right": {"reads": ["state.wounds"], "writes": []},
+    }
+    result = assess_interaction("left", "right", contracts)
+    assert result.risk_level == "critical"
+    assert result.verification_requirement == "required"
+    assert result.status == "pending"
+    overridden = assess_interaction("left", "right", contracts, override={
+        "risk_level": "medium", "verification_requirement": "recommended",
+        "status": "covered_by_composition", "risk_reasons": ["generic_stack"],
+        "evidence": ["operator:stack"],
+    })
+    assert overridden.risk_level == "medium"
+    assert overridden.verification_requirement == "recommended"
+    assert overridden.status == "covered_by_composition"
 
 
 @pytest.mark.parametrize("values", [[], [{"key": "wrong", "value": 3}],

@@ -849,6 +849,10 @@ rules:
       binding:
         kind: compiler
         id: compiler.sacred-marks
+    - id: campaign.sacred-mark-acquisition-history
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: proving that a mark was bought only at recruitment and never later requires campaign history.'
 - id: band--sacred-mark-huge-jaws
   kind: mark
   name: Huge Jaws

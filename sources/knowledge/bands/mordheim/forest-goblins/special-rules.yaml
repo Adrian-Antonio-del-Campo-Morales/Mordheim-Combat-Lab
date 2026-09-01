@@ -449,6 +449,26 @@ rules:
   applies_to:
     profile_ids:
     - gigantic-spider
+- id: gigantic-spider--chitin-armour
+  name: Chitin Armour
+  effect: The Gigantic Spider has an intrinsic 4+ natural armour save. This is part of the creature, not selectable equipment.
+  source:
+    manual: user-ruling
+    printed_page: 0
+    section: Gigantic Spider / Chitin Armour
+  applies_to:
+    profile_ids: [gigantic-spider]
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: trait.natural-armour-save
+      scope: 'YES'
+      binding:
+        kind: trait
+        id: trait.natural-armour-save
+        parameters: {value: 4}
 - id: band--natives
   runtime:
     scope: "NO"

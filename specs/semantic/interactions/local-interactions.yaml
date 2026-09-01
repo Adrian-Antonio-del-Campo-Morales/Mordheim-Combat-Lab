@@ -1,7 +1,48 @@
 schema_version: 1
 specifications:
+- id: thick-skull-replaces-helmet
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
+  category: interaction
+  sources:
+  - target: mechanic/skill.thick-skull
+    digest: 4819600fd8bc2849d0a915b323b8729882c37119a23174442c005e3978ff635f
+  - target: mechanic/defence.helmet
+    digest: e38f4f8e7da5e91fa8400e0f91b8b4389b266c73cbde0c7896f22388719c4926
+  bindings:
+  - '{"id": "skill.thick-skull", "kind": "mechanic", "parameters": {}}'
+  - '{"id": "defence.helmet", "kind": "mechanic", "parameters": {}}'
+  interpretation: The Thick Skull text explicitly replaces the Helmet special rule. The combined threshold is 2+;
+    it does not perform a 3+ Thick Skull attempt followed by a separate 4+ Helmet attempt.
+  cases:
+  - id: combined-threshold
+    roles: [composition]
+    operation: stun_reaction
+    defender:
+      skill_ids: [skill.thick-skull]
+      defence_ids: [defence.helmet]
+    rolls: [{key: test.thick-skull, value: 2}]
+    expect:
+      result.condition: KNOCKED_DOWN
+      result.threshold: 2
+      result.roll: 2
+  - id: failure-consumes-no-helmet-roll
+    roles: [boundary]
+    operation: stun_reaction
+    defender:
+      skill_ids: [skill.thick-skull]
+      defence_ids: [defence.helmet]
+    rolls: [{key: test.thick-skull, value: 1}]
+    expect:
+      result.condition: STUNNED
+      result.threshold: 2
+      result.roll: 1
+  mutations:
+  - id: remove-replacement
+    path: defender.global_effects.thick_skull
+    value: false
+    cases: [combined-threshold]
 - id: mighty-and-resilient
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: interaction
   sources:
   - target: mechanic/skill.mighty-blow
@@ -52,7 +93,7 @@ specifications:
     cases:
     - first-round
 - id: mighty-and-black-venom
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: interaction
   sources:
   - target: mechanic/skill.mighty-blow
@@ -101,7 +142,7 @@ specifications:
     cases:
     - first-round
 - id: mighty-and-halberd
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: interaction
   sources:
   - target: mechanic/skill.mighty-blow
@@ -148,7 +189,7 @@ specifications:
     cases:
     - first-round
 - id: mighty-and-flail
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: interaction
   sources:
   - target: mechanic/skill.mighty-blow
@@ -195,7 +236,7 @@ specifications:
     cases:
     - first-round
 - id: resilient-and-halberd
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: interaction
   sources:
   - target: mechanic/skill.resilient
@@ -242,7 +283,7 @@ specifications:
     cases:
     - first-round
 - id: mighty-and-strength-of-steel
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: interaction
   sources:
   - target: mechanic/skill.mighty-blow
@@ -291,7 +332,7 @@ specifications:
     cases:
     - first-round
 - id: iron-sinews-and-strength-of-steel
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: interaction
   sources:
   - target: mechanic/skill.iron-sinews
@@ -340,7 +381,7 @@ specifications:
     cases:
     - first-round
 - id: hatred-and-infinite-hatred
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: interaction
   sources:
   - target: mechanic/skill.hatred
@@ -405,7 +446,7 @@ specifications:
     cases:
     - all-branches
 - id: hatred-and-expert-swordsman
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: interaction
   sources:
   - target: mechanic/skill.hatred
@@ -470,7 +511,7 @@ specifications:
     cases:
     - all-branches
 - id: sure-strike-and-dark-steel
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: interaction
   sources:
   - target: mechanic/skill.sure-strike
@@ -535,7 +576,7 @@ specifications:
     cases:
     - all-branches
 - id: jump-up-and-no-pain
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: interaction
   sources:
   - target: mechanic/skill.jump-up
@@ -657,7 +698,7 @@ specifications:
     - face-5
     - face-6
 - id: jump-up-and-hard-to-kill
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: interaction
   sources:
   - target: mechanic/skill.jump-up
@@ -779,7 +820,7 @@ specifications:
     - face-5
     - face-6
 - id: concussion-and-no-pain
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: interaction
   sources:
   - target: mechanic/weapon.mace
@@ -894,7 +935,7 @@ specifications:
     - face-5
     - face-6
 - id: concussion-and-hard-to-kill
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: interaction
   sources:
   - target: mechanic/weapon.mace
@@ -1009,7 +1050,7 @@ specifications:
     - face-5
     - face-6
 - id: concussion-and-jump-up
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: interaction
   sources:
   - target: mechanic/weapon.mace
@@ -1124,7 +1165,7 @@ specifications:
     - face-5
     - face-6
 - id: gromril-axe-penetration
-  scope_digest: a3bdadefe32c39bd2c181e277134d94654a18de0b63f8d3a039d84f874e114c7
+  scope_digest: 3631f339c56ff4c17ec73b2411b298158bb4c9f91320cc986fac8c998f9c3593
   category: interaction
   sources:
   - target: mechanic/weapon.axe

@@ -78,7 +78,7 @@ MODULAR_FIELD_CONSUMERS = {
     "initiative_bonus": "priority", "fixed_strength": "wound",
     "armour_penetration": "armour", "target_armour_bonus": "armour",
     "hit_modifier": "hit", "wound_modifier": "wound", "injury_modifier": "injury",
-    "attacks_bonus": "attacks", "charge_attacks_bonus": "attacks",
+    "attacks_bonus": "attacks", "charge_attacks_bonus": "attacks", "first_round_charge_attacks_bonus": "attacks",
     "charge_ws_bonus": "hit", "first_round_attacks_bonus": "attacks",
     "incoming_strength_modifier": "wound", "armour_strength_modifier": "armour",
     "weapon_skill_bonus": "hit", "critical_injury_bonus": "injury",
