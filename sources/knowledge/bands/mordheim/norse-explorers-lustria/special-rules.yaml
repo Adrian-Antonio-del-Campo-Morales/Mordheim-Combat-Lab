@@ -18,6 +18,15 @@ rules:
   applies_to:
     profile_ids:
     - jarl
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.norse-explorers-lustria.jarl.leader
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: beserkers--berserkers
   name: Berserkers
   effect: Berserkers are subject to frenzy as detailed in the Psychology section of the Mordheim rulebook.
@@ -35,6 +44,18 @@ rules:
   applies_to:
     profile_ids:
     - beserkers
+  runtime:
+    scope: LATER
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: trait.frenzy
+      scope: LATER
+      binding:
+        kind: trait
+        id: trait.frenzy
+        parameters:
+          value: true
 - id: wulfen--natural-weapons
   name: Natural Weapons
   effect: The Wulfen fights with teeth and claws, may never use weapons or armour, and suffers no penalty for fighting unarmed.
@@ -52,6 +73,16 @@ rules:
   applies_to:
     profile_ids:
     - wulfen
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: profile.natural-attacks
+      scope: 'YES'
+      binding:
+        kind: profile
+        id: profile.natural-attacks
 - id: wulfen--fear
   name: Fear
   effect: Wulfen are terrifying creatures to behold and cause fear.
@@ -69,6 +100,15 @@ rules:
   applies_to:
     profile_ids:
     - wulfen
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.norse-explorers-lustria.wulfen.fear
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: wulfen--bestial
   name: Bestial
   effect: 'Wulfen are ravenous beasts and therefore immune to psychology. Also despite being greatly revered by their barbarian
@@ -92,6 +132,15 @@ rules:
   applies_to:
     profile_ids:
     - wulfen
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.norse-explorers-lustria.wulfen.bestial
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: wolves--animals
   name: Animals
   effect: 'Wolves are animals and thus do not gain
@@ -113,6 +162,15 @@ rules:
   applies_to:
     profile_ids:
     - wolves
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.norse-explorers-lustria.wolves.animals
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: wolves--pack-leader
   name: Pack Leader
   effect: Wolves may only be included in the warband if it includes a Wulfen. If the Wulfen is dead or unavailable because
@@ -132,6 +190,15 @@ rules:
   applies_to:
     profile_ids:
     - wolves
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.norse-explorers-lustria.wolves.pack-leader
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--seafaring
   name: Seafaring
   effect: All Norse warriors receive +2 Strength when rowing a boat.
@@ -148,7 +215,17 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.norse-explorers-lustria.band.seafaring
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--norse-special-skills-barbarian-courage
+  kind: warband_skill
   name: Barbarian Courage
   effect: As Norse warriors strive to die bravely in battle, they learn to fear nothing and embrace hardship. This hero never
     needs to take all alone tests and may re-roll failed fear tests.
@@ -166,7 +243,17 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.norse-explorers-lustria.band.norse-special-skills-barbarian-courage
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--norse-special-skills-battle-tongue
+  kind: warband_skill
   name: Battle Tongue
   effect: Only a hero with the leader skill may gain this skill. It allows models within 12" of him to use his leadership,
     rather than the normal 6".
@@ -184,7 +271,27 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.norse-explorers-lustria.band.norse-special-skills-battle-tongue
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--norse-special-skills-berserk-charge
+  kind: warband_skill
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: special-rule.band--norse-special-skills-berserk-charge
+      scope: 'YES'
+      binding:
+        kind: compiler
+        id: special-rule.band--norse-special-skills-berserk-charge
   name: Berserk Charge
   effect: 'The Norse are very skilled with weapons that many other races see as primitive and savage. When this hero is armed
     with an axe or double handed weapon,
@@ -207,6 +314,17 @@ rules:
   applies_to:
     band: true
 - id: band--norse-special-skills-crushing-blow
+  kind: warband_skill
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: skill.crushing-blow
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.crushing-blow
   name: Crushing Blow
   effect: Norse warriors train in almost all of their spare time. They are expert fighters and learn to put all of their strength
     into very powerful attacks. No enemy may parry an attack made by this hero because it strikes with such great power that
@@ -227,6 +345,17 @@ rules:
   applies_to:
     band: true
 - id: band--norse-special-skills-shield-master
+  kind: warband_skill
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: skill.shield-mastery
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.shield-mastery
   name: Shield Master
   effect: Norse warriors begin training with shields when they are still children. Some warriors become so skilled with these
     weapons they can block almost any blow against them. When this hero is armed with a shield he may parry with it in addition

@@ -261,9 +261,6 @@ profiles:
   - troll--always-hungry
   - troll--vomit-attack
   - troll--large-target
-  combat_traits:
-    starting_skills:
-    - skill.regeneration
 - id: snotling-mob-consists-of-5-snotlings
   name: Snotling Mob (consists of 5 Snotlings)
   type: henchman

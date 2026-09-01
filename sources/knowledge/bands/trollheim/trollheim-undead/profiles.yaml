@@ -228,4 +228,3 @@ profiles:
   combat_traits:
     starting_skills:
     - skill.ignore-pain
-    charge_attack_bonus: true

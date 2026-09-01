@@ -17,6 +17,15 @@ rules:
   applies_to:
     profile_ids:
     - amazon-priestess
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-amazons.amazon-priestess.leader
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: amazon-priestess--wizard
   name: Wizard
   effect: The Priestess is a spellcaster and may use Ritual Chants. She begins with one randomly generated ritual. The ritual
@@ -35,10 +44,28 @@ rules:
   applies_to:
     profile_ids:
     - amazon-priestess
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-amazons.amazon-priestess.wizard
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: amazon-totem-warriors--frenzy
-  runtime_grant: true
-  runtime_traits:
-    frenzy: true
+  runtime:
+    scope: LATER
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: trait.frenzy
+      scope: LATER
+      binding:
+        kind: trait
+        id: trait.frenzy
+        parameters:
+          value: true
   name: Frenzy
   effect: Totem Warriors are subject to the Frenzy rules.
   source:
@@ -72,6 +99,15 @@ rules:
   applies_to:
     profile_ids:
     - amazon-scouts
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-amazons.amazon-scouts.silent
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: amazon-scouts--animal-companion
   name: Animal Companion
   effect: Each Scout allows the warband to acquire one Great Cat. That Great Cat must deploy alongside its Scout at the start
@@ -90,6 +126,15 @@ rules:
   applies_to:
     profile_ids:
     - amazon-scouts
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-amazons.amazon-scouts.animal-companion
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: great-cats--animal
   name: Animal
   effect: Great Cats are animals and never gain Experience.
@@ -106,6 +151,15 @@ rules:
   applies_to:
     profile_ids:
     - great-cats
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-amazons.great-cats.animal
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: great-cats--natural-stealth
   name: Natural Stealth
   effect: While a Great Cat is Hidden, enemy models suffer -1 Initiative when determining whether they can detect it.
@@ -122,6 +176,15 @@ rules:
   applies_to:
     profile_ids:
     - great-cats
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-amazons.great-cats.natural-stealth
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: great-cats--animal-companion
   name: Animal Companion
   effect: A Great Cat must deploy alongside its Scout at the start of the battle. If that Scout is taken Out of Action during
@@ -142,6 +205,15 @@ rules:
   applies_to:
     profile_ids:
     - great-cats
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-amazons.great-cats.animal-companion
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--sacrifice
   name: Sacrifice
   effect: Whenever the Amazons capture or find a captive after a battle, that captive must be sacrificed. The Priestess gains
@@ -159,6 +231,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.lustria-amazons.band.sacrifice
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--not-one-of-us
   name: Not One of Us
   effect: The Amazons may not ally with any other warband and may not hire Hired Swords or Dramatis Personae unless those
@@ -176,6 +257,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.lustria-amazons.band.not-one-of-us
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--isolationists
   name: Isolationists
   effect: All Amazons are subject to Hatred against Norse and Lizardmen.
@@ -191,6 +281,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.lustria-amazons.band.isolationists
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--norse-enmity
   name: Norse Enmity
   effect: When fighting a Norse warband, the Amazons may re-roll their first failed Rout test and may never voluntarily Rout.
@@ -206,6 +305,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.lustria-amazons.band.norse-enmity
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--great-cat-limit
   name: Great Cat Limit
   effect: The warband may include no more than one Great Cat for each Scout currently in the warband.
@@ -221,7 +329,17 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.lustria-amazons.band.great-cat-limit
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--amazon-special-skills-lizard-hunter
+  kind: warband_skill
   name: Lizard Hunter
   effect: The Hero always strikes first in close combat when fighting any type of Skink, regardless of the weapon used or
     which model charged.
@@ -242,7 +360,18 @@ rules:
   - amazon-totem-warriors
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: mechanic.strike-first-vs-skinks-always
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: mechanic.strike-first-vs-skinks-always
 - id: band--amazon-special-skills-concealment
+  kind: warband_skill
   name: Concealment
   effect: When the Hero is Hidden in jungle terrain or vegetation, enemy models halve their Initiative when determining whether
     they can detect her.
@@ -263,7 +392,17 @@ rules:
   - amazon-totem-warriors
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.lustria-amazons.band.amazon-special-skills-concealment
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--amazon-special-skills-hypnotic-dance
+  kind: warband_skill
   name: Hypnotic Dance
   effect: At the start of the Combat phase, any enemy model that wants to attack the Hero must pass a Leadership test. If
     it fails, it may not attack that phase but may defend itself normally. Undead and Lizardmen are unaffected.
@@ -284,7 +423,17 @@ rules:
   - amazon-totem-warriors
   applies_to:
     band: true
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.lustria-amazons.band.amazon-special-skills-hypnotic-dance
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--amazon-special-skills-animal-fury
+  kind: warband_skill
   name: Animal Fury
   effect: The Hero is immune to Fear and All Alone tests and gains +1 Attack during a turn in which she charges.
   source:
@@ -303,7 +452,17 @@ rules:
   - amazon-totem-warriors
   applies_to:
     band: true
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.lustria-amazons.band.amazon-special-skills-animal-fury
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--amazon-special-skills-elixir-of-life
+  kind: warband_skill
   name: Elixir of Life
   effect: After a battle, the Hero may re-roll her Injury roll once and must accept the second result even if it is worse.
   source:
@@ -322,3 +481,12 @@ rules:
   - amazon-totem-warriors
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.lustria-amazons.band.amazon-special-skills-elixir-of-life
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'

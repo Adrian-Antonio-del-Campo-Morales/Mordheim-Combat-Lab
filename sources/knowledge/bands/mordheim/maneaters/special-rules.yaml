@@ -2,6 +2,15 @@ schema_version: 2
 band_id: maneaters
 rules:
 - id: captain--leader
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.maneaters.captain.leader
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psicología.'
   name: Leader
   effect: 'Any warrior within 6" of the Captain may use
 
@@ -23,6 +32,15 @@ rules:
     profile_ids:
     - captain
 - id: mountain-guide--ranger
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.maneaters.mountain-guide.ranger
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaña.'
   name: Ranger
   effect: A Mountain Guide is a dedicated tracker. If he's not put out of action in the battle, you may roll two dice for
     Exploration and pick one as the result. Note that this is not a re-roll.
@@ -42,6 +60,15 @@ rules:
     profile_ids:
     - mountain-guide
 - id: mountain-guide--loner
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.maneaters.mountain-guide.loner
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psicología.'
   name: Loner
   effect: 'Mountain Guides are Ogre Hunters. They
 
@@ -79,18 +106,20 @@ rules:
     profile_ids:
     - mountain-guide
 - id: bulls--bull-charge
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: mechanic.bull-charge
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: mechanic.bull-charge
   name: Bull Charge
-  effect: 'Ogres learn to use their vast bulk in a
-
-    charge, trampling the enemy to the ground. When
-
-    charging, Bulls may attempt a single attack with a +1
-
-    ''to hit'' modifier rather than making their normal
-
-    attacks. If successful the enemy model is automatically
-
-    knocked down.'
+  effect: Ogres learn to use their vast bulk in a charge, trampling the enemy to the ground. When charging, Bulls may attempt
+    a single attack with a +1 'to hit' modifier rather than making their normal attacks. If successful the enemy model is
+    automatically knocked down.
   source:
     manual: mordheimer.net
     printed_page: 0
@@ -116,6 +145,15 @@ rules:
     profile_ids:
     - bulls
 - id: sabretusks--trained
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.maneaters.sabretusks.trained
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
   name: Trained
   effect: Sabretusks may only be included if the warband includes a Mountain Guide. They may use the Mountain Guide's Leadership
     while within 6 inches. If no Mountain Guide is available because of death or injury, the Sabretusks cannot be used until
@@ -137,6 +175,15 @@ rules:
     profile_ids:
     - sabretusks
 - id: sabretusks--feral-instinct
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.maneaters.sabretusks.feral-instinct
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psicología.'
   name: Feral Instinct
   effect: 'Even a Guide has difficulty controlling
 
@@ -174,6 +221,15 @@ rules:
     profile_ids:
     - sabretusks
 - id: sabretusks--ignored
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.maneaters.sabretusks.ignored
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psicología.'
   name: Ignored
   effect: 'Sabretusks that are out of action do not count to the number of out of action models for the
 
@@ -195,6 +251,15 @@ rules:
     profile_ids:
     - sabretusks
 - id: sabretusks--fear
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.maneaters.sabretusks.fear
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psicología.'
   name: Fear
   effect: Sabretusks are huge feline predators and thus cause fear.
   source:
@@ -212,6 +277,15 @@ rules:
     profile_ids:
     - sabretusks
 - id: sabretusks--animals
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.maneaters.sabretusks.animals
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaña.'
   name: Animals
   effect: Sabretusks are animals and thus do not gain experience.
   source:
@@ -229,6 +303,15 @@ rules:
     profile_ids:
     - sabretusks
 - id: band--fear
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.maneaters.band.fear
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psicología.'
   name: Fear
   effect: All Ogre warriors in the warband cause Fear except Youngbloods.
   source:
@@ -245,6 +328,15 @@ rules:
   applies_to:
     band: true
 - id: band--large
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.maneaters.band.large
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: impactar.'
   name: Large
   effect: 'All Ogre warriors except Youngbloods and Half-growns are Large targets: they may be selected as shooting targets
     even when they are not the closest target, and attacks made against them gain +1 to hit.'
@@ -263,6 +355,15 @@ rules:
   applies_to:
     band: true
 - id: band--gluttony
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.maneaters.band.gluttony
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: monturas.'
   name: Gluttony
   effect: Each Ogre model counts as two models when selling wyrdstone or treasure. Captured models may be devoured and their
     possessions kept, reducing the effective warband model count for income by 1, or by 2 if the consumed captive is a Large
@@ -285,6 +386,15 @@ rules:
   applies_to:
     band: true
 - id: band--slow-witted
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.maneaters.band.slow-witted
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaña.'
   name: Slow Witted
   effect: Ogres gain advances at half the normal rate and must earn twice the usual number of Experience points for each advance.
   source:
@@ -301,6 +411,15 @@ rules:
   applies_to:
     band: true
 - id: band--difficult-customers
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.maneaters.band.difficult-customers
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaña.'
   name: Difficult Customers
   effect: Ogre Heroes suffer -1 on rolls to find Rare items unless those items are exclusively available to Ogres.
   source:
@@ -317,6 +436,15 @@ rules:
   applies_to:
     band: true
 - id: band--cannibals
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.maneaters.band.cannibals
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Cannibals
   effect: The warband may not hire Hired Swords except Halflings such as Scouts or Thieves, the Ogre Bodyguard, or entries
     that specifically permit Ogre warbands.
@@ -335,6 +463,15 @@ rules:
   applies_to:
     band: true
 - id: band--ogre-maximum-characteristics
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.maneaters.band.ogre-maximum-characteristics
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Ogre Maximum Characteristics
   effect: Ogre warriors use the Ogre maximum characteristic profile when gaining advances.
   source:
@@ -351,12 +488,20 @@ rules:
   applies_to:
     band: true
 - id: band--ogres-special-skills-master-of-arms
+  kind: warband_skill
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: mechanic.master-of-arms
+      scope: 'YES'
+      binding:
+        kind: compiler
+        id: compiler.master-of-arms
   name: Master of Arms
-  effect: 'The Ogre learns how to use his size. He may now
-
-    wield a Difficult to Use weapon and a hand weapon at
-
-    the same time, but not two Difficult to Use weapons.'
+  effect: The Ogre learns how to use his size. He may now wield a Difficult to Use weapon and a hand weapon at the same time,
+    but not two Difficult to Use weapons.
   source:
     manual: mordheimer.net
     printed_page: 0
@@ -375,22 +520,21 @@ rules:
   applies_to:
     band: true
 - id: band--ogres-special-skills-crude-belch
+  kind: warband_skill
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.maneaters.band.ogres-special-skills-crude-belch
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
   name: Crude Belch
-  effect: 'Ogres eat almost anything. Consequences are to be
-
-    expected from those inconsiderate enough to
-
-    consume a rich meal before battle. A Hero with this
-
-    ''condition'' may unleash his thunderous fumes on all
-
-    enemies engaged in close combat. Those that do not
-
-    pass a Ld test suffer a -1 ''to hit'' modifier for the turn.
-
-    The Ogre must wait until a new enemy engages him in
-
-    combat before he relieves himself again.'
+  effect: Ogres eat almost anything. Consequences are to be expected from those inconsiderate enough to consume a rich meal
+    before battle. A Hero with this 'condition' may unleash his thunderous fumes on all enemies engaged in close combat. Those
+    that do not pass a Ld test suffer a -1 'to hit' modifier for the turn. The Ogre must wait until a new enemy engages him
+    in combat before he relieves himself again.
   source:
     manual: mordheimer.net
     printed_page: 0
@@ -419,6 +563,16 @@ rules:
   applies_to:
     band: true
 - id: band--ogres-special-skills-maneater
+  kind: warband_skill
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.maneaters.band.ogres-special-skills-maneater
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: disparo.'
   name: Maneater
   effect: 'Ogres are not civilized of their own accord but it is
 
@@ -459,16 +613,21 @@ rules:
   applies_to:
     band: true
 - id: band--ogres-special-skills-bull-charge
+  kind: warband_skill
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: mechanic.bull-charge
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: mechanic.bull-charge
   name: Bull Charge
-  effect: 'Ogres learn to use their vast bulk in a charge,
-
-    trampling the enemy to the ground. When charging,
-
-    an Ogre with this skill may attempt a single attack with
-
-    a +1 ''to hit'' modifier rather than making his normal
-
-    attacks. If successful the enemy model is automatically knocked down.'
+  effect: Ogres learn to use their vast bulk in a charge, trampling the enemy to the ground. When charging, an Ogre with this
+    skill may attempt a single attack with a +1 'to hit' modifier rather than making his normal attacks. If successful the
+    enemy model is automatically knocked down.
   source:
     manual: mordheimer.net
     printed_page: 0
@@ -491,6 +650,16 @@ rules:
   applies_to:
     band: true
 - id: band--ogres-special-skills-dog-of-war
+  kind: warband_skill
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.maneaters.band.ogres-special-skills-dog-of-war
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaña.'
   name: Dog of War
   effect: 'When an Ogre travels south he can find employment
 
@@ -535,6 +704,16 @@ rules:
   applies_to:
     band: true
 - id: band--ogres-special-skills-bellowing-roar
+  kind: warband_skill
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.maneaters.band.ogres-special-skills-bellowing-roar
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psicología.'
   name: Bellowing Roar
   effect: 'An Ogre leader expects challenges to his authority.
 

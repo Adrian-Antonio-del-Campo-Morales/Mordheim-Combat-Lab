@@ -77,9 +77,6 @@ profiles:
     es: null
   rule_ids:
   - brutes--unnatural-strength
-  combat_traits:
-    starting_skills:
-    - skill.strongman
 - id: tainted-ones
   name: Tainted Ones
   type: hero
@@ -160,7 +157,6 @@ profiles:
     poison_immune: true
     undead_or_possessed: true
     cloud_of_flies: true
-    natural_armour_save: 5
 - id: nurglings
   name: Nurglings
   type: henchman
@@ -204,7 +200,6 @@ profiles:
     poison_immune: true
     undead_or_possessed: true
     cloud_of_flies: true
-    natural_armour_save: 5
 - id: brethren
   name: Brethren
   type: henchman

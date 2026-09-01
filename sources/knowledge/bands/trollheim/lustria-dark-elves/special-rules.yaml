@@ -17,6 +17,15 @@ rules:
   applies_to:
     profile_ids:
     - dark-prince
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-dark-elves.dark-prince.leader
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: darkblades--close-combat-specialists
   name: Close Combat Specialists
   effect: Darkblades may never use missile weapons of any kind.
@@ -33,6 +42,16 @@ rules:
   applies_to:
     profile_ids:
     - darkblades
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: compiler.no-missile-weapons
+      scope: 'YES'
+      binding:
+        kind: compiler
+        id: compiler.no-missile-weapons
 - id: beastmaster--cold-one-handler
   name: Cold One Handler
   effect: A Beastmaster allows the warband to recruit up to two Cold Ones as Henchmen.
@@ -49,6 +68,15 @@ rules:
   applies_to:
     profile_ids:
     - beastmaster
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-dark-elves.beastmaster.cold-one-handler
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: dark-elf-sorceress--spellcaster
   name: Spellcaster
   effect: The Dark Elf Sorceress is a spellcaster who uses Dark Magic. This warband section does not specify an initial spell
@@ -67,6 +95,15 @@ rules:
   applies_to:
     profile_ids:
     - dark-elf-sorceress
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-dark-elves.dark-elf-sorceress.spellcaster
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: shadows--natural-stealth
   name: Natural Stealth
   effect: While a Shadow is Hidden, enemy models suffer -1 Initiative when determining whether they can detect it.
@@ -83,6 +120,15 @@ rules:
   applies_to:
     profile_ids:
     - shadows
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-dark-elves.shadows.natural-stealth
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: cold-ones--animal
   name: Animal
   effect: Cold Ones are animals and never gain Experience.
@@ -99,6 +145,15 @@ rules:
   applies_to:
     profile_ids:
     - cold-ones
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-dark-elves.cold-ones.animal
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: cold-ones--beastmaster-dependency
   name: Beastmaster Dependency
   effect: If the Beastmaster is killed, the Cold Ones immediately escape and are removed from the warband roster. If the Beastmaster
@@ -117,6 +172,15 @@ rules:
   applies_to:
     profile_ids:
     - cold-ones
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-dark-elves.cold-ones.beastmaster-dependency
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: cold-ones--stupidity
   name: Stupidity
   effect: A Cold One may use the Beastmaster's own Leadership if it is within 6" of him. It may never use the warband leader's
@@ -137,7 +201,28 @@ rules:
   applies_to:
     profile_ids:
     - cold-ones
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-dark-elves.cold-ones.stupidity
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: cold-ones--scaly-skin
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: trait.natural-armour-save
+      scope: 'YES'
+      binding:
+        kind: trait
+        id: trait.natural-armour-save
+        parameters:
+          value: 6
   name: Scaly Skin
   effect: Cold Ones have a natural 6+ armour save.
   source:
@@ -169,6 +254,15 @@ rules:
   applies_to:
     profile_ids:
     - cold-ones
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-dark-elves.cold-ones.fear
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--hatred-high-elves
   name: Hatred of High Elves
   effect: All Dark Elves are subject to Hatred against High Elf warriors, including High Elves serving as Hired Swords.
@@ -184,6 +278,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.lustria-dark-elves.band.hatred-high-elves
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--excellent-sight
   name: Excellent Sight
   effect: Dark Elves detect Hidden enemies at twice the normal detection distance. The Spanish source parenthetically expresses
@@ -201,6 +304,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.lustria-dark-elves.band.excellent-sight
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--ancestral-customs
   name: Ancestral Customs
   effect: Dark Elves may never use blackpowder weapons.
@@ -216,6 +328,16 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: band
+    effects:
+    - id: compiler.no-blackpowder-weapons
+      scope: 'YES'
+      binding:
+        kind: compiler
+        id: compiler.no-blackpowder-weapons
 - id: band--cold-one-requirement
   name: Cold One Requirement
   effect: The warband may include up to two Cold Ones only if it also includes a Beastmaster.
@@ -231,7 +353,17 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.lustria-dark-elves.band.cold-one-requirement
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--dark-elf-special-skills-infiltration
+  kind: warband_skill
   name: Infiltration
   effect: The Hero may deploy anywhere on the table at least 12" from every enemy model and must begin the battle Hidden.
   source:
@@ -251,7 +383,17 @@ rules:
   - dark-elf-sorceress
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.lustria-dark-elves.band.dark-elf-special-skills-infiltration
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--dark-elf-special-skills-fury-of-khaine
+  kind: warband_skill
   name: Fury of Khaine
   effect: If the Hero takes all current close-combat opponents Out of Action, the Hero may move up to 4". If this move brings
     the Hero into contact with another enemy, a new combat begins; that combat is resolved in the following turn and the move
@@ -275,7 +417,17 @@ rules:
   - dark-elf-sorceress
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.lustria-dark-elves.band.dark-elf-special-skills-fury-of-khaine
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--dark-elf-special-skills-strong-constitution
+  kind: warband_skill
   name: Strong Constitution
   effect: The Hero gains access to Strength skills. A Dark Elf Sorceress may never take this skill, and no more than two warriors
     in the warband may have it at the same time.
@@ -296,7 +448,34 @@ rules:
   - beastmaster
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: profile.skill-access
+      scope: 'YES'
+      binding:
+        kind: profile
+        id: profile.skill-access
+        parameters:
+          category: strength
+    - id: roster.maximum-two-strong-constitution
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: warband-level roster limit.'
 - id: band--dark-elf-special-skills-elven-agility
+  kind: warband_skill
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: skill.elven-agility
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.elven-agility
   name: Elven Agility
   effect: The Hero has a 6+ special save against close-combat and missile attacks. If the Hero also has Dodge or Step Aside,
     the relevant save improves to 4+ and Elven Agility no longer applies to that attack type.
@@ -318,8 +497,8 @@ rules:
   - dark-elf-sorceress
   applies_to:
     band: true
-  mechanic_id: skill.elven-agility
 - id: band--dark-elf-special-skills-poison-expert
+  kind: warband_skill
   name: Poison Expert
   effect: If the Hero does not search for Rare items after a battle, the Hero may prepare 1D3-1 doses of Black Venom. These
     doses must be used in the next battle and may not be traded or sold. The internal poison effect of Black Venom is intentionally
@@ -343,3 +522,12 @@ rules:
   - dark-elf-sorceress
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.lustria-dark-elves.band.dark-elf-special-skills-poison-expert
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'

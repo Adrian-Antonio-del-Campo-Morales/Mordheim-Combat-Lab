@@ -200,7 +200,7 @@ profiles:
   equipment_lists:
   - pirate-equipment-list
   fixed_equipment:
-  - rope_and_hook
+  - rope_hook
   equipment_restrictions:
   - The starting Rope and Hook may never be sold or discarded.
   - May not select the Scourge; it is Heroes only.

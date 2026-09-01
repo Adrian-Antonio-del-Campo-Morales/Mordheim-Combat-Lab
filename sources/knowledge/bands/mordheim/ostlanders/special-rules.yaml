@@ -22,6 +22,15 @@ rules:
   applies_to:
     profile_ids:
     - elder
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.ostlanders.elder.leader
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: priest-of-taal--prayers
   name: Prayers
   effect: A Priest of Taal may use the Prayers of Taal.
@@ -39,6 +48,15 @@ rules:
   applies_to:
     profile_ids:
     - priest-of-taal
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.ostlanders.priest-of-taal.prayers
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: priest-of-taal--strictures
   name: Strictures
   effect: Priests of Taal may never wear heavy armour.
@@ -56,6 +74,18 @@ rules:
   applies_to:
     profile_ids:
     - priest-of-taal
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: profile.equipment-restrictions
+      scope: 'YES'
+      binding:
+        kind: profile
+        id: profile.equipment-restrictions
+        parameters:
+          forbids: heavy-armour
 - id: ruffians--drunk
   name: Drunk
   effect: Ruffians automatically pass all Leadership-based tests they are required to take.
@@ -73,6 +103,15 @@ rules:
   applies_to:
     profile_ids:
     - ruffians
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.ostlanders.ruffians.drunk
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: ruffians--no-respect
   name: No Respect
   effect: Ruffians may never become the warband leader.
@@ -90,6 +129,15 @@ rules:
   applies_to:
     profile_ids:
     - ruffians
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.ostlanders.ruffians.no-respect
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: ogre--fear
   name: Fear
   effect: The Ogre causes Fear.
@@ -107,6 +155,15 @@ rules:
   applies_to:
     profile_ids:
     - ogre
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.ostlanders.ogre.fear
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: ogre--large
   name: Large
   effect: The Ogre is a Large Target and may be selected as a shooting target even if it is not the closest target.
@@ -124,6 +181,15 @@ rules:
   applies_to:
     profile_ids:
     - ogre
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.ostlanders.ogre.large
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: ogre--skills
   name: Skills
   effect: If the Ogre becomes a Hero through The Lad's Got Talent, it may choose Combat and Strength skills.
@@ -141,6 +207,20 @@ rules:
   applies_to:
     profile_ids:
     - ogre
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: compiler.promoted-hero-skill-access
+      scope: 'YES'
+      binding:
+        kind: compiler
+        id: compiler.promoted-hero-skill-access
+        parameters:
+          allowed_skill_lists:
+          - combat
+          - strength
 - id: ogre--slow-witted
   name: Slow witted
   effect: The Ogre gains advances at half the normal rate and must earn twice the usual Experience for each advance.
@@ -158,6 +238,15 @@ rules:
   applies_to:
     profile_ids:
     - ogre
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.ostlanders.ogre.slow-witted
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, or non-duel context.'
 - id: band--self-sufficient
   name: Self-Sufficient
   effect: Ostlanders may never hire Mercenaries/Hired Swords except Ogres.
@@ -174,7 +263,17 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.ostlanders.band.self-sufficient
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--ostlander-special-skills-bull-rush
+  kind: warband_skill
   name: Bull Rush
   effect: 'This warrior is huge, even by Ostlander
 
@@ -238,7 +337,18 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: mechanic.bull-charge
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: mechanic.bull-charge
 - id: band--ostlander-special-skills-foul-odour
+  kind: warband_skill
   name: Foul Odour
   effect: 'Ostlanders are prodigious drinkers and none
 
@@ -314,7 +424,17 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.ostlanders.band.ostlander-special-skills-foul-odour
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--ostlander-special-skills-taunt
+  kind: warband_skill
   name: Taunt
   effect: 'After years of baiting opponents into drunken
 
@@ -398,7 +518,17 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.ostlanders.band.ostlander-special-skills-taunt
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--ostlander-special-skills-animal-friendship
+  kind: warband_skill
   name: Animal Friendship
   effect: 'Having grown up amidst the animals of the forest, this
 
@@ -446,7 +576,17 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.ostlanders.band.ostlander-special-skills-animal-friendship
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--ostlander-special-skills-blood-oath
+  kind: warband_skill
   name: Blood Oath
   effect: 'The leader of an Ostlander
 
@@ -502,3 +642,12 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.ostlanders.band.ostlander-special-skills-blood-oath
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'

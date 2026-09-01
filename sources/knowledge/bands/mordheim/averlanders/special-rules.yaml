@@ -2,6 +2,15 @@ schema_version: 2
 band_id: averlanders
 rules:
 - id: captain--leader
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.averlanders.captain.leader
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psicología.'
   name: Leader
   effect: 'Any warrior within 6" of the
 
@@ -27,6 +36,15 @@ rules:
     profile_ids:
     - captain
 - id: bergjaeger--set-traps
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.averlanders.bergjaeger.set-traps
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Set Traps
   effect: Bergjaeger are expert trappers and hunters and these skills can be put to great use in the ruins of Mordheim. A
     Bergjaeger may set a trap if he spends a turn doing nothing else (he may not set traps if he’s just recovered from being
@@ -56,6 +74,16 @@ rules:
     profile_ids:
     - bergjaeger
 - id: halflings-scouts--promotion
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: compiler.promoted-hero-no-strength-access
+      scope: 'YES'
+      binding:
+        kind: compiler
+        id: compiler.promoted-hero-no-strength-access
   name: Promotion
   effect: A Halfling that is promoted to hero through the “The lad’s got talent” advance may not choose Strength skills as
     one of his two skill lists. Halflings are not known for their great strength!

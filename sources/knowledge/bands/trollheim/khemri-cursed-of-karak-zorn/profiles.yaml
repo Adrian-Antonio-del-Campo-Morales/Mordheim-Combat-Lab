@@ -58,7 +58,7 @@ profiles:
   equipment_lists:
   - cursed-of-karak-zorn-equipment-list
   fixed_equipment:
-  - holy_water
+  - blessed_water
   equipment_restrictions: []
   skill_access:
   - combat

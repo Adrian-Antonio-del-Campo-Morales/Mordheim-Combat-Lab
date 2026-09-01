@@ -2,6 +2,15 @@ schema_version: 2
 band_id: cursed-cavalcade
 rules:
 - id: aristocrat--leader
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.cursed-cavalcade.aristocrat.leader
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Leader
   effect: Any warrior of the Cavalcade Warband within 6" of the Aristocrat may use his Leadership value when taking Leadership
     tests.
@@ -21,6 +30,15 @@ rules:
     profile_ids:
     - aristocrat
 - id: aristocrat--expert-horseman
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.cursed-cavalcade.aristocrat.expert-horseman
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: monturas."
   name: Expert Horseman
   effect: the Aristocrat has the Ride (Nightmare) skill.
   source:
@@ -38,8 +56,16 @@ rules:
     profile_ids:
     - aristocrat
 - id: companions--expert-swordsman
-  mechanic_id: skill.expert-swordsman
-  runtime_grant: true
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: profile
+    effects:
+    - id: skill.expert-swordsman
+      scope: "YES"
+      binding:
+        kind: mechanic
+        id: skill.expert-swordsman
   name: Expert Swordsman
   effect: 'As imperial nobles, the Companions
 
@@ -65,6 +91,15 @@ rules:
     profile_ids:
     - companions
 - id: twisted-scholar--magical-adept
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.cursed-cavalcade.twisted-scholar.magical-adept
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: magia."
   name: Magical Adept
   effect: 'When hiring a Twisted Scholar, you may
 
@@ -90,6 +125,15 @@ rules:
     profile_ids:
     - twisted-scholar
 - id: twisted-scholar--story-teller
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.cursed-cavalcade.twisted-scholar.story-teller
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Story Teller
   effect: 'When hiring a Twisted Scholar, if you did not
 
@@ -127,6 +171,15 @@ rules:
     profile_ids:
     - twisted-scholar
 - id: cursed-piper--danse-macabre
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.cursed-cavalcade.cursed-piper.danse-macabre
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Danse Macabre
   effect: 'The Piper plays the Danse Macabre in
 
@@ -216,6 +269,15 @@ rules:
     profile_ids:
     - cursed-piper
 - id: captured-thrall--extra-servitors-worthless-but-still-precious
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.cursed-cavalcade.captured-thrall.extra-servitors-worthless-but-still-precious
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Extra servitors, worthless, but still precious
   effect: 'Captured
 
@@ -249,6 +311,15 @@ rules:
     profile_ids:
     - captured-thrall
 - id: captured-thrall--not-really-clever
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.cursed-cavalcade.captured-thrall.not-really-clever
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Not really clever
   effect: 'Captured Thralls cannot earn experience
 
@@ -270,9 +341,18 @@ rules:
     profile_ids:
     - captured-thrall
 - id: great-bear--maddened-with-pain
-  runtime_grant: true
-  runtime_traits:
-    maddened_with_pain: true
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: profile
+    effects:
+    - id: trait.maddened-with-pain
+      scope: "YES"
+      binding:
+        kind: trait
+        id: trait.maddened-with-pain
+        parameters:
+          value: true
   name: Maddened With Pain
   effect: As soon as the Great Bear suffers a single wound it gains an additional attack.
   source:
@@ -290,6 +370,15 @@ rules:
     profile_ids:
     - great-bear
 - id: great-bear--large-target
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.cursed-cavalcade.great-bear.large-target
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: disparo."
   name: Large Target
   effect: Great Bears are Large Targets as defined in the shooting rules.
   source:
@@ -307,6 +396,15 @@ rules:
     profile_ids:
     - great-bear
 - id: great-bear--animal
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.cursed-cavalcade.great-bear.animal
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Animal
   effect: Great Bears are animals and thus do not gain experience.
   source:
@@ -324,6 +422,18 @@ rules:
     profile_ids:
     - great-bear
 - id: wild-beasts--charge
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: profile
+    effects:
+    - id: trait.first-round-charge-attack-bonus
+      scope: "YES"
+      binding:
+        kind: trait
+        id: trait.first-round-charge-attack-bonus
+        parameters:
+          value: true
   name: Charge
   effect: When charging their enemies the Wild Beasts gain +1 Attack on the first turn of close combat.
   source:
@@ -341,6 +451,15 @@ rules:
     profile_ids:
     - wild-beasts
 - id: wild-beasts--animal
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.cursed-cavalcade.wild-beasts.animal
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Animal
   effect: Wild Beasts are animals and thus do not gain experience.
   source:
@@ -358,6 +477,15 @@ rules:
     profile_ids:
     - wild-beasts
 - id: fighting-ape--cymbals
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.cursed-cavalcade.fighting-ape.cymbals
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: disparo."
   name: Cymbals
   effect: 'when hiring a Fighting Ape, you may give her a
 
@@ -391,6 +519,15 @@ rules:
     profile_ids:
     - fighting-ape
 - id: fighting-ape--agile
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.cursed-cavalcade.fighting-ape.agile
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: movimiento."
   name: Agile
   effect: 'The Fighting Apes are fantastically agile and nimble,
 
@@ -422,6 +559,15 @@ rules:
     profile_ids:
     - fighting-ape
 - id: fighting-ape--animal
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.cursed-cavalcade.fighting-ape.animal
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: movimiento."
   name: Animal
   effect: 'Fighting Apes are animals and thus do not gain
 
@@ -443,6 +589,15 @@ rules:
     profile_ids:
     - fighting-ape
 - id: band--foolish-nobleness
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.cursed-cavalcade.band.foolish-nobleness
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Foolish Nobleness
   effect: The Cursed Cavalcade is treated as an Evil warband for all game-effect purposes, similarly to the Cult of the Possessed.
     It cannot hire Hired Swords or Dramatis Personae except the Crow Master and any entry that specifically says otherwise.
@@ -461,11 +616,20 @@ rules:
   applies_to:
     band: true
 - id: band--capture
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.cursed-cavalcade.band.capture
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Capture!
   effect: 'If a Hero takes an enemy human Henchman Out of Action with a Misericordia and the warband has fewer than 5 Captured
     Thralls, roll a D6: on 5+ the model is captured. Enemy Heroes can only be captured through a 61 - Captured! Serious Injury
-    result. No more than 2 models may be captured per game. If 2 models have already been captured, or the warband already
-    has 5 Captured Thralls, reroll 61 - Captured! results for enemy Heroes.'
+    result. No more than 2 models may be captured per game. If 2 models have already been captured, or the warband already has
+    5 Captured Thralls, reroll 61 - Captured! results for enemy Heroes.'
   source:
     manual: mordheimer.net
     printed_page: 0
@@ -483,6 +647,15 @@ rules:
   applies_to:
     band: true
 - id: band--throne-of-worms
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.cursed-cavalcade.band.throne-of-worms
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: The Throne of Worms
   effect: 'For each enemy captured, instead of rolling normally on the Serious Injury Table after the battle, roll a D6: 1-2
     = remove the warrior permanently from the original warband; 3-5 = remove the warrior from the original warband and add
@@ -505,6 +678,18 @@ rules:
   applies_to:
     band: true
 - id: band--cursed-cavalcade-special-skills
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: band
+    effects:
+    - id: profile.skill-access
+      scope: "YES"
+      binding:
+        kind: profile
+        id: profile.skill-access
+        parameters:
+          category: special
   name: Cursed Cavalcade Special Skills
   effect: Cursed Cavalcade Heroes can use the list of skills below instead of the standard list.
   source:
@@ -521,6 +706,16 @@ rules:
   applies_to:
     band: true
 - id: band--cursed-cavalcade-special-skills-noblesse-obliges
+  kind: warband_skill
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.cursed-cavalcade.band.cursed-cavalcade-special-skills-noblesse-obliges
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Noblesse obliges
   effect: 'The warrior feels utterly superior to his opponents, with long
 
@@ -569,6 +764,16 @@ rules:
   applies_to:
     band: true
 - id: band--cursed-cavalcade-special-skills-torturer
+  kind: warband_skill
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.cursed-cavalcade.band.cursed-cavalcade-special-skills-torturer
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Torturer
   effect: 'Having learned the craft of torture in the Ritual of the Comet,
 
@@ -617,28 +822,22 @@ rules:
   applies_to:
     band: true
 - id: band--cursed-cavalcade-special-skills-duelist
+  kind: warband_skill
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.cursed-cavalcade.band.cursed-cavalcade-special-skills-duelist
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Duelist
-  effect: 'The warrior is an expert in hand-to-hand combat method of
-
-    the Imperial duelist, aristocrats famed for their skill in single
-
-    combat.
-
-    At the end of each Close Combat phase, the Duelist
-
-    can force any non-large opponent he is fighting one-on-one
-
-    to pass a Strength test or be pushed 2" in any direction
-
-    chosen by the Duelist. If this brings the target in contact
-
-    with another model, both suffer an automatic Strength 2 hit.
-
-    If this pushes the opponent off from a high place, then he
-
-    falls and takes damage as normal. The duelist stays on the
-
-    elevated area.'
+  effect: The warrior is an expert in hand-to-hand combat method of the Imperial duelist, aristocrats famed for their skill
+    in single combat. At the end of each Close Combat phase, the Duelist can force any non-large opponent he is fighting one-on-one
+    to pass a Strength test or be pushed 2" in any direction chosen by the Duelist. If this brings the target in contact with
+    another model, both suffer an automatic Strength 2 hit. If this pushes the opponent off from a high place, then he falls
+    and takes damage as normal. The duelist stays on the elevated area.
   source:
     manual: mordheimer.net
     printed_page: 0

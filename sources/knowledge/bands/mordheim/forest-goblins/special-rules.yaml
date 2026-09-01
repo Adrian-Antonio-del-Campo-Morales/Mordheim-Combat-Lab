@@ -2,6 +2,15 @@ schema_version: 2
 band_id: forest-goblins
 rules:
 - id: chieftain--leader
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.forest-goblins.chieftain.leader
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Leader
   effect: 'Any warrior within 6" of the Chieftain may use his
 
@@ -23,6 +32,15 @@ rules:
     profile_ids:
     - chieftain
 - id: chieftain--ride-spiders
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.forest-goblins.chieftain.ride-spiders
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: monturas."
   name: Ride Spiders
   effect: The Chieftain can ride Giant Spiders and the Gigantic Spider as detailed in the ‘Blazing Saddles’ article .
   source:
@@ -40,6 +58,15 @@ rules:
     profile_ids:
     - chieftain
 - id: braves--animosity
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.forest-goblins.braves.animosity
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Animosity
   effect: Braves are subject to the rules for Animosity .
   source:
@@ -57,6 +84,15 @@ rules:
     profile_ids:
     - braves
 - id: braves--remove-animosity
+  runtime:
+    scope: 'LATER'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.forest-goblins.braves.remove-animosity
+      scope: 'LATER'
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
   name: Remove Animosity
   effect: When a Brave earns a skill advance, he may choose to remove his Animosity rule instead of choosing a skill.
   source:
@@ -74,6 +110,15 @@ rules:
     profile_ids:
     - braves
 - id: shaman--wizard
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.forest-goblins.shaman.wizard
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Wizard
   effect: A Shaman begins with one spell randomly chosen from the Forest Goblin Spell list .
   source:
@@ -91,6 +136,15 @@ rules:
     profile_ids:
     - shaman
 - id: forest-goblins--animosity
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.forest-goblins.forest-goblins.animosity
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Animosity
   effect: Forest Goblins are subject to the rules for Animosity .
   source:
@@ -108,6 +162,15 @@ rules:
     profile_ids:
     - forest-goblins
 - id: red-toof-goblins--animosity
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.forest-goblins.red-toof-goblins.animosity
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Animosity
   effect: Red Toof Boyz are subject to the rules for Animosity .
   source:
@@ -125,6 +188,18 @@ rules:
     profile_ids:
     - red-toof-goblins
 - id: red-toof-goblins--berserkers
+  runtime:
+    scope: "LATER"
+    implemented: "YES"
+    grant: profile
+    effects:
+    - id: trait.frenzy
+      scope: "LATER"
+      binding:
+        kind: trait
+        id: trait.frenzy
+        parameters:
+          value: true
   name: Berserkers
   effect: Forest Goblins of the Red Toof tribe allow themselves to be bitten by all sorts of poisonous wildlife before entering
     battle. The mingling venom drives them into frothing convulsions, making them extremely ferocious. Red Toof Boyz are affected
@@ -148,6 +223,15 @@ rules:
     profile_ids:
     - red-toof-goblins
 - id: sluggas--animosity
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.forest-goblins.sluggas.animosity
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Animosity
   effect: Sluggas are subject to the rules for Animosity .
   source:
@@ -165,6 +249,15 @@ rules:
     profile_ids:
     - sluggas
 - id: sluggas--sluggas
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.forest-goblins.sluggas.sluggas
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: disparo."
   name: Sluggas
   effect: In the shooting phase, the Sluggas may throw thrown weapons up to three times. This may not be combined with Quick
     Shot if they should be promoted to hero status.
@@ -184,6 +277,15 @@ rules:
     profile_ids:
     - sluggas
 - id: gigantic-spider--fear
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.forest-goblins.gigantic-spider.fear
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Fear
   effect: Gigantic Spiders cause fear as described in the Mordheim Rulebook.
   source:
@@ -201,6 +303,15 @@ rules:
     profile_ids:
     - gigantic-spider
 - id: gigantic-spider--large-monster
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.forest-goblins.gigantic-spider.large-monster
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: disparo."
   name: Large Monster
   effect: Gigantic Spiders are large targets, and may always be shot at.
   source:
@@ -218,6 +329,18 @@ rules:
     profile_ids:
     - gigantic-spider
 - id: gigantic-spider--poisonous
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: profile
+    effects:
+    - id: trait.poisonous-injury
+      scope: "YES"
+      binding:
+        kind: trait
+        id: trait.poisonous-injury
+        parameters:
+          value: true
   name: Poisonous
   effect: 'The Gigantic Spider''s maw drips with vile poisons. When it wounds an enemy and a roll is made on the injury table,
     1: knocked down, 2-4: stunned, and 5-6: Out of Action.'
@@ -237,6 +360,15 @@ rules:
     profile_ids:
     - gigantic-spider
 - id: gigantic-spider--native
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.forest-goblins.gigantic-spider.native
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: movimiento."
   name: Native
   effect: Negotiating woodlands is no trouble for spiders. They move through any wooded terrain without penalty.
   source:
@@ -254,6 +386,15 @@ rules:
     profile_ids:
     - gigantic-spider
 - id: gigantic-spider--non-sentient
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.forest-goblins.gigantic-spider.non-sentient
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Non-sentient
   effect: Spiders are affected by the stupidity rules in the Mordheim rulebook. In addition, they never gain experience, as
     they are animals. Note however that they may climb as normal.
@@ -273,6 +414,15 @@ rules:
     profile_ids:
     - gigantic-spider
 - id: gigantic-spider--may-ride
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.forest-goblins.gigantic-spider.may-ride
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: monturas."
   name: May Ride
   effect: 'The Forest Goblin Chieftain, may ride the Gigantic Spider. He gains +1 armour save, and shall
 
@@ -299,7 +449,36 @@ rules:
   applies_to:
     profile_ids:
     - gigantic-spider
+- id: gigantic-spider--chitin-armour
+  name: Chitin Armour
+  effect: The Gigantic Spider has an intrinsic 4+ natural armour save. This is part of the creature, not selectable equipment.
+  source:
+    manual: user-ruling
+    printed_page: 0
+    section: Gigantic Spider / Chitin Armour
+  applies_to:
+    profile_ids: [gigantic-spider]
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: trait.natural-armour-save
+      scope: 'YES'
+      binding:
+        kind: trait
+        id: trait.natural-armour-save
+        parameters: {value: 4}
 - id: band--natives
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.forest-goblins.band.natives
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: movimiento."
   name: Natives
   effect: Forest Goblins suffer no movement penalties for moving through wooded terrain.
   source:
@@ -316,6 +495,15 @@ rules:
   applies_to:
     band: true
 - id: band--animosity
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.forest-goblins.band.animosity
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Animosity
   effect: 'At the start of the Orc player''s turn, roll a D6 for each Orc or Goblin Henchman not engaged in hand-to-hand combat.
     On a 1, roll another D6: 1 = the warrior attacks the nearest eligible friendly Orc/Goblin Henchman or Hired Sword if possible

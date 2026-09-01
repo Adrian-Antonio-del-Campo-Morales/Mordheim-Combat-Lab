@@ -2,6 +2,15 @@ schema_version: 2
 band_id: dwarf-rangers
 rules:
 - id: runesmith--leader
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.dwarf-rangers.runesmith.leader
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Leader
   effect: 'Any models in the warband within 6" of the Dwarf
 
@@ -23,26 +32,21 @@ rules:
     profile_ids:
     - runesmith
 - id: runesmith--inscribe-runes
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.dwarf-rangers.runesmith.inscribe-runes
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Inscribe Runes
-  effect: 'A Runesmith knows one minor rune
-
-    (see list at the end of this warband list ), determined
-
-    randomly when the warband is first created. He may
-
-    inscribe the rune on an item carried by one of the
-
-    warriors of his warband, and (if successful, see below)
-
-    the item will gain a bonus from the rune for that
-
-    game. When a Runesmith advances and rolls a skill on
-
-    the Hero Advance table, he may choose to learn an ew
-
-    rune instead of learning a skill (exactly like a
-
-    spellcaster advancing and learning an ew spell).'
+  effect: A Runesmith knows one minor rune (see list at the end of this warband list ), determined randomly when the warband
+    is first created. He may inscribe the rune on an item carried by one of the warriors of his warband, and (if successful,
+    see below) the item will gain a bonus from the rune for that game. When a Runesmith advances and rolls a skill on the Hero
+    Advance table, he may choose to learn a new rune instead of learning a skill (exactly like a spellcaster advancing and learning
+    a new spell).
   source:
     manual: mordheimer.net
     printed_page: 0
@@ -76,6 +80,15 @@ rules:
     profile_ids:
     - runesmith
 - id: apprentice-runesmith--extra-set-of-hands
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.dwarf-rangers.apprentice-runesmith.extra-set-of-hands
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Extra Set of Hands
   effect: 'An Apprentice Runesmith helps
 
@@ -113,6 +126,15 @@ rules:
     profile_ids:
     - apprentice-runesmith
 - id: dwarf-troll-slayers--deathwish
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.dwarf-rangers.dwarf-troll-slayers.deathwish
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Deathwish
   effect: 'Troll Slayers seek an honourable death in
 
@@ -138,6 +160,15 @@ rules:
     profile_ids:
     - dwarf-troll-slayers
 - id: dwarf-longbeards--stubborn
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.dwarf-rangers.dwarf-longbeards.stubborn
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Stubborn
   effect: 'Dwarf Longbeards have seen just about
 
@@ -195,6 +226,15 @@ rules:
     profile_ids:
     - dwarf-longbeards
 - id: band--dont-trust-em
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.dwarf-rangers.band.dont-trust-em
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Don’t Trust ‘Em
   effect: In multiplayer games, Dwarf Rangers may ally with other Dwarf warbands, but models from the two warbands are never
     considered friendly models to each other. They can prevent each other from marching and do not prevent each other from
@@ -215,6 +255,16 @@ rules:
   applies_to:
     band: true
 - id: band--hard-to-kill
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: band
+    effects:
+    - id: skill.hard-to-kill
+      scope: "YES"
+      binding:
+        kind: mechanic
+        id: skill.hard-to-kill
   name: Hard to Kill
   effect: Dwarfs are taken out of action only on a 6 on the Injury chart; 1–2 is Knocked Down and 3–5 is Stunned.
   source:
@@ -231,10 +281,18 @@ rules:
   applies_to:
     band: true
 - id: band--hard-head
-  runtime_grant: true
-  runtime_band_grant: true
-  runtime_traits:
-    concussion_immune: true
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: band
+    effects:
+    - id: trait.concussion-immune
+      scope: "YES"
+      binding:
+        kind: trait
+        id: trait.concussion-immune
+        parameters:
+          value: true
   name: Hard Head
   effect: Dwarfs ignore the special rules for maces, clubs and similar weapons.
   source:
@@ -251,6 +309,15 @@ rules:
   applies_to:
     band: true
 - id: band--armour
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.dwarf-rangers.band.armour
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Armour
   effect: Dwarfs never suffer movement penalties for wearing armour.
   source:
@@ -267,6 +334,15 @@ rules:
   applies_to:
     band: true
 - id: band--hate-orcs-and-goblins
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.dwarf-rangers.band.hate-orcs-and-goblins
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Hate Orcs and Goblins
   effect: All Dwarfs hate Orcs and Goblins.
   source:
@@ -283,6 +359,15 @@ rules:
   applies_to:
     band: true
 - id: band--grudgebearers
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.dwarf-rangers.band.grudgebearers
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Grudgebearers
   effect: A Dwarf warband may never include any kind of Elven Hired Sword or Dramatis Personae.
   source:
@@ -299,6 +384,15 @@ rules:
   applies_to:
     band: true
 - id: band--incomparable-miners
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.dwarf-rangers.band.incomparable-miners
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Incomparable Miners
   effect: When checking for wyrdstone at the end of a game, add +1 to the number of pieces found by the Dwarf warband.
   source:
@@ -315,6 +409,16 @@ rules:
   applies_to:
     band: true
 - id: band--no-arcane-lore
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: band
+    effects:
+    - id: compiler.no-arcane-lore
+      scope: 'YES'
+      binding:
+        kind: compiler
+        id: compiler.no-arcane-lore
   name: No Arcane Lore
   effect: Dwarfs may never take the Arcane Lore skill and cannot learn to cast spells.
   source:
@@ -331,6 +435,17 @@ rules:
   applies_to:
     band: true
 - id: band--dwarf-special-skills-combat-master
+  kind: warband_skill
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: selectable
+    effects:
+    - id: skill.unbeatable-warrior
+      scope: "YES"
+      binding:
+        kind: mechanic
+        id: skill.unbeatable-warrior
   name: Combat Master
   effect: 'This Dwarf’s martial skills surpass those of an ormal
 
@@ -387,18 +502,20 @@ rules:
   applies_to:
     band: true
 - id: band--dwarf-special-skills-extra-tough
+  kind: warband_skill
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.dwarf-rangers.band.dwarf-special-skills-extra-tough
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Extra Tough
-  effect: 'This Dwarf is notorious for walking away from wounds that
-
-    would kill a lesser being. When rolling on the Heroes Serious
-
-    Injury chart for this Hero after a game in which he has been
-
-    taken out of action, the dice may be re-rolled once. The result
-
-    of this second dice roll must be accepted, even if it is a worse
-
-    result.'
+  effect: This Dwarf is notorious for walking away from wounds that would kill a lesser being. When rolling on the Heroes Serious
+    Injury chart for this Hero after a game in which he has been taken out of action, the dice may be re-rolled once. The result
+    of this second dice roll must be accepted, even if it is a worse result.
   source:
     manual: mordheimer.net
     printed_page: 0
@@ -423,6 +540,16 @@ rules:
   applies_to:
     band: true
 - id: band--dwarf-special-skills-resource-hunter
+  kind: warband_skill
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: selectable
+    effects:
+    - id: unimplemented.dwarf-rangers.band.dwarf-special-skills-resource-hunter
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Resource Hunter
   effect: 'This Dwarf is especially good at locating valuable resources.
 
@@ -447,6 +574,17 @@ rules:
   applies_to:
     band: true
 - id: band--dwarf-special-skills-true-grit
+  kind: warband_skill
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: selectable
+    effects:
+    - id: skill.tough-as-steel
+      scope: "YES"
+      binding:
+        kind: mechanic
+        id: skill.tough-as-steel
   name: True Grit
   effect: 'Dwarfs are hardy individuals and this Hero is hardy even for
 
@@ -475,6 +613,17 @@ rules:
   applies_to:
     band: true
 - id: band--dwarf-special-skills-thick-skull
+  kind: warband_skill
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: selectable
+    effects:
+    - id: skill.thick-skull
+      scope: "YES"
+      binding:
+        kind: mechanic
+        id: skill.thick-skull
   name: Thick Skull
   effect: 'The Hero has a thick skull, even for a Dwarf. He
 
@@ -511,6 +660,17 @@ rules:
   applies_to:
     band: true
 - id: band--slayer-special-skills-ferocious-charge
+  kind: warband_skill
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: selectable
+    effects:
+    - id: skill.ferocious-charge
+      scope: "YES"
+      binding:
+        kind: mechanic
+        id: skill.ferocious-charge
   name: Ferocious Charge
   effect: 'The Slayer may double his attacks on the turn in
 
@@ -532,9 +692,24 @@ rules:
 
       that turn.'
     es: null
+  eligibility:
+  - dwarf-troll-slayers
   applies_to:
     band: true
 - id: band--slayer-special-skills-monster-slayer
+  eligibility:
+  - dwarf-troll-slayers
+  kind: warband_skill
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: selectable
+    effects:
+    - id: skill.monster-slayer
+      scope: "YES"
+      binding:
+        kind: mechanic
+        id: skill.monster-slayer
   name: Monster Slayer
   effect: 'The Slayer always wounds any opponent on a roll of
 
@@ -563,6 +738,19 @@ rules:
   applies_to:
     band: true
 - id: band--slayer-special-skills-berserker
+  eligibility:
+  - dwarf-troll-slayers
+  kind: warband_skill
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: selectable
+    effects:
+    - id: skill.berserker
+      scope: "YES"
+      binding:
+        kind: mechanic
+        id: skill.berserker
   name: Berserker
   effect: 'The Slayer may add +1 to his to hit rolls during the
 

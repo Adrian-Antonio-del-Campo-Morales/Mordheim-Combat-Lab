@@ -42,8 +42,7 @@ profiles:
   - shadow-blade--consummate-fighter
   - shadow-blade--fear
   - shadow-blade--fade-into-shadows
-  combat_traits:
-    perfect_killer: true
+  combat_traits: {}
 - id: silent-hunter
   name: Silent Hunter
   type: hero

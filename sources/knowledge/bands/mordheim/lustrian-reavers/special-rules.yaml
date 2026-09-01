@@ -2,6 +2,18 @@ schema_version: 2
 band_id: lustrian-reavers
 rules:
 - id: conqueror--survivor
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: profile
+    effects:
+    - id: trait.survivor
+      scope: "YES"
+      binding:
+        kind: trait
+        id: trait.survivor
+        parameters:
+          value: true
   name: Survivor
   effect: 'Cannot be taken out of Action unless the model is already Knocked Down or Stunned. Treat Out of Action as Stunned
     if the Conqueror is standing when receiving the Wound.
@@ -27,8 +39,16 @@ rules:
     profile_ids:
     - conqueror
 - id: saurus-slayer--duellist
-  mechanic_id: skill.duellist
-  runtime_grant: true
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: profile
+    effects:
+    - id: skill.duellist
+      scope: "YES"
+      binding:
+        kind: mechanic
+        id: skill.duellist
   name: Duellist
   effect: If the Saurus Slayer is engaged with only a single opponent in melee, he may re-roll missed hits in the first round
     whether he charged or was charged.
@@ -48,6 +68,15 @@ rules:
     profile_ids:
     - saurus-slayer
 - id: reaver-beastmaster--war-beasts
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.lustrian-reavers.reaver-beastmaster.war-beasts
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: War Beasts
   effect: If the warband includes a Reaver Beastmaster, it may include up to 2 War Beasts in total. They count towards the
     warband's maximum size, must initially be bought with the Beastmaster, may be replaced if killed, and may use the Beastmaster's
@@ -69,9 +98,18 @@ rules:
     profile_ids:
     - reaver-beastmaster
 - id: estalian-warhound--armoured
-  runtime_grant: true
-  runtime_traits:
-    natural_armour_save: 5
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: profile
+    effects:
+    - id: trait.natural-armour-save
+      scope: "YES"
+      binding:
+        kind: trait
+        id: trait.natural-armour-save
+        parameters:
+          value: 5
   name: 5+ Armour Save
   effect: The Estalian Warhound has a 5+ armour save from its padded armour and iron collar.
   source:
@@ -89,6 +127,15 @@ rules:
     profile_ids:
     - estalian-warhound
 - id: estalian-warhound--animal
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.lustrian-reavers.estalian-warhound.animal
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: lesiones."
   name: Animal
   effect: The Warhound is an Animal, may not gain Experience, and if taken Out of Action is dead on a D6 roll of 1–2.
   source:
@@ -106,6 +153,15 @@ rules:
     profile_ids:
     - estalian-warhound
 - id: estalian-warhound--beastmaster-leadership
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.lustrian-reavers.estalian-warhound.beastmaster-leadership
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Beastmaster Leadership
   effect: If within 6 inches of the Reaver Beastmaster, the Warhound may use the Beastmaster's Leadership.
   source:
@@ -123,9 +179,18 @@ rules:
     profile_ids:
     - estalian-warhound
 - id: barbary-monkey--nimble
-  runtime_grant: true
-  runtime_traits:
-    ward_save: 5
+  runtime:
+    scope: "YES"
+    implemented: "YES"
+    grant: profile
+    effects:
+    - id: trait.ward-save
+      scope: "YES"
+      binding:
+        kind: trait
+        id: trait.ward-save
+        parameters:
+          value: 5
   name: Nimble
   effect: The Barbary Monkey automatically climbs sheer surfaces without Initiative tests, may re-roll failed Diving Charge
     tests, may enter buildings despite being an Animal, and has a 5+ Ward save against wounds from melee, shooting, magic,
@@ -147,6 +212,15 @@ rules:
     profile_ids:
     - barbary-monkey
 - id: barbary-monkey--animal
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.lustrian-reavers.barbary-monkey.animal
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: lesiones."
   name: Animal
   effect: The Barbary Monkey is an Animal, may not gain Experience, and if taken Out of Action is dead on a D6 roll of 1–2.
   source:
@@ -164,6 +238,15 @@ rules:
     profile_ids:
     - barbary-monkey
 - id: barbary-monkey--beastmaster-leadership
+  runtime:
+    scope: "LATER"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.lustrian-reavers.barbary-monkey.beastmaster-leadership
+      scope: "LATER"
+      binding: null
+      reason: "Deferred subsystem: psicología."
   name: Beastmaster Leadership
   effect: If within 6 inches of the Reaver Beastmaster, the Monkey may use the Beastmaster's Leadership.
   source:
@@ -181,6 +264,15 @@ rules:
     profile_ids:
     - barbary-monkey
 - id: jungle-shadow--silent-hunter
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.lustrian-reavers.jungle-shadow.silent-hunter
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: disparo."
   name: Silent Hunter
   effect: Jungle Shadow is always considered to be Hidden if the model is touching any piece of terrain of 1" high. Shooting
     does not reveal Jungle Shadow's position, though spellcasting does.
@@ -200,6 +292,15 @@ rules:
     profile_ids:
     - jungle-shadow
 - id: jungle-shadow--surprise-attack
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.lustrian-reavers.jungle-shadow.surprise-attack
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: disparo."
   name: Surprise attack
   effect: If the Shadow attacks an enemy that has its back turned to the Jungle Shadow (i.e. the shot is coming from 180 degree
     angle from behind its facing), the Shadow can re-roll missed to hit rolls.
@@ -219,6 +320,15 @@ rules:
     profile_ids:
     - jungle-shadow
 - id: jungle-shadow--canopy-walker
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.lustrian-reavers.jungle-shadow.canopy-walker
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: movimiento."
   name: Canopy Walker
   effect: Jungle Shadow automatically passes all climbing , jumping and falling off ledges tests.
   source:
@@ -236,6 +346,15 @@ rules:
     profile_ids:
     - jungle-shadow
 - id: trapmaster--deadeye
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.lustrian-reavers.trapmaster.deadeye
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: disparo."
   name: Deadeye
   effect: Trapmaster suffers no penalties for shooting at long range.
   source:
@@ -253,13 +372,22 @@ rules:
     profile_ids:
     - trapmaster
 - id: trapmaster--traps
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustrian-reavers.trapmaster.traps
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Traps
-  effect: The Trapmaster starts each game with 1 Trap and can buy up to 5 further of the following Traps before the start
-    of the game at the cost of 5 GC each. Each trap is one use only. Traps are used in the Shooting Phase instead of shooting,
-    1 trap at a time, and cannot be used in Melee combat. When you use a trap, put 2 1" diameter Trap counters (one false,
-    one real) anywhere within 3" of the Trapmaster, but at least 3" away from any other models. Any model that moves within
-    2" of the counter must flip it over. If it is a false one, nothing happens. If it is a real one, the model suffers D3
-    S5 Hits immediately. Traps do not cause Criticals. Remove the counters when the trap is sprung.
+  effect: The Trapmaster starts each game with 1 Trap and can buy up to 5 further of the following Traps before the start of
+    the game at the cost of 5 GC each. Each trap is one use only. Traps are used in the Shooting Phase instead of shooting,
+    1 trap at a time, and cannot be used in Melee combat. When you use a trap, put 2 1" diameter Trap counters (one false, one
+    real) anywhere within 3" of the Trapmaster, but at least 3" away from any other models. Any model that moves within 2" of
+    the counter must flip it over. If it is a false one, nothing happens. If it is a real one, the model suffers D3 S5 Hits
+    immediately. Traps do not cause Criticals. Remove the counters when the trap is sprung.
   source:
     manual: mordheimer.net
     printed_page: 0
@@ -280,6 +408,15 @@ rules:
     profile_ids:
     - trapmaster
 - id: prospects--promotion-only
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: profile
+    effects:
+    - id: unimplemented.lustrian-reavers.prospects.promotion-only
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Promotion Only
   effect: Re-roll any Lad's Got Talent results on Henchmen Advancement table. When promoted, you can then hire a new Prospect
     as the model no longer counts as one of them.
@@ -299,6 +436,15 @@ rules:
     profile_ids:
     - prospects
 - id: band--rare-heroes
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.lustrian-reavers.band.rare-heroes
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Rare Heroes
   effect: During the lifetime of the warband, each named Hero type may only ever be bought once. A lost Hero cannot simply
     be rehired.
@@ -317,6 +463,15 @@ rules:
   applies_to:
     band: true
 - id: band--promotions
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: compiler.promotions
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: replacing a fallen Hero, transferring recovered equipment and advancing a Prospect require roster and campaign history.'
   name: Promotions
   effect: When a Hero is lost, a new copy cannot be bought. Instead, a Prospect may be promoted into that Hero position. The
     promoted Prospect becomes that warrior type, gains its special rules and wargear access, chooses any two skill lists available
@@ -339,6 +494,15 @@ rules:
   applies_to:
     band: true
 - id: band--hired-swords
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.lustrian-reavers.band.hired-swords
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
   name: Hired Swords
   effect: The warband may hire only an Ogre Bodyguard, Dwarf Trollslayer, Tilean Marksman, or Big Game Hunter.
   source:
@@ -355,6 +519,15 @@ rules:
   applies_to:
     band: true
 - id: band--hero-required
+  runtime:
+    scope: "NO"
+    implemented: "NO"
+    grant: band
+    effects:
+    - id: unimplemented.lustrian-reavers.band.hero-required
+      scope: "NO"
+      binding: null
+      reason: "Out of scope: campaña."
   name: Hero Required
   effect: The warband must include at least one Hero. Any Hero in the warband may be chosen as the Leader and then uses the
     normal Leader rules.

@@ -733,8 +733,7 @@ items:
     es: null
   source_refs:
   - *id010
-  combat_status: implemented
-  mechanic_id: armour.spider-chitin-armour
+  combat_status: out_of_scope
 - id: spider_spit
   kind: trollheim-equipment
   name: Spider Spit

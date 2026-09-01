@@ -39,8 +39,6 @@ profiles:
     es: null
   rule_ids:
   - moot-elder--leader
-  combat_traits:
-    fragile_halflings: true
 - id: master-chef
   name: Master Chef
   type: hero
@@ -78,10 +76,6 @@ profiles:
     es: null
   rule_ids:
   - master-chef--inspired-cooking
-  combat_traits:
-    starting_skills:
-    - skill.blessed-sight
-    fragile_halflings: true
 - id: halfling-thieves
   name: Halfling Thieves
   type: hero
@@ -118,8 +112,6 @@ profiles:
     es: null
   rule_ids:
   - halfling-thieves--sneaky
-  combat_traits:
-    fragile_halflings: true
 - id: warriors
   name: Warriors
   type: henchman
@@ -152,8 +144,6 @@ profiles:
     en: Warriors
     es: null
   rule_ids: []
-  combat_traits:
-    fragile_halflings: true
 - id: scouts
   name: Scouts
   type: henchman
@@ -187,5 +177,3 @@ profiles:
     es: null
   rule_ids:
   - scouts--keen-eyesight
-  combat_traits:
-    fragile_halflings: true

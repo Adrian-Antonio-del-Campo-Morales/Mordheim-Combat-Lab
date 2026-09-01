@@ -17,6 +17,15 @@ rules:
   applies_to:
     profile_ids:
     - great-headhunter
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-pygmies.great-headhunter.leader
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: great-headhunter--fear
   name: Fear
   effect: The Great Headhunter causes Fear.
@@ -33,6 +42,15 @@ rules:
   applies_to:
     profile_ids:
     - great-headhunter
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-pygmies.great-headhunter.fear
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: silent-walker--spirit-form
   name: Spirit Form
   effect: The Silent Walker may move through walls and obstacles as if they did not exist, but may not charge a target outside
@@ -51,6 +69,15 @@ rules:
   applies_to:
     profile_ids:
     - silent-walker
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-pygmies.silent-walker.spirit-form
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: silent-walker--ethereal
   name: Ethereal
   effect: The Silent Walker has a 5+ special save against mundane attacks. This save is negated by magical attacks.
@@ -67,6 +94,25 @@ rules:
   applies_to:
     profile_ids:
     - silent-walker
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: trait.ward-save
+      scope: 'YES'
+      binding:
+        kind: trait
+        id: trait.ward-save
+        parameters:
+          value: 5
+    - id: trait.ward-save-mundane-only
+      scope: 'YES'
+      binding:
+        kind: trait
+        id: trait.ward-save-mundane-only
+        parameters:
+          value: true
 - id: silent-walker--immune-to-psychology
   name: Immune to Psychology
   effect: The Silent Walker is immune to Psychology.
@@ -83,6 +129,15 @@ rules:
   applies_to:
     profile_ids:
     - silent-walker
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-pygmies.silent-walker.immune-to-psychology
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: silent-walker--fear
   name: Fear
   effect: The Silent Walker causes Fear.
@@ -99,6 +154,15 @@ rules:
   applies_to:
     profile_ids:
     - silent-walker
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-pygmies.silent-walker.fear
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: cannibals--fear
   name: Fear
   effect: Cannibals cause Fear.
@@ -115,10 +179,28 @@ rules:
   applies_to:
     profile_ids:
     - cannibals
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-pygmies.cannibals.fear
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: cannibals--immune-to-poison
-  runtime_grant: true
-  runtime_traits:
-    poison_immune: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: trait.poison-immune
+      scope: 'YES'
+      binding:
+        kind: trait
+        id: trait.poison-immune
+        parameters:
+          value: true
   name: Immune to Poison
   effect: Cannibals are immune to poison.
   source:
@@ -150,6 +232,15 @@ rules:
   applies_to:
     profile_ids:
     - wild-lunatics
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-pygmies.wild-lunatics.immune-to-psychology
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: wild-lunatics--lunatics
   name: Lunatics
   effect: At the start of each turn, roll 1D6 for each Wild Lunatic in play. On 1-3 that model gains Frenzy; on 4-6 it gains
@@ -170,6 +261,15 @@ rules:
   applies_to:
     profile_ids:
     - wild-lunatics
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-pygmies.wild-lunatics.lunatics
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--jungle-natives
   name: Jungle Natives
   effect: Pygmies suffer no movement penalties for moving through woods or any kind of vegetation.
@@ -185,6 +285,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.lustria-pygmies.band.jungle-natives
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--poison-experts
   name: Poison Experts
   effect: Pygmies treat all poisons as Common on the Trading table.
@@ -200,6 +309,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.lustria-pygmies.band.poison-experts
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--camouflage
   name: Camouflage
   effect: A Pygmy that is not wearing armour cannot be detected unless the detecting model first passes an Initiative test.
@@ -217,3 +335,12 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.lustria-pygmies.band.camouflage
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'

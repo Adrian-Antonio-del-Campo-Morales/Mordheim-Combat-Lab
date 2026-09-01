@@ -1,9 +1,12 @@
 # Base de conocimiento
 
-Este directorio es la única fuente de datos del runtime. Las bandas están
-separadas en identidad, perfiles, acceso a equipo y reglas locales; los
-catálogos comparten mecánicas mediante IDs estables.
+Única fuente de reglas y datos del runtime: catálogos compartidos, bandas, perfiles, accesos y registro. Sus reglas editoriales conservan identidad propia y enlazan mediante bindings con mecanismos ejecutables estables.
 
-El runtime usa únicamente `combat_traits` normalizados. Las reglas editoriales
-que no afectan a un duelo 1 contra 1 permanecen documentadas, pero no se
-infieren ni ejecutan.
+El bloque `runtime` se valida contra `registry/runtime-schema.yaml`. `scope` indica si el efecto pertenece al duelo; `implemented` si tiene implementación; `grant` cómo se concede. Una ausencia de clasificación no significa fuera de alcance.
+
+La KB no contiene evidencia de corrección. El contrato estructural y los escenarios semánticos viven en `specs/`, para que el runtime no dependa de sus propias pruebas. Consulte [Modificar la KB](../../docs/tasks/modify-kb.md) y [Verificar reglas](../../docs/tasks/verify-rules.md).
+
+```powershell
+python -m mordheim_combat_lab validate
+python -m mordheim_combat_lab verify
+```

@@ -17,6 +17,15 @@ rules:
   applies_to:
     profile_ids:
     - witch-doctor
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-savage-goblins.witch-doctor.leader
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: witch-doctor--spellcaster
   name: Spellcaster
   effect: The Witch Doctor is a spellcaster and begins with one randomly generated spell from Forest Little WAAAGH! Magic.
@@ -35,6 +44,15 @@ rules:
   applies_to:
     profile_ids:
     - witch-doctor
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-savage-goblins.witch-doctor.spellcaster
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: witch-doctor--return-from-the-darkness
   name: Return from the Darkness
   effect: After a Primitive Goblin dies, the Witch Doctor may add one Zomblin to the warband for free, even if this takes
@@ -55,6 +73,15 @@ rules:
   applies_to:
     profile_ids:
     - witch-doctor
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-savage-goblins.witch-doctor.return-from-the-darkness
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: big-boss--second-in-command
   name: Second in Command
   effect: If the Witch Doctor's Leadership cannot be used, the Big Boss gains the Leader rule with a 4" range. If the Witch
@@ -73,10 +100,28 @@ rules:
   applies_to:
     profile_ids:
     - big-boss
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-savage-goblins.big-boss.second-in-command
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: red-teeth--frenzy
-  runtime_grant: true
-  runtime_traits:
-    frenzy: true
+  runtime:
+    scope: LATER
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: trait.frenzy
+      scope: LATER
+      binding:
+        kind: trait
+        id: trait.frenzy
+        parameters:
+          value: true
   name: Frenzy
   effect: Red Teeth are subject to Frenzy.
   source:
@@ -110,6 +155,16 @@ rules:
   applies_to:
     profile_ids:
     - trackers
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: compiler.tracker-gear
+      scope: 'YES'
+      binding:
+        kind: compiler
+        id: compiler.tracker-gear
 - id: zomblins--may-not-run
   name: May Not Run
   effect: Zomblins may not run, but may charge normally.
@@ -126,6 +181,15 @@ rules:
   applies_to:
     profile_ids:
     - zomblins
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-savage-goblins.zomblins.may-not-run
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: zomblins--fear
   name: Fear
   effect: Zomblins cause Fear.
@@ -142,6 +206,15 @@ rules:
   applies_to:
     profile_ids:
     - zomblins
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-savage-goblins.zomblins.fear
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: zomblins--immune-to-psychology
   name: Immune to Psychology
   effect: Zomblins are immune to Psychology and never leave close combat because of Psychology.
@@ -158,10 +231,28 @@ rules:
   applies_to:
     profile_ids:
     - zomblins
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-savage-goblins.zomblins.immune-to-psychology
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: zomblins--immune-to-poison
-  runtime_grant: true
-  runtime_traits:
-    poison_immune: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: trait.poison-immune
+      scope: 'YES'
+      binding:
+        kind: trait
+        id: trait.poison-immune
+        parameters:
+          value: true
   name: Immune to Poison
   effect: Zomblins are immune to poison.
   source:
@@ -178,8 +269,16 @@ rules:
     profile_ids:
     - zomblins
 - id: zomblins--no-pain
-  mechanic_id: skill.ignore-pain
-  runtime_grant: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: skill.ignore-pain
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.ignore-pain
   name: No Pain
   effect: Zomblins treat a Stunned result on the Injury chart as Knocked Down.
   source:
@@ -195,7 +294,6 @@ rules:
   applies_to:
     profile_ids:
     - zomblins
-  mechanic_id: skill.ignore-pain
 - id: zomblins--brainless
   name: Brainless
   effect: Zomblins never gain Experience.
@@ -212,6 +310,15 @@ rules:
   applies_to:
     profile_ids:
     - zomblins
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-savage-goblins.zomblins.brainless
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: zomblintua--construction
   name: Construction
   effect: Recruiting a Zomblintua costs 195 gc and also requires at least three Zomblins in the warband; those three Zomblins
@@ -230,6 +337,15 @@ rules:
   applies_to:
     profile_ids:
     - zomblintua
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-savage-goblins.zomblintua.construction
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: zomblintua--may-not-run
   name: May Not Run
   effect: Zomblintua may not run, but may charge normally.
@@ -246,6 +362,15 @@ rules:
   applies_to:
     profile_ids:
     - zomblintua
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-savage-goblins.zomblintua.may-not-run
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: zomblintua--fear
   name: Fear
   effect: Zomblintua causes Fear.
@@ -262,6 +387,15 @@ rules:
   applies_to:
     profile_ids:
     - zomblintua
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-savage-goblins.zomblintua.fear
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: zomblintua--immune-to-psychology
   name: Immune to Psychology
   effect: Zomblintua is immune to Psychology and never leaves close combat because of Psychology.
@@ -278,10 +412,28 @@ rules:
   applies_to:
     profile_ids:
     - zomblintua
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-savage-goblins.zomblintua.immune-to-psychology
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: zomblintua--immune-to-poison
-  runtime_grant: true
-  runtime_traits:
-    poison_immune: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: trait.poison-immune
+      scope: 'YES'
+      binding:
+        kind: trait
+        id: trait.poison-immune
+        parameters:
+          value: true
   name: Immune to Poison
   effect: Zomblintua is immune to poison.
   source:
@@ -298,8 +450,16 @@ rules:
     profile_ids:
     - zomblintua
 - id: zomblintua--no-pain
-  mechanic_id: skill.ignore-pain
-  runtime_grant: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: skill.ignore-pain
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.ignore-pain
   name: No Pain
   effect: Zomblintua treats a Stunned result on the Injury chart as Knocked Down.
   source:
@@ -315,7 +475,6 @@ rules:
   applies_to:
     profile_ids:
     - zomblintua
-  mechanic_id: skill.ignore-pain
 - id: zomblintua--brainless
   name: Brainless
   effect: Zomblintua never gains Experience.
@@ -332,6 +491,15 @@ rules:
   applies_to:
     profile_ids:
     - zomblintua
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-savage-goblins.zomblintua.brainless
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: zomblintua--large-target
   name: Large Target
   effect: Zomblintua may be selected as a shooting target even when it is not the closest eligible target, and missile attacks
@@ -350,7 +518,26 @@ rules:
   applies_to:
     profile_ids:
     - zomblintua
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: profile
+    effects:
+    - id: unimplemented.lustria-savage-goblins.zomblintua.large-target
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: zomblintua--regeneration
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: skill.regeneration-5-plus
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: skill.regeneration-5-plus
   name: Regeneration
   effect: Whenever Zomblintua suffers a Wound, roll D6; on 5+ that Wound is ignored. Wounds caused by fire or fire-based magic
     cannot be regenerated. After a battle, Zomblintua does not roll for Serious Injuries unless the relevant wounds were caused
@@ -370,10 +557,17 @@ rules:
   applies_to:
     profile_ids:
     - zomblintua
-  mechanic_id: skill.regeneration
 - id: zomblintua--blunt-attacks
-  mechanic_id: weapon.mace
-  runtime_grant: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: profile
+    effects:
+    - id: weapon.mace
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: weapon.mace
   name: Blunt Attacks
   effect: All of Zomblintua's attacks count as if they were made with a blunt weapon.
   source:
@@ -404,6 +598,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.lustria-savage-goblins.band.jungle-natives
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--unpleasant-company
   name: Unpleasant Company
   effect: 'The warband may hire only the following Hired Swords unless a specific rule says otherwise or the Hired Sword is
@@ -421,6 +624,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.lustria-savage-goblins.band.unpleasant-company
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: no effect applies to the isolated 1v1 duel or legal fighter skill/equipment construction.'
 - id: band--camouflage
   name: Camouflage
   effect: A Savage Goblin that is not wearing armour, with Hardened Leather explicitly allowed as an exception, cannot be
@@ -438,6 +650,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.lustria-savage-goblins.band.camouflage
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--fear-of-pointy-ears
   name: Fear of Pointy Ears
   effect: Savage Goblins are subject to Fear of Elves.
@@ -453,6 +674,15 @@ rules:
     es: null
   applies_to:
     band: true
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.lustria-savage-goblins.band.fear-of-pointy-ears
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--animosity
   name: Animosity
   effect: 'At the start of the warband''s turn, roll D6 for each eligible Goblin Henchman that is not engaged in close combat.
@@ -486,7 +716,17 @@ rules:
   - bruisers
   applies_to:
     band: true
+  runtime:
+    scope: LATER
+    implemented: 'NO'
+    grant: band
+    effects:
+    - id: unimplemented.lustria-savage-goblins.band.animosity
+      scope: LATER
+      binding: null
+      reason: 'Deferred subsystem: psychology or mounts.'
 - id: band--savage-goblin-special-skills-infiltration
+  kind: warband_skill
   name: Infiltration
   effect: Red Teeth and the Witch Doctor may not take this skill. The Hero deploys after the opposing warband, outside enemy
     line of sight and more than 12" from every enemy model.
@@ -506,7 +746,17 @@ rules:
   - trackers
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.lustria-savage-goblins.band.savage-goblin-special-skills-infiltration
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--savage-goblin-special-skills-unpredictable
+  kind: warband_skill
   name: Unpredictable
   effect: The Hero may declare one of its attacks Unpredictable; that attack cannot be parried.
   source:
@@ -526,7 +776,18 @@ rules:
   - trackers
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: mechanic.unpredictable-attack
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: mechanic.unpredictable-attack
 - id: band--savage-goblin-special-skills-zomblin-medicine
+  kind: warband_skill
   name: Zomblin Medicine
   effect: Witch Doctor only. Whenever the Witch Doctor would learn a new skill, he may choose a Necromancy spell instead.
     Zomblins and Zomblintua count as Zombies for those spells. The individual Necromancy spell list and spell effects are
@@ -547,7 +808,17 @@ rules:
   - witch-doctor
   applies_to:
     band: true
+  runtime:
+    scope: 'NO'
+    implemented: 'NO'
+    grant: selectable
+    effects:
+    - id: unimplemented.lustria-savage-goblins.band.savage-goblin-special-skills-zomblin-medicine
+      scope: 'NO'
+      binding: null
+      reason: 'Out of scope: campaign, shooting, movement, terrain, deployment, magic, or non-duel context.'
 - id: band--savage-goblin-special-skills-spider-infested
+  kind: warband_skill
   name: Spider Infested
   effect: Whenever an enemy fails a To Hit roll against the Hero, or the Hero successfully parries an attack, that enemy suffers
     a cumulative -1 Initiative penalty until it is no longer engaged with the Hero or the Hero is taken Out of Action. The
@@ -571,7 +842,18 @@ rules:
   - trackers
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: mechanic.spider-infested
+      scope: 'YES'
+      binding:
+        kind: mechanic
+        id: mechanic.spider-infested
 - id: band--savage-goblin-special-skills-master-of-throwing-weapons
+  kind: warband_skill
   name: Master of Throwing Weapons
   effect: Trackers only. The Hero may carry up to five missile weapons instead of the usual two.
   source:
@@ -588,3 +870,13 @@ rules:
   - trackers
   applies_to:
     band: true
+  runtime:
+    scope: 'YES'
+    implemented: 'YES'
+    grant: selectable
+    effects:
+    - id: mechanic.master-of-throwing-weapons
+      scope: 'YES'
+      binding:
+        kind: compiler
+        id: compiler.master-of-throwing-weapons
